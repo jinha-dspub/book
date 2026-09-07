@@ -1,0 +1,15 @@
+[
+  {
+    "slug": "research-methods",
+    "title": "보건학연구방법론",
+    "subtitle": "플립러닝과 소크라테스식 AI 튜터를 위한 교재",
+    "author": "윤진하 · 연세대학교 의과대학 예방의학교실 · 대학원 보건학과",
+    "src": "/home/dspub/lecture/books/보건학연구방법론/build/book",
+    "files": {
+      "html": "보건학연구방법론.html",
+      "pdf": "보건학연구방법론.pdf",
+      "epub": "보건학연구방법론.epub"
+    },
+    "extras": []
+  }
+]
