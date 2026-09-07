@@ -1,4 +1,4 @@
-# books — book.yioh.ai.kr
+# book — book.yioh.ai.kr
 
 연세대학교 산업보건연구소 교재의 **공개 빌드 결과물**만 담는 레포. GitHub Pages 로 `book.yioh.ai.kr` 에 서빙된다.
 
