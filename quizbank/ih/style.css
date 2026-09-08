@@ -1,0 +1,61 @@
+
+:root{--navy:#12354F;--mid:#2B6A8F;--orange:#C05621;--ink:#1C2B36;--muted:#64798A;--line:#D7E1E8;--fill:#EEF5FA;--bg:#FDFDFB}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 "Pretendard","Noto Sans KR",system-ui,sans-serif}
+a{color:var(--mid)}
+#gate{min-height:100vh;display:grid;place-items:center;padding:24px}
+#gate .card{max-width:420px;width:100%;background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px}
+#gate h1{margin:0 0 6px;font-size:22px;color:var(--navy)}
+#pw-form{display:flex;gap:8px;margin-top:16px}
+input[type=password]{flex:1;padding:10px 12px;border:1px solid var(--line);border-radius:8px;font:inherit}
+button{font:inherit;cursor:pointer;border:0;border-radius:8px;padding:10px 16px;background:var(--navy);color:#fff}
+button.ghost{background:none;color:var(--muted);border:1px solid var(--line);padding:6px 10px;font-size:13px}
+.err{color:#B4544E;min-height:1.2em;margin:10px 0 0;font-size:14px}
+header{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:10px;padding:12px 20px;background:#fff;border-bottom:1px solid var(--line)}
+header a{font-weight:700;color:var(--navy);text-decoration:none}
+#crumb{color:var(--muted);font-size:14px}
+.grow{flex:1}
+main{max-width:1000px;margin:0 auto;padding:20px}
+.lead{color:var(--muted)}
+h2{color:var(--navy);margin:28px 0 12px;font-size:19px}
+h2 .muted{font-weight:400;font-size:15px}
+.muted{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+a.card{display:block;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;text-decoration:none;color:inherit}
+a.card:hover{border-color:var(--mid)}
+.topic .t{font-weight:600;color:var(--navy);margin-bottom:6px}
+.meta{display:flex;gap:10px;font-size:13px;color:var(--muted)}
+.meta .core{color:var(--orange);font-weight:600}
+.bar{display:inline-block;width:calc(100% - 44px);height:6px;background:var(--fill);border-radius:99px;overflow:hidden;vertical-align:middle}
+.bar i{display:block;height:100%;background:var(--mid)}
+.pct{font-size:12px;color:var(--muted);margin-left:6px}
+.prog{margin-top:10px}
+.tabs{display:flex;gap:6px;margin:12px 0}
+.tabs button{background:var(--fill);color:var(--navy)}
+.tabs button.on{background:var(--navy);color:#fff}
+.filters{display:flex;align-items:center;gap:14px;margin:8px 0 14px;font-size:14px;flex-wrap:wrap}
+#concept table{border-collapse:collapse;margin:12px 0;font-size:14px;width:100%}
+#concept th{background:var(--navy);color:#fff;padding:6px 10px;text-align:left}
+#concept td{padding:6px 10px;border-bottom:1px solid var(--line)}
+#concept tr:nth-child(even) td{background:var(--fill)}
+#concept img{max-width:100%;height:auto}
+#concept blockquote{border-left:5px solid var(--orange);background:#FFF8F2;margin:12px 0;padding:8px 14px}
+#concept h1{font-size:22px;color:var(--navy)}#concept h2{font-size:19px}#concept h3{font-size:16px;color:var(--mid)}
+.q{background:#fff;border:1px solid var(--line);border-left:5px solid var(--line);border-radius:10px;padding:14px;margin:12px 0}
+.q.ok{border-left-color:#3F7A5E}.q.no{border-left-color:#B4544E}
+.qh{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);margin-bottom:8px;flex-wrap:wrap}
+.idx{background:var(--fill);color:var(--navy);border-radius:6px;padding:1px 7px;font-weight:700}
+.badge.core{background:#FFF1E6;color:var(--orange);border-radius:6px;padding:1px 7px;font-weight:700}
+.ref{color:var(--mid)}
+.stem{font-weight:500;margin-bottom:10px}
+.qimg{max-width:100%;margin:6px 0;border:1px solid var(--line);border-radius:8px}
+.opts{display:grid;gap:6px}
+.opt{display:flex;gap:8px;text-align:left;background:#fff;border:1px solid var(--line);color:inherit;padding:8px 10px;align-items:flex-start}
+.opt:hover{border-color:var(--mid)}
+.opt .no{color:var(--muted);font-weight:700}
+.opt img{max-width:220px;display:block;margin-top:4px}
+.opt.right{border-color:#3F7A5E;background:#F2F8F5}
+.opt.wrong{border-color:#B4544E;background:#FDF3F2}
+.ans{margin-top:10px;padding:10px 12px;background:var(--fill);border-radius:8px;font-size:15px}
+.exp{margin-top:6px}
+@media(max-width:600px){main{padding:14px}.grid{grid-template-columns:1fr}}
