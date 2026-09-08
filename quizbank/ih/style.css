@@ -10,6 +10,7 @@ a{color:var(--mid)}
 input[type=password]{flex:1;padding:10px 12px;border:1px solid var(--line);border-radius:8px;font:inherit}
 button{font:inherit;cursor:pointer;border:0;border-radius:8px;padding:10px 16px;background:var(--navy);color:#fff}
 button.ghost{background:none;color:var(--muted);border:1px solid var(--line);padding:6px 10px;font-size:13px}
+button.wide{display:block;width:100%;padding:12px;margin:8px 0 24px;font-size:15px}
 .err{color:#B4544E;min-height:1.2em;margin:10px 0 0;font-size:14px}
 header{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:10px;padding:12px 20px;background:#fff;border-bottom:1px solid var(--line)}
 header a{font-weight:700;color:var(--navy);text-decoration:none}
