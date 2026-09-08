@@ -24,5 +24,21 @@
       "epub": "산업위생-총론.epub"
     },
     "extras": []
+  },
+  {
+    "slug": "ai-thesis",
+    "title": "AI 산업보건 석사논문",
+    "subtitle": "다섯 논문 유형을 한 번씩 — 개념 강의 슬라이드",
+    "author": "윤진하 · 연세대학교 의과대학 예방의학교실 · 산업보건연구소",
+    "src": "/home/dspub/lecture/books/AI_산업보건석사논문/build",
+    "slides_only": true,
+    "extras": [
+      {
+        "src": "slides",
+        "dst": "slides",
+        "glob": "*.pdf",
+        "label": "강의 슬라이드 (PDF)"
+      }
+    ]
   }
 ]

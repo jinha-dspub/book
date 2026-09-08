@@ -49,7 +49,9 @@ def main() -> None:
         if not src.is_dir():
             sys.exit(f"원본 폴더가 없다: {src}")
         f = b.get("files", {})
-        if b.get("site"):
+        if b.get("slides_only"):
+            pass                         # 슬라이드만 공개 (원고는 비공개). extras 로 pdf 만 복사한다
+        elif b.get("site"):
             copy_site(src, out)          # 폴더 통째 (index.html·章·site_libs·그림이 다 들어 있다)
         else:
             copy_file(src / f["html"], out / "index.html")
@@ -63,8 +65,8 @@ def main() -> None:
 
     items = []
     for b in books:
-        f = b["files"]; s = b["slug"]
-        links = [f'<a href="/{s}/">온라인으로 읽기</a>']
+        f = b.get("files", {}); s = b["slug"]
+        links = [] if b.get("slides_only") else [f'<a href="/{s}/">온라인으로 읽기</a>']
         if f.get("pdf"):  links.append(f'<a href="/{s}/{html.escape(f["pdf"])}">PDF</a>')
         if f.get("epub"): links.append(f'<a href="/{s}/{html.escape(f["epub"])}">EPUB</a>')
         for ex in b.get("extras", []):
