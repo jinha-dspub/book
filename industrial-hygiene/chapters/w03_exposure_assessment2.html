@@ -1,0 +1,3061 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3주차. 작업환경측정 II — 노출기준과 평가 – 산업위생 총론</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/w04_toxicology1.html" rel="next">
+<link href="../chapters/w02_exposure_assessment1.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-df22de3841a4459d65a458d30db11513.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-1f5cceec34869e9b7e758f61c933684c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-df22de3841a4459d65a458d30db11513.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/w01_intro_history.html">Part I. 산업위생의 기초 (1~3주)</a></li><li class="breadcrumb-item"><a href="../chapters/w03_exposure_assessment2.html"><span class="chapter-title">3주차. 작업환경측정 II — 노출기준과 평가</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">산업위생 총론</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="다크 모드 전환"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="검색"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">산업위생 총론</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I. 산업위생의 기초 (1~3주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w01_intro_history.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1주차. 산업위생 개론과 역사</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w02_exposure_assessment1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2주차. 작업환경측정 I — 측정 원리와 전략</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w03_exposure_assessment2.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">3주차. 작업환경측정 II — 노출기준과 평가</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II. 유해인자와 건강영향 (4~7주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w04_toxicology1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4주차. 산업독성학 I — 독성학의 원리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w05_toxicology2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5주차. 산업독성학 II — 주요 화학물질과 건강장해</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w06_physical_agents1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6주차. 물리적 유해인자 I — 소음과 진동</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w07_physical_agents2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">7주차. 물리적 유해인자 II — 온열·이상기압·방사선·조명</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">중간고사 (8주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w08_midterm.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">8주차. 중간고사</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III. 작업환경 관리 (9~13주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w09_ventilation1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">9주차. 산업환기 I — 환기의 원리와 전체환기</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w10_ventilation2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">10주차. 산업환기 II — 국소배기장치</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w11_biological_agents.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">11주차. 생물학적 유해인자와 생물학적 모니터링</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w12_ergonomics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">12주차. 인간공학과 근골격계질환</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w13_ppe_work_management.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">13주차. 개인보호구와 작업관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part IV. 제도와 실무 (14~15주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w14_law_management.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">14주차. 산업보건 법규와 관리 제도</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w15_case_studies.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">15주차. 직업병 사례연구</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">기말고사 (16주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w16_final.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">16주차. 기말고사</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">부록</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendix/cert_map.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">부록. 자격증 과목 매핑</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#학습목표" id="toc-학습목표" class="nav-link active" data-scroll-target="#학습목표">학습목표</a></li>
+  <li><a href="#노출기준의-개념과-종류" id="toc-노출기준의-개념과-종류" class="nav-link" data-scroll-target="#노출기준의-개념과-종류">1. 노출기준의 개념과 종류</a>
+  <ul>
+  <li><a href="#측정값은-기준이-있어야-의미를-갖는다" id="toc-측정값은-기준이-있어야-의미를-갖는다" class="nav-link" data-scroll-target="#측정값은-기준이-있어야-의미를-갖는다">1.1 측정값은 기준이 있어야 의미를 갖는다</a></li>
+  <li><a href="#세-종류의-노출기준-twastelc" id="toc-세-종류의-노출기준-twastelc" class="nav-link" data-scroll-target="#세-종류의-노출기준-twastelc">1.2 세 종류의 노출기준 — TWA·STEL·C</a></li>
+  <li><a href="#노출기준은-왜-법률이-아니라-고시에-있는가" id="toc-노출기준은-왜-법률이-아니라-고시에-있는가" class="nav-link" data-scroll-target="#노출기준은-왜-법률이-아니라-고시에-있는가">1.3 노출기준은 왜 ’법률’이 아니라 ’고시’에 있는가</a></li>
+  <li><a href="#권고-기준과-법적-기준-tlv-pel-한국-노출기준" id="toc-권고-기준과-법적-기준-tlv-pel-한국-노출기준" class="nav-link" data-scroll-target="#권고-기준과-법적-기준-tlv-pel-한국-노출기준">1.4 권고 기준과 법적 기준 — TLV, PEL, 한국 노출기준</a></li>
+  <li><a href="#별표-1을-읽는-법-노출기준-옆에-붙는-표기들" id="toc-별표-1을-읽는-법-노출기준-옆에-붙는-표기들" class="nav-link" data-scroll-target="#별표-1을-읽는-법-노출기준-옆에-붙는-표기들">1.5 별표 1을 읽는 법 — 노출기준 옆에 붙는 표기들</a>
+  <ul class="collapse">
+  <li><a href="#발암성생식세포-변이원성생식독성-표기" id="toc-발암성생식세포-변이원성생식독성-표기" class="nav-link" data-scroll-target="#발암성생식세포-변이원성생식독성-표기">발암성·생식세포 변이원성·생식독성 표기</a></li>
+  <li><a href="#skin-표기-공기-측정만으로는-부족하다는-신호" id="toc-skin-표기-공기-측정만으로는-부족하다는-신호" class="nav-link" data-scroll-target="#skin-표기-공기-측정만으로는-부족하다는-신호">“Skin” 표기 — 공기 측정만으로는 부족하다는 신호</a></li>
+  <li><a href="#대표-물질의-노출기준" id="toc-대표-물질의-노출기준" class="nav-link" data-scroll-target="#대표-물질의-노출기준">대표 물질의 노출기준</a></li>
+  </ul></li>
+  <li><a href="#노출기준의-한계와-올바른-해석" id="toc-노출기준의-한계와-올바른-해석" class="nav-link" data-scroll-target="#노출기준의-한계와-올바른-해석">1.6 노출기준의 한계와 올바른 해석</a></li>
+  </ul></li>
+  <li><a href="#시간가중평균twa의-계산과-보정" id="toc-시간가중평균twa의-계산과-보정" class="nav-link" data-scroll-target="#시간가중평균twa의-계산과-보정">2. 시간가중평균(TWA)의 계산과 보정</a>
+  <ul>
+  <li><a href="#왜-시간가중-평균인가" id="toc-왜-시간가중-평균인가" class="nav-link" data-scroll-target="#왜-시간가중-평균인가">2.1 왜 “시간가중” 평균인가</a></li>
+  <li><a href="#얼마나-오래-측정해야-하는가" id="toc-얼마나-오래-측정해야-하는가" class="nav-link" data-scroll-target="#얼마나-오래-측정해야-하는가">2.2 얼마나 오래 측정해야 하는가</a></li>
+  <li><a href="#단시간최고-노출의-평가" id="toc-단시간최고-노출의-평가" class="nav-link" data-scroll-target="#단시간최고-노출의-평가">2.3 단시간·최고 노출의 평가</a></li>
+  <li><a href="#연장근무-시-노출기준-보정-brief-scala-모형" id="toc-연장근무-시-노출기준-보정-brief-scala-모형" class="nav-link" data-scroll-target="#연장근무-시-노출기준-보정-brief-scala-모형">2.4 연장근무 시 노출기준 보정 — Brief &amp; Scala 모형</a></li>
+  </ul></li>
+  <li><a href="#혼합물-노출의-평가" id="toc-혼합물-노출의-평가" class="nav-link" data-scroll-target="#혼합물-노출의-평가">3. 혼합물 노출의 평가</a>
+  <ul>
+  <li><a href="#왜-혼합물은-따로-다루는가" id="toc-왜-혼합물은-따로-다루는가" class="nav-link" data-scroll-target="#왜-혼합물은-따로-다루는가">3.1 왜 혼합물은 따로 다루는가</a></li>
+  <li><a href="#노출지수-exposure-index" id="toc-노출지수-exposure-index" class="nav-link" data-scroll-target="#노출지수-exposure-index">3.2 노출지수 (Exposure Index)</a></li>
+  <li><a href="#혼합물의-허용농도" id="toc-혼합물의-허용농도" class="nav-link" data-scroll-target="#혼합물의-허용농도">3.3 혼합물의 허용농도</a></li>
+  </ul></li>
+  <li><a href="#초과-여부의-판정-측정값의-불확실성-다루기-노출자료의-통계적-해석-한국의-작업환경측정-제도-개관" id="toc-초과-여부의-판정-측정값의-불확실성-다루기-노출자료의-통계적-해석-한국의-작업환경측정-제도-개관" class="nav-link" data-scroll-target="#초과-여부의-판정-측정값의-불확실성-다루기-노출자료의-통계적-해석-한국의-작업환경측정-제도-개관">4. 초과 여부의 판정 — 측정값의 불확실성 다루기 · 노출자료의 통계적 해석 · 한국의 작업환경측정 제도 개관</a>
+  <ul>
+  <li><a href="#초과-여부의-판정-측정값의-불확실성-다루기" id="toc-초과-여부의-판정-측정값의-불확실성-다루기" class="nav-link" data-scroll-target="#초과-여부의-판정-측정값의-불확실성-다루기">4.1 초과 여부의 판정 — 측정값의 불확실성 다루기</a>
+  <ul class="collapse">
+  <li><a href="#측정농도-6.0-기준-5.0-초과인가" id="toc-측정농도-6.0-기준-5.0-초과인가" class="nav-link" data-scroll-target="#측정농도-6.0-기준-5.0-초과인가">측정농도 6.0, 기준 5.0 — 초과인가?</a></li>
+  <li><a href="#판정-기준-신뢰구간과-1의-위치-관계" id="toc-판정-기준-신뢰구간과-1의-위치-관계" class="nav-link" data-scroll-target="#판정-기준-신뢰구간과-1의-위치-관계">판정 기준 — 신뢰구간과 1의 위치 관계</a></li>
+  </ul></li>
+  <li><a href="#노출자료의-통계적-해석" id="toc-노출자료의-통계적-해석" class="nav-link" data-scroll-target="#노출자료의-통계적-해석">4.2 노출자료의 통계적 해석</a>
+  <ul class="collapse">
+  <li><a href="#하루의-측정은-하루의-표본이다" id="toc-하루의-측정은-하루의-표본이다" class="nav-link" data-scroll-target="#하루의-측정은-하루의-표본이다">하루의 측정은 하루의 표본이다</a></li>
+  <li><a href="#대수정규분포-노출자료의-생김새" id="toc-대수정규분포-노출자료의-생김새" class="nav-link" data-scroll-target="#대수정규분포-노출자료의-생김새">대수정규분포 — 노출자료의 생김새</a></li>
+  <li><a href="#기하평균gm과-기하표준편차gsd" id="toc-기하평균gm과-기하표준편차gsd" class="nav-link" data-scroll-target="#기하평균gm과-기하표준편차gsd">기하평균(GM)과 기하표준편차(GSD)</a></li>
+  <li><a href="#번째-백분위수-분포의-위쪽-끝-추정" id="toc-번째-백분위수-분포의-위쪽-끝-추정" class="nav-link" data-scroll-target="#번째-백분위수-분포의-위쪽-끝-추정">95번째 백분위수 — 분포의 위쪽 끝 추정</a></li>
+  <li><a href="#누구의-분포인가-유사노출군-seg" id="toc-누구의-분포인가-유사노출군-seg" class="nav-link" data-scroll-target="#누구의-분포인가-유사노출군-seg">누구의 분포인가 — 유사노출군 (SEG)</a></li>
+  </ul></li>
+  <li><a href="#한국의-작업환경측정-제도-개관" id="toc-한국의-작업환경측정-제도-개관" class="nav-link" data-scroll-target="#한국의-작업환경측정-제도-개관">4.3 한국의 작업환경측정 제도 개관</a>
+  <ul class="collapse">
+  <li><a href="#단위작업장소와-시료채취-근로자-수" id="toc-단위작업장소와-시료채취-근로자-수" class="nav-link" data-scroll-target="#단위작업장소와-시료채취-근로자-수">단위작업장소와 시료채취 근로자 수</a></li>
+  <li><a href="#측정-시간과-측정-주기" id="toc-측정-시간과-측정-주기" class="nav-link" data-scroll-target="#측정-시간과-측정-주기">측정 시간과 측정 주기</a></li>
+  <li><a href="#측정-단위" id="toc-측정-단위" class="nav-link" data-scroll-target="#측정-단위">측정 단위</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#요약" id="toc-요약" class="nav-link" data-scroll-target="#요약">요약</a></li>
+  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a>
+  <ul>
+  <li><a href="#문제-1.-twa와-stel의-종합-판정" id="toc-문제-1.-twa와-stel의-종합-판정" class="nav-link" data-scroll-target="#문제-1.-twa와-stel의-종합-판정">문제 1. TWA와 STEL의 종합 판정</a></li>
+  <li><a href="#문제-2.-연장근무-보정" id="toc-문제-2.-연장근무-보정" class="nav-link" data-scroll-target="#문제-2.-연장근무-보정">문제 2. 연장근무 보정</a></li>
+  <li><a href="#문제-3.-혼합물-노출의-종합-평가" id="toc-문제-3.-혼합물-노출의-종합-평가" class="nav-link" data-scroll-target="#문제-3.-혼합물-노출의-종합-평가">문제 3. 혼합물 노출의 종합 평가</a></li>
+  <li><a href="#문제-4.-sae-판정" id="toc-문제-4.-sae-판정" class="nav-link" data-scroll-target="#문제-4.-sae-판정">문제 4. SAE 판정</a></li>
+  <li><a href="#문제-5.-대수정규분포와-x₉₅" id="toc-문제-5.-대수정규분포와-x₉₅" class="nav-link" data-scroll-target="#문제-5.-대수정규분포와-x₉₅">문제 5. 대수정규분포와 X₉₅</a></li>
+  <li><a href="#문제-6.-측정-설계-인원과-주기" id="toc-문제-6.-측정-설계-인원과-주기" class="nav-link" data-scroll-target="#문제-6.-측정-설계-인원과-주기">문제 6. 측정 설계 — 인원과 주기</a></li>
+  <li><a href="#문제-7.-별표-1-읽기-표기가-바꾸는-관리-전략" id="toc-문제-7.-별표-1-읽기-표기가-바꾸는-관리-전략" class="nav-link" data-scroll-target="#문제-7.-별표-1-읽기-표기가-바꾸는-관리-전략">문제 7. 별표 1 읽기 — 표기가 바꾸는 관리 전략</a></li>
+  <li><a href="#문제-8.-발생시간이-짧은-작업의-twa-환산" id="toc-문제-8.-발생시간이-짧은-작업의-twa-환산" class="nav-link" data-scroll-target="#문제-8.-발생시간이-짧은-작업의-twa-환산">문제 8. 발생시간이 짧은 작업의 TWA 환산</a></li>
+  </ul></li>
+  <li><a href="#참고문헌" id="toc-참고문헌" class="nav-link" data-scroll-target="#참고문헌">참고문헌</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/w01_intro_history.html">Part I. 산업위생의 기초 (1~3주)</a></li><li class="breadcrumb-item"><a href="../chapters/w03_exposure_assessment2.html"><span class="chapter-title">3주차. 작업환경측정 II — 노출기준과 평가</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">3주차. 작업환경측정 II — 노출기준과 평가</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<blockquote class="blockquote">
+<p>노출기준(TWA·STEL·C)의 개념과 한계, 노출기준 고시의 법적 위상과 별표 읽는 법(Skin·발암성 표기), TWA 계산과 보정, 혼합물의 상가작용 평가, 측정값의 통계적 해석(SAE 판정, 대수정규분포), 한국 작업환경측정 제도 개관</p>
+</blockquote>
+<section id="학습목표" class="level2">
+<h2 class="anchored" data-anchor-id="학습목표">학습목표</h2>
+<p>이 주를 학습한 후 여러분은 다음을 할 수 있어야 합니다:</p>
+<ol type="1">
+<li>노출기준 고시의 정의와 사용상의 유의사항(제2조·제3조)을 근거로, “노출기준 이하 = 안전”이 성립하지 않는 이유를 논증할 수 있다</li>
+<li>TWA, STEL, C의 종류와 각각이 존재하는 독성학적 이유를 구분하고, STEL의 적용 조건(15분 미만·1일 4회 이하·간격 60분 이상)을 정확히 진술할 수 있다</li>
+<li>노출기준이 법률이 아니라 고시에 규정된 이유를 개정 속도의 관점에서 설명할 수 있다</li>
+<li>고시 별표 1을 읽고 <code>Skin</code>·발암성·생식독성 표기의 의미를 해석하며, Skin 물질에서 생물학적 모니터링이 필요한 이유를 설명할 수 있다</li>
+<li>권고 기준(TLV)과 법적 기준(PEL, 한국 고용노동부 노출기준)의 차이를 설명할 수 있다</li>
+<li>시간가중평균(TWA) 노출량을 고시의 산출식으로 계산하고, 연장근무 시 노출기준을 보정할 수 있다</li>
+<li>혼합물 노출의 상가작용 평가식(노출지수, 혼합물 허용농도)을 적용하고, 상가작용과 독립작용의 적용 요건을 구분할 수 있다</li>
+<li>측정 결과의 통계적 특성(SAE와 신뢰구간, 기하평균·기하표준편차·대수정규분포)을 해석하고 초과 여부를 판정할 수 있다</li>
+<li>유사노출군(SEG) 개념과 한국 작업환경측정 제도의 기본 골격(단위작업 장소, 시료채취 근로자 수, 측정시간, 주기)을 설명할 수 있다</li>
+</ol>
+<hr>
+</section>
+<section id="노출기준의-개념과-종류" class="level2">
+<h2 class="anchored" data-anchor-id="노출기준의-개념과-종류">1. 노출기준의 개념과 종류</h2>
+<section id="측정값은-기준이-있어야-의미를-갖는다" class="level3">
+<h3 class="anchored" data-anchor-id="측정값은-기준이-있어야-의미를-갖는다">1.1 측정값은 기준이 있어야 의미를 갖는다</h3>
+<p><a href="../chapters/w02_exposure_assessment1.html">2주차</a>에서 우리는 근로자의 호흡역에서 시료를 채취·분석하여 공기 중 농도를 산출하는 방법을 배웠다. 이제 손에 숫자가 하나 쥐어졌다 — “톨루엔 33 ppm”. 그런데 이 숫자만으로는 아무 판단도 할 수 없다. 측정이 <strong>평가(Evaluation)</strong>가 되려면 비교할 잣대가 필요하다. 그 잣대가 <strong>노출기준(Occupational Exposure Limit, OEL)</strong>이다.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>노출기준의 정의 — 고시 원문
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>“<strong>노출기준</strong>”이란 근로자가 유해인자에 노출되는 경우 노출기준 이하 수준에서는 <strong>거의 모든 근로자에게 건강상 나쁜 영향을 미치지 아니하는 기준</strong>을 말하며, 1일 작업시간동안의 시간가중평균노출기준(TWA), 단시간노출기준(STEL) 또는 최고노출기준(C)으로 표시한다.</p>
+<p>— 「화학물질 및 물리적 인자의 노출기준」(고용노동부 고시) 제2조제1항제1호</p>
+</blockquote>
+<p>정의 속의 세 표현에 주목하자.</p>
+<ul>
+<li>“<strong>거의 모든</strong> 근로자” — “모든”이 아니다. 정의 자체가 이미 <strong>개인차로 인한 예외를 인정</strong>하고 있다. 노출기준을 안전과 위험의 경계선으로 읽을 수 없는 이유가 정의 안에 들어 있는 셈이다(§1.6).</li>
+<li>“<strong>1일 작업시간동안</strong>” — 하루가 아니라 직업 생애 전체(1일 8시간, 주 40시간의 반복)를 전제한 기준이다.</li>
+<li>“<strong>TWA·STEL·C로 표시한다</strong>” — 노출기준은 하나의 숫자가 아니라 <strong>세 가지 형식</strong>을 갖는 체계다(§1.2).</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="세-종류의-노출기준-twastelc" class="level3">
+<h3 class="anchored" data-anchor-id="세-종류의-노출기준-twastelc">1.2 세 종류의 노출기준 — TWA·STEL·C</h3>
+<p>노출기준이 하나가 아니라 세 종류인 이유는, <strong>건강영향이 나타나는 시간 규모가 물질마다 다르기 때문</strong>이다. 수년의 누적 노출이 문제인 물질(만성 독성), 십수 분의 고농도가 문제인 물질(급성 독성), 단 한 순간의 피크도 허용되지 않는 물질(즉각적 자극·독성)이 있다. ACGIH의 TLV(Threshold Limit Value)도, 이를 받아들인 우리나라 고시의 노출기준도 이 세 시간 규모에 각각 대응하는 세 형태로 제시된다.</p>
+<div id="tbl-tlv-types" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-tlv-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;4.1: 노출기준의 세 종류 (고시 제2조제1항)
+</figcaption>
+<div aria-describedby="tbl-tlv-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 35%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>종류</th>
+<th>고시상의 정의</th>
+<th>시간 규모</th>
+<th>대상</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>TWA</strong><br>(시간가중평균노출기준)</td>
+<td><strong>1일 8시간 작업을 기준</strong>으로 측정치에 발생시간을 곱하여 <strong>8시간으로 나눈 값</strong></td>
+<td>8시간 (반복)</td>
+<td>가장 일반적. 만성 영향이 주된 물질</td>
+</tr>
+<tr class="even">
+<td><strong>STEL</strong><br>(단시간노출기준)</td>
+<td><strong>15분간의 시간가중평균노출값</strong></td>
+<td>15분</td>
+<td>단시간 고농도가 급성 영향을 일으키는 물질</td>
+</tr>
+<tr class="odd">
+<td><strong>C</strong><br>(최고노출기준)</td>
+<td>근로자가 1일 작업시간동안 <strong>잠시라도 노출되어서는 아니 되는</strong> 기준</td>
+<td>순간</td>
+<td>자극성 물질 등 즉각적 영향 물질</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>최고노출기준은 별표에서 노출기준 <strong>앞에 “C”를 붙여</strong> 표시한다(제2조제1항제4호).</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>STEL의 정확한 적용 조건 — 고시 제2조제1항제3호
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>STEL을 “15분 평균의 상한”으로만 외우면 조문의 절반을 놓친다. 원문은 이렇다.</p>
+<blockquote class="blockquote">
+<p>“<strong>단시간노출기준(STEL)</strong>”이란 15분간의 시간가중평균노출값으로서 노출농도가 <strong>시간가중평균노출기준(TWA)을 초과하고 단시간노출기준(STEL) 이하인 경우</strong>에는 ① 1회 노출 지속시간이 <strong>15분 미만</strong>이어야 하고, ② 이러한 상태가 1일 <strong>4회 이하</strong>로 발생하여야 하며, ③ 각 노출의 간격은 <strong>60분 이상</strong>이어야 한다.</p>
+</blockquote>
+<p>조문의 구조를 읽어 두자. <strong>①②③의 세 조건은 농도가 TWA와 STEL 사이의 구간에 들어왔을 때 적용된다.</strong> 즉 “STEL만 넘지 않으면 몇 번이든 괜찮다”가 아니라, TWA를 넘는 순간부터 <strong>지속시간·횟수·간격</strong>이라는 세 개의 추가 제약이 함께 걸린다. 이 세 조건을 뒤집은 것이 실제 측정 결과의 초과 판정 기준이 된다(§2.3).</p>
+</div>
+</div>
+<p>세 기준의 관계를 하루의 농도 변화 위에 그려 보면 다음과 같다.</p>
+<div id="fig-oel-types" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-oel-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w03_oel_types.svg" class="img-fluid figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-oel-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;4.1: TWA·STEL·C의 시간축 비교 — 하루의 농도 변동 위에 세 기준을 겹쳐 그리면 각각이 무엇을 잡아내는지 보인다
+</figcaption>
+</figure>
+</div>
+<p>핵심 논리는 이렇다. <strong>TWA는 평균이므로 피크를 숨긴다.</strong> 하루 평균이 기준 이하여도 그 안에 짧은 고농도 노출이 숨어 있을 수 있고, 급성 영향이 있는 물질에서는 이 피크 자체가 위험하다. 그래서 평균과 별도로 15분 단위(STEL) 또는 순간(C)의 상한을 둔다. <strong>TWA를 지켰다는 것이 STEL·C를 지켰다는 뜻이 아니며</strong>, 세 기준이 설정된 물질은 셋 모두와 비교해야 한다(§2.3).</p>
+</section>
+<section id="노출기준은-왜-법률이-아니라-고시에-있는가" class="level3">
+<h3 class="anchored" data-anchor-id="노출기준은-왜-법률이-아니라-고시에-있는가">1.3 노출기준은 왜 ’법률’이 아니라 ’고시’에 있는가</h3>
+<p>우리나라의 노출기준을 찾으려고 「산업안전보건법」 조문을 아무리 뒤져도 “벤젠 0.5 ppm” 같은 숫자는 나오지 않는다. 법률은 <strong>“고용노동부장관이 노출기준을 정하여 고시한다”</strong>는 위임 규정(법 제106조)만 두고, 실제 숫자는 「화학물질 및 물리적 인자의 노출기준」이라는 <strong>고용노동부 고시</strong>에 담겨 있다. 이 고시는 법 제106조·제125조 및 시행규칙 제144조에 근거한 <strong>법규명령적 고시</strong>로, 권고가 아니라 <strong>법적 구속력을 갖는 기준</strong>이다(제1조).</p>
+<p>왜 이렇게 설계했을까. 답은 <strong>개정 속도</strong>에 있다.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>노출기준 고시의 개정 연혁
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="tbl-notice-history" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-notice-history-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;4.2: 「화학물질 및 물리적 인자의 노출기준」 개정 연혁
+</figcaption>
+<div aria-describedby="tbl-notice-history-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 62%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>시점</th>
+<th>고시 번호</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>제정 1986.12.22</td>
+<td>노동부고시 제86-45호</td>
+</tr>
+<tr class="even">
+<td>개정 1988.12.23 / 1991.3.30 / 1998.1.5</td>
+<td>제88-69호 / 제91-21호 / 제97-69호</td>
+</tr>
+<tr class="odd">
+<td>개정 2002.2.4 / 2002.5.6 / 2007.6.8 / 2008.6.17 / 2009.9.25 / 2010.6.28</td>
+<td>제2002-2호 ~ 제2010-44호</td>
+</tr>
+<tr class="even">
+<td>개정 2011.3.2 / 2012.3.26 / 2013.8.14 / 2016.8.22</td>
+<td>고용노동부고시 제2011-13호 ~ 제2016-41호</td>
+</tr>
+<tr class="odd">
+<td>개정 2018.3.20 / 2018.7.30</td>
+<td>제2018-24호 / 제2018-62호</td>
+</tr>
+<tr class="even">
+<td><strong>개정 2020.1.14 (2020.1.16 시행)</strong></td>
+<td><strong>제2020-48호</strong> (현행)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>1986년 제정 이후 <strong>18회 개정</strong>되었다. 2010년대만 보아도 거의 2년에 한 번 꼴이다. 게다가 고시 제12조는 <strong>매 3년마다 타당성을 검토</strong>하도록 재검토기한을 명시하고 있다.</p>
+</div>
+</div>
+<p>노출기준의 근거는 독성학·역학이고, 이 근거는 계속 갱신된다. 어제까지 안전하다고 여긴 농도가 새 역학 연구로 뒤집히면 기준은 즉시 내려가야 한다. 그 갱신을 <strong>법률 개정 절차</strong>(국회 심의·의결)에 걸어 두면 과학과 규제 사이의 시차가 몇 년 단위로 벌어진다. 그래서 <strong>위임의 논리</strong>가 나온다 — “보호해야 한다”는 <strong>의무는 법률</strong>에, “얼마나”라는 <strong>수치는 고시</strong>에 두어, 과학이 바뀌는 속도로 숫자를 따라가게 하는 것이다.</p>
+<p>같은 논리가 고시 스스로에게도 적용된다. 고시에 노출기준이 <strong>규정되지 않은 물질</strong>이라도 법·시행령·규칙의 적용이 배제되지 않으며, 그런 물질의 노출기준은 <strong>ACGIH가 매년 채택하는 TLV를 준용</strong>한다(제4조제2항). 별표 1의 비고 역시 “노출기준이 설정되지 않은 물질의 경우 이에 대한 노출이 <strong>가능한 한 낮은 수준이 되도록 관리</strong>하여야 함”이라고 못 박는다. <strong>기준이 없다는 것은 관리하지 않아도 된다는 뜻이 아니다.</strong></p>
+</section>
+<section id="권고-기준과-법적-기준-tlv-pel-한국-노출기준" class="level3">
+<h3 class="anchored" data-anchor-id="권고-기준과-법적-기준-tlv-pel-한국-노출기준">1.4 권고 기준과 법적 기준 — TLV, PEL, 한국 노출기준</h3>
+<p>같은 물질에 대해 기관마다 다른 숫자를 제시할 수 있다. 혼동을 피하는 축은 <a href="../chapters/w01_intro_history.html">1주차</a>에서 정리한 기관 구분과 같다 — <strong>누가 만들었고, 법적 구속력이 있는가.</strong></p>
+<div id="tbl-oel-legal" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-oel-legal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;4.3: 권고 기준과 법적 기준
+</figcaption>
+<div aria-describedby="tbl-oel-legal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 35%">
+<col style="width: 21%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>기준</th>
+<th>제정 기관</th>
+<th>성격</th>
+<th>특징</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>TLV</strong></td>
+<td>ACGIH (전문가 단체)</td>
+<td><strong>권고</strong> 기준</td>
+<td>매년 갱신. 최신 과학적 근거를 빠르게 반영</td>
+</tr>
+<tr class="even">
+<td><strong>PEL</strong></td>
+<td>OSHA (미국 규제기관)</td>
+<td><strong>법적</strong> 기준</td>
+<td>개정에 법적 절차 필요 → 갱신이 느림</td>
+</tr>
+<tr class="odd">
+<td><strong>노출기준</strong> (한국)</td>
+<td>고용노동부 <strong>고시</strong></td>
+<td><strong>법적</strong> 기준</td>
+<td>TWA·STEL·최고노출기준(C)의 3종 체계. 작업환경측정 결과 판정의 법적 잣대. 미규정 물질은 ACGIH TLV 준용</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>권고 기준(TLV)은 과학이 갱신되는 속도로 개정되지만 법적 기준은 규제 절차를 거쳐야 하므로, 같은 물질에서 <strong>TLV가 법적 기준보다 엄격한(낮은) 경우가 흔하다</strong>. 실무적 함의는 분명하다 — 법적 기준 준수는 최소한의 의무이고, 전문가라면 최신 권고 기준까지 참고하여 판단해야 한다. 우리나라에서 측정 결과의 법적 판정 잣대는 고용노동부 고시의 노출기준이며(고시 제4조제1항: 작업환경개선기준과 작업환경측정결과의 평가기준으로 사용), 고시가 침묵하는 물질에서는 ACGIH TLV가 그 자리를 대신한다(제4조제2항).</p>
+</section>
+<section id="별표-1을-읽는-법-노출기준-옆에-붙는-표기들" class="level3">
+<h3 class="anchored" data-anchor-id="별표-1을-읽는-법-노출기준-옆에-붙는-표기들">1.5 별표 1을 읽는 법 — 노출기준 옆에 붙는 표기들</h3>
+<p>고시의 실질은 <strong>별표 1 「화학물질의 노출기준」</strong>이다. 731개 물질이 다음 형식의 행으로 나열된다.</p>
+<div id="tbl-oel-row" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-oel-row-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;4.4: 노출기준 고시 별표 1의 한 행 — 벤젠
+</figcaption>
+<div aria-describedby="tbl-oel-row-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 11%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">일련번호</th>
+<th>국문명 / 영문명</th>
+<th style="text-align: center;">화학식</th>
+<th style="text-align: center;">TWA (ppm)</th>
+<th style="text-align: center;">STEL (ppm)</th>
+<th>비고 (CAS번호 등)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">226</td>
+<td>벤젠 / Benzene</td>
+<td style="text-align: center;">C₆H₆</td>
+<td style="text-align: center;">0.5</td>
+<td style="text-align: center;">2.5</td>
+<td>[71-43-2] 발암성 1A, 생식세포 변이원성 1B, Skin</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>표시단위는 제11조가 정한다 — 가스·증기는 <strong>ppm</strong>, 분진·미스트 등 에어로졸은 <strong>mg/m³</strong>, 다만 석면과 내화성세라믹섬유는 <strong>개/cm³</strong>를 쓴다. 그래서 한 물질의 TWA 칸에는 보통 ppm 또는 mg/m³ 중 <strong>한쪽만</strong> 값이 있고 다른 쪽은 “−”다. (ppm ↔︎ mg/m³ 상호 환산은 「작업환경측정 및 정도관리 등에 관한 고시」 제20조제2항에 계산식으로 규정되어 있으며, 계산 방법은 <a href="../chapters/w02_exposure_assessment1.html">2주차</a> §4.4에서 다루었다.)</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>그림 필요 — 고시 별표 1의 실제 지면
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>무엇</strong>: 「화학물질 및 물리적 인자의 노출기준」(고용노동부고시 제2020-48호) 별표 1의 실제 지면 한 쪽을 캡처한 이미지. 벤젠 행이 포함된 쪽이면 가장 좋다 — TWA·STEL 칸과 비고 칸의 <code>발암성 1A, 생식세포 변이원성 1B, Skin</code> 표기가 한 화면에 들어온다.</p>
+<p><strong>왜</strong>: 위의 도식은 별표의 형식을 재현한 것이지 원문이 아니다. 학생이 실무에서 마주치는 것은 이 지면이므로, 한 번은 진짜 지면을 보고 “몇 번째 칸이 무엇인가”를 눈으로 익혀 두어야 한다. 731개 물질이 나열된 분량감도 캡처로만 전달된다.</p>
+<p><strong>출처 후보</strong>: 국가법령정보센터(law.go.kr) 행정규칙 → 고시 본문의 별표 PDF·HWP, 고용노동부 누리집. 공공누리 제1유형(출처표시)으로 개방된 자료가 대부분이므로 출처를 밝히면 교재 수록이 가능하다.</p>
+<p><strong>대안</strong>: 캡처가 어려우면 벤젠·톨루엔·아세톤 세 행만 별표의 칸 구조 그대로 재현한 표로 대체(단, 원문 형식임을 명시할 것).</p>
+</div>
+</div>
+</div>
+<p>주목할 것은 <strong>비고 칸</strong>이다. CAS번호 뒤에 붙는 <code>발암성 1B</code>, <code>생식독성 2</code>, <code>Skin</code> 같은 표기는 숫자가 아니지만, 관리 전략을 바꾸는 정보다.</p>
+<section id="발암성생식세포-변이원성생식독성-표기" class="level4">
+<h4 class="anchored" data-anchor-id="발암성생식세포-변이원성생식독성-표기">발암성·생식세포 변이원성·생식독성 표기</h4>
+<p>제5조제2항은 이 표기들이 <strong>“법상 규제 목적이 아닌 정보제공 목적”</strong>임을 명시한다. 발암성은 IARC·ACGIH·NTP·EU CLP·OSHA의 분류를, 생식세포 변이원성과 생식독성은 EU CLP를 기준으로 분류한다.</p>
+<div id="tbl-hazard-class" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-hazard-class-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;4.5: 유해성 정보 표기의 구분 (별표 1 비고 2~4)
+</figcaption>
+<div aria-describedby="tbl-hazard-class-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>1A</th>
+<th>1B</th>
+<th>2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>발암성</strong></td>
+<td>사람에게 충분한 발암성 증거</td>
+<td>시험동물에서 충분, 또는 동물·사람 모두에서 제한된 증거</td>
+<td>제한된 증거는 있으나 구분 1로 분류하기엔 불충분</td>
+</tr>
+<tr class="even">
+<td><strong>생식독성</strong></td>
+<td>사람에서의 증거로 <strong>판단</strong>할 정도</td>
+<td>동물시험 증거로 <strong>추정</strong>할 정도</td>
+<td>사람 또는 동물시험 증거로 <strong>의심</strong>할 정도</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>“정보제공 목적”이라는 단서를 오해해서는 안 된다. 규제 수치가 아닐 뿐, <strong>측정 주기(§4.3)와 관리 우선순위를 결정하는 실질적 정보</strong>다.</p>
+</section>
+<section id="skin-표기-공기-측정만으로는-부족하다는-신호" class="level4">
+<h4 class="anchored" data-anchor-id="skin-표기-공기-측정만으로는-부족하다는-신호">“Skin” 표기 — 공기 측정만으로는 부족하다는 신호</h4>
+<p>별표 1의 비고 제1호가 Skin의 뜻을 정의한다.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">경고</span>Skin 표기의 의미 — 고시 별표 1 주 1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>“<strong>Skin 표시 물질</strong>”은 점막과 눈 그리고 <strong>경피로 흡수되어 전신 영향을 일으킬 수 있는 물질</strong>을 말함(<strong>피부자극성을 뜻하는 것이 아님</strong>)</p>
+</blockquote>
+<p>괄호 안의 부정문이 핵심이다. Skin은 “피부가 따갑다”는 뜻이 <strong>아니라</strong>, 피부를 <strong>관문 삼아 몸속으로 들어간다</strong>는 뜻이다.</p>
+</div>
+</div>
+<p>왜 이 한 단어가 평가 설계를 바꾸는가. 지금까지 우리가 배운 노출평가는 전부 <strong>공기 중 농도</strong>를 재는 일이었다(<a href="../chapters/w02_exposure_assessment1.html">2주차</a>). 그 전제는 “유해물질은 호흡기로 들어온다”이다. Skin 물질에서는 이 전제가 깨진다.</p>
+<div id="fig-skin-route" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-skin-route-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w03_skin_route.svg" class="img-fluid figure-img" style="width:92.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-skin-route-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;4.2: Skin 표기 물질의 노출 경로 — 피부를 통과한 몫은 공기 측정에 잡히지 않는다
+</figcaption>
+</figure>
+</div>
+<p>논리는 이렇다. 개인시료채취기는 호흡역의 <strong>공기</strong>를 잰다. 경피 흡수분은 그 시료에 잡히지 않는다. 따라서 Skin 물질에서는 <strong>“공기 중 농도 &lt; TWA”라는 결과가 “전신 노출이 안전하다”를 보증하지 못한다.</strong> 장갑 없이 용제를 다루는 작업자와, 밀폐된 작업을 하는 작업자가 같은 공기 농도에서 전혀 다른 체내 부담을 가질 수 있다.</p>
+<p>이 간극을 메우는 방법이 <strong>생물학적 모니터링(biological monitoring)</strong> — 혈액·소변 등 생체시료에서 물질 자체나 대사산물을 측정하여 <strong>경로와 무관한 총 체내 부담</strong>을 직접 확인하는 것이다. ACGIH가 TLV와 별도로 <strong>BEI(Biological Exposure Indices)</strong>를 두는 이유이며, <a href="../chapters/w11_biological_agents.html">11주차</a>에서 본격적으로 다룬다. <strong>Skin 표기는 “이 물질은 공기 측정만으로 평가를 끝내지 말라”는 고시의 신호</strong>로 읽으면 된다.</p>
+<p>별표 1에서 실제 Skin 표기 물질 몇 개를 뽑아 보자.</p>
+<div id="tbl-skin-substances" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-skin-substances-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;4.6: Skin 표기 물질의 예 (고시 별표 1)
+</figcaption>
+<div aria-describedby="tbl-skin-substances-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 21%">
+<col style="width: 26%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>물질 (국문/영문)</th>
+<th>TWA</th>
+<th>STEL</th>
+<th>비고 (CAS번호 등)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>벤젠 / Benzene</td>
+<td>0.5 ppm</td>
+<td>2.5 ppm</td>
+<td>[71-43-2] 발암성 1A, 생식세포 변이원성 1B, <strong>Skin</strong></td>
+</tr>
+<tr class="even">
+<td>메틸 알코올 / Methanol</td>
+<td>200 ppm</td>
+<td>250 ppm</td>
+<td>[67-56-1] <strong>Skin</strong></td>
+</tr>
+<tr class="odd">
+<td>노말-헥산 / n-Hexane</td>
+<td>50 ppm</td>
+<td>−</td>
+<td>[110-54-3] 생식독성 2, <strong>Skin</strong></td>
+</tr>
+<tr class="even">
+<td>니트로벤젠 / Nitrobenzene</td>
+<td>1 ppm</td>
+<td>−</td>
+<td>[98-95-3] 발암성 2, 생식독성 1B, <strong>Skin</strong></td>
+</tr>
+<tr class="odd">
+<td>사염화탄소 / Carbon tetrachloride</td>
+<td>5 ppm</td>
+<td>−</td>
+<td>[56-23-5] 발암성 1B, <strong>Skin</strong></td>
+</tr>
+<tr class="even">
+<td>카바릴 / Carbaryl</td>
+<td>5 mg/m³</td>
+<td>−</td>
+<td>[63-25-2] 발암성 2, <strong>Skin</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>목록을 관통하는 성질이 보인다 — 모두 <strong>지용성이 높아 각질층을 통과하기 쉬운</strong> 유기용제·농약 계열이다. 반대로 니트로벤젠처럼 휘발성이 낮은 물질은 공기 중 농도가 낮게 나오기 쉬운데도 피부 접촉으로 흡수되므로, <strong>공기 측정 결과만 믿을 때 위험을 가장 크게 과소평가하는 부류</strong>가 된다.</p>
+</section>
+<section id="대표-물질의-노출기준" class="level4">
+<h4 class="anchored" data-anchor-id="대표-물질의-노출기준">대표 물질의 노출기준</h4>
+<p>앞으로의 계산에 쓸 값들을 별표 1에서 확인해 두자.</p>
+<div id="tbl-representative-oel" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-representative-oel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;4.7: 대표 물질의 노출기준 (고시 별표 1, 제2020-48호)
+</figcaption>
+<div aria-describedby="tbl-representative-oel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 21%">
+<col style="width: 26%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>물질 (국문 / 영문)</th>
+<th>TWA</th>
+<th>STEL</th>
+<th>비고</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>벤젠 / Benzene</td>
+<td>0.5 ppm</td>
+<td>2.5 ppm</td>
+<td>발암성 1A, 생식세포 변이원성 1B, Skin</td>
+</tr>
+<tr class="even">
+<td>톨루엔 / Toluene</td>
+<td>50 ppm</td>
+<td>150 ppm</td>
+<td>생식독성 2</td>
+</tr>
+<tr class="odd">
+<td>크실렌(모든 이성체) / Xylene</td>
+<td>100 ppm</td>
+<td>150 ppm</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>에틸 벤젠 / Ethyl benzene</td>
+<td>100 ppm</td>
+<td>125 ppm</td>
+<td>발암성 2</td>
+</tr>
+<tr class="odd">
+<td>스티렌 / Styrene</td>
+<td>20 ppm</td>
+<td>40 ppm</td>
+<td>발암성 2, 생식독성 2, Skin</td>
+</tr>
+<tr class="even">
+<td>아세톤 / Acetone</td>
+<td>500 ppm</td>
+<td>750 ppm</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>메틸 에틸 케톤(MEK) / Methyl ethyl ketone</td>
+<td>200 ppm</td>
+<td>300 ppm</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>메틸 알코올 / Methanol</td>
+<td>200 ppm</td>
+<td>250 ppm</td>
+<td>Skin</td>
+</tr>
+<tr class="odd">
+<td>노말-헥산 / n-Hexane</td>
+<td>50 ppm</td>
+<td>−</td>
+<td>생식독성 2, Skin</td>
+</tr>
+<tr class="even">
+<td>일산화탄소 / Carbon monoxide</td>
+<td>30 ppm</td>
+<td>200 ppm</td>
+<td>생식독성 1A</td>
+</tr>
+<tr class="odd">
+<td>트리클로로에틸렌 / Trichloroethylene</td>
+<td>10 ppm</td>
+<td>25 ppm</td>
+<td>발암성 1A, 생식세포 변이원성 2</td>
+</tr>
+<tr class="even">
+<td>사염화탄소 / Carbon tetrachloride</td>
+<td>5 ppm</td>
+<td>−</td>
+<td>발암성 1B, Skin</td>
+</tr>
+<tr class="odd">
+<td>납 및 그 무기화합물 / Lead</td>
+<td>0.05 mg/m³</td>
+<td>−</td>
+<td>발암성 1B, 생식독성 1A</td>
+</tr>
+<tr class="even">
+<td>카바릴 / Carbaryl</td>
+<td>5 mg/m³</td>
+<td>−</td>
+<td>발암성 2, Skin</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>표에서 읽어야 할 것은 개별 숫자가 아니라 <strong>간격의 크기</strong>다. 벤젠(0.5 ppm)과 아세톤(500 ppm)은 <strong>1,000배</strong> 차이 난다. 둘 다 흔한 용제지만, 벤젠은 발암성 1A(사람에게 충분한 증거)이고 아세톤은 유해성 표기가 없다. <strong>노출기준의 크기는 그 자체가 독성의 세기를 압축한 정보</strong>다.</p>
+<p>또 하나 — STEL 칸이 “−”인 물질이 적지 않다. 사염화탄소·노말-헥산처럼 STEL이 설정되지 않은 물질에서는 단시간 노출을 비교할 법적 잣대가 없으므로, 평가는 TWA로 수행한다.</p>
+</section>
+</section>
+<section id="노출기준의-한계와-올바른-해석" class="level3">
+<h3 class="anchored" data-anchor-id="노출기준의-한계와-올바른-해석">1.6 노출기준의 한계와 올바른 해석</h3>
+<p>노출기준을 다룰 때 가장 중요한 개념적 원칙은 이것이다.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">경고</span>노출기준은 안전과 위험의 경계선이 아니다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>노출기준을 “이 선 아래는 안전, 위는 위험”으로 읽는 것은 잘못된 해석이다. 그 이유는 기준의 성립 과정 자체에 있다.</p>
+<ol type="1">
+<li><strong>개인차</strong> — 기준은 “대부분의” 근로자를 보호하도록 설정된다. 민감한 개인 (기저질환, 유전적 감수성 등)에게는 기준 이하 농도에서도 건강영향이 나타날 수 있다.</li>
+<li><strong>독성 종말점의 불완전성</strong> — 기준은 설정 당시 알려진 대표적 건강영향을 근거로 하며, 모든 독성 종말점을 고려하지 못한다.</li>
+<li><strong>복합 노출의 불완전 반영</strong> — 기준은 기본적으로 단일 물질 기준이다. 실제 작업장의 혼합 노출 효과는 불완전하게만 반영된다(§3에서 상가작용 평가로 일부를 보완한다).</li>
+<li><strong>노출 경로의 불완전 반영</strong> — 기준은 공기 중 농도로 표시된다. 경피 흡수(§1.5의 Skin)는 이 숫자에 담기지 않는다.</li>
+</ol>
+</div>
+</div>
+<p>주목할 것은, 이 한계가 학계의 비판이 아니라 <strong>고시 자신이 명문으로 선언한 것</strong>이라는 점이다. 제3조(노출기준 사용상의 유의사항)는 네 개 항으로 “이렇게 쓰지 말라”를 열거한다.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>고시 제3조 — 노출기준 사용상의 유의사항
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="tbl-oel-cautions" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-oel-cautions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;4.8: 노출기준을 잘못 쓰는 네 가지 방식
+</figcaption>
+<div aria-describedby="tbl-oel-cautions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항</th>
+<th>요지</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>①</strong></td>
+<td>각 노출기준은 해당 유해인자가 <strong>단독으로 존재하는 경우</strong>의 기준이다. 2종 이상이 혼재하면 상가작용으로 유해성이 증가할 수 있으므로 <strong>제6조에 따라 산출한 노출기준</strong>을 사용해야 한다(§3)</td>
+</tr>
+<tr class="even">
+<td><strong>②</strong></td>
+<td>노출기준은 <strong>1일 8시간 작업을 기준</strong>으로 제정된 것이므로, <strong>근로시간·작업의 강도·온열조건·이상기압</strong> 등이 적용에 영향을 미칠 수 있음을 특별히 고려해야 한다(§2.4)</td>
+</tr>
+<tr class="odd">
+<td><strong>③</strong></td>
+<td>감수성은 <strong>개인에 따라 차이</strong>가 있고 노출기준 이하에서도 직업성 질병에 이환되는 경우가 있으므로, 노출기준을 <strong>직업병 진단에 사용</strong>하거나 “노출기준 이하였다”는 이유만으로 <strong>직업성 질병의 이환을 부정하는 근거·반증자료로 사용하여서는 아니 된다</strong></td>
+</tr>
+<tr class="even">
+<td><strong>④</strong></td>
+<td>노출기준을 <strong>대기오염의 평가 또는 관리상의 지표로 사용하여서는 아니 된다</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</div>
+</div>
+<p>③과 ④는 특히 직접적인 금지 규정이므로 뜯어볼 가치가 있다.</p>
+<ul>
+<li><strong>③ 직업병 판단에 쓰지 말 것.</strong> 노출기준은 <strong>집단을 대상으로 한 예방 관리의 기준</strong>이지, <strong>개인의 인과관계를 판정하는 진단 기준</strong>이 아니다. “작업환경측정 결과가 노출기준 이하였으므로 이 사람의 질병은 업무와 무관하다”는 추론은 고시가 명시적으로 금지한다. 산재 인정에서 이 조항이 갖는 무게는 <a href="../chapters/w01_intro_history.html">1주차</a> §3.2의 직업병 인정 요건과 함께 읽어야 한다.</li>
+<li><strong>④ 대기오염 지표로 쓰지 말 것.</strong> 노출기준은 <strong>건강한 성인 근로자가 1일 8시간, 주 40시간 노출된 뒤 회복기를 갖는</strong> 상황을 전제한다. 일반 대기에는 영유아·고령자·환자가 24시간 노출되며 회복기가 없다. 전제가 다르므로 숫자를 옮겨 쓸 수 없다.</li>
+</ul>
+<p>올바른 해석은 이렇다. <strong>초과는 “관리가 필요하다”는 명확한 신호이고, 기준 이하는 “현재 지식으로는 거의 모든 근로자에게 수용 가능한 수준”이라는 조건부 진술이다.</strong> 기준 이하라고 해서 노출을 더 낮추려는 노력(관리 위계 — <a href="../chapters/w01_intro_history.html">1주차</a> §2.1)이 불필요해지는 것은 아니다.</p>
+<hr>
+</section>
+</section>
+<section id="시간가중평균twa의-계산과-보정" class="level2">
+<h2 class="anchored" data-anchor-id="시간가중평균twa의-계산과-보정">2. 시간가중평균(TWA)의 계산과 보정</h2>
+<section id="왜-시간가중-평균인가" class="level3">
+<h3 class="anchored" data-anchor-id="왜-시간가중-평균인가">2.1 왜 “시간가중” 평균인가</h3>
+<p>하루의 노출 농도는 일정하지 않다. 오전에는 도장 작업으로 높고, 오후에는 검사 작업으로 낮을 수 있다. 이 변동하는 노출을 하나의 대표값으로 요약할 때, 각 농도가 <strong>지속된 시간만큼의 무게</strong>를 주어 평균하는 것이 시간가중평균이다.</p>
+<p>고시 제2조제1항제2호는 산출식을 다음과 같이 규정한다.</p>
+<p><span class="math display">\[TWA\ \text{환산값} = \frac{C_1 \cdot T_1 + C_2 \cdot T_2 + \cdots + C_n \cdot T_n}{8}\]</span></p>
+<ul>
+<li><span class="math inline">\(C\)</span>: 유해인자의 측정치 (단위: ppm, mg/m³ 또는 개/cm³)</li>
+<li><span class="math inline">\(T\)</span>: 유해인자의 발생시간 (단위: 시간)</li>
+</ul>
+<p>분자 <span class="math inline">\(\sum C_i T_i\)</span>는 “농도 × 시간”의 합 — 하루 동안 흡입한 유해물질 부담의 총량에 비례하는 양이고, 이를 8로 나누면 “그 부담을 8시간에 고르게 폈을 때의 농도”가 된다. TWA가 만성 독성 물질의 평가에 적합한 이유가 여기에 있다 — 만성 영향은 순간 농도가 아니라 <strong>누적된 용량</strong>이 결정하기 때문이다. 거꾸로, 피크가 문제인 물질에서 TWA만으로 부족하다는 것(§1.2)도 같은 논리에서 나온다.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">경고</span>분모는 <span class="math inline">\(\sum T_i\)</span>가 아니라 <strong>8</strong>이다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>고시의 산출식은 실측 시간의 합이 아니라 <strong>상수 8</strong>로 나눈다. 그래서 이름도 그냥 TWA가 아니라 <strong>“TWA 환산값”</strong>이다.</p>
+<ul>
+<li>작업(발생)시간이 8시간이면 <span class="math inline">\(\sum T_i = 8\)</span>이므로 두 방식의 결과가 같다.</li>
+<li>그러나 유해물질 <strong>발생시간이 8시간보다 짧으면</strong> 결과가 달라진다. 예컨대 4시간만 100 ppm에 노출되고 나머지 4시간은 노출이 없다면, 고시 식은 <span class="math inline">\(\frac{100 \times 4}{8} = 50\)</span> ppm이고, 실측 시간으로 나누면 <span class="math inline">\(\frac{100 \times 4}{4} = 100\)</span> ppm이다.</li>
+<li>어느 쪽이 맞는가? <strong>고시 식(50 ppm)이다.</strong> TWA 기준 자체가 “1일 8시간 작업”을 전제로 만들어졌으므로, 비교 대상도 <strong>8시간 축에 환산한 값</strong>이어야 한다. 노출이 없던 4시간은 “농도 0으로 4시간”이라는 실제 정보이지, 빼고 계산할 시간이 아니다.</li>
+</ul>
+<p>같은 원리가 「작업환경측정 및 정도관리 등에 관한 고시」 제34조에도 그대로 나타난다 — 6시간 이내로 측정한 경우 “측정시간 동안의 시간가중평균치를 산출하여 그 기간 동안의 평균농도로 하고, <strong>이를 8시간 시간가중평균하여 8시간 작업 시의 평균농도로 한다</strong>”(제2항).</p>
+</div>
+</div>
+<p>이 환산을 면적으로 보면 분모가 왜 8인지가 한눈에 들어온다.</p>
+<div id="fig-twa-denominator" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-twa-denominator-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w03_twa_denominator.svg" class="img-fluid figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-twa-denominator-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;4.3: TWA 환산의 분모가 8인 이유 — 4시간 100 ppm의 노출량(면적)을 8시간 축에 고르게 펴면 50 ppm이 된다
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제: 하루의 TWA 계산
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>도장 작업자의 톨루엔 노출을 구간별로 측정한 결과가 다음과 같다. 톨루엔의 노출기준(TWA)은 50 ppm이다. 8시간 TWA를 구하고 판정하라.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>구간</th>
+<th>작업</th>
+<th>시간</th>
+<th>측정 농도</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>08:00–12:00</td>
+<td>스프레이 도장</td>
+<td>4시간</td>
+<td>45 ppm</td>
+</tr>
+<tr class="even">
+<td>13:00–15:00</td>
+<td>건조·이동</td>
+<td>2시간</td>
+<td>30 ppm</td>
+</tr>
+<tr class="odd">
+<td>15:00–17:00</td>
+<td>검사·포장</td>
+<td>2시간</td>
+<td>15 ppm</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[TWA = \frac{45 \times 4 + 30 \times 2 + 15 \times 2}{8}
+= \frac{180 + 60 + 30}{8} = \frac{270}{8} = 33.75\ \text{ppm}\]</span></p>
+<p>(발생시간의 합이 <span class="math inline">\(4+2+2 = 8\)</span>시간이므로 분모의 8과 일치한다.)</p>
+<p><span class="math inline">\(33.75\ \text{ppm} &lt; 50\ \text{ppm}\)</span> 이므로 8시간 TWA 기준으로는 노출기준 미만이다.</p>
+<p>단, 이것으로 평가가 끝나는 것은 아니다 — 스프레이 도장 중의 단시간 피크가 STEL을 초과했는지는 별도의 질문이다(§2.3).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="얼마나-오래-측정해야-하는가" class="level3">
+<h3 class="anchored" data-anchor-id="얼마나-오래-측정해야-하는가">2.2 얼마나 오래 측정해야 하는가</h3>
+<p>TWA는 정의상 1일 작업시간(보통 8시간) 전체를 8시간 축에 환산한 값이므로, 측정도 작업시간 대부분을 덮어야 한다. 「작업환경측정 및 정도관리 등에 관한 고시」 제18조제1항이 그 하한을 정한다.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>측정고시 제18조제1항 — TWA 물질의 측정시간
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>노출기준 고시에 <strong>TWA가 설정되어 있는 대상물질</strong>을 측정하는 경우:</p>
+<blockquote class="blockquote">
+<p>1일 작업시간동안 <strong>6시간 이상 연속 측정</strong>하거나, 작업시간을 <strong>등간격으로 나누어 6시간 이상 연속분리하여</strong> 측정하여야 한다.</p>
+</blockquote>
+<p><strong>다만</strong> 다음 어느 하나에 해당하면 <strong>대상물질의 발생시간 동안</strong> 측정할 수 있다.</p>
+<ol type="1">
+<li>대상물질의 <strong>발생시간이 6시간 이하</strong>인 경우</li>
+<li><strong>불규칙작업</strong>으로 6시간 이하의 작업을 하는 경우</li>
+<li>발생원에서 <strong>발생시간이 간헐적</strong>인 경우</li>
+</ol>
+</div>
+</div>
+<p>두 가지를 구분해 두자.</p>
+<ul>
+<li><strong>6시간의 하한을 두는 이유는 대표성</strong>이다. 측정하지 않은 시간의 농도는 알 수 없으므로, 측정 구간이 작업시간의 대부분을 덮어야 TWA 추정이 성립한다.</li>
+<li><strong>“연속분리 측정”이 허용되는 이유</strong>는 실무적 제약이다. 흡착관 파과나 여과지 과부하(<a href="../chapters/w02_exposure_assessment1.html">2주차</a>)로 8시간을 한 매체로 버틸 수 없을 때, 작업시간을 등간격으로 나누어 여러 시료로 나누어 채취해도 합산하면 같은 정보를 얻는다. 다만 <strong>등간격</strong>이어야 한다 — 임의로 고른 구간만 측정하면 노출이 높은 시간대를 피해 갈 수 있기 때문이다.</li>
+<li><strong>단서 3호의 예외</strong>에서 측정한 값도 §2.1의 원칙대로 <strong>8시간 축으로 환산</strong>하여 노출기준과 비교한다(측정고시 제34조제1항·제2항).</li>
+</ul>
+<p>(시료채취 기구와 유량·시간의 설계는 <a href="../chapters/w02_exposure_assessment1.html">2주차</a>를 참조하라.)</p>
+</section>
+<section id="단시간최고-노출의-평가" class="level3">
+<h3 class="anchored" data-anchor-id="단시간최고-노출의-평가">2.3 단시간·최고 노출의 평가</h3>
+<p>STEL과 C가 설정된 물질에서는 8시간 TWA와 <strong>별도로</strong> 단시간 노출을 평가한다. 측정고시 제18조제2항·제3항이 방법을, 제34조제4항이 판정을 정한다.</p>
+<ul>
+<li><strong>STEL 평가</strong>(제18조제2항): STEL이 설정된 물질로서 <strong>노출이 균일하지 않은 작업특성</strong> 때문에 단시간 노출평가가 필요하다고 자격자나 측정기관이 판단하면, 제1항의 측정에 <strong>추가하여</strong> 단시간 측정을 한다. 이 경우 <strong>1회에 15분간</strong> 측정하되, 유해인자 노출특성을 고려하여 <strong>측정횟수는 정할 수 있다</strong>.</li>
+<li><strong>C 평가</strong>(제18조제3항): 최고노출 수준을 평가할 수 있는 <strong>최소한의 시간</strong> 동안 측정한다. 피크를 포착할 수 있는 방법(예: 직독식 기기의 연속 기록 — <a href="../chapters/w02_exposure_assessment1.html">2주차</a>)이 필요한 이유다. <strong>다만 TWA가 함께 설정되어 있으면 제1항의 측정(6시간 이상)을 병행</strong>해야 한다.</li>
+</ul>
+<p>측정한 단시간 농도는 <strong>해당 노출기준과 직접 비교</strong>하여 평가한다 (제34조제4항 본문). 즉 15분 평균이 STEL을 넘으면 그것으로 초과다. 문제는 15분 평균이 <strong>STEL과 TWA 사이</strong>에 있을 때다.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>단시간 노출의 초과 판정 — 측정고시 제34조제4항 단서
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>2회 이상 측정한 단시간 노출농도값이 <strong>단시간노출기준과 시간가중평균기준값 사이</strong>인 경우로서, 다음 어느 하나에 해당하면 <strong>노출기준 초과로 평가</strong>한다.</p>
+<ol type="1">
+<li><strong>15분 이상 연속 노출</strong>되는 경우</li>
+<li>노출과 노출 사이의 <strong>간격이 1시간 미만</strong>인 경우</li>
+<li><strong>1일 4회를 초과</strong>하는 경우</li>
+</ol>
+<p>§1.2에서 본 노출기준 고시 제2조제1항제3호의 세 조건(15분 미만 · 4회 이하 · 60분 이상 간격)을 <strong>그대로 뒤집은 것</strong>이다. 정의 조항이 “이래야 허용된다”를 말하고, 평가 조항이 “이러면 초과다”를 말한다. 두 고시가 하나의 규칙을 양쪽에서 기술하고 있는 셈이다.</p>
+</div>
+</div>
+<p>따라서 종합 판정은 “TWA 기준과 STEL·C 기준을 <strong>모두</strong> 만족하는가”이다. 하루 평균이 기준 이하여도 15분의 피크가 STEL을 넘으면 부적합이며, 이때 관리의 초점은 하루 전체가 아니라 <strong>피크를 만드는 특정 작업</strong>에 맞춰진다. 연습문제 1에서 이 종합 판정을 계산으로 수행한다.</p>
+</section>
+<section id="연장근무-시-노출기준-보정-brief-scala-모형" class="level3">
+<h3 class="anchored" data-anchor-id="연장근무-시-노출기준-보정-brief-scala-모형">2.4 연장근무 시 노출기준 보정 — Brief &amp; Scala 모형</h3>
+<p>노출기준은 “1일 8시간, 주 40시간”을 전제한다. 그런데 12시간 교대처럼 근무가 길어지면 전제 두 가지가 동시에 무너진다 — <strong>노출 시간은 늘고</strong>(체내 축적 증가), <strong>회복 시간은 준다</strong>(배설·회복 감소). 그래서 연장근무에서는 노출기준 자체를 <strong>하향 보정</strong>해야 한다.</p>
+<p>이는 실무 관행이 아니라 규정이다. 노출기준 고시 제3조제2항은 “노출기준은 1일 8시간 작업을 기준으로 하여 제정된 것이므로 이를 이용할 경우에는 <strong>근로시간</strong>, 작업의 강도, 온열조건, 이상기압 등이 노출기준 적용에 영향을 미칠 수 있으므로 이와 같은 제반요인을 특별히 고려하여야 한다”고 정하고, 측정고시 제34조제3항은 “<strong>1일 작업시간이 8시간을 초과하는 경우</strong>에는 계산식에 따라 <strong>보정노출기준을 산출한 후 측정농도와 비교하여 평가하여야 한다</strong>”고 규정한다.</p>
+<p>보정 모형으로 가장 널리 쓰이는 것이 <strong>Brief &amp; Scala 모형</strong>이며, 그 보정계수는 위의 두 효과를 각각 하나의 인수로 담는다.</p>
+<p><span class="math display">\[RF = \underbrace{\frac{8}{h}}_{\text{노출시간 증가 보정}} \times \underbrace{\frac{24-h}{16}}_{\text{회복시간 감소 보정}}\]</span></p>
+<p><span class="math inline">\(h\)</span>는 일일 실제 작업시간이다. 첫째 인수는 8시간 대비 노출 시간 증가의 역수이고, 둘째 인수는 표준 회복시간 16시간(= 24 − 8) 대비 실제 회복시간(24 − h)의 비다. <span class="math inline">\(h = 8\)</span>이면 <span class="math inline">\(RF = 1\)</span>(보정 없음)이고, <span class="math inline">\(h\)</span>가 커질수록 <span class="math inline">\(RF\)</span>는 1보다 작아진다.</p>
+<p><span class="math display">\[\text{수정 노출기준} = \text{기존 TWA 기준} \times RF\]</span></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제: 10시간 근무 시 메탄올 노출기준
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>메탄올의 노출기준(TWA)이 200 ppm일 때, 1일 10시간 근무하는 작업자에게 적용할 수정 노출기준은?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[RF = \frac{8}{10} \times \frac{24-10}{16} = 0.8 \times 0.875 = 0.7\]</span></p>
+<p><span class="math display">\[\text{수정 노출기준} = 200 \times 0.7 = 140\ \text{ppm}\]</span></p>
+<p>10시간 근무자의 측정 TWA는 200 ppm이 아니라 <strong>140 ppm</strong>과 비교해야 한다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="혼합물-노출의-평가" class="level2">
+<h2 class="anchored" data-anchor-id="혼합물-노출의-평가">3. 혼합물 노출의 평가</h2>
+<section id="왜-혼합물은-따로-다루는가" class="level3">
+<h3 class="anchored" data-anchor-id="왜-혼합물은-따로-다루는가">3.1 왜 혼합물은 따로 다루는가</h3>
+<p>노출기준은 물질별로 설정된다. 고시 제3조제1항이 이를 명시한다 — “각 유해인자의 노출기준은 해당 유해인자가 <strong>단독으로 존재하는 경우</strong>의 노출기준을 말하며, 2종 또는 그 이상의 유해인자가 혼재하는 경우에는 각 유해인자의 <strong>상가작용으로 유해성이 증가할 수 있으므로</strong> 제6조에 따라 산출하는 노출기준을 사용하여야 한다.”</p>
+<p>그런데 실제 작업장에서는 여러 물질에 동시에 노출되는 경우가 훨씬 흔하다. 두 가지 이상의 유해물질이 같은 부위에 작용하면 각각은 기준 이하여도 합쳐진 부담은 기준을 넘을 수 있다. 이것이 <strong>상가작용(additive effect)</strong>이다.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>상가작용이 원칙, 독립작용이 예외 — 고시 제6조
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>① 상가작용(원칙)</strong></p>
+<blockquote class="blockquote">
+<p>화학물질이 2종 이상 혼재하는 경우에 혼재하는 물질간에 유해성이 인체의 <strong>서로 다른 부위에 작용한다는 증거가 없는 한 유해작용은 가중</strong>되므로 노출기준은 다음 식에 따라 산출하되, 산출되는 수치가 <strong>1을 초과하지 아니하는 것으로 한다</strong>.</p>
+</blockquote>
+<p><strong>② 독립작용(예외)</strong></p>
+<blockquote class="blockquote">
+<p>제1항의 경우와는 달리 혼재하는 물질간에 유해성이 인체의 <strong>서로 다른 부위에 유해작용을 하는 경우</strong>에 유해성이 각각 작용하므로, 혼재하는 물질 중 <strong>어느 한 가지라도 노출기준을 넘는 경우</strong> 노출기준을 초과하는 것으로 한다.</p>
+</blockquote>
+</div>
+</div>
+<p>조문의 <strong>입증 책임 방향</strong>을 놓치지 말자. “동일한 표적장기임이 확인되면 상가작용으로 본다”가 아니라 <strong>“서로 다른 부위에 작용한다는 증거가 없는 한 가중된다”</strong>이다. 즉 <strong>상가작용이 기본값(default)</strong>이고, 독립작용으로 다루려면 표적이 다르다는 <strong>증거를 제시해야</strong> 한다. 정보가 불완전할 때 근로자에게 유리한 쪽으로 판단하는 <strong>예방원칙(precautionary principle)</strong>이 조문의 문법에 새겨져 있는 것이다.</p>
+</section>
+<section id="노출지수-exposure-index" class="level3">
+<h3 class="anchored" data-anchor-id="노출지수-exposure-index">3.2 노출지수 (Exposure Index)</h3>
+<p>제6조제1항의 산출식은 다음과 같다. 각 물질의 노출을 “그 물질의 기준 대비 몇 분율을 썼는가”로 환산하여 더한다.</p>
+<p><span class="math display">\[EI = \frac{C_1}{T_1} + \frac{C_2}{T_2} + \cdots + \frac{C_n}{T_n} \;\leq\; 1\]</span></p>
+<ul>
+<li><span class="math inline">\(C\)</span>: 화학물질 각각의 <strong>측정치</strong></li>
+<li><span class="math inline">\(T\)</span>: 화학물질 각각의 <strong>노출기준</strong></li>
+</ul>
+<p>각 항 <span class="math inline">\(C_i/T_i\)</span>는 무차원의 “기준 사용률”이다. 상가작용 가정 하에서 인체가 감당할 수 있는 총 사용률이 1이므로, <span class="math inline">\(EI \leq 1\)</span>이면 적합, <span class="math inline">\(EI &gt; 1\)</span>이면 <strong>노출기준 초과</strong>(부적합)다. 판정의 대상은 <strong>개별 물질이 각자의 기준 이하인지가 아니라 합이 1 이하인지</strong>다 — 아래 예제에서 세 물질 모두 개별 기준 미만이지만 혼합 평가는 초과다.</p>
+<p>거꾸로, 표적장기가 서로 다르다는 증거가 있으면 제6조제2항이 적용되어 노출지수를 쓰지 않고 <strong>물질별로 각각</strong> 비교한다. 이때는 어느 하나라도 자기 기준을 넘으면 초과다. 아래 예제의 세 물질이 만약 각각 간·신장· 중추신경계에 작용한다면 <span class="math inline">\(EI\)</span> 합산은 의미가 없고, 세 물질 모두 개별 기준 미만이므로 판정이 뒤집힌다. <strong>평가식을 고르는 일이 곧 독성학적 판단</strong>이다.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제: 혼합용제 노출평가
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>인쇄 작업장에서 톨루엔 30 ppm, 크실렌 40 ppm, 에틸 벤젠 20 ppm이 측정되었다. 세 물질은 모두 중추신경계에 작용하는 방향족 용제다(상가작용 적용). 노출기준(고시 별표 1의 TWA): 톨루엔 50 ppm, 크실렌 100 ppm, 에틸 벤젠 100 ppm.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[EI = \frac{30}{50} + \frac{40}{100} + \frac{20}{100} = 0.6 + 0.4 + 0.2 = 1.2\]</span></p>
+<p><span class="math inline">\(EI = 1.2 &gt; 1\)</span> 이므로 <strong>노출기준 초과</strong>. 개별적으로는 세 물질 모두 기준 미만(60%, 40%, 20%)이지만, 같은 표적(중추신경계)에 작용하므로 기준 사용률의 합 120%가 판정을 결정한다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="혼합물의-허용농도" class="level3">
+<h3 class="anchored" data-anchor-id="혼합물의-허용농도">3.3 혼합물의 허용농도</h3>
+<p>노출지수는 “초과인가 아닌가”만 답한다. 이와 별개로, <strong>혼합물 전체를 하나의 물질처럼 보았을 때의 허용농도</strong> <span class="math inline">\(TLV_{mix}\)</span>를 구할 수 있다. (이 계산은 고시 제6조의 조문 자체가 아니라, 제6조의 상가작용 원리에서 유도되는 ACGIH의 혼합물 평가 방법이다.) 주어진 정보에 따라 두 가지 형태가 있다.</p>
+<p><strong>(1) 각 성분의 농도를 알 때</strong> — 총 농도를 노출지수로 나눈다.</p>
+<p><span class="math display">\[TLV_{mix} = \frac{\sum C_i}{EI} = \frac{C_1 + C_2 + \cdots + C_n}{\dfrac{C_1}{T_1} + \dfrac{C_2}{T_2} + \cdots + \dfrac{C_n}{T_n}}\]</span></p>
+<p>논리: 현재 혼합 농도 <span class="math inline">\(\sum C_i\)</span>에서 기준 사용률이 <span class="math inline">\(EI\)</span>이므로, 사용률이 정확히 1이 되는 농도는 <span class="math inline">\(\sum C_i / EI\)</span>이다. <span class="math inline">\(EI &gt; 1\)</span>이면 <span class="math inline">\(TLV_{mix}\)</span>는 현재 총 농도보다 작다(그만큼 낮춰야 한다는 뜻).</p>
+<p><strong>(2) 중량분율(조성비)만 알 때</strong> — 분율의 역수 합을 사용한다.</p>
+<p><span class="math display">\[TLV_{mix} = \frac{1}{\dfrac{f_1}{TLV_1} + \dfrac{f_2}{TLV_2} + \cdots + \dfrac{f_n}{TLV_n}}\]</span></p>
+<ul>
+<li><span class="math inline">\(f_i\)</span>: 각 성분의 <strong>중량분율</strong> (소수, 합은 1)</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 1: 농도 기준 혼합물 허용농도
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>금속 탈지 공정에서 세 가지 염소계 용제가 함께 검출되었다. 셋 모두 <strong>간 독성</strong>을 주된 표적으로 하므로 상가작용을 적용한다. 노출기준은 고시 별표 1의 TWA다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 33%">
+<col style="width: 46%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>물질</th>
+<th>측정농도</th>
+<th>노출기준(TWA)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>사염화탄소 (Carbon tetrachloride)</td>
+<td>3 ppm</td>
+<td>5 ppm</td>
+</tr>
+<tr class="even">
+<td>트리클로로에틸렌 (Trichloroethylene)</td>
+<td>5 ppm</td>
+<td>10 ppm</td>
+</tr>
+<tr class="odd">
+<td>이염화 에틸렌 (Ethylene dichloride, 1,2-디클로로에탄)</td>
+<td>4 ppm</td>
+<td>10 ppm</td>
+</tr>
+</tbody>
+</table>
+<p>이 혼합물의 허용농도는?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>① 노출지수</strong></p>
+<p><span class="math display">\[EI = \frac{3}{5} + \frac{5}{10} + \frac{4}{10} = 0.6 + 0.5 + 0.4 = 1.5\]</span></p>
+<p><strong>② 총 농도</strong></p>
+<p><span class="math display">\[\sum C_i = 3 + 5 + 4 = 12\ \text{ppm}\]</span></p>
+<p><strong>③ 혼합물의 허용농도</strong></p>
+<p><span class="math display">\[TLV_{mix} = \frac{12}{1.5} = \textbf{8 ppm}\]</span></p>
+<p><span class="math inline">\(EI = 1.5 &gt; 1\)</span>이므로 현재 초과 상태이며, 같은 조성이라면 혼합물 총 농도를 <strong>8 ppm 이하</strong>로 낮추어야 적합해진다. 개별 물질은 세 가지 모두 자기 기준의 60%·50%·40%로 기준 미만이라는 점을 확인해 두자.</p>
+<p>한 가지 더 — 세 물질은 각각 발암성 1B(사염화탄소), 발암성 1A (트리클로로에틸렌), 발암성 1B(이염화 에틸렌)로 분류되어 있고, 사염화탄소는 <strong>Skin</strong> 표기가 붙어 있다. 상가작용 계산으로 8 ppm이라는 숫자를 얻었더라도, 이 물질들에 대해서는 “기준 이하로 유지”가 아니라 <strong>대체·제거</strong>가 우선 검토되어야 한다는 뜻이다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 2: 중량비 조성 용제의 허용농도
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>아세톤 50%, 톨루엔 20%, 크실렌 30%(중량비)로 조성된 세척용 혼합용제가 증발하여 작업환경을 오염시키고 있다. 이 용제의 허용농도를 mg/m³ 단위로 구하라. (상가작용 가정, 성분별 휘발도 차이는 무시. 25 ℃, 1기압)</p>
+<p>고시 별표 1의 TWA는 ppm으로 주어져 있으므로 먼저 mg/m³로 환산해야 한다. (분자량: 아세톤 58.08, 톨루엔 92.14, 크실렌 106.17)</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>물질</th>
+<th>TWA (고시)</th>
+<th>분자량</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>아세톤</td>
+<td>500 ppm</td>
+<td>58.08</td>
+</tr>
+<tr class="even">
+<td>톨루엔</td>
+<td>50 ppm</td>
+<td>92.14</td>
+</tr>
+<tr class="odd">
+<td>크실렌</td>
+<td>100 ppm</td>
+<td>106.17</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>① ppm → mg/m³ 환산</strong> (<a href="../chapters/w02_exposure_assessment1.html">2주차</a> §4.4, <span class="math inline">\(\text{mg/m}^3 = \dfrac{\text{ppm} \times M}{24.45}\)</span>)</p>
+<p><span class="math display">\[\text{아세톤: } \frac{500 \times 58.08}{24.45} = 1{,}188\ \text{mg/m}^3\]</span> <span class="math display">\[\text{톨루엔: } \frac{50 \times 92.14}{24.45} = 188\ \text{mg/m}^3\]</span> <span class="math display">\[\text{크실렌: } \frac{100 \times 106.17}{24.45} = 434\ \text{mg/m}^3\]</span></p>
+<p><strong>② 중량분율 식 적용</strong></p>
+<p><span class="math display">\[\frac{0.5}{1188} + \frac{0.2}{188} + \frac{0.3}{434}
+= 0.000421 + 0.001064 + 0.000691 = 0.002176\]</span></p>
+<p><span class="math display">\[TLV_{mix} = \frac{1}{0.002176} \approx \textbf{460 mg/m}^3\]</span></p>
+<p>혼합 증기의 총 농도가 약 460 mg/m³ 이하이면 각 성분의 기준 사용률 합이 1 이하가 된다.</p>
+<p><strong>③ 검산 — 왜 이 값이 성분들의 개별 기준보다 훨씬 낮은가</strong></p>
+<p>총 농도 460 mg/m³일 때 각 성분의 농도와 기준 사용률은 다음과 같다.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>성분</th>
+<th>농도</th>
+<th>기준</th>
+<th>사용률</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>아세톤</td>
+<td>460 × 0.5 = 230</td>
+<td>1,188</td>
+<td>0.19</td>
+</tr>
+<tr class="even">
+<td>톨루엔</td>
+<td>460 × 0.2 = 92</td>
+<td>188</td>
+<td>0.49</td>
+</tr>
+<tr class="odd">
+<td>크실렌</td>
+<td>460 × 0.3 = 138</td>
+<td>434</td>
+<td>0.32</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><strong>합</strong></td>
+<td><strong>1.00</strong> ✓</td>
+</tr>
+</tbody>
+</table>
+<p>혼합물의 허용농도를 결정하는 것은 <strong>가장 많이 든 성분이 아니라 가장 독한 성분</strong>이다. 아세톤이 무게로 절반을 차지하지만 사용률은 0.19에 불과하고, 20%뿐인 톨루엔이 0.49로 절반을 잡아먹는다. 톨루엔의 기준(188)이 아세톤(1,188)의 6분의 1이기 때문이다. <strong>혼합용제의 조성을 바꿀 때 무게가 아니라 기준 사용률을 보아야 하는 이유</strong>가 여기에 있다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 3: 역산형 — 나머지 한 물질의 허용 상한
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>어느 근로자가 세 가지 케톤·에스터계 용제에 함께 노출되고 있다. 노출기준은 고시 별표 1의 TWA다.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>물질</th>
+<th>측정농도</th>
+<th>노출기준(TWA)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>아세톤</td>
+<td>200 ppm</td>
+<td>500 ppm</td>
+</tr>
+<tr class="even">
+<td>초산 이차-부틸 (sec-butyl acetate)</td>
+<td>50 ppm</td>
+<td>200 ppm</td>
+</tr>
+<tr class="odd">
+<td>메틸 에틸 케톤 (2-butanone)</td>
+<td>?</td>
+<td>200 ppm</td>
+</tr>
+</tbody>
+</table>
+<p>혼합 노출이 기준 이하가 되려면 메틸 에틸 케톤은 몇 ppm 이하여야 하는가? (상가작용 가정)</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(EI \leq 1\)</span> 조건에서 미지 농도 <span class="math inline">\(x\)</span>를 푼다.</p>
+<p><span class="math display">\[\frac{200}{500} + \frac{50}{200} + \frac{x}{200} \leq 1\]</span></p>
+<p><span class="math display">\[0.4 + 0.25 + \frac{x}{200} \leq 1 \quad\Rightarrow\quad
+\frac{x}{200} \leq 0.35 \quad\Rightarrow\quad x \leq \textbf{70 ppm}\]</span></p>
+<p>다른 두 물질이 이미 기준 사용률의 65%를 쓰고 있으므로, 메틸 에틸 케톤에게 남은 몫은 35% — 즉 자기 기준 200 ppm의 35%인 70 ppm뿐이다. <strong>단독으로 있었다면 200 ppm까지 허용되었을 물질이, 동료 물질들 때문에 70 ppm으로 제한된다.</strong> 고시 제3조제1항이 “각 노출기준은 단독으로 존재하는 경우의 기준”이라고 못 박은 이유가 이 계산에 들어 있다.</p>
+<p>(고시 별표 1에서 “2-부타논”과 “초산 이차-부틸”은 각각 “메틸 에틸 케톤 참조”, 독립 항목으로 수록되어 있다. 같은 물질이 여러 관용명으로 등재되어 있으므로 별표를 찾을 때는 <strong>CAS번호</strong>로 확인하는 습관이 안전하다 — 메틸 에틸 케톤 [78-93-3], 초산 이차-부틸 [105-46-4].)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="초과-여부의-판정-측정값의-불확실성-다루기-노출자료의-통계적-해석-한국의-작업환경측정-제도-개관" class="level2">
+<h2 class="anchored" data-anchor-id="초과-여부의-판정-측정값의-불확실성-다루기-노출자료의-통계적-해석-한국의-작업환경측정-제도-개관">4. 초과 여부의 판정 — 측정값의 불확실성 다루기 · 노출자료의 통계적 해석 · 한국의 작업환경측정 제도 개관</h2>
+<section id="초과-여부의-판정-측정값의-불확실성-다루기" class="level3">
+<h3 class="anchored" data-anchor-id="초과-여부의-판정-측정값의-불확실성-다루기">4.1 초과 여부의 판정 — 측정값의 불확실성 다루기</h3>
+<section id="측정농도-6.0-기준-5.0-초과인가" class="level4">
+<h4 class="anchored" data-anchor-id="측정농도-6.0-기준-5.0-초과인가">측정농도 6.0, 기준 5.0 — 초과인가?</h4>
+<p>측정값에는 <strong>시료채취 및 분석 오차(SAE, Sampling and Analytical Error)</strong>가 항상 따라붙는다(오차의 발생원과 정도관리는 <a href="../chapters/w02_exposure_assessment1.html">2주차</a>에서 다루었다). 측정농도가 기준을 조금 넘었을 때, 그 초과분이 실제 노출 때문인지 측정 오차 때문인지 구별하기 전에는 “초과”라고 단정할 수 없다. 그래서 미국 OSHA의 평가방법은 SAE를 반영한 <strong>95% 신뢰구간</strong>으로 초과 여부를 판정한다.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>우리나라 고시와의 관계
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>「작업환경측정 및 정도관리 등에 관한 고시」 제33조는 “측정한 농도나 측정값은 <strong>노출기준 고시와 비교하여 초과여부를 평가한다</strong>”고만 규정할 뿐, SAE를 반영한 신뢰구간 판정을 별도로 정하고 있지 않다. 아래의 SAE 판정법은 <strong>법정 판정 절차가 아니라, 측정값의 불확실성을 다루는 산업위생학의 표준적 해석 방법</strong>이다.</p>
+<p>대신 우리 제도는 같은 문제를 <strong>입구에서</strong> 다룬다 — 측정·분석의 <strong>정확도</strong>(분석치가 참값에 얼마나 접근하는가)와 <strong>정밀도</strong>(반복 측정 시 변동이 얼마나 작은가)를 <strong>정도관리</strong> 제도로 확보하는 방식이다 (측정고시 제2조제1항제15호~제17호, 제3편). SAE를 줄이는 일과 정도관리는 결국 같은 문제의 두 얼굴이다.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>판정에 쓰는 세 개의 값
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[Y = \frac{\text{측정농도}}{\text{노출기준}} \qquad UCL = Y + SAE \qquad LCL = Y - SAE\]</span></p>
+<ul>
+<li><span class="math inline">\(Y\)</span>: <strong>표준화값</strong>(standardized concentration) — 노출기준을 1로 놓았을 때의 상대 농도</li>
+<li><span class="math inline">\(UCL\)</span>: 신뢰상한값(Upper Confidence Limit), <span class="math inline">\(LCL\)</span>: 신뢰하한값(Lower Confidence Limit)</li>
+<li>참노출의 표준화값은 95% 신뢰수준에서 구간 <span class="math inline">\([LCL,\ UCL]\)</span> 안에 있다</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="판정-기준-신뢰구간과-1의-위치-관계" class="level4">
+<h4 class="anchored" data-anchor-id="판정-기준-신뢰구간과-1의-위치-관계">판정 기준 — 신뢰구간과 1의 위치 관계</h4>
+<p>판정은 “구간 <span class="math inline">\([LCL, UCL]\)</span>이 1에 대해 어디에 놓이는가”로 결정된다.</p>
+<div id="fig-sae-decision" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sae-decision-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w03_sae_decision.svg" class="img-fluid figure-img" style="width:88.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sae-decision-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;4.4: SAE 신뢰구간에 의한 초과 판정 — 아래 예제 네 건을 같은 축 위에 놓았다. 같은 측정농도라도 SAE의 크기에 따라 판정이 갈린다
+</figcaption>
+</figure>
+</div>
+<div id="tbl-sae-decision" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sae-decision-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;4.9: SAE를 반영한 초과 판정 기준
+</figcaption>
+<div aria-describedby="tbl-sae-decision-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>조건</th>
+<th>판정</th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(UCL \leq 1\)</span></td>
+<td>초과하지 <strong>않는다</strong></td>
+<td>오차를 감안해도 구간 전체가 기준 이하</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(LCL \leq 1\)</span> 이고 <span class="math inline">\(UCL &gt; 1\)</span></td>
+<td>초과할 <strong>가능성이 있다</strong></td>
+<td>구간이 1을 걸침 — 오차 때문에 단정 불가</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(LCL &gt; 1\)</span></td>
+<td><strong>초과한다</strong></td>
+<td>오차를 감안해도 구간 전체가 기준 초과</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>왜 “초과”의 조건이 <span class="math inline">\(LCL &gt; 1\)</span>인가
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>초과로 <strong>단정</strong>하려면, 참값이 가장 낮게 있을 가능성까지 고려한 값 — <strong>신뢰하한값(LCL)</strong> — 조차 1을 넘어야 한다. <span class="math inline">\(LCL \leq 1\)</span>은 “참값이 기준 이하일 가능성을 배제할 수 없다”는 뜻이므로 오히려 단정할 수 <strong>없는</strong> 상태다. “측정값이 기준을 넘었다”와 “초과로 판정한다” 사이에는 이 통계적 확신의 단계가 하나 놓여 있다.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 1: 표준화값과 UCL·LCL
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>크실렌을 측정·분석한 결과 5 ppm이 검출되었다. 크실렌의 SAE는 0.12, 노출기준은 100 ppm이다. <span class="math inline">\(Y\)</span>, <span class="math inline">\(UCL\)</span>, <span class="math inline">\(LCL\)</span>을 구하고 판정하라.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[Y = \frac{5}{100} = 0.05 \qquad UCL = 0.05 + 0.12 = \textbf{0.17}
+\qquad LCL = 0.05 - 0.12 = \textbf{-0.07}\]</span></p>
+<p><span class="math inline">\(UCL = 0.17 \leq 1\)</span> 이므로 <strong>노출기준을 초과하지 않는다</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 2: 같은 농도, 다른 SAE — 판정이 갈린다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>8시간 작업 중 측정된 공기 중 카르바릴 농도는 6.0 mg/m³, 노출기준은 5.0 mg/m³이다. SAE가 0.23인 경우와 0.19인 경우 각각에 대해 95% 신뢰도 기준으로 판정하라.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[Y = \frac{6.0}{5.0} = 1.2\]</span></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>SAE</th>
+<th>UCL</th>
+<th>LCL</th>
+<th>판정</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0.23</td>
+<td>1.2 + 0.23 = 1.43</td>
+<td>1.2 − 0.23 = <strong>0.97</strong></td>
+<td><span class="math inline">\(LCL \leq 1 &lt; UCL\)</span> → <strong>초과할 가능성이 있다</strong></td>
+</tr>
+<tr class="even">
+<td>0.19</td>
+<td>1.2 + 0.19 = 1.39</td>
+<td>1.2 − 0.19 = <strong>1.01</strong></td>
+<td><span class="math inline">\(LCL &gt; 1\)</span> → <strong>초과한다</strong></td>
+</tr>
+</tbody>
+</table>
+<p>측정농도가 같아도 <strong>SAE가 작으면(분석 정밀도가 높으면) 초과로 확정</strong>되고, SAE가 크면 “초과 가능”에 머무른다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 3: 납 노출의 평가
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>납흄에 노출되는 근로자의 납 농도를 측정한 결과 0.056 mg/m³이었다. SAE는 0.082이고, 고시 별표 1의 「납 및 그 무기화합물」 노출기준(TWA)은 0.05 mg/m³이다. 판정하라.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[Y = \frac{0.056}{0.05} = 1.12\]</span></p>
+<p><span class="math display">\[LCL = 1.12 - 0.082 = 1.038 &gt; 1\]</span></p>
+<p><span class="math inline">\(LCL &gt; 1\)</span> 이므로 <strong>노출기준을 초과한다</strong>. 측정값이 기준을 12% 넘었고, 오차 폭(0.082)을 빼고도 여전히 1을 넘기 때문에 단정이 가능하다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="노출자료의-통계적-해석" class="level3">
+<h3 class="anchored" data-anchor-id="노출자료의-통계적-해석">4.2 노출자료의 통계적 해석</h3>
+<section id="하루의-측정은-하루의-표본이다" class="level4">
+<h4 class="anchored" data-anchor-id="하루의-측정은-하루의-표본이다">하루의 측정은 하루의 표본이다</h4>
+<p>§4.1의 판정은 한 번의 측정값에 붙는 <strong>분석 오차</strong>를 다루었다. 그런데 노출에는 또 하나의 변동이 있다 — <strong>날마다, 사람마다 노출 자체가 달라진다</strong>. 같은 작업자의 노출도 작업량, 환기 조건, 기온에 따라 날마다 다르고, 어느 하루의 측정값은 이 변동하는 분포에서 뽑힌 <strong>표본 하나</strong>일 뿐이다. 노출을 제대로 이해하려면 값 하나가 아니라 <strong>분포</strong>를 보아야 한다.</p>
+</section>
+<section id="대수정규분포-노출자료의-생김새" class="level4">
+<h4 class="anchored" data-anchor-id="대수정규분포-노출자료의-생김새">대수정규분포 — 노출자료의 생김새</h4>
+<p>작업장 유해물질 농도 자료는 일반적으로 <strong>정규분포를 따르지 않는다</strong>. 대신 <strong>오른쪽으로 긴 꼬리</strong>를 가진 비대칭 분포를 보이며, 이를 <strong>대수정규분포(lognormal distribution)</strong>라 한다.</p>
+<div id="fig-lognormal" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lognormal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w03_lognormal.svg" class="img-fluid figure-img" style="width:84.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lognormal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;4.5: 노출자료의 대수정규분포 — 노출기준을 1로 표준화한 축. 중심값(GM)이 기준의 30%여도 GSD가 3이면 상위 5%의 경계 <span class="math inline">\(X_{95}\)</span>는 기준을 넘는다(§4.2)
+</figcaption>
+</figure>
+</div>
+<p>이런 모양이 되는 이유는 자료의 성질에 있다. 농도값은 <strong>0 이상만 존재</strong>하므로 왼쪽이 막혀 있고, 소수의 <strong>매우 높은 값</strong>(극단값)이 간헐적으로 발생하여 오른쪽 꼬리가 길며, <strong>로그 변환하면 정규분포</strong>가 된다 — 그래서 “대수(log)정규”다. 긴 꼬리의 극단값은 산술평균을 위로 끌어올리므로, 산술평균은 “전형적인 날”을 대표하지 못한다. 별도의 중심·산포 지표가 필요한 이유다.</p>
+</section>
+<section id="기하평균gm과-기하표준편차gsd" class="level4">
+<h4 class="anchored" data-anchor-id="기하평균gm과-기하표준편차gsd">기하평균(GM)과 기하표준편차(GSD)</h4>
+<p>대수정규분포에서 <strong>중심경향</strong>은 <strong>기하평균(Geometric Mean, GM)</strong>으로, <strong>산포도</strong>는 <strong>기하표준편차(Geometric Standard Deviation, GSD)</strong>로 나타낸다. 둘 다 “로그를 취해 정규분포로 만든 뒤 평균·표준편차를 구하고 되돌린” 값이다.</p>
+<p><span class="math display">\[GM = \sqrt[n]{X_1 \cdot X_2 \cdots X_n} = e^{\frac{1}{n}\sum \ln X_i}
+\qquad\Longleftrightarrow\qquad
+\ln(GM) = \frac{1}{n}\sum_{i=1}^{n}\ln X_i\]</span></p>
+<p><span class="math display">\[\ln(GSD) = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n}\left[\ln X_i - \ln GM\right]^2}\]</span></p>
+<p>GSD는 곱셈적 산포이므로 단위가 없고, 최소값이 1이다.</p>
+<div id="tbl-gsd-interpretation" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gsd-interpretation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;4.10: 기하표준편차의 해석
+</figcaption>
+<div aria-describedby="tbl-gsd-interpretation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>GSD</th>
+<th>해석</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(GSD = 1\)</span></td>
+<td>모든 값이 동일 (변동 없음)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(GSD = 1.5 \sim 3.5\)</span></td>
+<td>일반적인 작업장 자료의 범위</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(GSD &gt; 3\)</span></td>
+<td>변동성 매우 큼 — 노출이 불안정하다는 신호, 관리 필요</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제: 기하평균 계산
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>분진 농도 측정값이 2, 4, 8, 16 mg/m³일 때 산술평균과 기하평균을 구하라.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-33" class="callout-33-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>산술평균:</strong> <span class="math display">\[\bar{X} = \frac{2+4+8+16}{4} = 7.5\ \text{mg/m}^3\]</span></p>
+<p><strong>기하평균:</strong> <span class="math display">\[GM = \sqrt[4]{2 \times 4 \times 8 \times 16} = \sqrt[4]{1024} = 5.66\ \text{mg/m}^3\]</span></p>
+<p>산술평균(7.5)은 최대값 16에 끌려 올라가 있어 4개 값 중 3개가 그보다 작다. 로그 척도에서 2, 4, 8, 16은 등간격이고 그 한가운데가 5.66 — 기하평균이 자료의 “가운데”를 더 잘 대표한다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="번째-백분위수-분포의-위쪽-끝-추정" class="level4">
+<h4 class="anchored" data-anchor-id="번째-백분위수-분포의-위쪽-끝-추정">95번째 백분위수 — 분포의 위쪽 끝 추정</h4>
+<p>노출평가에서 궁금한 것은 평균만이 아니라 “나쁜 날”의 노출 — 분포의 위쪽 끝이 기준을 넘는가다. 대수정규분포를 가정하면 <strong>95번째 백분위수</strong>(<span class="math inline">\(X_{95}\)</span>)를 GM과 GSD로부터 추정할 수 있다.</p>
+<p><span class="math display">\[X_{95} = GM \times GSD^{1.645}\]</span></p>
+<p>(1.645는 표준정규분포의 95번째 백분위수에 해당하는 z값 — 로그 척도에서 평균보다 1.645 표준편차 위의 값을 원래 척도로 되돌린 식이다.) 같은 GM이라도 GSD가 크면 <span class="math inline">\(X_{95}\)</span>는 크게 벌어진다. 예컨대 GM이 기준의 30%여도 GSD가 3이면 <span class="math inline">\(X_{95} = 0.3 \times 3^{1.645} \approx 1.8\)</span>배로 기준을 넘는다(<a href="#fig-lognormal" class="quarto-xref">그림&nbsp;<span>4.5</span></a>) — <strong>평균이 낮다는 것과 노출이 관리되고 있다는 것은 다른 진술</strong>이다.</p>
+</section>
+<section id="누구의-분포인가-유사노출군-seg" class="level4">
+<h4 class="anchored" data-anchor-id="누구의-분포인가-유사노출군-seg">누구의 분포인가 — 유사노출군 (SEG)</h4>
+<p>모든 근로자를 매일 측정하는 것은 현실적으로 불가능하다. 해법은 <strong>노출 조건이 유사할 것으로 예상되는 근로자 집단</strong> — <strong>유사노출군(Similar Exposure Group, SEG)</strong> — 을 설정하고, 그중 일부를 표본 추출하여 측정한 뒤 결과를 집단 전체의 노출 분포로 일반화하는 것이다. 설정의 기준은 “이 사람들의 노출이 같은 분포에서 나온다고 볼 수 있는가”이다.</p>
+<ol type="1">
+<li><strong>동일 공정/작업</strong> — 같은 기계, 같은 작업 수행</li>
+<li><strong>동일 유해물질</strong> — 같은 화학물질에 노출</li>
+<li><strong>유사한 노출 양상</strong> — 노출 시간, 빈도, 강도가 비슷</li>
+<li><strong>유사한 작업환경</strong> — 환기 조건, 발생원과의 거리</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>최고노출근로자 (Maximum Risk Employee)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>각 SEG에서 <strong>가장 높은 노출이 예상되는 근로자</strong>를 반드시 측정 대상에 포함한다. 논리는 보수적 추론이다 — 집단에서 가장 높은 노출이 기준 이하라면, 그룹 전체가 기준 이하라고 판단할 수 있다.</p>
+</div>
+</div>
+<p>SEG가 잘못 설정되면(노출 양상이 다른 근로자들을 한 군으로 묶으면) GSD가 커진다. 큰 변동성(§4.2의 GSD &gt; 3)은 노출이 불안정하다는 뜻이거나, 군 설정이 노출 실태와 맞지 않다는 신호일 수 있다.</p>
+<hr>
+<p>AIHA는 SEG를 축으로 한 노출평가 전략에서 모니터링의 목적을 셋으로 나눈다. <strong>기초(baseline) 모니터링</strong>은 SEG마다 노출 농도의 범위와 분포를 파악하는 것으로 역학조사에 가장 유용한 자료를 남기고, <strong>진단(diagnostic) 모니터링</strong>은 어느 작업·발생원이 노출을 만드는지 원인을 짚으며, <strong>순응도(compliance) 모니터링</strong>은 노출기준 초과 여부를 확인한다. 우리나라의 법정 작업환경측정은 셋 가운데 순응도 모니터링에 가깝고, 기초·진단 모니터링은 사업장이 스스로 설계해야 하는 부분이다.</p>
+</section>
+</section>
+<section id="한국의-작업환경측정-제도-개관" class="level3">
+<h3 class="anchored" data-anchor-id="한국의-작업환경측정-제도-개관">4.3 한국의 작업환경측정 제도 개관</h3>
+<p>우리나라에서 지금까지 배운 노출평가는 <strong>작업환경측정</strong>이라는 법정 제도로 구현되어 있다. 두 개의 고시가 역할을 나눈다 — 「화학물질 및 물리적 인자의 노출기준」이 <strong>판정의 잣대</strong>를 주고, 「작업환경측정 및 정도관리 등에 관한 고시」가 <strong>어떻게 재는가</strong>를 정한다. 측정의 주기와 대상은 「산업안전보건법 시행규칙」이 정한다. 여기서는 골격만 보고, 측정기관 지정·정도관리 등 제도 운영의 상세는 <a href="../chapters/w14_law_management.html">14주차</a>에서 다룬다.</p>
+<section id="단위작업장소와-시료채취-근로자-수" class="level4">
+<h4 class="anchored" data-anchor-id="단위작업장소와-시료채취-근로자-수">단위작업장소와 시료채취 근로자 수</h4>
+<p>측정의 공간 단위는 <strong>단위작업 장소</strong>다. 측정고시 제2조제1항제10호의 정의는 이렇다 — “규칙 제186조제1항에 따라 작업환경측정대상이 되는 작업장 또는 공정에서 <strong>정상적인 작업을 수행하는 동일 노출집단의 근로자가 작업을 하는 장소</strong>”. §4.2의 SEG 개념이 제도 언어로 번역된 것이라 볼 수 있다.</p>
+<p><strong>최고노출근로자</strong>도 고시가 정의한다(같은 조 제9호) — 측정대상 유해인자의 <strong>발생 및 취급원에서 가장 가까운 위치의 근로자</strong>이거나, 유해인자에 <strong>가장 많이 노출될 것으로 간주되는 근로자</strong>. §4.2의 Maximum Risk Employee가 “발생원과의 거리”와 “노출 예상량”이라는 두 개의 조작적 기준으로 번역되어 있음에 주목하자.</p>
+<p>측정 인원은 측정고시 제19조가 다음과 같이 정한다.</p>
+<div id="tbl-sampling-workers" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sampling-workers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;4.11: 시료채취 근로자 수와 지역시료 채취지점 수 (측정고시 제19조)
+</figcaption>
+<div aria-describedby="tbl-sampling-workers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>기준</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>개인시료채취 최소 인원</td>
+<td>단위작업 장소에서 <strong>최고 노출근로자 2명 이상</strong>을 <strong>동시에</strong> 측정</td>
+</tr>
+<tr class="even">
+<td>예외</td>
+<td>단위작업 장소에 <strong>근로자가 1명</strong>인 경우에는 그러하지 아니하다</td>
+</tr>
+<tr class="odd">
+<td>인원 추가</td>
+<td>동일 작업 근로자 수가 <strong>10명 초과</strong> 시 <strong>매 5명당 1명 이상 추가</strong></td>
+</tr>
+<tr class="even">
+<td>상한</td>
+<td>동일 작업 근로자 수가 <strong>100명 초과</strong> 시 최대 시료채취 근로자 수를 <strong>20명으로 조정할 수 있다</strong> (재량 규정)</td>
+</tr>
+<tr class="odd">
+<td>지역시료채취 기본</td>
+<td>단위작업장소 내 <strong>2개 이상 지점</strong>에서 <strong>동시에</strong> 측정</td>
+</tr>
+<tr class="even">
+<td>지역시료채취 추가</td>
+<td>단위작업장소 넓이 <strong>50 m² 이상</strong>이면 <strong>매 30 m²마다 1개 지점 이상 추가</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>설계의 논리를 읽어 두자. 최소 인원이 1명이 아니라 <strong>2명</strong>인 것은 한 사람의 측정값이 갖는 우연 변동(§4.2)을 고려한 것이고, “최고 노출근로자”를 대상으로 하는 것은 §4.2의 보수적 추론과 같은 원리다. 예컨대 작업근로자가 17명이면 기본 2명에 10명 초과분(11~15명, 16~17명의 두 구간)에서 1명씩 더해 <strong>4명</strong>을 측정한다 — 연습문제 6에서 이 규칙을 적용해 본다.</p>
+<p>측정 <strong>위치</strong>도 두 방식이 다르다(제22조). 개인시료채취는 측정기기를 <strong>작업 근로자의 호흡기 위치</strong>에 장착하고, 지역시료채취는 <strong>발생원에 근접한 위치 또는 근로자의 주 작업행동 범위 내에서 호흡기 높이</strong>에 설치한다. (개인 시료채취의 “호흡위치”는 제2조제1항제6호가 <strong>호흡기를 중심으로 반경 30 cm인 반구</strong>로 정의한다 — <a href="../chapters/w02_exposure_assessment1.html">2주차</a>의 호흡역 개념이 그대로 조문화되어 있다.)</p>
+</section>
+<section id="측정-시간과-측정-주기" class="level4">
+<h4 class="anchored" data-anchor-id="측정-시간과-측정-주기">측정 시간과 측정 주기</h4>
+<p>측정 시간은 §2.2의 원칙 그대로다 — TWA 물질은 <strong>1일 작업시간 동안 6시간 이상 연속 측정</strong>하거나 작업시간을 <strong>등간격으로 나누어 6시간 이상 연속분리</strong> 측정하며(측정고시 제18조제1항), STEL 측정은 <strong>1회 15분</strong>(제2항), C 측정은 최고노출 수준을 평가할 수 있는 최소한의 시간(제3항)이다.</p>
+<p>측정 주기는 「산업안전보건법 시행규칙」제190조가 정하며, 유해인자의 위험도에 비례하여 짧아진다.</p>
+<div id="tbl-measurement-cycle" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-measurement-cycle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;4.12: 작업환경측정 주기
+</figcaption>
+<div aria-describedby="tbl-measurement-cycle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 45%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>상황</th>
+<th>측정 주기</th>
+<th>근거</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>작업환경측정 대상 작업장이 된 경우(신규 설비·공정 등)</td>
+<td>그날부터 <strong>30일 이내</strong> 최초 측정</td>
+<td>규칙 제190조제1항</td>
+</tr>
+<tr class="even">
+<td>일반 유해인자</td>
+<td><strong>반기(6개월)에 1회 이상</strong></td>
+<td>규칙 제190조제1항</td>
+</tr>
+<tr class="odd">
+<td>발암성 물질(특별관리물질)·허가대상유해물질</td>
+<td><strong>3개월에 1회 이상</strong></td>
+<td>규칙 제190조제1항 단서, 측정고시 제5조</td>
+</tr>
+<tr class="even">
+<td>노출기준을 초과한 공정</td>
+<td><strong>3개월에 1회 이상</strong></td>
+<td>규칙 제190조제1항 단서</td>
+</tr>
+<tr class="odd">
+<td>일정 요건을 충족해 완화되는 경우</td>
+<td><strong>연 1회 이상</strong></td>
+<td>규칙 제190조제2항</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>주기 설계의 원리는 위험 기반이다 — 되돌릴 수 없는 건강영향(발암성)일수록, 이미 문제가 확인된 공정일수록 더 자주 들여다본다.</p>
+<p>주기에는 <strong>하한</strong>도 있다. 측정고시 제4조제2항은 전회(前回) 측정을 완료한 날부터 다음의 간격을 두도록 정한다.</p>
+<div id="tbl-measurement-interval" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-measurement-interval-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;4.13: 전회 측정과의 최소 간격 (측정고시 제4조제2항)
+</figcaption>
+<div aria-describedby="tbl-measurement-interval-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>측정 주기</th>
+<th>최소 간격</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>반기 1회 이상</td>
+<td><strong>3개월 이상</strong></td>
+</tr>
+<tr class="even">
+<td>3개월 1회 이상</td>
+<td><strong>45일 이상</strong></td>
+</tr>
+<tr class="odd">
+<td>연 1회 이상</td>
+<td><strong>6개월 이상</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>왜 하한을 둘까. 주기가 “반기 1회”라는 말은 상반기·하반기에 각각 한 번씩 하라는 뜻이지, 6월 30일과 7월 1일에 이틀 연속 측정해서 두 반기를 채우라는 뜻이 아니다. <strong>측정은 시간에 걸친 노출 실태를 표집하는 일</strong>이므로, 표본이 한 시점에 몰리면 대표성이 사라진다(§4.2). 최소 간격 규정은 형식적 준수로 제도의 목적이 비는 것을 막는 장치다.</p>
+<p>또 하나, 예비조사가 형식이 아니라는 점도 확인해 두자. 측정고시 제17조는 예비조사 시 <strong>측정계획서</strong>를 작성하도록 하고, 여기에 ① 원재료 투입부터 최종 제품 생산까지의 <strong>주요공정 도식</strong>, ② 공정별 작업내용·화학물질 사용실태와 <strong>유해인자 노출 가능성</strong>, ③ 측정대상 공정·유해인자·발생주기·종사근로자 현황, ④ 유해인자별 측정방법과 소요기간을 담게 한다. 무엇을 잴지 결정하는 일 자체가 규정된 절차인 셈이다.</p>
+</section>
+<section id="측정-단위" class="level4">
+<h4 class="anchored" data-anchor-id="측정-단위">측정 단위</h4>
+<p>측정고시 제20조가 결과 표시 단위를 정한다. 노출기준 고시 제11조의 표시단위와 짝을 이룬다.</p>
+<div id="tbl-measurement-unit" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-measurement-unit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;4.14: 작업환경측정 결과의 표시 단위 (측정고시 제20조)
+</figcaption>
+<div aria-describedby="tbl-measurement-unit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>인자</th>
+<th>단위</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>가스·증기·분진·흄·미스트 등 화학적 인자</td>
+<td><strong>ppm</strong> 또는 <strong>mg/m³</strong></td>
+</tr>
+<tr class="even">
+<td>석면</td>
+<td><strong>개/cm³</strong>(세제곱센티미터당 섬유개수)</td>
+</tr>
+<tr class="odd">
+<td>소음</td>
+<td><strong>dB(A)</strong></td>
+</tr>
+<tr class="even">
+<td>고열(복사열 포함)</td>
+<td><strong>WBGT</strong>를 구하여 <strong>℃</strong>로 표시</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>ppm과 mg/m³ 사이의 상호 환산은 같은 조 제2항에 계산식으로 규정되어 있으며, 계산 방법과 25 ℃·1기압 기준의 몰부피(24.45 L/mol)는 <a href="../chapters/w02_exposure_assessment1.html">2주차</a> §4.4에서 다루었다.</p>
+<p>작업환경측정 대상에는 화학적 인자 외에 소음·고열도 포함되지만, 물리적 인자의 물리량·측정방법·평가는 <a href="../chapters/w06_physical_agents1.html">6주차</a>와 <a href="../chapters/w07_physical_agents2.html">7주차</a>에서 다룬다.</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="요약" class="level2">
+<h2 class="anchored" data-anchor-id="요약">요약</h2>
+<div id="tbl-summary" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;4.15: 3주차 핵심 요약
+</figcaption>
+<div aria-describedby="tbl-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 62%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>개념</th>
+<th>핵심 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>노출기준(OEL)</strong></td>
+<td>노출기준 이하에서는 <strong>거의 모든</strong> 근로자에게 건강상 나쁜 영향을 미치지 아니하는 기준(고시 제2조). 안전/위험의 경계선이 아님</td>
+</tr>
+<tr class="even">
+<td><strong>고시의 위상</strong></td>
+<td>법률은 위임만, 수치는 고용노동부 고시. 1986년 제정 후 18회 개정, 3년마다 재검토(제12조). 미규정 물질은 ACGIH TLV 준용(제4조②)</td>
+</tr>
+<tr class="odd">
+<td><strong>3종 체계</strong></td>
+<td>TWA(8시간) · STEL(15분) · C(잠시라도 노출 불가, 앞에 “C” 표기). 평균은 피크를 숨기므로 셋을 별도로 평가</td>
+</tr>
+<tr class="even">
+<td><strong>STEL 조건</strong></td>
+<td>농도가 <strong>TWA와 STEL 사이</strong>일 때: 1회 15분 미만 · 1일 4회 이하 · 간격 60분 이상(고시 제2조①3). 뒤집으면 초과 판정 기준(측정고시 제34조④)</td>
+</tr>
+<tr class="odd">
+<td><strong>표기 읽기</strong></td>
+<td><code>Skin</code> = 점막·눈·<strong>경피 흡수로 전신 영향</strong>(피부자극성 아님) → 공기 측정만으로 부족 → 생물학적 모니터링. <code>발암성/생식독성 1A·1B·2</code>는 정보제공 목적</td>
+</tr>
+<tr class="even">
+<td><strong>사용상 유의</strong></td>
+<td>단독 존재 기준① · 근로시간 등 고려② · <strong>직업병 진단·이환 부정 근거로 사용 금지</strong>③ · <strong>대기오염 지표로 사용 금지</strong>④ (고시 제3조)</td>
+</tr>
+<tr class="odd">
+<td><strong>TWA 계산</strong></td>
+<td><span class="math inline">\(TWA\text{환산값} = \sum C_iT_i / \mathbf{8}\)</span> — 분모는 실측 시간의 합이 아니라 <strong>상수 8</strong>(고시 제2조①2)</td>
+</tr>
+<tr class="even">
+<td><strong>측정시간</strong></td>
+<td>TWA 물질은 6시간 이상 연속 또는 등간격 연속분리(측정고시 제18조①). 발생시간 6시간 이하·불규칙·간헐적이면 발생시간 동안 측정 후 8시간 환산</td>
+</tr>
+<tr class="odd">
+<td><strong>연장근무 보정</strong></td>
+<td>8시간 초과 시 보정노출기준 산출 의무(측정고시 제34조③). Brief &amp; Scala: <span class="math inline">\(RF = \frac{8}{h}\times\frac{24-h}{16}\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>혼합물 평가</strong></td>
+<td><strong>상가작용이 기본값</strong> — 서로 다른 부위 작용의 증거가 없는 한 가중(고시 제6조①). <span class="math inline">\(EI = \sum C_i/T_i \leq 1\)</span>. 표적이 다르면 물질별 개별 판정(제6조②)</td>
+</tr>
+<tr class="odd">
+<td><strong><span class="math inline">\(TLV_{mix}\)</span></strong></td>
+<td><span class="math inline">\(\sum C_i / EI\)</span> (농도를 알 때) 또는 <span class="math inline">\(1/\sum(f_i/TLV_i)\)</span> (중량분율만 알 때)</td>
+</tr>
+<tr class="even">
+<td><strong>SAE 판정</strong></td>
+<td>$Y = $ 측정농도/기준, <span class="math inline">\(UCL = Y+SAE\)</span>, <span class="math inline">\(LCL = Y-SAE\)</span>. 초과 단정은 <span class="math inline">\(LCL&gt;1\)</span>일 때만. 우리 고시의 법정 절차는 아니며, 제도는 정도관리로 대응</td>
+</tr>
+<tr class="odd">
+<td><strong>대수정규분포</strong></td>
+<td>노출자료의 전형적 분포(0 이상, 오른쪽 긴 꼬리, 로그 변환 시 정규). 중심 GM, 산포 GSD</td>
+</tr>
+<tr class="even">
+<td><strong>X₉₅</strong></td>
+<td><span class="math inline">\(X_{95} = GM \times GSD^{1.645}\)</span> — “나쁜 날”의 노출 추정. GM이 낮아도 GSD가 크면 초과 가능</td>
+</tr>
+<tr class="odd">
+<td><strong>SEG</strong></td>
+<td>유사노출군 — 표본 측정을 집단 분포로 일반화하는 단위. 최고노출근로자 포함</td>
+</tr>
+<tr class="even">
+<td><strong>한국 제도</strong></td>
+<td>단위작업장소당 최고노출자 2명 이상 동시(1명뿐이면 예외, 10명 초과 시 5명당 1명 추가, 100명 초과 시 20명 상한), 지역시료 2지점 이상·50 m² 이상이면 30 m²마다 추가</td>
+</tr>
+<tr class="odd">
+<td><strong>측정 주기</strong></td>
+<td>반기 1회(발암성·허가대상·초과 시 3개월 1회, 완화 시 연 1회, 신규 30일 이내). 전회 측정과 최소 간격 3개월 / 45일 / 6개월</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<hr>
+</section>
+<section id="연습문제" class="level2">
+<h2 class="anchored" data-anchor-id="연습문제">연습문제</h2>
+<section id="문제-1.-twa와-stel의-종합-판정" class="level3">
+<h3 class="anchored" data-anchor-id="문제-1.-twa와-stel의-종합-판정">문제 1. TWA와 STEL의 종합 판정</h3>
+<p>용접 작업자의 가상 물질 B(노출기준 TWA 25 ppm, STEL 75 ppm) 노출을 구간별로 측정했다.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>구간</th>
+<th>시간</th>
+<th>평균 농도</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>오전 용접</td>
+<td>3시간</td>
+<td>30 ppm</td>
+</tr>
+<tr class="even">
+<td>자재 준비</td>
+<td>2시간</td>
+<td>5 ppm</td>
+</tr>
+<tr class="odd">
+<td>오후 용접</td>
+<td>3시간</td>
+<td>20 ppm</td>
+</tr>
+</tbody>
+</table>
+<p>또한 오전 용접 중 협소부 작업 15분 동안의 평균 농도는 80 ppm이었다.</p>
+<ol type="a">
+<li>8시간 TWA를 구하고 TWA 기준과 비교하라.</li>
+<li>STEL 평가 결과를 판정하라.</li>
+<li>종합 판정과 관리의 초점을 제시하라.</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>a.</strong> <span class="math display">\[TWA = \frac{30 \times 3 + 5 \times 2 + 20 \times 3}{8} = \frac{90 + 10 + 60}{8} = 20\ \text{ppm}\]</span> <span class="math inline">\(20 &lt; 25\)</span> 이므로 TWA 기준으로는 미만이다.</p>
+<p><strong>b.</strong> 15분 평균 80 ppm &gt; STEL 75 ppm → <strong>단시간노출기준 초과</strong>.</p>
+<strong>c.</strong> 종합 판정은 부적합. 관리의 초점은 하루 전체가 아니라 <strong>협소부 용접이라는 피크 발생 작업</strong>(환기 보강, 작업 방법 개선)에 두어야 한다. TWA만 측정하는 평가 설계였다면 이 문제는 발견되지 않았을 것이다.
+</details>
+</section>
+<section id="문제-2.-연장근무-보정" class="level3">
+<h3 class="anchored" data-anchor-id="문제-2.-연장근무-보정">문제 2. 연장근무 보정</h3>
+<p>한 화학공장이 8시간 3교대에서 12시간 2교대로 근무제를 바꾸려 한다. 벤젠의 노출기준(TWA)은 0.5 ppm이고, 현재 근로자들의 8시간 TWA 측정값은 0.3 ppm 수준이다.</p>
+<ol type="a">
+<li>12시간 근무에 적용할 수정 노출기준을 Brief &amp; Scala 모형으로 구하라.</li>
+<li>현재 노출 수준(0.3 ppm)이 유지된다고 가정하면, 근무제 변경 후 판정은 어떻게 되는가?</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>a.</strong> <span class="math display">\[RF = \frac{8}{12} \times \frac{24-12}{16} = 0.667 \times 0.75 = 0.5\]</span> <span class="math display">\[\text{수정 노출기준} = 0.5 \times 0.5 = 0.25\ \text{ppm}\]</span></p>
+<strong>b.</strong> 0.3 ppm &gt; 0.25 ppm 이므로 같은 작업환경이 <strong>수정 기준 초과</strong>가 된다. 환경이 그대로여도 노출 시간이 늘고 회복 시간이 줄면 허용 여부가 뒤집힐 수 있다 — 근무제 변경은 노출평가를 다시 해야 하는 사건이다.
+</details>
+</section>
+<section id="문제-3.-혼합물-노출의-종합-평가" class="level3">
+<h3 class="anchored" data-anchor-id="문제-3.-혼합물-노출의-종합-평가">문제 3. 혼합물 노출의 종합 평가</h3>
+<p>자동차 부품 도장 작업장에서 다음이 측정되었다. 세 물질은 모두 중추신경계에 작용하는 유기용제다(상가작용 가정).</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>물질</th>
+<th>측정농도</th>
+<th>노출기준(TWA)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>톨루엔</td>
+<td>25 ppm</td>
+<td>50 ppm</td>
+</tr>
+<tr class="even">
+<td>크실렌</td>
+<td>60 ppm</td>
+<td>100 ppm</td>
+</tr>
+<tr class="odd">
+<td>메틸에틸케톤</td>
+<td>100 ppm</td>
+<td>200 ppm</td>
+</tr>
+</tbody>
+</table>
+<ol type="a">
+<li>노출지수를 구하고 초과 여부를 판정하라.</li>
+<li>이 혼합물의 허용농도 <span class="math inline">\(TLV_{mix}\)</span>를 구하라.</li>
+<li>크실렌만 저감할 수 있다면, 적합해지기 위한 크실렌 농도의 상한은?</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>a.</strong> <span class="math display">\[EI = \frac{25}{50} + \frac{60}{100} + \frac{100}{200} = 0.5 + 0.6 + 0.5 = 1.6 &gt; 1
+\;\Rightarrow\; \textbf{초과}\]</span></p>
+<p>개별 물질은 모두 각자의 기준 미만(50%, 60%, 50%)이지만, 같은 표적장기에 작용하므로 합으로 판정한다.</p>
+<p><strong>b.</strong> 총 농도 <span class="math inline">\(= 25 + 60 + 100 = 185\)</span> ppm. <span class="math display">\[TLV_{mix} = \frac{185}{1.6} = 115.6\ \text{ppm}\]</span></p>
+<strong>c.</strong> 톨루엔·메틸에틸케톤의 기준 사용률 합이 이미 <span class="math inline">\(0.5 + 0.5 = 1.0\)</span> 이므로 <span class="math inline">\(x/100 \leq 0\)</span>, 즉 크실렌을 완전히 제거해도 경계값에 겨우 걸린다. <strong>크실렌 저감만으로는 적합해질 수 없고</strong> 혼합물 전체의 저감 전략이 필요하다 — 역산형 계산이 관리 의사결정에 주는 정보다.
+</details>
+</section>
+<section id="문제-4.-sae-판정" class="level3">
+<h3 class="anchored" data-anchor-id="문제-4.-sae-판정">문제 4. SAE 판정</h3>
+<p>작업장의 스티렌 노출(노출기준 20 ppm)을 측정한 결과 22 ppm이었고, 측정·분석법의 SAE는 0.08이다. 95% 신뢰도 기준으로 판정하고, 같은 측정값에서 SAE가 0.25였다면 판정이 어떻게 달라질지 설명하라.</p>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<span class="math inline">\(Y = 22/20 = 1.1\)</span>. SAE 0.08이면 <span class="math inline">\(LCL = 1.02 &gt; 1\)</span> → <strong>초과한다</strong>. SAE 0.25라면 <span class="math inline">\(LCL = 0.85 \leq 1 &lt; UCL = 1.35\)</span> → “초과할 가능성이 있다”에 머문다. 오차 폭이 크면 참값이 기준 이하일 가능성을 배제할 수 없어 단정이 유보된다 — 정도관리(<a href="../chapters/w02_exposure_assessment1.html">2주차</a>)로 SAE를 줄이는 것은 분석실만의 문제가 아니라 판정력의 문제다.
+</details>
+</section>
+<section id="문제-5.-대수정규분포와-x₉₅" class="level3">
+<h3 class="anchored" data-anchor-id="문제-5.-대수정규분포와-x₉₅">문제 5. 대수정규분포와 X₉₅</h3>
+<p>한 유사노출군에서 5일간 측정한 분진 농도가 3, 6, 12, 24, 6 mg/m³이었다 (노출기준 30 mg/m³). 자료가 대수정규분포를 따르고 GSD가 2.0으로 추정되었다.</p>
+<ol type="a">
+<li>기하평균을 구하라.</li>
+<li>95번째 백분위수 <span class="math inline">\(X_{95}\)</span>를 추정하라. (<span class="math inline">\(2^{1.645} \approx 3.13\)</span>)</li>
+<li>“기하평균이 기준의 3분의 1도 안 되니 안심”이라는 해석을 평가하라.</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>a.</strong> <span class="math display">\[GM = \sqrt[5]{3 \times 6 \times 12 \times 24 \times 6} = \sqrt[5]{31104} \approx 7.9\ \text{mg/m}^3\]</span></p>
+<p><strong>b.</strong> <span class="math display">\[X_{95} = GM \times GSD^{1.645} = 7.9 \times 2^{1.645} \approx 7.9 \times 3.13 \approx 24.7\ \text{mg/m}^3\]</span></p>
+<strong>c.</strong> 부적절한 해석이다. GM(7.9)은 기준(30)의 26%이지만, GSD 2.0의 변동성 때문에 상위 5%의 날은 24.7 mg/m³ — <strong>기준의 82%</strong> — 에 이른다. 오른쪽 긴 꼬리에서는 평균이 낮아도 “나쁜 날”이 기준에 접근할 수 있으므로, 평가의 결론은 중심(GM)과 산포(GSD)를 함께 보아야 한다.
+</details>
+</section>
+<section id="문제-6.-측정-설계-인원과-주기" class="level3">
+<h3 class="anchored" data-anchor-id="문제-6.-측정-설계-인원과-주기">문제 6. 측정 설계 — 인원과 주기</h3>
+<p>한 전자부품 공장의 단위작업장소에서 23명의 근로자가 동일한 세척 작업을 하며, 세척제 주성분은 특별관리물질(발암성)로 분류되어 있다. 단위작업장소의 넓이는 40 m²다.</p>
+<ol type="a">
+<li>개인시료채취로 측정해야 할 최소 근로자 수는?</li>
+<li>지역시료채취 지점 추가 의무가 있는가?</li>
+<li>작업환경측정 주기는?</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>a.</strong> 기본 2명(1~10명) + 10명 초과분 13명에 대해 매 5명당 1명 (11~15명 +1, 16~20명 +1, 21~23명 구간 +1) = <strong>5명</strong>.</p>
+<p><strong>b.</strong> 없다. 지역시료채취 지점 추가 기준은 넓이 <strong>50 m² 이상</strong>부터 적용되는데, 이 단위작업장소는 40 m²다.</p>
+<strong>c.</strong> 특별관리물질(발암성)이므로 <strong>3개월에 1회 이상</strong> — 일반 유해인자 (반기 1회)보다 감시 간격이 짧은 위험 기반 설계다. 이때 전회 측정 완료일부터 <strong>45일 이상</strong>의 간격을 두어야 한다(측정고시 제4조제2항제2호).
+</details>
+</section>
+<section id="문제-7.-별표-1-읽기-표기가-바꾸는-관리-전략" class="level3">
+<h3 class="anchored" data-anchor-id="문제-7.-별표-1-읽기-표기가-바꾸는-관리-전략">문제 7. 별표 1 읽기 — 표기가 바꾸는 관리 전략</h3>
+<p>어느 도장 사업장에서 다음 두 물질이 함께 사용되고 있다. 고시 별표 1의 기재 내용은 다음과 같다.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>물질</th>
+<th>TWA</th>
+<th>STEL</th>
+<th>비고 (CAS번호 등)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>메틸 알코올 / Methanol</td>
+<td>200 ppm</td>
+<td>250 ppm</td>
+<td>[67-56-1] Skin</td>
+</tr>
+<tr class="even">
+<td>아세톤 / Acetone</td>
+<td>500 ppm</td>
+<td>750 ppm</td>
+<td>[67-64-1]</td>
+</tr>
+</tbody>
+</table>
+<p>작업환경측정 결과 두 물질 모두 8시간 TWA가 노출기준의 40% 수준이었고, STEL 초과도 없었다.</p>
+<ol type="a">
+<li>두 물질의 노출기준 차이(200 vs 500 ppm)가 뜻하는 바를 설명하라.</li>
+<li>이 측정 결과로 “두 물질 모두 관리되고 있다”고 결론지을 수 있는가? 두 물질에 대해 각각 답하라.</li>
+<li>b의 답을 근거로 추가로 수행해야 할 평가와 그 근거 조항을 제시하라.</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>a.</strong> 노출기준의 크기는 그 물질의 <strong>독성의 세기를 압축한 정보</strong>다. 같은 농도로 존재할 때 메탄올이 아세톤보다 2.5배 더 엄격하게 관리되어야 한다는 뜻이다. (다만 두 물질 모두 발암성·생식독성 표기는 없다.)</p>
+<p><strong>b.</strong></p>
+<ul>
+<li><strong>아세톤</strong>: 비고 칸이 CAS번호뿐이다. 노출 경로가 사실상 흡입에 국한되므로, 공기 중 농도가 TWA의 40%이고 STEL 초과도 없다면 <strong>공기 측정만으로 평가가 성립한다</strong>.</li>
+<li><strong>메틸 알코올</strong>: <strong>Skin</strong> 표기가 붙어 있다. 별표 1 주 1에 따르면 “점막과 눈 그리고 경피로 흡수되어 전신 영향을 일으킬 수 있는 물질”이다. 개인시료채취기는 호흡역의 <strong>공기</strong>만 잰다. 붓·걸레로 메탄올을 다루면서 장갑을 착용하지 않는 작업이 있다면, <strong>공기 중 농도가 기준의 40%여도 전신 노출은 과다할 수 있다.</strong> 따라서 <strong>결론지을 수 없다</strong>.</li>
+</ul>
+<p><strong>c.</strong> 메틸 알코올에 대해서는 <strong>생물학적 모니터링</strong>을 병행해야 한다 — 혈액·소변 등 생체시료에서 물질 자체나 대사산물을 측정하여 경로와 무관한 <strong>총 체내 부담</strong>을 직접 확인하는 방법이다(ACGIH의 BEI, <a href="../chapters/w11_biological_agents.html">11주차</a>). 아울러 피부 노출을 차단하는 관리 (적합한 재질의 보호장갑, 작업 방법 개선 — <a href="../chapters/w13_ppe_work_management.html">13주차</a>)가 동반되어야 한다.</p>
+근거: 고시 별표 1 주 1(Skin 표기의 정의), 고시 제3조제3항(“노출기준 이하의 작업환경이라는 이유만으로 직업성질병의 이환을 부정하는 근거로 사용하여서는 아니 된다”).
+</details>
+</section>
+<section id="문제-8.-발생시간이-짧은-작업의-twa-환산" class="level3">
+<h3 class="anchored" data-anchor-id="문제-8.-발생시간이-짧은-작업의-twa-환산">문제 8. 발생시간이 짧은 작업의 TWA 환산</h3>
+<p>한 사업장에서 접착제 도포 작업이 <strong>오전 3시간 동안만</strong> 이루어지고, 나머지 5시간은 조립·검사 작업으로 해당 물질의 발생이 없다. 측정 결과 도포 작업 3시간의 평균 농도는 <strong>120 ppm</strong>이었다. 이 물질의 노출기준은 TWA 50 ppm이다.</p>
+<ol type="a">
+<li>이 경우 발생시간 동안만 측정한 것이 적법한가? 근거 조항을 제시하라.</li>
+<li>노출기준과 비교할 값을 산출하고 판정하라.</li>
+<li>만약 측정시간(3시간)으로 나누어 평균을 냈다면 어떤 값이 나오며, 그것이 왜 잘못된 비교인지 설명하라.</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>a.</strong> 적법하다. 측정고시 제18조제1항 단서 제1호 — “대상물질의 <strong>발생시간이 6시간 이하</strong>인 경우”에는 <strong>대상물질의 발생시간 동안</strong> 측정할 수 있다. 발생시간이 3시간이므로 이에 해당한다.</p>
+<p><strong>b.</strong> 노출기준 고시 제2조제1항제2호의 산출식은 분모가 <strong>8</strong>이다.</p>
+<p><span class="math display">\[TWA\ \text{환산값} = \frac{120 \times 3}{8} = \frac{360}{8} = 45\ \text{ppm}\]</span></p>
+<p><span class="math inline">\(45 &lt; 50\)</span> 이므로 <strong>노출기준 미만</strong>이다.</p>
+<p>(측정고시 제34조제2항도 같은 절차를 규정한다 — 측정시간 동안의 시간가중 평균치를 구한 뒤 “이를 8시간 시간가중평균하여 8시간 작업 시의 평균농도로 한다”.)</p>
+<p><strong>c.</strong> 측정시간으로 나누면 <span class="math inline">\(360 / 3 = 120\)</span> ppm이 되어 기준(50 ppm)을 2.4배 초과하는 것으로 나온다. 이것이 잘못된 이유는 <strong>비교 대상의 시간 축이 다르기 때문</strong>이다. TWA 노출기준 50 ppm은 “1일 8시간 노출”을 전제로 설정된 값이다. 반면 120 ppm은 “3시간 노출”의 평균이다. <strong>서로 다른 시간 축의 두 값을 직접 비교할 수 없다.</strong> 노출이 없던 5시간은 계산에서 빼야 할 시간이 아니라 “농도 0으로 5시간”이라는 실제 정보이며, 이를 반영해 8시간 축으로 환산한 값이 45 ppm이다.</p>
+다만 한 가지 유보가 남는다 — 이 물질에 <strong>STEL이나 C가 설정되어 있다면</strong> 8시간 환산값이 기준 미만이라는 사실만으로 평가가 끝나지 않는다(§2.3). 3시간 동안 120 ppm이 유지되었다는 것은 단시간 노출 평가가 별도로 필요한 노출 양상이기 때문이다.
+</details>
+<hr>
+</section>
+</section>
+<section id="참고문헌" class="level2">
+<h2 class="anchored" data-anchor-id="참고문헌">참고문헌</h2>
+<ol type="1">
+<li><strong>고용노동부. 「화학물질 및 물리적 인자의 노출기준」. 고용노동부고시 제2020-48호, 2020.1.14. 개정(2020.1.16. 시행).</strong> (제정: 노동부고시 제86-45호, 1986.12.22.)</li>
+<li><strong>고용노동부. 「작업환경측정 및 정도관리 등에 관한 고시」. 고용노동부고시 제2020-44호, 2020.1.16.</strong></li>
+<li>「산업안전보건법」 제106조(유해인자의 노출기준 설정), 제107조(유해인자 허용기준의 준수), 제125조(작업환경측정), 제126조(작업환경측정기관).</li>
+<li>「산업안전보건법 시행규칙」 제186조(작업환경측정 대상 작업장 등), 제189조(작업환경측정방법), 제190조(작업환경측정 주기 및 횟수).</li>
+<li>ACGIH (2024). <em>TLVs and BEIs — Threshold Limit Values for Chemical Substances and Physical Agents and Biological Exposure Indices</em>. ACGIH.</li>
+<li>Plog, B. A., &amp; Quinlan, P. J. (2012). <em>Fundamentals of Industrial Hygiene</em> (6th ed.). National Safety Council.</li>
+<li>DiNardi, S. R. (2003). <em>The Occupational Environment: Its Evaluation, Control, and Management</em> (2nd ed.). AIHA Press.</li>
+<li>Brief, R. S., &amp; Scala, R. A. (1975). Occupational exposure limits for novel work schedules. <em>American Industrial Hygiene Association Journal</em>, 36(6), 467–469.</li>
+<li>한국산업안전보건공단 (2023). <em>작업환경측정 실무</em>. KOSHA.</li>
+<li>정규철 외 (2020). <em>산업위생학</em>. 신광출판사.</li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "복사완료!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "복사완료!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/w02_exposure_assessment1.html" class="pagination-link" aria-label="2주차. 작업환경측정 I — 측정 원리와 전략">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">2주차. 작업환경측정 I — 측정 원리와 전략</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/w04_toxicology1.html" class="pagination-link" aria-label="4주차. 산업독성학 I — 독성학의 원리">
+        <span class="nav-page-text"><span class="chapter-title">4주차. 산업독성학 I — 독성학의 원리</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

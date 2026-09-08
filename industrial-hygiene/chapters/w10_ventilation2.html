@@ -1,0 +1,2207 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>10주차. 산업환기 II — 국소배기장치 – 산업위생 총론</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/w11_biological_agents.html" rel="next">
+<link href="../chapters/w09_ventilation1.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-df22de3841a4459d65a458d30db11513.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-1f5cceec34869e9b7e758f61c933684c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-df22de3841a4459d65a458d30db11513.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/w09_ventilation1.html">Part III. 작업환경 관리 (9~13주)</a></li><li class="breadcrumb-item"><a href="../chapters/w10_ventilation2.html"><span class="chapter-title">10주차. 산업환기 II — 국소배기장치</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">산업위생 총론</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="다크 모드 전환"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="검색"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">산업위생 총론</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I. 산업위생의 기초 (1~3주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w01_intro_history.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1주차. 산업위생 개론과 역사</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w02_exposure_assessment1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2주차. 작업환경측정 I — 측정 원리와 전략</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w03_exposure_assessment2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3주차. 작업환경측정 II — 노출기준과 평가</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II. 유해인자와 건강영향 (4~7주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w04_toxicology1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4주차. 산업독성학 I — 독성학의 원리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w05_toxicology2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5주차. 산업독성학 II — 주요 화학물질과 건강장해</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w06_physical_agents1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6주차. 물리적 유해인자 I — 소음과 진동</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w07_physical_agents2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">7주차. 물리적 유해인자 II — 온열·이상기압·방사선·조명</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">중간고사 (8주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w08_midterm.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">8주차. 중간고사</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III. 작업환경 관리 (9~13주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w09_ventilation1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">9주차. 산업환기 I — 환기의 원리와 전체환기</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w10_ventilation2.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">10주차. 산업환기 II — 국소배기장치</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w11_biological_agents.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">11주차. 생물학적 유해인자와 생물학적 모니터링</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w12_ergonomics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">12주차. 인간공학과 근골격계질환</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w13_ppe_work_management.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">13주차. 개인보호구와 작업관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part IV. 제도와 실무 (14~15주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w14_law_management.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">14주차. 산업보건 법규와 관리 제도</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w15_case_studies.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">15주차. 직업병 사례연구</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">기말고사 (16주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w16_final.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">16주차. 기말고사</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">부록</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendix/cert_map.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">부록. 자격증 과목 매핑</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#학습목표" id="toc-학습목표" class="nav-link active" data-scroll-target="#학습목표">학습목표</a></li>
+  <li><a href="#국소배기장치의-구성과-원리" id="toc-국소배기장치의-구성과-원리" class="nav-link" data-scroll-target="#국소배기장치의-구성과-원리">1. 국소배기장치의 구성과 원리</a>
+  <ul>
+  <li><a href="#왜-국소배기인가" id="toc-왜-국소배기인가" class="nav-link" data-scroll-target="#왜-국소배기인가">1.1 왜 국소배기인가</a></li>
+  <li><a href="#다섯-가지-구성요소" id="toc-다섯-가지-구성요소" class="nav-link" data-scroll-target="#다섯-가지-구성요소">1.2 다섯 가지 구성요소</a></li>
+  </ul></li>
+  <li><a href="#후드의-세-가지-형식-제어속도" id="toc-후드의-세-가지-형식-제어속도" class="nav-link" data-scroll-target="#후드의-세-가지-형식-제어속도">2. 후드의 세 가지 형식 · 제어속도</a>
+  <ul>
+  <li><a href="#후드의-세-가지-형식" id="toc-후드의-세-가지-형식" class="nav-link" data-scroll-target="#후드의-세-가지-형식">2.1 후드의 세 가지 형식</a></li>
+  <li><a href="#제어속도" id="toc-제어속도" class="nav-link" data-scroll-target="#제어속도">2.2 제어속도</a></li>
+  </ul></li>
+  <li><a href="#형식별-필요송풍량-계산-유입계수유입손실계수후드정압" id="toc-형식별-필요송풍량-계산-유입계수유입손실계수후드정압" class="nav-link" data-scroll-target="#형식별-필요송풍량-계산-유입계수유입손실계수후드정압">3. 형식별 필요송풍량 계산 · 유입계수·유입손실계수·후드정압</a>
+  <ul>
+  <li><a href="#형식별-필요송풍량-계산" id="toc-형식별-필요송풍량-계산" class="nav-link" data-scroll-target="#형식별-필요송풍량-계산">3.1 형식별 필요송풍량 계산</a></li>
+  <li><a href="#유입계수유입손실계수후드정압" id="toc-유입계수유입손실계수후드정압" class="nav-link" data-scroll-target="#유입계수유입손실계수후드정압">3.2 유입계수·유입손실계수·후드정압</a></li>
+  </ul></li>
+  <li><a href="#덕트-설계와-압력손실" id="toc-덕트-설계와-압력손실" class="nav-link" data-scroll-target="#덕트-설계와-압력손실">4. 덕트 설계와 압력손실</a>
+  <ul>
+  <li><a href="#반송속도" id="toc-반송속도" class="nav-link" data-scroll-target="#반송속도">4.1 반송속도</a></li>
+  <li><a href="#압력손실의-두-성분" id="toc-압력손실의-두-성분" class="nav-link" data-scroll-target="#압력손실의-두-성분">4.2 압력손실의 두 성분</a></li>
+  <li><a href="#각형-덕트의-상당직경" id="toc-각형-덕트의-상당직경" class="nav-link" data-scroll-target="#각형-덕트의-상당직경">4.3 각형 덕트의 상당직경</a></li>
+  <li><a href="#부속별-압력손실-계산" id="toc-부속별-압력손실-계산" class="nav-link" data-scroll-target="#부속별-압력손실-계산">4.4 부속별 압력손실 계산</a></li>
+  </ul></li>
+  <li><a href="#공기정화장치" id="toc-공기정화장치" class="nav-link" data-scroll-target="#공기정화장치">5. 공기정화장치</a>
+  <ul>
+  <li><a href="#집진장치의-종류-개관" id="toc-집진장치의-종류-개관" class="nav-link" data-scroll-target="#집진장치의-종류-개관">5.1 집진장치의 종류 개관</a></li>
+  <li><a href="#사이클론" id="toc-사이클론" class="nav-link" data-scroll-target="#사이클론">5.2 사이클론</a></li>
+  <li><a href="#백필터-여과집진기" id="toc-백필터-여과집진기" class="nav-link" data-scroll-target="#백필터-여과집진기">5.3 백필터 (여과집진기)</a></li>
+  <li><a href="#전기집진기-esp" id="toc-전기집진기-esp" class="nav-link" data-scroll-target="#전기집진기-esp">5.4 전기집진기 (ESP)</a></li>
+  <li><a href="#가스상-물질의-정화장치" id="toc-가스상-물질의-정화장치" class="nav-link" data-scroll-target="#가스상-물질의-정화장치">5.5 가스상 물질의 정화장치</a></li>
+  </ul></li>
+  <li><a href="#송풍기" id="toc-송풍기" class="nav-link" data-scroll-target="#송풍기">6. 송풍기</a>
+  <ul>
+  <li><a href="#송풍기의-종류" id="toc-송풍기의-종류" class="nav-link" data-scroll-target="#송풍기의-종류">6.1 송풍기의 종류</a></li>
+  <li><a href="#송풍기-상사법칙" id="toc-송풍기-상사법칙" class="nav-link" data-scroll-target="#송풍기-상사법칙">6.2 송풍기 상사법칙</a></li>
+  <li><a href="#소요동력" id="toc-소요동력" class="nav-link" data-scroll-target="#소요동력">6.3 소요동력</a></li>
+  <li><a href="#성능곡선과-운전점-풍량-조절" id="toc-성능곡선과-운전점-풍량-조절" class="nav-link" data-scroll-target="#성능곡선과-운전점-풍량-조절">6.4 성능곡선과 운전점, 풍량 조절</a></li>
+  </ul></li>
+  <li><a href="#성능-검증과-유지관리" id="toc-성능-검증과-유지관리" class="nav-link" data-scroll-target="#성능-검증과-유지관리">7. 성능 검증과 유지관리</a>
+  <ul>
+  <li><a href="#보충용-공기-빼낸-만큼-넣어-준다" id="toc-보충용-공기-빼낸-만큼-넣어-준다" class="nav-link" data-scroll-target="#보충용-공기-빼낸-만큼-넣어-준다">7.1 보충용 공기 — 빼낸 만큼 넣어 준다</a></li>
+  <li><a href="#압력은-어디서-재는가" id="toc-압력은-어디서-재는가" class="nav-link" data-scroll-target="#압력은-어디서-재는가">7.2 압력은 어디서 재는가</a></li>
+  <li><a href="#정압-변화로-고장-부위-찾기" id="toc-정압-변화로-고장-부위-찾기" class="nav-link" data-scroll-target="#정압-변화로-고장-부위-찾기">7.3 정압 변화로 고장 부위 찾기</a></li>
+  <li><a href="#적정-운전-상태의-판단" id="toc-적정-운전-상태의-판단" class="nav-link" data-scroll-target="#적정-운전-상태의-판단">7.4 적정 운전 상태의 판단</a></li>
+  </ul></li>
+  <li><a href="#요약" id="toc-요약" class="nav-link" data-scroll-target="#요약">요약</a></li>
+  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a>
+  <ul>
+  <li><a href="#문제-1.-외부식-후드의-설계" id="toc-문제-1.-외부식-후드의-설계" class="nav-link" data-scroll-target="#문제-1.-외부식-후드의-설계">문제 1. 외부식 후드의 설계</a></li>
+  <li><a href="#문제-2.-유입계수와-후드정압" id="toc-문제-2.-유입계수와-후드정압" class="nav-link" data-scroll-target="#문제-2.-유입계수와-후드정압">문제 2. 유입계수와 후드정압</a></li>
+  <li><a href="#문제-3.-덕트-계통의-압력손실" id="toc-문제-3.-덕트-계통의-압력손실" class="nav-link" data-scroll-target="#문제-3.-덕트-계통의-압력손실">문제 3. 덕트 계통의 압력손실</a></li>
+  <li><a href="#문제-4.-송풍기의-회전수-변경과-동력" id="toc-문제-4.-송풍기의-회전수-변경과-동력" class="nav-link" data-scroll-target="#문제-4.-송풍기의-회전수-변경과-동력">문제 4. 송풍기의 회전수 변경과 동력</a></li>
+  <li><a href="#문제-5.-정압-측정에-의한-이상-진단" id="toc-문제-5.-정압-측정에-의한-이상-진단" class="nav-link" data-scroll-target="#문제-5.-정압-측정에-의한-이상-진단">문제 5. 정압 측정에 의한 이상 진단</a></li>
+  </ul></li>
+  <li><a href="#참고문헌" id="toc-참고문헌" class="nav-link" data-scroll-target="#참고문헌">참고문헌</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/w09_ventilation1.html">Part III. 작업환경 관리 (9~13주)</a></li><li class="breadcrumb-item"><a href="../chapters/w10_ventilation2.html"><span class="chapter-title">10주차. 산업환기 II — 국소배기장치</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">10주차. 산업환기 II — 국소배기장치</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<blockquote class="blockquote">
+<p>후드→덕트→공기정화기→송풍기→배기구, 제어속도와 필요송풍량, 반송속도와 압력손실, 집진·정화장치, 송풍기 상사법칙, 정압을 이용한 성능 진단</p>
+</blockquote>
+<section id="학습목표" class="level2">
+<h2 class="anchored" data-anchor-id="학습목표">학습목표</h2>
+<p>이 주를 학습한 후 여러분은 다음을 할 수 있어야 합니다:</p>
+<ol type="1">
+<li>국소배기장치의 구성요소(후드→덕트→공기정화기→송풍기→배기구)와 각 요소의 설계 포인트를 설명할 수 있다</li>
+<li>후드의 종류(포위식·외부식·리시버식)와 제어속도의 개념을 이해하고, 형식별 필요송풍량과 플랜지 효과를 계산할 수 있다</li>
+<li>반송속도의 개념을 이해하고, 덕트의 압력손실(마찰·곡관·확대/축소)을 계산할 수 있다</li>
+<li>공기정화장치를 입자상·가스상 물질별로 분류하고 선정 원칙을 설명할 수 있다</li>
+<li>송풍기의 종류를 구분하고 상사법칙으로 회전수 변화에 따른 풍량·압력·동력 변화를 예측할 수 있다</li>
+<li>정압 측정값의 변화로 국소배기장치의 이상 부위를 추정할 수 있다</li>
+</ol>
+<hr>
+</section>
+<section id="국소배기장치의-구성과-원리" class="level2">
+<h2 class="anchored" data-anchor-id="국소배기장치의-구성과-원리">1. 국소배기장치의 구성과 원리</h2>
+<section id="왜-국소배기인가" class="level3">
+<h3 class="anchored" data-anchor-id="왜-국소배기인가">1.1 왜 국소배기인가</h3>
+<p><a href="../chapters/w09_ventilation1.html">9주차</a>의 전체환기가 작업장 전체의 공기로 유해물질을 <strong>희석</strong>하는 방식이라면, 국소배기환기(Local Exhaust Ventilation, LEV)는 유해물질이 작업장 공기에 섞이기 <strong>전에, 발생원에서 직접 포집</strong>한다.</p>
+<div id="tbl-gv-vs-lev" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gv-vs-lev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;11.1: 전체환기와 국소배기환기의 비교
+</figcaption>
+<div aria-describedby="tbl-gv-vs-lev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>전체환기</th>
+<th>국소배기환기</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>원리</strong></td>
+<td>희석</td>
+<td>발생원에서 직접 포집</td>
+</tr>
+<tr class="even">
+<td><strong>효율</strong></td>
+<td>낮음</td>
+<td>높음</td>
+</tr>
+<tr class="odd">
+<td><strong>적용 조건</strong></td>
+<td>저독성, 소량, 분산 발생</td>
+<td>고독성, 대량, 집중 발생</td>
+</tr>
+<tr class="even">
+<td><strong>초기 비용</strong></td>
+<td>낮음</td>
+<td>높음</td>
+</tr>
+<tr class="odd">
+<td><strong>운전 비용</strong></td>
+<td>높음 (대량의 공기 교환)</td>
+<td>낮음 (소량의 공기만 배기)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>핵심 원칙 — 발생원에 가까울수록 제어 효율이 높다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>1주차 관리 위계의 “상류 대책 우선”이 환기에도 그대로 적용된다. 확산되기 전에 잡으면 처리할 공기량이 훨씬 적고, 근로자의 호흡영역에 도달할 기회 자체가 사라진다. 독성이 높거나 발생량이 많은 공정에는 국소배기를 우선 적용한다.</p>
+</div>
+</div>
+<p>이 원칙에는 정량적 근거가 있다. 개구부 직경을 <span class="math inline">\(d\)</span>라 할 때, 기류 속도가 최초 속도의 10%로 떨어지는 거리는 <strong>급기구(불어내기)에서는 30d, 배기구(빨아들이기) 에서는 1d</strong>다. 빨아들이는 기류는 직경의 1배만 떨어져도 속도가 1/10로 떨어진다 — 이것이 “후드는 발생원에 최대한 가깝게”라는 설계 제1원칙의 근거이며, 포착거리가 긴 개방조에 push-pull 방식(§3.2)을 쓰는 이유이기도 하다.</p>
+<div id="fig-suction-blowing" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-suction-blowing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w10_suction_vs_blowing.svg" class="img-fluid figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-suction-blowing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;11.1: 급기와 배기의 비대칭 — 같은 축척으로 그린 30d와 1d
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-suction-blowing" class="quarto-xref">그림&nbsp;<span>11.1</span></a> 의 두 기류는 같은 축척으로 그린 것이다. 그 차이가 30배라는 사실이 이 장 전체의 설계 논리를 지배한다. 부는 기류는 방향성이 있어 멀리 뻗지만, 빨아들이는 기류는 후드 앞의 <strong>모든 방향</strong>에서 공기를 끌어오므로 거리가 조금만 멀어져도 속도가 급격히 흩어진다. 그래서 후드를 발생원에서 떼어 놓는 순간 필요송풍량이 거리의 제곱으로 불어난다(§3.1).</p>
+</section>
+<section id="다섯-가지-구성요소" class="level3">
+<h3 class="anchored" data-anchor-id="다섯-가지-구성요소">1.2 다섯 가지 구성요소</h3>
+<p>국소배기장치는 다섯 요소가 직렬로 연결된 하나의 시스템이다.</p>
+<div id="fig-lev-components" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lev-components-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w10_lev_components.svg" class="img-fluid figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lev-components-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;11.2: 국소배기장치의 구성 — 정화장치는 송풍기 앞에, 송풍기 앞은 모두 음압
+</figcaption>
+</figure>
+</div>
+<div id="tbl-lev-components" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-lev-components-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;11.2: 국소배기장치의 구성요소
+</figcaption>
+<div aria-describedby="tbl-lev-components-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>구성요소</th>
+<th>기능</th>
+<th>설계 포인트</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>후드</strong> (Hood)</td>
+<td>오염공기 포집</td>
+<td>제어속도, 형상, 발생원과의 거리</td>
+</tr>
+<tr class="even">
+<td><strong>덕트</strong> (Duct)</td>
+<td>공기 이송</td>
+<td>반송속도 확보, 압력손실 최소화</td>
+</tr>
+<tr class="odd">
+<td><strong>공기정화장치</strong></td>
+<td>오염물질 제거</td>
+<td>처리효율, 압력손실</td>
+</tr>
+<tr class="even">
+<td><strong>송풍기</strong> (Fan)</td>
+<td>공기 이동의 동력 제공</td>
+<td>풍량, 압력의 확보</td>
+</tr>
+<tr class="odd">
+<td><strong>배기구</strong> (Stack)</td>
+<td>정화된 공기의 방출</td>
+<td>배기의 재유입 방지</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>배치 순서에 주목하자. 공기정화장치가 송풍기 <strong>앞</strong>에 있으므로 송풍기는 정화된 공기를 다루고, 송풍기 앞쪽 전체가 <strong>음압(−)</strong>으로 운전되므로 덕트에 틈이 생기면 바깥 공기가 새어 들어온다 — 이 부호가 정압 진단(§7)의 출발점이다. 설계는 “발생원 조사 → 후드 형식 선정·배치 → 제어속도 결정 → 필요송풍량 계산 → 덕트 경로·반송속도 결정 → 덕트 직경 계산(<span class="math inline">\(Q=AV\)</span>) → 압력손실 계산 → 공기정화장치 선정 → 송풍기 사양 결정 → 배기구 결정”의 순서이며, 이 장의 절 구성이 곧 이 순서다.</p>
+<hr>
+</section>
+</section>
+<section id="후드의-세-가지-형식-제어속도" class="level2">
+<h2 class="anchored" data-anchor-id="후드의-세-가지-형식-제어속도">2. 후드의 세 가지 형식 · 제어속도</h2>
+<section id="후드의-세-가지-형식" class="level3">
+<h3 class="anchored" data-anchor-id="후드의-세-가지-형식">2.1 후드의 세 가지 형식</h3>
+<div id="tbl-hood-types" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-hood-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;11.3: 후드의 분류
+</figcaption>
+<div aria-describedby="tbl-hood-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>분류</th>
+<th>원리</th>
+<th>효율</th>
+<th>적용 예</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>포위식</strong> (Enclosing)</td>
+<td>발생원을 완전히 또는 부분적으로 둘러쌈</td>
+<td>가장 높음</td>
+<td>글러브박스, 드래프트챔버, 도장부스</td>
+</tr>
+<tr class="even">
+<td><strong>외부식</strong> (Exterior)</td>
+<td>발생원 외부에 설치하여 흡인</td>
+<td>중간</td>
+<td>슬롯후드, 캐노피후드</td>
+</tr>
+<tr class="odd">
+<td><strong>리시버식</strong> (Receptor)</td>
+<td>발생물질의 운동에너지·열상승기류를 받아냄</td>
+<td>높음</td>
+<td>그라인더·연마기 후드</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>포위식</strong>은 오염물질이 퍼질 공간 자체를 없애므로 가장 적은 풍량으로 가장 확실하게 제어하고, <strong>외부식</strong>은 발생원을 둘러쌀 수 없을 때의 차선책으로 흡인기류의 한계(§1.1) 때문에 <strong>제어거리</strong>가 성능을 좌우하며, <strong>리시버식</strong>은 오염물질이 스스로 이동하는 방향(연삭분진의 관성, 열상승기류)에 후드를 놓아 적은 풍량으로 높은 효율을 얻는다.</p>
+<div id="fig-hood-types" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-hood-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w10_hood_types.svg" class="img-fluid figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hood-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;11.3: 후드의 세 형식 — 발생원을 둘러싸는가, 밖에서 당기는가, 오는 방향에서 받는가
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>그림 필요 — 실제 후드 설치 사진
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>무엇</strong>: (a) 실험실 드래프트챔버 또는 도장부스(포위식), (b) 용접 작업점 옆에 매달린 이동식 외부식 후드, (c) 도금조 가장자리의 슬롯후드 — 세 장의 현장 사진. 가능하면 후드 개구면과 발생원 사이의 거리가 보이는 구도로.</p>
+<p><strong>왜</strong>: <a href="#fig-hood-types" class="quarto-xref">그림&nbsp;<span>11.3</span></a> 는 원리를 보여 주지만, 현장에서 학생이 마주치는 것은 “저 후드가 무슨 형식인가”라는 판별 문제다. 실제 설비의 크기·형상·설치 위치를 한 번 보아야 형식 분류가 지식이 아니라 눈이 된다. 특히 <strong>잘못 설치된 후드</strong> (발생원에서 멀리 떨어진 캐노피 등) 사진이 한 장 있으면 §3.1의 제어거리 논의가 곧바로 살아난다.</p>
+<p><strong>출처 후보</strong>: NIOSH/CDC 산업위생 자료(퍼블릭 도메인), OSHA Technical Manual Section III, 한국산업안전보건공단 「국소배기장치 기술지침」 도해, 위키미디어 커먼즈(“fume hood”, “local exhaust ventilation”).</p>
+<p><strong>대안</strong>: 사진을 못 구하면 KOSHA GUIDE의 후드 형식별 표준 도면을 인용 표기와 함께 싣는다.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="제어속도" class="level3">
+<h3 class="anchored" data-anchor-id="제어속도">2.2 제어속도</h3>
+<p><strong>제어속도(제어풍속, control velocity)</strong> <span class="math inline">\(V_c\)</span>는 오염물질을 후드 쪽으로 끌어들이기 위해 <strong>발생원 위치에서 만들어 주어야 하는 최소한의 기류 속도</strong>로, 오염물질이 세게 튀어나올수록, 주변 기류가 어지러울수록 큰 값이 필요하다.</p>
+<div id="tbl-control-velocity" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-control-velocity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;11.4: 제어속도 선정 기준
+</figcaption>
+<div aria-describedby="tbl-control-velocity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>오염원 상태</th>
+<th>제어속도 (m/s)</th>
+<th>예시</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>정지 상태, 저속 발생</td>
+<td>0.25~0.5</td>
+<td>증발, 탈지</td>
+</tr>
+<tr class="even">
+<td>저속 기류, 활성 발생</td>
+<td>0.5~1.0</td>
+<td>도장, 도금</td>
+</tr>
+<tr class="odd">
+<td>급속 기류, 고속 발생</td>
+<td>1.0~2.5</td>
+<td>블라스팅, 연마</td>
+</tr>
+<tr class="even">
+<td>고속 방출</td>
+<td>2.5~10.0</td>
+<td>연삭, 절단</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>이 표는 설계 권고치이고, 관리대상 유해물질을 다루는 국소배기장치에는 산업안전보건법령이 <strong>물질의 상태(가스상/입자상)</strong>와 <strong>후드 형식</strong>의 조합으로 정한 <strong>법정 최소 제어풍속</strong>이 별도로 있다.</p>
+<div id="tbl-legal-cv" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-legal-cv-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;11.5: 법정 제어풍속의 구조
+</figcaption>
+<div aria-describedby="tbl-legal-cv-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>물질의 상태</th>
+<th>후드 형식</th>
+<th>법정 제어풍속</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>가스 상태</td>
+<td>외부식 측방흡인형</td>
+<td>0.5 m/s</td>
+</tr>
+<tr class="even">
+<td>가스 상태</td>
+<td>외부식 상방흡인형</td>
+<td>1.0 m/s</td>
+</tr>
+<tr class="odd">
+<td>입자 상태</td>
+<td>포위식 포위형</td>
+<td>0.7 m/s</td>
+</tr>
+<tr class="even">
+<td>입자 상태</td>
+<td>외부식 측방흡인형</td>
+<td>1.0 m/s</td>
+</tr>
+<tr class="odd">
+<td>입자 상태</td>
+<td>외부식 상방흡인형</td>
+<td>측방흡인형보다 큰 값</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>표를 외우기 전에 원리를 보라. <strong>같은 후드라면 입자 상태가 가스 상태보다 제어풍속이 크다</strong> — 입자는 관성을 가지므로 기류 방향을 바꾸는 데 더 센 기류가 필요하다. 그리고 <strong>상방흡인형은 측방흡인형보다 큰 제어풍속이 요구된다</strong> — 위에서 빨아들이면 오염물질이 후드 반대 방향(아래·옆)으로 퍼지기 쉽기 때문이다. 제어풍속의 현장 측정에는 <strong>열선풍속계</strong>를 사용한다(피토관은 덕트 <strong>내부</strong>의 속도압 측정용 — §7.2). 법령 조문 등 규제 측면은 <a href="../chapters/w14_law_management.html">14주차</a>에서 다룬다.</p>
+</section>
+</section>
+<section id="형식별-필요송풍량-계산-유입계수유입손실계수후드정압" class="level2">
+<h2 class="anchored" data-anchor-id="형식별-필요송풍량-계산-유입계수유입손실계수후드정압">3. 형식별 필요송풍량 계산 · 유입계수·유입손실계수·후드정압</h2>
+<section id="형식별-필요송풍량-계산" class="level3">
+<h3 class="anchored" data-anchor-id="형식별-필요송풍량-계산">3.1 형식별 필요송풍량 계산</h3>
+<p><strong>포위식 후드</strong>: 발생원이 둘러싸여 있으므로 개구부(열린 면)로 공기가 일정 속도 이상으로 빨려 들어가기만 하면 된다: <span class="math inline">\(Q = V \times A_{\text{opening}}\)</span>. 여기서 <span class="math inline">\(V\)</span>는 개구부 평균속도(일반 작업 0.25~0.5, 격렬한 작업 0.5~1.0 m/s), <span class="math inline">\(A_{\text{opening}}\)</span>은 개구부 총면적(m²)이다.</p>
+<p><strong>외부식 후드</strong>: 발생원이 후드 밖에 있으므로 <strong>제어거리 <span class="math inline">\(x\)</span></strong>(후드 개구면에서 발생원까지의 거리)만큼 떨어진 지점에서 제어속도 <span class="math inline">\(V_c\)</span>를 만들어야 한다. 원형·정사각형 개구의 필요송풍량은 Dalla Valle 식으로 계산한다 (<span class="math inline">\(Q\)</span>: m³/s, <span class="math inline">\(A\)</span>: 개구면적 m²).</p>
+<p><span class="math display">\[Q = V_c\,(10x^2 + A)\]</span></p>
+<p><span class="math inline">\(x\)</span>가 <strong>제곱</strong>으로 들어 있다 — 제어거리가 2배가 되면 필요송풍량은 대략 4배가 된다. 단, 이 식은 발생원까지의 거리가 <strong>덕트 직경의 1.5배 이내</strong>일 때만 유효하며, 그보다 멀면 제어거리를 줄이거나 슬롯·push-pull 등 다른 형식을 검토한다.</p>
+<p><strong>플랜지(flange) 효과</strong>: 후드 개구 둘레에 테두리 판을 붙이면 후드 <strong>뒤쪽</strong>에서 빨려 들어오던 무의미한 기류가 차단되어, 같은 제어속도를 더 적은 풍량 — <span class="math inline">\(Q_{\text{flange}} = 0.75\,Q_{\text{plain}}\)</span>, 약 <strong>25% 절감</strong> — 으로 얻는다.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 1: 외부식 후드의 필요송풍량과 플랜지 효과
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>원형 후드(직경 30 cm)를 용접 작업점에서 50 cm 떨어진 곳에 설치한다. 제어속도 1.0 m/s일 때 필요송풍량과, 플랜지를 붙였을 때의 필요송풍량을 구하라.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(A = \pi r^2 = 3.14 \times 0.15^2 = 0.071\)</span> m², <span class="math inline">\(x = 0.5\)</span> m이므로</p>
+<p><span class="math display">\[Q = 1.0 \times (10 \times 0.5^2 + 0.071) = 2.57\ \text{m}^3/\text{s},
+\qquad Q_{\text{flange}} = 0.75 \times 2.57 = 1.93\ \text{m}^3/\text{s}\]</span></p>
+<p>괄호 안에서 <span class="math inline">\(10x^2 = 2.5\)</span>가 개구면적 0.071을 압도한다 — 외부식 후드의 풍량은 대부분 “빈 공간을 빨아들이는 데” 쓰인다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="fig-flange" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-flange-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w10_flange_effect.svg" class="img-fluid figure-img" style="width:92.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-flange-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;11.4: 플랜지 효과 — 후드 뒤쪽의 무의미한 기류를 막아 같은 제어속도를 25 % 적은 풍량으로
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-flange" class="quarto-xref">그림&nbsp;<span>11.4</span></a> 의 왼쪽에서 후드 뒤쪽으로부터 빨려 들어오는 기류는 발생원을 지나지 않으므로 오염물질을 전혀 실어 오지 못한다. 그저 송풍기의 일만 늘릴 뿐이다. 플랜지는 이 몫을 차단한다.</p>
+<p><strong>슬롯후드</strong>: 개구부의 <strong>폭(<span class="math inline">\(W\)</span>)이 좁고 길이(<span class="math inline">\(L\)</span>)가 긴</strong> 후드로(<span class="math inline">\(W/L \le 0.2\)</span>), 도금조·탱크 표면처럼 길게 펼쳐진 발생원에 적합하며 슬롯 개구면 속도는 5~15 m/s (일반적으로 10 m/s)로 설계한다. 필요송풍량은 후드가 놓인 <strong>공간의 형태 (원주 조건)</strong>에 따라 계수 <span class="math inline">\(C\)</span>가 달라진다.</p>
+<p><span class="math display">\[Q\ (\text{m}^3/\text{s}) = C \times L \times V_c \times X\]</span></p>
+<div id="tbl-slot-coefficient" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-slot-coefficient-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;11.6: 슬롯후드 필요송풍량 계수
+</figcaption>
+<div aria-describedby="tbl-slot-coefficient-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 41%">
+<col style="width: 37%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>설치 조건</th>
+<th>계수 <span class="math inline">\(C\)</span></th>
+<th>식</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>자유공간(전원주), 플랜지 없음</td>
+<td>3.7</td>
+<td><span class="math inline">\(Q = 3.7\,L\,V_c\,X\)</span></td>
+</tr>
+<tr class="even">
+<td>테이블·벽면에 플랜지를 붙인 <strong>1/4 원주형</strong></td>
+<td>1.6</td>
+<td><span class="math inline">\(Q = 1.6\,L\,V_c\,X\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>두 가지 개념에 주의하자. 첫째, <strong>폭 <span class="math inline">\(W\)</span>는 필요송풍량 식에 들어가지 않는다</strong> — 풍량은 슬롯이 “얼마나 길게 펼쳐져 있는가”(<span class="math inline">\(L\)</span>)로 결정되며, 폭은 슬롯 개구면 속도와 개구면적을 정할 때 쓰인다. 둘째, <strong>후드를 벽·테이블 모서리에 붙일수록 필요송풍량이 준다</strong> — 1/4 원주형(<span class="math inline">\(C=1.6\)</span>)은 흡인해야 할 공간 자체가 1/4로 제한되어 자유공간(<span class="math inline">\(C=3.7\)</span>)의 절반 이하로 충분하다. 플랜지 효과와 같은 논리의 더 강한 형태다.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 2: 슬롯후드의 필요송풍량
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>(1)</strong> 길이 1.25 m, 폭 0.25 m인 슬롯후드를 플랜지 없이 자유공간에 설치했다. 제어거리 1.0 m, 제어속도 0.5 m/s일 때 송풍량(m³/min)은? <strong>(2)</strong> 플랜지가 붙은 1/4 원주형 슬롯후드로 슬롯 폭 0.1 m, 길이 0.9 m, 제어거리 0.3 m, 제어속도 1 m/s일 때 필요송풍량(m³/min)은?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>(1)</strong> <span class="math inline">\(Q = 3.7 \times 1.25 \times 0.5 \times 1.0 = 2.31\ \text{m}^3/\text{s}
+\;\rightarrow\; 2.31 \times 60 \approx 139\ \text{m}^3/\text{min}\)</span></p>
+<p><strong>(2)</strong> <span class="math inline">\(Q = 1.6 \times 0.9 \times 1 \times 0.3 = 0.432\ \text{m}^3/\text{s}
+\;\rightarrow\; 25.9\ \text{m}^3/\text{min}\)</span></p>
+<p>두 문제 모두 슬롯의 <strong>폭은 계산에 쓰이지 않았다</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><strong>충만실(plenum chamber)</strong>: 슬롯후드 <strong>뒤쪽에서 압력을 균일화하는 공간</strong>이다. 슬롯은 길이가 길어서 덕트를 바로 연결하면 덕트에 가까운 쪽만 세게 빨리므로, 충만실이 이 정압 편차를 없애 <strong>슬롯 전 길이에 걸쳐 균일한 개구면 속도</strong>를 만든다.</p>
+<p><strong>캐노피후드</strong>: 열원 <strong>상부</strong>에 설치하여 <strong>부력(열상승기류)</strong>을 이용한다. 오염물질이 스스로 올라오므로 열원이 있는 공정(용해로·가열로 등, 열발생량 &gt; 100 W)에서 독성이 낮은 물질에 적용하며, 송풍량은 캐노피 둘레 <span class="math inline">\(P\)</span>(m)와 열원-후드 높이 <span class="math inline">\(H\)</span>(m)로 구한다: <span class="math inline">\(Q\ (\text{m}^3/\text{s}) = 1.4\,P\sqrt{H}\)</span>.</p>
+</section>
+<section id="유입계수유입손실계수후드정압" class="level3">
+<h3 class="anchored" data-anchor-id="유입계수유입손실계수후드정압">3.2 유입계수·유입손실계수·후드정압</h3>
+<p>후드는 공기를 덕트로 끌어들이는 입구이며, 개구면의 <strong>축류(vena contracta)</strong> 때문에 반드시 에너지 손실이 생긴다. 이 손실을 정량화하는 지표들이 후드 설계와 성능 진단의 공용 언어다(<a href="../chapters/w09_ventilation1.html">9주차</a>의 정압 SP·동압 VP 개념을 전제로 한다).</p>
+<p><strong>1) 유입계수 <span class="math inline">\(C_e\)</span> (coefficient of entry)</strong> — 이론적으로 가능한 유량에 대한 실제 유량의 비. 손실이 클수록 작아지며 <span class="math inline">\(0 &lt; C_e \le 1\)</span>, <strong>유입손실이 전혀 없는 이상적인 후드에서 <span class="math inline">\(C_e = 1.0\)</span></strong>이다.</p>
+<p><strong>2) 유입손실계수 <span class="math inline">\(F_h\)</span> (hood entry loss factor)</strong> — <span class="math inline">\(C_e = 1\)</span>이면 <span class="math inline">\(F_h = 0\)</span>이 되어 두 정의가 정확히 맞물린다.</p>
+<p><span class="math display">\[\boxed{\;F_h = \frac{1}{C_e^{\,2}} - 1\;} \qquad \Longleftrightarrow \qquad C_e = \sqrt{\frac{1}{1 + F_h}}\]</span></p>
+<p><strong>3) 후드의 압력손실(유입손실)</strong>: <span class="math inline">\(\Delta P_h = F_h \times \text{VP}\)</span></p>
+<p><strong>4) 후드정압 <span class="math inline">\(SP_h\)</span></strong> — 속도압과 유입손실의 합 크기이며, 흡인측이므로 실제 부호는 음압(−)이다.</p>
+<p><span class="math display">\[SP_h = \text{VP}(1 + F_h) = \frac{\text{VP}}{C_e^{\,2}}\]</span></p>
+<p>송풍기가 후드에 만들어 준 음압(<span class="math inline">\(SP_h\)</span>)은 공기를 덕트 속도까지 <strong>가속</strong>시키는 몫(VP)과 축류·재확장 과정에서 <strong>버려지는</strong> 몫(<span class="math inline">\(F_h\cdot\)</span>VP)으로 나뉜다 — 후드정압은 언제나 “속도압 + 유입손실”이다.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 3: 유입계수 계산 묶음
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>(1)</strong> 유입계수가 0.8인 후드의 유입손실계수는? <strong>(2)</strong> 유입계수 0.82, 속도압 20 mmH₂O인 단순 후드의 후드정압(크기)은? <strong>(3)</strong> 유입계수 0.7, 후드 압력손실 8.0 mmH₂O일 때 속도압은?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>(1)</strong> <span class="math inline">\(F_h = \dfrac{1}{0.8^2} - 1 = 1.5625 - 1 = 0.56\)</span></p>
+<p><strong>(2)</strong> <span class="math inline">\(SP_h = \dfrac{20}{0.82^2} = \dfrac{20}{0.6724} \approx 30\ \text{mmH}_2\text{O}\)</span> (부호는 음압)</p>
+<p><strong>(3)</strong> <span class="math inline">\(F_h = \dfrac{1}{0.49} - 1 = 1.0408 \;\Rightarrow\; \text{VP} = \dfrac{8.0}{1.0408} = 7.7\ \text{mmH}_2\text{O}\)</span></p>
+<p>세 문제 모두 <span class="math inline">\(C_e \to F_h \to \Delta P_h \to SP_h\)</span>의 한 사슬 위에 있다. 한 가지 주의: 압력손실 계수들은 모두 <strong>속도압에 곱하는 무차원수</strong>다. 속도압 대신 풍속(예: 20 m/s)과 비중량(1.2 kgf/m³)이 주어지면 <span class="math inline">\(F_h\)</span>에 풍속을 그대로 곱해서는 안 되고, 먼저 <span class="math inline">\(\text{VP} = \gamma v^2/2g = 1.2 \times 20^2 / (2 \times 9.81) = 24.5\)</span> mmH₂O로 환산한 뒤 곱한다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><strong>push-pull 후드</strong>: 도금조처럼 상부가 개방되어 있고 개방 면적이 넓으면 흡인만으로는 포착거리가 너무 길다(§1.1의 1d 한계). 이때 한쪽에서 공기를 불어 주고(push) 반대쪽에서 흡인하는(pull) push-pull형을 쓴다 — 불어내는 기류(30d)가 오염물질을 흡인 후드까지 실어다 주는 구조로, 도금조·자동차 도장공정 등에 적합하며, 같은 조건을 흡인만으로 해결하는 것보다 동력 면에서 오히려 유리하다.</p>
+<hr>
+</section>
+</section>
+<section id="덕트-설계와-압력손실" class="level2">
+<h2 class="anchored" data-anchor-id="덕트-설계와-압력손실">4. 덕트 설계와 압력손실</h2>
+<section id="반송속도" class="level3">
+<h3 class="anchored" data-anchor-id="반송속도">4.1 반송속도</h3>
+<p><strong>반송속도(transport velocity)</strong>는 분진이 덕트 내부에 침전되지 않고 이송되기 위한 <strong>최소한의 덕트 내 풍속</strong>이다. 무겁고 굵은 입자일수록 큰 값이 필요하다.</p>
+<div id="tbl-transport-velocity" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-transport-velocity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;11.7: 물질별 반송속도
+</figcaption>
+<div aria-describedby="tbl-transport-velocity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>물질 종류</th>
+<th>반송속도 (m/s)</th>
+<th>예시</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>가스, 증기</td>
+<td>5~10</td>
+<td>유기용제 증기</td>
+</tr>
+<tr class="even">
+<td>연기, 미세 분진</td>
+<td>10~13</td>
+<td>용접흄, 담배연기</td>
+</tr>
+<tr class="odd">
+<td>건조 분진(경량)</td>
+<td>13~15</td>
+<td>목분진, 면분진</td>
+</tr>
+<tr class="even">
+<td>건조 분진(보통)</td>
+<td>15~18</td>
+<td>곡물분진, 플라스틱 분진</td>
+</tr>
+<tr class="odd">
+<td>무거운 분진</td>
+<td>18~20</td>
+<td>금속분진, 연마분진</td>
+</tr>
+<tr class="even">
+<td>습한 분진</td>
+<td>20~25</td>
+<td>습식 집진 후</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>반송속도가 부족하면 분진이 침전되어 <strong>덕트가 서서히 막히고</strong>, 퇴적 분진은 <strong>화재의 연료</strong>가 되며, 청소 비용이 늘어난다. 덕트 직경은 <span class="math inline">\(Q = AV\)</span>에서 풍속이 반송속도 이상이 되도록 잡는다 — 덕트가 굵으면 풍속이 떨어져 분진이 가라앉으므로, “덕트는 굵을수록 좋다”는 성립하지 않는다.</p>
+<p>덕트 설계의 기본 원칙: 가급적 <strong>원형 덕트</strong>를 쓰고, <strong>곡관의 수를 적게</strong>, 곡률반경은 <strong>크게</strong>(반경비 2.0 이상) 하며, 직경 200 mm 덕트의 곡관 부위는 <strong>새우곡관 5개 이상</strong>으로 구성하고, <strong>청소구</strong>를 설치한다. 분기 설계에는 등속설계법(주덕트와 지관의 풍속을 동일하게)과 정압평형법(각 지관의 압력손실을 균등하게)을 쓰며, 합류 후에는 속도 유지를 위해 단면적을 늘린다(<span class="math inline">\(A_1 = A_2 + A_3\)</span>).</p>
+</section>
+<section id="압력손실의-두-성분" class="level3">
+<h3 class="anchored" data-anchor-id="압력손실의-두-성분">4.2 압력손실의 두 성분</h3>
+<p>덕트 내 압력손실은 <strong>마찰손실</strong>(직관)과 <strong>형상손실</strong>(부속)의 합이다.</p>
+<p><span class="math display">\[\Delta P_{\text{total}} = \Delta P_{\text{friction}} + \Delta P_{\text{fitting}}\]</span></p>
+<p><strong>1) 마찰손실 (직관)</strong> — <span class="math inline">\(f\)</span>: 마찰계수(0.02~0.05, 일반적으로 0.03), <span class="math inline">\(L\)</span>: 덕트 길이(m), <span class="math inline">\(D\)</span>: 직경(m):</p>
+<p><span class="math display">\[\Delta P_f = f\,\frac{L}{D}\,\text{VP}\]</span></p>
+<p><strong>2) 형상손실 (부속)</strong> — <span class="math inline">\(\zeta\)</span>: 부속별 손실계수 (직각 엘보 0.5~1.0, 완만한 엘보 0.2~0.3, 분기관 0.5~1.5, 확대관 0.1~0.5, 축소관 0.2~0.3):</p>
+<p><span class="math display">\[\Delta P_{\text{fitting}} = \zeta \times \text{VP}\]</span></p>
+<p>두 식 모두 <strong>속도압 VP에 비례</strong>한다. VP는 풍속의 제곱에 비례하므로 (<a href="../chapters/w09_ventilation1.html">9주차</a>), 덕트 풍속을 2배로 올리면 압력손실은 4배가 된다 — 반송속도는 채우되 그 이상 과속하지 않는 것이 경제적 설계다.</p>
+</section>
+<section id="각형-덕트의-상당직경" class="level3">
+<h3 class="anchored" data-anchor-id="각형-덕트의-상당직경">4.3 각형 덕트의 상당직경</h3>
+<p>마찰손실 식의 <span class="math inline">\(D\)</span>는 원형 덕트의 직경이다. 덕트가 <strong>각형(사각)</strong>이면 같은 압력손실을 내는 원형 덕트의 직경, 즉 <strong>상당직경(등가직경)</strong>으로 바꿔 넣는다.</p>
+<p><span class="math display">\[\boxed{\;d_e = \frac{2ab}{a + b}\;}\]</span></p>
+<p><span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>는 단면의 두 변 길이(m)다. 두 변의 <strong>조화평균</strong>이므로 항상 짧은 변보다 크고 긴 변보다 작다 — 계산 결과가 이 범위를 벗어나면 잘못된 것이다.</p>
+</section>
+<section id="부속별-압력손실-계산" class="level3">
+<h3 class="anchored" data-anchor-id="부속별-압력손실-계산">4.4 부속별 압력손실 계산</h3>
+<p><strong>1) 곡관 — 각도에 비례 보정</strong>: 손실계수 <span class="math inline">\(\zeta\)</span>는 보통 <strong>90° 곡관 기준</strong>으로 주어진다. 곡관각이 <span class="math inline">\(\theta\)</span>이면 손실은 각도에 비례한다.</p>
+<p><span class="math display">\[\Delta P_{\theta} = \zeta \times \text{VP} \times \frac{\theta}{90°}\]</span></p>
+<p><strong>2) 합류관 — 주관과 분지관의 손실을 더한다</strong>:</p>
+<p><span class="math display">\[\Delta P_{\text{합류}} = \zeta_{\text{주관}} \times \text{VP}_{\text{주관}} + \zeta_{\text{분지관}} \times \text{VP}_{\text{분지관}}\]</span></p>
+<p><strong>3) 확대관 — 정압회복</strong>: 덕트가 확대되면 풍속이 줄고, 줄어든 속도압만큼 정압이 <strong>회복</strong>된다. 다만 확대 과정의 와류 손실 때문에 전부 회복되지는 않는다.</p>
+<p><span class="math display">\[\text{정압회복량} = (\text{VP}_1 - \text{VP}_2)(1 - \zeta)\]</span></p>
+<p><span class="math inline">\((1-\zeta)\)</span>가 “회복되는 비율”, <span class="math inline">\(\zeta\)</span>가 “버려지는 비율”이다 — 어느 쪽을 곱하는지 개념으로 구분해 두자.</p>
+<p><strong>4) 배치 인자</strong>: 곡관의 <strong>반경비(곡률반경/직경)가 클수록</strong> 손실 감소, 합류관의 <strong>합류각이 클수록</strong> 분지관 손실 증가, 확대각·축소각이 <strong>클수록</strong> 손실 증가 — 공통 원리는 <strong>기류의 방향·속도를 급하게 바꿀수록 손실이 커진다</strong>는 것이다.</p>
+<div id="fig-duct-losses" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-duct-losses-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w10_duct_losses.svg" class="img-fluid figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-duct-losses-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;11.5: 덕트 계통에서 압력손실이 생기는 자리
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-duct-losses" class="quarto-xref">그림&nbsp;<span>11.5</span></a> 를 보면 손실의 발생 지점이 한눈에 정리된다 — <strong>직관에서는 벽면 마찰로 꾸준히</strong>, <strong>곡관·합류관에서는 방향이 꺾이는 그 자리에서 한 번에</strong> 잃는다. 확대관만이 부호가 반대여서, 잃는 대신 정압을 일부 <strong>되찾는다</strong>. 네 항 모두 속도압 VP에 무차원 계수를 곱한 형태이므로, 계통 전체의 압력손실은 구간별 손실을 단순히 더해서 얻는다 — 그 합이 곧 송풍기가 이겨 내야 할 저항이며 §6.4의 시스템 저항곡선이다.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 4: 압력손실 계산 묶음
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>(1)</strong> 가로 0.13 m, 세로 0.26 m, 길이 15 m인 직선 각형 덕트에서 속도압이 20 mmH₂O, 관마찰계수가 0.016일 때 압력손실은? <strong>(2)</strong> 곡률반경비 2.5인 90° 곡관의 압력손실계수가 0.22이고 속도압이 15 mmH₂O이다. 다른 조건은 같고 곡관각만 45°로 바꾸면 압력손실은? <strong>(3)</strong> 주관에 45°로 분지관이 연결되어 있다. 주관과 분지관의 속도압이 모두 10 mmH₂O이고 압력손실계수가 각각 0.2와 0.28일 때 합류로 인한 압력손실은? <strong>(4)</strong> 원형 확대관에서 입구 직관의 속도압 30 mmH₂O, 출구 직관의 속도압 20 mmH₂O, 압력손실계수 0.28일 때 정압회복량은?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>(1)</strong> 상당직경 <span class="math inline">\(d_e = \dfrac{2 \times 0.13 \times 0.26}{0.13 + 0.26} = 0.173\)</span> m, <span class="math inline">\(\Delta P_f = 0.016 \times \dfrac{15}{0.173} \times 20 \approx 28\ \text{mmH}_2\text{O}\)</span>. 단변이나 장변을 그대로 <span class="math inline">\(D\)</span>에 넣으면 답이 크게 벗어난다.</p>
+<p><strong>(2)</strong> <span class="math inline">\(\Delta P = 0.22 \times 15 \times \dfrac{45}{90} = 1.65\ \text{mmH}_2\text{O}\)</span> (각도 비례 보정)</p>
+<p><strong>(3)</strong> <span class="math inline">\(\Delta P = 0.2 \times 10 + 0.28 \times 10 = 4.8\ \text{mmH}_2\text{O}\)</span> (두 손실의 합)</p>
+<p><strong>(4)</strong> <span class="math inline">\((30 - 20)(1 - 0.28) = 7.2\ \text{mmH}_2\text{O}\)</span> (회복 비율은 <span class="math inline">\(1-\zeta\)</span>)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="공기정화장치" class="level2">
+<h2 class="anchored" data-anchor-id="공기정화장치">5. 공기정화장치</h2>
+<p>정화장치는 처리 대상이 <strong>입자상</strong>(분진·흄·미스트)인가 <strong>가스상</strong>(가스·증기)인가에 따라 원리가 완전히 다르다. 입자상은 힘(중력·관성·원심력·정전기력)이나 여과로 입자를 <strong>분리</strong>하고, 가스상은 분자 수준에서 <strong>용해·흡착·분해</strong>해야 한다 — 이 구분을 놓치면 “증기 공정에 여과식 집진기”(§7.4)라는 무의미한 설비가 만들어진다.</p>
+<section id="집진장치의-종류-개관" class="level3">
+<h3 class="anchored" data-anchor-id="집진장치의-종류-개관">5.1 집진장치의 종류 개관</h3>
+<div id="tbl-dust-collectors" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-dust-collectors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;11.8: 집진장치의 종류와 특성
+</figcaption>
+<div aria-describedby="tbl-dust-collectors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>집진장치</th>
+<th>원리</th>
+<th>집진효율</th>
+<th>적용 입경 (μm)</th>
+<th>압력손실</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>중력집진기</strong></td>
+<td>중력침강</td>
+<td>낮음(50~70%)</td>
+<td>&gt;50</td>
+<td>낮음</td>
+</tr>
+<tr class="even">
+<td><strong>관성집진기</strong></td>
+<td>관성력 분리</td>
+<td>중간(70~90%)</td>
+<td>10~50</td>
+<td>낮음</td>
+</tr>
+<tr class="odd">
+<td><strong>사이클론</strong></td>
+<td>원심력 분리</td>
+<td>중<sub>고(80</sub>95%)</td>
+<td>5~20</td>
+<td>중간</td>
+</tr>
+<tr class="even">
+<td><strong>세정집진기</strong></td>
+<td>액체 세정</td>
+<td>고(90~99%)</td>
+<td>0.5~5</td>
+<td>중간~높음</td>
+</tr>
+<tr class="odd">
+<td><strong>백필터(여과)</strong></td>
+<td>여과</td>
+<td>매우 높음(99~99.9%)</td>
+<td>0.1~10</td>
+<td>중간</td>
+</tr>
+<tr class="even">
+<td><strong>전기집진기</strong></td>
+<td>정전기력</td>
+<td>매우 높음(99~99.9%)</td>
+<td>0.01~10</td>
+<td>낮음</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>표를 위에서 아래로 읽으면 “굵은 입자용·저효율·저손실”에서 “미세 입자용·고효율”로 내려간다. 실무에서는 이 서열을 이용해, 본 집진장치 앞에 <strong>입경과 비중이 큰 입자를 미리 제거</strong>하는 <strong>전처리(조집진)</strong> 단계 — 중력·관성력·원심력(사이클론) 집진기 — 를 둔다. <strong>여과집진기(백필터)는 전처리용으로 부적합</strong>하다 — 고효율 장치라서 조대·고농도 분진을 받으면 여과포가 금방 막히므로, <strong>전처리를 거친 뒤에 놓이는 본 집진장치</strong>다.</p>
+<p>선정의 기준은 <strong>요구되는 집진효율</strong>, <strong>오염물질의 함진농도와 입자 크기</strong>, <strong>총 에너지 요구량</strong>(압력손실이 클수록 송풍기 동력이 커진다)이다. 오염물질의 <strong>회수율</strong>은 선정 기준이 아니다 — 집진장치의 목적은 배출 저감이지 자원 회수가 아니다.</p>
+<p><strong>중력집진기</strong>는 가장 단순한 장치로, Stokes 법칙에 따른 분진의 <strong>자연침강</strong>을 이용한다(침강속도는 입경의 제곱과 분진 밀도에 비례). 효율을 높이려면 처리가스의 <strong>배기속도를 작게</strong>(체류시간 확보), <strong>수평 도달거리를 길게</strong>, 침강실 내 기류를 <strong>균일하게</strong>, <strong>침강높이를 작게</strong> 한다 — 떨어질 높이가 낮을수록 짧은 체류시간에도 입자가 바닥에 닿아 포집되기 때문이다.</p>
+</section>
+<section id="사이클론" class="level3">
+<h3 class="anchored" data-anchor-id="사이클론">5.2 사이클론</h3>
+<p>원심력을 이용하는 가장 보편적인 조집진장치다. <strong>작동 원리</strong>: ① 접선방향으로 유입된 공기가 원통 내부에서 회전(와류 형성) → ② 원심력으로 무거운 입자가 벽면으로 이동 → ③ 벽면을 따라 하강하여 하부의 분진 수집부로 배출 → ④ 정화된 공기는 중심부 와류를 따라 상승하여 상부로 배출.</p>
+<p><strong>집진효율 향상 방법</strong>: 사이클론 <strong>직경 감소</strong>(소형 다중 사이클론), <strong>유입속도 증가</strong>(원심력 증가 — 적정 유입속도는 7.0~15.0 m/s), 분진 비중 증가, 높이/직경 비 증가. 다만 미세분진(&lt; 5 μm)에는 효율이 낮아 주로 전처리(조집진)용으로 쓴다. 성능의 대표 지표는 <strong>절단입경(cut-size)</strong> — <strong>50%의 처리효율로 제거되는 입자의 입경</strong>으로, 작을수록 미세입자까지 잡는 고성능 사이클론이다.</p>
+<p><strong>블로다운(blow-down)</strong>: <strong>분진박스(호퍼)에서 처리가스의 일부(배기량의 5~10%)를 흡인</strong>하여 사이클론 하부의 <strong>난류를 억제</strong>하고, 이미 집진된 먼지가 다시 날리는 <strong>재비산을 방지</strong>하는 집진율 향상 기법이다. 효과는 집진효율 상승·원심력 상승· 비산 방지이며, 부식 방지와는 무관하다.</p>
+</section>
+<section id="백필터-여과집진기" class="level3">
+<h3 class="anchored" data-anchor-id="백필터-여과집진기">5.3 백필터 (여과집진기)</h3>
+<p>여과포로 분진을 포집하는 고효율 집진장치다. 포집 원리는 <strong>관성충돌·직접차단·확산·정전기</strong>의 네 가지가 복합적으로 작용한다 — 원심력은 사이클론의 원리이지 여과의 원리가 아니다.</p>
+<p>여과포에 쌓인 분진을 털어내는 <strong>탈진 방식</strong>에는 기계적 진동(간단·저렴하나 효율 낮음), 역기류(여과포 수명이 김), 펄스제트(압축공기 충격 — 가장 효과적이며 연속 운전 가능)가 있다. 백필터의 크기는 <strong>기-포비(air-to-cloth ratio)</strong> <span class="math inline">\(= Q/A_{\text{cloth}}\)</span> (m³/m²·min, 일반적으로 1~3)로 결정하며, 높을수록 장치는 작아지지만 압력손실이 커진다. 장점은 다양한 용량·형태의 분진 처리가 가능하고 가스의 양·밀도 변화에 영향을 받지 않는다는 것, 단점은 <strong>고온·부식성 물질을 포집할 수 없다</strong>는 것이다 — 여과포가 견디지 못하기 때문이다.</p>
+</section>
+<section id="전기집진기-esp" class="level3">
+<h3 class="anchored" data-anchor-id="전기집진기-esp">5.4 전기집진기 (ESP)</h3>
+<p>정전기력으로 미세입자까지 포집하는 고효율 장치다. <strong>작동 원리</strong>: ① 방전극(− 고전압)에서 <strong>코로나 방전</strong> → ② 분진 입자가 음전하로 <strong>대전</strong> → ③ 대전 입자가 집진극(+)으로 <strong>정전 흡인</strong> → ④ 주기적으로 집진극을 타격하여 <strong>탈진</strong>.</p>
+<p><strong>장점</strong>: 고온가스 처리 가능(보일러·철강로에도 설치), <strong>압력손실이 낮아</strong> 송풍기 가동비 저렴, 운전·유지비 저렴, <strong>0.01 μm 수준의 미세입자까지 포집</strong>, 넓은 입경·농도 범위에서 고효율·대용량 처리. <strong>단점</strong>: 초기 설치비가 비싸고 고전압을 다루며, 압력손실·운전비가 낮은 것과 달리 <strong>설치공간은 많이 차지한다</strong>. 그리고 정전기력은 <strong>입자</strong>를 대전시키는 힘이므로 <strong>가스상 오염물질에는 원리적으로 작동하지 않는다</strong> — 가스·증기는 §5.5의 방식으로 처리해야 한다.</p>
+</section>
+<section id="가스상-물질의-정화장치" class="level3">
+<h3 class="anchored" data-anchor-id="가스상-물질의-정화장치">5.5 가스상 물질의 정화장치</h3>
+<div id="tbl-gas-cleaners" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gas-cleaners-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;11.9: 가스상 물질의 정화장치
+</figcaption>
+<div aria-describedby="tbl-gas-cleaners-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 35%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>종류</th>
+<th>원리</th>
+<th>적용 물질</th>
+<th>특징</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>흡수탑(세정, Scrubber)</strong></td>
+<td>액체에 용해</td>
+<td>수용성 가스(HCl, NH₃, SO₂)</td>
+<td>동시 냉각 효과</td>
+</tr>
+<tr class="even">
+<td><strong>흡착탑(Adsorber)</strong></td>
+<td>활성탄 등에 흡착</td>
+<td>유기용제, 악취</td>
+<td>재생 가능, 회수 용이</td>
+</tr>
+<tr class="odd">
+<td><strong>연소장치</strong></td>
+<td>고온 산화분해</td>
+<td>가연성 VOCs</td>
+<td>에너지 소비 큼</td>
+</tr>
+<tr class="even">
+<td><strong>촉매산화</strong></td>
+<td>촉매로 저온 산화</td>
+<td>저농도 VOCs</td>
+<td>에너지 절감</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>유기용제 증기는 활성탄 <strong>흡착</strong>, 수용성 가스는 <strong>흡수</strong>, 가연성 VOCs는 <strong>연소·촉매산화</strong> — 물질의 성질이 장치를 결정한다.</p>
+<hr>
+</section>
+</section>
+<section id="송풍기" class="level2">
+<h2 class="anchored" data-anchor-id="송풍기">6. 송풍기</h2>
+<section id="송풍기의-종류" class="level3">
+<h3 class="anchored" data-anchor-id="송풍기의-종류">6.1 송풍기의 종류</h3>
+<p>송풍기는 공기가 임펠러를 통과하는 방향에 따라 <strong>원심식</strong>(반경 방향)과 <strong>축류식</strong>(축방향)으로 나뉘며, 원심식은 날개 형태가 성능과 용도를 결정한다.</p>
+<div id="tbl-centrifugal-fans" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-centrifugal-fans-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;11.10: 원심식 송풍기의 형식
+</figcaption>
+<div aria-describedby="tbl-centrifugal-fans-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 35%">
+<col style="width: 21%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>형식</th>
+<th>날개 형태</th>
+<th>특징</th>
+<th>적용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>다익팬(시로코)</strong></td>
+<td>전향(forward curved)</td>
+<td>저압·대풍량, 저소음</td>
+<td>전체환기, 공조</td>
+</tr>
+<tr class="even">
+<td><strong>터보팬</strong></td>
+<td>후향(backward curved)</td>
+<td>고효율(80~85%), 분진에 약함</td>
+<td>청정공기 이송</td>
+</tr>
+<tr class="odd">
+<td><strong>래디얼팬</strong></td>
+<td>방사(radial)</td>
+<td>분진에 강함, 내구성 우수</td>
+<td>국소배기, 집진기</td>
+</tr>
+<tr class="even">
+<td><strong>에어포일</strong></td>
+<td>익형(airfoil)</td>
+<td>최고 효율(85~90%), 고가</td>
+<td>대형 공조·환기</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>국소배기·집진 계통에는 분진을 머금은 공기가 지나가므로, 효율은 중간이지만 날개에 분진이 쌓이지 않는 <strong>래디얼팬</strong>이 흔히 선택되고, 효율 좋은 터보팬은 정화된 청정공기 쪽에 쓴다 — “이 공기에는 어느 팬인가”가 올바른 질문이다. 축류식에는 프로펠러 팬(저압·대풍량, 벽부착형 전체환기), 튜브축류 팬(중압, 터널 환기 등 덕트 연결), 베인축류 팬(고압, 안내깃 부착, 산업용 대형 환기)이 있다.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>그림 필요 — 원심식 송풍기 임펠러의 날개 형태
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>무엇</strong>: 다익(전향)·터보(후향)·래디얼(방사)·에어포일(익형) 임펠러를 나란히 찍은 사진, 또는 케이싱을 열어 날개의 굽은 방향이 보이는 근접 사진. 회전 방향 화살표가 함께 표시되면 가장 좋다.</p>
+<p><strong>왜</strong>: “전향/후향”이라는 말은 <strong>날개가 회전 방향으로 굽었는가, 반대로 굽었는가</strong>라는 기하학적 사실인데, 글로만 읽으면 끝내 감이 오지 않는다. 날개 사이 골이 얕은 다익팬에 왜 분진이 쌓이는지, 골이 없는 래디얼팬이 왜 분진에 강한지도 사진 한 장이면 즉시 설명된다.</p>
+<p><strong>출처 후보</strong>: 위키미디어 커먼즈(“centrifugal fan impeller”, “squirrel cage fan”), 송풍기 제조사 기술자료(사용 허가 확인 필요), ASHRAE·ACGIH 교재 도해.</p>
+<p><strong>대안</strong>: 사진을 못 구하면 임펠러 단면을 위에서 본 모식도(회전 방향 화살표와 날개 곡률 방향을 표시)를 직접 그려 넣는다.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="송풍기-상사법칙" class="level3">
+<h3 class="anchored" data-anchor-id="송풍기-상사법칙">6.2 송풍기 상사법칙</h3>
+<p>같은 송풍기에서 회전수 <span class="math inline">\(N\)</span>을 바꾸면 풍량·압력·동력이 각각 다른 비율로 변한다.</p>
+<div id="tbl-fan-laws" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-fan-laws-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;11.11: 송풍기 상사법칙
+</figcaption>
+<div aria-describedby="tbl-fan-laws-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>법칙</th>
+<th>수식</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>풍량</strong></td>
+<td>회전수에 1승 비례</td>
+<td><span class="math inline">\(Q_2 = Q_1 \left(\dfrac{N_2}{N_1}\right)\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>압력</strong></td>
+<td>회전수에 2승 비례</td>
+<td><span class="math inline">\(P_2 = P_1 \left(\dfrac{N_2}{N_1}\right)^2\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>동력</strong></td>
+<td>회전수에 3승 비례</td>
+<td><span class="math inline">\(L_2 = L_1 \left(\dfrac{N_2}{N_1}\right)^3\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>풍량은 임펠러가 미는 속도에 비례하고(1승), 압력은 속도압처럼 속도의 제곱을 따르며(2승), 동력은 “풍량 × 압력”이므로 둘을 곱한 3승이 된다.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 5: 회전수를 올리면 어떤 대가를 치르는가
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>송풍기가 1,200 rpm에서 풍량 100 m³/min, 정압 50 mmH₂O, 동력 5 kW로 운전 중이다. 회전수를 1,500 rpm으로 올리면 풍량·정압·동력은 각각 얼마가 되는가?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(N_2/N_1 = 1500/1200 = 1.25\)</span>이므로</p>
+<ul>
+<li>풍량: <span class="math inline">\(Q_2 = 100 \times 1.25 = 125\ \text{m}^3/\text{min}\)</span></li>
+<li>정압: <span class="math inline">\(P_2 = 50 \times 1.25^2 = 78.1\ \text{mmH}_2\text{O}\)</span></li>
+<li>동력: <span class="math inline">\(L_2 = 5 \times 1.25^3 = 9.77\ \text{kW}\)</span></li>
+</ul>
+<p>회전수 25% 증가로 풍량은 25% 늘지만 <strong>동력은 약 2배</strong>가 된다 — 반대로 회전수를 낮추면 동력이 훨씬 큰 폭으로 절감되므로, 회전수 제어는 강력한 에너지 절약 수단이다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="소요동력" class="level3">
+<h3 class="anchored" data-anchor-id="소요동력">6.3 소요동력</h3>
+<p>송풍기가 풍량 <span class="math inline">\(Q\)</span>(m³/min)를 전압 <span class="math inline">\(P\)</span>(mmH₂O)만큼 밀어 올리는 데 필요한 동력은 다음과 같다. <span class="math inline">\(\eta\)</span>는 전효율(보통 0.5~0.7), 6,120은 단위 환산 계수다 (1 kW = 102 kgf·m/s에서 유도). SI 단위(<span class="math inline">\(Q\)</span>: m³/s, <span class="math inline">\(P\)</span>: Pa)로는 <span class="math inline">\(L = QP/(1000\,\eta)\)</span>.</p>
+<p><span class="math display">\[L\ (\text{kW}) = \frac{Q \times P}{6{,}120 \times \eta}\]</span></p>
+</section>
+<section id="성능곡선과-운전점-풍량-조절" class="level3">
+<h3 class="anchored" data-anchor-id="성능곡선과-운전점-풍량-조절">6.4 성능곡선과 운전점, 풍량 조절</h3>
+<p>송풍기가 실제로 내는 풍량은 P-Q 선도에서 송풍기 성능곡선과 시스템 저항곡선 (계통의 압력손실 특성)의 <strong>교점 — 운전점</strong>이 결정한다. §4의 압력손실 계산을 틀리면 저항곡선이 어긋나 송풍기가 설계와 다른 풍량으로 도는 이유다. 운전 중에 풍량을 바꾸는 방법은 세 가지 — <strong>회전수 변화법</strong>(임펠러 회전수 <span class="math inline">\(N\)</span> 조작, 상사법칙 적용), <strong>댐퍼(damper) 부착법</strong>(덕트 댐퍼의 개도로 계통 저항 조작), <strong>Vane control법</strong>(송풍기 흡입측 안내깃의 각도 조작)이다.</p>
+<p>에너지 면에서는 회전수 변화법이 우월하다 — <span class="math inline">\(L \propto N^3\)</span>이므로 회전수를 낮추면 동력은 풍량 감소 폭보다 훨씬 크게 준다. 댐퍼는 반대로 <strong>저항을 일부러 추가</strong>해 풍량을 죽이는 방식이라 에너지가 낭비된다.</p>
+<hr>
+</section>
+</section>
+<section id="성능-검증과-유지관리" class="level2">
+<h2 class="anchored" data-anchor-id="성능-검증과-유지관리">7. 성능 검증과 유지관리</h2>
+<p>설계·설치가 끝난 국소배기장치는 사용 중에 반드시 성능이 떨어진다 — 여과포에 분진이 쌓이고, 덕트가 막히고, 연결부가 풀린다. 성능 검증의 핵심 도구는 변화 패턴이 고장 부위를 가리켜 주는 <strong>정압 측정</strong>이다.</p>
+<section id="보충용-공기-빼낸-만큼-넣어-준다" class="level3">
+<h3 class="anchored" data-anchor-id="보충용-공기-빼낸-만큼-넣어-준다">7.1 보충용 공기 — 빼낸 만큼 넣어 준다</h3>
+<p>국소배기장치가 빼낸 것과 <strong>같은 양의 공기가 외부로부터 보충</strong>되어야 하며, 이 공기를 <strong>보충용 공기(make-up air)</strong>, 이를 공급하는 설비 일체를 <strong>공기공급 시스템</strong>이라 한다.</p>
+<p>급기(<span class="math inline">\(Q_{in}\)</span>)가 배기(<span class="math inline">\(Q_{out}\)</span>)보다 부족하면 작업장은 <strong>과도한 음압</strong>이 되어 후드 배풍량이 줄고, 문·틈새로 찬 외기가 세게 유입되며, 연소기구의 역화·배기 역류 위험이 생긴다. 공기공급 시스템이 필요한 이유는 네 가지다: ① 국소배기장치의 <strong>적정한 작동</strong>; ② 근로자에게 영향을 미치는 <strong>냉각기류의 제거</strong>; ③ <strong>정화되지 않은 실외공기의 무질서한 유입 방지</strong>; ④ <strong>연료 절약</strong>과 안전사고 예방. 반면 “작업장에 교차(방해)기류를 만들기 위해서”는 목적이 될 수 없다 — 교차기류는 후드 앞의 제어기류를 흐트러뜨리는 <strong>제거 대상</strong>이다(§7.4).</p>
+<p>실내압의 방향도 원리로 정해진다. 오염이 높은 작업장의 실내는 <strong>음압(−)으로 유지</strong>한다 — 오염물질이 인접한 청정구역으로 새어 나가지 못하게 하기 위해서다 (반대로 청정실은 양압으로 유지한다). 에너지 절약을 위해 실내 공기를 재순환시켜 외기와 혼합 공급하는 경우, 급기 중 외기의 비율은 CO₂ 농도의 물질수지</p>
+<p><span class="math display">\[\text{외부공기 함량}(\%) = \frac{C_{\text{재순환}} - C_{\text{급기}}}{C_{\text{재순환}} - C_{\text{외기}}} \times 100\]</span></p>
+<p>로 구한다. 예컨대 재순환 공기 700 ppm, 급기 600 ppm, 외기 300 ppm이면 <span class="math inline">\((700-600)/(700-300) \times 100 = 25\,\%\)</span>다.</p>
+</section>
+<section id="압력은-어디서-재는가" class="level3">
+<h3 class="anchored" data-anchor-id="압력은-어디서-재는가">7.2 압력은 어디서 재는가</h3>
+<p>정압·속도압은 <strong>기류가 안정된 곳</strong>에서 재야 한다. 후드나 곡관 직후처럼 흐름이 흐트러진 지점에서 재면 값이 왜곡되므로, 측정공은 곡관 연결부나 일반적인 정압·속도압 동시 측정에서는 덕트 직경의 <strong>4~6배</strong> 떨어진 지점에, 후드가 직관과 일직선으로 연결된 경우(후드정압 측정)에는 <strong>2~4배</strong> 지점에 둔다.</p>
+<p>덕트 내부의 전압·속도압은 <strong>피토관</strong>으로, 후드 개구면·발생원 위치의 제어풍속은 <strong>열선풍속계</strong>로 잰다. 속도압을 재면 <a href="../chapters/w09_ventilation1.html">9주차</a>의 관계식으로 풍속을, <span class="math inline">\(Q = AV\)</span>로 풍량을 역산할 수 있다.</p>
+</section>
+<section id="정압-변화로-고장-부위-찾기" class="level3">
+<h3 class="anchored" data-anchor-id="정압-변화로-고장-부위-찾기">7.3 정압 변화로 고장 부위 찾기</h3>
+<p>진단의 기본 원리는 하나다. <strong>막히면 그 상류 구간(후드 쪽)에서 잰 정압의 절대값이 커지고, 새거나 흡인력이 떨어지면 절대값이 작아진다</strong>(흡인측은 음압이므로 “절대값”으로 말한다). 계통을 “후드 → 덕트 → [A] → 공기정화장치 → [B] → 송풍기 → 배출구”로 그리고 전단(A)·후단(B)의 정압을 함께 보면 원인이 갈라진다.</p>
+<div id="tbl-sp-diagnosis" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sp-diagnosis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;11.12: 정압 변화와 고장 부위
+</figcaption>
+<div aria-describedby="tbl-sp-diagnosis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 54%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>관찰된 현상</th>
+<th>추정 원인</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>송풍기 정압이 갑자기 증가</strong></td>
+<td>백필터에 분진 퇴적, 덕트라인에 분진 퇴적, 후드 댐퍼 닫힘</td>
+</tr>
+<tr class="even">
+<td><strong>정화장치 전단(A)·후단(B)의 정압이 동시에 감소</strong></td>
+<td><strong>송풍기 능력 저하</strong>, 또는 송풍기–덕트 연결부 풀림(점검 뚜껑 열림 포함)</td>
+</tr>
+<tr class="odd">
+<td><strong>정화장치가 막힘</strong></td>
+<td>전단 A의 정압 절대값 <strong>증가</strong>, 후단 B의 정압 절대값 <strong>감소</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-sp-diagnosis" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sp-diagnosis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w10_sp_diagnosis.svg" class="img-fluid figure-img" style="width:88.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sp-diagnosis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;11.6: 정압 측정으로 고장 부위 찾기 — 전단 A와 후단 B가 함께 움직이는가, 갈라지는가
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-sp-diagnosis" class="quarto-xref">그림&nbsp;<span>11.6</span></a> 의 세 선을 구분하는 것은 <strong>두 측정점이 같은 방향으로 움직이는가</strong> 하나뿐이다. 전단과 후단이 <strong>갈라지면</strong>(A 증가, B 감소) 그 <strong>사이가 막힌 것</strong>이고, <strong>함께 낮아지면</strong> 계통 전체를 당기는 힘이 약해진 것이다.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>파손과 막힘은 반대 방향으로 움직인다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>백필터의 여과포가 <strong>찢어지면</strong> 분진은 제거되지 않지만 공기 저항은 오히려 <strong>줄어들어</strong> 정압 절대값이 낮아진다. 반대로 여과포에 분진이 <strong>퇴적되면</strong> 저항이 커져 정압이 증가한다. “정압 증가 = 어딘가 막힘, 정압 감소 = 어딘가 새거나 뚫림”이라는 대응만 잡으면 표의 모든 행을 유도할 수 있다.</p>
+</div>
+</div>
+</section>
+<section id="적정-운전-상태의-판단" class="level3">
+<h3 class="anchored" data-anchor-id="적정-운전-상태의-판단">7.4 적정 운전 상태의 판단</h3>
+<p><strong>적합한 상태</strong>: <strong>사용하지 않는 후드는 댐퍼로 차단되어 있다</strong> — 노는 가지를 막아야 가동 중인 후드에 필요한 배풍량이 확보된다.</p>
+<p><strong>부적합한 상태와 그 이유</strong>: ① 최종 배출구가 <strong>작업장 내부</strong>에 있다 — 배출한 오염공기가 다시 작업장으로 들어온다; ② <strong>증기</strong> 발생 공정(도장 등)에 <strong>여과식</strong> 정화장치를 설치했다 — 여과는 입자상 물질용 원리이며, 가스·증기는 흡수·흡착· 연소로 처리해야 한다(§5.5); ③ 선풍기로 오염물질 발생 지점을 향해 바람을 분다 — 후드 앞에 교차기류를 만들어 포집을 무너뜨린다(§7.1).</p>
+<hr>
+</section>
+</section>
+<section id="요약" class="level2">
+<h2 class="anchored" data-anchor-id="요약">요약</h2>
+<div id="tbl-summary" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;11.13: 10주차 핵심 요약
+</figcaption>
+<div aria-describedby="tbl-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 62%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>개념</th>
+<th>핵심 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>구성 5요소</strong></td>
+<td>후드 → 덕트 → 공기정화장치 → 송풍기 → 배기구 (정화장치는 송풍기 앞). 급기는 30d, 배기는 1d에서 속도 1/10 — 후드는 발생원에 최대한 가깝게</td>
+</tr>
+<tr class="even">
+<td><strong>후드 3형식</strong></td>
+<td>포위식(최고 효율) · 외부식(제어거리가 관건) · 리시버식(발생 방향 이용)</td>
+</tr>
+<tr class="odd">
+<td><strong>제어속도</strong></td>
+<td>발생원 위치에서 필요한 최소 기류속도. 입자상 &gt; 가스상, 상방흡인형 &gt; 측방흡인형</td>
+</tr>
+<tr class="even">
+<td><strong>필요송풍량</strong></td>
+<td>외부식 <span class="math inline">\(Q = V_c(10x^2 + A)\)</span> (거리의 제곱, 플랜지로 25% 절감) · 슬롯 <span class="math inline">\(Q = C\,L\,V_c\,X\)</span> (폭 무관, 자유공간 3.7 / 1/4 원주형 1.6)</td>
+</tr>
+<tr class="odd">
+<td><strong>후드정압</strong></td>
+<td><span class="math inline">\(F_h = 1/C_e^2 - 1\)</span>, <span class="math inline">\(\Delta P_h = F_h\cdot\)</span>VP, <span class="math inline">\(\lvert SP_h \rvert\)</span> = VP + 유입손실 = VP<span class="math inline">\(/C_e^2\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>반송속도</strong></td>
+<td>분진이 침전하지 않는 최소 덕트 풍속 (가스 5~10 ~ 무거운 분진 18~20 m/s)</td>
+</tr>
+<tr class="odd">
+<td><strong>압력손실</strong></td>
+<td>마찰 <span class="math inline">\(f\frac{L}{D}\)</span>VP + 형상 <span class="math inline">\(\zeta\cdot\)</span>VP. 각형은 상당직경 <span class="math inline">\(d_e = 2ab/(a+b)\)</span>, 곡관은 각도 비례, 확대관 정압회복 <span class="math inline">\((\text{VP}_1-\text{VP}_2)(1-\zeta)\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>집진장치</strong></td>
+<td>중력·관성·사이클론(전처리용) → 세정 → 백필터·ESP(고효율). 가스상은 흡수·흡착·연소·촉매</td>
+</tr>
+<tr class="odd">
+<td><strong>사이클론·ESP</strong></td>
+<td>사이클론: 절단입경(효율 50% 입경)·블로다운(배기량 5~10% 흡인, 재비산 방지) / ESP: 저손실·고온 가능, 설치공간 크고 가스상 부적합</td>
+</tr>
+<tr class="even">
+<td><strong>송풍기 상사법칙</strong></td>
+<td><span class="math inline">\(Q \propto N\)</span>, <span class="math inline">\(P \propto N^2\)</span>, <span class="math inline">\(L \propto N^3\)</span> — 소요동력 <span class="math inline">\(L = QP/(6120\,\eta)\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>보충용 공기</strong></td>
+<td>배기량만큼 급기. 부족하면 과도한 음압으로 배풍량 저하. 작업장은 약한 음압 유지</td>
+</tr>
+<tr class="even">
+<td><strong>정압 진단</strong></td>
+<td>막히면 정압 절대값 증가, 새면 감소. 정화장치 막힘 = 전단 증가·후단 감소</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<hr>
+</section>
+<section id="연습문제" class="level2">
+<h2 class="anchored" data-anchor-id="연습문제">연습문제</h2>
+<section id="문제-1.-외부식-후드의-설계" class="level3">
+<h3 class="anchored" data-anchor-id="문제-1.-외부식-후드의-설계">문제 1. 외부식 후드의 설계</h3>
+<p>원형 외부식 후드(직경 40 cm)를 발생원에서 30 cm 떨어진 위치에 설치하려 한다. 제어속도는 0.5 m/s가 필요하다.</p>
+<ol type="1">
+<li>플랜지가 없을 때 필요송풍량(m³/s, m³/min)을 구하라.</li>
+<li>플랜지를 설치하면 필요송풍량은 얼마가 되는가?</li>
+<li>같은 후드를 발생원에서 60 cm 위치로 옮기면 (1)의 송풍량은 대략 몇 배가 되는지 계산하고, 그 이유를 설명하라.</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>(1)</strong> <span class="math inline">\(A = \pi \times 0.2^2 = 0.126\)</span> m², <span class="math inline">\(x = 0.3\)</span> m이므로 <span class="math inline">\(Q = 0.5 \times (10 \times 0.3^2 + 0.126) = 0.513\)</span> m³/s ≈ <strong>30.8 m³/min</strong></p>
+<p><strong>(2)</strong> <span class="math inline">\(Q_{\text{flange}} = 0.75 \times 0.513 = 0.385\)</span> m³/s ≈ <strong>23.1 m³/min</strong> (25% 절감)</p>
+<strong>(3)</strong> <span class="math inline">\(x = 0.6\)</span> m이면 <span class="math inline">\(Q = 0.5 \times (3.6 + 0.126) = 1.86\)</span> m³/s로 약 <strong>3.6배</strong> — <span class="math inline">\(10x^2\)</span> 항이 지배적이어서 송풍량이 거리의 제곱에 가깝게 는다. 후드를 발생원에 붙이는 것이 송풍기 용량을 줄이는 가장 값싼 설계 수단이다.
+</details>
+</section>
+<section id="문제-2.-유입계수와-후드정압" class="level3">
+<h3 class="anchored" data-anchor-id="문제-2.-유입계수와-후드정압">문제 2. 유입계수와 후드정압</h3>
+<p>어느 외부식 후드의 유입계수가 0.75이고, 덕트 내 속도압이 25 mmH₂O로 측정되었다.</p>
+<ol type="1">
+<li>유입손실계수 <span class="math inline">\(F_h\)</span>는?</li>
+<li>후드의 압력손실(유입손실)은?</li>
+<li>후드정압의 크기는? “속도압 + 유입손실”로 검산하라.</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>(1)</strong> <span class="math inline">\(F_h = \dfrac{1}{0.75^2} - 1 = 1.778 - 1 = 0.778\)</span></p>
+<p><strong>(2)</strong> <span class="math inline">\(\Delta P_h = 0.778 \times 25 = 19.4\ \text{mmH}_2\text{O}\)</span></p>
+<strong>(3)</strong> <span class="math inline">\(\lvert SP_h \rvert = \dfrac{25}{0.5625} = 44.4\ \text{mmH}_2\text{O}\)</span> (흡인측이므로 부호는 음압). 검산: VP + <span class="math inline">\(\Delta P_h\)</span> = 25 + 19.4 = 44.4 ✓
+</details>
+</section>
+<section id="문제-3.-덕트-계통의-압력손실" class="level3">
+<h3 class="anchored" data-anchor-id="문제-3.-덕트-계통의-압력손실">문제 3. 덕트 계통의 압력손실</h3>
+<p>가로 0.25 m × 세로 0.35 m의 각형 직관 12 m(속도압 15 mmH₂O, 관마찰계수 0.02)에 이어 압력손실계수 0.27인 곡관(90° 기준)을 60°로 설치한 계통이 있다.</p>
+<ol type="1">
+<li>각형 직관의 상당직경과 마찰 압력손실을 구하라.</li>
+<li>60° 곡관의 압력손실을 구하라.</li>
+<li>이 구간 하류의 확대관에서 속도압이 15 → 8 mmH₂O로 줄었고 압력손실계수가 0.3이라면 정압회복량은?</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>(1)</strong> <span class="math inline">\(d_e = \dfrac{2 \times 0.25 \times 0.35}{0.25 + 0.35} = 0.292\)</span> m (0.25와 0.35 사이 — 타당), <span class="math inline">\(\Delta P_f = 0.02 \times \dfrac{12}{0.292} \times 15 = 12.3\ \text{mmH}_2\text{O}\)</span></p>
+<p><strong>(2)</strong> 각도 비례 보정: <span class="math inline">\(\Delta P = 0.27 \times 15 \times \dfrac{60}{90} = 2.7\ \text{mmH}_2\text{O}\)</span></p>
+<p><strong>(3)</strong> <span class="math inline">\((15 - 8)(1 - 0.3) = 7 \times 0.7 = 4.9\ \text{mmH}_2\text{O}\)</span></p>
+직관+곡관의 손실 <span class="math inline">\(12.3 + 2.7 = 15.0\)</span> mmH₂O에서 확대관이 4.9 mmH₂O의 정압을 회복시킨다. 이런 구간별 합산이 시스템 저항곡선 — 곧 송풍기 운전점(§6.4)을 결정한다.
+</details>
+</section>
+<section id="문제-4.-송풍기의-회전수-변경과-동력" class="level3">
+<h3 class="anchored" data-anchor-id="문제-4.-송풍기의-회전수-변경과-동력">문제 4. 송풍기의 회전수 변경과 동력</h3>
+<p>송풍기가 1,000 rpm에서 풍량 80 m³/min, 전압 60 mmH₂O로 운전 중이며 전효율은 0.6이다.</p>
+<ol type="1">
+<li>현재의 소요동력(kW)을 구하라.</li>
+<li>회전수를 1,200 rpm으로 올리면 풍량·전압·동력은 각각 얼마가 되는가?</li>
+<li>이 결과를 근거로, 풍량 조절에서 회전수 변화법이 댐퍼 방식보다 에너지 면에서 유리한 이유를 설명하라.</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>(1)</strong> <span class="math inline">\(L = \dfrac{80 \times 60}{6{,}120 \times 0.6} = 1.31\ \text{kW}\)</span></p>
+<p><strong>(2)</strong> <span class="math inline">\(N_2/N_1 = 1.2\)</span>: 풍량 <span class="math inline">\(80 \times 1.2 = 96\)</span> m³/min, 전압 <span class="math inline">\(60 \times 1.2^2 = 86.4\)</span> mmH₂O, 동력 <span class="math inline">\(1.31 \times 1.2^3 = 2.26\)</span> kW</p>
+<strong>(3)</strong> 동력이 회전수의 <strong>3승</strong>을 따르므로 풍량을 20% 줄이면 동력은 약 절반 (<span class="math inline">\(0.8^3 = 0.51\)</span>)이 된다. 댐퍼는 저항을 추가해 풍량을 줄이는 방식이라 이런 절감 없이 에너지를 손실로 버린다.
+</details>
+</section>
+<section id="문제-5.-정압-측정에-의한-이상-진단" class="level3">
+<h3 class="anchored" data-anchor-id="문제-5.-정압-측정에-의한-이상-진단">문제 5. 정압 측정에 의한 이상 진단</h3>
+<p>공기정화장치(백필터) 전단(A)과 후단(B)에 정압 측정공이 있고, 평상시 정압은 A = −80, B = −110 mmH₂O였다. 다음 각 측정 결과의 가장 가능성이 높은 원인을 추정하고 근거를 설명하라.</p>
+<ol type="1">
+<li>A = −120 mmH₂O, B = −95 mmH₂O (절대값: A 증가, B 감소)</li>
+<li>A = −55 mmH₂O, B = −80 mmH₂O (절대값: A·B 동시 감소)</li>
+<li>어느 날 백필터의 여과포 일부가 찢어졌다면 A·B의 절대값은 각각 어느 방향으로 변하겠는가?</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>(1) 공기정화장치(백필터)의 막힘.</strong> 막히면 그 앞(A)에서는 저항이 커져 정압 절대값이 증가하고, 뒤(B)에서는 공기가 잘 넘어오지 못해 절대값이 감소한다 — 전단 증가·후단 감소는 “그 사이가 막혔다”는 신호다.</p>
+<p><strong>(2) 송풍기 능력 저하 또는 송풍기–덕트 연결부 풀림.</strong> 전·후단이 같은 방향으로 동시에 감소하는 것은 시스템 전체를 당기는 힘이 약해졌다는 뜻이다.</p>
+<strong>(3) A·B 모두 절대값 감소.</strong> 여과포가 찢어지면 분진은 제거되지 않지만 공기 저항은 오히려 줄어든다. 막힘(정압 증가)과 파손(정압 감소)은 반대 방향으로 움직인다.
+</details>
+<hr>
+</section>
+</section>
+<section id="참고문헌" class="level2">
+<h2 class="anchored" data-anchor-id="참고문헌">참고문헌</h2>
+<ol type="1">
+<li>ACGIH (2019). <em>Industrial Ventilation: A Manual of Recommended Practice for Design</em> (30th ed.). ACGIH.</li>
+<li>Burton, D. J. (2020). <em>Industrial Ventilation Workbook</em> (8th ed.).</li>
+<li>Burgess, W. A., Ellenbecker, M. J., &amp; Treitman, R. D. (2004). <em>Ventilation for Control of the Work Environment</em> (2nd ed.). Wiley.</li>
+<li>한국산업안전보건공단 (2021). 「국소배기장치 기술지침 (KOSHA GUIDE)」.</li>
+<li>한국산업위생학회 (2020). 『산업환기』.</li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "복사완료!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "복사완료!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/w09_ventilation1.html" class="pagination-link" aria-label="9주차. 산업환기 I — 환기의 원리와 전체환기">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">9주차. 산업환기 I — 환기의 원리와 전체환기</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/w11_biological_agents.html" class="pagination-link" aria-label="11주차. 생물학적 유해인자와 생물학적 모니터링">
+        <span class="nav-page-text"><span class="chapter-title">11주차. 생물학적 유해인자와 생물학적 모니터링</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

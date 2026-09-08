@@ -1,0 +1,3163 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>5주차. 산업독성학 II — 주요 화학물질과 건강장해 – 산업위생 총론</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/w06_physical_agents1.html" rel="next">
+<link href="../chapters/w04_toxicology1.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-df22de3841a4459d65a458d30db11513.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-1f5cceec34869e9b7e758f61c933684c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-df22de3841a4459d65a458d30db11513.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/w04_toxicology1.html">Part II. 유해인자와 건강영향 (4~7주)</a></li><li class="breadcrumb-item"><a href="../chapters/w05_toxicology2.html"><span class="chapter-title">5주차. 산업독성학 II — 주요 화학물질과 건강장해</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">산업위생 총론</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="다크 모드 전환"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="검색"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">산업위생 총론</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I. 산업위생의 기초 (1~3주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w01_intro_history.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1주차. 산업위생 개론과 역사</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w02_exposure_assessment1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2주차. 작업환경측정 I — 측정 원리와 전략</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w03_exposure_assessment2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3주차. 작업환경측정 II — 노출기준과 평가</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II. 유해인자와 건강영향 (4~7주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w04_toxicology1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4주차. 산업독성학 I — 독성학의 원리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w05_toxicology2.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">5주차. 산업독성학 II — 주요 화학물질과 건강장해</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w06_physical_agents1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6주차. 물리적 유해인자 I — 소음과 진동</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w07_physical_agents2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">7주차. 물리적 유해인자 II — 온열·이상기압·방사선·조명</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">중간고사 (8주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w08_midterm.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">8주차. 중간고사</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III. 작업환경 관리 (9~13주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w09_ventilation1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">9주차. 산업환기 I — 환기의 원리와 전체환기</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w10_ventilation2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">10주차. 산업환기 II — 국소배기장치</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w11_biological_agents.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">11주차. 생물학적 유해인자와 생물학적 모니터링</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w12_ergonomics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">12주차. 인간공학과 근골격계질환</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w13_ppe_work_management.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">13주차. 개인보호구와 작업관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part IV. 제도와 실무 (14~15주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w14_law_management.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">14주차. 산업보건 법규와 관리 제도</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w15_case_studies.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">15주차. 직업병 사례연구</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">기말고사 (16주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w16_final.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">16주차. 기말고사</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">부록</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendix/cert_map.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">부록. 자격증 과목 매핑</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#학습목표" id="toc-학습목표" class="nav-link active" data-scroll-target="#학습목표">학습목표</a></li>
+  <li><a href="#물질-각론을-보는-틀-표적장기와-특이적-대응-중금속과-건강장해" id="toc-물질-각론을-보는-틀-표적장기와-특이적-대응-중금속과-건강장해" class="nav-link" data-scroll-target="#물질-각론을-보는-틀-표적장기와-특이적-대응-중금속과-건강장해">1. 물질 각론을 보는 틀 — 표적장기와 특이적 대응 · 중금속과 건강장해</a>
+  <ul>
+  <li><a href="#물질-각론을-보는-틀-표적장기와-특이적-대응" id="toc-물질-각론을-보는-틀-표적장기와-특이적-대응" class="nav-link" data-scroll-target="#물질-각론을-보는-틀-표적장기와-특이적-대응">1.1 물질 각론을 보는 틀 — 표적장기와 특이적 대응</a></li>
+  <li><a href="#중금속과-건강장해" id="toc-중금속과-건강장해" class="nav-link" data-scroll-target="#중금속과-건강장해">1.2 중금속과 건강장해</a>
+  <ul class="collapse">
+  <li><a href="#금속-노출의-공통-특징" id="toc-금속-노출의-공통-특징" class="nav-link" data-scroll-target="#금속-노출의-공통-특징">금속 노출의 공통 특징</a></li>
+  <li><a href="#납-lead-pb-조혈기와-신경" id="toc-납-lead-pb-조혈기와-신경" class="nav-link" data-scroll-target="#납-lead-pb-조혈기와-신경">납 (Lead, Pb) — 조혈기와 신경</a></li>
+  <li><a href="#수은-mercury-hg-형태가-표적을-결정한다" id="toc-수은-mercury-hg-형태가-표적을-결정한다" class="nav-link" data-scroll-target="#수은-mercury-hg-형태가-표적을-결정한다">수은 (Mercury, Hg) — 형태가 표적을 결정한다</a></li>
+  <li><a href="#카드뮴-cadmium-cd-신장과-뼈" id="toc-카드뮴-cadmium-cd-신장과-뼈" class="nav-link" data-scroll-target="#카드뮴-cadmium-cd-신장과-뼈">카드뮴 (Cadmium, Cd) — 신장과 뼈</a></li>
+  <li><a href="#크롬-chromium-cr-원자가가-운명을-가른다" id="toc-크롬-chromium-cr-원자가가-운명을-가른다" class="nav-link" data-scroll-target="#크롬-chromium-cr-원자가가-운명을-가른다">크롬 (Chromium, Cr) — 원자가가 운명을 가른다</a></li>
+  <li><a href="#망간-manganese-mn-기저핵과-파킨슨-유사-증후군" id="toc-망간-manganese-mn-기저핵과-파킨슨-유사-증후군" class="nav-link" data-scroll-target="#망간-manganese-mn-기저핵과-파킨슨-유사-증후군">망간 (Manganese, Mn) — 기저핵과 파킨슨 유사 증후군</a></li>
+  <li><a href="#비소-arsenic-as-피부에서-폐까지" id="toc-비소-arsenic-as-피부에서-폐까지" class="nav-link" data-scroll-target="#비소-arsenic-as-피부에서-폐까지">비소 (Arsenic, As) — 피부에서 폐까지</a></li>
+  <li><a href="#베릴륨과-니켈-면역이-개입하는-금속들" id="toc-베릴륨과-니켈-면역이-개입하는-금속들" class="nav-link" data-scroll-target="#베릴륨과-니켈-면역이-개입하는-금속들">베릴륨과 니켈 — 면역이 개입하는 금속들</a></li>
+  <li><a href="#금속열-metal-fume-fever-물질이-아니라-증후군" id="toc-금속열-metal-fume-fever-물질이-아니라-증후군" class="nav-link" data-scroll-target="#금속열-metal-fume-fever-물질이-아니라-증후군">금속열 (Metal Fume Fever) — 물질이 아니라 증후군</a></li>
+  <li><a href="#중금속-중독의-치료-킬레이트제의-원칙과-한계" id="toc-중금속-중독의-치료-킬레이트제의-원칙과-한계" class="nav-link" data-scroll-target="#중금속-중독의-치료-킬레이트제의-원칙과-한계">중금속 중독의 치료 — 킬레이트제의 원칙과 한계</a></li>
+  <li><a href="#중간-정리-소견에서-금속으로" id="toc-중간-정리-소견에서-금속으로" class="nav-link" data-scroll-target="#중간-정리-소견에서-금속으로">중간 정리 — 소견에서 금속으로</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#유기용제와-건강장해" id="toc-유기용제와-건강장해" class="nav-link" data-scroll-target="#유기용제와-건강장해">2. 유기용제와 건강장해</a>
+  <ul>
+  <li><a href="#유기용제의-공통-독성" id="toc-유기용제의-공통-독성" class="nav-link" data-scroll-target="#유기용제의-공통-독성">2.1 유기용제의 공통 독성</a></li>
+  <li><a href="#대표-물질별-특이-독성-한눈에-보기" id="toc-대표-물질별-특이-독성-한눈에-보기" class="nav-link" data-scroll-target="#대표-물질별-특이-독성-한눈에-보기">2.2 대표 물질별 특이 독성 — 한눈에 보기</a></li>
+  <li><a href="#벤젠-골수를-공격하는-방향족의-원형" id="toc-벤젠-골수를-공격하는-방향족의-원형" class="nav-link" data-scroll-target="#벤젠-골수를-공격하는-방향족의-원형">2.3 벤젠 — 골수를 공격하는 방향족의 원형</a></li>
+  <li><a href="#노말헥산-말초신경의-축삭을-끊는다" id="toc-노말헥산-말초신경의-축삭을-끊는다" class="nav-link" data-scroll-target="#노말헥산-말초신경의-축삭을-끊는다">2.4 노말헥산 — 말초신경의 축삭을 끊는다</a></li>
+  <li><a href="#메탄올-시신경과-대사성-산증" id="toc-메탄올-시신경과-대사성-산증" class="nav-link" data-scroll-target="#메탄올-시신경과-대사성-산증">2.5 메탄올 — 시신경과 대사성 산증</a></li>
+  <li><a href="#이황화탄소-cs₂-신경과-혈관을-함께-공격한다" id="toc-이황화탄소-cs₂-신경과-혈관을-함께-공격한다" class="nav-link" data-scroll-target="#이황화탄소-cs₂-신경과-혈관을-함께-공격한다">2.6 이황화탄소 (CS₂) — 신경과 혈관을 함께 공격한다</a></li>
+  <li><a href="#염소계-용제-간독성과-포스겐-생성" id="toc-염소계-용제-간독성과-포스겐-생성" class="nav-link" data-scroll-target="#염소계-용제-간독성과-포스겐-생성">2.7 염소계 용제 — 간독성과 포스겐 생성</a></li>
+  </ul></li>
+  <li><a href="#분진과-진폐증" id="toc-분진과-진폐증" class="nav-link" data-scroll-target="#분진과-진폐증">3. 분진과 진폐증</a>
+  <ul>
+  <li><a href="#어떤-분진이-문제인가-크기와-방어기전" id="toc-어떤-분진이-문제인가-크기와-방어기전" class="nav-link" data-scroll-target="#어떤-분진이-문제인가-크기와-방어기전">3.1 어떤 분진이 문제인가 — 크기와 방어기전</a></li>
+  <li><a href="#진폐증의-정의와-분류" id="toc-진폐증의-정의와-분류" class="nav-link" data-scroll-target="#진폐증의-정의와-분류">3.2 진폐증의 정의와 분류</a></li>
+  <li><a href="#규폐증-silicosis-가장-오래된-직업성-폐질환" id="toc-규폐증-silicosis-가장-오래된-직업성-폐질환" class="nav-link" data-scroll-target="#규폐증-silicosis-가장-오래된-직업성-폐질환">3.3 규폐증 (Silicosis) — 가장 오래된 직업성 폐질환</a></li>
+  <li><a href="#석면-관련-질환-하나의-섬유-네-개의-질병" id="toc-석면-관련-질환-하나의-섬유-네-개의-질병" class="nav-link" data-scroll-target="#석면-관련-질환-하나의-섬유-네-개의-질병">3.4 석면 관련 질환 — 하나의 섬유, 네 개의 질병</a></li>
+  <li><a href="#탄광부진폐증-coal-workers-pneumoconiosis-cwp" id="toc-탄광부진폐증-coal-workers-pneumoconiosis-cwp" class="nav-link" data-scroll-target="#탄광부진폐증-coal-workers-pneumoconiosis-cwp">3.5 탄광부진폐증 (Coal Workers’ Pneumoconiosis, CWP)</a></li>
+  <li><a href="#그-밖의-분진-질환" id="toc-그-밖의-분진-질환" class="nav-link" data-scroll-target="#그-밖의-분진-질환">3.6 그 밖의 분진 질환</a></li>
+  </ul></li>
+  <li><a href="#가스상-물질-질식제와-자극제" id="toc-가스상-물질-질식제와-자극제" class="nav-link" data-scroll-target="#가스상-물질-질식제와-자극제">4. 가스상 물질 — 질식제와 자극제</a>
+  <ul>
+  <li><a href="#생리적-작용에-따른-분류" id="toc-생리적-작용에-따른-분류" class="nav-link" data-scroll-target="#생리적-작용에-따른-분류">4.1 생리적 작용에 따른 분류</a></li>
+  <li><a href="#단순질식제와-산소결핍-밀폐공간의-위험" id="toc-단순질식제와-산소결핍-밀폐공간의-위험" class="nav-link" data-scroll-target="#단순질식제와-산소결핍-밀폐공간의-위험">4.2 단순질식제와 산소결핍 — 밀폐공간의 위험</a></li>
+  <li><a href="#화학적-질식제-산소는-있는데-쓰지-못한다" id="toc-화학적-질식제-산소는-있는데-쓰지-못한다" class="nav-link" data-scroll-target="#화학적-질식제-산소는-있는데-쓰지-못한다">4.3 화학적 질식제 — 산소는 있는데 쓰지 못한다</a>
+  <ul class="collapse">
+  <li><a href="#일산화탄소-co-운반의-차단" id="toc-일산화탄소-co-운반의-차단" class="nav-link" data-scroll-target="#일산화탄소-co-운반의-차단">일산화탄소 (CO) — 운반의 차단</a></li>
+  <li><a href="#황화수소-h₂s-이용의-차단-자극" id="toc-황화수소-h₂s-이용의-차단-자극" class="nav-link" data-scroll-target="#황화수소-h₂s-이용의-차단-자극">황화수소 (H₂S) — 이용의 차단 + 자극</a></li>
+  <li><a href="#시안화수소-hcn-이용의-차단" id="toc-시안화수소-hcn-이용의-차단" class="nav-link" data-scroll-target="#시안화수소-hcn-이용의-차단">시안화수소 (HCN) — 이용의 차단</a></li>
+  </ul></li>
+  <li><a href="#자극제-용해도가-도달-깊이를-결정한다" id="toc-자극제-용해도가-도달-깊이를-결정한다" class="nav-link" data-scroll-target="#자극제-용해도가-도달-깊이를-결정한다">4.4 자극제 — 용해도가 도달 깊이를 결정한다</a></li>
+  </ul></li>
+  <li><a href="#직업성-암과-원인물질" id="toc-직업성-암과-원인물질" class="nav-link" data-scroll-target="#직업성-암과-원인물질">5. 직업성 암과 원인물질</a>
+  <ul>
+  <li><a href="#발암물질-관리의-논리" id="toc-발암물질-관리의-논리" class="nav-link" data-scroll-target="#발암물질-관리의-논리">5.1 발암물질 관리의 논리</a></li>
+  <li><a href="#물질-암-대응" id="toc-물질-암-대응" class="nav-link" data-scroll-target="#물질-암-대응">5.2 물질-암 대응</a></li>
+  </ul></li>
+  <li><a href="#하나의-공정-여러-유해인자-전기도금-사업장" id="toc-하나의-공정-여러-유해인자-전기도금-사업장" class="nav-link" data-scroll-target="#하나의-공정-여러-유해인자-전기도금-사업장">6. 하나의 공정, 여러 유해인자 — 전기도금 사업장</a>
+  <ul>
+  <li><a href="#공정의-흐름과-단계별-유해인자" id="toc-공정의-흐름과-단계별-유해인자" class="nav-link" data-scroll-target="#공정의-흐름과-단계별-유해인자">6.1 공정의 흐름과 단계별 유해인자</a></li>
+  <li><a href="#공정-맥락에서-본-건강장해" id="toc-공정-맥락에서-본-건강장해" class="nav-link" data-scroll-target="#공정-맥락에서-본-건강장해">6.2 공정 맥락에서 본 건강장해</a></li>
+  <li><a href="#표적이-겹친다-4주차-상호작용이-실제로-문제가-되는-지점" id="toc-표적이-겹친다-4주차-상호작용이-실제로-문제가-되는-지점" class="nav-link" data-scroll-target="#표적이-겹친다-4주차-상호작용이-실제로-문제가-되는-지점">6.3 표적이 겹친다 — 4주차 상호작용이 실제로 문제가 되는 지점</a></li>
+  <li><a href="#관리-대책-관리-위계로-정리하기" id="toc-관리-대책-관리-위계로-정리하기" class="nav-link" data-scroll-target="#관리-대책-관리-위계로-정리하기">6.4 관리 대책 — 관리 위계로 정리하기</a>
+  <ul class="collapse">
+  <li><a href="#후드-형식의-선택-캐노피가-아니라-푸쉬풀" id="toc-후드-형식의-선택-캐노피가-아니라-푸쉬풀" class="nav-link" data-scroll-target="#후드-형식의-선택-캐노피가-아니라-푸쉬풀">후드 형식의 선택 — 캐노피가 아니라 푸쉬풀</a></li>
+  </ul></li>
+  <li><a href="#작업환경측정과-건강관리" id="toc-작업환경측정과-건강관리" class="nav-link" data-scroll-target="#작업환경측정과-건강관리">6.5 작업환경측정과 건강관리</a>
+  <ul class="collapse">
+  <li><a href="#작업환경측정" id="toc-작업환경측정" class="nav-link" data-scroll-target="#작업환경측정">작업환경측정</a></li>
+  <li><a href="#건강진단" id="toc-건강진단" class="nav-link" data-scroll-target="#건강진단">건강진단</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#요약" id="toc-요약" class="nav-link" data-scroll-target="#요약">요약</a></li>
+  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a>
+  <ul>
+  <li><a href="#문제-1.-증례-도금-공장" id="toc-문제-1.-증례-도금-공장" class="nav-link" data-scroll-target="#문제-1.-증례-도금-공장">문제 1. 증례 — 도금 공장</a></li>
+  <li><a href="#문제-2.-증례-수제화-작업장" id="toc-문제-2.-증례-수제화-작업장" class="nav-link" data-scroll-target="#문제-2.-증례-수제화-작업장">문제 2. 증례 — 수제화 작업장</a></li>
+  <li><a href="#문제-3.-증례-정화조-작업" id="toc-문제-3.-증례-정화조-작업" class="nav-link" data-scroll-target="#문제-3.-증례-정화조-작업">문제 3. 증례 — 정화조 작업</a></li>
+  <li><a href="#문제-4.-증례-30년-전의-노출" id="toc-문제-4.-증례-30년-전의-노출" class="nav-link" data-scroll-target="#문제-4.-증례-30년-전의-노출">문제 4. 증례 — 30년 전의 노출</a></li>
+  <li><a href="#문제-5.-증례-빈혈의-감별" id="toc-문제-5.-증례-빈혈의-감별" class="nav-link" data-scroll-target="#문제-5.-증례-빈혈의-감별">문제 5. 증례 — 빈혈의 감별</a></li>
+  <li><a href="#문제-6.-적용-전기도금-라인의-점검" id="toc-문제-6.-적용-전기도금-라인의-점검" class="nav-link" data-scroll-target="#문제-6.-적용-전기도금-라인의-점검">문제 6. 적용 — 전기도금 라인의 점검</a></li>
+  </ul></li>
+  <li><a href="#참고문헌" id="toc-참고문헌" class="nav-link" data-scroll-target="#참고문헌">참고문헌</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/w04_toxicology1.html">Part II. 유해인자와 건강영향 (4~7주)</a></li><li class="breadcrumb-item"><a href="../chapters/w05_toxicology2.html"><span class="chapter-title">5주차. 산업독성학 II — 주요 화학물질과 건강장해</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">5주차. 산업독성학 II — 주요 화학물질과 건강장해</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<blockquote class="blockquote">
+<p>중금속·유기용제·분진·가스상 물질의 표적장기와 특징적 건강장해, 그리고 직업성 암</p>
+</blockquote>
+<section id="학습목표" class="level2">
+<h2 class="anchored" data-anchor-id="학습목표">학습목표</h2>
+<p>이 주를 학습한 후 여러분은 다음을 할 수 있어야 합니다:</p>
+<ol type="1">
+<li>주요 중금속(납·수은·카드뮴·크롬·망간·비소)의 표적장기와 특징적 건강장해를 설명하고, 증례의 임상 소견에서 원인 금속을 추론할 수 있다</li>
+<li>유기용제의 공통 독성(중추신경 억제, 피부 탈지)과 대표 물질별 특이 독성(벤젠·톨루엔·노말헥산·메탄올·이황화탄소)을 구분할 수 있다</li>
+<li>진폐증의 발생 기전과 분류를 설명하고, 규폐증·석면폐증·탄광부진폐증의 특징과 석면 관련 질환의 스펙트럼을 비교할 수 있다</li>
+<li>가스상 물질을 단순질식제·화학적 질식제·자극제로 분류하고, 대표 물질(CO, H₂S, HCN, 암모니아, 염소, 포스겐)의 작용 기전과 위험 특성을 설명할 수 있다</li>
+<li>대표적 직업성 암과 원인물질의 대응 관계를 설명할 수 있다</li>
+<li>전기도금처럼 여러 유해인자가 공존하는 공정에서 공정별 유해인자와 겹치는 표적장기를 파악하고, 관리 위계의 틀로 대책을 정리할 수 있다</li>
+</ol>
+<hr>
+</section>
+<section id="물질-각론을-보는-틀-표적장기와-특이적-대응-중금속과-건강장해" class="level2">
+<h2 class="anchored" data-anchor-id="물질-각론을-보는-틀-표적장기와-특이적-대응-중금속과-건강장해">1. 물질 각론을 보는 틀 — 표적장기와 특이적 대응 · 중금속과 건강장해</h2>
+<section id="물질-각론을-보는-틀-표적장기와-특이적-대응" class="level3">
+<h3 class="anchored" data-anchor-id="물질-각론을-보는-틀-표적장기와-특이적-대응">1.1 물질 각론을 보는 틀 — 표적장기와 특이적 대응</h3>
+<p><a href="../chapters/w04_toxicology1.html">4주차</a>의 일반 원리(용량-반응, ADME, 역치와 비역치)가 실제 물질에서 어떻게 나타나는지를 다룬다. 각론을 관통하는 축은 세 가지다.</p>
+<ul>
+<li><strong>표적장기(target organ)</strong> — 흡수된 물질은 분포·대사·축적의 특성에 따라 특정 장기에 손상을 집중시킨다 (납→조혈기·신경, 카드뮴→신장, 벤젠→골수).</li>
+<li><strong>특이적 대응</strong> — 악성중피종은 사실상 석면에서만, 비중격천공은 6가 크롬 (및 비소)에서, 파킨슨 유사 보행장해는 망간에서 나타난다. 이 대응이 직업병 진단의 강력한 단서이자 직업병 인정 요건 판단(1주차)의 출발점이다.</li>
+<li><strong>화학적 형태</strong> — 같은 원소라도 형태가 독성을 결정한다. 수은은 금속·무기·유기 형태에 따라 표적장기가 달라지고, 크롬은 원자가에 따라 필수 영양소(3가)와 1급 발암물질(6가)로 갈린다.</li>
+</ul>
+<div id="fig-target-map" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-target-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w05_target_organ_map.svg" class="img-fluid figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-target-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;6.1: 표적장기 지도 — 이번 주에 다루는 물질들을 “어디를 공격하는가”로 묶은 것
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-target-map" class="quarto-xref">그림&nbsp;<span>6.1</span></a> 이 이번 주의 지도다. 중금속(§1.2)·유기용제(§2)·분진(§3)·가스(§4)를 물질군 순서로 배우되, 머리에 남겨야 할 것은 <strong>표적별로 다시 묶은 이 그림</strong>이다. 분진(§3)은 폐 항목에, 가스(§4)는 산소 공급·이용의 차단이라는 별도의 축에 놓이고, 직업성 암(§5)은 각 표적장기의 가장 무거운 결과로 나타난다. 마지막 §6의 전기도금은 이 물질들이 <strong>한 공정에 함께 있는</strong> 곳이다.</p>
+<hr>
+</section>
+<section id="중금속과-건강장해" class="level3">
+<h3 class="anchored" data-anchor-id="중금속과-건강장해">1.2 중금속과 건강장해</h3>
+<section id="금속-노출의-공통-특징" class="level4">
+<h4 class="anchored" data-anchor-id="금속-노출의-공통-특징">금속 노출의 공통 특징</h4>
+<p>대부분의 금속과 금속염은 고체이므로, 작업장 노출은 주로 <strong>분진·흄·미스트</strong> 등 입자상 물질의 흡입으로 일어난다. 개인위생이 불량하면 흡연·식사 중 손-입 접촉을 통한 경구 섭취도 무시할 수 없고, 수은염·유기금속 화합물처럼 피부로 흡수되는 물질도 있다. 예외적으로 <strong>수은(Hg)과 아르신(AsH₃) 같은 금속 수소화물</strong>은 증기압이 높아 <strong>증기</strong> 상태로 흡입된다. 또 하나의 공통 원리는 <strong>“생명의 창(window of life)”</strong> — 철·아연·구리 같은 금속은 적정 농도에서는 필수적이지만 결핍되어도 과잉되어도 해롭다(파라셀수스의 원리, 4주차).</p>
+</section>
+<section id="납-lead-pb-조혈기와-신경" class="level4">
+<h4 class="anchored" data-anchor-id="납-lead-pb-조혈기와-신경">납 (Lead, Pb) — 조혈기와 신경</h4>
+<p>납은 인류가 최초로 제련한 금속의 하나이며, 역사상 최초로 기록된 직업병도 납중독이다(히포크라테스의 광부 기록, <a href="../chapters/w01_intro_history.html">1주차</a>). 현대의 주요 노출원은 <strong>축전지 제조·재활용, 납땜, 구형 납 페인트 제거, 탄약·사격장, PVC 안정제</strong> 등이다.</p>
+<section id="독성-기전-헴-합성-경로의-차단" class="level5">
+<h5 class="anchored" data-anchor-id="독성-기전-헴-합성-경로의-차단">독성 기전 — 헴 합성 경로의 차단</h5>
+<p>납 독성의 핵심 기전은 <strong>헴(heme) 합성 경로의 효소 저해</strong>다.</p>
+<div id="fig-lead-heme" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lead-heme-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w05_lead_heme.svg" class="img-fluid figure-img" style="width:92.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lead-heme-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;6.2: 납이 차단하는 헴 합성 경로의 두 지점과, 그 결과로 나타나는 검사 소견
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-lead-heme" class="quarto-xref">그림&nbsp;<span>6.2</span></a> 처럼 두 지점이 막히면 <strong>최종 산물(헤모글로빈)은 줄고 중간 대사산물은 쌓인다</strong> — 이 한 문장에서 납중독의 검사 소견 대부분이 논리적으로 도출된다.</p>
+<div id="tbl-lead-hematology" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-lead-hematology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.1: 납중독에서 조혈계 지표의 변화 방향
+</figcaption>
+<div aria-describedby="tbl-lead-hematology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 29%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>지표</th>
+<th style="text-align: center;">변화 방향</th>
+<th>이유</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>혈색소(Hb), 적혈구 수</td>
+<td style="text-align: center;"><strong>감소</strong></td>
+<td>헴 합성 저해 → 저색소성 소구성 빈혈</td>
+</tr>
+<tr class="even">
+<td>요중 δ-ALA, 요중 코프로포르피린</td>
+<td style="text-align: center;"><strong>증가</strong></td>
+<td>효소 저해로 앞 단계·중간 대사산물 축적</td>
+</tr>
+<tr class="odd">
+<td>적혈구 내 프로토포르피린 (ZPP, FEP)</td>
+<td style="text-align: center;"><strong>증가</strong></td>
+<td>철 삽입이 막혀 철 대신 아연이 결합</td>
+</tr>
+<tr class="even">
+<td>적혈구 호염기성 반점</td>
+<td style="text-align: center;"><strong>출현</strong></td>
+<td>적혈구 성숙 장애</td>
+</tr>
+<tr class="odd">
+<td>혈청 철</td>
+<td style="text-align: center;"><strong>증가</strong></td>
+<td>철이 헴에 쓰이지 못하고 혈청에 남음</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>납의 빈혈은 철 결핍성 빈혈이 아니다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>두 빈혈은 겉모습(저색소성 소구성)이 비슷하지만 기전이 정반대 지점에 있다. 철 결핍성 빈혈은 <strong>재료(철)가 없어서</strong>, 납의 빈혈은 철은 충분한데 <strong>철을 끼워 넣는 효소가 막혀서</strong> 생긴다. 그래서 납중독에서는 혈청 철이 정상이거나 <strong>증가</strong>하며, 철 대신 아연이 결합한 <strong>ZPP</strong>가 만성 노출의 지표가 된다. 연습문제 5에서 증례로 다시 확인한다.</p>
+</div>
+</div>
+</section>
+<section id="건강영향" class="level5">
+<h5 class="anchored" data-anchor-id="건강영향">건강영향</h5>
+<p>납의 표적은 <strong>조혈기</strong>(저색소성 소구성 빈혈) 외에도 <strong>말초신경</strong>(운동신경 우선 손상 → 손목하수 wrist drop), <strong>중추신경</strong>(뇌증, 소아 지능 저하), <strong>신장</strong>(근위세뇨관 손상), <strong>생식기</strong>(정자 감소, 유산 위험), <strong>위장관</strong>(발작성 복부 산통 = 연산통, 변비)에 걸치며, 만성 노출의 고전적 소견으로 잇몸 경계부의 청회색 선 — <strong>연선(lead line)</strong> — 이 있다.</p>
+<p>임상 경과에는 순서가 있다: 초기에는 피로·수면장해·두통·변비·경미한 빈혈처럼 <strong>비특이적</strong> 증상이 나타나고, 연산통·손목하수 같은 특징적 소견은 진행된 뒤에 온다. 그래서 감시는 증상이 아니라 <strong>생물학적 모니터링</strong>에 의존한다 — <strong>혈중 납</strong>은 물질 자체를 재는 <strong>노출 지표</strong>(반감기 약 30일), <strong>ZPP·요중 δ-ALA</strong>는 효소 저해의 결과를 재는 <strong>영향 지표</strong>다(<a href="../chapters/w11_biological_agents.html">11주차</a>).</p>
+</section>
+</section>
+<section id="수은-mercury-hg-형태가-표적을-결정한다" class="level4">
+<h4 class="anchored" data-anchor-id="수은-mercury-hg-형태가-표적을-결정한다">수은 (Mercury, Hg) — 형태가 표적을 결정한다</h4>
+<p>수은은 상온에서 액체인 유일한 금속이며, <strong>형태가 흡수 경로와 표적장기를 결정하는</strong> 대표적 사례다.</p>
+<div id="tbl-mercury-forms" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-mercury-forms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.2: 수은의 형태별 독성
+</figcaption>
+<div aria-describedby="tbl-mercury-forms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 21%">
+<col style="width: 13%">
+<col style="width: 23%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>형태</th>
+<th>주요 노출원</th>
+<th style="text-align: center;">주 흡수 경로</th>
+<th>표적장기</th>
+<th>특징적 소견</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>금속수은 (Hg⁰)</strong></td>
+<td>온도계·혈압계, 형광등, 아말감, 금 정제</td>
+<td style="text-align: center;">흡입(증기)</td>
+<td>중추신경계, 신장</td>
+<td>진전(tremor), erethism</td>
+</tr>
+<tr class="even">
+<td><strong>무기수은염 (Hg²⁺)</strong></td>
+<td>전기도금, 방부제, 수은 전지</td>
+<td style="text-align: center;">경구, 피부</td>
+<td>신장, 위장관</td>
+<td>단백뇨, 급성 신부전, 구내염</td>
+</tr>
+<tr class="odd">
+<td><strong>유기수은 (CH₃Hg)</strong></td>
+<td>오염 어패류 섭취, 구형 농약</td>
+<td style="text-align: center;">경구</td>
+<td>중추신경계</td>
+<td>미나마타병, 태아 신경 손상</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>만성 금속수은 중독(mercurialism)의 3대 소견은 <strong>진전, 정서 불안정(erethism: 수줍음·우울·과민성·불면), 구내염</strong>이다. 19세기 모자 제조업의 펠트 가공에 수은이 쓰이며 모자공들에게 이 증상이 흔했고(『이상한 나라의 앨리스』의 “미친 모자장수”), 진전에는 <strong>“모자장수 진전(hatter’s shakes)”</strong>이라는 이름이 남았다.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>미나마타병 — 메틸수은의 중추신경 독성
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>일본 미나마타만에서 공장 폐수의 메틸수은에 오염된 어패류를 먹은 주민들에게 집단 발생한 중독으로, <strong>감각이상, 구심성 시야협착, 운동실조, 언어장애</strong>가 특징이며 태반을 통과해 <strong>태아에게 더 치명적</strong>이다(선천성 미나마타병). 미나마타병(메틸수은)과 이타이이타이병(카드뮴)은 모두 산업 유해물질이 먹이사슬을 거쳐 주민을 공격한 일본의 공해병 — 원인물질을 정확히 구분해 두자.</p>
+</div>
+</div>
+</section>
+<section id="카드뮴-cadmium-cd-신장과-뼈" class="level4">
+<h4 class="anchored" data-anchor-id="카드뮴-cadmium-cd-신장과-뼈">카드뮴 (Cadmium, Cd) — 신장과 뼈</h4>
+<p>카드뮴은 주로 <strong>아연 제련의 부산물</strong>로 생산되며, <strong>니켈-카드뮴 배터리 제조, 전기도금, 카드뮴 안료, 카드뮴 도금 강판의 용접·절단</strong>에서 노출된다. 급성 고농도 흄 흡입은 금속열(§1.2)과 화학성 폐렴·폐부종(치명적 가능)을 일으키지만, 카드뮴의 본령은 만성 독성이다.</p>
+<div id="tbl-cadmium-effects" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cadmium-effects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.3: 카드뮴의 만성 건강영향
+</figcaption>
+<div aria-describedby="tbl-cadmium-effects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 42%">
+<col style="width: 28%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>표적장기</th>
+<th>기전</th>
+<th>결과</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>신장</strong></td>
+<td>근위세뇨관 손상</td>
+<td>저분자 단백뇨 (<strong>β₂-마이크로글로불린</strong> 증가)</td>
+</tr>
+<tr class="even">
+<td><strong>골격</strong></td>
+<td>칼슘 대사 장애</td>
+<td>골연화증, 골다공증, 병적 골절</td>
+</tr>
+<tr class="odd">
+<td><strong>폐</strong></td>
+<td>만성 염증</td>
+<td>폐기종, 폐암 (IARC Group 1)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>카드뮴의 <strong>생물학적 반감기는 10~30년</strong>으로 매우 길어 체내(특히 신장)에 평생 축적된다. 그래서 <strong>요중 카드뮴</strong>은 최근 노출이 아니라 <strong>체내 축적량</strong>을 반영하며, 신장 손상 여부는 <strong>요중 β₂-마이크로글로불린</strong>(영향 지표)으로 확인한다. 카드뮴에 오염된 쌀의 장기 섭취로 일본 진즈강 유역에서 발생한 <strong>이타이이타이병</strong>은 신세뇨관 손상과 골연화증이 결합해 심한 골통증과 병적 골절(“아파, 아파”)을 일으켰다. 치료 면의 특수성도 중요하다 — 킬레이트제(BAL, Ca-EDTA)를 카드뮴에는 <strong>투여해서는 안 된다</strong>. 킬레이트-카드뮴 복합체가 신장으로 재분포하여 독작용을 오히려 악화시키기 때문이다(§1.2).</p>
+</section>
+<section id="크롬-chromium-cr-원자가가-운명을-가른다" class="level4">
+<h4 class="anchored" data-anchor-id="크롬-chromium-cr-원자가가-운명을-가른다">크롬 (Chromium, Cr) — 원자가가 운명을 가른다</h4>
+<div id="tbl-chromium-valence" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-chromium-valence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.4: 3가 크롬과 6가 크롬
+</figcaption>
+<div aria-describedby="tbl-chromium-valence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>형태</th>
+<th>성격</th>
+<th>특징</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>3가 크롬 (Cr³⁺)</strong></td>
+<td>필수 미량원소</td>
+<td>당대사(인슐린 작용)에 관여. 피부·세포막을 거의 통과하지 못함</td>
+</tr>
+<tr class="even">
+<td><strong>6가 크롬 (Cr⁶⁺)</strong></td>
+<td>강한 독성·발암성 (IARC Group 1)</td>
+<td>크롬산 이온(CrO₄²⁻) 형태로 세포막의 음이온 수송체를 타고 쉽게 통과</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>주요 노출원은 <strong>크롬 전기도금, 스테인리스강 용접, 크롬 안료·페인트, 가죽 무두질(3가)</strong>이다. 산업 노출에서 더 해로운 것은 <strong>6가</strong>다 — 독성 자체보다, <strong>세포 안으로 들어갈 수 있는가</strong>에서 먼저 갈린다.</p>
+<div id="tbl-cr6-fate" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cr6-fate-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.5: 6가 크롬의 세포 내 운명 — 어디서 환원되느냐가 독성을 가른다
+</figcaption>
+<div aria-describedby="tbl-cr6-fate-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>① Cr(VI) 세포 내 유입</th>
+<th>② 환원되는 자리</th>
+<th>③ 결과</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>세포막 통과(수 분 ~ 수 시간)</td>
+<td>세포질에서 환원 → Cr(III)</td>
+<td>독성 낮음</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>DNA 근위부에서 환원 → Cr(III)</td>
+<td><strong>강한 변이원성(발암)</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>역설적이게도 DNA를 손상시키는 주체는 세포 내에서 환원되어 생긴 <strong>3가</strong>다. 6가의 위험은 <strong>“6가만이 세포막을 통과해 DNA 곁까지 갈 수 있고, 그곳에서 3가로 환원되며 DNA를 손상시킨다”</strong>로 이해해야 정확하다 — 환원이 세포질에서 미리 일어나면 독성은 오히려 낮다. 문제는 환원이 <strong>어디서</strong> 일어나는가다.</p>
+<div id="tbl-chromium-effects" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-chromium-effects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.6: 6가 크롬의 건강영향
+</figcaption>
+<div aria-describedby="tbl-chromium-effects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>소견</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>급성 중독</strong></td>
+<td>심한 신장 장해: 과뇨증 → 무뇨증 → 요독증으로 사망 가능</td>
+</tr>
+<tr class="even">
+<td><strong>피부</strong></td>
+<td>통증 없이 깊게 파이는 궤양(“크롬 구멍”, chrome holes), 알레르기성 접촉피부염</td>
+</tr>
+<tr class="odd">
+<td><strong>비강</strong></td>
+<td><strong>비중격천공</strong> (비중격 연골의 궤양·천공)</td>
+</tr>
+<tr class="even">
+<td><strong>폐</strong></td>
+<td><strong>폐암</strong> — 크롬 취급자의 폐암 사망률은 일반 인구의 약 13~31배로 보고</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>그림 필요 — 비중격천공과 크롬 구멍 (임상사진)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>무엇</strong>: 두 장이 한 쌍이다. ① <strong>비중격천공</strong> — 전비경(前鼻鏡) 소견 또는 코를 정면에서 본 사진으로, 연골부 비중격에 뚫린 구멍이 보이는 것. 반대쪽 비강이 비쳐 보이면 가장 좋다. ② <strong>크롬 구멍(chrome holes)</strong> — 손등·손가락 관절 부위의 <strong>경계가 뚜렷하고 깊게 파인 궤양</strong>. 크기 비교용 눈금자나 손 전체가 함께 나오면 좋다. 도금조 앞 작업 장면 사진이 함께 있으면 노출 맥락까지 이어진다.</p>
+<p><strong>왜</strong>: 두 소견은 6가 크롬의 <strong>지표 소견</strong>이며(<a href="#tbl-metal-lookup" class="quarto-xref">표&nbsp;<span>6.11</span></a>, 연습문제 1의 증례가 그대로 이 두 장이다), “통증이 없는데 깊다”는 크롬 구멍의 특징은 글로는 잘 전달되지 않는다. 학생이 증례에서 원인 금속을 역추론하는 훈련을 하려면 실제 소견의 모습을 한 번은 보아야 한다. 또한 §6.2에서 지침이 크롬에 대해 <strong>코점막 궤양</strong>을, 니켈에 대해 <strong>비중격천공</strong>을 드는 대비도 사진이 있으면 명확해진다.</p>
+<p><strong>출처 후보</strong>: NIOSH/CDC 및 OSHA 발간물의 삽화·사진(미국 연방정부 저작물, 대체로 퍼블릭 도메인), 안전보건공단(KOSHA) 직업병 사례집·교육자료(사용 허가 확인 필요), Wellcome Collection(CC BY 4.0), ILO <em>Encyclopaedia of Occupational Health and Safety</em> 도판. 임상 증례 논문의 사진은 <strong>CC BY 계열 오픈액세스 저널</strong>(예: PMC 공개본)에서 라이선스를 확인해 사용한다.</p>
+<p><strong>주의</strong>: 환자 식별이 가능한 부위(얼굴)가 포함되면 게재 동의 여부를 반드시 확인한다. 비강 사진은 눈 아래로 잘라 쓴다.</p>
+<p><strong>대안</strong>: 사진 확보가 어려우면 <strong>비중격의 해부 모식도</strong>(연골부/골부를 구분하고 천공 위치를 표시)와 <strong>피부 궤양의 단면 모식도</strong>(경계가 뚜렷하고 깊이 파인 형태 대 얕게 번지는 접촉피부염을 나란히)를 그려 대체한다.</p>
+</div>
+</div>
+</div>
+<p>만성 크롬 중독에는 특별한 치료법이 없고 킬레이트제도 듣지 않으므로(§1.2), 관리의 무게는 전적으로 노출 예방(도금조 국소배기, 밀폐)에 실린다.</p>
+</section>
+<section id="망간-manganese-mn-기저핵과-파킨슨-유사-증후군" class="level4">
+<h4 class="anchored" data-anchor-id="망간-manganese-mn-기저핵과-파킨슨-유사-증후군">망간 (Manganese, Mn) — 기저핵과 파킨슨 유사 증후군</h4>
+<p>망간의 최대 용도는 <strong>철강 제조(합금)</strong>이며 직업성 노출도 제강·용접(망간 함유 용접봉의 아크 용접)에서 가장 많다(그 밖에 건전지의 이산화망간, 도자기 유약, 산화제·촉매). 흡수는 <strong>호흡기 경로가 가장 흔하고 가장 위험</strong>하며, 만성 중독을 일으키는 것은 주로 <strong>2가(Mn²⁺) 망간화합물</strong>이다.</p>
+<p>과량의 망간은 뇌의 <strong>기저핵(basal ganglia, 추체외로계)</strong>에 축적되어 파킨슨병과 매우 유사한 <strong>망간중독증(Manganism)</strong>을 일으킨다.</p>
+<div id="tbl-mn-stages" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-mn-stages-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.7: 망간 중독의 진행
+</figcaption>
+<div aria-describedby="tbl-mn-stages-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>① 초기</th>
+<th>② 중기</th>
+<th>③ 진행기</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>무력증, 식욕감퇴, 정신적 흥분·이상행동</td>
+<td>언어장애, 무표정(가면양 얼굴), 소자증, 균형감각 상실</td>
+<td>보행장해(“cock-walk”), 근육 강직, 수전증, 배근력 저하</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>기저핵의 신경세포가 일단 손상되면 킬레이트 요법으로도 되돌릴 수 없으므로 (§1.2), 관리의 핵심은 <strong>초기의 비특이적 단계(무력증·식욕감퇴)에서의 조기 발견과 노출 차단</strong>이다. 급성으로는 이산화망간 흄의 금속열(§1.2)과 망간 폐렴이 있다.</p>
+</section>
+<section id="비소-arsenic-as-피부에서-폐까지" class="level4">
+<h4 class="anchored" data-anchor-id="비소-arsenic-as-피부에서-폐까지">비소 (Arsenic, As) — 피부에서 폐까지</h4>
+<p>비소는 준금속으로, <strong>구리·납·아연 제련의 부산물, 반도체 제조(GaAs), 농약, CCA 목재 방부제</strong> 등에서 노출된다. 급성 중독은 위장관 출혈성 염증과 말초신경병증이 특징이며, 만성 노출의 소견은 넓게 퍼진다.</p>
+<div id="tbl-arsenic-effects" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-arsenic-effects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.8: 비소의 건강영향
+</figcaption>
+<div aria-describedby="tbl-arsenic-effects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>표적</th>
+<th>소견</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>피부</strong></td>
+<td>과색소침착, 각화증(hyperkeratosis), 피부암</td>
+</tr>
+<tr class="even">
+<td><strong>비강</strong></td>
+<td>비중격천공 (6가 크롬과 함께 기억할 것)</td>
+</tr>
+<tr class="odd">
+<td><strong>폐·방광</strong></td>
+<td>폐암, 방광암 (IARC Group 1)</td>
+</tr>
+<tr class="even">
+<td><strong>말초신경·혈관</strong></td>
+<td>감각·운동 신경병증, 흑발병(blackfoot disease — 대만 지하수 오염 사례)</td>
+</tr>
+<tr class="odd">
+<td><strong>손발톱</strong></td>
+<td>Mees선 (흰색 가로줄)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>그림 필요 — Mees선과 비소 각화증 (임상사진)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>무엇</strong>: ① <strong>Mees선(Mees’ lines)</strong> — 손톱을 위에서 내려다본 근접 사진. 손톱 성장 방향과 <strong>직각으로 가로지르는 희고 폭이 일정한 띠</strong>가 여러 손톱에 같은 높이로 나타난 것이 핵심이다. 한 손의 여러 손가락이 함께 보이면 “같은 시기 노출”이라는 정보까지 전달된다. ② <strong>비소 각화증</strong> — 손바닥·발바닥의 다발성 각질 구진(punctate keratosis)과 몸통의 <strong>과색소침착 사이에 탈색소 반점이 섞인 소견</strong>(“빗방울 모양” 색소침착).</p>
+<p><strong>왜</strong>: Mees선은 <strong>노출 시점을 손톱 위에 기록해 주는</strong> 드문 소견이다 — 손톱이 자란 길이로 노출 시기를 역산할 수 있다는 점이 사진 한 장에서 직관적으로 이해된다. 각화증·과색소침착은 만성 비소 노출이 <strong>피부에서 시작해 피부암으로 이어지는</strong> 스펙트럼의 앞 단계이므로, <a href="#tbl-arsenic-effects" class="quarto-xref">표&nbsp;<span>6.8</span></a> 의 “피부 → 피부암” 행이 하나의 연속된 과정임을 보여준다. 글만으로는 “각화증”이라는 용어가 무엇을 가리키는지 학생에게 전달되지 않는다.</p>
+<p><strong>출처 후보</strong>: 미국 ATSDR <em>Toxicological Profile for Arsenic</em> 및 NIOSH/CDC 자료(연방정부 저작물), WHO/IARC 발간물, Wellcome Collection(CC BY 4.0). 대만 흑발병(blackfoot disease)과 방글라데시 지하수 비소 오염 관련 공개 사진은 WHO 및 CC BY 계열 오픈액세스 논문에서 라이선스를 확인해 사용한다.</p>
+<p><strong>대안</strong>: Mees선은 <strong>손톱 모식도</strong>로 충분히 대체 가능하다 — 손톱 바닥부터 자유연까지의 성장 축을 그리고 흰 띠의 위치, “손톱이 자라는 속도(월 약 3 mm)로 노출 시기를 역산”이라는 눈금을 함께 넣으면 오히려 설명력이 높다. 각화증은 대체 모식도의 효과가 낮으므로 사진 확보를 우선한다.</p>
+</div>
+</div>
+</div>
+<p>가장 위험한 형태는 가스다 — 금속 비소가 수소와 반응해 생성되는 극독성 가스 <strong>아르신(AsH₃)</strong>은 <strong>적혈구를 파괴하는 용혈성 빈혈</strong>을 일으켜 혈색소뇨와 급성 신부전으로 이어진다. 형태가 표적과 질병을 바꾸는 또 하나의 예다.</p>
+</section>
+<section id="베릴륨과-니켈-면역이-개입하는-금속들" class="level4">
+<h4 class="anchored" data-anchor-id="베릴륨과-니켈-면역이-개입하는-금속들">베릴륨과 니켈 — 면역이 개입하는 금속들</h4>
+<p><strong>베릴륨(Be)</strong>은 가장 가벼운 금속의 하나로 항공우주·원자력·전자부품에 쓰이며, 주로 호흡기로 흡수되어 폐에 축적된다. 용해성 화합물은 <strong>급성 화학성 폐렴</strong>을, 난용성 분진·흄은 <strong>만성 베릴륨증</strong>을 일으키는데, 후자는 분진 축적이 아니라 <strong>지연성 과민반응(제Ⅳ형)에 의한 육아종(granuloma)</strong> 형성이 본질이어서 극미량 노출로도 감작이 성립한다 — 공장 인근 주민에게서도 발병한 사례가 보고되어 <strong>“Neighborhood cases”</strong>라는 별칭이 붙었을 정도다. 면역학적 질환이므로 킬레이트제는 무효이며(§1.2), 정기 건강진단(X선·폐기능 검사)과 감작 근로자의 작업 전환이 관리의 핵심이다. 발암 표적은 <strong>폐</strong>다.</p>
+<p><strong>니켈(Ni)</strong>은 합금·도금·전지 제조에 쓰이며 건강영향은 세 갈래다. ① <strong>니켈 가려움증(nickel itch)</strong> — 알레르기성 접촉피부염(감작되면 니켈 도금 장신구에도 반응), ② <strong>니켈 카르보닐(Ni(CO)₄)</strong> — 상온 휘발성의 극독성 화합물(두통·구토에서 출혈성 폐렴까지), ③ <strong>발암성</strong> — 정련 공정의 니켈 흄은 <strong>폐암과 비강암</strong>을 유발한다. 백혈병·재생불량성빈혈은 니켈이 아니라 벤젠의 병태다(§2).</p>
+</section>
+<section id="금속열-metal-fume-fever-물질이-아니라-증후군" class="level4">
+<h4 class="anchored" data-anchor-id="금속열-metal-fume-fever-물질이-아니라-증후군">금속열 (Metal Fume Fever) — 물질이 아니라 증후군</h4>
+<p>금속열은 특정 금속 한 종의 병이 아니라, <strong>융점이 비교적 낮은 금속을 제련·용해·용접할 때 생기는 산화금속 흄을 고농도로 흡입</strong>하여 발생하는 발열성 증후군이다. 가열로 증발한 금속 증기는 공기 중에서 즉시 산화하여 매우 미세한 흄(&lt; 0.1 μm)이 되고, 폐포 도달 후 일정 잠복기를 거쳐 발열 반응을 일으킨다.</p>
+<div id="tbl-metal-fume-fever" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-metal-fume-fever-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.9: 금속열의 핵심 특징
+</figcaption>
+<div aria-describedby="tbl-metal-fume-fever-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>대표 원인</strong></td>
+<td><strong>아연(산화아연)</strong> — 아연도금 강판 용접이 전형. 그 밖에 마그네슘, 구리, 카드뮴, 안티몬, 이산화망간 흄. 납·수은·베릴륨·크롬·주석은 원인이 아니다</td>
+</tr>
+<tr class="even">
+<td><strong>증상</strong></td>
+<td>잠복기 후 감기와 흡사한 오한·발열·구토감·기침·근육통</td>
+</tr>
+<tr class="odd">
+<td><strong>경과</strong></td>
+<td><strong>하루(24시간) 정도면 회복되며 후유증을 남기지 않는다</strong></td>
+</tr>
+<tr class="even">
+<td><strong>월요일열</strong></td>
+<td>주말 휴식으로 내성(tolerance)이 소실되어 월요일에 증상이 다시 심해짐</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>“월요일에 심해진다”는 특징은 면폐증(§3.6)과 공유하지만 기전이 다르다 — 금속열은 <strong>내성의 소실</strong>, 면폐증은 <strong>기관지 수축 반응의 재개</strong>다. 또한 “하루면 낫는 병”이라고 가벼운 신호는 아니다 — 같은 조건에서 카드뮴 흄이라면 화학성 폐렴·폐부종으로 진행할 수 있다. 금속열의 발생은 <strong>흄 관리가 실패하고 있다는 지표</strong>로 읽어야 한다.</p>
+</section>
+<section id="중금속-중독의-치료-킬레이트제의-원칙과-한계" class="level4">
+<h4 class="anchored" data-anchor-id="중금속-중독의-치료-킬레이트제의-원칙과-한계">중금속 중독의 치료 — 킬레이트제의 원칙과 한계</h4>
+<p>치료의 기본은 <strong>킬레이트제(chelating agent)</strong>로 금속과 안정한 착물을 만들어 소변으로 배설시키는 것이다. 그러나 모든 금속에 통하는 것이 아니며, <strong>써서는 안 되는 금속</strong>이 있다는 점이 핵심이다.</p>
+<div id="tbl-chelation" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-chelation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.10: 금속별 킬레이트 치료의 유효·무효
+</figcaption>
+<div aria-describedby="tbl-chelation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>금속</th>
+<th>처치</th>
+<th>원리·비고</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>납(무기납)</strong></td>
+<td><strong>Ca-EDTA</strong></td>
+<td>축적된 납의 배설 촉진</td>
+</tr>
+<tr class="even">
+<td><strong>수은</strong></td>
+<td><strong>BAL(dimercaprol)</strong> 근육주사(급성 시 5 mg/kg), N-acetyl-D-penicillamine; 급성 경구 노출 시 우유·계란 흰자로 단백질 결합·침전 후 위세척</td>
+<td>Ca-EDTA는 수은에 부적합</td>
+</tr>
+<tr class="odd">
+<td><strong>비소</strong></td>
+<td>급성: 활성탄 + 하제 투여, 구토 유발 → <strong>BAL</strong></td>
+<td>쇼크는 수액·혈압상승제로 대응</td>
+</tr>
+<tr class="even">
+<td><strong>카드뮴</strong></td>
+<td>킬레이트제 <strong>금기</strong></td>
+<td>복합체가 신장으로 재분포 → 신독성 악화</td>
+</tr>
+<tr class="odd">
+<td><strong>크롬</strong></td>
+<td>킬레이트제 <strong>무효</strong></td>
+<td>만성 중독은 특별한 치료법 없음. 피부궤양 국소치료만 가능</td>
+</tr>
+<tr class="even">
+<td><strong>망간</strong></td>
+<td>킬레이트제 <strong>무효</strong></td>
+<td>기저핵 신경세포 손상은 비가역</td>
+</tr>
+<tr class="odd">
+<td><strong>베릴륨</strong></td>
+<td>킬레이트제 <strong>무효</strong></td>
+<td>면역학적 과민반응이므로 배설 촉진으로 해결되지 않음</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>킬레이트 요법이 성립하려면 ① 금속이 아직 <strong>배설 가능한 구획</strong>에 있어야 하고, ② 복합체의 이동이 <strong>새로운 손상을 만들지 않아야</strong> 한다. 망간(뇌 침착)·베릴륨 (면역 반응)은 ①이, 카드뮴(신장 재분포)은 ②가 깨진 경우다. 어느 금속이든 <strong>치료보다 예방이 압도적으로 우월</strong>하다.</p>
+</section>
+<section id="중간-정리-소견에서-금속으로" class="level4">
+<h4 class="anchored" data-anchor-id="중간-정리-소견에서-금속으로">중간 정리 — 소견에서 금속으로</h4>
+<div id="tbl-metal-lookup" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-metal-lookup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.11: 소견-금속 대응 요약
+</figcaption>
+<div aria-describedby="tbl-metal-lookup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>특징적 소견/질환</th>
+<th>원인 물질</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>저색소성 빈혈 + 손목하수 + 연선</td>
+<td><strong>납</strong></td>
+</tr>
+<tr class="even">
+<td>진전(hatter’s shakes) + erethism + 구내염</td>
+<td><strong>수은(금속)</strong></td>
+</tr>
+<tr class="odd">
+<td>미나마타병 (시야협착·운동실조)</td>
+<td><strong>메틸수은</strong></td>
+</tr>
+<tr class="even">
+<td>이타이이타이병 (골연화증 + 세뇨관 단백뇨)</td>
+<td><strong>카드뮴</strong></td>
+</tr>
+<tr class="odd">
+<td>비중격천공 + 크롬 구멍 + 폐암</td>
+<td><strong>6가 크롬</strong></td>
+</tr>
+<tr class="even">
+<td>파킨슨 유사 보행장해 + 가면양 얼굴</td>
+<td><strong>망간</strong></td>
+</tr>
+<tr class="odd">
+<td>과색소침착·각화증 + Mees선 + 흑발병</td>
+<td><strong>비소</strong> (용혈성 빈혈은 <strong>아르신</strong> 가스)</td>
+</tr>
+<tr class="even">
+<td>육아종성 폐질환, “Neighborhood cases”</td>
+<td><strong>베릴륨</strong></td>
+</tr>
+<tr class="odd">
+<td>접촉피부염 + 폐암·비강암</td>
+<td><strong>니켈</strong></td>
+</tr>
+<tr class="even">
+<td>감기 유사 발열, 하루 만에 회복, 월요일 악화</td>
+<td><strong>금속열(산화아연 흄 등)</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<hr>
+</section>
+</section>
+</section>
+<section id="유기용제와-건강장해" class="level2">
+<h2 class="anchored" data-anchor-id="유기용제와-건강장해">2. 유기용제와 건강장해</h2>
+<section id="유기용제의-공통-독성" class="level3">
+<h3 class="anchored" data-anchor-id="유기용제의-공통-독성">2.1 유기용제의 공통 독성</h3>
+<p>유기용제는 종류가 많지만 “기름을 녹이고 잘 날아간다”는 공통점이 공통의 독성 프로파일을 만든다.</p>
+<div id="tbl-solvent-common" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-solvent-common-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.12: 유기용제의 공통 독성
+</figcaption>
+<div aria-describedby="tbl-solvent-common-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>물리화학적 특성</th>
+<th>독성학적 귀결</th>
+<th>임상 결과</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>지용성</strong></td>
+<td>지질로 된 세포막·신경조직에 잘 침투</td>
+<td><strong>중추신경 억제(마취 작용)</strong>: 어지러움 → 의식 저하</td>
+</tr>
+<tr class="even">
+<td><strong>탈지 작용</strong></td>
+<td>피부의 지질 보호막을 용해</td>
+<td>피부 건조·균열, <strong>접촉피부염</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>휘발성</strong></td>
+<td>증기압이 높아 공기 중 농도 상승</td>
+<td><strong>흡입이 주 노출 경로</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>중추신경 억제(마취) 작용의 세기는 화학 구조에 따라 다르다:</p>
+<p><span class="math display">\[\text{할로겐화합물} &gt; \text{에스테르} &gt; \text{알켄}\]</span></p>
+<p>할로겐화탄화수소는 <strong>분자량이 클수록, 할로겐 원소 수가 많을수록</strong> 독성이 커진다. 마취 작용은 농도에 비례하고 노출 중단 시 회복되는 <strong>가역적</strong> 효과지만, 아래의 물질별 <strong>특이 독성</strong>은 축적적·비가역적일 수 있다 — 유기용제를 하나로 뭉뚱그리면 안 되는 이유다.</p>
+</section>
+<section id="대표-물질별-특이-독성-한눈에-보기" class="level3">
+<h3 class="anchored" data-anchor-id="대표-물질별-특이-독성-한눈에-보기">2.2 대표 물질별 특이 독성 — 한눈에 보기</h3>
+<div id="tbl-solvent-specific" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-solvent-specific-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.13: 대표 유기용제의 표적장기와 생물학적 지표
+</figcaption>
+<div aria-describedby="tbl-solvent-specific-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 23%">
+<col style="width: 28%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>물질</th>
+<th>표적장기</th>
+<th>특징적 독성</th>
+<th>요중 생물학적 지표</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>벤젠</strong></td>
+<td>골수</td>
+<td>재생불량성빈혈, 백혈병(AML)</td>
+<td>t,t-뮤콘산, S-페닐머캅투르산</td>
+</tr>
+<tr class="even">
+<td><strong>톨루엔</strong></td>
+<td>중추신경</td>
+<td>마취 작용, 용제 남용</td>
+<td>마뇨산(hippuric acid)</td>
+</tr>
+<tr class="odd">
+<td><strong>크실렌</strong> / <strong>스티렌·에틸벤젠</strong></td>
+<td>중추신경</td>
+<td>마취 작용</td>
+<td>메틸마뇨산 / 만델린산</td>
+</tr>
+<tr class="even">
+<td><strong>노말헥산(n-hexane)</strong></td>
+<td>말초신경</td>
+<td>다발성 신경병증</td>
+<td>2,5-헥산디온</td>
+</tr>
+<tr class="odd">
+<td><strong>메탄올</strong></td>
+<td>시신경</td>
+<td>대사성 산증, 실명</td>
+<td>포름산</td>
+</tr>
+<tr class="even">
+<td><strong>이황화탄소(CS₂)</strong></td>
+<td>중추·말초신경, 심혈관</td>
+<td>정신장애, 동맥경화</td>
+<td>TTCA</td>
+</tr>
+<tr class="odd">
+<td><strong>트리클로로에틸렌(TCE)</strong></td>
+<td>간, 중추신경</td>
+<td>지방간, 삼차신경통</td>
+<td>트리클로로아세트산</td>
+</tr>
+<tr class="even">
+<td><strong>사염화탄소(CCl₄)</strong></td>
+<td>간, 신장</td>
+<td>간 중심소엽 괴사</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>이름이 비슷한 <strong>“마뇨산 계열”</strong> 지표는 대응을 정확히 구분해야 한다: <strong>마뇨산 = 톨루엔, 메틸마뇨산 = 크실렌, 만델린산 = 에틸벤젠·스티렌</strong>이다. 벤젠의 지표는 마뇨산 계열이 아니라 <strong>t,t-뮤콘산</strong>(과거에는 총페놀)이다.</p>
+</section>
+<section id="벤젠-골수를-공격하는-방향족의-원형" class="level3">
+<h3 class="anchored" data-anchor-id="벤젠-골수를-공격하는-방향족의-원형">2.3 벤젠 — 골수를 공격하는 방향족의 원형</h3>
+<p>벤젠은 방향족 탄화수소의 원형이자 <strong>IARC Group 1 발암물질</strong>이다(과거 용제로 광범위하게 쓰였으나 현재 대부분 규제). 독성의 핵심은 <strong>대사산물</strong>에 있다.</p>
+<div id="tbl-benzene-path" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-benzene-path-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.14: 벤젠의 대사와 골수 독성
+</figcaption>
+<div aria-describedby="tbl-benzene-path-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>① 벤젠</th>
+<th>② 벤젠 에폭사이드</th>
+<th>③ 하이드로퀴논 / 벤조퀴논</th>
+<th>④ 골수 세포 DNA 손상</th>
+<th>⑤ 조혈장애</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>흡입·피부 흡수</td>
+<td>CYP2E1 산화</td>
+<td>골수에서 활성화</td>
+<td>염색체 이상</td>
+<td>재생불량성빈혈 → 백혈병</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>이처럼 대사 과정에서 오히려 독성이 커지는 현상을 <strong>대사 활성화</strong>라 한다 (<a href="../chapters/w04_toxicology1.html">4주차</a>). 급성으로는 다른 용제처럼 중추신경 억제를 보이지만, 만성 노출의 병태는 골수에 집중된다 — <strong>재생불량성빈혈 (범혈구감소증)</strong>, <strong>급성 골수성 백혈병(AML)</strong>, 골수이형성증후군.</p>
+</section>
+<section id="노말헥산-말초신경의-축삭을-끊는다" class="level3">
+<h3 class="anchored" data-anchor-id="노말헥산-말초신경의-축삭을-끊는다">2.4 노말헥산 — 말초신경의 축삭을 끊는다</h3>
+<p>노말헥산은 <strong>접착제(본드), 인쇄 용제, 추출 용제</strong>에 쓰인다. 독성의 주범은 대사산물 <strong>2,5-헥산디온</strong>으로, 축삭의 구조 단백질과 결합해 <strong>축삭병증</strong>을 일으킨다. 임상 양상은 <strong>말초신경병증</strong> — 사지 말단의 저림·통증(감각)에서 근력 저하·마비(운동)로, <strong>원위부에서 근위부로</strong> 진행하는 <strong>“장갑-양말(glove and stocking)” 분포</strong>가 특징적이다. 노출을 중단해도 회복에 수개월~수년이 걸리고 심하면 완전 회복이 어렵다.</p>
+</section>
+<section id="메탄올-시신경과-대사성-산증" class="level3">
+<h3 class="anchored" data-anchor-id="메탄올-시신경과-대사성-산증">2.5 메탄올 — 시신경과 대사성 산증</h3>
+<p>메탄올 독성 역시 대사 활성화의 예다.</p>
+<div id="tbl-methanol-path" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-methanol-path-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.15: 메탄올의 대사 — 독성은 대사산물(포름산)에서 온다
+</figcaption>
+<div aria-describedby="tbl-methanol-path-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>① 메탄올</th>
+<th>② 포름알데하이드</th>
+<th>③ 포름산</th>
+<th>④ 대사성 산증 + 시신경 손상</th>
+<th>⑤ 시신경 위축 → 실명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>흡입·경구</td>
+<td>알코올 탈수소효소</td>
+<td>알데하이드 탈수소효소</td>
+<td>포름산 축적</td>
+<td>비가역</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>응급 처치가 기전을 그대로 보여준다. 독성의 주범이 대사산물(포름산)이므로, 같은 효소로 대사되며 친화력이 더 높은 <strong>에탄올을 투여해 메탄올의 대사를 경쟁적으로 차단</strong>하고, 혈액투석으로 메탄올을 제거하며, 폴리네이트(folate)로 포름산의 대사를 촉진한다 — 모물질과 대사산물 중 어느 쪽이 독성의 주범인가에 따라 치료 전략이 달라지는 대표적 예다.</p>
+</section>
+<section id="이황화탄소-cs₂-신경과-혈관을-함께-공격한다" class="level3">
+<h3 class="anchored" data-anchor-id="이황화탄소-cs₂-신경과-혈관을-함께-공격한다">2.6 이황화탄소 (CS₂) — 신경과 혈관을 함께 공격한다</h3>
+<p>이황화탄소는 <strong>비스코스 레이온 제조</strong>와 고무 가황 촉진제에 쓰이는 용제로, 표적이 유난히 넓다: <strong>중추신경</strong>(정신장애·수면장애·성격 변화, 고농도에서 정신이상), <strong>말초신경</strong>(다발성 신경병증), <strong>심혈관</strong>(관상동맥질환, <strong>동맥경화 촉진</strong>), <strong>눈</strong>(망막 미세혈관류), <strong>생식</strong>(생리불순, 정자 형성 저해)에 걸친다.</p>
+<p>우리나라 산업보건 역사의 분수령인 <strong>원진레이온 집단 직업병 사건</strong>의 원인물질이 바로 이황화탄소다(<a href="../chapters/w01_intro_history.html">1주차</a>, <a href="../chapters/w15_case_studies.html">15주차</a>). 생물학적 지표는 요중 <strong>TTCA</strong>다. 용제 하나가 정신·신경·심혈관 질환을 동시에 일으킬 수 있다는 사실이, 당시 “레이온 공장에서 웬 뇌졸중·정신질환이냐”는 회의론이 왜 틀렸는지를 설명해 준다.</p>
+</section>
+<section id="염소계-용제-간독성과-포스겐-생성" class="level3">
+<h3 class="anchored" data-anchor-id="염소계-용제-간독성과-포스겐-생성">2.7 염소계 용제 — 간독성과 포스겐 생성</h3>
+<p><strong>사염화탄소(CCl₄)</strong>는 대사되어 트리클로로메틸 라디칼(•CCl₃)을 만들고, 지질 과산화를 통해 <strong>간 중심소엽 괴사</strong>와 신장 손상을 일으킨다(대사 활성화의 또 다른 예). <strong>트리클로로에틸렌(TCE)</strong>은 간(지방간)과 중추신경(삼차신경통)을 침범한다. 염소계 용제에는 간접 위험도 있다 — <strong>열이나 자외선에 분해되면 포스겐(COCl₂)이 생성</strong>된다. TCE로 세정한 철강재의 아크 용접, 염화계 탄화수소 증기에 대한 용접 아크광(자외선) 조사가 전형적 상황이다(독성은 §4.4). 이 위험은 염소를 가진 용제에 한정된다 — 비염소계 용제는 포스겐을 만들지 않는다.</p>
+<hr>
+</section>
+</section>
+<section id="분진과-진폐증" class="level2">
+<h2 class="anchored" data-anchor-id="분진과-진폐증">3. 분진과 진폐증</h2>
+<section id="어떤-분진이-문제인가-크기와-방어기전" class="level3">
+<h3 class="anchored" data-anchor-id="어떤-분진이-문제인가-크기와-방어기전">3.1 어떤 분진이 문제인가 — 크기와 방어기전</h3>
+<p>분진의 위험은 <a href="../chapters/w01_intro_history.html">1주차</a>에서 본 대로 <strong>입자 크기</strong>가 좌우한다. 공기역학적 직경 4 μm 이하의 <strong>호흡성 분진</strong>만이 폐포까지 도달하며 (폐포 침착이 가장 잘 일어나는 크기는 <strong>0.5~5 μm</strong>), 10 μm 이상의 입자는 대부분 상기도에서 걸러진다. 들어온 분진에 대한 호흡기의 방어는 두 층이다 — <strong>기관·기관지</strong>에서는 점액이 분진을 포획하고 <strong>섬모운동</strong>이 인두 쪽으로 밀어 올리며(점액 섬모 에스컬레이터), 섬모가 없는 <strong>폐포</strong>에서는 <strong>폐포 대식세포</strong>가 분진을 탐식하여 처리한다. 진폐증은 이 방어가 감당할 수 없는 양·종류의 분진이 폐포에 누적될 때 시작된다.</p>
+</section>
+<section id="진폐증의-정의와-분류" class="level3">
+<h3 class="anchored" data-anchor-id="진폐증의-정의와-분류">3.2 진폐증의 정의와 분류</h3>
+<p><strong>진폐증(pneumoconiosis)</strong>은 분진 흡입으로 발생하는 <strong>폐의 섬유화</strong> 질환이며, 두 개의 축으로 분류한다.</p>
+<div id="tbl-pneumo-pathology" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-pneumo-pathology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.16: 병리학적 분류 — 폐가 어떻게 반응했는가
+</figcaption>
+<div aria-describedby="tbl-pneumo-pathology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>교원성 진폐증</th>
+<th>비교원성 진폐증</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>폐포 구조</td>
+<td>손상·파괴</td>
+<td>유지</td>
+</tr>
+<tr class="even">
+<td>간질 반응</td>
+<td>명백하고 심함</td>
+<td>경미</td>
+</tr>
+<tr class="odd">
+<td>증식하는 섬유</td>
+<td><strong>교원섬유(collagen)</strong></td>
+<td>망상섬유(reticulin)</td>
+</tr>
+<tr class="even">
+<td>가역성</td>
+<td><strong>비가역</strong> (영구적 반흔)</td>
+<td>가역적인 경우가 많음</td>
+</tr>
+<tr class="odd">
+<td>예</td>
+<td>규폐증, 석면폐증</td>
+<td>용접공폐증, 주석폐증, 바륨폐증</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="tbl-pneumo-origin" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-pneumo-origin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.17: 분진 기원별 분류 — 무엇을 마셨는가
+</figcaption>
+<div aria-describedby="tbl-pneumo-origin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 64%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>해당 진폐증</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>무기성 분진</strong></td>
+<td>규폐증, 석면폐증, 탄광부진폐증, 활석폐증, 흑연폐증, 용접공폐증, 철폐증, 주석폐증</td>
+</tr>
+<tr class="even">
+<td><strong>유기성 분진</strong></td>
+<td>농부폐증, 면폐증, 연초폐증, 목재분진폐증</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>유기성 분진의 질환은 섬유화보다 <strong>알레르기·면역 반응</strong>이 중심이라는 점에서 무기성과 다르다(농부폐증 = 건초 속 <strong>호열성 방선균</strong>에 대한 과민반응). 진폐증의 병리는 섬유증·콜라겐 증식으로, 기도 수축이 본질인 천식과 다르다.</p>
+</section>
+<section id="규폐증-silicosis-가장-오래된-직업성-폐질환" class="level3">
+<h3 class="anchored" data-anchor-id="규폐증-silicosis-가장-오래된-직업성-폐질환">3.3 규폐증 (Silicosis) — 가장 오래된 직업성 폐질환</h3>
+<p>원인은 <strong>유리규산(결정형 실리카, SiO₂)</strong> — 석영, 크리스토발라이트, 트리디마이트 — 분진이며, 위험 직종은 <strong>광산·터널 굴착, 채석, 주물 공장, 도자기·유리 제조, 샌드블라스팅</strong>이다.</p>
+<div id="tbl-silicosis-cycle" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-silicosis-cycle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.18: 규폐증의 악순환 — 대식세포가 죽으며 입자를 다시 내놓는다
+</figcaption>
+<div aria-describedby="tbl-silicosis-cycle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>① SiO₂ 입자 흡입</th>
+<th>② 폐포 대식세포가 탐식</th>
+<th>③ 대식세포 파괴</th>
+<th>④ 섬유아세포 증식·교원질 침착</th>
+<th>⑤ 규폐 결절 형성</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>호흡성 결정형 실리카</td>
+<td>세포 내로</td>
+<td>SiO₂ 재방출 + 염증성 사이토카인 → 다시 ②</td>
+<td>섬유화 진행</td>
+<td>결절성 섬유화</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>이 기전의 잔인한 점은 <strong>순환 구조</strong>다 — 실리카는 자신을 잡아먹은 대식세포를 죽이고 다시 방출되어 또 다른 대식세포를 부르므로, 규폐증은 <strong>노출이 중단된 후에도 진행</strong>할 수 있다. 노출 강도에 따라 만성(10년 이상 잠복), 촉진성 (5~10년), 급성(수개월~5년, 매우 고농도)으로 나뉘며, 합병증으로 <strong>결핵</strong> (대식세포 기능 저하로 결핵균 방어 약화)과 <strong>진행성 괴상 섬유화(PMF)</strong>가 중요하다.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>그림 필요 — 진폐증의 흉부 X선 (영상)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>무엇</strong>: 세 장을 나란히 놓은 비교 구성이 가장 좋다. ① <strong>정상 흉부 X선</strong>(기준), ② <strong>단순 규폐증</strong> — 양측 <strong>상폐야 우세</strong>의 다발성 소결절(ILO 분류의 p/q/r 소음영), ③ <strong>진행성 괴상 섬유화(PMF)</strong> — 결절이 융합해 생긴 큰 종괴 음영. 여기에 ④ <strong>석면폐증</strong>(양측 <strong>하폐야 우세</strong>의 그물 모양 음영과 흉막반)을 더하면 “어느 분진이 폐의 어디를 치는가”의 대비까지 완성된다. 각 영상에 좌우 표시와 폐야 구분선을 얹어 주면 좋다.</p>
+<p><strong>왜</strong>: 진폐증은 이 과목에서 <strong>증상이 아니라 영상으로 진단·관리되는</strong> 거의 유일한 질환이며, 특수건강진단의 판정도 흉부 X선의 ILO 분류에 의존한다. 규폐증의 <strong>상폐야 우세</strong>와 석면폐증의 <strong>하폐야 우세</strong>라는 대비는 <a href="#tbl-asbestos-diseases" class="quarto-xref">표&nbsp;<span>6.19</span></a> 의 “폐 하엽 우세”라는 한 줄을 학생이 실제로 이해하게 만드는 핵심 장면이고, 단순형에서 PMF로 넘어가는 사진은 “비가역적으로 진행한다”는 서술에 무게를 준다.</p>
+<p><strong>출처 후보</strong>: <strong>ILO</strong> <em>Guidelines for the Use of the ILO International Classification of Radiographs of Pneumoconioses</em>(표준 필름 세트 — 사용 조건 확인 필요), <strong>NIOSH</strong> Coal Workers’ Health Surveillance Program 및 <em>NIOSH B Reader</em> 교육자료(미국 연방정부 저작물, 대체로 퍼블릭 도메인), CDC Public Health Image Library, 안전보건공단(KOSHA) 진폐 심사 교육자료. 오픈액세스 논문의 영상은 CC BY 라이선스를 확인한다.</p>
+<p><strong>주의</strong>: 환자 정보(이름·등록번호·촬영일)가 영상 모서리에 남아 있는 경우가 많으므로 반드시 마스킹한다.</p>
+<p><strong>대안</strong>: 영상 확보가 어려우면 <strong>폐야 모식도</strong> — 좌우 폐를 상·중·하 폐야로 나눈 도식 위에 규폐증(상폐야 결절), 석면폐증(하폐야 그물 음영 + 흉막반), PMF(융합 종괴)를 색과 무늬로 표시한 그림 — 으로 대체한다. 분포의 대비만 남겨도 학습 목표의 상당 부분은 달성된다.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="석면-관련-질환-하나의-섬유-네-개의-질병" class="level3">
+<h3 class="anchored" data-anchor-id="석면-관련-질환-하나의-섬유-네-개의-질병">3.4 석면 관련 질환 — 하나의 섬유, 네 개의 질병</h3>
+<p>석면은 천연 섬유상 규산염 광물로, <strong>사문석계</strong>의 백석면(chrysotile, 사용량의 95%)과 <strong>각섬석계</strong>의 청석면·갈석면으로 나뉘며 독성은 <strong>청석면 &gt; 갈석면 &gt; 백석면</strong> 순이다. 유해한 섬유의 기하학적 정의는 <strong>길이 5 μm 이상, 너비 1.5 μm 미만, 길이:너비 &gt; 3:1</strong> — 가늘고 긴 섬유일수록 폐 깊숙이 도달하고 대식세포가 처리하지 못한다. 석면 노출은 서로 다른 네 질환을 일으키며 잠복기가 모두 길다.</p>
+<div id="tbl-asbestos-diseases" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-asbestos-diseases-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.19: 석면 관련 질환의 스펙트럼
+</figcaption>
+<div aria-describedby="tbl-asbestos-diseases-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 36%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>질환</th>
+<th>잠복기</th>
+<th>특징</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>석면폐증(asbestosis)</strong></td>
+<td>15~20년</td>
+<td>미만성 섬유화, <strong>폐 하엽 우세</strong></td>
+</tr>
+<tr class="even">
+<td><strong>폐암</strong></td>
+<td>15~35년</td>
+<td><strong>흡연과 상승작용</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>악성중피종</strong></td>
+<td><strong>30~40년</strong></td>
+<td>흉막·복막의 종양. <strong>사실상 석면 특이적, 흡연과 무관</strong></td>
+</tr>
+<tr class="even">
+<td><strong>흉막비후·흉막반</strong></td>
+<td>10~20년</td>
+<td>호흡 기능 장애</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>석면과 흡연 — 상승작용의 교과서적 사례
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>폐암 위험(비노출·비흡연 = 1)은 석면 노출만 약 5배, 흡연만 약 10배, <strong>둘 다 있으면 50~90배</strong> — 단순 합을 훨씬 넘는 <strong>상승작용(synergism)</strong>이다 (<a href="../chapters/w04_toxicology1.html">4주차</a>). 석면이 발암 개시제, 담배가 촉진제로 작용하는 것으로 설명된다. 반면 <strong>악성중피종은 흡연과 무관하게 석면만으로 발생</strong>한다. 그래서 중피종은 “흡연 탓”이라는 반론이 성립하지 않는, 석면 노출의 가장 강력한 지표 질환이다.</p>
+</div>
+</div>
+</section>
+<section id="탄광부진폐증-coal-workers-pneumoconiosis-cwp" class="level3">
+<h3 class="anchored" data-anchor-id="탄광부진폐증-coal-workers-pneumoconiosis-cwp">3.5 탄광부진폐증 (Coal Workers’ Pneumoconiosis, CWP)</h3>
+<p>석탄 분진의 흡입으로 발생하며, 병리 소견은 탄분이 침착된 <strong>석탄 반점(coal macule)</strong>이다. 소수의 반점에 그치는 <strong>단순형</strong>과, 병변이 융합·확대되어 진행성 괴상 섬유화(PMF)로 가는 <strong>복합형</strong>으로 나뉜다. 석탄 자체는 실리카보다 섬유화 유발력이 약하지만, 채탄 작업에서는 암반의 실리카가 섞여 들어와 규폐증이 병발하기 쉽다.</p>
+</section>
+<section id="그-밖의-분진-질환" class="level3">
+<h3 class="anchored" data-anchor-id="그-밖의-분진-질환">3.6 그 밖의 분진 질환</h3>
+<ul>
+<li><strong>면폐증(byssinosis)</strong>: 면·아마·삼 분진에 의한 기관지 수축 질환. 주말 휴식 후 월요일에 심해지는 <strong>월요열</strong>(금속열의 월요일열과 구분 — §1.2)이 특징이며, 진행하면 만성 폐쇄성 변화를 남긴다.</li>
+<li><strong>농부폐증(farmer’s lung)</strong>: 곰팡이 핀 건초의 <strong>호열성 방선균</strong>에 대한 과민성 폐렴.</li>
+<li><strong>베릴륨폐증</strong>: 지연성 과민반응에 의한 육아종성 질환(§1.2).</li>
+<li><strong>철폐증(siderosis)</strong>: 철 분진의 양성 축적성 진폐 — 섬유화·발암과 무관.</li>
+</ul>
+<p>진폐증은 섬유화를 되돌릴 수 없는 <strong>비가역 질환</strong>이므로, 호흡성 분진의 측정(<a href="../chapters/w02_exposure_assessment1.html">2주차</a>)과 발생원 억제(습식 작업·밀폐·국소배기, <a href="../chapters/w10_ventilation2.html">9~10주차</a>)가 사실상 유일한 대책이다.</p>
+<hr>
+</section>
+</section>
+<section id="가스상-물질-질식제와-자극제" class="level2">
+<h2 class="anchored" data-anchor-id="가스상-물질-질식제와-자극제">4. 가스상 물질 — 질식제와 자극제</h2>
+<section id="생리적-작용에-따른-분류" class="level3">
+<h3 class="anchored" data-anchor-id="생리적-작용에-따른-분류">4.1 생리적 작용에 따른 분류</h3>
+<p>개별 가스를 외우기 전에 분류 체계를 먼저 세우자 — 가스상 물질의 건강장해는 <strong>“산소를 어떻게 방해하는가”와 “어디를 자극하는가”</strong> 두 질문으로 정리된다.</p>
+<div id="tbl-gas-classification" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gas-classification-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.20: 가스상 물질의 생리적 작용에 따른 분류
+</figcaption>
+<div aria-describedby="tbl-gas-classification-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 38%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>분류</th>
+<th>작용 기전</th>
+<th>대표 물질</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>단순질식제</strong></td>
+<td>그 자체는 생리적으로 거의 무해하나, 다량 존재하여 <strong>공기 중 산소분압을 저하</strong>시킴</td>
+<td>메탄, 질소, 수소, 헬륨, 이산화탄소</td>
+</tr>
+<tr class="even">
+<td><strong>화학적 질식제</strong></td>
+<td>혈색소와 결합해 <strong>산소 운반</strong>을 방해하거나, 세포의 산화효소를 불활성화해 <strong>산소 이용</strong>을 차단</td>
+<td>일산화탄소, 황화수소, 시안화수소, 아닐린·니트로벤젠</td>
+</tr>
+<tr class="odd">
+<td><strong>자극제</strong></td>
+<td>기도·점막에 부식 작용, 고농도에서 폐수종·호흡 정지</td>
+<td>암모니아, 염화수소, 염소, 이산화질소, 포스겐, 오존</td>
+</tr>
+<tr class="even">
+<td><strong>마취제</strong></td>
+<td>농도에 비례하여 중추신경 억제</td>
+<td>유기용제 증기 (§2)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-asphyxiants" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-asphyxiants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w05_asphyxiants.svg" class="img-fluid figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-asphyxiants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;6.3: 질식제의 분류 — 산소 공급에서 이용까지의 경로 위에서 어디가 막히는가
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-asphyxiants" class="quarto-xref">그림&nbsp;<span>6.3</span></a> 에서 보듯 분류의 기준은 <strong>산소 경로의 어느 지점이 막히는가</strong>이며, 범주가 배타적이지는 않다. <strong>황화수소는 자극성 가스이면서 동시에 화학적 질식제</strong>로 두 범주에 걸치고, 오존은 강한 산화력을 가진 <strong>자극제</strong>이지 질식제가 아니다(산소분압을 낮추지도, 산소 운반·이용을 방해하지도 않는다). 분류의 근거는 이름이나 인상이 아니라 <strong>작용 기전</strong>이다.</p>
+</section>
+<section id="단순질식제와-산소결핍-밀폐공간의-위험" class="level3">
+<h3 class="anchored" data-anchor-id="단순질식제와-산소결핍-밀폐공간의-위험">4.2 단순질식제와 산소결핍 — 밀폐공간의 위험</h3>
+<p>단순질식제의 위험은 독성이 아니라 <strong>산소를 밀어내는 부피</strong>에 있다. 문제는 언제나 환기가 제한된 <strong>밀폐공간</strong>(탱크, 맨홀, 사일로, 지하 피트)에서 터진다 — 산소는 미생물의 유기물 분해, 금속의 녹 생성, 용접·연소로 <strong>소모</strong>되거나, 질소 블랭킷 등 불활성 가스로 <strong>치환</strong>되어 감소한다.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>밀폐공간 적정공기의 4대 기준 (산업안전보건기준에 관한 규칙)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>기준</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>산소(O₂)</strong></td>
+<td><strong>18% 이상 23.5% 미만</strong></td>
+</tr>
+<tr class="even">
+<td>탄산가스(CO₂)</td>
+<td>1.5% 미만</td>
+</tr>
+<tr class="odd">
+<td>일산화탄소(CO)</td>
+<td>30 ppm 미만</td>
+</tr>
+<tr class="even">
+<td>황화수소(H₂S)</td>
+<td>10 ppm 미만</td>
+</tr>
+</tbody>
+</table>
+<p>산소 하한은 국내 법령이 <strong>18%</strong>, 미국 OSHA·호주 기준이 <strong>19.5%</strong>로 다르다. 상한(23.5%)이 있는 이유는 산소 과잉이 화재·폭발 위험을 급증시키기 때문이다 — 같은 이유로 밀폐공간의 순수 산소 환기는 절대 금지다.</p>
+</div>
+</div>
+<p>산소결핍은 <strong>무경고성</strong>이다 — 냄새도 자극도 없이 판단력 저하(16~12%), 의식 상실(10~6%)을 거쳐 6% 이하에서는 혼수·호흡 정지·수 분 내 심장 정지로 간다. 가장 민감한 조직은 <strong>뇌(대뇌피질)</strong>로, 산소 공급이 2분 이상 끊기면 비가역적으로 파괴된다. 전형적 사고는 “쓰러진 동료를 구하러 들어간 사람이 함께 사망”하는 2차 재해다. 진입 전 산소·가스 측정, 환기, 감시인 배치, <strong>공기공급식 호흡보호구</strong>(송기마스크·공기호흡기)가 원칙이다 — 정화식 방독마스크는 <strong>산소를 만들어 주지 못하므로</strong> 금지된다(<a href="../chapters/w13_ppe_work_management.html">13주차</a>).</p>
+</section>
+<section id="화학적-질식제-산소는-있는데-쓰지-못한다" class="level3">
+<h3 class="anchored" data-anchor-id="화학적-질식제-산소는-있는데-쓰지-못한다">4.3 화학적 질식제 — 산소는 있는데 쓰지 못한다</h3>
+<p>화학적 질식제 환경에서는 공기 중 산소가 충분해도 질식이 일어난다 — 방해 지점이 <strong>운반</strong>(혈액)인가 <strong>이용</strong>(세포)인가로 나누어 보자.</p>
+<section id="일산화탄소-co-운반의-차단" class="level4">
+<h4 class="anchored" data-anchor-id="일산화탄소-co-운반의-차단">일산화탄소 (CO) — 운반의 차단</h4>
+<p>CO는 <strong>무색·무취·무미</strong>의 가스로 연료의 불완전연소에서 발생한다(내연기관 배기, 용광로, 화재, 지하주차장·터널). 헤모글로빈 친화력이 산소의 <strong>약 200~300배</strong>에 달해 미량으로도 카복시헤모글로빈(COHb)을 형성하여 산소 운반을 잠식하고, 산소해리곡선을 좌측 이동시켜 남은 산소마저 조직에서 잘 떨어지지 않게 만든다.</p>
+<div id="tbl-cohb" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cohb-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.21: COHb 농도와 증상
+</figcaption>
+<div aria-describedby="tbl-cohb-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>COHb 농도</th>
+<th>증상</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>&lt; 10%</td>
+<td>대체로 무증상 (흡연자의 평상 수준: 5~10%)</td>
+</tr>
+<tr class="even">
+<td>10~30%</td>
+<td>두통, 피로 → 심한 두통, 집중력 저하</td>
+</tr>
+<tr class="odd">
+<td>30~40%</td>
+<td>현기증, 구토, 시야 흐림</td>
+</tr>
+<tr class="even">
+<td>40~60%</td>
+<td>실신, 경련, 혼수 → 70% 이상에서 사망</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>CO 중독에서는 혈액이 선홍색을 유지하므로 <strong>청색증이 나타나지 않는다</strong>. 생물학적 지표는 <strong>혈중 COHb</strong>(호기 중 CO도 노출 지표)이며, CO에는 필터식 방독마스크가 듣지 않으므로 고농도 환경에서는 공기공급식 호흡보호구를 쓴다.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제: CO 중독에 100% 산소를 투여하는 이유
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>COHb의 반감기는 공기 호흡 시 4~5시간, 100% 산소 투여 시 40~80분, 고압산소치료 시 20~30분이다. 왜 산소 농도를 높이면 COHb가 빨리 없어지는가?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>CO와 O₂는 헤모글로빈의 <strong>같은 자리를 놓고 경쟁</strong>한다 (<span class="math inline">\(\text{Hb} + \text{CO} \rightleftharpoons \text{HbCO}\)</span>는 가역 반응). CO의 친화력이 수백 배 높지만, 산소분압을 크게 올리면 평형이 역방향으로 밀려 CO가 떨어져 나와 호기로 배출된다 — “수적 우세”로 친화력의 열세를 뒤집는 전략이고, 고압산소는 평형을 더 강하게 밀어붙인다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="황화수소-h₂s-이용의-차단-자극" class="level4">
+<h4 class="anchored" data-anchor-id="황화수소-h₂s-이용의-차단-자극">황화수소 (H₂S) — 이용의 차단 + 자극</h4>
+<p>H₂S는 <strong>황 함유 유기물이 산소 결핍 조건에서 분해</strong>될 때 생긴다 — 하수·분뇨 처리시설, 정화조, 맨홀, 탱크 바닥의 슬러지, 석유 정제, 펄프 제조가 전형적 발생원이며 <strong>공기보다 무거워(비중 1.19)</strong> 바닥에 고인다. 기전은 세포 호흡효소(cytochrome oxidase)의 저해 — 조직이 산소를 <strong>이용하지 못하게</strong> 만든다. 동시에 눈·호흡기 점막을 자극하는 <strong>자극성 가스</strong>이기도 하다.</p>
+<div id="tbl-h2s" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-h2s-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.22: 황화수소의 농도별 영향
+</figcaption>
+<div aria-describedby="tbl-h2s-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 64%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>농도 (ppm)</th>
+<th>영향</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0.01~0.1</td>
+<td>냄새 역치 (달걀 썩는 냄새)</td>
+</tr>
+<tr class="even">
+<td>10~50</td>
+<td>눈·호흡기 자극</td>
+</tr>
+<tr class="odd">
+<td>100~200</td>
+<td><strong>후각 마비</strong></td>
+</tr>
+<tr class="even">
+<td>500 이상</td>
+<td>의식 소실, 폐부종 → 1,000 ppm 이상에서 즉각적 사망 (knockdown)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">경고</span>냄새가 사라지는 것은 안전 신호가 아니다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>H₂S는 저농도에서는 강한 악취로 경고해 주지만, <strong>100 ppm을 넘으면 후각 자체가 마비</strong>된다. “이제 냄새가 안 난다”는 가스가 사라진 것이 아니라 <strong>농도가 위험 수준으로 올라갔다</strong>는 뜻일 수 있다 — 감각이 측정을 대체할 수 없다는 것 (1주차)의 가장 극단적인 예다. 응급조치는 신선한 공기로의 이동과 <strong>100% 산소 투여</strong>다.</p>
+</div>
+</div>
+</section>
+<section id="시안화수소-hcn-이용의-차단" class="level4">
+<h4 class="anchored" data-anchor-id="시안화수소-hcn-이용의-차단">시안화수소 (HCN) — 이용의 차단</h4>
+<p>시안화합물은 <strong>도금 공정, 금·은 정련</strong>에서 쓰이고, 화재 시 플라스틱·양모의 연소에서도 발생한다. 기전은 H₂S와 같은 cytochrome oxidase 저해다. 해독제가 체계적으로 갖춰진 드문 예로, ① <strong>아질산나트륨</strong>(메트헤모글로빈을 생성시켜 CN⁻를 붙잡음) → ② <strong>티오황산나트륨</strong>(티오시아네이트로 전환해 배설) → ③ <strong>하이드록소코발라민</strong>(CN⁻과 결합해 비타민 B₁₂ 형성)이 쓰인다.</p>
+<p>한편 <strong>아닐린·니트로벤젠</strong> 등 방향족 아민·니트로 화합물은 헤모글로빈의 철을 산화시켜 산소를 운반하지 못하는 <strong>메트헤모글로빈</strong>으로 만든다 — 화학적 질식제의 “운반 차단” 계열이며, 노출의 영향 지표도 혈중 메트헤모글로빈이다.</p>
+</section>
+</section>
+<section id="자극제-용해도가-도달-깊이를-결정한다" class="level3">
+<h3 class="anchored" data-anchor-id="자극제-용해도가-도달-깊이를-결정한다">4.4 자극제 — 용해도가 도달 깊이를 결정한다</h3>
+<p>자극성 가스가 호흡기의 <strong>어느 부위</strong>를 손상시키는가는 <strong>물에 대한 용해도</strong>로 예측할 수 있다 — 잘 녹는 가스는 상기도 점막의 수분에 즉시 녹아 그 자리를 자극하고, 잘 녹지 않는 가스는 상기도를 통과하여 폐 깊은 곳까지 내려간다.</p>
+<div id="tbl-irritant-solubility" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-irritant-solubility-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.23: 자극제의 용해도별 분류
+</figcaption>
+<div aria-describedby="tbl-irritant-solubility-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 14%">
+<col style="width: 28%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>주 자극 부위</th>
+<th style="text-align: center;">용해도</th>
+<th>대표 물질</th>
+<th>경고 특성</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>상기도 점막</strong></td>
+<td style="text-align: center;">높음</td>
+<td><strong>암모니아</strong>, 염화수소, 아황산가스, 크롬산, 알데히드</td>
+<td>즉각적 자극 → 스스로 대피 가능</td>
+</tr>
+<tr class="even">
+<td><strong>상기도 + 폐 조직</strong></td>
+<td style="text-align: center;">중간</td>
+<td>불소, 요오드, <strong>염소</strong></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>종말기관지·폐포</strong></td>
+<td style="text-align: center;"><strong>낮음</strong></td>
+<td><strong>포스겐</strong>, 이산화질소(NO₂)</td>
+<td>초기 자극이 약함 → <strong>잠복기 후 폐수종</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-irritant" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-irritant-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w05_irritant_solubility.svg" class="img-fluid figure-img" style="width:88.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-irritant-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;6.4: 용해도가 자극 부위와 경고 특성을 함께 결정한다
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-irritant" class="quarto-xref">그림&nbsp;<span>6.4</span></a> 에서 아래로 내려갈수록 경고 특성이 나빠진다는 점에 주목하자. 여기서 독성학의 역설이 나온다 — <strong>덜 자극적인 가스가 더 위험할 수 있다.</strong> 암모니아는 노출 즉시 견디기 힘든 자극을 주므로 근로자가 곧바로 피하지만, 포스겐·이산화질소는 별다른 신호 없이 폐포까지 내려간 뒤 <strong>몇 시간의 잠복기를 거쳐 폐수종</strong>으로 나타난다. 경고 특성(warning property)이 나쁜 물질일수록 공학적 관리와 검지가 중요해진다.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">경고</span>포스겐 — 만들지 않았는데 생기는 가스
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>포스겐(COCl₂)의 산업적 위험은 <strong>의도치 않게 생성</strong>될 때 크다. 전형적 경로는 §2.7에서 본 대로 ① 염소계 용제로 세정한 철강재의 <strong>아크 용접</strong>, ② 염화계 탄화수소 증기에 대한 <strong>자외선 조사·화기에 의한 열분해</strong>다. 대책도 여기서 나온다 — 염소계 용제 세정 구역과 용접·화기 작업 구역의 <strong>분리</strong>, 세정 후 충분한 건조·환기. 포스겐은 공기보다 무거워 바닥 쪽에 고인다.</p>
+</div>
+</div>
+<p><strong>염소(Cl₂)</strong>는 소독·화학공정에서 쓰이는 대표적 자극성 가스로, 중간 정도의 용해도 때문에 상기도와 더 깊은 기도를 함께 침범할 수 있다 — 기전이 산소가 아니라 점막 손상의 문제이므로 질식제가 아니라 자극제로 분류된다.</p>
+<hr>
+</section>
+</section>
+<section id="직업성-암과-원인물질" class="level2">
+<h2 class="anchored" data-anchor-id="직업성-암과-원인물질">5. 직업성 암과 원인물질</h2>
+<section id="발암물질-관리의-논리" class="level3">
+<h3 class="anchored" data-anchor-id="발암물질-관리의-논리">5.1 발암물질 관리의 논리</h3>
+<p>발암물질은 역치가 없다고 가정하고 노출을 가능한 한 최소화(ALARA)한다 (<a href="../chapters/w04_toxicology1.html">4주차</a>). 실무에서 그 출발점은 <strong>IARC(국제암연구기관)의 발암성 분류</strong>다.</p>
+<div id="tbl-iarc" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-iarc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.24: IARC 발암성 분류
+</figcaption>
+<div aria-describedby="tbl-iarc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>그룹</th>
+<th>정의</th>
+<th>예시</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Group 1</strong></td>
+<td>인체 발암성 확인</td>
+<td>석면, 벤젠, 6가 크롬, 카드뮴, 비소, 라돈, 포름알데히드</td>
+</tr>
+<tr class="even">
+<td>Group 2A</td>
+<td>인체 발암성 추정</td>
+<td>디젤배기가스, PCB</td>
+</tr>
+<tr class="odd">
+<td>Group 2B</td>
+<td>인체 발암성 가능</td>
+<td>납, 스티렌</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="물질-암-대응" class="level3">
+<h3 class="anchored" data-anchor-id="물질-암-대응">5.2 물질-암 대응</h3>
+<p>직업성 암의 특징은 <strong>특정 물질이 특정 부위의 암과 대응</strong>한다는 점이며, 이 대응이 곧 역학적 인과 추론과 직업병 인정의 근거가 된다.</p>
+<div id="tbl-occupational-cancer" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-occupational-cancer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.25: 대표적 직업성 암과 원인물질
+</figcaption>
+<div aria-describedby="tbl-occupational-cancer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>원인물질</th>
+<th>직업성 암</th>
+<th>대표 노출 상황</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>석면</strong></td>
+<td><strong>악성중피종</strong>, 폐암</td>
+<td>단열·해체 작업, 조선</td>
+</tr>
+<tr class="even">
+<td><strong>벤젠</strong></td>
+<td><strong>백혈병(AML)</strong></td>
+<td>과거 용제 취급</td>
+</tr>
+<tr class="odd">
+<td><strong>6가 크롬</strong></td>
+<td>폐암</td>
+<td>크롬 도금, 스테인리스강 용접</td>
+</tr>
+<tr class="even">
+<td><strong>비소</strong></td>
+<td>폐암, 피부암, 방광암</td>
+<td>제련, 농약</td>
+</tr>
+<tr class="odd">
+<td><strong>카드뮴</strong> / <strong>베릴륨</strong></td>
+<td>폐암</td>
+<td>아연 제련·Ni-Cd 전지 / 합금·정련</td>
+</tr>
+<tr class="even">
+<td><strong>니켈(정련 흄)</strong></td>
+<td>폐암, <strong>비강암</strong></td>
+<td>니켈 정련</td>
+</tr>
+<tr class="odd">
+<td><strong>염화비닐 단량체(VCM)</strong></td>
+<td><strong>간혈관육종</strong></td>
+<td>PVC 중합 공정</td>
+</tr>
+<tr class="even">
+<td><strong>산화에틸렌</strong></td>
+<td>백혈병</td>
+<td>의료기기 멸균</td>
+</tr>
+<tr class="odd">
+<td><strong>포름알데히드</strong></td>
+<td>비인두암 계열 (Group 1)</td>
+<td>합판·수지 제조</td>
+</tr>
+<tr class="even">
+<td><strong>결정형 실리카</strong> / <strong>라돈</strong></td>
+<td>폐암</td>
+<td>채석·주물 / 광산·지하 작업</td>
+</tr>
+<tr class="odd">
+<td><strong>검댕(PAHs)</strong></td>
+<td>음낭암</td>
+<td>굴뚝 청소 — 최초의 직업성 암 보고(<a href="../chapters/w01_intro_history.html">1주차</a>)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>몇 가지 대응은 특이성이 높아 “지표 종양”이라 부를 만하다 — <strong>악성중피종 ← 석면, 간혈관육종 ← 염화비닐, 비강암 ← 니켈.</strong> 이런 암이 발견되면 역으로 노출력을 반드시 추적해야 한다. 반대 방향의 주의도 필요하다 — <strong>납은 Group 2A(추정)로, 6가 크롬·카드뮴·비소 같은 Group 1 등급이 아니다.</strong></p>
+<p>또 하나의 공통 특징은 <strong>긴 잠복기</strong>(수년~수십 년)다. 오늘의 노출이 수십 년 뒤의 암으로 나타나므로, 인과의 확인은 기억이 아니라 <strong>노출 기록 — 작업환경측정과 생물학적 모니터링의 문서 — 에 의존한다</strong>(1주차의 “측정 자료가 직업병 인정을 좌우한다”는 명제가 여기서 가장 무겁게 작동한다).</p>
+<hr>
+</section>
+</section>
+<section id="하나의-공정-여러-유해인자-전기도금-사업장" class="level2">
+<h2 class="anchored" data-anchor-id="하나의-공정-여러-유해인자-전기도금-사업장">6. 하나의 공정, 여러 유해인자 — 전기도금 사업장</h2>
+<p>지금까지는 물질을 하나씩 떼어 놓고 보았다. 그러나 실제 사업장에서 물질은 하나씩 오지 않는다. <strong>하나의 라인 안에 여러 물질이 동시에, 그리고 공정 단계마다 다른 조합으로 존재</strong>하며, 여기에 소음·중량물 취급 같은 물리적·인간 공학적 인자가 겹친다. 이 절은 각론을 <strong>공정이라는 그릇에 다시 담아 보는</strong> 자리다.</p>
+<p><strong>전기도금</strong>은 그 대표적 예다 — 6가 크롬·니켈·카드뮴 같은 중금속(§1.2), 시안화합물(§4.3), 염산·황산·초산 같은 강산(§4.4), 염소계 용제(§2.7)가 한 작업장에 공존한다. 이하의 서술은 <strong>KOSHA GUIDE H-92-2012 「전기도금 사업장 근로자 보건관리 지침」</strong>을 따른다.</p>
+<section id="공정의-흐름과-단계별-유해인자" class="level3">
+<h3 class="anchored" data-anchor-id="공정의-흐름과-단계별-유해인자">6.1 공정의 흐름과 단계별 유해인자</h3>
+<p>지침은 <strong>전기도금</strong>을 “상품에 내식성과 장식성, 기계적 강도 등을 주기 위한 목적으로 전기에너지를 이용하여 금속 또는 비금속의 표면을 얇은 금속막으로 밀착 피복시키는 방법”으로 정의한다. 공정은 크게 네 단계로 흐른다.</p>
+<div id="fig-plating-process" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-plating-process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w05_plating_process.svg" class="img-fluid figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-plating-process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;6.5: 전기도금 공정의 흐름과 단계별 유해인자 (KOSHA GUIDE H-92-2012)
+</figcaption>
+</figure>
+</div>
+<div id="tbl-plating-hazards" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-plating-hazards-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.26: 전기도금 공정별 유해·위험요인 (KOSHA GUIDE H-92-2012)
+</figcaption>
+<div aria-describedby="tbl-plating-hazards-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 40%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>공정</th>
+<th>단계</th>
+<th>주요 화학적 인자</th>
+<th>그 밖의 인자</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>전처리</strong></td>
+<td>탈지</td>
+<td>트리클로로에틸렌, 1,1,2-트리클로로에탄</td>
+<td>소음, 부적절한 자세, 중량물 취급, 반복 작업</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>산세</td>
+<td>염산, 황산, 초산</td>
+<td>〃</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>중화</td>
+<td>시안화나트륨·시안화칼륨, 수산화나트륨·수산화칼륨</td>
+<td>〃</td>
+</tr>
+<tr class="even">
+<td><strong>도금</strong></td>
+<td>도금조</td>
+<td>크롬, 니켈, 카드뮴</td>
+<td>〃</td>
+</tr>
+<tr class="odd">
+<td><strong>후처리</strong></td>
+<td>가공·사상</td>
+<td>분진</td>
+<td>〃</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>검사·포장</td>
+<td>—</td>
+<td>부적절한 자세, 중량물 취급, 반복 작업</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><a href="#fig-plating-process" class="quarto-xref">그림&nbsp;<span>6.5</span></a> 와 이 표에서 먼저 읽어야 할 것은 <strong>오른쪽 열</strong>, 곧 그림의 아래쪽 붉은 띠다. 화학적 인자는 공정마다 바뀌지만, 소음(<a href="../chapters/w06_physical_agents1.html">6주차</a>)과 부적절한 자세·중량물 취급·반복 작업(<a href="../chapters/w12_ergonomics.html">12주차</a>)은 <strong>거의 모든 공정에 공통</strong>으로 깔려 있다. 지침이 이들의 건강장해로 드는 것은 일시적·영구적 청력손실과 이명(소음), 요추·경추의 근골격계 질환과 회전근개 파열·수근관 증후군 (작업 자세)이다. 화학물질만 관리 대상으로 보면 노출의 절반을 놓치게 된다.</p>
+</section>
+<section id="공정-맥락에서-본-건강장해" class="level3">
+<h3 class="anchored" data-anchor-id="공정-맥락에서-본-건강장해">6.2 공정 맥락에서 본 건강장해</h3>
+<p>개별 물질의 독성 기전은 이미 앞 절들에서 다루었으므로 여기서는 반복하지 않는다. 대신 <strong>이 공정에서 어떤 형태로 노출되며 무엇이 문제가 되는가</strong>만 정리한다.</p>
+<div id="tbl-plating-health" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-plating-health-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.27: 전기도금 사업장의 유해인자별 건강장해 (KOSHA GUIDE H-92-2012)
+</figcaption>
+<div aria-describedby="tbl-plating-health-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 13%">
+<col style="width: 54%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>유해인자</th>
+<th>공정</th>
+<th>지침이 드는 주요 건강장해</th>
+<th style="text-align: center;">각론</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>크롬</strong></td>
+<td>도금조</td>
+<td>피부 괴사·접촉성 피부염, 인후·상기도·목의 부종, <strong>코점막 궤양</strong> / 급성 기관지 수축, 천식, 만성기관지염, 간질성 폐렴, 폐섬유화, <strong>폐암</strong></td>
+<td style="text-align: center;">§1.2</td>
+</tr>
+<tr class="even">
+<td><strong>니켈</strong></td>
+<td>도금조</td>
+<td>접촉성·알레르기성 피부염, 니켈 소양증, 색소침착·탈색소 반점, 만성비염·부비동염, <strong>비중격천공·후각소실</strong> / 천식, <strong>비인강암·폐암</strong></td>
+<td style="text-align: center;">§1.2</td>
+</tr>
+<tr class="odd">
+<td><strong>카드뮴</strong></td>
+<td>도금조</td>
+<td>발열·오한·금속의 맛과 <strong>금속열</strong>, 화학적 폐렴·폐수종, 폐기종, 폐암 / <strong>요단백</strong> / 후각장해·비점막 궤양 / 치아 황색 착색</td>
+<td style="text-align: center;">§1.2, §1.2</td>
+</tr>
+<tr class="even">
+<td><strong>시안화합물</strong></td>
+<td>중화조</td>
+<td>무력증·구역·구토·현기증·두통·<strong>아몬드 맛</strong>, 혼수·경련발작 / 빈맥·서맥·부정맥·저혈압·청색증·허혈성 심질환·사망</td>
+<td style="text-align: center;">§4.3</td>
+</tr>
+<tr class="odd">
+<td><strong>염산</strong></td>
+<td>산세조</td>
+<td>각막 손상·실명, <strong>비중격 궤양</strong> / 기도 작열감·만성기관지염 / 화상·피부 변색 / <strong>치아 침식·괴사</strong></td>
+<td style="text-align: center;">§4.4</td>
+</tr>
+<tr class="even">
+<td><strong>황산</strong></td>
+<td>산세조</td>
+<td>만성결막염·실명 / <strong>폐수종·폐섬유화</strong>·기관지염·폐기종 / 화상·반흔 / <strong>치아 침식·괴사</strong></td>
+<td style="text-align: center;">§4.4</td>
+</tr>
+<tr class="odd">
+<td><strong>초산</strong></td>
+<td>산세조</td>
+<td>결막염·실명, <strong>코점막 궤양</strong> / 심한 기침·호흡곤란·기관지 경련 / 발적·화상·수포</td>
+<td style="text-align: center;">§4.4</td>
+</tr>
+<tr class="even">
+<td><strong>트리클로로에틸렌</strong>, 1,1,2-트리클로로에탄</td>
+<td>탈지조</td>
+<td>피로·현기증·두통·기억력 저하·집중력 장해 / <strong>부정맥·심장마비·사망</strong> / 홍반, 탈지작업자의 홍조 / 시력장해</td>
+<td style="text-align: center;">§2.7</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>세 가지가 눈에 띈다. 첫째, <strong>강산 미스트의 치아 침식·괴사</strong>는 각론에서는 잘 다루지 않지만 산세 공정에서는 실질적인 문제다 — 산 미스트가 상시 떠 있는 작업장에서 나타나는 이 소견은 노출 관리 실패의 눈에 보이는 지표다. 둘째, <strong>염소계 용제의 심장 감수성 증가</strong>(부정맥·심장마비)는 중추신경 억제만으로 설명되지 않는 별도의 위험이다. 셋째, 지침이 크롬에 대해 드는 것은 비중격천공이 아니라 <strong>코점막 궤양</strong>, 니켈에 대해서는 <strong>비중격천공</strong>이다 — 비강 손상이 크롬 하나의 전유물이 아니라는 사실이 다음 항의 출발점이다.</p>
+</section>
+<section id="표적이-겹친다-4주차-상호작용이-실제로-문제가-되는-지점" class="level3">
+<h3 class="anchored" data-anchor-id="표적이-겹친다-4주차-상호작용이-실제로-문제가-되는-지점">6.3 표적이 겹친다 — 4주차 상호작용이 실제로 문제가 되는 지점</h3>
+<p><a href="#tbl-plating-health" class="quarto-xref">표&nbsp;<span>6.27</span></a> 을 물질이 아니라 <strong>표적장기 기준으로 다시 읽으면</strong> 이 공정의 진짜 구조가 드러난다.</p>
+<div id="fig-plating-targets" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-plating-targets-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w05_plating_targets.svg" class="img-fluid figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-plating-targets-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;6.6: 공정을 표적장기로 다시 읽으면 — 같은 줄에 여러 공정이 놓이는 것이 표적의 겹침이다
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-plating-targets" class="quarto-xref">그림&nbsp;<span>6.6</span></a> 의 가로줄 하나하나가 <strong>동시에 공격받는 하나의 장기</strong>다.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>노출기준을 각각 만족해도 안전하다고 말할 수 없는 이유
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>같은 표적을 공격하는 물질들이 함께 있을 때, 각 물질의 농도가 개별 노출기준보다 낮더라도 <strong>효과는 합쳐진다</strong> — <a href="../chapters/w04_toxicology1.html">4주차</a> §3.1의 <strong>상가작용(additive)</strong>이다. 도금조 앞에서 근로자의 비강 점막은 크롬·니켈· 염산·초산을 <strong>동시에</strong> 맞고 있고, 폐는 크롬·니켈·카드뮴·황산 미스트를 함께 받는다. 물질별로 하나씩 판정하는 습관은 이 지점에서 무너진다 — 노출 평가는 물질 단위로 하더라도, <strong>위험의 판단은 표적 단위로</strong> 해야 한다.</p>
+<p>한 걸음 더 나아가면 <strong>상승작용</strong>의 조건도 이 공정에 갖추어져 있다. 크롬과 니켈은 모두 IARC Group 1의 폐 발암물질(§5.2)이고, 여기에 흡연이 얹히면 석면-흡연의 사례(§3.4)에서 본 구도가 반복될 수 있다. 지침이 <strong>“도금조 근처 에서 음식물을 먹지 않는다 / 흡연을 하지 않는다 / 식사 및 귀가 시 반드시 손과 얼굴을 씻는다”</strong>를 개인위생 준수사항으로 못 박는 이유가 여기에 있다.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">경고</span>물질끼리 만나서 새 물질을 만든다 — 지침이 금지하는 두 가지 조합
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>노출의 합만이 문제가 아니다. 이 공정에는 <strong>원래 없던 유해물질이 생성되는</strong> 경로가 있고, 지침은 이를 작업 금지·보관 분리로 차단한다.</p>
+<ol type="1">
+<li><strong>탈지조 주변의 용접 금지.</strong> 지침 5.2는 “트리클로로에틸렌을 사용하는 탈지조 주변에서 용접을 하는 경우 <strong>염소가스, 염산가스, 그리고 포스겐이 발생</strong>할 수 있으므로 용접작업을 금지해야 한다”고 명시한다. §2.7과 §4.4에서 본 포스겐 생성 경로가 실제 지침의 금지 조항으로 나타난 것이다. 탈지공정 체크리스트가 “주변에 용접작업 또는 고열작업이 있습니까?”를 묻는 것도 같은 이유다.</li>
+<li><strong>산과 시안화합물의 분리 보관.</strong> 지침 6.1은 화학물질저장소를 작업장과 격리하되 <strong>“특히 산과 시안화화합물은 다른 장소에 보관”</strong>하고, 산과 알칼리는 <strong>서로 다른 색으로 표시</strong>하여 실수로 도금조에 첨가하는 일이 없도록 하라고 요구한다. 산세조(강산)와 중화조(시안화물)가 같은 라인에 있다는 점을 생각하면 이 규정의 무게를 알 수 있다 — 두 물질이 만나는 상황 자체를 만들지 않는 것이 대책이다(§4.3의 시안화수소).</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="관리-대책-관리-위계로-정리하기" class="level3">
+<h3 class="anchored" data-anchor-id="관리-대책-관리-위계로-정리하기">6.4 관리 대책 — 관리 위계로 정리하기</h3>
+<p>지침은 이 사업장의 대책을 작업관리·작업환경관리·건강관리로 나누어 제시한다. <a href="../chapters/w01_intro_history.html">1주차</a>의 <strong>관리 위계</strong>(제거 &gt; 대체 &gt; 공학적 대책 &gt; 관리적 대책 &gt; 개인보호구)의 틀로 다시 배열하면 다음과 같다. 지침에는 도금 공정 자체를 없애거나 다른 공법으로 <strong>대체</strong>하는 대책은 나오지 않는다 — 위계의 최상단이 비어 있는 상태에서 나머지를 최대한 조이는 구조다.</p>
+<div id="tbl-plating-controls" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-plating-controls-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.28: KOSHA GUIDE H-92-2012의 관리 대책을 관리 위계로 재배열
+</figcaption>
+<div aria-describedby="tbl-plating-controls-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 76%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>위계</th>
+<th>지침이 요구하는 조치</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>공학적 대책</strong></td>
+<td>유해물질 발생 억제 설비 설치 / 탈지·산세·중화·도금 공정에 <strong>국소배기장치</strong> 설치 / 시설이 완전 밀폐되어 있지 않은 경우 <strong>적절한 후드 형식</strong> 선정 / 제어풍속 준수 / <strong>매년 1회 이상 안전검사</strong>(자격자, 결과 기록·보존) / 전체환기 보조</td>
+</tr>
+<tr class="even">
+<td><strong>관리적 대책</strong></td>
+<td>전 공정 <strong>표준작업지침서</strong> 작성과 감독(표준에서 벗어나면 보고 → 원인 파악·대책 수립 후 재개) / <strong>MSDS</strong> 비치·경고표지 부착·정기 교육 / 화학물질저장소 격리, <strong>산과 시안화합물 분리 보관</strong>, 산·알칼리 색 구분 / <strong>위험작업 관리</strong>(탈지조 주변 용접 금지) / 작업장 통로 확보와 바닥 정리(전도재해 예방) / <strong>특별안전보건교육</strong> / 도금·세척·탈지 <strong>공정별 체크리스트</strong>로 모니터링 / 개인위생(도금조 근처 음식·흡연 금지, 식사·귀가 시 세정) / <strong>긴급 세척시설·세안설비</strong> 설치 / 응급처치체계 구축과 분기 1회 이상 훈련</td>
+</tr>
+<tr class="odd">
+<td><strong>개인보호구</strong></td>
+<td>발생 가스·증기에 맞는 <strong>호흡용 보호구</strong>(파과시간 경과 시 정화통 교체) / 산·알칼리 취급자에 <strong>보안경·안면보호구·고무장갑·고무 앞치마·고무장화</strong> / <strong>방음보호구</strong> / 개인 전용 지급, 보관함 설치</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>지침이 직접 밝히는 위계의 논리
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>지침 5.4.1은 개인보호구 항목의 첫머리에 이렇게 적는다 — “유해요인에 대한 가장 바람직하고 우선적인 대책은 <strong>작업설비의 개선을 통한 노출의 감소</strong>이다. 사업주는 환기시설, 작업장 격리와 같은 <strong>공정개선이 불가능할 경우</strong> 적절한 양질의 보호구를 제공하는 것을 <strong>차선책</strong>으로 고려해야 한다. 개인보호구를 <strong>절대적 보호의 개념으로 사용할 경우 더 큰 위험이 발생</strong>할 수 있다.”</p>
+<p>관리 위계가 왜 위계인지를 한 문단으로 요약한 문장이며, 개인보호구가 <strong>최후 수단</strong>인 이유(<a href="../chapters/w13_ppe_work_management.html">13주차</a>)도 함께 말하고 있다.</p>
+</div>
+</div>
+<section id="후드-형식의-선택-캐노피가-아니라-푸쉬풀" class="level4">
+<h4 class="anchored" data-anchor-id="후드-형식의-선택-캐노피가-아니라-푸쉬풀">후드 형식의 선택 — 캐노피가 아니라 푸쉬풀</h4>
+<p>도금 사업장의 공학적 대책에서 가장 구체적인 지시는 <strong>후드 형식</strong>에 관한 것이다. 지침은 두 형식을 이렇게 정의한다.</p>
+<ul>
+<li><strong>푸쉬풀 후드(push-pull hood)</strong> — 배기에 의한 흡입 기류의 생성 이외에 <strong>급기를 위한 분출구를 병설</strong>한 후드</li>
+<li><strong>캐노피 후드(canopy hood)</strong> — 고온의 오염원으로부터 발생되는 물질의 제거에 적합한 형식으로, <strong>오염원의 상부에 설치</strong>하여 배기하는 후드</li>
+</ul>
+<p>그리고 <strong>“도금사업장에 가장 권장할 만한 형태는 푸쉬풀 형이며, 근로자에게 오염물질의 노출이 더 증가될 위험이 있는 캐노피 형은 피해야 한다”</strong>고 명시한다. 이유는 기하학에 있다 — 상방 흡인은 오염물질을 <strong>작업자의 호흡역을 지나 위로</strong> 끌어올린다. 도금조는 대부분 상온~중온의 액면이고 작업자가 조 바로 앞에 서므로, 캐노피는 오염원과 배기구 사이에 사람의 얼굴을 놓는 배치가 된다. 후드 형식은 배기량이 아니라 <strong>기류가 사람을 지나가는가</strong>로 판단해야 한다(<a href="../chapters/w10_ventilation2.html">10주차</a>).</p>
+<p>같은 이유가 제어풍속 기준에도 반영되어 있다 — 상방흡인형이 가장 높은 풍속을 요구한다.</p>
+<div id="tbl-plating-capture-velocity" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-plating-capture-velocity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.29: 관리대상 유해물질 국소배기장치 후드의 제어풍속 (산업안전보건기준에 관한 규칙 [별표 13])
+</figcaption>
+<div aria-describedby="tbl-plating-capture-velocity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">물질의 상태</th>
+<th>후드 형식</th>
+<th style="text-align: center;">제어풍속 (m/s)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>가스 상태</strong><br>(가스·증기)</td>
+<td>포위식 포위형</td>
+<td style="text-align: center;">0.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td>외부식 측방흡인형</td>
+<td style="text-align: center;">0.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td>외부식 하방흡인형</td>
+<td style="text-align: center;">0.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td>외부식 상방흡인형</td>
+<td style="text-align: center;"><strong>1.0</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>입자 상태</strong><br>(흄·분진·미스트)</td>
+<td>포위식 포위형</td>
+<td style="text-align: center;">0.7</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td>외부식 측방흡인형</td>
+<td style="text-align: center;">1.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td>외부식 하방흡인형</td>
+<td style="text-align: center;">1.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td>외부식 상방흡인형</td>
+<td style="text-align: center;"><strong>1.2</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>같은 후드 형식이라도 <strong>입자 상태가 가스 상태보다 높은 제어풍속</strong>을 요구하고, 포위 정도가 낮을수록 요구 풍속이 커진다. 도금조의 크롬산 미스트는 <strong>입자 상태</strong>임에 유의한다.</p>
+</section>
+</section>
+<section id="작업환경측정과-건강관리" class="level3">
+<h3 class="anchored" data-anchor-id="작업환경측정과-건강관리">6.5 작업환경측정과 건강관리</h3>
+<section id="작업환경측정" class="level4">
+<h4 class="anchored" data-anchor-id="작업환경측정">작업환경측정</h4>
+<p>지침은 <strong>예비조사 → 본조사 → 사후조치</strong>의 절차를 요구한다. 본조사는 작업이 정상적으로 이루어져 노출 정도를 정확히 평가할 수 있을 때 실시하며, <strong>모든 측정은 개인시료 채취를 원칙</strong>으로 하되 곤란한 경우에만 지역시료로 하고 <strong>그 사유를 결과표에 밝힌다</strong>(<a href="../chapters/w02_exposure_assessment1.html">2주차</a>). 사후조치로는 서류 <strong>3년 보존</strong>, 근로자대표 요구 시 결과 설명회 개최가 있다. 측정·자체검사 모두 <strong>근로자대표의 입회 요구권</strong>이 보장된다.</p>
+<p>주기 단축 기준은 이 공정의 위험 구조를 그대로 보여준다.</p>
+<div id="tbl-plating-monitoring" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-plating-monitoring-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.30: 작업환경측정 주기 단축 기준
+</figcaption>
+<div aria-describedby="tbl-plating-monitoring-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 27%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>대상</th>
+<th>조건</th>
+<th>측정 주기</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>크롬, 니켈 등 발암물질</strong></td>
+<td>노출기준 <strong>초과</strong></td>
+<td>3개월에 1회 이상</td>
+</tr>
+<tr class="even">
+<td><strong>시안화합물</strong>(시안화나트륨·시안화칼륨), <strong>트리클로로에틸렌</strong>, 1,1,2-트리클로로에탄</td>
+<td>노출기준 <strong>2배 이상</strong> 초과</td>
+<td>3개월에 1회 이상</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>발암물질은 <strong>초과만 해도</strong>, 그 밖의 화학적 인자는 <strong>2배 이상 초과해야</strong> 주기가 단축된다 — 비역치 가정(§5.1, <a href="../chapters/w04_toxicology1.html">4주차</a>)이 제도의 문턱을 어떻게 낮추는지를 보여주는 예다.</p>
+</section>
+<section id="건강진단" class="level4">
+<h4 class="anchored" data-anchor-id="건강진단">건강진단</h4>
+<p>일반건강진단 외에 <strong>배치전 건강진단</strong>과 <strong>특수건강진단</strong>을 실시한다. 배치전 건강진단의 목적은 배치 예정 업무에 대한 <strong>적합성 평가</strong>다. 특수건강진단의 주기는 다음 중 하나에 해당하면 <strong>다음 회에 한정하여 1/2로 단축</strong>한다.</p>
+<ol type="1">
+<li>작업환경측정 결과 <strong>노출기준 이상</strong>인 작업공정에서 해당 유해인자에 노출되는 모든 근로자</li>
+<li>특수·수시·임시건강진단 결과 <strong>직업병 유소견자가 발견된</strong> 작업공정에서 해당 유해인자에 노출되는 모든 근로자</li>
+<li>건강진단 결과 <strong>주기를 단축해야 한다는 의사의 판정</strong>을 받은 근로자</li>
+</ol>
+<p>세 요건의 근거가 각각 <strong>환경 측정치 · 건강 결과 · 의학적 판단</strong>이라는 점에 주목하자 — 작업환경측정과 건강진단은 분리된 두 제도가 아니라 <strong>서로의 결과를 입력으로 받는 한 쌍</strong>이다(<a href="../chapters/w14_law_management.html">14주차</a>).</p>
+<p>특별안전보건교육도 이 구조의 일부다. 허가·관리대상 유해물질(트리클로로에틸렌, 1,1,2-트리클로로에탄, 염산, 황산, 초산, 시안화합물, 크롬, 니켈, 카드뮴) 취급 작업과 밀폐공간 폐기물 처리 작업이 대상이며, 일용근로자는 <strong>2시간 이상</strong>, 그 밖의 근로자는 <strong>16시간 이상</strong>(최초 종사 전 4시간 이상 + 12시간은 3개월 이내 분할 가능, 단기간·간헐적 작업은 2시간 이상)을 받는다.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>이 절을 각론으로 되돌리기
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>전기도금 한 사업장을 이해하는 데 이번 주와 지난주에 배운 거의 모든 것이 동원되었다 — 6가 크롬의 원자가(§1.2), 니켈의 감작(§1.2), 카드뮴의 금속열과 신장(§1.2·§1.2), 시안화수소의 세포호흡 차단(§4.3), 강산 미스트의 용해도와 자극 부위(§4.4), 염소계 용제의 포스겐 생성(§2.7), 발암물질의 비역치 관리 (§5.1), 그리고 상가·상승작용(<a href="../chapters/w04_toxicology1.html">4주차</a> §3.1).</p>
+<p>거꾸로 말하면, <strong>각론은 공정을 읽기 위한 어휘</strong>다. 현장에서 마주치는 것은 “크롬”이 아니라 “크롬 도금조 앞 3번 위치의 작업”이며, 그 위치에서 무엇이 문제인지는 물질 지식과 공정 지식이 겹쳐야 보인다.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+</section>
+<section id="요약" class="level2">
+<h2 class="anchored" data-anchor-id="요약">요약</h2>
+<div id="tbl-summary" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;6.31: 5주차 핵심 요약
+</figcaption>
+<div aria-describedby="tbl-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 62%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>주제</th>
+<th>핵심 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>납</strong></td>
+<td>헴 합성 효소 저해 → 저색소성 빈혈(혈청 철은 증가), 손목하수, 연선. 혈중 납(노출지표) · ZPP/δ-ALA(영향지표)</td>
+</tr>
+<tr class="even">
+<td><strong>수은 / 카드뮴</strong></td>
+<td>수은: 금속(증기→중추신경: 진전·erethism)/무기(신장)/유기(미나마타병) · 카드뮴: 신장(β₂-MG)·골연화증(이타이이타이병)·폐암, 반감기 10~30년</td>
+</tr>
+<tr class="odd">
+<td><strong>크롬 / 망간 / 비소</strong></td>
+<td>6가 크롬만 세포막 통과(비중격천공·크롬 구멍·폐암) · 망간: 기저핵 → 파킨슨 유사 증후군(비가역) · 비소: 피부·폐암·방광암, Mees선, 아르신=용혈</td>
+</tr>
+<tr class="even">
+<td><strong>금속열 / 킬레이트</strong></td>
+<td>저융점 금속(아연 대표)의 산화 흄 → 감기 유사 발열, 하루 만에 회복, 월요일열 · 치료: 납=Ca-EDTA, 수은·비소=BAL / 카드뮴 금기, 크롬·망간·베릴륨 무효</td>
+</tr>
+<tr class="odd">
+<td><strong>유기용제</strong></td>
+<td>공통: 지용성→중추신경 억제, 탈지→피부염, 휘발성→흡입 · 특이: 벤젠→골수(AML), 톨루엔→중추신경(마뇨산), 노말헥산→말초신경(2,5-헥산디온), 메탄올→시신경(포름산), CS₂→신경·심혈관(원진레이온)</td>
+</tr>
+<tr class="even">
+<td><strong>진폐증</strong></td>
+<td>호흡성 분진의 폐 섬유화(비가역). 교원성(규폐·석면폐)/비교원성, 무기성/유기성. 규폐증 = 대식세포 파괴의 악순환, 합병증 결핵·PMF</td>
+</tr>
+<tr class="odd">
+<td><strong>석면</strong></td>
+<td>석면폐증·폐암(흡연과 상승작용)·<strong>악성중피종(석면 특이, 흡연 무관, 잠복기 30~40년)</strong>·흉막비후</td>
+</tr>
+<tr class="even">
+<td><strong>가스 분류</strong></td>
+<td>단순질식제(산소분압 저하) / 화학적 질식제(운반·이용 차단: CO — Hb 친화력 200~300배·청색증 없음·100% 산소 투여, H₂S — 산화효소 저해 + 자극·고농도 후각 마비, HCN, 아닐린) / 자극제</td>
+</tr>
+<tr class="odd">
+<td><strong>자극제 원리</strong></td>
+<td>용해도 높음→상기도(암모니아, 즉시 경고), 낮음→폐포(포스겐·NO₂, 잠복기 후 폐수종)</td>
+</tr>
+<tr class="even">
+<td><strong>직업성 암</strong></td>
+<td>석면→중피종, 벤젠→백혈병, 6가 크롬·카드뮴·비소→폐암, VCM→간혈관육종, 니켈→비강암</td>
+</tr>
+<tr class="odd">
+<td><strong>통합 사례: 전기도금</strong></td>
+<td>탈지(염소계 용제)→산세(강산)→중화(시안화물)→도금(크롬·니켈·카드뮴), 전 공정에 소음·근골격계 인자 · 비강·폐·피부에 표적이 겹침 → 상가작용 · 국소배기(캐노피 아닌 <strong>푸쉬풀</strong>), 발암물질은 노출기준 초과만으로 측정주기 3개월 단축 (KOSHA GUIDE H-92-2012)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<hr>
+</section>
+<section id="연습문제" class="level2">
+<h2 class="anchored" data-anchor-id="연습문제">연습문제</h2>
+<section id="문제-1.-증례-도금-공장" class="level3">
+<h3 class="anchored" data-anchor-id="문제-1.-증례-도금-공장">문제 1. 증례 — 도금 공장</h3>
+<p>전기도금 공장에서 8년째 일하는 42세 근로자가 코 안의 통증과 잦은 코피를 호소한다. 진찰에서 비중격 연골의 천공과, 손가락 관절 부위의 통증 없는 깊은 궤양들이 발견되었다. 가장 가능성 높은 원인물질과 장기 감시 대상 질환은?</p>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<strong>6가 크롬</strong>이다. <strong>비중격천공 + 통증 없는 깊은 궤양(크롬 구멍)</strong>의 조합에 도금 공정이라는 노출력이 더해지면 6가 크롬을 가리킨다(비소도 비중격천공을 일으킬 수 있으나 크롬 구멍과 도금 공정은 크롬 쪽 근거다). 장기 감시 대상은 <strong>폐암</strong>(IARC Group 1)이다. 만성 크롬 중독에는 킬레이트제를 포함해 특별한 치료법이 없으므로, 대책의 무게는 노출 차단과 건강 감시에 실린다.
+</details>
+</section>
+<section id="문제-2.-증례-수제화-작업장" class="level3">
+<h3 class="anchored" data-anchor-id="문제-2.-증례-수제화-작업장">문제 2. 증례 — 수제화 작업장</h3>
+<p>환기가 나쁜 수제화 작업장에서 접착제 작업을 하는 20대 근로자 두 명이 비슷한 시기에 양쪽 발끝의 저림과 감각 이상을 호소하기 시작했고, 수개월에 걸쳐 증상이 다리 위쪽으로 올라오며 발목의 근력 저하가 나타났다. 의심되는 원인물질과 독성 기전, 이 증상 분포의 이름을 말하라.</p>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<strong>노말헥산(n-헥산)</strong>이다. 접착제 용제로 쓰이는 노말헥산은 체내에서 <strong>2,5-헥산디온</strong>으로 대사되어 축삭 단백질과 결합, 축삭병증을 일으킨다. 증상은 <strong>말초신경병증</strong> — 사지의 가장 먼 곳에서 시작해 근위부로 진행하는 <strong>“장갑-양말(glove and stocking)” 분포</strong>가 특징이다. 같은 작업장의 여러 명이 동시에 발병했다는 점은 작업환경 원인을 가리키는 강한 역학적 단서다.
+</details>
+</section>
+<section id="문제-3.-증례-정화조-작업" class="level3">
+<h3 class="anchored" data-anchor-id="문제-3.-증례-정화조-작업">문제 3. 증례 — 정화조 작업</h3>
+<p>정화조 청소 작업자가 맨홀에 들어가자 처음에는 심한 달걀 썩는 냄새를 느꼈으나 “곧 냄새가 사라져서” 작업을 계속하다가 쓰러졌다. 동료가 구조를 위해 정화식 방독마스크를 쓰고 진입하려 한다. (a) 원인 가스와 “냄새가 사라진” 현상의 의미, (b) 동료의 구조 계획의 문제점을 설명하라.</p>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>(a)</strong> 원인은 <strong>황화수소(H₂S)</strong> — 황 함유 유기물의 혐기성 분해로 정화조에서 생성되며 공기보다 무거워 바닥에 고인다. 냄새가 사라진 것은 가스가 없어진 것이 아니라 <strong>농도가 100 ppm 이상으로 올라 후각이 마비</strong>된 것으로, 가장 위험한 신호다. H₂S는 세포 호흡효소를 저해하는 화학적 질식제이며 고농도에서는 전격적 의식 소실(knockdown)을 일으킨다.</p>
+<strong>(b)</strong> 두 가지가 잘못됐다. 첫째, 정화조 내부는 산소결핍일 가능성이 높은데 <strong>정화식 방독마스크는 산소를 공급하지 못하므로</strong> 금지된다 — <strong>송기마스크 또는 공기호흡기(SCBA)</strong>를 써야 한다. 둘째, 측정·환기 없는 진입 자체가 밀폐공간 2차 재해(“구조자도 사망”)의 전형적 경로다. 구조된 환자에게는 신선한 공기와 100% 산소를 투여한다.
+</details>
+</section>
+<section id="문제-4.-증례-30년-전의-노출" class="level3">
+<h3 class="anchored" data-anchor-id="문제-4.-증례-30년-전의-노출">문제 4. 증례 — 30년 전의 노출</h3>
+<p>62세 비흡연 남성이 악성중피종 진단을 받았다. 그는 30여 년 전 조선소에서 3년간 배관 단열 작업을 했다. 회사 측은 “노출 기간이 3년으로 짧고 이후 30년간 무관한 일을 했으므로 업무 관련성이 없다”고 주장한다. 이 주장을 평가하라.</p>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>주장은 타당하지 않다.</strong> 단열 작업은 대표적 석면 노출 작업이며, <strong>악성중피종은 사실상 석면 특이적인 지표 종양</strong>이다.</p>
+<ul>
+<li><strong>잠복기</strong>: 중피종의 잠복기는 평균 30~40년 — “노출 30년 뒤 발병”은 오히려 <strong>의학적으로 타당한 발병 시기</strong>(직업병 인정 요건 ③, 1주차)에 부합한다.</li>
+<li><strong>노출 기간</strong>: 중피종은 비교적 짧은 노출로도 발생할 수 있다.</li>
+<li><strong>흡연</strong>: 중피종은 폐암과 달리 <strong>흡연과 무관</strong>하다. 같은 사람의 질환이 폐암이었다면 흡연·석면의 상승작용을 따져야 했겠지만, 중피종에서는 그 논쟁 자체가 성립하지 않는다.</li>
+</ul>
+</details>
+</section>
+<section id="문제-5.-증례-빈혈의-감별" class="level3">
+<h3 class="anchored" data-anchor-id="문제-5.-증례-빈혈의-감별">문제 5. 증례 — 빈혈의 감별</h3>
+<p>축전지 재활용 공장 근로자의 건강진단에서 저색소성 소구성 빈혈이 발견되었다. 담당의는 철 결핍성 빈혈로 보고 철분제를 처방하려 했으나, 추가 검사에서 혈청 철은 정상~증가, 적혈구 ZPP와 요중 δ-ALA는 뚜렷이 증가해 있었다. 이 결과들이 가리키는 진단과 생화학적 근거를 설명하고, 혈중 납·ZPP·δ-ALA를 노출 지표와 영향 지표로 구분하라.</p>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p>진단은 <strong>납중독</strong>이다 — 축전지 공정은 대표적 납 노출원이다.</p>
+<p><strong>생화학적 근거</strong>: 납은 헴 합성 경로의 <strong>δ-ALA 탈수효소</strong>와 <strong>페로킬라타아제</strong>를 저해한다. 그 결과 ① δ-ALA가 쌓여 소변으로 증가하고, ② 철 대신 아연이 결합한 <strong>ZPP가 증가</strong>하며, ③ 쓰이지 못한 철이 혈청에 남아 <strong>혈청 철은 정상~증가</strong>한다. 철 결핍성 빈혈(혈청 철 감소)과 겉모습은 같아도 기전이 다르므로, 철분제가 아니라 <strong>노출 차단</strong>과 필요시 <strong>Ca-EDTA 킬레이트 치료</strong>가 옳은 대응이다.</p>
+<strong>지표 구분</strong>: <strong>혈중 납</strong>은 물질 자체를 재는 <strong>노출 지표</strong>, <strong>ZPP·요중 δ-ALA</strong>는 효소 저해의 결과를 재는 <strong>영향 지표</strong>다.
+</details>
+</section>
+<section id="문제-6.-적용-전기도금-라인의-점검" class="level3">
+<h3 class="anchored" data-anchor-id="문제-6.-적용-전기도금-라인의-점검">문제 6. 적용 — 전기도금 라인의 점검</h3>
+<p>전기도금 사업장을 방문한 보건관리자가 다음을 확인했다. (a)~(d) 각각에서 무엇이 문제이며 어떻게 고쳐야 하는지, 관리 위계와 §6의 내용을 근거로 설명하라.</p>
+<ul>
+<li><ol type="a">
+<li>크롬 도금조 위에 캐노피형 후드가 설치되어 있고, 작업자는 조 바로 앞에 서서 걸이를 넣고 뺀다.</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>트리클로로에틸렌 탈지조에서 3 m 떨어진 곳에서 치공구 용접 작업을 한다.</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>강산을 담은 통과 시안화나트륨 포대를 같은 창고 선반에 나란히 보관하고 있다.</li>
+</ol></li>
+<li><ol start="4" type="a">
+<li>작업환경측정 결과 크롬이 노출기준의 1.2배로 나왔으나, 사업주는 “2배를 넘지 않았으니 다음 측정은 예정대로 6개월 뒤”라고 말한다.</li>
+</ol></li>
+</ul>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>(a) 후드 형식이 잘못됐다.</strong> 캐노피형은 오염원 상부에서 상방으로 흡인하므로 오염물질이 <strong>작업자의 호흡역을 지나 올라간다</strong>. 지침은 도금 사업장에 <strong>푸쉬풀형을 권장하고 캐노피형은 피하라</strong>고 명시한다. 제어풍속 기준에서도 상방흡인형이 가장 높은 값(입자 상태 1.2 m/s)을 요구하는데, 도금조의 크롬산 미스트는 <strong>입자 상태</strong>임에 유의한다. 근본 대책은 밀폐이며, 밀폐가 어려우면 푸쉬풀형으로 교체하고 급기가 작업자 뒤에서 오도록 배치한다(공학적 대책).</p>
+<p><strong>(b) 새로운 유해물질이 생성된다.</strong> 지침 5.2는 트리클로로에틸렌 탈지조 주변 용접을 <strong>금지</strong>한다 — 염소가스, 염산가스, <strong>포스겐</strong>이 발생할 수 있기 때문이다(§2.7, §4.4). 포스겐은 용해도가 낮아 초기 자극이 약하고 <strong>몇 시간의 잠복기 후 폐수종</strong>으로 나타나므로 경고 특성에 의존할 수 없다. 대책은 용접· 화기 작업 구역과 염소계 용제 사용 구역의 <strong>분리</strong>다(관리적 대책 + 구역 분리).</p>
+<p><strong>(c) 보관이 잘못됐다.</strong> 지침 6.1은 화학물질저장소를 작업장과 격리하되 <strong>산과 시안화합물은 다른 장소에 보관</strong>하도록 요구한다. 두 물질이 접촉하는 사고가 나면 §4.3의 시안화수소 문제가 된다. 아울러 산과 알칼리는 <strong>서로 다른 색으로 표시</strong>해 도금조에 잘못 첨가하는 일을 막아야 한다.</p>
+<strong>(d) 주기 단축 기준을 잘못 적용했다.</strong> “2배 이상 초과” 요건은 시안화합물· 트리클로로에틸렌·1,1,2-트리클로로에탄 등에 적용되고, <strong>크롬·니켈 등 발암물질은 노출기준을 초과하기만 해도 3개월에 1회 이상</strong>으로 단축해야 한다. 발암물질에 역치를 가정하지 않는 관리 원칙(§5.1)이 제도에 반영된 결과다. 더불어 노출기준 이상인 공정의 근로자는 <strong>특수건강진단 주기도 1/2로 단축</strong> 대상이 된다.
+</details>
+<hr>
+</section>
+</section>
+<section id="참고문헌" class="level2">
+<h2 class="anchored" data-anchor-id="참고문헌">참고문헌</h2>
+<ol type="1">
+<li>Klaassen, C. D. (Ed.). (2019). <em>Casarett &amp; Doull’s Toxicology: The Basic Science of Poisons</em> (9th ed.). McGraw-Hill.</li>
+<li>Nordberg, G. F., et al.&nbsp;(Eds.). (2022). <em>Handbook on the Toxicology of Metals</em> (5th ed.). Academic Press.</li>
+<li>Cherrie, J. W., Semple, S., &amp; Coggins, M. (2021). <em>Monitoring for Health Hazards at Work</em> (5th ed.). Wiley-Blackwell.</li>
+<li>ACGIH (2024). <em>TLVs and BEIs: Documentation of the Threshold Limit Values and Biological Exposure Indices</em>. ACGIH.</li>
+<li>NIOSH (2019). <em>NIOSH Pocket Guide to Chemical Hazards</em>. DHHS (NIOSH) Publication.</li>
+<li>IARC. <em>IARC Monographs on the Identification of Carcinogenic Hazards to Humans</em>. International Agency for Research on Cancer.</li>
+<li>고용노동부 (2024). 『화학물질 및 물리적 인자의 노출기준』 (고용노동부 고시).</li>
+<li>안전보건공단 (2023). 『산업독성학 교육자료』; 『밀폐공간 작업 프로그램 수립·시행 지침』 (KOSHA GUIDE H-80). KOSHA.</li>
+<li>한국산업안전보건공단 (2012). 『전기도금 사업장 근로자 보건관리 지침』 (KOSHA GUIDE H-92-2012). KOSHA.</li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "복사완료!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "복사완료!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/w04_toxicology1.html" class="pagination-link" aria-label="4주차. 산업독성학 I — 독성학의 원리">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">4주차. 산업독성학 I — 독성학의 원리</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/w06_physical_agents1.html" class="pagination-link" aria-label="6주차. 물리적 유해인자 I — 소음과 진동">
+        <span class="nav-page-text"><span class="chapter-title">6주차. 물리적 유해인자 I — 소음과 진동</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

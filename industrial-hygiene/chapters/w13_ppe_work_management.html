@@ -1,0 +1,2860 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>13주차. 개인보호구와 작업관리 – 산업위생 총론</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/w14_law_management.html" rel="next">
+<link href="../chapters/w12_ergonomics.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-df22de3841a4459d65a458d30db11513.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-1f5cceec34869e9b7e758f61c933684c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-df22de3841a4459d65a458d30db11513.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/w09_ventilation1.html">Part III. 작업환경 관리 (9~13주)</a></li><li class="breadcrumb-item"><a href="../chapters/w13_ppe_work_management.html"><span class="chapter-title">13주차. 개인보호구와 작업관리</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">산업위생 총론</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="다크 모드 전환"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="검색"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">산업위생 총론</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I. 산업위생의 기초 (1~3주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w01_intro_history.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1주차. 산업위생 개론과 역사</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w02_exposure_assessment1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2주차. 작업환경측정 I — 측정 원리와 전략</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w03_exposure_assessment2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3주차. 작업환경측정 II — 노출기준과 평가</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II. 유해인자와 건강영향 (4~7주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w04_toxicology1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4주차. 산업독성학 I — 독성학의 원리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w05_toxicology2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5주차. 산업독성학 II — 주요 화학물질과 건강장해</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w06_physical_agents1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6주차. 물리적 유해인자 I — 소음과 진동</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w07_physical_agents2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">7주차. 물리적 유해인자 II — 온열·이상기압·방사선·조명</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">중간고사 (8주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w08_midterm.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">8주차. 중간고사</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III. 작업환경 관리 (9~13주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w09_ventilation1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">9주차. 산업환기 I — 환기의 원리와 전체환기</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w10_ventilation2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">10주차. 산업환기 II — 국소배기장치</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w11_biological_agents.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">11주차. 생물학적 유해인자와 생물학적 모니터링</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w12_ergonomics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">12주차. 인간공학과 근골격계질환</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w13_ppe_work_management.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">13주차. 개인보호구와 작업관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part IV. 제도와 실무 (14~15주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w14_law_management.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">14주차. 산업보건 법규와 관리 제도</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w15_case_studies.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">15주차. 직업병 사례연구</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">기말고사 (16주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w16_final.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">16주차. 기말고사</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">부록</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendix/cert_map.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">부록. 자격증 과목 매핑</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#학습목표" id="toc-학습목표" class="nav-link active" data-scroll-target="#학습목표">학습목표</a></li>
+  <li><a href="#관리-위계의-심화-적용" id="toc-관리-위계의-심화-적용" class="nav-link" data-scroll-target="#관리-위계의-심화-적용">1. 관리 위계의 심화 적용</a>
+  <ul>
+  <li><a href="#대치대체의-세-가지-방법-물질공정시설의-변경" id="toc-대치대체의-세-가지-방법-물질공정시설의-변경" class="nav-link" data-scroll-target="#대치대체의-세-가지-방법-물질공정시설의-변경">1.1 대치(대체)의 세 가지 방법 — 물질·공정·시설의 변경</a></li>
+  <li><a href="#격리와-밀폐-두-가지-분류-체계" id="toc-격리와-밀폐-두-가지-분류-체계" class="nav-link" data-scroll-target="#격리와-밀폐-두-가지-분류-체계">1.2 격리와 밀폐 — 두 가지 분류 체계</a></li>
+  <li><a href="#관리적-대책-작업시간-단축과-교육훈련" id="toc-관리적-대책-작업시간-단축과-교육훈련" class="nav-link" data-scroll-target="#관리적-대책-작업시간-단축과-교육훈련">1.3 관리적 대책 — 작업시간 단축과 교육훈련</a></li>
+  <li><a href="#개인보호구는-왜-최후-수단인가" id="toc-개인보호구는-왜-최후-수단인가" class="nav-link" data-scroll-target="#개인보호구는-왜-최후-수단인가">1.4 개인보호구는 왜 최후 수단인가</a></li>
+  </ul></li>
+  <li><a href="#호흡보호구" id="toc-호흡보호구" class="nav-link" data-scroll-target="#호흡보호구">2. 호흡보호구</a>
+  <ul>
+  <li><a href="#호흡보호구의-종류와-선정-원리" id="toc-호흡보호구의-종류와-선정-원리" class="nav-link" data-scroll-target="#호흡보호구의-종류와-선정-원리">2.1 호흡보호구의 종류와 선정 원리</a></li>
+  <li><a href="#방진마스크-형식과-등급" id="toc-방진마스크-형식과-등급" class="nav-link" data-scroll-target="#방진마스크-형식과-등급">2.2 방진마스크 — 형식과 등급</a></li>
+  <li><a href="#방독마스크-정화통-파과-유효시간" id="toc-방독마스크-정화통-파과-유효시간" class="nav-link" data-scroll-target="#방독마스크-정화통-파과-유효시간">2.3 방독마스크 — 정화통, 파과, 유효시간</a></li>
+  <li><a href="#보호계수-pf-apf-muc" id="toc-보호계수-pf-apf-muc" class="nav-link" data-scroll-target="#보호계수-pf-apf-muc">2.4 보호계수 — PF, APF, MUC</a></li>
+  <li><a href="#밀착-모든-계산의-전제" id="toc-밀착-모든-계산의-전제" class="nav-link" data-scroll-target="#밀착-모든-계산의-전제">2.5 밀착 — 모든 계산의 전제</a></li>
+  </ul></li>
+  <li><a href="#그-밖의-보호구와-보호구-프로그램" id="toc-그-밖의-보호구와-보호구-프로그램" class="nav-link" data-scroll-target="#그-밖의-보호구와-보호구-프로그램">3. 그 밖의 보호구와 보호구 프로그램</a>
+  <ul>
+  <li><a href="#청력보호구와-nrr" id="toc-청력보호구와-nrr" class="nav-link" data-scroll-target="#청력보호구와-nrr">3.1 청력보호구와 NRR</a></li>
+  <li><a href="#피부-보호-장갑-보호복-그리고-2차-오염" id="toc-피부-보호-장갑-보호복-그리고-2차-오염" class="nav-link" data-scroll-target="#피부-보호-장갑-보호복-그리고-2차-오염">3.2 피부 보호 — 장갑, 보호복, 그리고 2차 오염</a></li>
+  <li><a href="#그-밖의-보호구-머리눈얼굴발추락" id="toc-그-밖의-보호구-머리눈얼굴발추락" class="nav-link" data-scroll-target="#그-밖의-보호구-머리눈얼굴발추락">3.3 그 밖의 보호구 — 머리·눈·얼굴·발·추락</a></li>
+  <li><a href="#보호구-프로그램의-운영" id="toc-보호구-프로그램의-운영" class="nav-link" data-scroll-target="#보호구-프로그램의-운영">3.4 보호구 프로그램의 운영</a>
+  <ul class="collapse">
+  <li><a href="#선정-적절성의-평가" id="toc-선정-적절성의-평가" class="nav-link" data-scroll-target="#선정-적절성의-평가">선정: 적절성의 평가</a></li>
+  <li><a href="#지급과-교육훈련" id="toc-지급과-교육훈련" class="nav-link" data-scroll-target="#지급과-교육훈련">지급과 교육훈련</a></li>
+  <li><a href="#유지관리와-보관" id="toc-유지관리와-보관" class="nav-link" data-scroll-target="#유지관리와-보관">유지·관리와 보관</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#작업생리-에너지-대사와-작업휴식-배분" id="toc-작업생리-에너지-대사와-작업휴식-배분" class="nav-link" data-scroll-target="#작업생리-에너지-대사와-작업휴식-배분">4. 작업생리 — 에너지 대사와 작업–휴식 배분</a>
+  <ul>
+  <li><a href="#근육-활동의-에너지원" id="toc-근육-활동의-에너지원" class="nav-link" data-scroll-target="#근육-활동의-에너지원">4.1 근육 활동의 에너지원</a></li>
+  <li><a href="#산소소비량과-산소부채" id="toc-산소소비량과-산소부채" class="nav-link" data-scroll-target="#산소소비량과-산소부채">4.2 산소소비량과 산소부채</a></li>
+  <li><a href="#작업대사율rmr과-작업강도" id="toc-작업대사율rmr과-작업강도" class="nav-link" data-scroll-target="#작업대사율rmr과-작업강도">4.3 작업대사율(RMR)과 작업강도</a>
+  <ul class="collapse">
+  <li><a href="#정의" id="toc-정의" class="nav-link" data-scroll-target="#정의">정의</a></li>
+  <li><a href="#작업-구분과-실동률" id="toc-작업-구분과-실동률" class="nav-link" data-scroll-target="#작업-구분과-실동률">작업 구분과 실동률</a></li>
+  <li><a href="#계속작업의-한계시간" id="toc-계속작업의-한계시간" class="nav-link" data-scroll-target="#계속작업의-한계시간">계속작업의 한계시간</a></li>
+  </ul></li>
+  <li><a href="#육체적-작업능력pwc과-작업휴식-배분" id="toc-육체적-작업능력pwc과-작업휴식-배분" class="nav-link" data-scroll-target="#육체적-작업능력pwc과-작업휴식-배분">4.4 육체적 작업능력(PWC)과 작업–휴식 배분</a>
+  <ul class="collapse">
+  <li><a href="#pwc와-8시간-작업의-상한" id="toc-pwc와-8시간-작업의-상한" class="nav-link" data-scroll-target="#pwc와-8시간-작업의-상한">PWC와 8시간 작업의 상한</a></li>
+  <li><a href="#hertig-식-시간당-휴식시간-배분" id="toc-hertig-식-시간당-휴식시간-배분" class="nav-link" data-scroll-target="#hertig-식-시간당-휴식시간-배분">Hertig 식 — 시간당 휴식시간 배분</a></li>
+  <li><a href="#최대-허용-계속작업시간-t_end" id="toc-최대-허용-계속작업시간-t_end" class="nav-link" data-scroll-target="#최대-허용-계속작업시간-t_end">최대 허용 계속작업시간 (<span class="math inline">\(T_{end}\)</span>)</a></li>
+  </ul></li>
+  <li><a href="#국소피로와-작업강도ms" id="toc-국소피로와-작업강도ms" class="nav-link" data-scroll-target="#국소피로와-작업강도ms">4.5 국소피로와 작업강도(%MS)</a></li>
+  </ul></li>
+  <li><a href="#전신피로의-판정-회복기-심박수-국소피로의-판정-근전도emg" id="toc-전신피로의-판정-회복기-심박수-국소피로의-판정-근전도emg" class="nav-link" data-scroll-target="#전신피로의-판정-회복기-심박수-국소피로의-판정-근전도emg">5. 전신피로의 판정 — 회복기 심박수 · 국소피로의 판정 — 근전도(EMG)</a>
+  <ul>
+  <li><a href="#전신피로의-판정-회복기-심박수" id="toc-전신피로의-판정-회복기-심박수" class="nav-link" data-scroll-target="#전신피로의-판정-회복기-심박수">5.1 전신피로의 판정 — 회복기 심박수</a></li>
+  <li><a href="#국소피로의-판정-근전도emg" id="toc-국소피로의-판정-근전도emg" class="nav-link" data-scroll-target="#국소피로의-판정-근전도emg">5.2 국소피로의 판정 — 근전도(EMG)</a></li>
+  </ul></li>
+  <li><a href="#피로의-검사방법과-증상" id="toc-피로의-검사방법과-증상" class="nav-link" data-scroll-target="#피로의-검사방법과-증상">6. 피로의 검사방법과 증상</a></li>
+  <li><a href="#곤비와-지적속도-산업피로의-대책" id="toc-곤비와-지적속도-산업피로의-대책" class="nav-link" data-scroll-target="#곤비와-지적속도-산업피로의-대책">7. 곤비와 지적속도 · 산업피로의 대책</a>
+  <ul>
+  <li><a href="#곤비와-지적속도" id="toc-곤비와-지적속도" class="nav-link" data-scroll-target="#곤비와-지적속도">7.1 곤비와 지적속도</a></li>
+  <li><a href="#산업피로의-대책" id="toc-산업피로의-대책" class="nav-link" data-scroll-target="#산업피로의-대책">7.2 산업피로의 대책</a></li>
+  </ul></li>
+  <li><a href="#작업시간-관리와-교대야간작업-사람을-작업에-맞추는-쪽-적성검사와-산업-스트레스" id="toc-작업시간-관리와-교대야간작업-사람을-작업에-맞추는-쪽-적성검사와-산업-스트레스" class="nav-link" data-scroll-target="#작업시간-관리와-교대야간작업-사람을-작업에-맞추는-쪽-적성검사와-산업-스트레스">8. 작업시간 관리와 교대·야간작업 · 사람을 작업에 맞추는 쪽 — 적성검사와 산업 스트레스</a>
+  <ul>
+  <li><a href="#작업시간-관리와-교대야간작업" id="toc-작업시간-관리와-교대야간작업" class="nav-link" data-scroll-target="#작업시간-관리와-교대야간작업">8.1 작업시간 관리와 교대·야간작업</a></li>
+  <li><a href="#사람을-작업에-맞추는-쪽-적성검사와-산업-스트레스" id="toc-사람을-작업에-맞추는-쪽-적성검사와-산업-스트레스" class="nav-link" data-scroll-target="#사람을-작업에-맞추는-쪽-적성검사와-산업-스트레스">8.2 사람을 작업에 맞추는 쪽 — 적성검사와 산업 스트레스</a></li>
+  </ul></li>
+  <li><a href="#요약" id="toc-요약" class="nav-link" data-scroll-target="#요약">요약</a></li>
+  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a>
+  <ul>
+  <li><a href="#문제-1.-관리대책의-분류와-우선순위" id="toc-문제-1.-관리대책의-분류와-우선순위" class="nav-link" data-scroll-target="#문제-1.-관리대책의-분류와-우선순위">문제 1. 관리대책의 분류와 우선순위</a></li>
+  <li><a href="#문제-2.-호흡보호구의-선정" id="toc-문제-2.-호흡보호구의-선정" class="nav-link" data-scroll-target="#문제-2.-호흡보호구의-선정">문제 2. 호흡보호구의 선정</a></li>
+  <li><a href="#문제-3.-정화통-유효시간" id="toc-문제-3.-정화통-유효시간" class="nav-link" data-scroll-target="#문제-3.-정화통-유효시간">문제 3. 정화통 유효시간</a></li>
+  <li><a href="#문제-4.-청력보호구와-관리-위계" id="toc-문제-4.-청력보호구와-관리-위계" class="nav-link" data-scroll-target="#문제-4.-청력보호구와-관리-위계">문제 4. 청력보호구와 관리 위계</a></li>
+  <li><a href="#문제-5.-rmr과-실동률" id="toc-문제-5.-rmr과-실동률" class="nav-link" data-scroll-target="#문제-5.-rmr과-실동률">문제 5. RMR과 실동률</a></li>
+  <li><a href="#문제-6.-hertig-휴식배분" id="toc-문제-6.-hertig-휴식배분" class="nav-link" data-scroll-target="#문제-6.-hertig-휴식배분">문제 6. Hertig 휴식배분</a></li>
+  <li><a href="#문제-7.-ms와-적정-작업시간" id="toc-문제-7.-ms와-적정-작업시간" class="nav-link" data-scroll-target="#문제-7.-ms와-적정-작업시간">문제 7. %MS와 적정 작업시간</a></li>
+  </ul></li>
+  <li><a href="#참고문헌" id="toc-참고문헌" class="nav-link" data-scroll-target="#참고문헌">참고문헌</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/w09_ventilation1.html">Part III. 작업환경 관리 (9~13주)</a></li><li class="breadcrumb-item"><a href="../chapters/w13_ppe_work_management.html"><span class="chapter-title">13주차. 개인보호구와 작업관리</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">13주차. 개인보호구와 작업관리</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<blockquote class="blockquote">
+<p>관리 위계의 심화 적용, 호흡보호구와 보호계수(APF·MUC), 청력보호구(NRR)와 그 밖의 보호구, 보호구 프로그램의 운영, 작업생리(RMR·PWC)와 작업–휴식 배분, 산업피로의 판정과 대책</p>
+</blockquote>
+<section id="학습목표" class="level2">
+<h2 class="anchored" data-anchor-id="학습목표">학습목표</h2>
+<p>이 주를 학습한 후 여러분은 다음을 할 수 있어야 합니다:</p>
+<ol type="1">
+<li>관리 위계의 각 단계를 실제 사례에 적용하고, 대치(물질·공정·시설의 변경)와 격리의 세부 분류를 구분할 수 있다</li>
+<li>호흡보호구의 종류를 유해인자의 형태·산소농도·노출 수준에 따라 선정하고, 보호계수(PF)·할당보호계수(APF)·최대사용농도(MUC)를 계산할 수 있다</li>
+<li>방독마스크 정화통의 파과(breakthrough) 개념을 설명하고 유효시간을 계산할 수 있으며, 보호구 성능이 밀착에 의존하는 이유를 설명할 수 있다</li>
+<li>청력보호구의 종류·등급(EP-1/EP-2/EM)을 구분하고 실제 차음효과(NRR)를 계산하며, 보호구가 최후 수단인 이유를 설명할 수 있다</li>
+<li>유해인자와 작업 조건에 따라 머리·눈·얼굴·손·발·추락 보호구를 선정하고, 보호구 프로그램(선정·적합성 평가·교육·유지관리)의 구성 요소를 설명할 수 있다</li>
+<li>작업대사율(RMR)·실동률·계속작업 한계시간을 계산하고, PWC에 기반한 Hertig 식으로 작업–휴식 시간을 배분할 수 있다</li>
+<li>국소피로의 지표(%MS)와 산업피로의 객관적 판정 방법(회복기 심박수, 근전도)을 설명하고, 피로 대책과 작업시간 관리의 원칙을 적용할 수 있다</li>
+</ol>
+<hr>
+</section>
+<section id="관리-위계의-심화-적용" class="level2">
+<h2 class="anchored" data-anchor-id="관리-위계의-심화-적용">1. 관리 위계의 심화 적용</h2>
+<p><a href="../chapters/w01_intro_history.html">1주차</a>에서 관리 위계(제거→대체→공학적→관리적→개인보호구)의 큰 그림을 보았다. 이번 주는 이 위계를 <strong>실제 현장 판단의 도구</strong>로 다듬는다. 핵심 질문은 두 가지다 — 어떤 대책이 위계의 어느 단계에 속하는가(분류), 그리고 위계의 아래쪽 두 단(관리적 대책과 개인보호구)은 어떤 조건에서, 어떤 한계를 안고 쓰이는가(적용). 분류가 중요한 이유는 명명 문제가 아니라 <strong>대책의 분류가 곧 그 대책의 신뢰성 예측</strong>이기 때문이다.</p>
+<section id="대치대체의-세-가지-방법-물질공정시설의-변경" class="level3">
+<h3 class="anchored" data-anchor-id="대치대체의-세-가지-방법-물질공정시설의-변경">1.1 대치(대체)의 세 가지 방법 — 물질·공정·시설의 변경</h3>
+<p>대치(substitution)는 대상에 따라 세 가지로 나눌 수 있다.</p>
+<div id="tbl-substitution-types" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-substitution-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;14.1: 대치의 3분류
+</figcaption>
+<div aria-describedby="tbl-substitution-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 28%">
+<col style="width: 42%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>분류</th>
+<th>정의</th>
+<th>대표 예</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>물질의 변경</strong></td>
+<td>원료·용제·부재료를 유해성이 작은 물질로 교체</td>
+<td>성냥 제조에서 황린 → 적린</td>
+</tr>
+<tr class="even">
+<td><strong>공정의 변경</strong></td>
+<td>작업 방법·순서·기계의 동작 자체를 바꿈</td>
+<td>금속을 두들겨 자르던 공정 → 톱으로 절단</td>
+</tr>
+<tr class="odd">
+<td><strong>시설(장비)의 변경</strong></td>
+<td>설비·용기·구조물을 안전한 것으로 교체</td>
+<td>흄 배출용 드래프트의 창 → 안전유리창</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>이 분류에서 눈여겨볼 것은 목록에 <strong>없는</strong> 항목이다. “사람(작업자)의 변경”은 대치에 속하지 않는다. 대치는 어디까지나 <strong>환경 측을 바꾸는 개입</strong>이며, 건강한 사람을 골라 유해한 환경에 배치하는 것은 유해요인을 조금도 줄이지 못하기 때문이다. 1주차의 원칙 — 사람을 바꾸기 전에 환경을 바꾼다 — 이 분류 체계에도 그대로 반영되어 있다.</p>
+<p><strong>물질의 변경</strong>과 <strong>공정의 변경</strong>의 사례를 모아 보면 대치의 논리가 드러난다.</p>
+<div id="tbl-substitution-examples" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-substitution-examples-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;14.2: 물질·공정 대치의 사례
+</figcaption>
+<div aria-describedby="tbl-substitution-examples-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 27%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>원래</th>
+<th>대치 후</th>
+<th>줄어드는 것</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>물질</td>
+<td>아조염료 원료 벤지딘</td>
+<td>디클로로벤지딘</td>
+<td>발암성</td>
+</tr>
+<tr class="even">
+<td>물질</td>
+<td>성냥의 황린(백린)</td>
+<td>적린</td>
+<td>독성</td>
+</tr>
+<tr class="odd">
+<td>물질</td>
+<td>탈지·세척용 TCE</td>
+<td>계면활성제</td>
+<td>용제 증기</td>
+</tr>
+<tr class="even">
+<td>물질</td>
+<td>샌드블라스팅 규사</td>
+<td>강철 쇼트, 유리 비드</td>
+<td>규폐증 위험</td>
+</tr>
+<tr class="odd">
+<td>물질</td>
+<td>입자가 작은 분체 원료</td>
+<td>입자가 <strong>큰</strong> 것</td>
+<td>호흡성 분획</td>
+</tr>
+<tr class="even">
+<td>물질</td>
+<td>유기용제 페인트</td>
+<td>수용성 페인트</td>
+<td>VOC 노출</td>
+</tr>
+<tr class="odd">
+<td>공정</td>
+<td>압축공기 스프레이 도장</td>
+<td>담금(dipping)·전기흡착식 도장</td>
+<td>미스트·증기 비산</td>
+</tr>
+<tr class="even">
+<td>공정</td>
+<td>금속을 두들겨 자름</td>
+<td>톱으로 절단</td>
+<td>소음·충격</td>
+</tr>
+<tr class="odd">
+<td>공정</td>
+<td>고속회전 그라인더 납 연마</td>
+<td>저속 oscillating sander</td>
+<td>납 분진</td>
+</tr>
+<tr class="even">
+<td>공정</td>
+<td>리벳팅 작업</td>
+<td>볼트·너트 작업</td>
+<td>소음</td>
+</tr>
+<tr class="odd">
+<td>공정</td>
+<td>건조 <strong>후</strong> 점토 배합(도자기)</td>
+<td>건조 <strong>전</strong> 배합</td>
+<td>분진(습윤 상태 배합)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>대치는 “방향”의 문제다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>개별 사례의 암기보다 중요한 것은 <strong>어느 쪽이 덜 유해한가의 방향</strong>이다. 모든 사례는 같은 방향을 향한다 — 발암성 → 비발암성, 고독성 → 저독성, 작은 입자 → 큰 입자(작은 입자일수록 폐포까지 도달한다는 1주차의 원리), 휘발성 → 수용성. 방향을 뒤집으면(철구슬 → 모래, 큰 입자 → 작은 입자) 같은 “변경”이어도 개악이다.</p>
+<p>물질의 변경과 공정의 변경을 가르는 기준은 “무엇이 달라졌는가”이다. 스프레이 도장 → 담금 도장은 페인트(물질)는 그대로 두고 발생 메커니즘(공정)을 바꾼 것이다.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">경고</span>대치의 이면 — 새로운 유해성
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>대치가 항상 순이익인 것은 아니다. 톨루엔은 벤젠보다 발암성이 낮지만 여전히 신경독성이 있고, 물질 대치는 지금까지 알려지지 않았던 전혀 다른 장해를 줄 수 있다. 증기압·용해도 같은 물리화학적 특성이 달라져 새로운 노출 경로가 생길 수도 있으며, 공정 적합성과 경제성도 함께 평가해야 한다. 1,1,1-트리클로로에탄을 대체하려 도입한 일부 물질이 오존층 파괴라는 새로운 문제를 일으킨 것이 대표적 실패 사례다.</p>
+</div>
+</div>
+</section>
+<section id="격리와-밀폐-두-가지-분류-체계" class="level3">
+<h3 class="anchored" data-anchor-id="격리와-밀폐-두-가지-분류-체계">1.2 격리와 밀폐 — 두 가지 분류 체계</h3>
+<p><strong>격리(isolation)</strong>는 유해인자 발생원과 근로자를 분리하여 노출을 막는 공학적 대책이고, <strong>밀폐(enclosure)</strong>는 발생원 자체를 완전히 둘러싸 확산을 원천 차단하는 대책이다. 국제 문헌은 격리를 <strong>거리에 의한 격리</strong> (원격 조종, 위험물 저장소의 원거리 배치), <strong>장벽에 의한 격리</strong>(방음 조종실, 인터록 도어, 도장 부스), <strong>시간에 의한 격리</strong>(도장·산세척을 야간·휴일에 수행하여 다른 근로자의 노출을 차단 — 관리적 대책과 중첩되는 영역)의 세 유형으로 나눈다. 한편 국내 문헌은 격리를 <strong>거리·시간·공정(시설)·작업자</strong>의 네 축으로 넓게 정의한다.</p>
+<div id="tbl-isolation-types" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-isolation-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;14.3: 격리의 국내 4분류
+</figcaption>
+<div aria-describedby="tbl-isolation-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 52%">
+<col style="width: 28%">
+<col style="width: 19%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>국내 분류</th>
+<th>내용</th>
+<th>예</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>거리의 격리</strong></td>
+<td>발생원과 근로자·다른 시설 사이에 물리적 거리</td>
+<td>인화성 물질 저장탱크 사이에 도랑·제방 설치</td>
+</tr>
+<tr class="even">
+<td><strong>시간의 격리</strong></td>
+<td>노출 대상이 없는 시간대로 작업 이동</td>
+<td>야간 산세척 후 환기, 다음날 복귀</td>
+</tr>
+<tr class="odd">
+<td><strong>공정·시설의 격리</strong></td>
+<td>유해 공정을 방호벽·밀폐 구조로 둘러싸고 원격 조작</td>
+<td>방사성 동위원소의 원격조정·자동화, 도금조·분쇄기의 밀폐, 소음원의 방음 상자</td>
+</tr>
+<tr class="even">
+<td><strong>작업자의 격리</strong></td>
+<td>근로자 쪽을 분리·차폐</td>
+<td>고열·소음 작업 근로자용 부스, 위생보호구 착용</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>분류 체계가 다르면 같은 대책의 이름이 달라진다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>국제 체계에서 <strong>밀폐</strong>는 격리와 구분되는 별도 범주지만(격리는 분리, 밀폐는 차단), 국내 체계에서는 “공정·시설의 격리”에 포함된다. 국내 체계에서 <strong>보호구 착용</strong>은 “작업자의 격리”로 분류된다 — 근로자 개인의 호흡기·피부를 유해환경에서 분리한다는 논리다. 그러나 위계상의 위치는 달라지지 않는다: 보호구는 어느 체계에서든 최후 수단이다.</p>
+<p>반면 어느 체계로 보아도 격리가 <strong>아닌</strong> 것들이 있다. 국소배기장치 설치는 환기이고, 연마재를 모래 → 철구슬로 바꾸는 것은 대치(물질), 스프레이 → 담금 도장은 대치(공정)이다. 물질이 바뀌었으면 대치, 발생원과 사람 사이의 배치가 바뀌었으면 격리다.</p>
+</div>
+</div>
+<p>격리·밀폐는 효과가 크지만 <strong>비용이 적게 드는 대책이 아니다</strong>. 방호벽·원격조작 설비·밀폐 구조물은 초기 투자가 크고, 밀폐 시스템은 유지보수를 위해 개방할 때 고농도 노출 위험이 있으므로 내부 음압 유지 (<span class="math inline">\(P_{내부} &lt; P_{외부}\)</span>, 누출 방향이 항상 외부→내부)와 개방 시 안전작업절차가 함께 설계되어야 한다. 환기의 원리와 설계는 <a href="../chapters/w09_ventilation1.html">9주차</a>·<a href="../chapters/w10_ventilation2.html">10주차</a>에서 다루었다.</p>
+</section>
+<section id="관리적-대책-작업시간-단축과-교육훈련" class="level3">
+<h3 class="anchored" data-anchor-id="관리적-대책-작업시간-단축과-교육훈련">1.3 관리적 대책 — 작업시간 단축과 교육훈련</h3>
+<p>공학적 대책으로 노출을 충분히 낮추지 못할 때, <strong>작업 방법·시간·절차</strong>를 바꾸어 노출을 줄이는 것이 관리적(행정적) 대책이다.</p>
+<p><strong>작업시간 단축</strong>의 원리는 단순하다. 하루 누적 노출량은 농도와 시간의 곱이므로,</p>
+<p><span class="math display">\[
+\text{일일 노출량} = \text{농도} \times \text{시간}
+\]</span></p>
+<p>같은 농도라도 노출 시간을 반으로 줄이면 누적 노출량도 반이 된다. 고농도 작업을 짧게 수행하기, 여러 명이 번갈아 작업하는 교대근무, 작업–휴식 주기의 설정이 여기에 속한다.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">경고</span>작업시간 단축의 네 가지 한계
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>① <strong>고독성 물질에는 부적절하다</strong> — 시간을 줄여도 순간 농도는 그대로이므로 단시간 고농도 노출의 급성 영향을 막지 못한다. ② <strong>노출 인원이 늘어난다</strong> — 1명의 작업을 2~3명이 번갈아 하면 개인당 노출량은 줄지만 노출되는 사람의 수는 늘어난다. ③ <strong>근본 대책이 아니다</strong> — 유해인자는 여전히 그 자리에 있다. ④ <strong>피로가 누적될 수 있다</strong> — 짧아도 강도 높은 작업의 반복은 피로를 쌓는다(§4~5의 주제).</p>
+</div>
+</div>
+<p><strong>교육훈련</strong>은 산업안전보건법이 유해물질 취급 근로자에 대해 의무화한 관리적 대책이다. 내용은 유해성 정보(MSDS), 노출 경로, 건강영향, 관리대책 사용법(환기장치·보호구), 응급조치를 포함한다. 단순 강의보다 <strong>보이지 않는 것을 보이게 만드는</strong> 시각화 기법 — 형광염료를 UV 램프로 비추어 장갑 착용 전후의 손 오염도를 보여 주기, 연기 발생기로 환기 기류와 후드 포집 범위 가시화, 강한 조명으로 작업복에서 털어지는 분진(2차 오염원) 보여 주기 — 이 효과적이다. 교육은 일회성으로는 불충분하며 정기 재교육·실습·공정 변경 시 추가 교육이 뒤따라야 한다.</p>
+</section>
+<section id="개인보호구는-왜-최후-수단인가" class="level3">
+<h3 class="anchored" data-anchor-id="개인보호구는-왜-최후-수단인가">1.4 개인보호구는 왜 최후 수단인가</h3>
+<p>개인보호구(PPE)는 발생원 통제가 불가능하거나 공학적 대책이 불충분할 때만 쓰는 <strong>최후 수단</strong>이다. 그 이유를 구조적으로 정리하면 다음과 같다.</p>
+<div id="tbl-ppe-limits" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ppe-limits-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;14.4: 개인보호구의 구조적 한계
+</figcaption>
+<div aria-describedby="tbl-ppe-limits-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>한계</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>착용자만 보호</strong></td>
+<td>주변 근로자는 여전히 노출된다</td>
+</tr>
+<tr class="even">
+<td><strong>불완전한 보호</strong></td>
+<td>밀착 불량·파손 시 보호 성능이 사라진다</td>
+</tr>
+<tr class="odd">
+<td><strong>착용 의존성</strong></td>
+<td>근로자가 쓰지 않으면 효과가 없다</td>
+</tr>
+<tr class="even">
+<td><strong>불편함</strong></td>
+<td>장시간 착용 시 피로, 의사소통 곤란</td>
+</tr>
+<tr class="odd">
+<td><strong>높은 유지비</strong></td>
+<td>정기 교체·점검·밀착 확인이 계속 필요하다</td>
+</tr>
+<tr class="even">
+<td><strong>허위 안전감</strong></td>
+<td>보호구만 믿고 상위 대책을 미루게 만든다</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>핵심은 보호구가 유해인자를 <strong>제거하지 않는다</strong>는 점이다. 유해인자는 근로자의 코앞까지 와 있고, 보호구는 그 마지막 경계에서만 작동한다. 밀착 불량 상태로 방진마스크를 쓰고 석면 작업을 하다 폐암이 발생한 사례, 정화통 교체가 늦어 파과로 급성 중독이 발생한 사례, 차음이 지나친 귀마개 탓에 경보음을 듣지 못해 사고가 난 사례 — 모두 이 취약함을 보여 준다.</p>
+<p>전체를 조망하면 하나의 규칙이 보인다: 위계를 내려갈수록(제거·대체 → 밀폐·격리·환기 → 작업시간 단축·교육 → 보호구) 초기비용은 줄지만 <strong>유지비용과 사람 의존도</strong>가 늘어난다. 보호구가 “싸다”는 것은 첫 달 이야기일 뿐이다.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>“최후 수단”은 “선택 사항”이 아니다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>보호구가 위계의 맨 아래에 있다는 것과, 보호구를 느슨하게 다뤄도 된다는 것은 전혀 다른 이야기다. KOSHA GUIDE G-12-2013은 두 명제를 나란히 놓는다.</p>
+<ol type="1">
+<li><strong>작업환경이 설비개선 등의 방법으로 적절히 개선될 수 없어 근로자의 건강과 안전에 위험이 있을 때에는 언제나 개인보호구가 지급되고 사용되어야 한다.</strong> 보호구는 상위 대책의 대체물이 아니라, 상위 대책으로 메우지 못한 잔여 위험에 대한 대응이다</li>
+<li><strong>보호구는 다른 보호방법들을 고려한 이후의 마지막 선택이기 때문에, 근로자가 위험에 노출되어 있을 때는 항상 착용해야 한다 — 단 몇 분 동안의 작업 중이라도 예외는 결코 허용되지 않는다</strong></li>
+</ol>
+<p>두 번째 문장의 논리를 놓치기 쉽다. 마지막 방어선이기 때문에 그 뒤에는 아무것도 없고, 그래서 “잠깐만”이라는 예외가 곧 무방비를 뜻한다. 위계상의 순위가 낮다는 사실이 오히려 착용 규율을 엄격하게 만드는 근거다. 이 장의 나머지는 “그럼에도 보호구를 써야 할 때 어떻게 제대로 운영하는가”를 다룬다 — 성능의 문제(§2~3.3)와 운영의 문제(§3.4)로 나누어서.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="호흡보호구" class="level2">
+<h2 class="anchored" data-anchor-id="호흡보호구">2. 호흡보호구</h2>
+<p>그럼에도 보호구를 써야 하는 상황은 존재한다 — 상위 대책의 설치 기간, 비정형·단시간 작업, 유지보수를 위한 밀폐 개방, 비상 대응. 이때 보호구 선정은 감이 아니라 <strong>정량적 판단</strong>이어야 한다. 이 절은 그 도구를 다룬다.</p>
+<section id="호흡보호구의-종류와-선정-원리" class="level3">
+<h3 class="anchored" data-anchor-id="호흡보호구의-종류와-선정-원리">2.1 호흡보호구의 종류와 선정 원리</h3>
+<div id="tbl-respirator-types" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-respirator-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;14.5: 호흡보호구의 종류
+</figcaption>
+<div aria-describedby="tbl-respirator-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 35%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>종류</th>
+<th>원리</th>
+<th>적용 대상</th>
+<th>한계</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>방진마스크</strong></td>
+<td>여과재로 입자 포집</td>
+<td>분진, 흄, 미스트</td>
+<td>가스·증기는 통과. 산소농도 18% 미만 장소 착용 금지</td>
+</tr>
+<tr class="even">
+<td><strong>방독마스크</strong></td>
+<td>정화통의 화학적 흡착</td>
+<td>가스, 증기</td>
+<td>입자는 통과. 산소농도 18% 미만 장소 착용 금지</td>
+</tr>
+<tr class="odd">
+<td><strong>전동식 호흡보호구</strong></td>
+<td>고효율 여과재·정화통 + 전동 송풍</td>
+<td>분진·가스·증기(장시간 작업)</td>
+<td>배터리·송풍기 관리 필요. 공기정화식의 한계는 동일</td>
+</tr>
+<tr class="even">
+<td><strong>송기마스크</strong></td>
+<td>호스로 청정공기 공급</td>
+<td>고독성 환경, 산소결핍</td>
+<td>호스 길이·행동반경 제한</td>
+</tr>
+<tr class="odd">
+<td><strong>공기호흡기(SCBA)</strong></td>
+<td>압축공기 탱크 휴대</td>
+<td>긴급대피, 구조</td>
+<td>사용시간 제한(30~60분)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>앞의 세 가지(방진·방독·전동식)는 작업장 공기를 <strong>정화해서</strong> 마시는 공기정화식이고, 뒤의 두 가지(송기·SCBA)는 작업장 공기와 무관하게 <strong>깨끗한 공기를 따로 공급받는</strong> 공기공급식이다. 이 구분이 선정의 출발점이다. 공기정화식은 여과층·여과재·흡수관으로 외기를 걸러 내는 구조이므로 <strong>산소를 만들어 내지 못한다</strong>. 반면 송기마스크는 흡수관이나 여과층이 필요 없는 대신 압축공기·산소 또는 산소발생장치를 반드시 갖추어야 한다 — 정화식과 공급식의 구조적 차이가 여기서 갈린다.</p>
+<p><strong>전동식 호흡보호구</strong>는 고효율 여과재나 정화통에 전동 송풍장치를 붙여 호흡저항을 낮춘 것으로, 전동식 방진마스크·전동식 방독마스크·전동식 후드 및 전동식 보안면으로 나뉜다. 후드·보안면형은 호흡기뿐 아니라 머리·안면부·목·어깨까지 함께 보호한다. 다만 공기를 불어 넣어 줄 뿐 정화 방식은 그대로이므로, 산소결핍 장소에서 쓸 수 없다는 제약은 일반 방진·방독마스크와 동일하다.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>그림 필요 — 호흡보호구 다섯 종류의 실물 비교
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>무엇</strong>: 안면부여과식 방진마스크, 정화통을 단 반면형 방독마스크, 전동식 호흡보호구(송풍장치와 벨트가 보이는 것), 송기마스크(공기공급 호스), 공기호흡기(SCBA, 등에 멘 실린더)를 같은 배경·같은 축척으로 나란히 찍거나 배치한 사진 한 장.</p>
+<p><strong>왜</strong>: <a href="#tbl-respirator-types" class="quarto-xref">표&nbsp;<span>14.5</span></a> 의 “정화식 대 공급식”이라는 구분은 문장보다 사진에서 즉시 이해된다 — 호스와 실린더가 붙어 있는지를 눈으로 확인하면 “공기정화식은 산소를 만들어 내지 못한다”는 §2.1의 핵심이 설명 없이도 전달된다. 정화통의 크기·표시색, 전동식의 송풍장치처럼 실물을 봐야 감이 잡히는 부분도 함께 해결된다.</p>
+<p><strong>출처 후보</strong>: NIOSH/CDC의 호흡보호구 자료(미국 연방정부 저작물로 대체로 퍼블릭 도메인), OSHA Respiratory Protection eTool, 한국산업안전보건공단(KOSHA) 보호구 안전인증 안내자료(출처 표기 조건 확인), 위키미디어 커먼즈의 CC BY/CC0 이미지. 제조사 카탈로그 사진은 상표가 드러나므로 교재용으로 피한다.</p>
+<p><strong>대안</strong>: 확보가 어려우면 다섯 종류의 공기 흐름 경로(작업장 공기 → 여과재/정화통 → 면체 / 외부 청정공기 → 호스 → 면체)를 같은 형식의 모식도 다섯 컷으로 그려 대체한다.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>선정의 다섯 가지 질문
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>유해인자의 형태는?</strong> — 입자상이면 방진, 가스·증기면 방독. 여과재는 가스를 못 잡고, 정화통은 입자를 못 잡는다</li>
+<li><strong>산소농도는 18% 이상인가?</strong> — 미만이면 공기정화식은 무의미하다. 정화는 산소를 만들어 주지 않는다 → 송기마스크 또는 SCBA</li>
+<li><strong>농도 수준은?</strong> — 고농도일수록 높은 등급 또는 공기공급식(§2.4의 MUC로 판단)</li>
+<li><strong>작업 강도는?</strong> — 중작업일수록 호흡량이 많아 여유 있는 성능이 필요하다</li>
+<li><strong>IDLH(Immediately Dangerous to Life or Health) 이상인가?</strong> — 생명에 즉각 위험한 농도에서는 공기정화식을 쓸 수 없다. SCBA만 허용된다</li>
+</ol>
+<p>②와 ⑤가 특히 치명적이다 — 산소결핍 공간이나 IDLH 환경에서의 공기정화식 착용은 보호구 선정 실패의 최악의 형태다.</p>
+</div>
+</div>
+</section>
+<section id="방진마스크-형식과-등급" class="level3">
+<h3 class="anchored" data-anchor-id="방진마스크-형식과-등급">2.2 방진마스크 — 형식과 등급</h3>
+<p>방진마스크의 형식은 <strong>격리식, 직결식, 안면부여과식(면체여과식)</strong>으로 나뉜다. 격리식과 직결식을 가르는 것은 <strong>연결관의 유무</strong>다 — 면체와 여과재(방독마스크는 흡수관)가 연결관으로 이어져 있으면 <strong>격리식</strong>, 연결관 없이 면체에 곧바로 붙어 있으면 <strong>직결식</strong>이다. 두 형식 모두 여과재를 갈아 끼울 수 있으므로 묶어서 <strong>분리식</strong>이라 부르고, 안면부여과식은 마스크 본체 자체가 필터라 교체가 불가능하다. 등급은 입자 포집효율(NaCl 시험)에 따라 정해지는데, 특급에서는 형식에 따라 기준값이 다르다.</p>
+<div id="tbl-dust-mask-grades" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-dust-mask-grades-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;14.6: 방진마스크의 등급과 사용 장소
+</figcaption>
+<div aria-describedby="tbl-dust-mask-grades-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 20%">
+<col style="width: 35%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>등급</th>
+<th>분리식</th>
+<th>안면부여과식</th>
+<th>사용 장소</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>특급</strong></td>
+<td>99.95% 이상</td>
+<td>99.0% 이상</td>
+<td>베릴륨 등 독성이 강한 물질을 함유한 분진 발생장소, 석면 취급장소</td>
+</tr>
+<tr class="even">
+<td><strong>1급</strong></td>
+<td>94.0% 이상</td>
+<td>94.0% 이상</td>
+<td>특급 착용장소를 제외한 분진 발생장소, 금속흄 등 <strong>열적으로</strong> 생기는 분진 발생장소, <strong>기계적으로</strong> 생기는 분진 발생장소(규소 등 2급으로 무방한 경우 제외)</td>
+</tr>
+<tr class="odd">
+<td><strong>2급</strong></td>
+<td>80.0% 이상</td>
+<td>80.0% 이상</td>
+<td>특급·1급 착용장소를 제외한 분진 발생장소</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>등급 구분의 논리는 “무엇이 얼마나 위험한가”에서 시작해 “어떻게 생긴 분진인가”로 이어진다. 독성이 강한 물질과 석면은 무조건 특급이고, 그 아래는 분진의 <strong>생성 기전</strong>으로 나뉜다 — 열적으로 생긴 분진(용융 금속이 증발했다가 응축한 금속흄)은 입자가 매우 작아 1급, 기계적으로 생긴 분진(연마·파쇄)은 상대적으로 크지만 규소처럼 2급으로 충분한 경우를 제외하면 역시 1급이다. 입자가 작을수록 폐 깊숙이 도달한다는 원리가 등급 체계에 그대로 반영되어 있는 셈이다.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">경고</span>배기밸브 없는 안면부여과식은 특급·1급 장소에 쓸 수 없다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>포집효율 수치만 보면 안면부여과식 특급(99.0%)도 고위험 장소에 쓸 수 있을 것 같지만, 안전인증 기준은 별도의 금지 조항을 둔다: <strong>배기밸브가 없는 안면부여과식 마스크는 특급 및 1급 장소에서 사용해서는 안 된다.</strong></p>
+<p>배기밸브가 없으면 내쉰 숨까지 여과재를 통과해야 하므로 여과재가 습기를 머금고 호흡저항이 커진다. 좋은 방진마스크의 요구 조건 가운데 하나인 “사용 중 흡기저항 상승률이 낮을 것”이 충족되지 않는 것이고, 저항이 커진 여과재는 공기를 안면부와 얼굴 사이의 틈으로 몰아 §2.5의 밀착 전제를 무너뜨린다. 포집효율 수치만으로는 보이지 않는 한계이므로, 보호구 선정에서 “등급이 높으면 된다”는 판단이 성립하지 않는 대표적인 사례다.</p>
+</div>
+</div>
+<p>여과재의 재질은 면·합성섬유·유리섬유 등이다. <strong>활성탄은 방진마스크의 여과재가 아니다</strong> — 활성탄은 방독마스크 정화통의 흡수제이며, 입자를 거르는 것(여과)과 가스를 흡착하는 것(정화)은 원리가 다르다.</p>
+<p>좋은 방진마스크의 요구 조건은 한 방향을 가리킨다: <strong>잘 잡되(포집효율 높게), 숨쉬기 쉽고(흡기·배기저항과 사용 중 흡기저항 상승률 모두 낮게), 잘 붙고(안면 밀착성 크게), 편해야(시야 넓고 가벼워야)</strong> 한다. 저항이 크거나 쓸수록 급격히 막히는 마스크는 근로자가 벗어 버리게 만든다 — 착용 의존성이라는 근본 한계가 설계 조건에까지 반영되는 것이다.</p>
+</section>
+<section id="방독마스크-정화통-파과-유효시간" class="level3">
+<h3 class="anchored" data-anchor-id="방독마스크-정화통-파과-유효시간">2.3 방독마스크 — 정화통, 파과, 유효시간</h3>
+<p>방독마스크는 <strong>대상 가스별로 구분된 정화통(canister)</strong>을 장착해 유해가스를 화학적으로 흡착·중화한다.</p>
+<ul>
+<li><strong>흡수제</strong>: 활성탄(가장 많이 사용), 실리카겔, 소다라임</li>
+<li><strong>정화통 표시색</strong>: 유기화합물용 <strong>갈색</strong>, 암모니아용 <strong>녹색</strong>, 아황산용 <strong>노란색</strong></li>
+</ul>
+<p>방독마스크는 <strong>대상 가스의 종류별로 안전인증을 받으며</strong>, 종류마다 정해진 시험가스로 제독 능력을 검정한다.</p>
+<div id="tbl-gas-mask-types" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gas-mask-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;14.7: 방독마스크의 종류와 시험가스
+</figcaption>
+<div aria-describedby="tbl-gas-mask-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>종류</th>
+<th>시험가스</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>유기화합물용</td>
+<td>시클로헥산(C₆H₁₂)</td>
+</tr>
+<tr class="even">
+<td>할로겐용</td>
+<td>염소가스 또는 증기(Cl₂)</td>
+</tr>
+<tr class="odd">
+<td>황화수소용</td>
+<td>황화수소가스(H₂S)</td>
+</tr>
+<tr class="even">
+<td>시안화수소용</td>
+<td>시안화수소가스(HCN)</td>
+</tr>
+<tr class="odd">
+<td>아황산용</td>
+<td>아황산가스(SO₂)</td>
+</tr>
+<tr class="even">
+<td>암모니아용</td>
+<td>암모니아가스(NH₃)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>여기서 두 가지를 읽어야 한다. 첫째, <strong>정화통은 만능이 아니다</strong> — 암모니아용 정화통은 유기용제 증기를 막지 못한다. 정화통 선정은 “방독마스크를 쓴다”가 아니라 “어느 가스용 정화통을 쓴다”까지 결정하는 일이며, 표시색은 그 결정을 현장에서 확인하는 수단이다. 둘째, 표의 시험가스는 <strong>해당 종류를 대표하는 검정용 물질</strong>이지 작업장에서 만날 가스 그 자체가 아니다. 유기화합물용 정화통이 시클로헥산으로 검정된다고 해서 모든 유기용제에 같은 유효시간을 보장하는 것은 아니므로, 실제 사용시간은 사용설명서나 제조업체를 통해 확인해야 한다(§3.4).</p>
+<p>정화통의 흡착 능력은 유한하다. 흡수제가 포화되면 유해가스가 정화통을 그대로 통과하기 시작하는데, 이를 <strong>파과(breakthrough)</strong>라 한다. 파과가 일어난 정화통은 겉보기에 멀쩡해도 보호 기능이 없다.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>파과의 판단 — 감각이 아니라 곡선으로
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>방독마스크의 사용 가능 여부를 가장 정확하게 확인할 수 있는 것은 <strong>파과곡선</strong>(농도–사용시간에 따른 파과 특성 그래프)이다. 냄새나 자극의 유무로 판단해서는 안 된다 — 착용 중 가스 냄새가 난다는 것은 이미 파과가 진행되었다는 뜻이므로, 그 시점에는 <strong>즉시 새 정화통으로 교체</strong>해야 한다. 안전인증 방독마스크에 파과곡선도, 사용시간 기록카드, 사용상의 주의사항을 표시하도록 하는 이유가 여기에 있다. 유효시간이 불분명하거나 산소결핍 위험이 있으면 송기마스크나 자급식 호흡기로 넘어가야 하고, 개봉한 정화통의 재사용은 피한다.</p>
+<p><strong>보관도 성능의 일부다.</strong> 방진마스크의 분진포집효율과 방독마스크의 제독능력은 사용시간뿐 아니라 <strong>보관방법에 따라서도 달라진다</strong>. 정화통을 개봉한 채 작업장에 걸어 두면 착용하지 않는 시간에도 흡착이 진행되어 유효시간이 줄어든다. 성능은 착용하는 순간에만 소모되는 것이 아니다.</p>
+</div>
+</div>
+<div id="fig-breakthrough" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-breakthrough-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w13_breakthrough.svg" class="img-fluid figure-img" style="width:82.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-breakthrough-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;14.1: 정화통의 파과곡선 — 작업장 농도가 낮으면 같은 흡착 용량을 더 천천히 소모하므로 파과시간이 길어진다
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-breakthrough" class="quarto-xref">그림&nbsp;<span>14.1</span></a> 은 파과가 “어느 순간 갑자기” 일어나는 사건이 아니라 <strong>곡선</strong>임을 보여 준다. 사용 초기에는 유출이 거의 없다가 흡수제가 포화에 가까워지면서 유출농도가 가파르게 올라가고, 일단 곡선이 서기 시작하면 정화통은 사실상 아무 일도 하지 않는다. 파과시간은 그 상승이 시작되는 지점이며, 냄새가 느껴지는 시점은 이미 곡선의 오른쪽 — 그래서 교체 판단은 감각이 아니라 곡선과 사용시간 기록으로 해야 한다.</p>
+<p>정화통의 능력은 “시험농도 <span class="math inline">\(C_s\)</span>에서 <span class="math inline">\(t_s\)</span>분 사용 가능”의 형태로 주어진다. 흡착 용량이 일정하다고 보면, 작업장 농도 <span class="math inline">\(C_w\)</span>에서의 유효시간은 농도에 반비례한다.</p>
+<p><span class="math display">\[
+\text{유효시간} = \frac{\text{표준유효시간}(t_s) \times \text{시험농도}(C_s)}{\text{작업장 농도}(C_w)}
+\]</span></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 13-1: 정화통 유효시간
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>사염화탄소 0.5%에서 60분 사용 가능한 정화통을 사염화탄소 농도가 0.2%인 작업장에서 사용하면 유효시간은 얼마인가?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>정답: 150분</strong></p>
+<p><span class="math display">\[
+\text{유효시간} = \frac{60 \times 0.5}{0.2} = 150 \ \text{분}
+\]</span></p>
+<p>작업장 농도가 시험농도보다 <strong>낮으므로</strong> 유효시간은 표준보다 길어진다 — 같은 흡착 용량을 더 묽은 가스가 천천히 소모하는 것이다. 표준유효시간과 시험농도는 분자, 작업장 농도는 분모다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="보호계수-pf-apf-muc" class="level3">
+<h3 class="anchored" data-anchor-id="보호계수-pf-apf-muc">2.4 보호계수 — PF, APF, MUC</h3>
+<p>보호구의 성능은 “좋다/나쁘다”가 아니라 <strong>숫자</strong>로 다룬다. 세 개념이 사슬처럼 이어진다.</p>
+<p><strong>① 보호계수(Protection Factor, PF)</strong> — 보호구 밖 농도 <span class="math inline">\(C_0\)</span>와 안 농도 <span class="math inline">\(C_1\)</span>의 비, <span class="math inline">\(PF = C_0 / C_1\)</span>. 값이 클수록 보호 성능이 좋다. PF가 25라면 보호구 안 농도가 바깥의 1/25이라는 뜻이다.</p>
+<p><strong>② 할당보호계수(Assigned Protection Factor, APF)</strong> — 적절히 밀착이 이루어진 보호구를 <strong>훈련된 일련의 착용자들이 실제 작업장에서 착용했을 때 기대되는 최소 보호 정도치</strong>다. APF 100인 보호구는 외부 유해물질로부터 적어도 100배의 보호를 기대할 수 있다.</p>
+<p><strong>③ 최대사용농도(Maximum Use Concentration, MUC)</strong> — 그 보호구를 쓰고 들어갈 수 있는 작업장 농도의 상한:</p>
+<p><span class="math display">\[
+MUC = TLV \times APF
+\]</span></p>
+<p>역으로 작업장의 예상 농도가 주어지면 필요한 보호구의 최소 성능 <span class="math inline">\(\text{요구 최소 } APF = \text{예상 농도} / \text{노출기준}\)</span> 을 구할 수 있다.</p>
+<div id="fig-apf-muc" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-apf-muc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w13_apf_muc.svg" class="img-fluid figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-apf-muc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;14.2: APF와 MUC의 관계 — 보호구가 농도를 APF분의 1로 줄이므로, 줄인 뒤가 노출기준 이하가 되는 바깥 농도의 상한이 MUC다
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-apf-muc" class="quarto-xref">그림&nbsp;<span>14.2</span></a> 을 농도 축 위에서 읽으면 세 개념이 하나의 그림이 된다. 보호구는 작업장 농도를 <strong>APF분의 1로 끌어내리는 장치</strong>이고(화살표), 그 결과가 노출기준선 아래로 내려와야 한다. 바깥 농도가 정확히 <span class="math inline">\(TLV \times APF\)</span>일 때 안쪽 농도가 노출기준과 같아지므로, 이 값이 곧 그 보호구로 들어갈 수 있는 상한 — MUC다. 그림에서 예상 농도 600 ppm은 MUC(500 ppm) 위에 놓이므로, APF 10인 보호구로는 이 작업장에 들어갈 수 없다.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>APF는 농도의 비다 — 유량의 비가 아니다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>PF·APF를 “보호구 밖과 안의 <strong>유량</strong> 비(<span class="math inline">\(Q_o/Q_i\)</span>)”로 이해하면 안 된다. 보호구를 통과하는 공기의 양이 아니라, 그 공기에 실려 오는 <strong>유해물질 농도가 몇 분의 일로 줄었는가</strong>가 보호의 본질이기 때문이다. 정의식의 분자·분모는 모두 농도(<span class="math inline">\(C_0\)</span>, <span class="math inline">\(C_1\)</span>)다.</p>
+<p>또 하나의 개념적 경계: APF·MUC의 논리는 공기정화식 보호구가 <strong>작동하는 범위 안에서만</strong> 성립한다. IDLH 이상의 농도에서는 MUC를 계산할 것 없이 공기정화식 자체가 배제되고 SCBA만 허용된다(§2.1).</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 13-2: PF · MUC · 요구 APF
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>보호구 밖의 농도가 300 ppm, 보호구 안의 농도가 12 ppm일 때 보호계수는?</p></li>
+<li><p>APF 25인 반면형 보호구를 구리흄(노출기준 0.1 mg/m³) 작업장에서 사용할 때 최대사용농도(MUC)는?</p></li>
+<li><p>예상되는 공기 중 농도가 30 ppm이고 노출기준이 2 ppm인 작업에는 APF가 최소 얼마인 보호구가 필요한가?</p></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>(1)</strong> <span class="math inline">\(PF = 300/12 = 25\)</span></p>
+<p><strong>(2)</strong> <span class="math inline">\(MUC = 0.1 \times 25 = 2.5 \ \text{mg/m}^3\)</span> — 작업장 농도가 이 값을 넘으면 이 보호구로는 들어갈 수 없다.</p>
+<p><strong>(3)</strong> <span class="math inline">\(APF \geq 30/2 = 15\)</span> — APF 15 이상인 보호구를 선택해야 한다.</p>
+<p>세 계산은 하나의 논리다 — 보호구는 농도를 APF분의 1로 줄여 주므로, “줄인 뒤의 농도가 노출기준 이하”가 되도록 선정한다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="밀착-모든-계산의-전제" class="level3">
+<h3 class="anchored" data-anchor-id="밀착-모든-계산의-전제">2.5 밀착 — 모든 계산의 전제</h3>
+<p>§2.4의 모든 수치는 하나의 전제 위에 서 있다: <strong>보호구가 얼굴에 제대로 밀착되어 있다</strong>는 것. APF의 정의 자체가 “적절히 밀착이 이루어진” 상태를 전제한다. 안면부와 얼굴 사이에 틈이 있으면 공기는 저항이 큰 여과재가 아니라 저항이 없는 틈으로 흐르고, 등급이 특급이든 정화통이 새것이든 보호 성능은 계산값에 한참 못 미친다. 수염, 안경 다리, 얼굴형에 맞지 않는 크기가 대표적인 밀착 불량의 원인이다. 그래서 보호구 지급은 지급으로 끝나지 않는다 — 착용자별 <strong>밀착도 검사(fit test)</strong>로 실제 밀착을 확인하고 정기 교체·관리가 뒤따라야 한다. 밀착도 검사 없이 지급된 보호구는 §1.4에서 말한 “허위 안전감”의 전형이다.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>그림 필요 — 밀착도 검사(fit test) 장면
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>무엇</strong>: 정성적 밀착도 검사(후드를 씌우고 사카린·비터렉스 용액을 분무하는 장면) 또는 정량적 검사(면체에 프로브를 연결해 입자 계수기로 안팎 농도를 동시에 재는 장면) 사진. 검사자와 착용자, 장비가 함께 보이는 구도가 좋다. 가능하면 밀착 불량의 원인(수염, 안경 다리)을 보여 주는 대비 사진을 함께 싣는다.</p>
+<p><strong>왜</strong>: APF의 정의가 “적절히 밀착이 이루어진” 상태를 전제한다는 §2.5의 논지는 검사 장면 없이는 추상적으로 남는다. 사진 한 장이 “보호구는 지급으로 끝나지 않는다”를 절차로 보여 준다 — 실제로 사람마다 얼굴이 다르고, 그래서 착용자별 확인이 필요하다는 사실이 즉시 전달된다.</p>
+<p><strong>출처 후보</strong>: NIOSH/CDC 및 OSHA의 호흡보호 프로그램 자료(미국 연방정부 저작물, 대체로 퍼블릭 도메인), 한국산업안전보건공단 밀착도 검사 안내자료. 사업장에서 직접 촬영할 경우 피촬영자의 동의를 받고 얼굴 식별이 문제되면 측면·부분 구도로 촬영한다.</p>
+<p><strong>대안</strong>: 안면부와 얼굴 사이 틈으로 공기가 새는 경로를 화살표로 표시한 단면 모식도(여과재를 통과하는 흐름 대 틈으로 새는 흐름)로 대체한다.</p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="그-밖의-보호구와-보호구-프로그램" class="level2">
+<h2 class="anchored" data-anchor-id="그-밖의-보호구와-보호구-프로그램">3. 그 밖의 보호구와 보호구 프로그램</h2>
+<section id="청력보호구와-nrr" class="level3">
+<h3 class="anchored" data-anchor-id="청력보호구와-nrr">3.1 청력보호구와 NRR</h3>
+<p>소음의 공학적 저감(저소음 공정, 방음·흡음, 격리)이 우선이지만, 그것으로 부족한 구간에서는 청력보호구를 쓴다.</p>
+<div id="tbl-hearing-protectors" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-hearing-protectors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;14.8: 청력보호구의 비교
+</figcaption>
+<div aria-describedby="tbl-hearing-protectors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 41%">
+<col style="width: 19%">
+<col style="width: 19%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>종류</th>
+<th>차음효과(NRR)</th>
+<th>장점</th>
+<th>단점</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>귀마개</strong></td>
+<td>15~30 dB</td>
+<td>저렴, 휴대 간편</td>
+<td>올바른 삽입 기술 필요, 위생 관리</td>
+</tr>
+<tr class="even">
+<td><strong>귀덮개</strong></td>
+<td>20~35 dB</td>
+<td>착탈 용이, 위생적</td>
+<td>무겁고 불편, 안경과 간섭</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>안전인증 기준은 청력보호구를 세 가지로 구분한다. 귀마개는 <strong>차음 대역</strong>에 따라 두 등급으로 나뉜다.</p>
+<div id="tbl-hearing-protector-grades" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-hearing-protector-grades-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;14.9: 청력보호구의 종류와 등급
+</figcaption>
+<div aria-describedby="tbl-hearing-protector-grades-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>종류</th>
+<th>등급</th>
+<th>기호</th>
+<th>성능</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>귀마개</strong></td>
+<td>1종</td>
+<td>EP-1</td>
+<td>저음부터 고음까지 <strong>모두</strong> 차음하는 것</td>
+</tr>
+<tr class="even">
+<td><strong>귀마개</strong></td>
+<td>2종</td>
+<td>EP-2</td>
+<td>주로 <strong>고음을 차음</strong>하고 저음(회화음 영역)은 차음하지 않는 것</td>
+</tr>
+<tr class="odd">
+<td><strong>귀덮개</strong></td>
+<td>—</td>
+<td>EM</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>EP-2가 존재하는 이유</strong>를 짚어 두자. 차음은 많을수록 좋은 것이 아니다. 저음 대역에는 사람의 회화음이 실려 있으므로, 이를 함께 막아 버리면 대화·경보음·기계의 이상음이 들리지 않아 <strong>새로운 위험</strong>이 생긴다(§1.4에서 본 사례가 이것이다). 소음이 주로 고주파 성분이고 의사소통이 필요한 작업이라면 EP-2를, 저주파까지 강한 소음이라면 EP-1을 선정한다. 보호구 선정이 “성능이 높은 것 고르기”가 아니라 <strong>작업 조건과의 맞춤</strong>이라는 원칙이 청력보호구에서 가장 선명하게 드러나는 지점이다.</p>
+<p>귀마개는 <strong>재사용 여부가 제품의 제조특성으로 표시</strong>되므로, 일회용 귀마개를 여러 날 반복 사용하는 관행은 제품 사양에 어긋난다. 표시를 확인하는 것이 위생 관리의 출발점이다.</p>
+<p><strong>NRR(Noise Reduction Rating)</strong>은 제조사가 표시하는 차음 성능이지만, C 특성으로 잰 <strong>실험실 조건의 값</strong>이다. 그래서 dB(A) 측정값에 적용할 때는 먼저 <strong>7 dB을 빼고</strong>(A·C 특성 차이), 현장에서는 삽입 깊이·밀착 상태·착용 시간이 이상적이지 않으므로 OSHA 방식대로 그 <strong>절반만</strong> 기대한다.</p>
+<p><span class="math display">\[
+\text{실제 감소량} = (NRR - 7) \times 0.5 \ \text{dB}
+\]</span></p>
+<p><span class="math inline">\(NRR/2\)</span>만 쓰거나 <span class="math inline">\(NRR - 7\)</span>만 쓰는 것은 두 보정 중 하나를 빠뜨린 것이다.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 13-3: 청력보호구의 실제 차음효과
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>작업장 소음이 95 dB(A)이고, NRR 30 dB인 귀마개를 착용한다. 근로자의 실제 노출 수준은 대략 얼마로 평가해야 하는가?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>정답: 약 83.5 dB(A)</strong></p>
+<p><span class="math display">\[
+\text{실제 감소량} = (30 - 7) \times 0.5 = 11.5 \ \text{dB}, \qquad
+\text{노출 수준} = 95 - 11.5 = 83.5 \ \text{dB(A)}
+\]</span></p>
+<p>노출기준 90 dB(A)(<a href="../chapters/w06_physical_agents1.html">6주차</a> 참조)보다 낮아지므로 당장의 기준은 만족한다. 그러나 이 계산이 “이제 됐다”를 뜻하지는 않는다 — 보호구의 효과는 매일의 올바른 착용에 의존하며, 소음 자체를 줄이는 공학적 대책이 여전히 우선이다. 반대로 차음이 지나치면 경보음·대화가 안 들리는 새로운 위험이 생긴다는 점도 기억하자.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="피부-보호-장갑-보호복-그리고-2차-오염" class="level3">
+<h3 class="anchored" data-anchor-id="피부-보호-장갑-보호복-그리고-2차-오염">3.2 피부 보호 — 장갑, 보호복, 그리고 2차 오염</h3>
+<p>피부 흡수·접촉이 문제되는 물질(유기용제, 생식독성 물질 등)에는 보호장갑과 보호복이 쓰인다. 원리는 호흡보호구와 같다 — <strong>보호구는 올바로 쓰였을 때만 경계가 된다.</strong> §1.3의 형광염료 실험이 보여 주듯 장갑 착용 전후의 손 오염도 차이는 극적이지만, 오염된 장갑을 낀 손으로 얼굴을 만지면 경계는 뚫린다. 작업복은 그 자체가 <strong>2차 오염원</strong>이 될 수 있다 — 쌓인 분진은 움직일 때마다 다시 날리고, 오염된 작업복을 집으로 가져가면 노출이 작업장 밖으로 확장된다. 오염 작업복의 분리·세탁 관리가 보호구 관리의 일부인 이유다.</p>
+<p>안전인증 대상 보호장갑은 용도에 따라 <strong>내전압용 절연장갑</strong>(감전 방지)과 <strong>유기화합물용 안전장갑</strong>(유기화합물의 경피 흡수 방지)으로 나뉜다. 보호복은 크게 <strong>방열복</strong>(방열상의·방열하의·방열일체복·방열장갑·방열두건)과 <strong>유기화합물용 보호복</strong>으로 구분되며, 후자는 보호 범위(전신/부분)와 노출 형태(분사에 대비하는 <strong>액체방호형 3형식</strong>, 분무에 대비하는 <strong>분무방호형 4형식</strong>)의 조합으로 형식이 정해진다. 화학물질이 튀는 형태인지 안개처럼 흩어지는 형태인지가 형식 선정의 기준이라는 뜻이다. 관리대상·허가대상 유해물질 중 피부 자극성·부식성 물질을 다루는 작업에는 <strong>불침투성 보호복·안전장갑·안전장화와 피부보호용 약품</strong>이 함께 요구된다.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">경고</span>화학물질용 보호구는 “화학물질별로” 확인해야 한다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>호흡용보호구·보호복·안전장갑·안전화의 안전인증은 <strong>일부 화학물질에 대해서만 보호성능을 시험</strong>한다. 인증을 받은 제품이라 해서 모든 화학물질을 막아 주는 것이 아니며, 보호복은 분진에 대해서는 안전인증 자체가 이루어지지 않는다.</p>
+<p>따라서 화학물질용 보호구는 <strong>취급 물질별로 보호성능이 있는지를 제품 사용설명서와 제조업체를 통해 확인한 뒤</strong> 선정하고, 확인된 사용방법에 따라 써야 한다. “안전인증 필증이 붙어 있다”는 사실은 그 물질에 대한 보호를 보증하지 않는다. §2.3에서 정화통을 가스 종류별로 골라야 했던 것과 같은 논리가 장갑·보호복에도 그대로 적용되는 것이다.</p>
+</div>
+</div>
+</section>
+<section id="그-밖의-보호구-머리눈얼굴발추락" class="level3">
+<h3 class="anchored" data-anchor-id="그-밖의-보호구-머리눈얼굴발추락">3.3 그 밖의 보호구 — 머리·눈·얼굴·발·추락</h3>
+<p>호흡·청력·피부 보호구 외에도, 작업의 위험 유형에 따라 여러 보호구가 요구된다. 총론 수준에서 중요한 것은 종류의 암기가 아니라 <strong>“어떤 위험이 어떤 보호구를 부른다”는 대응 논리</strong>다.</p>
+<div id="tbl-other-ppe" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-other-ppe-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;14.10: 위험 유형별 보호구의 선정
+</figcaption>
+<div aria-describedby="tbl-other-ppe-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>위험(작업 조건)</th>
+<th>보호구</th>
+<th>보호 부위</th>
+<th>종류·등급 구분의 축</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>물체의 낙하·비래 또는 추락 위험</td>
+<td>안전모</td>
+<td>머리</td>
+<td>추락 방지 포함 여부와 내전압성: <strong>AB</strong>(낙하·비래·추락), <strong>AE</strong>(낙하·비래 + 감전), <strong>ABE</strong>(셋 모두)</td>
+</tr>
+<tr class="even">
+<td>높이·깊이 <strong>2 m 이상</strong> 추락 위험 장소</td>
+<td>안전대</td>
+<td>몸</td>
+<td>벨트식(1개 걸이용, U자 걸이용) / 안전그네식(추락방지대, 안전블록)</td>
+</tr>
+<tr class="odd">
+<td>낙하·충격·끼임, 감전 또는 정전기 대전</td>
+<td>안전화</td>
+<td>발</td>
+<td>가죽제·고무제(내수·내화학)·정전기·발등·절연화·절연장화</td>
+</tr>
+<tr class="even">
+<td>물체가 흩날릴 위험, 유해물질 비산</td>
+<td>보안경</td>
+<td>눈</td>
+<td>발생 광선: 자외선용·적외선용·복합용·용접용</td>
+</tr>
+<tr class="odd">
+<td>용접 시 불꽃·물체가 흩날릴 위험</td>
+<td>보안면</td>
+<td>눈·얼굴</td>
+<td>눈만이 아니라 <strong>얼굴까지</strong> 덮는다는 점이 보안경과의 차이</td>
+</tr>
+<tr class="even">
+<td>감전 위험 작업</td>
+<td>절연용 보호구</td>
+<td>머리·손</td>
+<td>안전모 AE·ABE, 내전압용 절연장갑</td>
+</tr>
+<tr class="odd">
+<td>고열물체 취급·매우 더운 장소</td>
+<td>방열복·방열장갑</td>
+<td>몸·손</td>
+<td>착용 부위별: 상의·하의·일체복·장갑·두건</td>
+</tr>
+<tr class="even">
+<td>저온물체 취급·현저히 추운 장소</td>
+<td>방한모·방한복·방한화·방한장갑</td>
+<td>몸 전체</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>안전모의 기호를 읽는 법
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>안전모 기호는 성능의 <strong>누적</strong>을 나타낸다. <strong>A</strong>는 낙하·비래에 대한 기본 성능, <strong>B</strong>는 추락에 대한 성능, <strong>E</strong>는 내전압성(7,000 V 이하의 전압에 견디는 성능)이다. 따라서 AB는 추락 위험이 있는 고소작업, AE는 추락 위험은 없되 감전 위험이 있는 전기작업, ABE는 두 위험이 겹치는 작업에 쓴다.</p>
+<p>선정 논리는 단순하다 — <strong>작업에 존재하는 위험을 모두 나열하고, 그 전부를 덮는 최소 사양을 고른다.</strong> 위험이 하나라도 빠지면 보호구는 그 지점에서 뚫리고, 필요 없는 성능까지 올리면 무겁고 불편해져 착용률이 떨어진다(§1.4의 착용 의존성).</p>
+</div>
+</div>
+</section>
+<section id="보호구-프로그램의-운영" class="level3">
+<h3 class="anchored" data-anchor-id="보호구-프로그램의-운영">3.4 보호구 프로그램의 운영</h3>
+<p>여기까지가 보호구의 <strong>성능</strong>에 관한 이야기였다면, 지금부터는 <strong>운영</strong>의 문제다. 성능이 아무리 좋아도 잘못 고르고, 안 맞게 지급하고, 쓰는 법을 알려 주지 않고, 관리하지 않으면 그 성능은 현장에 도달하지 않는다. 관리 위계상 보호구가 최후 수단이라는 사실이 오히려 이 운영을 엄격하게 만든다 — 뒤에 다른 방어선이 없기 때문이다.</p>
+<section id="선정-적절성의-평가" class="level4">
+<h4 class="anchored" data-anchor-id="선정-적절성의-평가">선정: 적절성의 평가</h4>
+<p>어떤 보호구를 선택할지는 작업장 내의 여러 유해·위험요소를 주의 깊게 고려하여 정해야 한다. 적절성 평가에서 확인할 사항은 다섯 가지다.</p>
+<div id="tbl-ppe-evaluation" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ppe-evaluation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;14.11: 개인보호구 적절성 평가의 확인 사항
+</figcaption>
+<div aria-describedby="tbl-ppe-evaluation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>확인 사항</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>위험에 대한 적합성</strong></td>
+<td>예방하려는 위험과 노출 장소의 조건에 맞아야 한다. 농약 방호용으로 고안된 보안경은 연마기로 철·돌을 절단하는 작업의 보안경으로 <strong>적합하지 않다</strong></td>
+</tr>
+<tr class="even">
+<td><strong>조절 가능성</strong></td>
+<td>착용자의 몸에 맞도록 조절될 수 있어야 한다</td>
+</tr>
+<tr class="odd">
+<td><strong>착용자의 이해</strong></td>
+<td>착용에 필요한 시간, 작업에 요구되는 물리적 노력, 시인성과 정보교환(대화·경보 인지)에 대한 필요사항을 착용자가 알고 있어야 한다</td>
+</tr>
+<tr class="even">
+<td><strong>건강상태 확인</strong></td>
+<td>착용 근로자의 건강상태가 검사되어야 한다</td>
+</tr>
+<tr class="odd">
+<td><strong>보호구 간의 조화</strong></td>
+<td>둘 이상을 함께 착용한다면 서로 조화를 이루어야 한다. 특수한 형태의 호흡보호구가 보안경 착용을 방해해서는 안 된다</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>첫 항목과 마지막 항목이 특히 실무적이다. <strong>위험에 대한 적합성</strong>은 “보안경을 지급했다”가 아니라 “이 위험에 맞는 보안경인가”를 묻는다. <strong>보호구 간의 조화</strong>는 보호구를 하나씩 따로 고르면 놓치는 문제다 — 방독마스크 때문에 보안경이 들뜨면 두 보호구가 서로의 성능을 깎는다. 보호구는 <strong>묶음으로</strong> 선정해야 한다.</p>
+<p>또한 착용자의 이해 항목에 <strong>시인성과 정보교환</strong>이 들어 있다는 점을 눈여겨보자. 보호구가 만들어 내는 2차 위험 — 시야 제한, 대화·경보 인지의 곤란(§3.1의 EP-2) — 을 선정 단계에서 미리 다루라는 요구다.</p>
+</section>
+<section id="지급과-교육훈련" class="level4">
+<h4 class="anchored" data-anchor-id="지급과-교육훈련">지급과 교육훈련</h4>
+<p>보호구는 지급으로 끝나지 않는다. 정확한 사용을 위해 근로자에게 <strong>왜 필요한지, 언제 사용하고 언제 대체(교체)해야 하는지, 그 한계는 무엇인지</strong>를 알려 주어야 하고, 올바른 사용법을 훈련·교육하여 근로자가 확실히 사용할 수 있게 해야 한다. §1.3에서 본 교육훈련의 원칙이 보호구에 그대로 적용되는 것이며, 특히 “<strong>한계</strong>를 알려 준다”는 항목은 §1.4의 허위 안전감을 예방하는 직접적 수단이다.</p>
+<p>교육으로 끝도 아니다. <strong>개인보호구가 실제로 사용되고 있는지를 정기적으로 검사하고, 사용하지 않는 경우 그 이유를 완벽하게 조사해야 한다.</strong> 착용률이 낮으면 근로자를 탓하기 전에 원인을 찾으라는 뜻이다 — 호흡저항이 큰가, 크기가 맞지 않는가, 다른 보호구와 간섭하는가, 작업 동작을 방해하는가. 원인의 상당 부분은 선정 단계로 되돌아간다. 안전보건표지는 착용을 돕는 보조 수단이다.</p>
+</section>
+<section id="유지관리와-보관" class="level4">
+<h4 class="anchored" data-anchor-id="유지관리와-보관">유지·관리와 보관</h4>
+<div id="tbl-ppe-maintenance" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ppe-maintenance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;14.12: 개인보호구의 유지·관리
+</figcaption>
+<div aria-describedby="tbl-ppe-maintenance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>관리 항목</th>
+<th>요구 사항</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>보관</strong></td>
+<td>사용하지 않을 때는 이상 유무를 검사하고 오염되지 않도록 조치하여 적절히 보관한다. 건조하고 깨끗한 벽장에 두고, 눈 보호대처럼 작은 물품은 상자에 보관한다</td>
+</tr>
+<tr class="even">
+<td><strong>청결·보수</strong></td>
+<td>항상 청결하고 보수가 잘 되어 있어야 한다</td>
+</tr>
+<tr class="odd">
+<td><strong>교체 주기</strong></td>
+<td><strong>교환 시기와 유효기간 명시를 포함하여 제조자의 유지관리사항을 따른다</strong></td>
+</tr>
+<tr class="even">
+<td><strong>수리 주체</strong></td>
+<td>단순한 유지보수는 훈련받은 착용자 본인이 할 수 있으나, <strong>복잡한 수리는 전문가만</strong> 수행한다</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>사업주가 갖추어야 할 지침의 네 가지 요소
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>개인보호구 사용에 관한 사업장의 지침은 다음을 포함해야 한다.</p>
+<ol type="1">
+<li>사용하기 전 <strong>보호구 적절성을 확인하는 방법</strong>과 <strong>적절한 배분</strong>에 관한 사항</li>
+<li>적절한 <strong>유지 관리 및 보관방법</strong></li>
+<li>안전하게 사용할 수 있는 방법에 대한 <strong>사용설명서 제공</strong></li>
+<li><strong>올바르게 사용하는 방법</strong></li>
+</ol>
+<p>네 항목은 보호구의 수명 주기 — 고르고(①), 나눠 주고(①), 쓰고(③·④), 간수하고 갈아 주는(②) — 를 그대로 따라간다. 보호구 관리가 “구매와 지급”으로 끝나는 일이 아니라 <strong>주기를 도는 프로그램</strong>이라는 것이 이 네 줄의 요지다. §2.5의 밀착도 검사, §2.3의 정화통 교체 관리, §3.2의 오염 작업복 분리·세탁도 모두 이 주기 안의 항목들이다.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+</section>
+<section id="작업생리-에너지-대사와-작업휴식-배분" class="level2">
+<h2 class="anchored" data-anchor-id="작업생리-에너지-대사와-작업휴식-배분">4. 작업생리 — 에너지 대사와 작업–휴식 배분</h2>
+<p>관리적 대책 중 “작업시간의 조정”은 유해물질 노출에만 적용되는 것이 아니다. <strong>작업 그 자체가 요구하는 에너지와 힘</strong>이 근로자의 능력을 넘어서면 피로가 축적되고, 능률 저하·재해·근골격계질환으로 이어진다. 작업생리(work physiology)는 “이 작업이 이 사람에게 얼마나 무거운가”를 <strong>정량적으로</strong> 다루는 분야로, 1주차의 원칙 — “작업을 인간에게 적합하게” — 를 수치로 구현한다. 이 절의 식들이 곧 “얼마나 일하고 얼마나 쉬게 할 것인가”라는 작업관리의 정량적 근거다.</p>
+<section id="근육-활동의-에너지원" class="level3">
+<h3 class="anchored" data-anchor-id="근육-활동의-에너지원">4.1 근육 활동의 에너지원</h3>
+<p>근육이 수축을 시작하면 에너지는 여러 경로에서 순차적으로 공급된다. <strong>가장 먼저 동원되는 것은 근육에 이미 저장되어 있는 아데노신 삼인산(ATP)</strong>이다.</p>
+<div id="fig-energy-pathway" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-energy-pathway-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w13_energy_pathway.svg" class="img-fluid figure-img" style="width:92.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-energy-pathway-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;14.3: 근수축의 에너지 공급 경로 — 동원되는 순서와 혐기성·유산소의 경계
+</figcaption>
+</figure>
+</div>
+<p>산소 공급이 따라오기 전까지의 <strong>혐기성 대사</strong>에 동원되는 에너지원은 <strong>ATP, CP(크레아틴 인산), 글리코겐, 포도당</strong>의 네 가지다. 지방과 단백질은 산소를 이용한 유산소 대사에서 쓰이는 연료이므로 혐기성 에너지원이 아니다. 한편 <strong>비타민 B₁</strong>은 그 자체가 연료는 아니지만 <strong>호기적(유산소) 산화를 도와 근육의 열량 공급을 원활하게</strong> 하므로, 근육작업 근로자에게 공급하는 영양 대책에 포함된다(§8.1).</p>
+</section>
+<section id="산소소비량과-산소부채" class="level3">
+<h3 class="anchored" data-anchor-id="산소소비량과-산소부채">4.2 산소소비량과 산소부채</h3>
+<p>작업 강도가 올라가면 산소소비량도 늘어나지만, 이 관계는 무한히 비례하지 않는다. 산소소비량은 <strong>최대산소소비량</strong>에서 한계에 도달하며, 작업대사량이 그 한계를 넘으면 산소소비량은 더 증가하지 않고 부족분은 혐기성 대사로 메워진다. 이때 젖산의 제거 속도가 생성 속도에 못 미쳐 젖산이 축적되고 피로가 온다. 작업이 끝나도 맥박과 호흡수가 즉시 회복되지 않고 서서히 감소하는 것은 남은 젖산을 처리해야 하기 때문이다 — 이렇게 작업 종료 후 축적된 <strong>젖산을 제거하기 위해 추가로 동원되는 산소소비량</strong>을 <strong>산소부채(oxygen debt)</strong>라 한다. 작업 후 한동안 숨이 가쁜 것은 몸이 작업 중에 진 “빚”을 갚는 과정이며, 이 회복 과정의 속도가 곧 전신피로 판정의 지표가 된다(§5.1).</p>
+</section>
+<section id="작업대사율rmr과-작업강도" class="level3">
+<h3 class="anchored" data-anchor-id="작업대사율rmr과-작업강도">4.3 작업대사율(RMR)과 작업강도</h3>
+<section id="정의" class="level4">
+<h4 class="anchored" data-anchor-id="정의">정의</h4>
+<p><strong>작업대사율(RMR, Relative Metabolic Rate)</strong>은 그 작업이 기초대사량의 몇 배에 해당하는 에너지를 <strong>추가로</strong> 요구하는지를 나타낸다.</p>
+<p><span class="math display">\[
+RMR = \frac{\text{작업 시 소요열량} - \text{안정 시 소요열량}}{\text{기초대사량}}
+\]</span></p>
+<p>분자는 “작업 때문에 더 쓰는 열량”(작업 시 − 안정 시)이고, 분모는 기초대사량이다. 세 값 — 작업 시 열량, 안정 시 열량, 기초대사량 — 만 있으면 계산되며, <strong>작업시간은 정의에 들어 있지 않다</strong>. RMR은 작업의 “단위 시간당 강도”이지 총량이 아니기 때문이다.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 13-4: 작업 시 소요열량 구하기
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>작업대사율이 <strong>3.0</strong>, 안정 시 소모열량이 <strong>800 kcal</strong>, 기초대사량이 <strong>600 kcal</strong>일 때 작업 시 소요열량은?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>정답: 2,600 kcal</strong></p>
+<p>RMR 식을 작업 시 소요열량에 대해 풀면</p>
+<p><span class="math display">\[
+\text{작업 시 소요열량} = \text{안정 시 소요열량} + RMR \times \text{기초대사량}
+\]</span></p>
+<p><span class="math display">\[
+= 800 + 3.0 \times 600 = 2{,}600 \ \text{kcal}
+\]</span></p>
+<p><strong>개념 확인</strong>: 기초대사량과 안정 시 대사량은 서로 다른 값이다. 곱해지는 쪽은 <strong>기초대사량(600)</strong>, 더해 주는 기준선은 <strong>안정 시 열량(800)</strong>이다. 두 값을 바꿔 넣으면 2,400 kcal라는 다른 답이 나온다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="작업-구분과-실동률" class="level4">
+<h4 class="anchored" data-anchor-id="작업-구분과-실동률">작업 구분과 실동률</h4>
+<p>RMR로 작업의 무게를 구분한다. <strong>강작업은 RMR 2~4, 중작업은 RMR 4~7</strong>이며, 중작업에는 수시로 휴식시간을 갖는 것이 적합하다. 중등도 작업 이하의 구분에서는 지적(정신) 활동의 비중도 함께 고려된다. ACGIH의 소모열량 기준으로는 시간당 <strong>350~500 kcal</strong>를 소모하는 작업이 <strong>심한 작업(heavy work)</strong>에 해당한다 — 고열 작업에서 작업강도별 WBGT 노출기준과 연결되는 구분이다(<a href="../chapters/w07_physical_agents2.html">7주차</a>).</p>
+<p><strong>실동률(%)</strong>은 정해진 근무시간 중 실제로 작업에 쓸 수 있는 시간의 비율로, RMR로부터 경험식으로 추정한다.</p>
+<p><span class="math display">\[
+\text{실동률}(\%) = 85 - 5 \times RMR
+\]</span></p>
+<p>RMR = 3인 작업이라면 실동률은 <span class="math inline">\(85 - 15 = 70\%\)</span> — 작업이 무거울수록 근무시간 중 더 많은 부분이 회복에 배정되어야 한다는 뜻이다.</p>
+</section>
+<section id="계속작업의-한계시간" class="level4">
+<h4 class="anchored" data-anchor-id="계속작업의-한계시간">계속작업의 한계시간</h4>
+<p>RMR 구간(강작업·중작업)은 작업을 분류하는 틀일 뿐, “얼마나 오래 계속할 수 있는가”는 별도의 관계식으로 구한다. 사이또(齋藤)·오시마(大島)의 식이다.</p>
+<p><span class="math display">\[
+\log(\text{계속작업 한계시간, 분}) = 3.724 - 3.25 \log(RMR)
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>“RMR 4가 계속작업의 한계”가 아니다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>RMR 4는 중작업 구간의 하한일 뿐, 그 값을 넘는 순간 계속작업이 불가능해지는 경계선이 아니다. 작업 구분(분류)과 한계시간(연속 지속 가능 시간)은 서로 다른 질문에 답하는 서로 다른 도구다. 한계시간은 위 식에 RMR을 넣어 <strong>계산</strong>해야 한다.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 13-5: 계속작업 한계시간
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>작업대사율이 <strong>7</strong>인 작업을 쉬지 않고 계속할 수 있는 한계시간은?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>정답: 약 10분</strong></p>
+<p><span class="math display">\[
+\log T = 3.724 - 3.25 \times \log 7 = 0.9775, \qquad
+T = 10^{0.9775} \approx 9.5 \ \text{분} \approx 10 \ \text{분}
+\]</span></p>
+<p>RMR 7 — 중작업 구간의 상한 — 인 작업은 10분을 넘겨 연속으로 시킬 수 없다. 이 계산 결과가 곧 작업–휴식 주기 설계의 입력값이 된다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="육체적-작업능력pwc과-작업휴식-배분" class="level3">
+<h3 class="anchored" data-anchor-id="육체적-작업능력pwc과-작업휴식-배분">4.4 육체적 작업능력(PWC)과 작업–휴식 배분</h3>
+<section id="pwc와-8시간-작업의-상한" class="level4">
+<h4 class="anchored" data-anchor-id="pwc와-8시간-작업의-상한">PWC와 8시간 작업의 상한</h4>
+<p><strong>육체적 작업능력(PWC, Physical Work Capacity)</strong>은 그 사람이 발휘할 수 있는 최대 작업 능력 — 최대산소소비량에 대응하는 에너지 소비율 — 이다. 전력 질주를 하루 종일 할 수 없듯이, 8시간 노동의 강도는 최대 능력보다 훨씬 낮아야 한다. 근로자가 <strong>8시간 동안 피로를 느끼지 않고</strong> 일하기 위한 작업강도의 상한은 <strong>PWC의 1/3</strong>으로 본다.</p>
+<p><span class="math display">\[
+E_{8h} = \frac{PWC}{3}
+\]</span></p>
+<p>PWC가 12 kcal/min인 근로자라면 8시간 지속 가능한 작업강도는 4 kcal/min까지다.</p>
+</section>
+<section id="hertig-식-시간당-휴식시간-배분" class="level4">
+<h4 class="anchored" data-anchor-id="hertig-식-시간당-휴식시간-배분">Hertig 식 — 시간당 휴식시간 배분</h4>
+<p>작업대사량이 <span class="math inline">\(PWC/3\)</span>을 넘는 작업을 시켜야 한다면, 초과분을 <strong>휴식으로 상쇄</strong>해야 한다. Hertig의 식은 “작업과 휴식의 가중평균 대사량이 <span class="math inline">\(PWC/3\)</span>이 되도록” 매 시간 중 휴식의 비율을 정한다.</p>
+<p><span class="math display">\[
+T_{rest}(\%) = \frac{PWC/3 - E_{task}}{E_{rest} - E_{task}} \times 100
+\]</span></p>
+<ul>
+<li><span class="math inline">\(E_{task}\)</span>: 작업 시 대사량 (kcal/min)</li>
+<li><span class="math inline">\(E_{rest}\)</span>: 휴식 시 대사량 (kcal/min)</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 13-6: 시간당 휴식·작업 시간의 배분
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>PWC가 <strong>15 kcal/min</strong>인 근로자가 1일 8시간 물체 운반 작업을 한다. 작업대사량 <span class="math inline">\(E_{task} = 6.5\)</span> kcal/min, 휴식 시 대사량 <span class="math inline">\(E_{rest} = 1.5\)</span> kcal/min일 때, 매 시간당 휴식시간과 작업시간을 배분하라. (Hertig 식 적용)</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>정답: 휴식 18분, 작업 42분</strong></p>
+<p><span class="math display">\[
+T_{rest} = \frac{15/3 - 6.5}{1.5 - 6.5} = \frac{-1.5}{-5} = 0.3
+\quad\Rightarrow\quad 18 \ \text{분 휴식}, \ 42 \ \text{분 작업}
+\]</span></p>
+<p><strong>계산 요령</strong>: 작업대사량이 허용 수준(<span class="math inline">\(PWC/3 = 5\)</span>)을 넘고 휴식 대사량이 그보다 낮으므로, 분자와 분모가 <strong>모두 음수</strong>로 나오는 것이 정상이다.</p>
+<p><strong>검산(개념 확인)</strong>: <span class="math inline">\(0.7 \times 6.5 + 0.3 \times 1.5 = 5.0\)</span> kcal/min — 배분 후의 가중평균 대사량이 정확히 <span class="math inline">\(PWC/3\)</span>이 된다. 이것이 Hertig 식이 하는 일이다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="fig-pwc-hertig" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pwc-hertig-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w13_pwc_hertig.svg" class="img-fluid figure-img" style="width:82.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pwc-hertig-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;14.4: PWC와 작업–휴식 배분 — 작업 중의 초과분을 휴식 중의 상쇄분으로 되갚는다
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-pwc-hertig" class="quarto-xref">그림&nbsp;<span>14.4</span></a> 은 Hertig 식이 무엇을 하는 계산인지를 넓이로 보여 준다. 작업대사량 6.5 kcal/min은 지속 가능한 상한(<span class="math inline">\(PWC/3 = 5\)</span>)을 1.5만큼 넘고, 휴식대사량 1.5는 그보다 3.5만큼 낮다. 한 시간을 42분과 18분으로 나누면 초과분(<span class="math inline">\(42 \times 1.5\)</span>)과 상쇄분(<span class="math inline">\(18 \times 3.5\)</span>)의 넓이가 같아지고, 평균 부하가 정확히 상한선 위로 되돌아온다. 휴식은 “쉬는 시간”이 아니라 <strong>초과한 만큼을 되갚는 시간</strong>이라는 것이 이 그림의 요지다.</p>
+</section>
+<section id="최대-허용-계속작업시간-t_end" class="level4">
+<h4 class="anchored" data-anchor-id="최대-허용-계속작업시간-t_end">최대 허용 계속작업시간 (<span class="math inline">\(T_{end}\)</span>)</h4>
+<p>작업대사량 <span class="math inline">\(E\)</span>(kcal/min)로부터 쉬지 않고 계속 일할 수 있는 최대 허용시간을 구하는 관계식도 있다.</p>
+<p><span class="math display">\[
+\log T_{end} = 3.720 - 0.1949\,E
+\]</span></p>
+<p>예를 들어 작업대사량이 7 kcal/min이면 <span class="math inline">\(\log T_{end} = 3.720 - 0.1949 \times 7 = 2.3557\)</span>, 즉 <span class="math inline">\(T_{end} \approx 227\)</span>분이고, 8.75 kcal/min으로 올라가면 약 103분으로 줄어든다. 이 식에 들어가는 <span class="math inline">\(E\)</span>는 <strong>작업대사량</strong>이다 — 식이 묻는 것은 “이 강도의 작업을 얼마나 지속할 수 있는가”이므로, 그 사람의 PWC나 휴식 시 대사량은 이 계산과 무관한 조건이다.</p>
+</section>
+</section>
+<section id="국소피로와-작업강도ms" class="level3">
+<h3 class="anchored" data-anchor-id="국소피로와-작업강도ms">4.5 국소피로와 작업강도(%MS)</h3>
+<p>전신이 아니라 <strong>특정 근육군</strong>에만 부하가 걸리는 경우가 국소피로다. 정량 지표는 <strong>작업강도 %MS</strong> — 작업이 요구하는 힘이 그 사람의 최대 힘의 몇 %인지다.</p>
+<p><span class="math display">\[
+\%MS = \frac{RF}{MS} \times 100
+\]</span></p>
+<ul>
+<li><span class="math inline">\(MS\)</span> (maximum strength): 근로자가 가진 <strong>최대의 힘</strong></li>
+<li><span class="math inline">\(RF\)</span> (required force): <strong>작업이 요구하는 힘</strong></li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>계산의 두 가지 약속
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>약한 쪽을 기준으로 한다.</strong> 양손의 힘이 다르면 <span class="math inline">\(MS\)</span>는 <strong>작은 값</strong>을 쓴다. 보호는 언제나 취약한 쪽을 기준으로 설계한다 — 강한 손이 버틸 수 있어도 약한 손이 먼저 피로해지기 때문이다</li>
+<li><strong>양손으로 들면 한 손의 부담은 무게의 1/2이다.</strong> 무게 <span class="math inline">\(W\)</span>인 물체를 두 손으로 들 때 한 손의 <span class="math inline">\(RF = W/2\)</span></li>
+</ol>
+<p>단위 kp(kilopond)는 질량 1 kg을 중력이 당기는 힘이므로, 무게 kg 값과 그대로 나누어 쓸 수 있다.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 13-7: 작업강도 %MS
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>약한 쪽 손의 힘이 평균 <strong>45 kp</strong>인 근로자가 무게 <strong>10 kg</strong>인 상자를 <strong>두 손</strong>으로 들어 올릴 때 한 손의 작업강도(%MS)는?</p></li>
+<li><p>왼손잡이 근로자의 오른손 평균 힘이 <strong>40 kp</strong>, 왼손이 <strong>50 kp</strong>이다. 무게 <strong>4 kg</strong>인 상자를 두 손으로 들 때 작업강도(%MS)는?</p></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>(1) 11.1%</strong> — <span class="math inline">\(RF = 10/2 = 5\)</span> kp, <span class="math inline">\(\%MS = (5/45) \times 100 = 11.1\%\)</span></p>
+<p><strong>(2) 5%</strong> — 기준은 약한 쪽인 <strong>오른손(40 kp)</strong>, 두 손으로 드니 한 손 부담은 2 kg. <span class="math inline">\(\%MS = (2/40) \times 100 = 5\%\)</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>작업강도가 정해지면 국소피로가 오지 않는 <strong>적정 작업시간</strong>을 구할 수 있다.</p>
+<p><span class="math display">\[
+\text{적정 작업시간(초)} = 671{,}120 \times \%MS^{-2.222}
+\]</span></p>
+<ul>
+<li><strong>작업강도가 10% 미만이면 국소피로는 오지 않는다</strong>고 본다</li>
+<li>지수가 음수이므로 적정 작업시간은 작업강도에 <strong>반비례</strong>한다 (비례가 아니다). %MS가 10%일 때 약 4,025초, 20%일 때 약 863초 — <strong>작업강도가 2배가 되면 적정 작업시간은 1/4 이하로</strong> 줄어든다. 무거운 작업을 “조금만 더” 시키는 것이 왜 위험한지를 이 비선형성이 설명한다</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="전신피로의-판정-회복기-심박수-국소피로의-판정-근전도emg" class="level2">
+<h2 class="anchored" data-anchor-id="전신피로의-판정-회복기-심박수-국소피로의-판정-근전도emg">5. 전신피로의 판정 — 회복기 심박수 · 국소피로의 판정 — 근전도(EMG)</h2>
+<section id="전신피로의-판정-회복기-심박수" class="level3">
+<h3 class="anchored" data-anchor-id="전신피로의-판정-회복기-심박수">5.1 전신피로의 판정 — 회복기 심박수</h3>
+<p>피로는 주관적 호소만으로 판단할 수 없으므로 객관적 지표가 필요하다. 전신피로의 지표는 §4.2에서 본 산소부채의 논리를 그대로 쓴다 — <strong>회복이 얼마나 빠른가</strong>를 심박수로 본다.</p>
+<p>작업 종료 직후 30~60초, 60~90초, 150~180초 구간의 평균 맥박수를 각각 <span class="math inline">\(HR_{30\text{-}60}\)</span>, <span class="math inline">\(HR_{60\text{-}90}\)</span>, <span class="math inline">\(HR_{150\text{-}180}\)</span>이라 할 때:</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>심한 전신피로의 판정 기준
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+HR_{30\text{-}60} &gt; 110 \quad \text{이고} \quad
+\left(HR_{150\text{-}180} - HR_{60\text{-}90}\right) &lt; 10
+\]</span></p>
+<p>즉 <strong>① 작업 직후 맥박이 110을 넘고, ② 3분이 다 되도록 맥박이 떨어지지 않는(두 구간의 차가 10 미만)</strong> 경우를 심한 전신피로 상태로 판단한다. 기준의 두 축 — 절대 수준(110)과 회복 속도(차이 10) — 을 함께 보아야 한다. 맥박이 높아도 빠르게 떨어지면 정상 회복이고, 높은 채로 떨어지지 않는 것이 문제다.</p>
+</div>
+</div>
+<div id="fig-recovery-hr" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-recovery-hr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w13_recovery_hr.svg" class="img-fluid figure-img" style="width:82.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-recovery-hr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;14.5: 회복기 심박수 — 정상 회복과 회복 지연. 절대 수준(110)과 회복 속도를 함께 본다
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-recovery-hr" class="quarto-xref">그림&nbsp;<span>14.5</span></a> 의 두 곡선은 작업 직후의 높이가 아니라 <strong>기울기</strong>에서 갈린다. 아래쪽 곡선은 출발점부터 110 미만이고 3분에 걸쳐 계속 떨어지지만, 위쪽 곡선은 110을 넘긴 채 두 번째와 세 번째 구간이 거의 같은 높이에 머문다 — 산소부채가 좀처럼 갚아지지 않는 상태이며, 이것이 심한 전신피로의 판정 근거다.</p>
+<p>전신피로의 생리학적 원인은 §4의 에너지 대사에서 자연스럽게 따라 나온다: <strong>산소 공급의 부족, 작업강도의 증가, 혈중 포도당 농도의 저하, 근육 내 글리코겐량의 감소</strong>다. 글리코겐은 연료이므로 작업이 강할수록 <strong>소모되어 감소</strong>하고(증가가 아니다), 작업강도가 높을수록 혈중 포도당 농도는 급속히 떨어져 피로감이 빨리 온다. 근육 내 글리코겐 농도의 변화 양상은 작업자의 훈련 유무에 따라 차이를 보인다.</p>
+</section>
+<section id="국소피로의-판정-근전도emg" class="level3">
+<h3 class="anchored" data-anchor-id="국소피로의-판정-근전도emg">5.2 국소피로의 판정 — 근전도(EMG)</h3>
+<p>국소피로의 객관적 평가에는 <strong>근전도(EMG, electromyogram)</strong>가 많이 사용된다. 피로한 근육은 정상 근육과 뚜렷이 다른 전기적 신호를 낸다.</p>
+<div id="tbl-emg-fatigue" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-emg-fatigue-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;14.13: 피로한 근육의 근전도 소견
+</figcaption>
+<div aria-describedby="tbl-emg-fatigue-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>지표</th>
+<th>피로한 근육에서의 변화</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>총전압</strong></td>
+<td><strong>증가</strong></td>
+</tr>
+<tr class="even">
+<td><strong>평균 주파수</strong></td>
+<td><strong>감소</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>저주파수(0~40 Hz) 영역의 힘</strong></td>
+<td><strong>증가</strong></td>
+</tr>
+<tr class="even">
+<td><strong>고주파수(40~200 Hz) 영역의 힘</strong></td>
+<td><strong>감소</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>네 지표는 하나의 그림으로 요약된다: 피로한 근육은 같은 힘을 내기 위해 <strong>더 큰 신호를 더 느리게(저주파로)</strong> 낸다 — 전압은 올라가고 주파수는 내려간다.</p>
+</section>
+</section>
+<section id="피로의-검사방법과-증상" class="level2">
+<h2 class="anchored" data-anchor-id="피로의-검사방법과-증상">6. 피로의 검사방법과 증상</h2>
+<p>피로의 검사방법 중 <strong>CMI(Cornell Medical Index)</strong>는 피로 <strong>자각증상</strong>을 조사하는 <strong>주관적</strong> 방법이고, 생리적 기능검사·생화학적 검사·생리심리적 검사는 객관적 방법이다. 피로의 증상으로는 맛·냄새·시각·촉각 등 <strong>지각기능의 둔화</strong>, 혈중 <strong>이산화탄소량 증가</strong>로 인한 얕고 빠른 호흡(심하면 호흡곤란), 그리고 <strong>혈당치 저하와 젖산·탄산량 증가</strong>에 따른 <strong>산혈증</strong>이 나타난다.</p>
+<p>축적되는 <strong>피로물질</strong>은 젖산, 크레아틴, 초성포도당 등이다. 글리코겐은 피로물질이 아니라 <strong>에너지원</strong>이다 — 피로할 때 글리코겐은 쌓이는 것이 아니라 고갈된다(§5.1). 한편 피로의 배경이 되는 스트레스는 <strong>혈압 상승</strong>, 근육의 긴장, 위산 분비 증가, 아드레날린 분비 증가 같은 신체반응을 일으킨다.</p>
+</section>
+<section id="곤비와-지적속도-산업피로의-대책" class="level2">
+<h2 class="anchored" data-anchor-id="곤비와-지적속도-산업피로의-대책">7. 곤비와 지적속도 · 산업피로의 대책</h2>
+<section id="곤비와-지적속도" class="level3">
+<h3 class="anchored" data-anchor-id="곤비와-지적속도">7.1 곤비와 지적속도</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>곤비(困憊) — 회복되지 않는 피로
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>피로에도 단계가 있다. 하룻밤 자면 풀리는 보통피로와 달리, 심한 노동 후의 피로 현상으로 <strong>단기간의 휴식으로는 회복될 수 없는 병적 상태 (발병 단계의 피로)</strong>를 <strong>곤비</strong>라 한다. 전신피로·국소피로가 피로의 “부위”에 따른 구분이라면, 곤비는 피로의 “깊이”가 회복 가능 범위를 벗어난 상태다. 작업관리의 목표는 피로가 곤비에 이르기 전에 회복의 기회를 설계하는 것이다.</p>
+</div>
+</div>
+<p><strong>지적속도(至適速度)</strong>는 산업피로를 가장 적게 하면서 생산량을 최고로 올릴 수 있는 <strong>경제적인 작업속도</strong>다. 가장 빠른 속도가 아니라 <strong>피로와 생산성의 균형점</strong>이라는 데 뜻이 있다 — 속도를 올릴수록 단기 생산량은 늘지만 피로 누적으로 능률과 안전이 무너지므로, 최적점은 최대점보다 낮은 곳에 있다.</p>
+</section>
+<section id="산업피로의-대책" class="level3">
+<h3 class="anchored" data-anchor-id="산업피로의-대책">7.2 산업피로의 대책</h3>
+<div id="tbl-fatigue-measures" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-fatigue-measures-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;14.14: 산업피로의 대책
+</figcaption>
+<div aria-describedby="tbl-fatigue-measures-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>대책</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>휴식</strong></td>
+<td>작업 과정에 적절한 <strong>휴식시간을 삽입</strong>한다. 피로한 뒤 한 번에 장시간 쉬는 것보다 <strong>여러 번으로 나누어</strong> 휴식하는 것이 효과적이다</td>
+</tr>
+<tr class="even">
+<td><strong>동작·자세</strong></td>
+<td>불필요한 동작을 피해 에너지 소모를 줄인다. <strong>정적인 자세를 유지하는 작업은 동적인 작업으로 전환</strong>한다. 물체와 눈의 거리, 신체 부위의 위치·높이 등 작업 자세를 적정하게 유지한다</td>
+</tr>
+<tr class="odd">
+<td><strong>작업량</strong></td>
+<td>작업능력에는 <strong>개인차</strong>가 있으므로 개인별로 작업량을 조정하고, 일·월간 작업량을 적정화한다</td>
+</tr>
+<tr class="even">
+<td><strong>영양·환경</strong></td>
+<td>커피·홍차·엽차와 <strong>비타민 B₁</strong>을 공급한다(§4.1). 충분한 수면을 취한다. 작업환경을 정리·정돈하고, 작업 전·후 간단한 체조를 실시한다</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>두 가지 원리를 짚어 두자. <strong>첫째, 정적 작업이 동적 작업보다 피로를 키운다.</strong> 직관과 달리 정적 자세는 같은 근육을 지속적으로 수축시켜 혈류를 압박하고 국소피로를 빠르게 누적시키므로, 대책의 방향은 언제나 <strong>정적 → 동적</strong>이다(<a href="../chapters/w12_ergonomics.html">12주차</a>의 정적 부하 논의와 이어진다). <strong>둘째, 휴식의 형태는 작업의 성격에 따라 다르다</strong> — <strong>머리를 쓴 뒤에는 몸을 움직이고, 몸을 쓴 뒤에는 쉬게 한다.</strong> 정신신경 작업 후에는 몸을 가볍게 움직이는 휴식이 좋지만, 전신 근육을 쓰는 작업 후의 휴식 중에까지 체조를 시키는 것은 회복에 도움이 되지 않는다(작업 <strong>전·후</strong>의 간단한 체조는 일반적 피로방지 대책으로 유효하다). 또한 “고도의 기계화와 분업화”는 그 자체로 피로방지 대책이 아니다 — 기계화가 단조로운 반복작업을 낳으면 오히려 새로운 부담이 된다.</p>
+</section>
+</section>
+<section id="작업시간-관리와-교대야간작업-사람을-작업에-맞추는-쪽-적성검사와-산업-스트레스" class="level2">
+<h2 class="anchored" data-anchor-id="작업시간-관리와-교대야간작업-사람을-작업에-맞추는-쪽-적성검사와-산업-스트레스">8. 작업시간 관리와 교대·야간작업 · 사람을 작업에 맞추는 쪽 — 적성검사와 산업 스트레스</h2>
+<section id="작업시간-관리와-교대야간작업" class="level3">
+<h3 class="anchored" data-anchor-id="작업시간-관리와-교대야간작업">8.1 작업시간 관리와 교대·야간작업</h3>
+<p>이 장에서 다룬 정량적 도구들 — 실동률, 계속작업 한계시간, Hertig 배분, <span class="math inline">\(T_{end}\)</span>, 적정 작업시간 — 은 모두 하나의 관리적 대책으로 수렴한다: <strong>작업–휴식 주기의 설계</strong>다. 여기에 몇 가지 원칙을 더한다. <strong>교대근무</strong>는 노출과 부하를 나누는 관리적 대책이다 — 여러 명이 번갈아 작업하면 개인당 노출 시간과 신체 부하가 줄지만, §1.3에서 본 한계(노출 인원의 증가, 근본 대책이 아니라는 점)는 그대로 적용된다. <strong>야간작업</strong>은 “시간의 격리”로 활용될 수 있으나(§1.2), 작업을 수행하는 당사자의 부담까지 없애 주지는 않는다. 그리고 <strong>야간 근무를 장기간 연속시키지 않는다</strong> — “신체 리듬의 적응을 위해 야간 근무를 연속 7일 이상 실시한다”는 방식은 피로 관리의 원칙에 어긋나며, 회복의 기회를 빼앗아 피로를 곤비 쪽으로 밀어붙인다.</p>
+</section>
+<section id="사람을-작업에-맞추는-쪽-적성검사와-산업-스트레스" class="level3">
+<h3 class="anchored" data-anchor-id="사람을-작업에-맞추는-쪽-적성검사와-산업-스트레스">8.2 사람을 작업에 맞추는 쪽 — 적성검사와 산업 스트레스</h3>
+<p>작업관리의 대부분은 작업을 사람에게 맞추는 일이지만, 그 반대 방향 — 사람을 작업에 배치하는 일 — 에도 근거가 필요하다. <strong>적성검사</strong>는 그 근거를 두 층에서 모은다.</p>
+<div id="tbl-aptitude-tests" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-aptitude-tests-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;14.15: 적성검사의 두 층
+</figcaption>
+<div aria-describedby="tbl-aptitude-tests-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 30%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>검사</th>
+<th>보는 것</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>생리적 적성검사</strong></td>
+<td>감각기능검사(시력·청력·색각), 심폐기능검사, 체력검사</td>
+<td>몸이 그 작업의 부하를 감당하는가</td>
+</tr>
+<tr class="even">
+<td><strong>심리학적 적성검사</strong></td>
+<td>지능검사, 지각동작검사, 인성검사, 기능검사</td>
+<td>판단·동작·성향이 그 작업에 맞는가</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>배치의 원칙은 검사로 사람을 걸러 내는 것이 아니라, 개인의 특성과 작업의 요구를 맞추어 <strong>부적합한 배치를 피하는 것</strong>이다. 검사 결과는 작업 설계와 교육의 출발 자료이지 근로자 평가의 근거가 아니다.</p>
+<p>작업 부하 가운데 정량화가 가장 어려운 것이 <strong>산업 스트레스</strong>다. 스트레스의 결과는 세 갈래로 나타난다.</p>
+<div id="tbl-stress-outcomes" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-stress-outcomes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;14.16: 산업 스트레스의 결과
+</figcaption>
+<div aria-describedby="tbl-stress-outcomes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>결과</th>
+<th>예</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>심리적</strong></td>
+<td>불안·우울, 수면장애, 가정 문제, 성적 역기능</td>
+</tr>
+<tr class="even">
+<td><strong>행동적</strong></td>
+<td>결근·이직, 돌발적 사고, 약물·알코올 남용</td>
+</tr>
+<tr class="odd">
+<td><strong>생리적</strong></td>
+<td>혈압 상승, 소화기 증상, 면역 저하</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>행동적 결과에 <strong>사고</strong>가 들어 있다는 점이 산업위생에서 스트레스를 다루는 이유다. 피로와 마찬가지로 스트레스도 작업 설계(자율성·요구·지지)로 관리해야 하며, 개인의 회복력에만 맡기는 것은 관리가 아니다. 이런 사람 쪽 조정을 인간공학이 설계에 반영하는 절차는 세 단계로 정리된다 — <strong>준비 단계</strong>(문제와 자료의 파악) → <strong>선택 단계</strong>(직종 간 연결성, 공장 설계의 기능적 특성, 경제성과 제한점을 고려한 세부 설계) → <strong>적용 단계</strong> (실행과 평가). 12주차의 설계 원칙이 이 절차의 둘째 단계에 놓인다.</p>
+<hr>
+</section>
+</section>
+<section id="요약" class="level2">
+<h2 class="anchored" data-anchor-id="요약">요약</h2>
+<div id="tbl-summary" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;14.17: 13주차 핵심 요약
+</figcaption>
+<div aria-describedby="tbl-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 62%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>개념</th>
+<th>핵심 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>대치의 3분류</strong></td>
+<td>물질 · 공정 · 시설(장비)의 변경 — “사람의 변경”은 대치가 아니다. 판단 기준은 덜 유해한 <strong>방향</strong></td>
+</tr>
+<tr class="even">
+<td><strong>격리</strong></td>
+<td>국제: 거리·장벽·시간 / 국내: 거리·시간·공정(시설)·작업자(보호구 포함). 격리는 분리, 밀폐는 차단</td>
+</tr>
+<tr class="odd">
+<td><strong>관리적 대책</strong></td>
+<td>노출량 = 농도 × 시간. 시간 단축·교대근무·교육훈련 — 고독성 물질엔 부적절, 노출 인원 증가, 근본 대책 아님</td>
+</tr>
+<tr class="even">
+<td><strong>보호구의 한계</strong></td>
+<td>착용자만 보호 · 밀착·착용 의존 · 유지비 높음 · 허위 안전감 → 최후 수단. 그러나 필요한 상황에서는 <strong>단 몇 분이라도 예외 없이</strong> 착용</td>
+</tr>
+<tr class="odd">
+<td><strong>호흡보호구 선정</strong></td>
+<td>입자→방진, 가스→방독 / 산소 18% 미만·IDLH → 공기공급식(SCBA). 공기정화식(방진·방독·전동식)은 산소를 만들지 못한다</td>
+</tr>
+<tr class="even">
+<td><strong>방진마스크</strong></td>
+<td>격리식/직결식(연결관 유무)=분리식, 안면부여과식. 특급 99.95/99.0%, 1급 94%, 2급 80%. 특급=독성 강한 분진·석면, 1급=열적·기계적 생성 분진. <strong>배기밸브 없는 안면부여과식은 특급·1급 장소 사용 금지</strong>. 여과재에 활성탄 없음</td>
+</tr>
+<tr class="odd">
+<td><strong>방독마스크</strong></td>
+<td>흡수제: 활성탄·실리카겔·소다라임. 표시색: 유기 갈색·암모니아 녹색·아황산 노란색. 시험가스: 유기화합물용 시클로헥산, 할로겐용 염소, 아황산용 SO₂ 등 <strong>종류별로 다름</strong>. 판단은 <strong>파과곡선</strong>. 유효시간 <span class="math inline">\(= t_s C_s / C_w\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>보호계수</strong></td>
+<td><span class="math inline">\(PF = C_0/C_1\)</span> (농도비), <span class="math inline">\(MUC = TLV \times APF\)</span>, 요구 APF = 예상농도/노출기준. 전제는 <strong>밀착</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>청력보호구</strong></td>
+<td>귀마개 EP-1(저음~고음 전부 차음)·EP-2(고음만, 회화음 통과), 귀덮개 EM. NRR 귀마개 15~30, 귀덮개 20~35 dB. 실제 감소량 <span class="math inline">\(= (NRR-7)\times0.5\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>그 밖의 보호구</strong></td>
+<td>안전모 AB(낙하·비래·추락)/AE(+감전)/ABE(전부), 안전대(2 m 이상 추락), 안전화, 보안경(눈)/보안면(눈·얼굴), 방열복·방한복. <strong>위험을 모두 덮는 최소 사양</strong>을 고른다</td>
+</tr>
+<tr class="odd">
+<td><strong>화학물질용 보호구</strong></td>
+<td>안전인증은 일부 화학물질만 시험 → <strong>취급 물질별 보호성능을 제조업체·사용설명서로 확인</strong>한 뒤 선정</td>
+</tr>
+<tr class="even">
+<td><strong>보호구 프로그램</strong></td>
+<td>지침 4요소: 적절성 확인·배분 / 유지관리·보관 / 사용설명서 제공 / 올바른 사용법. 평가 5항목: 위험 적합성·조절 가능성·착용자의 이해(시인성·정보교환)·건강상태·보호구 간 조화. 교체는 <strong>제조자의 교환 시기·유효기간</strong>을 따르고, 복잡한 수리는 전문가만</td>
+</tr>
+<tr class="odd">
+<td><strong>에너지 대사</strong></td>
+<td>최초 동원은 ATP. 혐기성 = ATP·CP·글리코겐·포도당. 산소부채 = 젖산 제거용 추가 산소소비</td>
+</tr>
+<tr class="even">
+<td><strong>RMR</strong></td>
+<td><span class="math inline">\((\text{작업 시} - \text{안정 시})/\text{기초대사량}\)</span>. 강작업 2~4, 중작업 4~7. 실동률 <span class="math inline">\(= 85 - 5\,RMR\)</span>. 한계시간 <span class="math inline">\(\log T = 3.724 - 3.25\log RMR\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>작업–휴식 배분</strong></td>
+<td>8시간 상한 <span class="math inline">\(= PWC/3\)</span>. Hertig <span class="math inline">\(T_{rest} = \dfrac{PWC/3 - E_{task}}{E_{rest} - E_{task}}\)</span>. <span class="math inline">\(\log T_{end} = 3.720 - 0.1949E\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>국소피로(%MS)</strong></td>
+<td><span class="math inline">\(\%MS = (RF/MS) \times 100\)</span> (약한 손, 양손이면 <span class="math inline">\(W/2\)</span>). 10% 미만이면 국소피로 없음. 적정 작업시간(초) <span class="math inline">\(= 671{,}120 \times \%MS^{-2.222}\)</span> (반비례)</td>
+</tr>
+<tr class="odd">
+<td><strong>피로 판정</strong></td>
+<td>전신: <span class="math inline">\(HR_{30\text{-}60} &gt; 110\)</span> 이고 회복 지연(차 &lt; 10) / 국소: EMG 전압 ↑ · 주파수 ↓ / CMI는 주관적 검사</td>
+</tr>
+<tr class="even">
+<td><strong>곤비 · 지적속도</strong></td>
+<td>곤비 = 단기 휴식으로 회복 안 되는 병적 피로 / 지적속도 = 피로 최소·생산 최고의 경제적 작업속도</td>
+</tr>
+<tr class="odd">
+<td><strong>적성검사·스트레스</strong></td>
+<td>생리적(감각기능·심폐기능·체력) / 심리학적(지능·지각동작·인성·기능) · 스트레스 결과 = 심리적·행동적(사고)·생리적 · 인간공학 절차 준비 → 선택 → 적용</td>
+</tr>
+<tr class="even">
+<td><strong>피로 대책</strong></td>
+<td>휴식은 나누어, 정적 → 동적, 개인별 작업량, 비타민 B₁·수면. 야간 근무의 장기 연속 금지</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<hr>
+</section>
+<section id="연습문제" class="level2">
+<h2 class="anchored" data-anchor-id="연습문제">연습문제</h2>
+<section id="문제-1.-관리대책의-분류와-우선순위" class="level3">
+<h3 class="anchored" data-anchor-id="문제-1.-관리대책의-분류와-우선순위">문제 1. 관리대책의 분류와 우선순위</h3>
+<p>용접 작업장에서 금속흄 노출이 노출기준을 초과했다. 다음 대책을 각각 관리 위계상의 범주로 분류하고, 효과적인 순서대로 나열하라.</p>
+<p>A. 용접 작업자에게 방진마스크(1급) 지급 B. 용접봉을 저흄(low-fume) 용접봉으로 교체 C. 용접 부스에 국소배기장치 설치 D. 용접 공정을 자동화하고 작업자는 원격 조종실에서 조작</p>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>분류</strong>: B — 대체(발생원 자체의 저감), C — 공학적 대책(환기), D — 공학적 대책(격리: 공정·시설의 격리이자 작업자의 분리), A — 개인보호구</p>
+<p><strong>순서: D → B → C → A</strong></p>
+D는 작업자가 발생원 근처에 존재하지 않게 만들므로 노출을 사실상 제거한다. B는 발생량 자체를 줄이고, C는 발생한 흄을 확산 전에 포집하지만 발생은 계속된다. A는 마지막 경계로, 착용자만 밀착이 유지되는 동안만 보호한다. 현실에서는 D의 비용 때문에 B+C+A의 병행이 흔하지만, 판단의 출발점은 언제나 위계의 위쪽이다.
+</details>
+</section>
+<section id="문제-2.-호흡보호구의-선정" class="level3">
+<h3 class="anchored" data-anchor-id="문제-2.-호흡보호구의-선정">문제 2. 호흡보호구의 선정</h3>
+<p>톨루엔(노출기준 50 ppm)을 취급하는 작업장의 예상 농도가 600 ppm이다. 산소농도는 20.9%로 정상이고 IDLH에는 미치지 않는다.</p>
+<ol type="a">
+<li>방진마스크 특급(분리식, 포집효율 99.95%)을 지급하는 것이 적절한가?</li>
+<li>이 작업에 요구되는 최소 APF를 구하라.</li>
+<li>APF 10인 반면형 방독마스크로 충분한가? 부족하다면 어떤 대안이 필요한가?</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>a. 부적절하다.</strong> 톨루엔은 증기이므로 여과재로 입자를 거르는 방진마스크로는 전혀 보호되지 않는다. 포집효율 등급이 아무리 높아도 유해인자의 <strong>형태</strong>가 맞지 않으면 무의미하다. 유기화합물용(갈색) 정화통을 쓰는 방독마스크가 출발점이다.</p>
+<p><strong>b.</strong> <span class="math inline">\(\text{요구 최소 } APF = 600/50 = 12\)</span></p>
+<strong>c.&nbsp;부족하다.</strong> APF 10 반면형의 최대사용농도는 <span class="math inline">\(MUC = 50 \times 10 = 500\)</span> ppm으로 예상 농도 600 ppm보다 낮다. APF 12 이상의 보호구(예: 전면형 방독마스크)를 선정해야 하며, 어떤 경우든 밀착도 검사와 정화통 관리(파과곡선 기준 교체)가 전제다.
+</details>
+</section>
+<section id="문제-3.-정화통-유효시간" class="level3">
+<h3 class="anchored" data-anchor-id="문제-3.-정화통-유효시간">문제 3. 정화통 유효시간</h3>
+<p>사염화탄소 0.4%에서 100분 사용 가능한 정화통을 장착한 방독마스크를 사염화탄소 농도 0.15%인 작업장에서 사용한다.</p>
+<ol type="a">
+<li>유효시간을 구하라.</li>
+<li>착용 중 근로자가 “약한 가스 냄새가 나지만 계산상 유효시간이 남았으니 계속 쓰겠다”고 한다. 어떻게 판단해야 하는가?</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>a.</strong> <span class="math inline">\(\text{유효시간} = \dfrac{100 \times 0.4}{0.15} = 266.7 \approx 267\)</span>분</p>
+<strong>b. 즉시 새 정화통으로 교체해야 한다.</strong> 냄새가 난다는 것은 이미 파과가 시작되었다는 뜻이다. 유효시간 계산은 시험 조건을 전제한 추정치일 뿐이며, 사용 가능 여부의 정확한 판단 도구는 파과곡선이다. 냄새는 “이미 늦었다”는 신호다.
+</details>
+</section>
+<section id="문제-4.-청력보호구와-관리-위계" class="level3">
+<h3 class="anchored" data-anchor-id="문제-4.-청력보호구와-관리-위계">문제 4. 청력보호구와 관리 위계</h3>
+<p>프레스 작업장의 소음이 100 dB(A)이다. 사업주는 NRR 33 dB 귀마개를 지급하고 “이제 노출기준(90 dB(A)) 문제는 해결되었다”고 판단했다.</p>
+<ol type="a">
+<li>실무 원칙(7 dB 보정 후 50%만 기대)에 따라 착용 시 실제 노출 수준을 평가하라.</li>
+<li>이 판단의 문제점을 관리 위계의 관점에서 두 가지 이상 지적하라.</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>a.</strong> 실제 감소량 <span class="math inline">\(= (33 - 7) \times 0.5 = 13\)</span> dB, 노출 수준 <span class="math inline">\(= 100 - 13 = 87\)</span> dB(A) — 계산상으로는 기준 이하가 된다.</p>
+<p><strong>b.</strong></p>
+<ol type="1">
+<li><strong>보호구는 최후 수단이다</strong> — 저소음 공정으로의 변경(공정의 대치), 소음원의 방음 상자 밀폐, 방음 조종실(격리) 같은 상위 대책의 검토 없이 보호구로 직행한 것은 위계를 건너뛴 판단이다</li>
+<li><strong>효과가 착용에 의존한다</strong> — 계산된 83.5 dB(A)는 매일, 전 시간, 올바르게 삽입했을 때의 값이다. 잠깐이라도 벗으면 100 dB(A)에 그대로 노출된다. 소음 자체는 조금도 줄지 않았다</li>
+<li>부수적으로, 차음이 큰 보호구는 경보음·대화를 가려 다른 위험을 만들 수 있다</li>
+</ol>
+</details>
+</section>
+<section id="문제-5.-rmr과-실동률" class="level3">
+<h3 class="anchored" data-anchor-id="문제-5.-rmr과-실동률">문제 5. RMR과 실동률</h3>
+<p>어떤 운반 작업의 작업 시 소요열량이 2,000 kcal, 안정 시 소요열량이 500 kcal, 기초대사량이 500 kcal이다. 작업대사율(RMR)과 실동률을 구하고, 이 작업이 어느 작업 구분에 속하는지 판정하라.</p>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><span class="math display">\[
+RMR = \frac{2000 - 500}{500} = 3.0, \qquad
+\text{실동률} = 85 - 5 \times 3 = 70\%
+\]</span></p>
+RMR 2~4 구간이므로 <strong>강작업</strong>이다 — 근무시간의 30%는 회복에 배정되어야 한다는 뜻이다.
+</details>
+</section>
+<section id="문제-6.-hertig-휴식배분" class="level3">
+<h3 class="anchored" data-anchor-id="문제-6.-hertig-휴식배분">문제 6. Hertig 휴식배분</h3>
+<p>PWC가 12 kcal/min인 근로자가 작업대사량 6 kcal/min인 작업을 한다. 휴식 시 대사량은 2 kcal/min이다.</p>
+<ol type="a">
+<li>이 근로자가 8시간 동안 피로 없이 지속할 수 있는 작업강도의 상한은?</li>
+<li>Hertig 식으로 매 시간당 휴식시간과 작업시간을 배분하라.</li>
+<li>배분 결과의 가중평균 대사량을 계산하여 a의 값과 일치함을 확인하라.</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>a.</strong> <span class="math inline">\(E_{8h} = PWC/3 = 12/3 = 4\)</span> kcal/min</p>
+<p><strong>b.</strong> <span class="math inline">\(T_{rest} = \dfrac{4 - 6}{2 - 6} = \dfrac{-2}{-4} = 0.5\)</span> → 휴식 30분, 작업 30분</p>
+<strong>c.</strong> <span class="math inline">\(0.5 \times 6 + 0.5 \times 2 = 4\)</span> kcal/min — 작업과 휴식의 가중평균이 정확히 <span class="math inline">\(PWC/3\)</span>이 된다. Hertig 식은 “평균 부하를 지속 가능 수준으로 되돌리는” 배분 도구다.
+</details>
+</section>
+<section id="문제-7.-ms와-적정-작업시간" class="level3">
+<h3 class="anchored" data-anchor-id="문제-7.-ms와-적정-작업시간">문제 7. %MS와 적정 작업시간</h3>
+<p>오른손잡이 근로자의 오른손 최대 힘이 50 kp, 왼손이 45 kp이다. 이 근로자가 무게 18 kg인 부품을 두 손으로 반복해서 들어 올린다.</p>
+<ol type="a">
+<li>작업강도(%MS)를 구하라.</li>
+<li>이 작업에서 국소피로를 우려해야 하는가? 그 판단 기준을 쓰라.</li>
+<li>적정 작업시간을 구하라. (<span class="math inline">\(20^{-2.222} \approx 1.286 \times 10^{-3}\)</span>)</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>a.</strong> 기준은 약한 쪽인 왼손(45 kp), 양손으로 드니 한 손 부담은 9 kg.</p>
+<p><span class="math display">\[
+\%MS = \frac{9}{45} \times 100 = 20\%
+\]</span></p>
+<p><strong>b. 우려해야 한다.</strong> 국소피로는 작업강도 10% 미만에서는 오지 않는다고 보는데, 이 작업은 20%로 그 기준을 훌쩍 넘는다.</p>
+<strong>c.</strong> 적정 작업시간 <span class="math inline">\(= 671{,}120 \times 20^{-2.222} \approx 863\)</span>초 (<span class="math inline">\(\approx\)</span> 14분). 약 14분마다 해당 근육군을 쉬게 하는 주기가 필요하다. 부품 무게가 절반(9 kg)이 되어 %MS가 10%로 떨어지면 적정 작업시간은 약 4,025초(약 67분)로 4배 이상 늘어난다 — 작업강도와 적정 작업시간의 비선형적 반비례 관계다.
+</details>
+<hr>
+</section>
+</section>
+<section id="참고문헌" class="level2">
+<h2 class="anchored" data-anchor-id="참고문헌">참고문헌</h2>
+<ol type="1">
+<li>Plog, B. A., &amp; Quinlan, P. J. (2012). <em>Fundamentals of Industrial Hygiene</em> (6th ed.). National Safety Council.</li>
+<li>DiNardi, S. R. (2003). <em>The Occupational Environment: Its Evaluation, Control, and Management</em> (2nd ed.). AIHA Press.</li>
+<li>Gardiner, K., &amp; Harrington, J. M. (2005). <em>Occupational Hygiene</em> (3rd ed.). Blackwell. — Control of Workplace Health Hazards.</li>
+<li>ACGIH (2024). <em>TLVs and BEIs</em>. ACGIH.</li>
+<li>NIOSH. <em>Hierarchy of Controls</em>. National Institute for Occupational Safety and Health.</li>
+<li>고용노동부. 「보호구 안전인증 고시」.</li>
+<li>한국산업안전보건공단 (2013). 「개인보호구의 사용 및 관리에 관한 기술지침」 (KOSHA GUIDE G-12-2013). KOSHA.</li>
+<li>한국산업안전보건공단 (2023). <em>산업위생학 개론</em>. KOSHA.</li>
+<li>정규철 외 (2020). <em>산업위생학</em>. 신광출판사.</li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "복사완료!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "복사완료!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/w12_ergonomics.html" class="pagination-link" aria-label="12주차. 인간공학과 근골격계질환">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">12주차. 인간공학과 근골격계질환</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/w14_law_management.html" class="pagination-link" aria-label="14주차. 산업보건 법규와 관리 제도">
+        <span class="nav-page-text"><span class="chapter-title">14주차. 산업보건 법규와 관리 제도</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

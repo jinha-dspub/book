@@ -1,0 +1,2583 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2주차. 작업환경측정 I — 측정 원리와 전략 – 산업위생 총론</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/w03_exposure_assessment2.html" rel="next">
+<link href="../chapters/w01_intro_history.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-df22de3841a4459d65a458d30db11513.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-1f5cceec34869e9b7e758f61c933684c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-df22de3841a4459d65a458d30db11513.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/w01_intro_history.html">Part I. 산업위생의 기초 (1~3주)</a></li><li class="breadcrumb-item"><a href="../chapters/w02_exposure_assessment1.html"><span class="chapter-title">2주차. 작업환경측정 I — 측정 원리와 전략</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">산업위생 총론</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="다크 모드 전환"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="검색"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">산업위생 총론</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I. 산업위생의 기초 (1~3주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w01_intro_history.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1주차. 산업위생 개론과 역사</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w02_exposure_assessment1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">2주차. 작업환경측정 I — 측정 원리와 전략</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w03_exposure_assessment2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3주차. 작업환경측정 II — 노출기준과 평가</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II. 유해인자와 건강영향 (4~7주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w04_toxicology1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4주차. 산업독성학 I — 독성학의 원리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w05_toxicology2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5주차. 산업독성학 II — 주요 화학물질과 건강장해</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w06_physical_agents1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6주차. 물리적 유해인자 I — 소음과 진동</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w07_physical_agents2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">7주차. 물리적 유해인자 II — 온열·이상기압·방사선·조명</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">중간고사 (8주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w08_midterm.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">8주차. 중간고사</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III. 작업환경 관리 (9~13주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w09_ventilation1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">9주차. 산업환기 I — 환기의 원리와 전체환기</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w10_ventilation2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">10주차. 산업환기 II — 국소배기장치</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w11_biological_agents.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">11주차. 생물학적 유해인자와 생물학적 모니터링</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w12_ergonomics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">12주차. 인간공학과 근골격계질환</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w13_ppe_work_management.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">13주차. 개인보호구와 작업관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part IV. 제도와 실무 (14~15주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w14_law_management.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">14주차. 산업보건 법규와 관리 제도</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w15_case_studies.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">15주차. 직업병 사례연구</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">기말고사 (16주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w16_final.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">16주차. 기말고사</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">부록</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendix/cert_map.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">부록. 자격증 과목 매핑</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#학습목표" id="toc-학습목표" class="nav-link active" data-scroll-target="#학습목표">학습목표</a></li>
+  <li><a href="#왜-측정하는가-측정의-목적과-노출의-개념-시료채취-전략-누구를-언제-어디서-얼마나" id="toc-왜-측정하는가-측정의-목적과-노출의-개념-시료채취-전략-누구를-언제-어디서-얼마나" class="nav-link" data-scroll-target="#왜-측정하는가-측정의-목적과-노출의-개념-시료채취-전략-누구를-언제-어디서-얼마나">1. 왜 측정하는가 — 측정의 목적과 노출의 개념 · 시료채취 전략 — 누구를, 언제, 어디서, 얼마나</a>
+  <ul>
+  <li><a href="#왜-측정하는가-측정의-목적과-노출의-개념" id="toc-왜-측정하는가-측정의-목적과-노출의-개념" class="nav-link" data-scroll-target="#왜-측정하는가-측정의-목적과-노출의-개념">1.1 왜 측정하는가 — 측정의 목적과 노출의 개념</a>
+  <ul class="collapse">
+  <li><a href="#측정의-목적" id="toc-측정의-목적" class="nav-link" data-scroll-target="#측정의-목적">측정의 목적</a></li>
+  <li><a href="#노출exposure과-호흡역" id="toc-노출exposure과-호흡역" class="nav-link" data-scroll-target="#노출exposure과-호흡역">노출(Exposure)과 호흡역</a></li>
+  </ul></li>
+  <li><a href="#시료채취-전략-누구를-언제-어디서-얼마나" id="toc-시료채취-전략-누구를-언제-어디서-얼마나" class="nav-link" data-scroll-target="#시료채취-전략-누구를-언제-어디서-얼마나">1.2 시료채취 전략 — 누구를, 언제, 어디서, 얼마나</a>
+  <ul class="collapse">
+  <li><a href="#위치-개인시료채취와-지역시료채취" id="toc-위치-개인시료채취와-지역시료채취" class="nav-link" data-scroll-target="#위치-개인시료채취와-지역시료채취">위치 — 개인시료채취와 지역시료채취</a></li>
+  <li><a href="#대상-동질노출그룹과-최고노출근로자" id="toc-대상-동질노출그룹과-최고노출근로자" class="nav-link" data-scroll-target="#대상-동질노출그룹과-최고노출근로자">대상 — 동질노출그룹과 최고노출근로자</a></li>
+  <li><a href="#시기-측정-주기" id="toc-시기-측정-주기" class="nav-link" data-scroll-target="#시기-측정-주기">시기 — 측정 주기</a></li>
+  <li><a href="#시간-얼마나-오래-잴-것인가" id="toc-시간-얼마나-오래-잴-것인가" class="nav-link" data-scroll-target="#시간-얼마나-오래-잴-것인가">시간 — 얼마나 오래 잴 것인가</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#가스증기의-채취" id="toc-가스증기의-채취" class="nav-link" data-scroll-target="#가스증기의-채취">2. 가스·증기의 채취</a>
+  <ul>
+  <li><a href="#왜-여과지로는-안-되는가" id="toc-왜-여과지로는-안-되는가" class="nav-link" data-scroll-target="#왜-여과지로는-안-되는가">2.1 왜 여과지로는 안 되는가</a></li>
+  <li><a href="#고체흡착관-활성탄관과-실리카겔관" id="toc-고체흡착관-활성탄관과-실리카겔관" class="nav-link" data-scroll-target="#고체흡착관-활성탄관과-실리카겔관">2.2 고체흡착관 — 활성탄관과 실리카겔관</a></li>
+  <li><a href="#액체흡수-임핀저와-버블러" id="toc-액체흡수-임핀저와-버블러" class="nav-link" data-scroll-target="#액체흡수-임핀저와-버블러">2.3 액체흡수 — 임핀저와 버블러</a></li>
+  <li><a href="#수동식-시료채취-확산포집기" id="toc-수동식-시료채취-확산포집기" class="nav-link" data-scroll-target="#수동식-시료채취-확산포집기">2.4 수동식 시료채취 — 확산포집기</a></li>
+  <li><a href="#순간시료채취-grab-sampling" id="toc-순간시료채취-grab-sampling" class="nav-link" data-scroll-target="#순간시료채취-grab-sampling">2.5 순간시료채취 (Grab Sampling)</a></li>
+  </ul></li>
+  <li><a href="#입자상-물질의-채취" id="toc-입자상-물질의-채취" class="nav-link" data-scroll-target="#입자상-물질의-채취">3. 입자상 물질의 채취</a>
+  <ul>
+  <li><a href="#크기가-다르면-다른-먼지다-크기별-시료채취의-논리" id="toc-크기가-다르면-다른-먼지다-크기별-시료채취의-논리" class="nav-link" data-scroll-target="#크기가-다르면-다른-먼지다-크기별-시료채취의-논리">3.1 크기가 다르면 다른 먼지다 — 크기별 시료채취의 논리</a></li>
+  <li><a href="#여과포집-분진-측정의-기본" id="toc-여과포집-분진-측정의-기본" class="nav-link" data-scroll-target="#여과포집-분진-측정의-기본">3.2 여과포집 — 분진 측정의 기본</a></li>
+  <li><a href="#입경분립-채취기구-사이클론과-직경분립충돌기" id="toc-입경분립-채취기구-사이클론과-직경분립충돌기" class="nav-link" data-scroll-target="#입경분립-채취기구-사이클론과-직경분립충돌기">3.3 입경분립 채취기구 — 사이클론과 직경분립충돌기</a></li>
+  </ul></li>
+  <li><a href="#유량-보정-공시료와-정도관리" id="toc-유량-보정-공시료와-정도관리" class="nav-link" data-scroll-target="#유량-보정-공시료와-정도관리">4. 유량 보정, 공시료와 정도관리</a>
+  <ul>
+  <li><a href="#농도-계산의-논리-분자와-분모" id="toc-농도-계산의-논리-분자와-분모" class="nav-link" data-scroll-target="#농도-계산의-논리-분자와-분모">4.1 농도 계산의 논리 — 분자와 분모</a></li>
+  <li><a href="#펌프-유량-보정" id="toc-펌프-유량-보정" class="nav-link" data-scroll-target="#펌프-유량-보정">4.2 펌프 유량 보정</a></li>
+  <li><a href="#공시료회수율탈착효율" id="toc-공시료회수율탈착효율" class="nav-link" data-scroll-target="#공시료회수율탈착효율">4.3 공시료·회수율·탈착효율</a></li>
+  <li><a href="#ppm-mgm³-환산" id="toc-ppm-mgm³-환산" class="nav-link" data-scroll-target="#ppm-mgm³-환산">4.4 ppm ↔︎ mg/m³ 환산</a></li>
+  <li><a href="#오차와-한계-측정을-얼마나-믿을-수-있는가" id="toc-오차와-한계-측정을-얼마나-믿을-수-있는가" class="nav-link" data-scroll-target="#오차와-한계-측정을-얼마나-믿을-수-있는가">4.5 오차와 한계 — 측정을 얼마나 믿을 수 있는가</a>
+  <ul class="collapse">
+  <li><a href="#누적오차" id="toc-누적오차" class="nav-link" data-scroll-target="#누적오차">누적오차</a></li>
+  <li><a href="#검출한계lod와-정량한계loq" id="toc-검출한계lod와-정량한계loq" class="nav-link" data-scroll-target="#검출한계lod와-정량한계loq">검출한계(LOD)와 정량한계(LOQ)</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#측정에-쓰이는-기초-물리화학" id="toc-측정에-쓰이는-기초-물리화학" class="nav-link" data-scroll-target="#측정에-쓰이는-기초-물리화학">5. 측정에 쓰이는 기초 물리·화학</a>
+  <ul>
+  <li><a href="#기체-법칙" id="toc-기체-법칙" class="nav-link" data-scroll-target="#기체-법칙">5.1 기체 법칙</a></li>
+  <li><a href="#용액의-농도와-표준가스" id="toc-용액의-농도와-표준가스" class="nav-link" data-scroll-target="#용액의-농도와-표준가스">5.2 용액의 농도와 표준가스</a></li>
+  <li><a href="#입자-직경의-정의" id="toc-입자-직경의-정의" class="nav-link" data-scroll-target="#입자-직경의-정의">5.3 입자 직경의 정의</a></li>
+  <li><a href="#정확도와-정밀도" id="toc-정확도와-정밀도" class="nav-link" data-scroll-target="#정확도와-정밀도">5.4 정확도와 정밀도</a></li>
+  <li><a href="#측정고시의-표기-약속" id="toc-측정고시의-표기-약속" class="nav-link" data-scroll-target="#측정고시의-표기-약속">5.5 측정고시의 표기 약속</a></li>
+  </ul></li>
+  <li><a href="#분석기기-개관" id="toc-분석기기-개관" class="nav-link" data-scroll-target="#분석기기-개관">6. 분석기기 개관</a></li>
+  <li><a href="#요약" id="toc-요약" class="nav-link" data-scroll-target="#요약">요약</a></li>
+  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a>
+  <ul>
+  <li><a href="#문제-1.-측정-계획의-수립" id="toc-문제-1.-측정-계획의-수립" class="nav-link" data-scroll-target="#문제-1.-측정-계획의-수립">문제 1. 측정 계획의 수립</a></li>
+  <li><a href="#문제-2.-채취-매체의-선택" id="toc-문제-2.-채취-매체의-선택" class="nav-link" data-scroll-target="#문제-2.-채취-매체의-선택">문제 2. 채취 매체의 선택</a></li>
+  <li><a href="#문제-3.-파과의-판단과-대응" id="toc-문제-3.-파과의-판단과-대응" class="nav-link" data-scroll-target="#문제-3.-파과의-판단과-대응">문제 3. 파과의 판단과 대응</a></li>
+  <li><a href="#문제-4.-수동식-시료채취기의-원리" id="toc-문제-4.-수동식-시료채취기의-원리" class="nav-link" data-scroll-target="#문제-4.-수동식-시료채취기의-원리">문제 4. 수동식 시료채취기의 원리</a></li>
+  <li><a href="#문제-5.-정도관리-종합" id="toc-문제-5.-정도관리-종합" class="nav-link" data-scroll-target="#문제-5.-정도관리-종합">문제 5. 정도관리 종합</a></li>
+  </ul></li>
+  <li><a href="#참고문헌" id="toc-참고문헌" class="nav-link" data-scroll-target="#참고문헌">참고문헌</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/w01_intro_history.html">Part I. 산업위생의 기초 (1~3주)</a></li><li class="breadcrumb-item"><a href="../chapters/w02_exposure_assessment1.html"><span class="chapter-title">2주차. 작업환경측정 I — 측정 원리와 전략</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">2주차. 작업환경측정 I — 측정 원리와 전략</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<blockquote class="blockquote">
+<p>측정의 목적과 노출의 개념, 시료채취 전략(대상·시기·위치·시간), 가스·증기의 채취(흡착·흡수·확산·순간시료), 입자상 물질의 채취(여과포집·크기별 분립), 유량 보정과 공시료·정도관리</p>
+</blockquote>
+<section id="학습목표" class="level2">
+<h2 class="anchored" data-anchor-id="학습목표">학습목표</h2>
+<p>이 주를 학습한 후 여러분은 다음을 할 수 있어야 합니다:</p>
+<ol type="1">
+<li>작업환경측정의 목적과 법적 근거를 설명하고, 측정이 답해야 할 질문을 제시할 수 있다</li>
+<li>호흡역(breathing zone)의 정의를 설명하고, 개인시료채취가 노출평가의 1차 기준인 이유를 설명할 수 있다</li>
+<li>시료채취 전략의 네 요소(대상·시기·위치·시간)를 실제 작업장에 적용하여 측정 계획을 수립할 수 있다</li>
+<li>가스·증기의 채취 방법(고체흡착, 액체흡수, 확산포집, 순간시료)의 원리를 비교하고 파과 현상을 설명할 수 있다</li>
+<li>입자상 물질의 여과포집 원리와 크기별 분립(사이클론, 직경분립충돌기)의 필요성을 설명할 수 있다</li>
+<li>펌프 유량 보정과 공시료·회수율·탈착효율 보정을 포함한 농도 계산을 수행하고, 측정 과정의 오차 요인을 평가할 수 있다</li>
+</ol>
+<hr>
+</section>
+<section id="왜-측정하는가-측정의-목적과-노출의-개념-시료채취-전략-누구를-언제-어디서-얼마나" class="level2">
+<h2 class="anchored" data-anchor-id="왜-측정하는가-측정의-목적과-노출의-개념-시료채취-전략-누구를-언제-어디서-얼마나">1. 왜 측정하는가 — 측정의 목적과 노출의 개념 · 시료채취 전략 — 누구를, 언제, 어디서, 얼마나</h2>
+<section id="왜-측정하는가-측정의-목적과-노출의-개념" class="level3">
+<h3 class="anchored" data-anchor-id="왜-측정하는가-측정의-목적과-노출의-개념">1.1 왜 측정하는가 — 측정의 목적과 노출의 개념</h3>
+<section id="측정의-목적" class="level4">
+<h4 class="anchored" data-anchor-id="측정의-목적">측정의 목적</h4>
+<p>1주차에서 산업위생의 네 영역(AREC) 중 <strong>평가(Evaluation)</strong>의 핵심이 “노출 수준을 숫자로 답하는 것”임을 보았다. 그 숫자를 만들어내는 활동이 <strong>작업환경측정(Occupational Exposure Monitoring)</strong> — 작업장 내 유해인자에 대한 근로자의 <strong>실제 노출 수준</strong>을 정량적으로 파악하는 과정이다. 측정은 단순한 규제 준수 절차가 아니다. 측정이 답하는 질문은 네 가지다.</p>
+<div id="tbl-purpose" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-purpose-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;3.1: 작업환경측정의 네 가지 목적
+</figcaption>
+<div aria-describedby="tbl-purpose-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 76%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>목적</th>
+<th>측정이 답하는 질문</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>노출 수준 파악</strong></td>
+<td>근로자가 얼마나 유해물질에 노출되고 있는가?</td>
+</tr>
+<tr class="even">
+<td><strong>위험성 평가</strong></td>
+<td>현재 노출 수준이 건강에 해로운 수준인가?</td>
+</tr>
+<tr class="odd">
+<td><strong>관리 효과 검증</strong></td>
+<td>설치한 환기장치나 보호구가 실제로 효과가 있는가?</td>
+</tr>
+<tr class="even">
+<td><strong>법적 의무 이행</strong></td>
+<td>산업안전보건법에 따른 정기적 측정 의무를 이행하고 있는가?</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>네 번째 목적이 말해 주듯, 우리나라에서 작업환경측정은 <strong>산업안전보건법이 정한 사업주의 의무</strong>이기도 하다 — 유해인자 취급 공정은 정기적으로 측정해야 하며, 측정 방법의 세부(누구를 몇 명, 몇 시간)는 고용노동부 고시가 정한다. 이번 주에는 <strong>측정 자체의 원리와 전략</strong>을 다루고, 측정 결과를 노출기준과 비교·판정하는 방법과 한국 작업환경측정 제도의 전체 운영은 <a href="../chapters/w03_exposure_assessment2.html">3주차</a>로 넘긴다.</p>
+</section>
+<section id="노출exposure과-호흡역" class="level4">
+<h4 class="anchored" data-anchor-id="노출exposure과-호흡역">노출(Exposure)과 호흡역</h4>
+<p><strong>노출</strong>은 유해인자와 인체가 접촉하는 상황이다. 측정해야 할 것은 <strong>작업장 전체의 평균 농도가 아니라, 근로자의 호흡기 근처에서 실제로 흡입되는 농도</strong>다.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>호흡역(Breathing Zone)의 정의
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>호흡역은 <strong>근로자의 양 귀를 연결하는 가상의 선 중앙점에서 반경 300 mm(30 cm)의 반구형 공간</strong>으로 정의된다. 이 영역 내의 공기가 실제로 근로자가 호흡하는 공기다.</p>
+</div>
+</div>
+<p>왜 이렇게까지 좁게 정의하는가. 유해물질의 농도는 작업장 안에서 균일하지 않아서, 발생원 바로 옆 근로자의 코앞 농도와 몇 미터 떨어진 통로의 농도는 전혀 다른 값일 수 있기 때문이다. 노출평가란 “그 작업장의 공기”가 아니라 “<strong>그 사람이 마시는 공기</strong>”를 재는 일이다 — 이 원칙이 다음 절의 개인시료채취 우선 원칙으로 이어진다.</p>
+<hr>
+</section>
+</section>
+<section id="시료채취-전략-누구를-언제-어디서-얼마나" class="level3">
+<h3 class="anchored" data-anchor-id="시료채취-전략-누구를-언제-어디서-얼마나">1.2 시료채취 전략 — 누구를, 언제, 어디서, 얼마나</h3>
+<p>측정기기를 들기 전에 먼저 답해야 할 질문이 네 개 있다 — <strong>누구를(대상), 언제(시기), 어디서(위치), 얼마나 오래(시간)</strong> 측정할 것인가. 이 넷을 묶어 <strong>시료채취 전략(sampling strategy)</strong>이라 한다.</p>
+<section id="위치-개인시료채취와-지역시료채취" class="level4">
+<h4 class="anchored" data-anchor-id="위치-개인시료채취와-지역시료채취">위치 — 개인시료채취와 지역시료채취</h4>
+<div id="tbl-personal-area" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-personal-area-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;3.2: 개인시료채취와 지역시료채취
+</figcaption>
+<div aria-describedby="tbl-personal-area-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 48%">
+<col style="width: 42%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>개인시료채취 (Personal Sampling)</th>
+<th>지역시료채취 (Area Sampling)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>위치</strong></td>
+<td>근로자의 호흡역(옷깃, 헬멧)</td>
+<td>작업장 특정 위치(고정)</td>
+</tr>
+<tr class="even">
+<td><strong>목적</strong></td>
+<td>개인 노출량 평가</td>
+<td>환경 농도 분포, 배기장치 성능 평가</td>
+</tr>
+<tr class="odd">
+<td><strong>지위</strong></td>
+<td><strong>1차적 노출평가 기준</strong></td>
+<td>보조적 평가 자료</td>
+</tr>
+<tr class="even">
+<td><strong>장점</strong></td>
+<td>실제 노출 반영</td>
+<td>설치 용이, 장시간 측정 가능</td>
+</tr>
+<tr class="odd">
+<td><strong>단점</strong></td>
+<td>근로자 협조 필요, 작업 방해 가능</td>
+<td>개인 노출량 과소/과대평가 가능</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>개인시료채취에서는 시료채취구(여과지 카세트 또는 흡착관)를 근로자의 <strong>옷깃</strong> (호흡역 안)에 부착하고, 허리 벨트에 찬 <strong>시료채취펌프</strong>와 연결튜브(Tygon, PVC)로 이어, 근로자가 이동하는 내내 함께 측정한다.</p>
+<div id="fig-breathing-zone" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-breathing-zone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w02_breathing_zone.svg" class="img-fluid figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-breathing-zone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;3.1: 개인시료채취와 지역시료채취 — 호흡역(반경 30 cm 반구)의 공기를 재는가, 고정 지점의 공기를 재는가
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>왜 개인시료채취가 우선인가
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>작업장 중앙에서 측정한 농도가 낮더라도, 특정 공정의 근로자는 발생원 가까이에서 훨씬 높은 농도에 노출될 수 있다. 지역시료는 “이 장소의 공기”를 말해 줄 뿐 “이 사람의 노출”을 말해 주지 못하므로, <strong>노출기준과의 비교는 개인시료채취 결과로 해야만 유효</strong>하다. 지역시료는 오염의 공간적 분포 파악과 환기장치 성능 평가의 보조 자료로 쓴다.</p>
+</div>
+</div>
+</section>
+<section id="대상-동질노출그룹과-최고노출근로자" class="level4">
+<h4 class="anchored" data-anchor-id="대상-동질노출그룹과-최고노출근로자">대상 — 동질노출그룹과 최고노출근로자</h4>
+<p>모든 근로자를 측정하는 것은 현실적으로 불가능하다. 그래서 <strong>노출 조건이 유사할 것으로 예상되는 근로자 집단</strong> — <strong>동질노출그룹(Similar Exposure Group, SEG)</strong> — 을 묶고, 그 집단에서 표본을 뽑아 측정한다. 설정 기준은 “노출을 결정하는 조건이 같은가”이다 — ① <strong>동일 공정/작업</strong>(같은 기계, 같은 작업), ② <strong>동일 유해물질</strong>, ③ <strong>유사한 노출 양상</strong>(시간·빈도·강도), ④ <strong>유사한 작업환경</strong>(환기 조건, 발생원과의 거리).</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>최고노출근로자 (Maximum Risk Employee)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>각 SEG에서 <strong>가장 높은 노출이 예상되는 근로자</strong>를 반드시 측정 대상에 포함한다. 논리는 보수적 추론이다 — 가장 심하게 노출되는 사람의 노출이 기준 이하라면, 그룹의 나머지 구성원은 더 낮을 것이므로 그룹 전체가 안전하다고 판단할 수 있다.</p>
+</div>
+</div>
+<p>SEG는 국제적으로 통용되는 노출평가 개념이고, 우리나라에서 <strong>실제로 몇 명을 측정할지</strong>는 고용노동부 고시가 최소 기준을 정하고 있다. 고시의 측정 단위인 <strong>단위작업장소</strong>(정상 작업을 수행하는 <strong>동일 노출집단</strong>의 근로자가 작업하는 장소)는 SEG 개념의 법적 번역인 셈이다.</p>
+<div id="tbl-sampling-numbers" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sampling-numbers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;3.3: 시료채취 인원·지점의 최소 기준 (고용노동부 고시)
+</figcaption>
+<div aria-describedby="tbl-sampling-numbers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>기준</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>개인시료 최소 인원</strong></td>
+<td>단위작업장소에서 <strong>최고 노출근로자 2명 이상</strong>을 <strong>동시에</strong> 측정</td>
+</tr>
+<tr class="even">
+<td><strong>인원 추가</strong></td>
+<td>동일 작업 근로자 수가 <strong>10명 초과</strong> 시 <strong>매 5명당 1명 이상 추가</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>상한</strong></td>
+<td>동일 작업 근로자 수가 <strong>100명 초과</strong> 시 최대 시료채취 근로자 수를 <strong>20명으로 조정 가능</strong></td>
+</tr>
+<tr class="even">
+<td><strong>지역시료 지점</strong></td>
+<td>단위작업장소 넓이 <strong>50 m² 이상</strong>이면 <strong>매 30 m²마다 1개 지점 이상 추가</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>최소 인원이 1명이 아니라 <strong>2명 이상</strong>인 점에 주목하자. 단 한 명의 측정값은 그 사람의 그날 사정(작업량, 위치, 습관)에 좌우되어 그룹을 대표하기 어렵고, 2명 이상을 <strong>동시에</strong> 재면 같은 조건에서의 개인 간 차이까지 정보로 얻는다.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제: 작업근로자 17명일 때 측정 근로자 수
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>단위작업장소의 작업근로자 수가 <strong>17명</strong>일 때, 개인시료채취로 측정해야 할 최소 근로자 수는?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>기본 2명(1~10명) + 11~15명 구간 1명 + 16~20명 구간(17명이 여기에 걸림) 1명 = <strong>4명</strong>. 10명을 초과한 시점부터 “매 5명당 1명”이 구간 단위로 추가된다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="시기-측정-주기" class="level4">
+<h4 class="anchored" data-anchor-id="시기-측정-주기">시기 — 측정 주기</h4>
+<p>언제, 얼마나 자주 측정하는가는 유해인자의 위험도와 상황 변화에 따라 달라진다.</p>
+<div id="tbl-frequency" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-frequency-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;3.4: 작업환경측정의 주기
+</figcaption>
+<div aria-describedby="tbl-frequency-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>상황</th>
+<th>측정 주기</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>일반 유해인자</td>
+<td><strong>6개월 1회</strong></td>
+</tr>
+<tr class="even">
+<td>발암성 물질 (특별관리물질)</td>
+<td><strong>3개월 1회</strong></td>
+</tr>
+<tr class="odd">
+<td>노출기준 초과 공정 (개선 후)</td>
+<td><strong>3개월 1회</strong></td>
+</tr>
+<tr class="even">
+<td>신규 설비·공정</td>
+<td>설치 후 <strong>30일 이내</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>주기의 논리는 일관된다 — <strong>위험이 크거나(발암성), 상황이 불확실할수록(초과 이력, 신규 공정) 더 자주 잰다.</strong> 신규 공정의 “30일 이내” 규정은 1주차의 예측(Anticipation)과 짝을 이룬다 — 도입 전에 예측했더라도, 도입 후의 실제 노출은 측정으로 확인해야 한다.</p>
+</section>
+<section id="시간-얼마나-오래-잴-것인가" class="level4">
+<h4 class="anchored" data-anchor-id="시간-얼마나-오래-잴-것인가">시간 — 얼마나 오래 잴 것인가</h4>
+<p>노출은 하루 작업 동안 계속 변하므로, 원칙은 <strong>전일 측정(full-period sampling)</strong> — 1일 작업시간(보통 8시간) 동안 연속하여 측정하는 것이다. 고시(측정고시 제18조)는 <strong>6시간 이상 연속 측정</strong>하거나 <strong>등간격으로 나누어 6시간 이상</strong> 측정하도록 정하고 있다. 흔히 인용되는 “작업시간의 70% 이상”이라는 기준은 고시에 없다. 하루 중 짧은 한 토막만 재면, 그 토막이 우연히 한산한 시간이었는지 가장 바쁜 시간이었는지에 따라 결과가 크게 달라지기 때문이다. 이렇게 얻은 구간별 농도를 시간으로 가중평균한 값이 <strong>시간가중평균농도(TWA)</strong>이며, TWA의 계산과 노출기준과의 비교·판정은 <a href="../chapters/w03_exposure_assessment2.html">3주차</a>에서 다룬다.</p>
+<p>측정 시간에는 하한이 하나 더 있다. 분석기기의 <strong>정량한계(LOQ)</strong>보다 적은 양을 채취하면 결과를 신뢰할 수 없으므로, 예상농도 <span class="math inline">\(C\)</span>에서 LOQ만큼의 질량이 모이는 데 필요한 <strong>최소 시료채취시간</strong>을 미리 계산한다.</p>
+<p><span class="math display">\[t_{min} = \frac{LOQ}{C\ (\text{mg/m}^3) \times Q\ (\text{m}^3/\text{분})}\]</span></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제: 노출기준의 10%까지 측정하려면
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>톨루엔(분자량 92.14, 노출기준 100 ppm)을 <strong>노출기준의 10%</strong> 농도까지 측정하려 한다. GC의 정량한계는 시료당 <strong>0.5 mg</strong>, 채취유량은 <strong>0.15 L/분</strong>이다. 최소 시료채취시간은? (25℃, 1기압)</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>① 목표 농도</strong>: 100 ppm × 10% = 10 ppm <span class="math inline">\(\rightarrow C = \dfrac{10 \times 92.14}{24.45} = 37.68\ \text{mg/m}^3\)</span> (환산은 §4.4)</p>
+<p><strong>② 필요 공기량</strong>: <span class="math inline">\(V = \dfrac{0.5\ \text{mg}}{37.68\ \text{mg/m}^3} = 0.01327\ \text{m}^3 = 13.27\ \text{L}\)</span></p>
+<p><strong>③ 최소 채취시간</strong>: <span class="math inline">\(t = \dfrac{13.27\ \text{L}}{0.15\ \text{L/분}} = \textbf{88.5 분}\)</span> — 이보다 짧게 채취하면 노출기준의 10% 수준 농도는 “있어도 보이지 않는다”.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+</section>
+<section id="가스증기의-채취" class="level2">
+<h2 class="anchored" data-anchor-id="가스증기의-채취">2. 가스·증기의 채취</h2>
+<section id="왜-여과지로는-안-되는가" class="level3">
+<h3 class="anchored" data-anchor-id="왜-여과지로는-안-되는가">2.1 왜 여과지로는 안 되는가</h3>
+<p>가스와 증기는 <strong>분자 상태</strong>로 존재하므로(1주차 §3.1) 여과지를 그대로 통과한다. 따라서 가스·증기를 잡으려면 입자를 거르는 것과는 전혀 다른 원리 — 분자를 <strong>표면에 붙잡거나(흡착)</strong>, <strong>액체에 녹이거나(흡수)</strong>, <strong>확산으로 끌어들이거나</strong>, <strong>공기째로 담는(순간시료)</strong> — 가 필요하다. 이 네 원리가 곧 이 절의 네 소절이다: 고체흡착관(§2.2, 능동식), 액체흡수(§2.3, 능동식), 확산포집기(§2.4, 수동식), 순간시료채취(§2.5).</p>
+</section>
+<section id="고체흡착관-활성탄관과-실리카겔관" class="level3">
+<h3 class="anchored" data-anchor-id="고체흡착관-활성탄관과-실리카겔관">2.2 고체흡착관 — 활성탄관과 실리카겔관</h3>
+<p>가장 널리 쓰이는 방법이다. 흡착제가 충전된 유리관(6 mm × 7 cm)에 펌프로 공기를 통과시키면(유량 50~200 mL/분), 가스·증기 분자가 흡착제 표면에 붙잡힌다.</p>
+<div id="fig-sorbent-tube" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sorbent-tube-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w02_sorbent_tube.svg" class="img-fluid figure-img" style="width:92.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sorbent-tube-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;3.2: 활성탄관의 구조와 파과 판정 — 뒷층은 앞층을 통과한 분자를 받아내는 감시 장치다
+</figcaption>
+</figure>
+</div>
+<p>흡착제는 대상 물질의 <strong>극성</strong>에 맞추어 고른다. 흡착은 흡착제 표면과 분자 사이의 친화력으로 일어나므로, 표면의 성질과 분자의 성질이 맞아야 잘 붙는다.</p>
+<div id="tbl-sorbents" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sorbents-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;3.5: 고체흡착제의 종류와 적용
+</figcaption>
+<div aria-describedby="tbl-sorbents-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 35%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>흡착제</th>
+<th>적용 물질</th>
+<th>탈착 방법</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>활성탄 (Charcoal)</strong></td>
+<td><strong>비극성</strong> 유기용제 (벤젠, 톨루엔, 크실렌, 헥산 등)</td>
+<td>CS₂ 용매탈착, 열탈착</td>
+</tr>
+<tr class="even">
+<td><strong>실리카겔 (Silica gel)</strong></td>
+<td><strong>극성</strong> 화합물 (아민류, 니트로벤젠류, 페놀, 케톤·알데하이드류, 무기산)</td>
+<td>물·메탄올 등 용매탈착</td>
+</tr>
+<tr class="odd">
+<td><strong>Tenax</strong> / <strong>XAD-2</strong></td>
+<td>휘발성 / 준휘발성 유기화합물</td>
+<td>열탈착 / 용매탈착</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>작업장에서 가장 흔한 유해 가스상 물질이 비극성 유기용제이고, 활성탄이 바로 이들과 친화력이 큰 흡착제이기 때문에 “유기용제 측정 = 활성탄관”이 표준이 되었다. 아민류·니트로벤젠류처럼 극성이 큰 분자는 극성 표면을 가진 실리카겔이 잡는다. 알코올류·에스테르류·할로겐화 탄화수소류는 극성이 있어도 <strong>표준 채취매체는 활성탄관</strong>이다. 채취가 끝나면 흡착된 분자를 다시 떼어내(<strong>탈착</strong>, desorption — 활성탄은 CS₂ 용매탈착 또는 열탈착) 분석기기에 넣는데, 이때 붙잡은 양의 100%가 회수되지는 않는다 — 이 비율이 §4.3의 <strong>탈착효율</strong>이다.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">경고</span>파과(Breakthrough) — 흡착관의 용량 한계
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>흡착제가 잡을 수 있는 양에는 한계가 있다. 흡착 용량을 초과하면 그 뒤로 들어오는 분자는 앞층을 그대로 통과해 버린다 — 이를 <strong>파과</strong>라 하며, 놓친 만큼 실제 농도보다 <strong>과소평가</strong>된다. 흡착관에 <strong>뒷층(백업층)</strong>이 있는 이유가 바로 파과의 감시다 — 앞층을 통과한 분자는 먼저 뒷층에 잡히므로,</p>
+<ul>
+<li><strong>확인 방법</strong>: 뒷층 분석 결과가 앞층의 <strong>10% 이상</strong>이면 파과 발생으로 판단한다</li>
+<li><strong>예방</strong>: 적정 시료채취량 준수, 고농도 환경에서는 채취시간 단축</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>그림 필요 — 개인시료채취 장비의 실물 사진
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>무엇</strong>: ① 활성탄관 실물(양끝을 절단하기 전후, 앞층·뒷층과 유리솜이 보이는 근접 촬영), ② 시료채취펌프를 허리에 차고 옷깃에 채취구를 단 근로자의 착용 모습 (전신 또는 상반신).</p>
+<p><strong>왜</strong>: <a href="#fig-sorbent-tube" class="quarto-xref">그림&nbsp;<span>3.2</span></a> 는 구조의 논리를 보여 주지만 크기 감각을 주지 못한다. “유리관 6 mm × 7 cm”가 실제로 얼마나 작은지, 펌프가 근로자에게 얼마나 부담이 되는지(§2.4 수동식의 장점을 이해하는 전제)는 사진이라야 전달된다.</p>
+<p><strong>출처 후보</strong>: NIOSH/CDC 이미지 라이브러리(퍼블릭 도메인), OSHA 웹사이트, 한국산업안전보건공단(KOSHA) 자료실, 위키미디어 커먼즈. 직접 촬영도 가능하다 — 학과 실습실의 채취펌프·활성탄관을 촬영하면 라이선스 문제가 없다.</p>
+<p><strong>대안</strong>: 확보가 어려우면 자(scale bar)를 넣은 흡착관 단면 모식도로 대체.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="액체흡수-임핀저와-버블러" class="level3">
+<h3 class="anchored" data-anchor-id="액체흡수-임핀저와-버블러">2.3 액체흡수 — 임핀저와 버블러</h3>
+<p>수용성 가스나 반응성이 커서 흡착관이 맞지 않는 화합물은, 공기를 <strong>흡수액</strong> 속으로 통과시켜 기포와 액체가 접촉하는 동안 분자를 용해·반응시켜 잡는다 — 포름알데히드는 DNPH 용액, 암모니아는 희황산, 염소는 수산화나트륨, 황화수소는 카드뮴황산이 대표적 짝이다. 능동식(펌프 사용) 흡수액 채취의 일반적 유량 기준은 <strong>1.0 L/분 이하</strong>이다.</p>
+<p>액체흡수의 정확도를 좌우하는 것은 <strong>흡수효율</strong>이다. 효율을 높이는 원칙은 모두 하나의 물리적 논리 — <strong>기체와 액체의 접촉을 늘리고, 잡은 분자가 다시 빠져나가지 못하게 한다</strong> — 에서 나온다.</p>
+<div id="tbl-absorption-efficiency" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-absorption-efficiency-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;3.6: 흡수효율을 높이는 네 가지 원칙
+</figcaption>
+<div aria-describedby="tbl-absorption-efficiency-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>방법</th>
+<th>이유</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>흡수액의 온도를 낮춘다</strong></td>
+<td>휘발성을 제한하여 용해된 분자가 다시 빠져나가지 않게 한다</td>
+</tr>
+<tr class="even">
+<td><strong>프리티드 버블러(fritted bubbler)를 쓴다</strong></td>
+<td>가는 구멍으로 기포를 잘게 쪼개 기-액 접촉면적을 넓힌다</td>
+</tr>
+<tr class="odd">
+<td><strong>버블러를 2개 이상 직렬 연결한다</strong></td>
+<td>앞 버블러를 통과한 분자를 뒤 버블러가 다시 잡는다</td>
+</tr>
+<tr class="even">
+<td><strong>시료채취유량을 낮춘다</strong></td>
+<td>흡수액과의 접촉시간을 늘린다</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>거꾸로 하면 효율은 떨어진다 — 온도를 높이면 녹았던 분자가 다시 휘발하고, 유량을 높이면 기포가 액체를 스칠 시간이 짧아진다.</p>
+<p><strong>직렬 연결의 총 포집효율</strong>은 “첫 번째가 놓친 몫만 두 번째가 잡는다”는 논리로 유도된다. 효율 <span class="math inline">\(\eta_1\)</span>인 기구를 빠져나가는 비율이 <span class="math inline">\((1-\eta_1)\)</span>이므로,</p>
+<p><span class="math display">\[\eta_{total} = 1 - (1-\eta_1)(1-\eta_2), \qquad
+\text{같은 효율 } n\text{개 직렬: } \eta_{total} = 1 - (1-\eta)^n\]</span></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제: 직렬 연결 포집효율
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>(1)</strong> 포집효율 80%인 임핀저 2개를 직렬 연결하면 총 포집효율은?</p>
+<p><strong>(2)</strong> 첫 번째 90%, 두 번째 50%인 임핀저를 직렬 연결하면?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>(1)</strong> <span class="math inline">\(\eta_{total} = 1 - (1-0.8)^2 = 1 - 0.04 = 0.96 \rightarrow \textbf{96\%}\)</span></p>
+<p><strong>(2)</strong> <span class="math inline">\(\eta_{total} = 1 - (1-0.9)(1-0.5) = 1 - 0.05 = 0.95 \rightarrow \textbf{95\%}\)</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="수동식-시료채취-확산포집기" class="level3">
+<h3 class="anchored" data-anchor-id="수동식-시료채취-확산포집기">2.4 수동식 시료채취 — 확산포집기</h3>
+<p><strong>수동식 시료채취(passive sampling)</strong>는 펌프 없이 <strong>확산 원리</strong>만으로 채취한다. 펌프 없이도 정량이 가능한 이론적 근거는 <strong>Fick의 확산 제1법칙</strong> — 확산에 의한 물질의 이동속도는 농도 기울기에 비례한다는 것이다.</p>
+<p><span class="math display">\[J = -D\frac{dC}{dx} \quad \Longrightarrow \quad W = \frac{D \cdot A}{L}(C_{air} - C_{sorbent}) \cdot t\]</span></p>
+<ul>
+<li><span class="math inline">\(J\)</span>: 단위면적당 물질이동속도(flux), <span class="math inline">\(D\)</span>: 확산계수, <span class="math inline">\(A\)</span>: 확산 단면적, <span class="math inline">\(L\)</span>: 확산경로 길이(확산층 두께), <span class="math inline">\(t\)</span>: 채취시간</li>
+<li><span class="math inline">\(C_{air}\)</span>: 공기 중 농도, <span class="math inline">\(C_{sorbent}\)</span>: 흡착제 표면 농도 (이상적으로 0)</li>
+</ul>
+<p>흡착제 표면의 농도를 0에 가깝게 유지하면 채취량 <span class="math inline">\(W\)</span>는 공기 중 농도 <span class="math inline">\(C_{air}\)</span>에 비례한다. <span class="math inline">\(D\)</span>, <span class="math inline">\(A\)</span>, <span class="math inline">\(L\)</span>이 기하학적으로 고정되어 “가상의 유량”이 정해지는 셈이라, 제조사가 제시하는 <strong>등가 시료채취량(mL/분)</strong>을 펌프 유량 대신 써서 농도를 계산한다.</p>
+<div id="tbl-passive" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-passive-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;3.7: 수동식 시료채취의 장단점
+</figcaption>
+<div aria-describedby="tbl-passive-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>장점</th>
+<th>단점</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>펌프 불필요 → 소음·진동 없음, 본질안전</td>
+<td><strong>4시간 이상</strong> 착용 필요 (충분한 시료량 확보)</td>
+</tr>
+<tr class="even">
+<td>가볍고 간편 → 근로자 부담 최소화</td>
+<td><strong>정지 공기에서는 부정확</strong></td>
+</tr>
+<tr class="odd">
+<td>펌프 보정·충전의 노동력 절약, 대규모 조사에 경제적</td>
+<td>고농도에서 포화 가능 · 채취량이 적어 시료량 확보에 불리</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>흡착(adsorption)과 흡수(absorption) — 한 글자 차이, 다른 원리
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>수동식 시료채취기의 포집 원리는 <strong>확산·투과·흡착</strong>이며, <strong>흡수는 포함되지 않는다.</strong> 흡착은 분자가 고체 <strong>표면</strong>에 붙는 현상, 흡수는 액체 <strong>내부로</strong> 녹아드는 현상이다(§2.3의 임핀저가 흡수) — 수동식 포집기 안에 있는 것은 고체 흡착제다. 또한 수동식은 <strong>농도 기울기(농도 구배)의 영향을 받는다</strong> — Fick 법칙의 <span class="math inline">\((C_{air} - C_{sorbent})\)</span> 항이 바로 그것이다.</p>
+</div>
+</div>
+</section>
+<section id="순간시료채취-grab-sampling" class="level3">
+<h3 class="anchored" data-anchor-id="순간시료채취-grab-sampling">2.5 순간시료채취 (Grab Sampling)</h3>
+<p>지금까지의 방법이 일정 시간 공기를 통과시켜 물질을 <strong>농축</strong>하는 연속시료채취라면, <strong>순간시료채취</strong>는 공기 자체를 그대로 받아 담는다. 시료채취백(Tedlar bag 등), 진공 플라스크, 스테인리스 스틸 캐니스터, 주사기가 여기에 속한다(흡수액을 쓰는 버블러·임핀저는 연속식이다).</p>
+<p>순간시료채취를 <strong>사용할 수 없는</strong> 경우는 세 가지이며, 모두 “농축하지 않는다”는 특성에서 나온다.</p>
+<ol type="1">
+<li>유해물질의 <strong>농도가 시간에 따라 변할 때</strong> — 한 순간의 공기는 그 순간만 대표한다</li>
+<li><strong>시간가중평균치(TWA)</strong>를 구하고자 할 때 — 하루의 평균은 하루 동안 재야 한다</li>
+<li>공기 중 <strong>농도가 낮을 때</strong> — 담은 공기의 농도가 검출기의 검출한계보다 높아야 한다</li>
+</ol>
+<p>반대로 <strong>반응성이 없거나 비흡착성인 가스상 물질</strong>은 순간시료채취로 채취할 수 있다. 시료채취백을 쓸 때는 오염물질과 <strong>반응성이 없는 재질</strong>을 고르고, <strong>누출검사</strong>를 실시하며, 순수공기로 내부를 씻어낸 후 <strong>대상 공기로 수차례 치환</strong>해야 한다.</p>
+<hr>
+</section>
+</section>
+<section id="입자상-물질의-채취" class="level2">
+<h2 class="anchored" data-anchor-id="입자상-물질의-채취">3. 입자상 물질의 채취</h2>
+<section id="크기가-다르면-다른-먼지다-크기별-시료채취의-논리" class="level3">
+<h3 class="anchored" data-anchor-id="크기가-다르면-다른-먼지다-크기별-시료채취의-논리">3.1 크기가 다르면 다른 먼지다 — 크기별 시료채취의 논리</h3>
+<p>1주차 §3.1에서 보았듯, 입자상 물질(에어로졸)의 건강영향은 <strong>입자 크기가 호흡기 어디까지 들어가는가</strong>에 의해 결정된다. 10 μm를 넘는 입자는 대부분 코와 목에서 여과되어 재채기·기침으로 제거되고, 4~10 μm는 기관지 점막에 침착하여 섬모운동으로 배출되며, <strong>4 μm 미만은 폐포(가스교환 영역)까지 도달</strong>하여 제거가 매우 느리다(진폐증의 무대).</p>
+<p>같은 “총 먼지 1 mg/m³”라도, 그것이 폐포까지 들어가는 미세 입자인지 코에서 걸러지는 굵은 입자인지에 따라 위험이 전혀 다르다. 그래서 측정도 <strong>건강영향이 나타나는 크기 분획만 골라서</strong> 해야 한다 — 이것이 <strong>입자 크기별 시료채취(size-selective sampling)</strong>의 논리다.</p>
+<p>ACGIH는 침착 부위를 기준으로 입자상 물질을 세 가지로 구분한다. 각 분류의 기준 크기는 “그 크기의 입자가 <strong>50% 침착(포집)되는 공기역학적 직경</strong>”인 <strong>평균입경</strong>이다. 100%가 아니라 50%인 이유는, 호흡기의 여과도 시료채취기의 분립도 칼로 자르듯 되지 않고 크기에 따라 확률적으로 일어나기 때문이다.</p>
+<div id="tbl-acgih-particles" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-acgih-particles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;3.8: ACGIH의 입자상 물질 3분류
+</figcaption>
+<div aria-describedby="tbl-acgih-particles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>분류</th>
+<th>영문·약어</th>
+<th>기준 입경</th>
+<th>독성이 나타나는 부위</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>흡입성 입자상 물질</strong></td>
+<td>Inhalable, <strong>IPM</strong></td>
+<td>입경범위 <strong>0~100 μm</strong></td>
+<td>호흡기계 <strong>어느 부위에 침착하더라도</strong> 유해</td>
+</tr>
+<tr class="even">
+<td><strong>흉곽성 입자상 물질</strong></td>
+<td>Thoracic, <strong>TPM</strong></td>
+<td>평균입경 <strong>10 μm</strong></td>
+<td>기도(폐기도)와 가스교환 부위에 침착</td>
+</tr>
+<tr class="odd">
+<td><strong>호흡성 입자상 물질</strong></td>
+<td>Respirable, <strong>RPM</strong></td>
+<td>평균입경 <strong>4 μm</strong></td>
+<td><strong>폐포</strong>(가스교환 부위)에 침착</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>세 분류를 포집효율 곡선으로 겹쳐 보면 “50% 컷오프”의 뜻이 눈에 들어온다. 곡선은 어느 것도 수직으로 서 있지 않다 — 어떤 크기의 입자든 일부는 걸리고 일부는 통과하며, 기준 입경은 그 확률이 반반이 되는 지점일 뿐이다.</p>
+<div id="fig-particle-curves" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-particle-curves-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w02_particle_curves.svg" class="img-fluid figure-img" style="width:82.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-particle-curves-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;3.3: 입자 크기별 포집효율 곡선과 50% 컷오프 (흉곽성의 50% 컷오프 11.64 μm는 관행적으로 평균입경 10 μm급으로 표기한다)
+</figcaption>
+</figure>
+</div>
+<p>세 분류의 정의를 서로 대비해 이해해 두자. “호흡기계 <strong>어느 부위</strong>에 침착하더라도 유해한 물질”을 대상으로 하는 것은 <strong>흡입성</strong>뿐이다 — 납·목분진·시멘트가 그 예로, 납은 코 점막에 붙어도 흡수되어 전신독성을 일으키므로 흡입성 분획으로 잰다. 반면 유리규산(석영)·석면·용접흄처럼 <strong>폐포에 도달해야</strong> 병을 일으키는 물질은 호흡성 분획(평균입경 4 μm)으로 잰다. 흉곽성(10 μm)은 그 중간 — 기도 수준까지 들어가는 입자를 대상으로 한다.</p>
+</section>
+<section id="여과포집-분진-측정의-기본" class="level3">
+<h3 class="anchored" data-anchor-id="여과포집-분진-측정의-기본">3.2 여과포집 — 분진 측정의 기본</h3>
+<p>입자상 물질 채취의 기본은 <strong>여과(filtration)</strong>다. 펌프(유량 1~2.5 L/분)로 공기를 여과지에 통과시키면 입자가 여과지에 걸리고, 채취 전후의 무게 차이 (중량분석) 또는 여과지에 모인 물질의 화학 분석으로 농도를 구한다. 여과지도 흡착제처럼 <strong>대상 물질과 분석 방법에 맞추어</strong> 고른다.</p>
+<div id="tbl-filters" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-filters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;3.9: 여과지의 종류와 적용
+</figcaption>
+<div aria-describedby="tbl-filters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 15%">
+<col style="width: 26%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>여과지 종류</th>
+<th>재질</th>
+<th>적용 물질</th>
+<th>분석 방법</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>PVC 여과지</strong></td>
+<td>폴리비닐클로라이드</td>
+<td>총분진, 용접흄, 오일미스트</td>
+<td>중량분석 (gravimetric)</td>
+</tr>
+<tr class="even">
+<td><strong>MCE 여과지</strong></td>
+<td>혼합셀룰로오스에스테르</td>
+<td>중금속(납, 카드뮴 등), 석면</td>
+<td>산분해 → 원자흡광분석, 위상차현미경</td>
+</tr>
+<tr class="odd">
+<td><strong>유리섬유 여과지</strong></td>
+<td>붕규산 유리</td>
+<td>PAHs, 고온 시료</td>
+<td>용매추출 → GC/MS</td>
+</tr>
+<tr class="even">
+<td><strong>은멤브레인</strong></td>
+<td>은</td>
+<td>유리규산(실리카)</td>
+<td>X선 회절분석</td>
+</tr>
+<tr class="odd">
+<td><strong>테플론(PTFE)</strong></td>
+<td>폴리테트라플루오로에틸렌</td>
+<td>산/알칼리 미스트</td>
+<td>중량분석, IC</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>왜 중량분석에는 PVC 여과지인가
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>중량분석은 여과지의 “무게 차이”가 곧 시료량이므로, 여과지 자체의 무게가 흔들리면 안 된다. PVC 여과지는 <strong>소수성(hydrophobic)</strong>이라 습기에 의한 질량 변화가 적어 중량분석에 적합하다. 다만 정전기의 영향을 받으므로, 칭량 전 최소 <strong>24시간 이상 데시케이터에서 평형</strong>시켜야 한다. 반면 중금속처럼 여과지를 산으로 녹여 분석하는 경우는 산분해가 잘 되는 MCE 여과지를 쓴다.</p>
+</div>
+</div>
+</section>
+<section id="입경분립-채취기구-사이클론과-직경분립충돌기" class="level3">
+<h3 class="anchored" data-anchor-id="입경분립-채취기구-사이클론과-직경분립충돌기">3.3 입경분립 채취기구 — 사이클론과 직경분립충돌기</h3>
+<p>여과지는 크기를 가리지 않고 입자를 잡는다. §3.1의 논리대로 <strong>호흡성 분진(4 μm)만</strong> 재려면, 그보다 큰 입자를 <strong>여과지에 도달하기 전에 물리적으로 제거</strong>해야 한다 — 이 역할을 하는 장치가 <strong>입경분립 채취기구</strong>다.</p>
+<p><strong>(1) 사이클론(Cyclone)</strong> — 원심력(관성)을 이용한다. 공기를 접선 방향으로 불어넣어 선회류를 만들면, 관성이 큰(무거운, 큰) 입자는 곡선을 따라 돌지 못하고 벽면에 충돌하여 분리컵으로 떨어지고, 호흡성 입자만 기류를 따라 여과지에 도달한다.</p>
+<div id="fig-cyclone" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cyclone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w02_cyclone.svg" class="img-fluid figure-img" style="width:88.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cyclone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;3.4: 10 mm 나일론 사이클론 — 원심력으로 큰 입자를 미리 떨어뜨리고 호흡성 분획만 여과지로 보낸다
+</figcaption>
+</figure>
+</div>
+<p>사이클론은 <strong>호흡성 입자상 물질</strong>을 채취하도록 고안된 기구로(PVC 여과지 카세트 <strong>아래에</strong> 연결), 사용할 때마다 <strong>내부를 청소하고 검사</strong>해야 한다.</p>
+<p><strong>(2) 직경분립충돌기(Cascade Impactor)</strong> — 관성충돌 원리를 여러 단으로 쌓은 장치다. 단계마다 노즐 지름을 줄여 가면, 단이 내려갈수록 더 작은 입자까지 충돌판에 걸리므로, 입자를 <strong>입경별로 나누어</strong> 채취할 수 있다.</p>
+<div id="tbl-cyclone-impactor" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cyclone-impactor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;3.10: 사이클론과 직경분립충돌기의 비교
+</figcaption>
+<div aria-describedby="tbl-cyclone-impactor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 31%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>사이클론</th>
+<th>직경분립충돌기</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>사용 편의·비용</td>
+<td><strong>간편하고 경제적</strong></td>
+<td>시료채취가 까다롭고 <strong>비용이 많이 듦</strong></td>
+</tr>
+<tr class="even">
+<td>채취 준비</td>
+<td>별도 처리 불필요</td>
+<td>준비에 <strong>시간이 오래 걸리고</strong>, 경험 있는 전문가의 철저한 준비 필요</td>
+</tr>
+<tr class="odd">
+<td>매체 코팅</td>
+<td><strong>필요 없음</strong></td>
+<td>되튐 방지를 위한 처리 필요</td>
+</tr>
+<tr class="even">
+<td>되튐(bounce) 손실</td>
+<td><strong>염려 없음</strong></td>
+<td>되튐·과부하로 인한 <strong>시료 손실 발생 가능</strong></td>
+</tr>
+<tr class="odd">
+<td>호흡성 자료</td>
+<td><strong>쉽게 얻을 수 있음</strong></td>
+<td>얻을 수 있음</td>
+</tr>
+<tr class="even">
+<td>입자의 질량크기분포</td>
+<td><strong>얻을 수 없음</strong></td>
+<td><strong>얻을 수 있음</strong></td>
+</tr>
+<tr class="odd">
+<td>흡입성·흉곽성·호흡성 크기별 분포와 농도</td>
+<td>계산 불가</td>
+<td><strong>계산 가능</strong></td>
+</tr>
+<tr class="even">
+<td>호흡기 부분별 침착 입자크기 자료</td>
+<td>추정 불가</td>
+<td><strong>추정 가능</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>두 기구의 차이는 구조에서 바로 따라 나온다. 사이클론은 <strong>컷포인트가 하나</strong>뿐인 분리기라 “4 μm보다 큰가 작은가”만 가르므로, 호흡성 분획은 간편하게 얻지만 <strong>질량크기분포</strong>는 알 수 없다. <strong>여러 단의 컷포인트</strong>를 가진 직경분립충돌기는 크기별 분포·농도와 호흡기 부분별 침착 자료까지 주지만, 그 대가로 준비가 까다롭고 되튐 손실 위험을 안는다. 일상적 노출평가에는 사이클론, 입경 분포 자체가 필요한 정밀조사에는 충돌기다.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>그림 필요 — 입경분립 채취기구의 실물 사진
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>무엇</strong>: ① 10 mm 나일론 사이클론과 PVC 여과지 카세트를 결합한 조립체 (분리컵을 열어 포집된 조대 입자가 보이면 더 좋다), ② 직경분립충돌기의 분해 사진 — 단마다 노즐이 작아지는 것이 보이는 구도.</p>
+<p><strong>왜</strong>: <a href="#fig-cyclone" class="quarto-xref">그림&nbsp;<span>3.4</span></a> 은 원리를 설명하지만, “사이클론이 카세트 <strong>아래에</strong> 연결된다”는 조립 순서와 충돌기의 다단 구조는 실물을 보아야 손에 잡힌다. 표 <a href="#tbl-cyclone-impactor" class="quarto-xref">표&nbsp;<span>3.10</span></a> 의 “준비가 까다롭다”는 서술도 분해 사진 한 장이면 바로 납득된다.</p>
+<p><strong>출처 후보</strong>: NIOSH <em>Manual of Analytical Methods</em>(퍼블릭 도메인)의 기구 도판, NIOSH/CDC 이미지 라이브러리, 제조사 카탈로그(사용 허가 필요), 학과 실습실 직접 촬영.</p>
+<p><strong>대안</strong>: 충돌기 사진을 못 구하면 단별 노즐 지름과 컷포인트를 표시한 다단 단면 모식도로 대체.</p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="유량-보정-공시료와-정도관리" class="level2">
+<h2 class="anchored" data-anchor-id="유량-보정-공시료와-정도관리">4. 유량 보정, 공시료와 정도관리</h2>
+<section id="농도-계산의-논리-분자와-분모" class="level3">
+<h3 class="anchored" data-anchor-id="농도-계산의-논리-분자와-분모">4.1 농도 계산의 논리 — 분자와 분모</h3>
+<p>지금까지의 모든 채취 방법은 결국 하나의 식으로 수렴한다.</p>
+<p><span class="math display">\[\text{농도 (mg/m}^3\text{)} = \frac{\text{포집된 물질의 질량 (mg)}}{\text{채취 공기량 (m}^3\text{)}}\]</span></p>
+<p><strong>분자(질량)</strong>는 분석기기가 주고, <strong>분모(공기량)</strong>는 유량 × 채취시간으로 계산한다. 이 단순한 구조가 정도관리의 지도를 그려 준다 — 분모가 틀리면 (유량 오차), 분자가 틀리면(오염, 회수 손실) 농도가 그만큼 틀린다. 유량이 10% 틀리면 농도도 10% 오차가 난다. 실제 실험 조건을 모두 반영한 완성형 산출식은 다음과 같다.</p>
+<p><span class="math display">\[C\ (\text{mg/m}^3) = \frac{(W_f + W_b) - (B_f + B_b)}{DE \times Q \times t}\]</span></p>
+<ul>
+<li><span class="math inline">\(W_f, W_b\)</span>: 흡착관 <strong>앞층·뒷층</strong>에서 분석된 질량 (여과지의 경우 채취 전후 중량차)</li>
+<li><span class="math inline">\(B_f, B_b\)</span>: <strong>공시료(blank)</strong>의 앞층·뒷층에서 분석된 질량</li>
+<li><span class="math inline">\(DE\)</span>: <strong>탈착효율</strong>(흡착제) 또는 <strong>회수율</strong>(여과지), 소수로 대입</li>
+<li><span class="math inline">\(Q\)</span>: 채취유량(m³/분), <span class="math inline">\(t\)</span>: 채취시간(분)</li>
+</ul>
+<p>이 식의 세 가지 보정 — 유량(<span class="math inline">\(Q\)</span>), 공시료(<span class="math inline">\(B\)</span>), 탈착효율·회수율(<span class="math inline">\(DE\)</span>) — 을 이 절에서 차례로 살펴본다. 분모를 만드는 장치의 배열과 그 유량을 누가 보증하는지를 함께 보면 다음과 같다.</p>
+<div id="fig-sampling-train" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sampling-train-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w02_sampling_train.svg" class="img-fluid figure-img" style="width:92.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sampling-train-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;3.5: 시료채취 열차와 유량 보정의 방향 — 공기량은 재는 것이 아니라 유량 × 시간으로 계산하므로, 유량의 신뢰는 1차 표준기구에서 내려온다
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="펌프-유량-보정" class="level3">
+<h3 class="anchored" data-anchor-id="펌프-유량-보정">4.2 펌프 유량 보정</h3>
+<p>채취 공기량은 직접 재는 것이 아니라 “유량 × 시간”으로 계산하므로, <strong>시료채취 전·후에 펌프 유량을 반드시 보정</strong>해야 한다(허용오차 <strong>±5% 이내</strong>). 유량 보정에 쓰는 기구는 두 등급으로 나뉜다.</p>
+<div id="tbl-standards" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-standards-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;3.11: 유량 보정용 1차·2차 표준기구
+</figcaption>
+<div aria-describedby="tbl-standards-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 26%">
+<col style="width: 47%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>정의</th>
+<th>해당 기구</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1차 표준기구</strong> (Primary standard)</td>
+<td><strong>물리적 차원인 공간의 부피를 직접 측정</strong>할 수 있는 기구</td>
+<td><strong>비누거품미터(비누막 유량계)</strong>, <strong>폐활량계(Spirometer)</strong>, <strong>가스치환병</strong>, <strong>유리 피스톤미터</strong>, <strong>흑연 피스톤미터</strong>, <strong>피토관(Pitot tube, 기류 측정)</strong></td>
+</tr>
+<tr class="even">
+<td><strong>2차 표준기구</strong> (Secondary standard)</td>
+<td>부피를 직접 재지 못하고, <strong>1차 표준기구로 보정한 뒤</strong> 사용하는 기구</td>
+<td><strong>로타미터(Rotameter)</strong>, <strong>습식테스트미터(Wet-test meter)</strong>, <strong>건식가스미터</strong>, <strong>오리피스미터</strong>, <strong>열선기류계</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>구분의 본질은 “<strong>무엇에 기대어 값을 내는가</strong>”이다. 비누거품미터는 비눗방울 막이 눈금 사이의 <strong>부피</strong>를 지나는 시간을 재므로 물리적 차원만으로 유량이 나오는 1차 표준이지만, 로타미터는 부표(float)의 높이를 유량으로 <strong>환산</strong>해 읽는 기구라 그 눈금 자체를 1차 표준으로 검증받아야 한다. 그래서 보정의 방향은 언제나 <strong>1차 → 2차</strong>이며, 그 역은 성립하지 않는다. 현장에서는 간편한 로타미터를, 실험실에서는 비누거품미터나 습식테스트미터를 주로 쓴다.</p>
+</section>
+<section id="공시료회수율탈착효율" class="level3">
+<h3 class="anchored" data-anchor-id="공시료회수율탈착효율">4.3 공시료·회수율·탈착효율</h3>
+<p>분자(질량) 쪽의 세 가지 보정 개념이다.</p>
+<div id="tbl-blank-recovery" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-blank-recovery-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;3.12: 공시료·회수율·탈착효율
+</figcaption>
+<div aria-describedby="tbl-blank-recovery-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 51%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>용어</th>
+<th>정의 (고용노동부 고시)</th>
+<th>계산에서의 취급</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>공시료(바탕시험, blank)</strong></td>
+<td>시료에 대한 처리·측정을 할 때, <strong>시료를 사용하지 않고 같은 방법으로 조작한 측정치</strong>를 빼는 것</td>
+<td>분석값에서 <strong>뺀다</strong></td>
+</tr>
+<tr class="even">
+<td><strong>회수율(recovery)</strong></td>
+<td><strong>여과지</strong>에 채취된 성분을 추출과정을 거쳐 분석 시 실제 검출되는 비율</td>
+<td>농도를 회수율로 <strong>나눈다</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>탈착효율(desorption efficiency)</strong></td>
+<td><strong>흡착제</strong>에 흡착된 성분을 추출과정을 거쳐 분석 시 실제 검출되는 비율</td>
+<td>농도를 탈착효율로 <strong>나눈다</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><span class="math display">\[\text{회수율(\%)} = \frac{\text{분석량}}{\text{첨가량}} \times 100\]</span></p>
+<p>세 개념이 각각 다른 오차를 잡는다. <strong>공시료</strong>는 “채취하지 않았는데도 검출되는 양”(매체·운반·보관 중의 오염)을 잡아내는 대조군 — 시료와 똑같이 다루되 공기만 통과시키지 않은 매체를 함께 분석하여, 그 값을 시료 분석값에서 뺀다. <strong>회수율·탈착효율</strong>은 “잡았는데 되찾지 못한 양”의 보정이다. 탈착효율 90%란 흡착제에 잡힌 양의 90%만 분석기로 넘어왔다는 뜻이므로, 원래 잡혔던 양을 되살리려면 <strong>0.9로 나눈다</strong> — 곱하면 이중으로 깎아 과소평가하게 된다. 탈착효율 실험은 ① 탈착효율의 보정, ② 시약의 오염 보정, ③ 흡착관의 오염 보정을 위해 실시한다(여과지의 오염 보정은 회수율 실험의 대상이다).</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제: 회수율 보정과 공시료 차감
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>막여과지로 납을 채취하여 시료 여과지에서 <strong>4 μg</strong>, 공시료 여과지에서 <strong>0.005 μg</strong>이 검출되었다. 회수율 95%, 채취 공기량 <strong>100 L</strong>일 때 공기 중 납 농도는?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>공시료는 빼고, 회수율로는 나눈다.</p>
+<p><span class="math display">\[C = \frac{(4 - 0.005)/0.95}{0.1\ \text{m}^3} = \frac{4.205\ \mu\text{g}}{0.1\ \text{m}^3}
+= 42.05\ \mu\text{g/m}^3 = \textbf{0.04 mg/m}^3\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="ppm-mgm³-환산" class="level3">
+<h3 class="anchored" data-anchor-id="ppm-mgm³-환산">4.4 ppm ↔︎ mg/m³ 환산</h3>
+<p>가스·증기의 농도는 <strong>부피비(ppm)</strong>와 <strong>질량농도(mg/m³)</strong> 두 가지로 표시한다. 분석은 질량을 주고 기준 농도는 흔히 ppm으로 제시되므로 두 단위를 오갈 수 있어야 하는데, 두 값을 잇는 것이 <strong>몰부피</strong>다.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>25℃, 1기압에서의 몰부피 = 24.45 L/mol
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[\text{ppm} = \frac{\text{mg/m}^3 \times 24.45}{M} \qquad\qquad
+\text{mg/m}^3 = \frac{\text{ppm} \times M}{24.45}\]</span></p>
+<p><span class="math inline">\(M\)</span>은 분자량(g/mol). <strong>24.45 L/mol</strong>은 25℃·1기압 기준값이며 0℃·1기압(표준상태)이면 22.4 L/mol을 쓴다. 부피비 백분율과의 관계는 <span class="math inline">\(1\% = 10{,}000\ \text{ppm}\)</span> (0.05% = 500 ppm).</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제: 흡착관 채취 결과의 농도 산출 (종합)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>톨루엔(분자량 92) 취급 작업장에서 활성탄관으로 총 <strong>72 L</strong>를 채취했다. 앞층에서 <strong>900 μg</strong>, 뒷층에서 <strong>100 μg</strong>이 분석되었고 공시료에서는 검출되지 않았다. <strong>탈착효율 90%</strong>일 때 공기 중 농도(ppm)는? (25℃, 1기압)</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>① 질량 보정</strong> — 앞층과 뒷층은 <strong>더한 뒤</strong> 탈착효율로 나눈다. <span class="math inline">\(W = \dfrac{900 + 100}{0.9} = 1111.1\ \mu\text{g} = 1.1111\ \text{mg}\)</span></p>
+<p><strong>② 질량농도</strong>: <span class="math inline">\(C = \dfrac{1.1111\ \text{mg}}{0.072\ \text{m}^3} = 15.43\ \text{mg/m}^3\)</span></p>
+<p><strong>③ ppm 환산</strong>: <span class="math inline">\(\text{ppm} = \dfrac{15.43 \times 24.45}{92} = \textbf{4.1 ppm}\)</span></p>
+<p>한 가지 더 — 뒷층에서 앞층의 10%(= 900 μg의 10%)가 검출되었으므로 <strong>파과 여부도 함께 검토</strong>해야 한다(§2.2).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="오차와-한계-측정을-얼마나-믿을-수-있는가" class="level3">
+<h3 class="anchored" data-anchor-id="오차와-한계-측정을-얼마나-믿을-수-있는가">4.5 오차와 한계 — 측정을 얼마나 믿을 수 있는가</h3>
+<section id="누적오차" class="level4">
+<h4 class="anchored" data-anchor-id="누적오차">누적오차</h4>
+<p>측정 전 과정에는 <strong>유량·측정시간·회수율·분석</strong>의 오차가 각각 개입한다. 이들은 서로 독립이므로 단순히 더하지 않고 <strong>제곱합의 제곱근</strong>으로 합성한다.</p>
+<p><span class="math display">\[E_c = \sqrt{E_1^2 + E_2^2 + \cdots + E_n^2}\]</span></p>
+<p>제곱해서 합치는 구조 때문에 누적오차는 <strong>가장 큰 항이 지배</strong>하며, 정도관리 자원을 어디에 먼저 쓸지가 이 식에서 바로 나온다 — 가장 큰 오차부터 줄인다.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제: 누적오차 계산
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>유량 15%, 측정시간 3%, 회수율 9%, 분석 5%의 오차가 있을 때 누적오차는?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[E_c = \sqrt{15^2 + 3^2 + 9^2 + 5^2} = \sqrt{225 + 9 + 81 + 25} = \sqrt{340} = \textbf{18.4\%}\]</span></p>
+<p>유량 오차만 15% → 10%로 낮추면 <span class="math inline">\(E_c' = \sqrt{215} = 14.7\%\)</span> — 가장 큰 항을 5%p 줄이자 전체가 3.8%p 줄었다(어느 항을 줄일지의 판단은 연습문제 5).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="검출한계lod와-정량한계loq" class="level4">
+<h4 class="anchored" data-anchor-id="검출한계lod와-정량한계loq">검출한계(LOD)와 정량한계(LOQ)</h4>
+<p>분석기기가 “볼 수 있는” 양과 “믿을 수 있는” 양은 다르다.</p>
+<div id="tbl-lod-loq" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-lod-loq-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;3.13: 검출한계와 정량한계
+</figcaption>
+<div aria-describedby="tbl-lod-loq-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 24%">
+<col style="width: 52%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>정의</th>
+<th>통계적 정의</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>검출한계 (LOD)</strong></td>
+<td>분석기기가 <strong>검출할 수 있는</strong> 가장 작은 양 — 바탕선량(background)과 구별하여 분석될 수 있는 가장 적은 양</td>
+<td><strong>표준편차의 3배</strong></td>
+</tr>
+<tr class="even">
+<td><strong>정량한계 (LOQ)</strong></td>
+<td>분석기기가 <strong>정량할 수 있는</strong> 가장 작은 양 — 분석결과가 <strong>신뢰성을 가질 수 있는</strong> 양</td>
+<td><strong>표준편차의 10배</strong>, 또는 검출한계의 3~3.3배</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><span class="math display">\[LOQ \approx 3 \sim 3.3 \times LOD\]</span></p>
+<p>방향이 중요하다 — <strong>LOQ는 항상 LOD보다 크다.</strong> “검출은 되지만 정량은 안 되는” 구간(LOD와 LOQ 사이)의 값은 “있다”고는 말할 수 있어도 “얼마”라고는 말할 수 없다. §1.2의 최소 시료채취시간이 LOD가 아니라 <strong>LOQ</strong>를 기준으로 하는 이유가 여기에 있다 — 노출평가에 필요한 것은 신뢰할 수 있는 <strong>숫자</strong>이기 때문이다.</p>
+<p>측정값이 노출기준을 초과했는지를 시료채취·분석오차(SAE)까지 반영해 통계적으로 판정하는 방법과 노출자료의 해석은 <a href="../chapters/w03_exposure_assessment2.html">3주차</a>에서 다룬다.</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="측정에-쓰이는-기초-물리화학" class="level2">
+<h2 class="anchored" data-anchor-id="측정에-쓰이는-기초-물리화학">5. 측정에 쓰이는 기초 물리·화학</h2>
+<p>시료채취와 분석의 계산은 몇 가지 기초 관계 위에 서 있다. 따로 정리해 두면 앞의 절들이 어디서 숫자를 가져오는지 보인다.</p>
+<section id="기체-법칙" class="level3">
+<h3 class="anchored" data-anchor-id="기체-법칙">5.1 기체 법칙</h3>
+<div id="tbl-gas-laws" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gas-laws-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;3.14: 기체 법칙
+</figcaption>
+<div aria-describedby="tbl-gas-laws-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 45%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>법칙</th>
+<th>일정한 것</th>
+<th>관계</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>보일</strong> (Boyle)</td>
+<td>온도</td>
+<td><span class="math inline">\(PV = \text{일정}\)</span> — 압력이 오르면 부피는 준다</td>
+</tr>
+<tr class="even">
+<td><strong>샤를</strong> (Charles)</td>
+<td>압력</td>
+<td><span class="math inline">\(V \propto T\)</span> — 온도가 오르면 부피가 는다</td>
+</tr>
+<tr class="odd">
+<td><strong>게이-뤼삭</strong> (Gay-Lussac)</td>
+<td>부피</td>
+<td><span class="math inline">\(P \propto T\)</span> — 온도가 오르면 압력이 는다</td>
+</tr>
+<tr class="even">
+<td><strong>이상기체</strong></td>
+<td>—</td>
+<td><span class="math inline">\(PV = nRT\)</span>, 셋을 하나로 합친 식</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>이상기체 식에서 1몰의 기체가 차지하는 부피(몰부피)는 0 ℃·1기압에서 22.4 L, 25 ℃·1기압에서 24.45 L이다. §4.4의 ppm ↔︎ mg/m³ 환산 상수 24.45가 여기서 나온다. 채취한 공기의 부피를 표준상태로 환산할 때도 같은 식을 쓴다.</p>
+</section>
+<section id="용액의-농도와-표준가스" class="level3">
+<h3 class="anchored" data-anchor-id="용액의-농도와-표준가스">5.2 용액의 농도와 표준가스</h3>
+<p>분석실에서 시약과 표준액을 만드는 데 필요한 농도 표기는 셋이다.</p>
+<div id="tbl-solution-concentration" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-solution-concentration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;3.15: 용액의 농도 표기
+</figcaption>
+<div aria-describedby="tbl-solution-concentration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 35%">
+<col style="width: 29%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>표기</th>
+<th>정의</th>
+<th>예</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>몰농도</strong> (M)</td>
+<td>용액 1 L에 든 용질의 몰수</td>
+<td>5 M 황산</td>
+</tr>
+<tr class="even">
+<td><strong>노르말농도</strong> (N)</td>
+<td>용액 1 L에 든 용질의 당량수 (= M × 이온가)</td>
+<td>1 N HCl = 1 M HCl</td>
+</tr>
+<tr class="odd">
+<td><strong>백분율</strong></td>
+<td>무게(w/w) 또는 무게/부피(w/v) 백분율</td>
+<td>35 % 염산</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>희석</strong>의 원리는 하나 — 용질의 양은 변하지 않는다. <span class="math inline">\(M_1 V_1 = M_2 V_2\)</span>이므로, 5 M 황산으로 0.004 M 용액 3 L를 만들려면 <span class="math inline">\(V_1 = 0.004 \times 3000 / 5 = 2.4\)</span> mL를 취한다. 진한 시약에서 만들 때는 함량과 비중을 거친다. 1 N HCl 500 mL에 필요한 HCl은 <span class="math inline">\(1 \times 0.5 \times 36.5 = 18.25\)</span> g이고, 35 % 염산(비중 1.18)이라면 <span class="math inline">\(18.25 / 0.35 / 1.18 \approx 44\)</span> mL다.</p>
+<p>기기 검량과 채취효율 실험에는 <strong>농도를 아는 표준가스</strong>가 필요하다. 만드는 법은 둘이다. <strong>정적(static) 방법</strong>은 부피를 아는 용기에 물질을 일정량 넣어 농도를 고정하는 것으로 간편하지만 벽면 흡착으로 농도가 변할 수 있고, <strong>동적(dynamic) 방법</strong>은 물질을 연속으로 흘려 희석 공기와 섞는 것으로 장치가 복잡한 대신 농도를 바꿀 수 있고 벽면 흡착의 영향이 적으며 오랫동안 일정 농도를 공급한다.</p>
+</section>
+<section id="입자-직경의-정의" class="level3">
+<h3 class="anchored" data-anchor-id="입자-직경의-정의">5.3 입자 직경의 정의</h3>
+<p>입자는 구가 아니므로 “직경”은 정의에 따라 달라진다.</p>
+<div id="tbl-particle-diameters" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-particle-diameters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;3.16: 입자 직경의 정의
+</figcaption>
+<div aria-describedby="tbl-particle-diameters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>직경</th>
+<th>정의</th>
+<th>성질</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>페레트(Feret) 직경</strong></td>
+<td>입자의 한쪽 끝에서 다른 쪽 끝까지의 거리</td>
+<td><strong>과대평가</strong> 경향</td>
+</tr>
+<tr class="even">
+<td><strong>마틴(Martin) 직경</strong></td>
+<td>입자의 투영 면적을 이등분하는 선의 길이</td>
+<td><strong>과소평가</strong> 경향</td>
+</tr>
+<tr class="odd">
+<td><strong>등면적 직경</strong></td>
+<td>입자와 투영 면적이 같은 원의 직경</td>
+<td>현미경 계측의 기준</td>
+</tr>
+<tr class="even">
+<td><strong>공기역학적 직경</strong></td>
+<td>침강속도가 같은 <strong>밀도 1 g/cm³의 구</strong>의 직경</td>
+<td>호흡기 침착과 시료채취기 분립의 기준(§3.1)</td>
+</tr>
+<tr class="odd">
+<td><strong>질량중앙직경</strong> (MMAD)</td>
+<td>질량 기준 누적분포의 50 % 지점</td>
+<td>에어로졸 분포의 대표값</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>앞의 셋은 현미경으로 보이는 모양의 직경이고, 공기역학적 직경은 <strong>공기 중에서 어떻게 움직이는가</strong>의 직경이다. 호흡기 침착과 사이클론 분립을 결정하는 것은 후자다.</p>
+</section>
+<section id="정확도와-정밀도" class="level3">
+<h3 class="anchored" data-anchor-id="정확도와-정밀도">5.4 정확도와 정밀도</h3>
+<div id="tbl-accuracy-precision" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-accuracy-precision-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;3.17: 정확도와 정밀도
+</figcaption>
+<div aria-describedby="tbl-accuracy-precision-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 22%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>개념</th>
+<th>뜻</th>
+<th>나타내는 값</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>정확도</strong> (accuracy)</td>
+<td>측정값이 <strong>참값</strong>에 얼마나 가까운가</td>
+<td>편향(bias), 회수율</td>
+</tr>
+<tr class="even">
+<td><strong>정밀도</strong> (precision)</td>
+<td>반복 측정값이 <strong>서로</strong> 얼마나 가까운가</td>
+<td>표준편차, <strong>변이계수</strong>(CV = 표준편차 ÷ 평균)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>정밀하지만 부정확한 측정(늘 같은 만큼 치우침)과 정확하지만 정밀하지 못한 측정(평균은 맞지만 흩어짐)은 다른 문제이고 대책도 다르다 — 앞은 보정, 뒤는 반복 횟수와 절차의 표준화다. 변이계수는 평균에 대한 상대값이라 단위와 크기가 다른 자료의 정밀도를 견줄 수 있다(3주차).</p>
+</section>
+<section id="측정고시의-표기-약속" class="level3">
+<h3 class="anchored" data-anchor-id="측정고시의-표기-약속">5.5 측정고시의 표기 약속</h3>
+<p>「작업환경측정 및 정도관리 등에 관한 고시」는 분석 조건을 적을 때 쓰는 온도의 말과 결과의 단위를 미리 정해 두고 있다. 같은 말을 다르게 읽지 않기 위한 약속이다.</p>
+<div id="tbl-notice-temperature" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-notice-temperature-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;3.18: 측정고시의 온도 표현
+</figcaption>
+<div aria-describedby="tbl-notice-temperature-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>표현</th>
+<th>뜻</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>표준온도</td>
+<td>20 ℃</td>
+</tr>
+<tr class="even">
+<td>상온 / 실온</td>
+<td>15~25 ℃ / 1~35 ℃</td>
+</tr>
+<tr class="odd">
+<td>미온</td>
+<td>30~40 ℃</td>
+</tr>
+<tr class="even">
+<td>찬 곳</td>
+<td>따로 정하지 않으면 0~15 ℃</td>
+</tr>
+<tr class="odd">
+<td>냉수 / 온수 / 열수</td>
+<td>15 ℃ 이하 / 60~70 ℃ / 약 100 ℃</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>결과의 단위는 가스·증기가 ppm, 분진·미스트·흄이 mg/m³, 소음이 dB(A), 고열이 WBGT(℃), 석면이 개/cm³다(3주차 §4.3).</p>
+<hr>
+</section>
+</section>
+<section id="분석기기-개관" class="level2">
+<h2 class="anchored" data-anchor-id="분석기기-개관">6. 분석기기 개관</h2>
+<p>채취한 시료의 <strong>분자(질량)</strong>를 주는 것이 분석기기다. 무엇을 재는가에 따라 원리가 갈린다.</p>
+<div id="tbl-analytical-instruments" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-analytical-instruments-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;3.19: 주요 분석기기
+</figcaption>
+<div aria-describedby="tbl-analytical-instruments-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>기기</th>
+<th>원리</th>
+<th>대상</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>가스크로마토그래피</strong> (GC)</td>
+<td>운반기체가 시료를 <strong>시료주입구 → 분리관(컬럼) → 검출기 → 기록계</strong>로 나르며, 성분마다 컬럼을 통과하는 속도가 달라 분리된다. 검출기는 FID(유기물 일반), ECD(할로겐 화합물) 등</td>
+<td>유기용제 증기(활성탄관 시료)</td>
+</tr>
+<tr class="even">
+<td><strong>고성능 액체크로마토그래피</strong> (HPLC)</td>
+<td>액체 이동상으로 분리. 열에 약하거나 휘발하지 않는 물질에 적합</td>
+<td>포름알데히드(DNPH 유도체), PAHs</td>
+</tr>
+<tr class="odd">
+<td><strong>원자흡광광도계</strong> (AAS)</td>
+<td>불꽃·흑연로에서 원자화된 <strong>바닥 상태</strong> 원자가 원소 고유 파장의 빛을 <strong>흡수</strong>하는 양을 잰다</td>
+<td>금속(납·카드뮴 등)</td>
+</tr>
+<tr class="even">
+<td><strong>유도결합플라즈마</strong> (ICP-OES)</td>
+<td>6,000~10,000 K 플라즈마에서 <strong>들뜬</strong> 원자가 바닥 상태로 돌아오며 내는 <strong>발광</strong> 스펙트럼을 잰다. 여러 원소를 동시에, 넓은 농도 범위에서 직선적으로</td>
+<td>금속 다원소 동시분석</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>흡광 분석은 <strong>Beer-Lambert 법칙</strong>을 따른다. 흡광도 <span class="math inline">\(A = -\log T = \varepsilon b c\)</span> (<span class="math inline">\(T\)</span> 투과율, <span class="math inline">\(\varepsilon\)</span> 몰흡광계수, <span class="math inline">\(b\)</span> 광로 길이, <span class="math inline">\(c\)</span> 농도)이므로 흡광도는 농도에 비례한다. 빛의 절반이 흡수되면 <span class="math inline">\(A = -\log 0.5 = 0.30\)</span>, 90 %가 흡수되면 <span class="math inline">\(A = 1.0\)</span>이다.</p>
+<p>실험실 분석과 달리 현장에서 바로 값을 읽는 것이 <strong>직독식 기기</strong>다. 가장 단순한 것이 <strong>검지관</strong>으로, 대상 물질과 반응해 변색하는 시약이 든 유리관에 일정량의 공기를 통과시켜 변색 길이로 농도를 읽는다. 값이 즉시 나오고 싸지만 <strong>대상 물질을 미리 알아야</strong> 전용 검지관을 고를 수 있고, 민감도가 낮아 고농도용이며, 특이도가 낮아 방해물질의 영향을 받고, 변색은 제조자가 정한 시간에 읽어야 한다. 전자식 직독기(PID·전기화학식 센서)는 연속 기록이 가능해 단시간 피크의 포착에 쓴다(3주차 §2.3).</p>
+<hr>
+</section>
+<section id="요약" class="level2">
+<h2 class="anchored" data-anchor-id="요약">요약</h2>
+<div id="tbl-summary" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;3.20: 2주차 핵심 요약
+</figcaption>
+<div aria-describedby="tbl-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 62%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>개념</th>
+<th>핵심 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>측정의 목적</strong></td>
+<td>노출 수준 파악 · 위험성 평가 · 관리 효과 검증 · 법적 의무(산업안전보건법) 이행</td>
+</tr>
+<tr class="even">
+<td><strong>호흡역·개인시료</strong></td>
+<td>양 귀를 잇는 선의 중앙점에서 반경 30 cm의 반구 — 호흡역의 개인시료가 1차적 노출평가 기준, 지역시료는 농도 분포·환기 성능 평가의 보조 자료</td>
+</tr>
+<tr class="odd">
+<td><strong>대상 선정</strong></td>
+<td>SEG(동질노출그룹) 설정 → 최고노출근로자 포함, 최소 2명 이상 동시 측정 (10명 초과 시 5명당 1명 추가, 상한 20명)</td>
+</tr>
+<tr class="even">
+<td><strong>시기·시간</strong></td>
+<td>일반 6개월 / 발암성·초과공정 3개월 / 신규 30일 이내 · 전일 측정 원칙(6시간 이상 연속 또는 등간격 분리 측정) · <span class="math inline">\(t_{min} = LOQ/(C \times Q)\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>가스·증기 채취</strong></td>
+<td>활성탄관(비극성 용제) · 실리카겔관(극성 화합물) · 액체흡수(임핀저, 직렬 시 <span class="math inline">\(\eta = 1-(1-\eta_1)(1-\eta_2)\)</span>) · 수동식(Fick의 확산법칙) · 순간시료(농축 없음 — 농도 변동·저농도에 부적합) · <strong>파과</strong>: 흡착 용량 초과 시 과소평가, 뒷층이 앞층의 10% 이상이면 파과로 판단</td>
+</tr>
+<tr class="even">
+<td><strong>입자상 3분류</strong></td>
+<td>흡입성 IPM(0~100 μm, 어느 부위든 유해) · 흉곽성 TPM(평균입경 10 μm) · 호흡성 RPM(평균입경 4 μm, 폐포) — 기준 입경은 50% 침착 직경</td>
+</tr>
+<tr class="odd">
+<td><strong>여과포집</strong></td>
+<td>PVC(중량분석, 소수성) · MCE(중금속·석면) 등 물질·분석법에 맞춘 선택, 유량 1~2.5 L/분</td>
+</tr>
+<tr class="even">
+<td><strong>입경분립</strong></td>
+<td>사이클론(원심력, 간편, 컷포인트 1개 — 분포 불가) vs 직경분립충돌기(다단 관성충돌 — 질량크기분포 가능, 까다로움·되튐)</td>
+</tr>
+<tr class="odd">
+<td><strong>유량·질량 보정</strong></td>
+<td>1차 표준기구(부피 직접 측정: 비누거품미터 등)로 2차 표준기구(로타미터 등)를 보정(±5%) · 공시료는 <strong>빼고</strong>, 회수율(여과지)·탈착효율(흡착제)로는 <strong>나눈다</strong></td>
+</tr>
+<tr class="even">
+<td><strong>오차·한계</strong></td>
+<td>누적오차 <span class="math inline">\(E_c = \sqrt{\sum E_i^2}\)</span> — 가장 큰 항부터 개선 · <span class="math inline">\(LOQ \approx 3\sim3.3 \times LOD\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>기초 물리·화학</strong></td>
+<td>보일(T 일정)·샤를(P 일정)·게이-뤼삭(V 일정)·<span class="math inline">\(PV = nRT\)</span>, 몰부피 24.45 L · 희석 <span class="math inline">\(M_1V_1 = M_2V_2\)</span> · 표준가스 정적/동적 · 입자 직경: 페레트(과대)·마틴(과소)·등면적·공기역학적(침강 동등, 밀도 1) · 정확도(참값)/정밀도(반복, CV) · 온도 표현(냉수 15 ℃ 이하, 온수 60~70 ℃)</td>
+</tr>
+<tr class="even">
+<td><strong>분석기기</strong></td>
+<td>GC(주입구 → 컬럼 → 검출기 → 기록계, 유기용제) · HPLC(비휘발·열불안정) · AAS(바닥 상태 원자의 <strong>흡광</strong>) · ICP(플라즈마에서 들뜬 원자의 <strong>발광</strong>, 다원소) · <span class="math inline">\(A = -\log T = \varepsilon bc\)</span> · 검지관(대상 물질을 알아야, 저민감·저특이, 정해진 시간에 판독)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<hr>
+</section>
+<section id="연습문제" class="level2">
+<h2 class="anchored" data-anchor-id="연습문제">연습문제</h2>
+<section id="문제-1.-측정-계획의-수립" class="level3">
+<h3 class="anchored" data-anchor-id="문제-1.-측정-계획의-수립">문제 1. 측정 계획의 수립</h3>
+<p>자동차 부품 도장 공장의 한 단위작업장소(넓이 40 m²)에서 <strong>23명</strong>의 근로자가 동일한 스프레이 도장 작업을 하며 톨루엔에 노출된다.</p>
+<ol type="a">
+<li>개인시료채취로 측정해야 할 최소 근로자 수를 계산하라.</li>
+<li>측정 대상자를 고를 때 반드시 포함해야 하는 근로자는 누구이며, 그 논리는 무엇인가?</li>
+<li>지역시료채취 지점을 추가해야 하는가?</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>a. 5명.</strong> 기본 2명 + 10명 초과분에 대해 매 5명당 1명 (11~15명 +1, 16~20명 +1, 21~23명 구간 +1) = <strong>5명</strong>.</p>
+<p><strong>b. 최고노출근로자.</strong> 발생원에 가장 가깝거나 작업량이 가장 많아 노출이 가장 높을 것으로 예상되는 근로자 — 이 사람이 기준 이하라면 그룹 전체가 안전하다고 보수적으로 추론할 수 있다.</p>
+<strong>c.&nbsp;필요 없다.</strong> 지역시료 지점 추가 기준(넓이 50 m² 이상, 매 30 m²마다 1개 지점)에 미달한다.
+</details>
+</section>
+<section id="문제-2.-채취-매체의-선택" class="level3">
+<h3 class="anchored" data-anchor-id="문제-2.-채취-매체의-선택">문제 2. 채취 매체의 선택</h3>
+<p>다음 네 가지 측정 상황에 대해 적절한 채취 매체(및 부속 기구)를 고르고 이유를 설명하라.</p>
+<ol type="a">
+<li>인쇄 작업장의 톨루엔 증기</li>
+<li>세척 작업장의 메탄올(극성 알코올) 증기</li>
+<li>주물공장의 유리규산(석영) 분진 — 진폐증 위험 평가 목적</li>
+<li>축전지 공장의 납 분진·흄</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>a. 활성탄관.</strong> 톨루엔은 비극성 유기용제로, 비극성 물질과 친화력이 큰 활성탄에 잘 흡착된다.</p>
+<p><strong>b. 실리카겔관.</strong> 알코올은 극성 화합물이므로 극성 표면을 가진 실리카겔로 채취한다.</p>
+<p><strong>c.&nbsp;PVC 여과지 + 사이클론.</strong> 유리규산은 폐포에 도달해야 진폐증을 일으키므로 호흡성 분획(평균입경 4 μm)만 선별해야 한다 — 카세트 아래에 사이클론을 연결하여 큰 입자를 원심력으로 미리 제거한다.</p>
+<strong>d.&nbsp;MCE 여과지.</strong> 납은 산분해 후 원자흡광분석에 적합한 MCE 여과지로 채취한다. 호흡기 어느 부위에 침착해도 유해한 흡입성 분획의 대상이므로 크기별 분립은 필요 없다.
+</details>
+</section>
+<section id="문제-3.-파과의-판단과-대응" class="level3">
+<h3 class="anchored" data-anchor-id="문제-3.-파과의-판단과-대응">문제 3. 파과의 판단과 대응</h3>
+<p>벤젠(분자량 78) 취급 작업장에서 활성탄관으로 <strong>0.1 L/분</strong> 유량으로 <strong>240분</strong>간 채취했다. 앞층 <strong>1,200 μg</strong>, 뒷층 <strong>200 μg</strong>이 검출되었고, 공시료는 불검출, 탈착효율은 100%로 가정한다.</p>
+<ol type="a">
+<li>파과가 발생했는가? 판단 근거를 제시하라.</li>
+<li>파과를 무시하고 계산한 공기 중 농도(ppm)는? (25℃, 1기압)</li>
+<li>이 측정값을 노출 평가에 그대로 쓸 수 있는가? 다음 측정에서는 무엇을 바꿔야 하는가?</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>a. 파과 발생.</strong> 뒷층/앞층 = 200/1,200 = 16.7% ≥ 10%이므로 파과로 판단한다.</p>
+<p><strong>b.</strong> 채취 공기량 <span class="math inline">\(V = 0.1 \times 240 = 24\ \text{L} = 0.024\ \text{m}^3\)</span>이므로 <span class="math inline">\(C = \dfrac{(1200+200)\ \mu\text{g}}{0.024\ \text{m}^3} = 58.3\ \text{mg/m}^3
+\rightarrow \text{ppm} = \dfrac{58.3 \times 24.45}{78} = \textbf{약 18.3 ppm}\)</span>.</p>
+<strong>c.&nbsp;그대로 쓸 수 없다.</strong> 파과가 일어났다는 것은 뒷층마저 통과해 달아난 몫이 있을 수 있다는 뜻이므로, 이 값은 실제 농도의 <strong>하한</strong>(과소평가)으로만 볼 수 있다. 다음 측정에서는 채취시간을 단축하거나 유량을 낮추어 총 채취량을 흡착 용량 안으로 줄여야 한다.
+</details>
+</section>
+<section id="문제-4.-수동식-시료채취기의-원리" class="level3">
+<h3 class="anchored" data-anchor-id="문제-4.-수동식-시료채취기의-원리">문제 4. 수동식 시료채취기의 원리</h3>
+<p>한 사업장이 유기용제 노출조사를 위해 펌프식 대신 확산포집기(수동식)를 대량으로 배포하려 한다.</p>
+<ol type="a">
+<li>이 선택이 합리적일 수 있는 이유를 두 가지 들어라.</li>
+<li>조사 대상 중 “공기 흐름이 거의 정지된 창고 안에서의 작업”이 있다. 이 작업에 확산포집기를 쓰면 어떤 문제가 생기는지 Fick의 확산 법칙 관점에서 설명하라.</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>a.</strong> ① 펌프가 필요 없어 가볍고 근로자 부담이 적으며, 펌프 보정·충전의 시간과 노동력을 절약할 수 있다 — 대규모 조사에 경제적이다. ② 소음·진동이 없고 본질안전하다.</p>
+<strong>b.</strong> 수동식의 채취량 <span class="math inline">\(W = \dfrac{D \cdot A}{L}(C_{air} - C_{sorbent}) \cdot t\)</span>는 포집기 입구의 농도 <span class="math inline">\(C_{air}\)</span>가 작업장 농도를 대표한다는 전제 위에 있다. 정지 공기에서는 포집기가 주변 분자를 끌어들여도 새 공기가 보충되지 않아 입구 근처 농도가 국소적으로 낮아지고, 그만큼 채취량이 줄어 실제 농도를 <strong>과소평가</strong>하게 된다. 이런 작업에는 펌프를 쓰는 능동식 채취가 적합하다.
+</details>
+</section>
+<section id="문제-5.-정도관리-종합" class="level3">
+<h3 class="anchored" data-anchor-id="문제-5.-정도관리-종합">문제 5. 정도관리 종합</h3>
+<p>신입 산업위생 담당자가 다음과 같이 보고했다.</p>
+<blockquote class="blockquote">
+<p>“현장 측정 전에 로타미터로 비누거품미터를 보정한 뒤 펌프 유량을 확인했습니다. 유량 오차는 12%였지만 로타미터가 1차 표준기구이므로 문제없다고 판단했습니다. 그 밖의 오차는 측정시간 2%, 탈착효율 10%, 분석 4%입니다.”</p>
+</blockquote>
+<ol type="a">
+<li>보고 내용 중 잘못된 부분을 모두 찾아 바로잡아라.</li>
+<li>보고된 네 가지 오차의 누적오차를 계산하라.</li>
+<li>한 가지 요인만 개선할 수 있다면, 유량 오차를 12% → 6%로 줄이는 방안과 분석 오차를 4% → 0%로 줄이는 방안 중 어느 쪽이 효과적인지 계산으로 비교하라.</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>a.</strong> ① <strong>보정 방향이 반대다.</strong> 부피를 직접 측정하는 <strong>비누거품미터가 1차 표준기구</strong>이고, 로타미터는 1차 표준기구로 보정받아야 하는 <strong>2차 표준기구</strong>다 — 보정은 언제나 1차 → 2차 방향이다. ② <strong>유량 오차 12%는 허용오차(±5%)를 초과한다.</strong> 채취 공기량이 농도 계산의 분모이므로 유량 오차는 그대로 농도 오차가 된다. 펌프를 재보정한 후 측정해야 한다.</p>
+<p><strong>b.</strong></p>
+<p><span class="math display">\[E_c = \sqrt{12^2 + 2^2 + 10^2 + 4^2} = \sqrt{144 + 4 + 100 + 16} = \sqrt{264} = \textbf{16.2\%}\]</span></p>
+<p><strong>c.&nbsp;유량 개선이 압도적으로 효과적이다.</strong></p>
+<ul>
+<li>유량 12% → 6%: <span class="math inline">\(E_c = \sqrt{36 + 4 + 100 + 16} = \sqrt{156} = 12.5\%\)</span> (개선폭 <strong>3.7%p</strong>)</li>
+<li>분석 4% → 0%: <span class="math inline">\(E_c = \sqrt{144 + 4 + 100 + 0} = \sqrt{248} = 15.7\%\)</span> (개선폭 <strong>0.5%p</strong>)</li>
+</ul>
+작은 오차를 완전히 없애는 것보다 큰 오차를 절반으로 줄이는 쪽이 효과적이다.
+</details>
+<hr>
+</section>
+</section>
+<section id="참고문헌" class="level2">
+<h2 class="anchored" data-anchor-id="참고문헌">참고문헌</h2>
+<ol type="1">
+<li>Plog, B. A., &amp; Quinlan, P. J. (2012). <em>Fundamentals of Industrial Hygiene</em> (6th ed.). National Safety Council.</li>
+<li>DiNardi, S. R. (2003). <em>The Occupational Environment: Its Evaluation, Control, and Management</em> (2nd ed.). AIHA Press.</li>
+<li>NIOSH. <em>NIOSH Manual of Analytical Methods (NMAM)</em>.</li>
+<li>ACGIH (2024). <em>TLVs and BEIs</em>. ACGIH.</li>
+<li>고용노동부. 작업환경측정 및 정도관리 규정 (고시).</li>
+<li>한국산업안전보건공단 (2023). <em>산업위생학 개론</em>. KOSHA.</li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "복사완료!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "복사완료!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/w01_intro_history.html" class="pagination-link" aria-label="1주차. 산업위생 개론과 역사">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">1주차. 산업위생 개론과 역사</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/w03_exposure_assessment2.html" class="pagination-link" aria-label="3주차. 작업환경측정 II — 노출기준과 평가">
+        <span class="nav-page-text"><span class="chapter-title">3주차. 작업환경측정 II — 노출기준과 평가</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

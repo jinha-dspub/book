@@ -1,0 +1,2079 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>9주차. 산업환기 I — 환기의 원리와 전체환기 – 산업위생 총론</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/w10_ventilation2.html" rel="next">
+<link href="../chapters/w08_midterm.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-df22de3841a4459d65a458d30db11513.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-1f5cceec34869e9b7e758f61c933684c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-df22de3841a4459d65a458d30db11513.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/w09_ventilation1.html">Part III. 작업환경 관리 (9~13주)</a></li><li class="breadcrumb-item"><a href="../chapters/w09_ventilation1.html"><span class="chapter-title">9주차. 산업환기 I — 환기의 원리와 전체환기</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">산업위생 총론</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="다크 모드 전환"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="검색"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">산업위생 총론</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I. 산업위생의 기초 (1~3주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w01_intro_history.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1주차. 산업위생 개론과 역사</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w02_exposure_assessment1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2주차. 작업환경측정 I — 측정 원리와 전략</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w03_exposure_assessment2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3주차. 작업환경측정 II — 노출기준과 평가</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II. 유해인자와 건강영향 (4~7주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w04_toxicology1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4주차. 산업독성학 I — 독성학의 원리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w05_toxicology2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5주차. 산업독성학 II — 주요 화학물질과 건강장해</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w06_physical_agents1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6주차. 물리적 유해인자 I — 소음과 진동</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w07_physical_agents2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">7주차. 물리적 유해인자 II — 온열·이상기압·방사선·조명</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">중간고사 (8주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w08_midterm.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">8주차. 중간고사</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III. 작업환경 관리 (9~13주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w09_ventilation1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">9주차. 산업환기 I — 환기의 원리와 전체환기</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w10_ventilation2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">10주차. 산업환기 II — 국소배기장치</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w11_biological_agents.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">11주차. 생물학적 유해인자와 생물학적 모니터링</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w12_ergonomics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">12주차. 인간공학과 근골격계질환</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w13_ppe_work_management.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">13주차. 개인보호구와 작업관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part IV. 제도와 실무 (14~15주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w14_law_management.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">14주차. 산업보건 법규와 관리 제도</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w15_case_studies.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">15주차. 직업병 사례연구</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">기말고사 (16주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w16_final.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">16주차. 기말고사</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">부록</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendix/cert_map.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">부록. 자격증 과목 매핑</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#학습목표" id="toc-학습목표" class="nav-link active" data-scroll-target="#학습목표">학습목표</a></li>
+  <li><a href="#환기는-무엇을-하는-일인가" id="toc-환기는-무엇을-하는-일인가" class="nav-link" data-scroll-target="#환기는-무엇을-하는-일인가">1. 환기는 무엇을 하는 일인가</a>
+  <ul>
+  <li><a href="#관리-위계-속의-환기" id="toc-관리-위계-속의-환기" class="nav-link" data-scroll-target="#관리-위계-속의-환기">1.1 관리 위계 속의 환기</a></li>
+  <li><a href="#두-가지-전략-희석과-포집" id="toc-두-가지-전략-희석과-포집" class="nav-link" data-scroll-target="#두-가지-전략-희석과-포집">1.2 두 가지 전략 — 희석과 포집</a></li>
+  </ul></li>
+  <li><a href="#공기의-성질과-흐름-유체역학-기초" id="toc-공기의-성질과-흐름-유체역학-기초" class="nav-link" data-scroll-target="#공기의-성질과-흐름-유체역학-기초">2. 공기의 성질과 흐름 — 유체역학 기초</a>
+  <ul>
+  <li><a href="#이상기체-법칙-공기의-부피는-조건에-따라-변한다" id="toc-이상기체-법칙-공기의-부피는-조건에-따라-변한다" class="nav-link" data-scroll-target="#이상기체-법칙-공기의-부피는-조건에-따라-변한다">2.1 이상기체 법칙 — 공기의 부피는 조건에 따라 변한다</a></li>
+  <li><a href="#연속방정식-좁아지면-빨라진다" id="toc-연속방정식-좁아지면-빨라진다" class="nav-link" data-scroll-target="#연속방정식-좁아지면-빨라진다">2.2 연속방정식 — 좁아지면 빨라진다</a></li>
+  <li><a href="#레이놀즈-수-층류와-난류" id="toc-레이놀즈-수-층류와-난류" class="nav-link" data-scroll-target="#레이놀즈-수-층류와-난류">2.3 레이놀즈 수 — 층류와 난류</a></li>
+  <li><a href="#베르누이-정리-에너지-보존" id="toc-베르누이-정리-에너지-보존" class="nav-link" data-scroll-target="#베르누이-정리-에너지-보존">2.4 베르누이 정리 — 에너지 보존</a></li>
+  </ul></li>
+  <li><a href="#압력-전압-정압-동압" id="toc-압력-전압-정압-동압" class="nav-link" data-scroll-target="#압력-전압-정압-동압">3. 압력 — 전압, 정압, 동압</a>
+  <ul>
+  <li><a href="#세-가지-압력" id="toc-세-가지-압력" class="nav-link" data-scroll-target="#세-가지-압력">3.1 세 가지 압력</a></li>
+  <li><a href="#동압과-유속의-관계" id="toc-동압과-유속의-관계" class="nav-link" data-scroll-target="#동압과-유속의-관계">3.2 동압과 유속의 관계</a></li>
+  </ul></li>
+  <li><a href="#희석환기전체환기의-원리와-필요환기량" id="toc-희석환기전체환기의-원리와-필요환기량" class="nav-link" data-scroll-target="#희석환기전체환기의-원리와-필요환기량">4. 희석환기(전체환기)의 원리와 필요환기량</a>
+  <ul>
+  <li><a href="#원리-오염을-없애는-것이-아니라-묽히는-것" id="toc-원리-오염을-없애는-것이-아니라-묽히는-것" class="nav-link" data-scroll-target="#원리-오염을-없애는-것이-아니라-묽히는-것">4.1 원리 — 오염을 없애는 것이 아니라 묽히는 것</a></li>
+  <li><a href="#전체환기의-적용-조건" id="toc-전체환기의-적용-조건" class="nav-link" data-scroll-target="#전체환기의-적용-조건">4.2 전체환기의 적용 조건</a></li>
+  <li><a href="#유해물질-희석에-필요한-환기량" id="toc-유해물질-희석에-필요한-환기량" class="nav-link" data-scroll-target="#유해물질-희석에-필요한-환기량">4.3 유해물질 희석에 필요한 환기량</a></li>
+  <li><a href="#시간에-따른-농도-변화" id="toc-시간에-따른-농도-변화" class="nav-link" data-scroll-target="#시간에-따른-농도-변화">4.4 시간에 따른 농도 변화</a></li>
+  <li><a href="#환기횟수-ach" id="toc-환기횟수-ach" class="nav-link" data-scroll-target="#환기횟수-ach">4.5 환기횟수 (ACH)</a></li>
+  <li><a href="#폭발-방지를-위한-환기" id="toc-폭발-방지를-위한-환기" class="nav-link" data-scroll-target="#폭발-방지를-위한-환기">4.6 폭발 방지를 위한 환기</a></li>
+  <li><a href="#여러-유해물질이-동시에-존재할-때" id="toc-여러-유해물질이-동시에-존재할-때" class="nav-link" data-scroll-target="#여러-유해물질이-동시에-존재할-때">4.7 여러 유해물질이 동시에 존재할 때</a></li>
+  </ul></li>
+  <li><a href="#열co₂수분을-배출하는-전체환기-전체환기-설계의-원칙" id="toc-열co₂수분을-배출하는-전체환기-전체환기-설계의-원칙" class="nav-link" data-scroll-target="#열co₂수분을-배출하는-전체환기-전체환기-설계의-원칙">5. 열·CO₂·수분을 배출하는 전체환기 · 전체환기 설계의 원칙</a>
+  <ul>
+  <li><a href="#열co₂수분을-배출하는-전체환기" id="toc-열co₂수분을-배출하는-전체환기" class="nav-link" data-scroll-target="#열co₂수분을-배출하는-전체환기">5.1 열·CO₂·수분을 배출하는 전체환기</a>
+  <ul class="collapse">
+  <li><a href="#열부하-제거-환기량" id="toc-열부하-제거-환기량" class="nav-link" data-scroll-target="#열부하-제거-환기량">열부하 제거 환기량</a></li>
+  <li><a href="#이산화탄소-기준-환기량" id="toc-이산화탄소-기준-환기량" class="nav-link" data-scroll-target="#이산화탄소-기준-환기량">이산화탄소 기준 환기량</a></li>
+  <li><a href="#수분-제거-환기량" id="toc-수분-제거-환기량" class="nav-link" data-scroll-target="#수분-제거-환기량">수분 제거 환기량</a></li>
+  </ul></li>
+  <li><a href="#전체환기-설계의-원칙" id="toc-전체환기-설계의-원칙" class="nav-link" data-scroll-target="#전체환기-설계의-원칙">5.2 전체환기 설계의 원칙</a></li>
+  </ul></li>
+  <li><a href="#요약" id="toc-요약" class="nav-link" data-scroll-target="#요약">요약</a></li>
+  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a>
+  <ul>
+  <li><a href="#문제-1.-희석환기량과-환기횟수" id="toc-문제-1.-희석환기량과-환기횟수" class="nav-link" data-scroll-target="#문제-1.-희석환기량과-환기횟수">문제 1. 희석환기량과 환기횟수</a></li>
+  <li><a href="#문제-2.-속도압-유속-연속방정식" id="toc-문제-2.-속도압-유속-연속방정식" class="nav-link" data-scroll-target="#문제-2.-속도압-유속-연속방정식">문제 2. 속도압, 유속, 연속방정식</a></li>
+  <li><a href="#문제-3.-열부하-제거-환기량" id="toc-문제-3.-열부하-제거-환기량" class="nav-link" data-scroll-target="#문제-3.-열부하-제거-환기량">문제 3. 열부하 제거 환기량</a></li>
+  <li><a href="#문제-4.-여러-유해물질의-필요환기량" id="toc-문제-4.-여러-유해물질의-필요환기량" class="nav-link" data-scroll-target="#문제-4.-여러-유해물질의-필요환기량">문제 4. 여러 유해물질의 필요환기량</a></li>
+  <li><a href="#문제-5.-co₂-기준-강의실-환기" id="toc-문제-5.-co₂-기준-강의실-환기" class="nav-link" data-scroll-target="#문제-5.-co₂-기준-강의실-환기">문제 5. CO₂ 기준 강의실 환기</a></li>
+  </ul></li>
+  <li><a href="#참고문헌" id="toc-참고문헌" class="nav-link" data-scroll-target="#참고문헌">참고문헌</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/w09_ventilation1.html">Part III. 작업환경 관리 (9~13주)</a></li><li class="breadcrumb-item"><a href="../chapters/w09_ventilation1.html"><span class="chapter-title">9주차. 산업환기 I — 환기의 원리와 전체환기</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">9주차. 산업환기 I — 환기의 원리와 전체환기</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<blockquote class="blockquote">
+<p>환기의 목적과 두 가지 전략, 공기의 성질과 유체역학 기초, 전압=정압+동압, 속도압과 유속, 희석환기의 필요환기량 계산, 전체환기의 적용 조건</p>
+</blockquote>
+<section id="학습목표" class="level2">
+<h2 class="anchored" data-anchor-id="학습목표">학습목표</h2>
+<p>이 주를 학습한 후 여러분은 다음을 할 수 있어야 합니다:</p>
+<ol type="1">
+<li>산업환기의 목적을 설명하고, 전체환기와 국소배기환기의 원리적 차이와 각각의 적용 논리를 설명할 수 있다</li>
+<li>공기의 성질(이상기체 법칙)과 연속방정식·베르누이 정리로 덕트 내 공기 흐름을 설명할 수 있다</li>
+<li>전압·정압·동압의 관계를 이해하고, 측정한 속도압으로부터 유속과 유량을 계산할 수 있다</li>
+<li>희석환기의 필요환기량을 목적별(유해물질 희석, 폭발 방지, 열·CO₂·수분 제거)로 계산할 수 있다</li>
+<li>여러 유해물질을 동시에 취급할 때 필요환기량을 결정하는 원칙을 적용할 수 있다</li>
+<li>전체환기가 적합한 조건과 그 한계를 설명하고, 국소배기가 필요한 상황을 판별할 수 있다</li>
+</ol>
+<hr>
+</section>
+<section id="환기는-무엇을-하는-일인가" class="level2">
+<h2 class="anchored" data-anchor-id="환기는-무엇을-하는-일인가">1. 환기는 무엇을 하는 일인가</h2>
+<section id="관리-위계-속의-환기" class="level3">
+<h3 class="anchored" data-anchor-id="관리-위계-속의-환기">1.1 관리 위계 속의 환기</h3>
+<p><a href="../chapters/w01_intro_history.html">1주차</a>에서 본 관리 위계를 다시 떠올려 보자. 제거·대체가 불가능할 때 다음 순서는 <strong>공학적 대책</strong>이었고, 그 공학적 대책의 대표가 바로 <strong>산업환기(Industrial Ventilation)</strong>다. 환기는 유해물질 발생 자체를 없애지는 못하지만, 발생한 유해물질이 <strong>근로자의 호흡 영역에 도달하기 전에</strong> 제거하거나 희석한다 — 발생원과 사람 사이의 “확산” 고리를 끊는 개입이다.</p>
+<p><strong>환기</strong>란 실내의 오염된 공기를 실외의 신선한 공기로 교환하거나, 오염된 공기를 직접 포집하여 제거하는 것을 말한다. 산업환기의 목적은 네 가지로 정리된다.</p>
+<ul>
+<li>유해물질 농도를 <strong>노출기준(TLV-TWA) 이하로 유지</strong> (<a href="../chapters/w03_exposure_assessment2.html">3주차</a>의 노출기준이 곧 설계 목표값이 된다)</li>
+<li><strong>쾌적한 작업환경</strong> 조성 (온도, 습도, 냄새 제어)</li>
+<li><strong>화재·폭발 위험</strong> 예방</li>
+<li>근로자의 건강 보호와 생산성 향상</li>
+</ul>
+</section>
+<section id="두-가지-전략-희석과-포집" class="level3">
+<h3 class="anchored" data-anchor-id="두-가지-전략-희석과-포집">1.2 두 가지 전략 — 희석과 포집</h3>
+<p>산업환기는 크게 두 방식으로 나뉜다. 원리가 다르므로 적용 논리도 다르다.</p>
+<div id="tbl-gv-vs-lev" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gv-vs-lev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;10.1: 전체환기와 국소배기환기의 비교
+</figcaption>
+<div aria-describedby="tbl-gv-vs-lev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 32%">
+<col style="width: 46%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>전체환기 (General Ventilation)</th>
+<th>국소배기환기 (Local Exhaust Ventilation)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>원리</strong></td>
+<td>신선한 공기로 <strong>희석</strong></td>
+<td>발생원에서 <strong>직접 포집</strong></td>
+</tr>
+<tr class="even">
+<td><strong>효율</strong></td>
+<td>낮음</td>
+<td>높음</td>
+</tr>
+<tr class="odd">
+<td><strong>적용 조건</strong></td>
+<td>저독성, 소량, 분산 발생</td>
+<td>고독성, 대량, 집중 발생</td>
+</tr>
+<tr class="even">
+<td><strong>초기 비용</strong></td>
+<td>낮음</td>
+<td>높음</td>
+</tr>
+<tr class="odd">
+<td><strong>운전 비용</strong></td>
+<td>높음 (대량의 공기 교체)</td>
+<td>낮음 (소량만 배기)</td>
+</tr>
+<tr class="even">
+<td><strong>관리 공간</strong></td>
+<td>작업장 전체</td>
+<td>발생원 주변</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-gv-lev" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-gv-lev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w09_gv_vs_lev.svg" class="img-fluid figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gv-lev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;10.1: 전체환기와 국소배기 — 퍼진 뒤에 묽히는 것과 퍼지기 전에 잡는 것
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-gv-lev" class="quarto-xref">그림&nbsp;<span>10.1</span></a> 의 두 작업장은 같은 물질을 같은 양만큼 발생시키지만, 처리해야 하는 공기의 양이 전혀 다르다. 이 차이가 표의 “효율·비용” 행을 만들어 내는 실체다.</p>
+<div id="tbl-control-position" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-control-position-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;10.2: 제어 우선순위 속 환기의 위치
+</figcaption>
+<div aria-describedby="tbl-control-position-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>관리 위계</th>
+<th>환기의 자리</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>① 제거·대체</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>② 공학적 대책</td>
+<td>밀폐·격리 → <strong>국소배기환기(LEV) 우선</strong> → 전체환기</td>
+</tr>
+<tr class="odd">
+<td>③ 관리적 대책</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>④ 개인보호구</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>핵심 원칙: 발생원에 가까울수록 제어 효율이 높다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>같은 유해물질이라도 발생원 바로 옆에서 포집하면 소량의 공기만 빼내면 되지만, 작업장 전체로 퍼진 뒤에 희석하려면 막대한 양의 공기를 교체해야 한다. 따라서 <strong>독성이 높거나 발생량이 많은 경우 국소배기환기를 우선</strong> 적용하고, 전체환기는 뒤에서 볼 조건(§4.2)을 만족하는 경우에만 쓴다.</p>
+</div>
+</div>
+<p>이번 주는 두 방식에 공통되는 <strong>유체역학·압력의 언어</strong>를 익힌 뒤 <strong>전체환기(희석환기)</strong>를 다룬다. 국소배기장치의 각론 — 후드·덕트·송풍기·공기정화장치와 압력손실 계산 — 은 <a href="../chapters/w10_ventilation2.html">10주차</a>에서 다룬다.</p>
+<hr>
+</section>
+</section>
+<section id="공기의-성질과-흐름-유체역학-기초" class="level2">
+<h2 class="anchored" data-anchor-id="공기의-성질과-흐름-유체역학-기초">2. 공기의 성질과 흐름 — 유체역학 기초</h2>
+<p>환기 설계는 결국 “공기라는 유체를 원하는 곳으로 원하는 만큼 흐르게 하는 일”이다. 그러려면 공기가 어떻게 행동하는지에 관한 최소한의 물리학이 필요하다.</p>
+<section id="이상기체-법칙-공기의-부피는-조건에-따라-변한다" class="level3">
+<h3 class="anchored" data-anchor-id="이상기체-법칙-공기의-부피는-조건에-따라-변한다">2.1 이상기체 법칙 — 공기의 부피는 조건에 따라 변한다</h3>
+<p>온도와 압력 변화에 따른 기체의 거동은 이상기체 법칙으로 설명된다.</p>
+<p><span class="math display">\[PV = nRT\]</span></p>
+<ul>
+<li><span class="math inline">\(P\)</span>: 절대압력 (Pa, kPa)</li>
+<li><span class="math inline">\(V\)</span>: 체적 (m³)</li>
+<li><span class="math inline">\(n\)</span>: 몰수 (mol)</li>
+<li><span class="math inline">\(R\)</span>: 기체상수 (8.314 J/mol·K)</li>
+<li><span class="math inline">\(T\)</span>: 절대온도 (K)</li>
+</ul>
+<p><strong>표준상태(STP)</strong>는 0°C (273.15 K), 1 atm (101.325 kPa, 760 mmHg)이다. 일정한 몰수의 기체에 대해서는 <strong>보일–샤를 법칙</strong>이 성립한다.</p>
+<p><span class="math display">\[\frac{P_1 V_1}{T_1} = \frac{P_2 V_2}{T_2}\]</span></p>
+<p>이 법칙이 환기에서 중요한 이유는, 환기량(부피 유량)이 <strong>온도의 함수</strong>이기 때문이다. 고온 공정의 배기를 다룰 때나, 뒤에서 볼 필요환기량 식의 상수(몰부피)를 이해할 때 모두 이 관계로 돌아온다.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 1: 온도 변화에 따른 체적 변화
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>20°C, 1 atm에서 100 m³의 공기를 80°C로 가열하면 체적은 얼마가 되는가?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>압력이 일정하므로 체적은 절대온도에 비례한다.</p>
+<p><span class="math display">\[\frac{V_2}{V_1} = \frac{T_2}{T_1} = \frac{353.15}{293.15} = 1.205\]</span> <span class="math display">\[V_2 = 100 \times 1.205 = 120.5 \text{ m}^3\]</span></p>
+<p>가열하면 약 20.5% 팽창한다. 같은 질량의 공기라도 온도가 다르면 부피 유량이 달라진다는 점을 기억해 두자.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>기체의 <strong>비중</strong>은 분자량을 공기의 평균 분자량(약 29)으로 나눈 값이다. 이산화탄소는 44/29 ≈ 1.52로 공기보다 무거워 낮은 곳에 고이고, 메탄(16/29 ≈ 0.55)은 위로 모인다. 다만 작업장 공기에 섞인 증기의 거동은 물질 자체의 비중이 아니라 <strong>혼합물의 유효비중</strong>이 결정한다. 증기 비중 <span class="math inline">\(S\)</span>인 물질이 부피 분율 <span class="math inline">\(f\)</span>로 섞여 있으면</p>
+<p><span class="math display">\[\text{유효비중} = f \times S + (1 - f) \times 1\]</span></p>
+<p>이다. 증기 비중 2.0인 아세톤이 10,000 ppm(1 %)이면 유효비중은 <span class="math inline">\(0.01 \times 2.0 + 0.99 \times 1.0 = 1.01\)</span>에 그친다. “무거운 증기는 바닥에 깔린다”는 통념이 성립하려면 폭발 범위에 가까운 고농도여야 하며, 보통의 노출 농도에서는 증기가 공기와 함께 움직인다 — 후드를 아래에 두는 것이 정답이 아닌 이유다.</p>
+</section>
+<section id="연속방정식-좁아지면-빨라진다" class="level3">
+<h3 class="anchored" data-anchor-id="연속방정식-좁아지면-빨라진다">2.2 연속방정식 — 좁아지면 빨라진다</h3>
+<p>비압축성 유체가 관을 흐를 때, 어느 단면을 지나는 유량은 일정하다.</p>
+<p><span class="math display">\[Q = A_1 v_1 = A_2 v_2 = \text{일정}\]</span></p>
+<ul>
+<li><span class="math inline">\(Q\)</span>: 유량 (m³/s)</li>
+<li><span class="math inline">\(A\)</span>: 단면적 (m²)</li>
+<li><span class="math inline">\(v\)</span>: 평균 유속 (m/s)</li>
+</ul>
+<p>따라서 덕트 단면적이 감소하면 유속은 증가한다.</p>
+<p><span class="math display">\[\frac{v_2}{v_1} = \frac{A_1}{A_2} = \frac{D_1^2}{D_2^2}\]</span></p>
+<p>원형 덕트에서는 직경의 <strong>제곱</strong>이 단면적을 결정하므로, 직경을 절반으로 줄이면 같은 유량에서 유속은 4배가 된다. <span class="math inline">\(Q = AV\)</span>는 이 과목에서 가장 자주 쓰게 될 식이다 — 유량·단면적·유속 중 둘을 알면 나머지 하나가 나온다.</p>
+</section>
+<section id="레이놀즈-수-층류와-난류" class="level3">
+<h3 class="anchored" data-anchor-id="레이놀즈-수-층류와-난류">2.3 레이놀즈 수 — 층류와 난류</h3>
+<p>유체 흐름이 매끄러운 <strong>층류</strong>인지 뒤섞이는 <strong>난류</strong>인지는 무차원수인 레이놀즈 수(Reynolds number)로 판별한다.</p>
+<p><span class="math display">\[Re = \frac{\rho v D}{\mu} = \frac{v D}{\nu}\]</span></p>
+<ul>
+<li><span class="math inline">\(\rho\)</span>: 밀도 (kg/m³), <span class="math inline">\(v\)</span>: 평균속도 (m/s), <span class="math inline">\(D\)</span>: 관 직경 (m)</li>
+<li><span class="math inline">\(\mu\)</span>: 점성계수 (Pa·s), <span class="math inline">\(\nu\)</span>: 동점성계수 (m²/s)</li>
+</ul>
+<div id="tbl-reynolds" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-reynolds-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;10.3: 레이놀즈 수에 따른 유동 상태
+</figcaption>
+<div aria-describedby="tbl-reynolds-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Re 값</th>
+<th>유동 상태</th>
+<th>특성</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Re &lt; 2,100</td>
+<td>층류 (Laminar)</td>
+<td>규칙적, 평행한 흐름</td>
+</tr>
+<tr class="even">
+<td>2,100 &lt; Re &lt; 4,000</td>
+<td>천이구간 (Transition)</td>
+<td>불안정</td>
+</tr>
+<tr class="odd">
+<td>Re &gt; 4,000</td>
+<td>난류 (Turbulent)</td>
+<td>불규칙적, 혼합 흐름</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>산업환기 덕트는 유속이 빠르고 직경이 커서 <strong>대부분 난류</strong> 상태로 운전된다. 난류는 마찰손실을 키우지만, 오염물질을 공기와 골고루 섞어 주므로 희석환기의 “완전 혼합” 가정(§4.4)이 성립하는 배경이기도 하다.</p>
+</section>
+<section id="베르누이-정리-에너지-보존" class="level3">
+<h3 class="anchored" data-anchor-id="베르누이-정리-에너지-보존">2.4 베르누이 정리 — 에너지 보존</h3>
+<p>유체가 흐르는 관에서 에너지는 보존된다. 높이 차이를 무시할 수 있을 때 (환기 덕트에서는 대개 그렇다) 베르누이 정리는 다음과 같이 쓴다.</p>
+<p><span class="math display">\[P + \frac{1}{2}\rho v^2 = \text{일정}\]</span></p>
+<p>첫 항은 압력 에너지, 둘째 항은 운동 에너지다. 이 식이 말하는 바는 단순하다 — <strong>흐름이 빨라지면 그만큼 압력이 낮아지고, 흐름이 느려지면 압력이 회복된다.</strong> 산업환기는 이 정리를 자신의 언어로 번역해 쓰는데, 그것이 다음 절의 압력 개념이다.</p>
+<hr>
+</section>
+</section>
+<section id="압력-전압-정압-동압" class="level2">
+<h2 class="anchored" data-anchor-id="압력-전압-정압-동압">3. 압력 — 전압, 정압, 동압</h2>
+<section id="세-가지-압력" class="level3">
+<h3 class="anchored" data-anchor-id="세-가지-압력">3.1 세 가지 압력</h3>
+<p>베르누이 정리를 환기의 언어로 다시 쓰면 다음과 같다.</p>
+<p><span class="math display">\[\text{TP} = \text{SP} + \text{VP}\]</span></p>
+<div id="tbl-pressures" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-pressures-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;10.4: 전압·정압·동압
+</figcaption>
+<div aria-describedby="tbl-pressures-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>용어</th>
+<th>명칭</th>
+<th>정의</th>
+<th>특성</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>TP</strong></td>
+<td>전압 (Total Pressure)</td>
+<td>유체가 가진 총 에너지</td>
+<td>SP와 VP의 합</td>
+</tr>
+<tr class="even">
+<td><strong>SP</strong></td>
+<td>정압 (Static Pressure)</td>
+<td>벽면에 수직으로 작용하는 압력</td>
+<td>양(+) 또는 음(−)</td>
+</tr>
+<tr class="odd">
+<td><strong>VP</strong></td>
+<td>동압 (Velocity Pressure)</td>
+<td>유체의 운동에너지에 해당하는 압력</td>
+<td>항상 양(+)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>세 압력의 성격을 정확히 구분해 두자.</p>
+<ul>
+<li><strong>정압(SP)</strong>은 공기를 사방에서 밀거나(양압) 빨아들이는(음압) 잠재 에너지다. 풍선을 부풀리는 압력이 양의 정압, 빨대 속의 압력이 음의 정압이다. 송풍기의 배기 쪽 덕트는 양압, 흡입 쪽 덕트는 음압이 된다.</li>
+<li><strong>동압(VP)</strong>은 공기가 움직이고 있다는 사실 그 자체의 에너지다. 공기가 흐르는 한 언제나 <strong>양수</strong>이며, 유속이 0이면 0이다.</li>
+<li><strong>전압(TP)</strong>은 둘의 합으로, 흐름이 가진 전체 에너지다.</li>
+</ul>
+<div id="fig-pressures" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pressures-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w09_duct_pressures.svg" class="img-fluid figure-img" style="width:88.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pressures-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;10.2: 덕트 단면에서 본 세 압력 — 정압은 벽을 미는 힘, 동압은 흐름 방향의 힘, 전압은 그 합
+</figcaption>
+</figure>
+</div>
+<p>부호는 송풍기를 기준으로 갈린다. 송풍기가 공기를 끌어당기는 <strong>흡입측</strong>은 정압이 음(−)이고, 밀어내는 <strong>배출측</strong>은 양(+)이다. 동압은 어느 쪽에서나 양이다.</p>
+<div id="fig-fan-sign" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fan-sign-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w09_fan_sign.svg" class="img-fluid figure-img" style="width:92.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fan-sign-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;10.3: 송풍기 전후의 정압 부호 — 계통을 따라간 정압의 변화
+</figcaption>
+</figure>
+</div>
+<p>이 부호는 실무에서 곧바로 쓰인다. 송풍기 <strong>앞쪽</strong> 덕트에 틈이 생기면 바깥 공기가 안으로 새어 들어와 후드의 배풍량이 줄고, <strong>뒤쪽</strong>에 틈이 생기면 오염공기가 밖으로 새어 나간다. 같은 “누설”이라도 결과가 반대인 것이다 (<a href="../chapters/w10_ventilation2.html">10주차</a>의 정압 진단이 이 성질 위에 서 있다).</p>
+</section>
+<section id="동압과-유속의-관계" class="level3">
+<h3 class="anchored" data-anchor-id="동압과-유속의-관계">3.2 동압과 유속의 관계</h3>
+<p>동압은 운동에너지이므로 유속의 제곱에 비례한다.</p>
+<p><span class="math display">\[\text{VP} = \frac{1}{2}\rho v^2 \approx 0.6\, v^2 \quad (\text{Pa, 표준공기 } \rho = 1.2 \text{ kg/m}^3)\]</span></p>
+<p>산업환기 실무에서는 압력 단위로 mmH₂O(수주 밀리미터)를 널리 쓴다. 공기의 비중량 <span class="math inline">\(\gamma\)</span> (표준공기 1.2 kgf/m³)와 중력가속도 <span class="math inline">\(g\)</span>를 쓰면:</p>
+<p><span class="math display">\[\text{VP (mmH}_2\text{O)} = \frac{\gamma\, v^2}{2g} = \frac{1.2\, v^2}{2 \times 9.81} \approx \frac{v^2}{16}\]</span></p>
+<p>이 식을 유속에 대해 풀면, 산업환기에서 가장 많이 쓰는 관계식 하나가 나온다.</p>
+<p><span class="math display">\[v = \sqrt{\frac{2g\,\text{VP}}{\gamma}} = \sqrt{16.35\,\text{VP}} \approx 4.043\sqrt{\text{VP}} \quad (\text{VP: mmH}_2\text{O},\ v: \text{m/s})\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>왜 이 식이 중요한가 — 유속은 압력으로 잰다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>덕트 속을 흐르는 공기의 유속을 직접 재는 것은 어렵지만, 압력은 쉽게 잴 수 있다. <strong>피토관(Pitot tube)</strong>을 덕트에 꽂으면 정체점에서 전압(TP)이, 벽면에 수직으로 뚫은 구멍에서 정압(SP)이 측정되고, 그 차이가 동압이다: <span class="math inline">\(\text{VP} = \text{TP} - \text{SP}\)</span>. 여기에 <span class="math inline">\(v = 4.043\sqrt{\text{VP}}\)</span>를 적용하면 유속이, <span class="math inline">\(Q = Av\)</span>를 적용하면 유량이 나온다.</p>
+<p><strong>압력 측정 → 동압 → 유속 → 유량</strong>. 환기 시스템의 성능 진단은 이 네 단계의 사슬로 이루어진다.</p>
+</div>
+</div>
+<div id="fig-pitot" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pitot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w09_pitot_tube.svg" class="img-fluid figure-img" style="width:88.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pitot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;10.4: 피토관의 측정 원리 — 전압공과 정압공의 압력 차가 곧 동압이다
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-pitot" class="quarto-xref">그림&nbsp;<span>10.4</span></a> 에서 마노미터 액주의 높이 차 <span class="math inline">\(h\)</span>가 바로 동압이다. 전압공은 흐름을 정면으로 마주 보아 <strong>정체점의 압력(TP)</strong>을 받고, 관 옆면의 정압공은 흐름과 나란하여 <strong>정압(SP)</strong>만을 받는다. 두 압력을 마노미터의 양쪽에 걸면 공통 성분인 정압이 상쇄되고 차이인 동압만 남는 구조다.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>그림 필요 — 피토관과 열선풍속계 실물
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>무엇</strong>: (a) 덕트 측정공에 삽입된 피토관과 경사 마노미터(또는 디지털 미압계)가 연결된 현장 사진, (b) 후드 개구면에서 제어풍속을 재는 열선풍속계 사진. 두 계기가 <strong>어디에</strong> 쓰이는지가 한눈에 보이는 구도가 좋다.</p>
+<p><strong>왜</strong>: 학생들이 가장 많이 혼동하는 것이 “피토관은 덕트 <strong>내부</strong>의 속도압, 열선풍속계는 후드 <strong>앞</strong>의 제어풍속”이라는 역할 구분이다. 모식도만으로는 계기의 실제 크기와 설치 방식이 전해지지 않는다.</p>
+<p><strong>출처 후보</strong>: NIOSH/CDC(퍼블릭 도메인), OSHA Technical Manual, 한국산업안전보건공단 KOSHA GUIDE 도해, 위키미디어 커먼즈(“Pitot tube”, “Thermal anemometer”).</p>
+<p><strong>대안</strong>: 확보가 어려우면 <a href="#fig-pitot" class="quarto-xref">그림&nbsp;<span>10.4</span></a> 에 측정공 위치(덕트 직경의 4~6배 하류, <a href="../chapters/w10_ventilation2.html">10주차</a> §7.2)를 표시한 계통도를 덧붙인다.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 2: 속도압으로 유속과 유량 구하기
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>직경 30 cm인 원형 덕트에서 피토관으로 측정한 동압이 24.5 mmH₂O였다. (공기 비중량 1.2 kgf/m³)</p>
+<ol type="1">
+<li>덕트 내 평균 유속은?</li>
+<li>이 덕트의 유량(m³/min)은?</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>(1) 유속</strong>:</p>
+<p><span class="math display">\[v = \sqrt{\frac{2 \times 9.81 \times 24.5}{1.2}} = 4.043\sqrt{24.5} \approx 20.0 \text{ m/s}\]</span></p>
+<p><strong>(2) 유량</strong>: 단면적 <span class="math inline">\(A = \pi r^2 = 3.14 \times 0.15^2 = 0.071 \text{ m}^2\)</span></p>
+<p><span class="math display">\[Q = A v = 0.071 \times 20.0 = 1.41 \text{ m}^3/\text{s} = 1.41 \times 60 \approx 85 \text{ m}^3/\text{min}\]</span></p>
+<p>동압이 4배가 되면 유속은 2배가 된다는 점(제곱근 관계)도 함께 확인해 두자.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">경고</span>흔한 개념적 혼동 — 속도와 속도압
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>유속 <span class="math inline">\(v\)</span>와 동압 VP는 <strong>제곱 관계</strong>로 묶여 있다. 따라서 “유속을 25% 올리면 동압은 25% 오른다”는 생각은 틀렸다 — 동압은 <span class="math inline">\(1.25^2 \approx 1.56\)</span>배, 즉 56% 증가한다. 압력을 다루는 계산에서 어느 양이 1승이고 어느 양이 2승인지 놓치면 결과가 크게 어긋난다. 이 감각은 10주차의 압력손실 계산에서 더욱 중요해진다.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="희석환기전체환기의-원리와-필요환기량" class="level2">
+<h2 class="anchored" data-anchor-id="희석환기전체환기의-원리와-필요환기량">4. 희석환기(전체환기)의 원리와 필요환기량</h2>
+<section id="원리-오염을-없애는-것이-아니라-묽히는-것" class="level3">
+<h3 class="anchored" data-anchor-id="원리-오염을-없애는-것이-아니라-묽히는-것">4.1 원리 — 오염을 없애는 것이 아니라 묽히는 것</h3>
+<p>전체환기는 작업장 전체에 신선한 공기를 공급하여 <strong>유해물질을 희석(dilution)</strong>하는 방식이다. 그래서 <strong>희석환기</strong>라고도 부른다.</p>
+<div id="fig-balance" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-balance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w09_dilution_balance.svg" class="img-fluid figure-img" style="width:88.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-balance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;10.5: 희석환기의 물질수지 — 발생량 G와 배기가 실어내는 양 Q·C의 균형
+</figcaption>
+</figure>
+</div>
+<p>핵심을 정확히 하자. 희석환기는 발생량을 줄이지 못한다. 정상상태에서는 <strong>발생하는 유해물질의 양과 배기로 실려 나가는 양이 같아지는 농도</strong>에서 평형이 이루어지며, 환기량을 늘릴수록 그 평형 농도가 낮아질 뿐이다. 따라서 설계의 질문은 언제나 같다 — <strong>“평형 농도를 노출기준 아래로 유지하려면 공기를 얼마나 갈아 주어야 하는가?”</strong></p>
+</section>
+<section id="전체환기의-적용-조건" class="level3">
+<h3 class="anchored" data-anchor-id="전체환기의-적용-조건">4.2 전체환기의 적용 조건</h3>
+<p>전체환기는 다음 조건을 <strong>모두</strong> 만족할 때 적용할 수 있다.</p>
+<ol type="1">
+<li><strong>독성이 낮을 것</strong> — TLV가 충분히 높은 물질 (대략 500 ppm 이상). 고독성 물질에는 부적합</li>
+<li><strong>발생량이 균일하고 적을 것</strong> — 간헐적 대량 발생에는 부적합</li>
+<li><strong>발생원이 분산되어 있을 것</strong> — 집중 발생원에는 국소배기가 필요</li>
+<li><strong>근로자가 발생원에서 충분히 이격되어 있을 것</strong></li>
+</ol>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">경고</span>전체환기의 한계 — 평균은 낮아도 국소는 높다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>희석환기가 보장하는 것은 작업장 <strong>전체의 평균 농도</strong>뿐이다. 발생원에서 직접 제거하지 못하므로, <strong>발생원 근처의 국소 농도는 평균보다 훨씬 높을 수 있고</strong>, 그 자리에 근로자가 있다면 고농도에 노출된다. 적용 조건 4번(이격)이 붙는 이유가 이것이다. 독성이 높거나 발생량이 많은 경우 반드시 국소배기환기를 적용해야 한다.</p>
+</div>
+</div>
+</section>
+<section id="유해물질-희석에-필요한-환기량" class="level3">
+<h3 class="anchored" data-anchor-id="유해물질-희석에-필요한-환기량">4.3 유해물질 희석에 필요한 환기량</h3>
+<p>유기용제를 사용하는 작업장의 필요환기량은 물질수지로부터 유도된 다음 식으로 계산한다.</p>
+<p><span class="math display">\[Q = \frac{24.1 \times S \times G \times K \times 10^6}{M \times \text{TLV}}\]</span></p>
+<ul>
+<li><span class="math inline">\(Q\)</span>: 필요환기량 (m³/min)</li>
+<li><span class="math inline">\(S\)</span>: 용제의 <strong>비중</strong> (specific gravity)</li>
+<li><span class="math inline">\(G\)</span>: <strong>액체</strong> 용제의 사용량 (L/min)</li>
+<li><span class="math inline">\(K\)</span>: 안전계수 (3~10, 일반적으로 5)</li>
+<li><span class="math inline">\(M\)</span>: 용제의 분자량 (g/mol)</li>
+<li>TLV: 노출기준 (ppm)</li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">경고</span>비중 <span class="math inline">\(S\)</span> 를 빠뜨리면 답이 커진다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(G\)</span> 가 <strong>액체 부피</strong>로 주어지므로, 증기의 몰수를 구하려면 먼저 질량으로 바꿔야 한다 — 그 다리가 비중이다. <span class="math inline">\(S\)</span> 를 빠뜨리면 <span class="math inline">\(S = 1\)</span> 로 가정한 셈이 되어, 비중이 0.8 안팎인 대부분의 유기용제에서 <strong>필요환기량이 20~25 % 과대</strong>하게 나온다.</p>
+<p>문제가 <strong>증기 발생량</strong>(m³/min)을 직접 주면 이 변환이 이미 끝난 것이므로 <span class="math inline">\(S\)</span> 도 24.1 도 쓰지 않는다. <strong>주어진 것이 액체인지 증기인지</strong>를 먼저 확인하는 습관을 들이자.</p>
+</div>
+</div>
+<p>식의 구조를 읽어 보자. 분자는 “액체 용제 <span class="math inline">\(G\)</span>가 증발하여 만들어 내는 증기의 부피”다 — 액체 1 L가 증발하면 <span class="math inline">\(\frac{1000\,\text{(g)} \times 24.1\,\text{(L/mol)}}{M\,\text{(g/mol)}}\)</span> L의 증기가 되는데, <strong>24.1</strong>은 기체 1몰이 차지하는 부피(L)로, <strong>21 ℃·1기압</strong> 기준값이다 (표준상태 0°C에서 22.4 L, 온도가 오르면 팽창한다 — §2.1의 보일–샤를 법칙). 온도 기준이 다르면 이 값도 달라진다 — <strong>25 ℃에서는 24.45 L/mol</strong>이며, <a href="../chapters/w02_exposure_assessment1.html">2주차</a>의 ppm↔︎mg/m³ 환산에서 쓴 값이 그것이다. 문제가 어느 온도를 주는지 보고 상수를 고르면 된다. 분모의 TLV(ppm = 10⁻⁶)는 “공기 1 m³가 기준 이내에서 실어낼 수 있는 증기량”을 정한다. 즉 이 식도 뒤에 나올 모든 환기량 식과 같은 구조다:</p>
+<p><span class="math display">\[Q = \frac{\text{제거해야 할 발생량}}{\text{공기 단위부피가 실어낼 수 있는 양}} \times \text{안전계수}\]</span></p>
+<p>안전계수 <span class="math inline">\(K\)</span>는 혼합이 이상적이지 않다는 현실의 보정이다.</p>
+<div id="tbl-safety-factor" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-safety-factor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;10.5: 혼합 상태에 따른 안전계수
+</figcaption>
+<div aria-describedby="tbl-safety-factor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>혼합 상태</th>
+<th style="text-align: center;"><span class="math inline">\(K\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>양호한 혼합</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="even">
+<td>보통 혼합</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr class="odd">
+<td>불량한 혼합</td>
+<td style="text-align: center;">10</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>급기구와 배기구의 배치가 나빠 공기가 지름길로 빠져나가거나(단락), 정체 구역이 생길수록 <span class="math inline">\(K\)</span>를 크게 잡아야 한다.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 3: 톨루엔 취급 작업장의 필요환기량
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>작업장에서 톨루엔(C₇H₈, 분자량 92, <strong>비중 0.87</strong>, TLV 50 ppm)을 1 L/hr의 속도로 사용한다. 안전계수 <span class="math inline">\(K = 5\)</span>일 때 필요한 환기량은?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><span class="math inline">\(G = 1 \text{ L/hr} = 1/60 \text{ L/min} = 0.0167 \text{ L/min}\)</span> (액체)</li>
+<li><span class="math inline">\(S = 0.87\)</span>, <span class="math inline">\(M = 92\)</span>, TLV = 50 ppm, <span class="math inline">\(K = 5\)</span></li>
+</ul>
+<p><span class="math display">\[Q = \frac{24.1 \times 0.87 \times 0.0167 \times 5 \times 10^6}{92 \times 50}
+= \frac{1{,}750{,}745}{4{,}600} \approx 381 \text{ m}^3/\text{min}\]</span></p>
+<p>비중을 빠뜨리면 437 m³/min 이 나온다 — 15 % 가까이 과대평가다. 용제 사용량이 시간당 겨우 1 L인데도 상당한 환기량이 나온다 — TLV가 낮은(독성이 높은) 물질일수록 분모가 작아져 필요환기량이 급격히 커지고, 어느 수준을 넘으면 희석환기는 경제적으로 성립하지 않는다. 적용 조건 1번(저독성)의 정량적 근거가 바로 이것이다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="시간에-따른-농도-변화" class="level3">
+<h3 class="anchored" data-anchor-id="시간에-따른-농도-변화">4.4 시간에 따른 농도 변화</h3>
+<p>환기를 가동하면 농도는 즉시 목표값이 되는 것이 아니라 지수적으로 감소한다. 작업장 공기가 <strong>완전 혼합</strong>된다고 가정하면:</p>
+<p><span class="math display">\[C = C_0\, e^{-Rt/K}\]</span></p>
+<ul>
+<li><span class="math inline">\(C\)</span>: 시간 <span class="math inline">\(t\)</span> 후의 농도, <span class="math inline">\(C_0\)</span>: 초기 농도</li>
+<li><span class="math inline">\(R\)</span>: 환기율 <span class="math inline">\(= Q/V\)</span> (1/s) — <span class="math inline">\(Q\)</span>: 환기량 (m³/s), <span class="math inline">\(V\)</span>: 실내 체적 (m³)</li>
+<li><span class="math inline">\(K\)</span>: 안전계수 (3~10)</li>
+</ul>
+<p>환기율 <span class="math inline">\(R\)</span>의 역수 <span class="math inline">\(V/Q\)</span>는 “실내 공기 전체를 한 번 갈아 주는 데 걸리는 시간”이다. 같은 환기량이라도 방이 크면 농도는 천천히 떨어진다. 안전계수 <span class="math inline">\(K\)</span>가 지수에 들어 있는 것은, 실제 작업장의 혼합이 완전하지 않아 이론보다 감쇠가 느리다는 사실의 보정이다.</p>
+<p>반대로 오염물질이 계속 발생하는 상태에서 환기를 가동하면, 농도는 0으로 가는 것이 아니라 §4.1의 평형농도 <span class="math inline">\(G/Q\)</span>를 향해 지수적으로 <strong>올라가</strong> 그 값에서 멈춘다. 평형에 이르는 속도의 척도도 같은 <span class="math inline">\(V/Q\)</span>다.</p>
+<div id="fig-dilution-curve" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dilution-curve-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w09_dilution_curve.svg" class="img-fluid figure-img" style="width:82.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dilution-curve-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;10.6: 환기량이 평형농도를 결정한다 — 아세톤(TLV 500 ppm)을 취급하는 작업장의 농도 상승 곡선
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-dilution-curve" class="quarto-xref">그림&nbsp;<span>10.6</span></a> 의 세 곡선은 발생량이 같고 환기량만 다른 경우다. 환기량을 2배로 하면 평형농도는 절반이 되고, 평형에 도달하는 시간도 절반으로 줄어든다. 설계 환기량에서의 평형농도 100 ppm은 아세톤 TLV 500 ppm의 1/5로, 안전계수 <span class="math inline">\(K = 5\)</span>가 만들어 낸 여유다 — 계산식의 <span class="math inline">\(K\)</span>가 그림에서는 <strong>평형농도와 노출기준 사이의 거리</strong>로 나타난다.</p>
+</section>
+<section id="환기횟수-ach" class="level3">
+<h3 class="anchored" data-anchor-id="환기횟수-ach">4.5 환기횟수 (ACH)</h3>
+<p>환기 성능을 직관적으로 나타내는 지표가 <strong>환기횟수</strong>(Air Changes per Hour)다.</p>
+<p><span class="math display">\[\text{환기횟수 (회/hr)} = \frac{\text{환기량 (m}^3\text{/hr)}}{\text{실내 용적 (m}^3\text{)}}\]</span></p>
+<p>“시간당 실내 공기를 몇 번 통째로 갈아 주는가”라는 뜻이다.</p>
+<div id="tbl-ach" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ach-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;10.6: 장소별 권장 환기횟수
+</figcaption>
+<div aria-describedby="tbl-ach-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>장소</th>
+<th style="text-align: center;">권장 환기횟수 (회/hr)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>일반 사무실</td>
+<td style="text-align: center;">6~10</td>
+</tr>
+<tr class="even">
+<td>공장(일반)</td>
+<td style="text-align: center;">10~20</td>
+</tr>
+<tr class="odd">
+<td>유해물질 취급 공장</td>
+<td style="text-align: center;">20~30</td>
+</tr>
+<tr class="even">
+<td>용접작업장</td>
+<td style="text-align: center;">30~60</td>
+</tr>
+<tr class="odd">
+<td>도장실</td>
+<td style="text-align: center;">50~100</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>오염 발생 강도가 큰 공간일수록 권장 환기횟수가 커지는 구조를 확인하자. 다만 환기횟수는 어디까지나 <strong>평균적 지표</strong>다 — 같은 20회/hr라도 기류 배치에 따라 실제 희석 성능은 크게 다르다.</p>
+</section>
+<section id="폭발-방지를-위한-환기" class="level3">
+<h3 class="anchored" data-anchor-id="폭발-방지를-위한-환기">4.6 폭발 방지를 위한 환기</h3>
+<p>가연성 가스·증기가 존재하는 작업장에서는 농도를 <strong>폭발하한계(LEL, Lower Explosive Limit)</strong> 보다 충분히 낮게 유지해야 한다.</p>
+<p><span class="math display">\[Q = \frac{G \times K}{\text{LEL} \times B}\]</span></p>
+<ul>
+<li><span class="math inline">\(G\)</span>: 가연성 물질 발생량, <span class="math inline">\(K\)</span>: 안전계수</li>
+<li>LEL: 폭발하한계 (vol%)</li>
+<li><span class="math inline">\(B\)</span>: 안전계수 (보통 0.25 — LEL의 25% 이하로 유지)</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>왜 LEL의 25%인가
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>NFPA(미국방화협회)는 가연성 증기 농도를 <strong>LEL의 25% 이하</strong>로 유지할 것을 권장한다. 측정 오차와 공간 내 농도 편차(평균은 낮아도 어느 구석은 높을 수 있다)를 고려한 안전여유다. 건강 보호 목적의 환기(TLV 기준, ppm 수준)와 폭발 방지 목적의 환기(LEL 기준, vol% 수준)는 <strong>목표 농도의 자릿수가 다르다</strong> — 대개 TLV가 LEL보다 훨씬 낮으므로, 근로자가 상주하는 공간에서는 건강 기준 환기량이 폭발 방지 환기량보다 크다.</p>
+</div>
+</div>
+</section>
+<section id="여러-유해물질이-동시에-존재할-때" class="level3">
+<h3 class="anchored" data-anchor-id="여러-유해물질이-동시에-존재할-때">4.7 여러 유해물질이 동시에 존재할 때</h3>
+<p>작업장에서 둘 이상의 유해물질을 취급하면, 물질별 필요환기량을 각각 구한 뒤 <strong>유해작용의 성격</strong>에 따라 최종 환기량을 정한다.</p>
+<div id="tbl-mixture-rule" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-mixture-rule-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;10.7: 혼합 노출 시 필요환기량 결정 원칙
+</figcaption>
+<div aria-describedby="tbl-mixture-rule-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 59%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>유해작용의 성격</th>
+<th>필요환기량</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>유해작용이 서로 다르고 <strong>독립적</strong>으로 작용</td>
+<td>각 물질 계산값 중 <strong>가장 큰 값</strong></td>
+</tr>
+<tr class="even">
+<td>유해작용이 같아 <strong>상가(相加)효과</strong>가 있다고 판단</td>
+<td>각 물질 계산값의 <strong>합</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>독립 작용이면 합산하지 않는다 — 논리를 이해하자
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>유해작용이 서로 다르고 독립적인 물질 3종의 필요환기량이 각각 120, 150, 200 m³/min으로 계산되었다면, 이 작업장의 필요환기량은 세 값을 더한 470이 아니라 <strong>200 m³/min</strong>이다. 가장 까다로운 물질을 만족시키는 환기량이 흐르면, 같은 공기가 나머지 물질도 함께 실어내어 자동으로 기준 이하가 되기 때문이다 — 환기량은 물질별로 따로 흐르는 것이 아니다.</p>
+<p>반대로 접착제 공정의 MEK와 톨루엔처럼 <strong>둘 다 마취작용을 나타내어 상가효과가 있다고 판단되는</strong> 경우에는 사정이 다르다. 각 물질이 기준의 절반씩만 있어도 신체에는 기준치 하나만큼의 부담이 걸리므로, 물질별 환기량을 모두 <strong>더해야</strong> 한다. 이 구분은 3주차에서 본 혼합물 노출기준의 논리와 정확히 같은 것이다.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="열co₂수분을-배출하는-전체환기-전체환기-설계의-원칙" class="level2">
+<h2 class="anchored" data-anchor-id="열co₂수분을-배출하는-전체환기-전체환기-설계의-원칙">5. 열·CO₂·수분을 배출하는 전체환기 · 전체환기 설계의 원칙</h2>
+<section id="열co₂수분을-배출하는-전체환기" class="level3">
+<h3 class="anchored" data-anchor-id="열co₂수분을-배출하는-전체환기">5.1 열·CO₂·수분을 배출하는 전체환기</h3>
+<p>전체환기의 목적이 유해물질 희석만은 아니다. <strong>열, 이산화탄소, 수분</strong>을 제거하기 위한 환기량은 각각 별도의 식으로 계산하지만, 세 식 모두</p>
+<p><span class="math display">\[Q = \frac{\text{제거해야 할 발생량}}{\text{공기 1 m}^3\text{가 실어낼 수 있는 양}}\]</span></p>
+<p>이라는 같은 구조를 갖는다. 분모가 “실내와 외기의 <strong>차이</strong>”로 표현된다는 점도 공통이다 — 들어오는 공기와 나가는 공기의 차이만큼만 실어낼 수 있기 때문이다.</p>
+<section id="열부하-제거-환기량" class="level4">
+<h4 class="anchored" data-anchor-id="열부하-제거-환기량">열부하 제거 환기량</h4>
+<p>작업장 내부에서 발생한 열을 배기로 실어내는 데 필요한 환기량:</p>
+<p><span class="math display">\[Q\ (\text{m}^3/\text{hr}) = \frac{H_s}{0.3 \times \Delta t}\]</span></p>
+<ul>
+<li><span class="math inline">\(H_s\)</span>: 작업장 내 열부하량 (kcal/hr)</li>
+<li><span class="math inline">\(\Delta t\)</span>: 실내온도 − 외기온도 (℃)</li>
+<li>0.3: 공기의 체적당 열용량 환산상수 (kcal/m³·℃) — 공기 1 m³는 1℃ 데워지며 약 0.3 kcal을 흡수한다</li>
+</ul>
+<p>분모의 <span class="math inline">\(\Delta t\)</span>가 말해 주는 것: 외기가 시원할수록(온도차가 클수록) 같은 열을 적은 공기로 실어낼 수 있고, 한여름처럼 외기온도가 실내에 가까워지면 필요환기량은 급격히 커진다.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 4: 열부하 제거 환기량
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>열부하량이 10,000 kcal/hr이고 실내 35℃, 외기 20℃인 작업장의 필요환기량은?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[Q = \frac{10{,}000}{0.3 \times (35 - 20)} = \frac{10{,}000}{4.5} \approx 2{,}222\ \text{m}^3/\text{hr}\]</span></p>
+<p><strong>단위에 주의</strong>: 이 식이 내놓는 값의 단위는 m³/<strong>hr</strong>이다. m³/min으로 표현하려면 60으로 나눈다 (약 37 m³/min). 환기량 식마다 관행적 단위가 다르므로(희석환기 식은 m³/min, 열·CO₂·수분 식은 m³/hr), 계산 결과를 쓰기 전에 항상 단위를 명시하는 습관을 들이자.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="이산화탄소-기준-환기량" class="level4">
+<h4 class="anchored" data-anchor-id="이산화탄소-기준-환기량">이산화탄소 기준 환기량</h4>
+<p>재실자의 호흡으로 발생하는 CO₂를 기준 농도 이하로 유지하기 위한 환기량:</p>
+<p><span class="math display">\[Q\ (\text{m}^3/\text{hr}) = \frac{M}{C_s - C_o} \times 100\]</span></p>
+<ul>
+<li><span class="math inline">\(M\)</span>: CO₂ 발생량 (m³/hr)</li>
+<li><span class="math inline">\(C_s\)</span>: 실내 CO₂ 기준농도 (%)</li>
+<li><span class="math inline">\(C_o\)</span>: 외기(급기) 중 CO₂ 농도 (%)</li>
+</ul>
+<p>분모의 농도를 %로 넣기 때문에 <span class="math inline">\(\times 100\)</span>이 붙는다 — %는 “100분의 몇”이므로, 부피비로 환산하려면 100으로 나누어야 하고 그것이 분자로 올라와 100을 곱하는 꼴이 된 것이다. 외기 자체에 CO₂가 있으므로(<span class="math inline">\(C_o\)</span>) 실어낼 수 있는 것은 그 <strong>차이</strong>뿐이라는 구조도 다시 확인하자.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 5: 1인당 CO₂ 기준 환기량
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>실내 CO₂ 기준농도가 0.3%, 외기 CO₂ 농도가 0.03%이고 1인당 CO₂ 배출량이 시간당 21 L일 때, 1인 1시간당 필요환기량은?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><span class="math inline">\(M = 21\ \text{L/hr} = 0.021\ \text{m}^3/\text{hr}\)</span></li>
+<li><span class="math inline">\(C_s - C_o = 0.3 - 0.03 = 0.27\ \%\)</span></li>
+</ul>
+<p><span class="math display">\[Q = \frac{0.021}{0.27} \times 100 = 7.8\ \text{m}^3/\text{hr}\cdot\text{인}\]</span></p>
+<p>사람 수에 비례해 늘려 주면 재실 인원 기준의 최소 환기량이 된다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="수분-제거-환기량" class="level4">
+<h4 class="anchored" data-anchor-id="수분-제거-환기량">수분 제거 환기량</h4>
+<p>실내에서 발생하는 수증기를 제거하기 위한 환기량은 <strong>중량 절대습도의 차</strong>를 이용해 계산한다.</p>
+<p><span class="math display">\[Q\ (\text{m}^3/\text{hr}) = \frac{W}{\gamma \times \Delta x}\]</span></p>
+<ul>
+<li><span class="math inline">\(W\)</span>: 시간당 수증기 발생량 (kg/hr)</li>
+<li><span class="math inline">\(\gamma\)</span>: 공기의 비중량 (kgf/m³, 표준공기 1.2)</li>
+<li><span class="math inline">\(\Delta x\)</span>: 실내와 외부의 중량 절대습도 차 (kg/kg)</li>
+</ul>
+<p>분모 <span class="math inline">\(\gamma \Delta x\)</span>는 “공기 1 m³가 안팎의 습도 차만큼 추가로 품고 나갈 수 있는 수증기량(kg)”이다.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 6: 수분 제거 환기량
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>실내의 중량 절대습도가 0.8, 외부가 0.6이고 실내 수증기가 시간당 3 kg 발생할 때 필요환기량은? (공기 비중량 1.2 kgf/m³)</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><span class="math inline">\(\Delta x = 0.8 - 0.6 = 0.2\ \text{kg/kg}\)</span></li>
+</ul>
+<p><span class="math display">\[Q = \frac{3}{1.2 \times 0.2} = 12.5\ \text{m}^3/\text{hr} \approx 0.21\ \text{m}^3/\text{min}\]</span></p>
+<p>12.5(m³/hr)와 0.21(m³/min)은 같은 답의 다른 표현이다. 결과를 보고할 때는 반드시 단위를 함께 적는다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="전체환기-설계의-원칙" class="level3">
+<h3 class="anchored" data-anchor-id="전체환기-설계의-원칙">5.2 전체환기 설계의 원칙</h3>
+<p>이 주의 내용을 설계자의 관점에서 정리하면 다음과 같다.</p>
+<ol type="1">
+<li><strong>적용 조건을 먼저 판정한다</strong> (§4.2) — 저독성·소량·분산 발생·근로자 이격의 네 조건 중 하나라도 어긋나면 전체환기가 아니라 국소배기를 검토한다.</li>
+<li><strong>목적별로 환기량을 계산한다</strong> — 유해물질 희석(§4.3), 폭발 방지(§4.6), 열·CO₂·수분(§5.1). 모든 식은 “발생량 ÷ 공기 단위부피의 운반능력”이라는 같은 구조다.</li>
+<li><strong>혼합의 질을 안전계수에 반영한다</strong> (<a href="#tbl-safety-factor" class="quarto-xref">표&nbsp;<span>10.5</span></a>) — 급기·배기 배치가 나쁠수록 <span class="math inline">\(K\)</span>를 크게 잡는다. 계산된 환기량은 완전 혼합 가정 위의 값이며, 실제 성능은 기류 배치가 좌우한다.</li>
+<li><strong>여러 물질은 유해작용의 성격으로 판단한다</strong> (<a href="#tbl-mixture-rule" class="quarto-xref">표&nbsp;<span>10.7</span></a>) — 독립 작용이면 최대값, 상가효과면 합.</li>
+<li><strong>실내압의 방향을 설계한다</strong> — 오염이 높은 작업장은 배기를 급기보다 우세하게 하여 <strong>음압(−)</strong>으로 유지한다. 오염물질이 인접한 청정구역으로 새어 나가지 못하게 하기 위해서다(반대로 청정실은 양압으로 유지한다).</li>
+<li><strong>환기횟수로 상식적 검증을 한다</strong> (<a href="#tbl-ach" class="quarto-xref">표&nbsp;<span>10.6</span></a>) — 계산 결과가 장소별 권장 범위와 크게 어긋나면 어딘가 잘못되었을 가능성이 크다.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>다음 주로 가는 다리
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>전체환기가 감당하지 못하는 상황 — 고독성, 대량, 집중 발생 — 에서는 발생원에서 직접 포집하는 <strong>국소배기장치</strong>가 필요하다. 후드는 얼마나 빨아들여야 하고(제어풍속과 배풍량), 덕트는 얼마나 빠르게 실어 날라야 하며(반송속도), 그 흐름을 만드는 데 필요한 압력과 동력은 얼마인가(압력손실과 송풍기)? 이 질문들이 <a href="../chapters/w10_ventilation2.html">10주차</a>의 주제이며, 그 모든 계산의 밑바탕이 이번 주에 익힌 <span class="math inline">\(\text{TP} = \text{SP} + \text{VP}\)</span>와 <span class="math inline">\(Q = Av\)</span>, 그리고 <span class="math inline">\(v = 4.043\sqrt{\text{VP}}\)</span>다.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="요약" class="level2">
+<h2 class="anchored" data-anchor-id="요약">요약</h2>
+<div id="tbl-summary" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;10.8: 9주차 핵심 요약
+</figcaption>
+<div aria-describedby="tbl-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 62%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>개념</th>
+<th>핵심 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>환기의 두 전략</strong></td>
+<td>전체환기(희석: 저독성·소량·분산) vs 국소배기(포집: 고독성·대량·집중). 발생원에 가까울수록 제어 효율이 높다</td>
+</tr>
+<tr class="even">
+<td><strong>이상기체 법칙</strong></td>
+<td><span class="math inline">\(PV = nRT\)</span>. 기체 부피는 절대온도에 비례 — 몰부피 22.4 L(0℃) → 약 24.1 L(상온)</td>
+</tr>
+<tr class="odd">
+<td><strong>연속방정식</strong></td>
+<td><span class="math inline">\(Q = Av\)</span> = 일정. 단면적이 줄면 유속 증가 (직경의 제곱에 반비례)</td>
+</tr>
+<tr class="even">
+<td><strong>레이놀즈 수</strong></td>
+<td>Re &lt; 2,100 층류, Re &gt; 4,000 난류. 환기 덕트는 대부분 난류</td>
+</tr>
+<tr class="odd">
+<td><strong>압력의 분해</strong></td>
+<td><span class="math inline">\(\text{TP} = \text{SP} + \text{VP}\)</span>. 정압은 ±, 동압은 항상 +</td>
+</tr>
+<tr class="even">
+<td><strong>동압과 유속</strong></td>
+<td><span class="math inline">\(\text{VP} = \gamma v^2 / 2g \approx v^2/16\)</span> (mmH₂O), <span class="math inline">\(v = 4.043\sqrt{\text{VP}}\)</span>. 피토관: VP = TP − SP</td>
+</tr>
+<tr class="odd">
+<td><strong>희석환기량</strong></td>
+<td><span class="math inline">\(Q = \dfrac{24.1\, S\, G\, K \times 10^6}{M \times \text{TLV}}\)</span> (m³/min). <span class="math inline">\(S\)</span>: 비중(액체 → 질량 변환), <span class="math inline">\(K\)</span>: 3~10</td>
+</tr>
+<tr class="even">
+<td><strong>농도 감쇠</strong></td>
+<td><span class="math inline">\(C = C_0 e^{-Rt/K}\)</span>, <span class="math inline">\(R = Q/V\)</span> (완전 혼합 가정)</td>
+</tr>
+<tr class="odd">
+<td><strong>환기횟수</strong></td>
+<td>환기량(m³/hr) ÷ 실내 용적(m³). 사무실 6~10, 도장실 50~100회/hr</td>
+</tr>
+<tr class="even">
+<td><strong>폭발 방지</strong></td>
+<td>가연성 증기는 LEL의 25% 이하로 유지 (<span class="math inline">\(B = 0.25\)</span>)</td>
+</tr>
+<tr class="odd">
+<td><strong>목적별 환기량</strong></td>
+<td>열: <span class="math inline">\(H_s/(0.3\Delta t)\)</span> · CO₂: <span class="math inline">\(M/(C_s - C_o) \times 100\)</span> · 수분: <span class="math inline">\(W/(\gamma \Delta x)\)</span> — 모두 m³/hr</td>
+</tr>
+<tr class="even">
+<td><strong>혼합 노출</strong></td>
+<td>독립 작용 → 최대값 채택 / 상가효과 → 합산</td>
+</tr>
+<tr class="odd">
+<td><strong>실내압</strong></td>
+<td>오염 작업장은 음압, 청정구역은 양압으로 유지</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<hr>
+</section>
+<section id="연습문제" class="level2">
+<h2 class="anchored" data-anchor-id="연습문제">연습문제</h2>
+<section id="문제-1.-희석환기량과-환기횟수" class="level3">
+<h3 class="anchored" data-anchor-id="문제-1.-희석환기량과-환기횟수">문제 1. 희석환기량과 환기횟수</h3>
+<p>체적 500 m³인 작업장에서 아세톤(분자량 58, TLV 500 ppm)을 시간당 1.5 L 사용한다. 급기·배기 배치가 좋지 않아 안전계수는 <span class="math inline">\(K = 6\)</span>으로 잡는다.</p>
+<ol type="1">
+<li>필요환기량(m³/min)을 구하라.</li>
+<li>이때의 환기횟수(회/hr)를 구하고, 일반 공장의 권장 범위(<a href="#tbl-ach" class="quarto-xref">표&nbsp;<span>10.6</span></a>)와 비교하라.</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>(1)</strong> <span class="math inline">\(G = 1.5/60 = 0.025\)</span> L/min</p>
+<p><span class="math display">\[Q = \frac{24.1 \times 0.79 \times 0.025 \times 6 \times 10^6}{58 \times 500}
+= \frac{2{,}855{,}850}{29{,}000} \approx 98.5\ \text{m}^3/\text{min}\]</span></p>
+<p><strong>(2)</strong> 환기횟수 <span class="math inline">\(= \dfrac{125 \times 60}{500} = 15\)</span> 회/hr.</p>
+일반 공장의 권장 범위(10~20회/hr) 안에 있다. 아세톤은 TLV가 500 ppm으로 높은(상대적으로 독성이 낮은) 물질이어서 현실적인 환기량으로 희석이 가능하다 — 전체환기의 적용 조건 1번이 성립하는 사례다.
+</details>
+</section>
+<section id="문제-2.-속도압-유속-연속방정식" class="level3">
+<h3 class="anchored" data-anchor-id="문제-2.-속도압-유속-연속방정식">문제 2. 속도압, 유속, 연속방정식</h3>
+<p>직경 20 cm인 원형 덕트에서 피토관으로 전압 −20.5 mmH₂O, 정압 −33.0 mmH₂O가 측정되었다. (공기 비중량 1.2 kgf/m³)</p>
+<ol type="1">
+<li>이 지점의 동압과 유속을 구하라.</li>
+<li>이 덕트의 유량(m³/min)을 구하라.</li>
+<li>하류에서 덕트 단면적이 절반으로 줄어든다면, 그 지점의 유속과 동압은 각각 몇 배가 되는가?</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>(1)</strong> 동압 <span class="math inline">\(\text{VP} = \text{TP} - \text{SP} = (-20.5) - (-33.0) = 12.5\)</span> mmH₂O. (흡입측 덕트라 전압·정압이 모두 음수이지만 동압은 언제나 양수임을 확인하자.)</p>
+<p><span class="math display">\[v = 4.043\sqrt{12.5} \approx 14.3\ \text{m/s}\]</span></p>
+<p><strong>(2)</strong> <span class="math inline">\(A = \pi \times 0.1^2 = 0.0314\)</span> m²</p>
+<p><span class="math display">\[Q = 0.0314 \times 14.3 = 0.449\ \text{m}^3/\text{s} \approx 27\ \text{m}^3/\text{min}\]</span></p>
+<strong>(3)</strong> 연속방정식에서 유속은 단면적에 반비례하므로 <strong>2배</strong>(약 28.6 m/s). 동압은 유속의 제곱에 비례하므로 <strong>4배</strong>(약 50 mmH₂O)가 된다. 유속의 1승–동압의 2승 관계가 핵심이다.
+</details>
+</section>
+<section id="문제-3.-열부하-제거-환기량" class="level3">
+<h3 class="anchored" data-anchor-id="문제-3.-열부하-제거-환기량">문제 3. 열부하 제거 환기량</h3>
+<p>주조 작업장의 열부하량이 90,000 kcal/hr이고, 실내 기온 30℃, 외기 기온 18℃이다.</p>
+<ol type="1">
+<li>필요한 전체환기량을 m³/hr과 m³/min으로 각각 구하라.</li>
+<li>한여름이 되어 외기 기온이 27℃로 오르면 필요환기량은 몇 배가 되는가?</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>(1)</strong> <span class="math inline">\(\Delta t = 30 - 18 = 12\)</span> ℃</p>
+<p><span class="math display">\[Q = \frac{90{,}000}{0.3 \times 12} = 25{,}000\ \text{m}^3/\text{hr} = \frac{25{,}000}{60} \approx 417\ \text{m}^3/\text{min}\]</span></p>
+<strong>(2)</strong> <span class="math inline">\(\Delta t\)</span>가 12℃에서 3℃로 줄어들므로 필요환기량은 $12/3 = $ <strong>4배</strong> (100,000 m³/hr)가 된다. 열 배출 환기의 성능이 외기 조건에 크게 의존한다는 점 — 그래서 여름철 고열작업장 관리가 어렵다는 점 — 을 보여 준다.
+</details>
+</section>
+<section id="문제-4.-여러-유해물질의-필요환기량" class="level3">
+<h3 class="anchored" data-anchor-id="문제-4.-여러-유해물질의-필요환기량">문제 4. 여러 유해물질의 필요환기량</h3>
+<p>한 접착·코팅 작업장에서 세 물질을 함께 취급하며, 물질별 필요환기량을 계산한 결과는 다음과 같다.</p>
+<ul>
+<li>물질 A (마취작용): 150 m³/min</li>
+<li>물질 B (마취작용): 180 m³/min</li>
+<li>물질 C (호흡기 자극, A·B와 독립적으로 작용): 220 m³/min</li>
+</ul>
+<p>A와 B는 상가효과가 있다고 판단된다. 이 작업장의 최종 필요환기량을 구하고, 그 논리를 설명하라.</p>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>330 m³/min.</strong></p>
+<ol type="1">
+<li>A와 B는 상가효과가 있으므로 <strong>합산</strong>한다: <span class="math inline">\(150 + 180 = 330\)</span> m³/min. 두 물질이 같은 유해작용(마취)을 나타내면 각각 기준 이하라도 신체 부담은 합쳐지므로, 합산한 환기량으로 두 물질의 합산 부담을 기준 이하로 낮춰야 한다.</li>
+<li>C는 독립적으로 작용하므로 상가군(330)과 C(220) 중 <strong>큰 값</strong>을 채택한다. 330 m³/min이 흐르면 같은 공기가 C도 함께 실어내어 C의 기준(220 m³/min 상당)은 자동으로 만족된다.</li>
+</ol>
+세 값을 모두 더한 550 m³/min은 과잉 설계이고, 최대값 220 m³/min만 쓰면 A+B의 상가 부담을 놓친다.
+</details>
+</section>
+<section id="문제-5.-co₂-기준-강의실-환기" class="level3">
+<h3 class="anchored" data-anchor-id="문제-5.-co₂-기준-강의실-환기">문제 5. CO₂ 기준 강의실 환기</h3>
+<p>용적 600 m³인 강의실에 40명이 재실한다. 1인당 CO₂ 배출량은 시간당 21 L, 실내 CO₂ 기준농도는 0.1%, 외기 CO₂ 농도는 0.03%이다.</p>
+<ol type="1">
+<li>필요한 환기량(m³/hr)을 구하라.</li>
+<li>이때의 환기횟수(회/hr)를 구하라.</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>(1)</strong> 총 CO₂ 발생량 <span class="math inline">\(M = 40 \times 0.021 = 0.84\)</span> m³/hr, <span class="math inline">\(C_s - C_o = 0.1 - 0.03 = 0.07\)</span> %</p>
+<p><span class="math display">\[Q = \frac{0.84}{0.07} \times 100 = 1{,}200\ \text{m}^3/\text{hr}\]</span></p>
+<p><strong>(2)</strong> 환기횟수 <span class="math inline">\(= 1{,}200 / 600 = 2\)</span> 회/hr.</p>
+분모의 농도차를 %로 넣기 때문에 <span class="math inline">\(\times 100\)</span>이 붙는다는 점, 그리고 외기 CO₂(0.03%)를 빼지 않으면 환기량을 과소평가하게 된다는 점을 확인하자 — 들어오는 공기가 이미 품고 있는 CO₂만큼은 실어낼 수 없다.
+</details>
+<hr>
+</section>
+</section>
+<section id="참고문헌" class="level2">
+<h2 class="anchored" data-anchor-id="참고문헌">참고문헌</h2>
+<ol type="1">
+<li>ACGIH (2019). <em>Industrial Ventilation: A Manual of Recommended Practice for Design</em> (30th ed.). ACGIH.</li>
+<li>Burton, D. J. (2020). <em>Industrial Ventilation Workbook</em> (8th ed.).</li>
+<li>Burgess, W. A., Ellenbecker, M. J., &amp; Treitman, R. D. (2004). <em>Ventilation for Control of the Work Environment</em> (2nd ed.). Wiley.</li>
+<li>한국산업안전보건공단 (2021). 「국소배기장치 기술지침(KOSHA GUIDE)」.</li>
+<li>한국산업위생학회 (2020). 『산업환기』.</li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "복사완료!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "복사완료!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/w08_midterm.html" class="pagination-link" aria-label="8주차. 중간고사">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">8주차. 중간고사</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/w10_ventilation2.html" class="pagination-link" aria-label="10주차. 산업환기 II — 국소배기장치">
+        <span class="nav-page-text"><span class="chapter-title">10주차. 산업환기 II — 국소배기장치</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

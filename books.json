@@ -11,5 +11,18 @@
       "epub": "보건학연구방법론.epub"
     },
     "extras": []
+  },
+  {
+    "slug": "industrial-hygiene",
+    "title": "산업위생 총론",
+    "subtitle": "16주 3학점 강의 교재 — 예측·인식·평가·관리(AREC)의 순환",
+    "author": "윤진하 · 연세대학교 의과대학 예방의학교실 · 대학원 보건학과",
+    "src": "/home/dspub/lecture/books/oed/courses/ih/book/_book",
+    "site": true,
+    "files": {
+      "pdf": "산업위생-총론.pdf",
+      "epub": "산업위생-총론.epub"
+    },
+    "extras": []
   }
 ]

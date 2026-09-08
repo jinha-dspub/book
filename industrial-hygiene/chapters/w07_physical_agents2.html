@@ -1,0 +1,3099 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>7주차. 물리적 유해인자 II — 온열·이상기압·방사선·조명 – 산업위생 총론</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/w08_midterm.html" rel="next">
+<link href="../chapters/w06_physical_agents1.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-df22de3841a4459d65a458d30db11513.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-1f5cceec34869e9b7e758f61c933684c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-df22de3841a4459d65a458d30db11513.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/w04_toxicology1.html">Part II. 유해인자와 건강영향 (4~7주)</a></li><li class="breadcrumb-item"><a href="../chapters/w07_physical_agents2.html"><span class="chapter-title">7주차. 물리적 유해인자 II — 온열·이상기압·방사선·조명</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">산업위생 총론</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="다크 모드 전환"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="검색"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">산업위생 총론</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I. 산업위생의 기초 (1~3주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w01_intro_history.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1주차. 산업위생 개론과 역사</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w02_exposure_assessment1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2주차. 작업환경측정 I — 측정 원리와 전략</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w03_exposure_assessment2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3주차. 작업환경측정 II — 노출기준과 평가</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II. 유해인자와 건강영향 (4~7주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w04_toxicology1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4주차. 산업독성학 I — 독성학의 원리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w05_toxicology2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5주차. 산업독성학 II — 주요 화학물질과 건강장해</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w06_physical_agents1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6주차. 물리적 유해인자 I — 소음과 진동</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w07_physical_agents2.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">7주차. 물리적 유해인자 II — 온열·이상기압·방사선·조명</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">중간고사 (8주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w08_midterm.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">8주차. 중간고사</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III. 작업환경 관리 (9~13주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w09_ventilation1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">9주차. 산업환기 I — 환기의 원리와 전체환기</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w10_ventilation2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">10주차. 산업환기 II — 국소배기장치</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w11_biological_agents.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">11주차. 생물학적 유해인자와 생물학적 모니터링</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w12_ergonomics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">12주차. 인간공학과 근골격계질환</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w13_ppe_work_management.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">13주차. 개인보호구와 작업관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part IV. 제도와 실무 (14~15주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w14_law_management.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">14주차. 산업보건 법규와 관리 제도</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w15_case_studies.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">15주차. 직업병 사례연구</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">기말고사 (16주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w16_final.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">16주차. 기말고사</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">부록</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendix/cert_map.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">부록. 자격증 과목 매핑</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#학습목표" id="toc-학습목표" class="nav-link active" data-scroll-target="#학습목표">학습목표</a></li>
+  <li><a href="#인체의-열평형-온열지수의-체계-wbgt의-산출" id="toc-인체의-열평형-온열지수의-체계-wbgt의-산출" class="nav-link" data-scroll-target="#인체의-열평형-온열지수의-체계-wbgt의-산출">1. 인체의 열평형 · 온열지수의 체계 · WBGT의 산출</a>
+  <ul>
+  <li><a href="#인체의-열평형" id="toc-인체의-열평형" class="nav-link" data-scroll-target="#인체의-열평형">1.1 인체의 열평형</a></li>
+  <li><a href="#온열지수의-체계" id="toc-온열지수의-체계" class="nav-link" data-scroll-target="#온열지수의-체계">1.2 온열지수의 체계</a></li>
+  <li><a href="#wbgt의-산출" id="toc-wbgt의-산출" class="nav-link" data-scroll-target="#wbgt의-산출">1.3 WBGT의 산출</a></li>
+  </ul></li>
+  <li><a href="#작업강도별-고열-노출기준-고열장해열중증의-감별" id="toc-작업강도별-고열-노출기준-고열장해열중증의-감별" class="nav-link" data-scroll-target="#작업강도별-고열-노출기준-고열장해열중증의-감별">2. 작업강도별 고열 노출기준 · 고열장해(열중증)의 감별</a>
+  <ul>
+  <li><a href="#작업강도별-고열-노출기준" id="toc-작업강도별-고열-노출기준" class="nav-link" data-scroll-target="#작업강도별-고열-노출기준">2.1 작업강도별 고열 노출기준</a></li>
+  <li><a href="#고열장해열중증의-감별" id="toc-고열장해열중증의-감별" class="nav-link" data-scroll-target="#고열장해열중증의-감별">2.2 고열장해(열중증)의 감별</a></li>
+  </ul></li>
+  <li><a href="#고온순화-acclimatization-고열-대책-한랭환경과-한랭장해" id="toc-고온순화-acclimatization-고열-대책-한랭환경과-한랭장해" class="nav-link" data-scroll-target="#고온순화-acclimatization-고열-대책-한랭환경과-한랭장해">3. 고온순화 (Acclimatization) · 고열 대책 · 한랭환경과 한랭장해</a>
+  <ul>
+  <li><a href="#고온순화-acclimatization" id="toc-고온순화-acclimatization" class="nav-link" data-scroll-target="#고온순화-acclimatization">3.1 고온순화 (Acclimatization)</a></li>
+  <li><a href="#고열-대책" id="toc-고열-대책" class="nav-link" data-scroll-target="#고열-대책">3.2 고열 대책</a></li>
+  <li><a href="#한랭환경과-한랭장해" id="toc-한랭환경과-한랭장해" class="nav-link" data-scroll-target="#한랭환경과-한랭장해">3.3 한랭환경과 한랭장해</a>
+  <ul class="collapse">
+  <li><a href="#한랭환경의-열평형" id="toc-한랭환경의-열평형" class="nav-link" data-scroll-target="#한랭환경의-열평형">한랭환경의 열평형</a></li>
+  <li><a href="#차적-한랭장해" id="toc-차적-한랭장해" class="nav-link" data-scroll-target="#차적-한랭장해">1차적 한랭장해</a></li>
+  <li><a href="#차적-한랭장해-1" id="toc-차적-한랭장해-1" class="nav-link" data-scroll-target="#차적-한랭장해-1">2차적 한랭장해</a></li>
+  <li><a href="#한랭-대책" id="toc-한랭-대책" class="nav-link" data-scroll-target="#한랭-대책">한랭 대책</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#이상기압" id="toc-이상기압" class="nav-link" data-scroll-target="#이상기압">4. 이상기압</a>
+  <ul>
+  <li><a href="#압력의-표기-작용압과-절대압" id="toc-압력의-표기-작용압과-절대압" class="nav-link" data-scroll-target="#압력의-표기-작용압과-절대압">4.1 압력의 표기 — 작용압과 절대압</a></li>
+  <li><a href="#고압-환경의-건강장해" id="toc-고압-환경의-건강장해" class="nav-link" data-scroll-target="#고압-환경의-건강장해">4.2 고압 환경의 건강장해</a></li>
+  <li><a href="#감압병-decompression-sickness" id="toc-감압병-decompression-sickness" class="nav-link" data-scroll-target="#감압병-decompression-sickness">4.3 감압병 (Decompression Sickness)</a></li>
+  <li><a href="#저압-환경의-건강장해" id="toc-저압-환경의-건강장해" class="nav-link" data-scroll-target="#저압-환경의-건강장해">4.4 저압 환경의 건강장해</a></li>
+  </ul></li>
+  <li><a href="#전리방사선" id="toc-전리방사선" class="nav-link" data-scroll-target="#전리방사선">5. 전리방사선</a>
+  <ul>
+  <li><a href="#종류와-투과력" id="toc-종류와-투과력" class="nav-link" data-scroll-target="#종류와-투과력">5.1 종류와 투과력</a></li>
+  <li><a href="#방사선의-단위-bq-gy-sv" id="toc-방사선의-단위-bq-gy-sv" class="nav-link" data-scroll-target="#방사선의-단위-bq-gy-sv">5.2 방사선의 단위 — Bq, Gy, Sv</a></li>
+  <li><a href="#인체-영향-확률적-영향과-결정적-영향" id="toc-인체-영향-확률적-영향과-결정적-영향" class="nav-link" data-scroll-target="#인체-영향-확률적-영향과-결정적-영향">5.3 인체 영향 — 확률적 영향과 결정적 영향</a></li>
+  <li><a href="#선량한도와-방호-3원칙" id="toc-선량한도와-방호-3원칙" class="nav-link" data-scroll-target="#선량한도와-방호-3원칙">5.4 선량한도와 방호 3원칙</a></li>
+  </ul></li>
+  <li><a href="#비전리방사선" id="toc-비전리방사선" class="nav-link" data-scroll-target="#비전리방사선">6. 비전리방사선</a>
+  <ul>
+  <li><a href="#자외선-uv-100400-nm" id="toc-자외선-uv-100400-nm" class="nav-link" data-scroll-target="#자외선-uv-100400-nm">6.1 자외선 (UV, 100~400 nm)</a></li>
+  <li><a href="#가시광선-400750-nm" id="toc-가시광선-400750-nm" class="nav-link" data-scroll-target="#가시광선-400750-nm">6.2 가시광선 (400~750 nm)</a></li>
+  <li><a href="#적외선-ir-780-nm-1-mm" id="toc-적외선-ir-780-nm-1-mm" class="nav-link" data-scroll-target="#적외선-ir-780-nm-1-mm">6.3 적외선 (IR, 780 nm ~ 1 mm)</a></li>
+  <li><a href="#마이크로파-1300-cm-1030000-mhz" id="toc-마이크로파-1300-cm-1030000-mhz" class="nav-link" data-scroll-target="#마이크로파-1300-cm-1030000-mhz">6.4 마이크로파 (1~300 cm, 10~30,000 MHz)</a></li>
+  <li><a href="#레이저-laser" id="toc-레이저-laser" class="nav-link" data-scroll-target="#레이저-laser">6.5 레이저 (LASER)</a></li>
+  </ul></li>
+  <li><a href="#조명" id="toc-조명" class="nav-link" data-scroll-target="#조명">7. 조명</a>
+  <ul>
+  <li><a href="#빛의-단위" id="toc-빛의-단위" class="nav-link" data-scroll-target="#빛의-단위">7.1 빛의 단위</a></li>
+  <li><a href="#작업면-조도-기준" id="toc-작업면-조도-기준" class="nav-link" data-scroll-target="#작업면-조도-기준">7.2 작업면 조도 기준</a></li>
+  <li><a href="#채광과-조명-방식" id="toc-채광과-조명-방식" class="nav-link" data-scroll-target="#채광과-조명-방식">7.3 채광과 조명 방식</a></li>
+  </ul></li>
+  <li><a href="#요약" id="toc-요약" class="nav-link" data-scroll-target="#요약">요약</a></li>
+  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a>
+  <ul>
+  <li><a href="#문제-1.-wbgt-산출과-판정" id="toc-문제-1.-wbgt-산출과-판정" class="nav-link" data-scroll-target="#문제-1.-wbgt-산출과-판정">문제 1. WBGT 산출과 판정</a></li>
+  <li><a href="#문제-2.-고열장해의-감별" id="toc-문제-2.-고열장해의-감별" class="nav-link" data-scroll-target="#문제-2.-고열장해의-감별">문제 2. 고열장해의 감별</a></li>
+  <li><a href="#문제-3.-이상기압" id="toc-문제-3.-이상기압" class="nav-link" data-scroll-target="#문제-3.-이상기압">문제 3. 이상기압</a></li>
+  <li><a href="#문제-4.-방사선-방호의-정량-적용" id="toc-문제-4.-방사선-방호의-정량-적용" class="nav-link" data-scroll-target="#문제-4.-방사선-방호의-정량-적용">문제 4. 방사선 방호의 정량 적용</a></li>
+  <li><a href="#문제-5.-비전리방사선의-파장과-건강영향" id="toc-문제-5.-비전리방사선의-파장과-건강영향" class="nav-link" data-scroll-target="#문제-5.-비전리방사선의-파장과-건강영향">문제 5. 비전리방사선의 파장과 건강영향</a></li>
+  <li><a href="#문제-6.-조명-설계" id="toc-문제-6.-조명-설계" class="nav-link" data-scroll-target="#문제-6.-조명-설계">문제 6. 조명 설계</a></li>
+  </ul></li>
+  <li><a href="#참고문헌" id="toc-참고문헌" class="nav-link" data-scroll-target="#참고문헌">참고문헌</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/w04_toxicology1.html">Part II. 유해인자와 건강영향 (4~7주)</a></li><li class="breadcrumb-item"><a href="../chapters/w07_physical_agents2.html"><span class="chapter-title">7주차. 물리적 유해인자 II — 온열·이상기압·방사선·조명</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">7주차. 물리적 유해인자 II — 온열·이상기압·방사선·조명</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<blockquote class="blockquote">
+<p>열평형과 WBGT, 고열장해와 순화, 한랭장해, 고압·저압 환경과 감압병, 전리방사선의 단위와 방호 3원칙, 비전리방사선의 파장별 건강영향, 조명</p>
+</blockquote>
+<section id="학습목표" class="level2">
+<h2 class="anchored" data-anchor-id="학습목표">학습목표</h2>
+<p>이 주를 학습한 후 여러분은 다음을 할 수 있어야 합니다:</p>
+<ol type="1">
+<li>인체의 열평형 방정식과 온열환경 4요소를 설명하고, 온열지수들이 각각 어떤 요소를 반영하는지 비교할 수 있다</li>
+<li>옥내·옥외 조건에 맞는 WBGT를 계산하고 작업강도별 기준과 비교하여 판정할 수 있다</li>
+<li>고열장해(열사병·열탈진·열경련 등)를 원인·증상·처치로 감별하고 고온순화의 생리적 변화를 설명할 수 있다</li>
+<li>한랭장해(동상·참호족·전신체온강하)를 기전으로 구분하고 예방 원칙을 설명할 수 있다</li>
+<li>고압 환경의 건강장해와 감압병의 기전(헨리의 법칙)·예방·치료, 저압 환경의 저산소증을 설명할 수 있다</li>
+<li>전리방사선의 단위(Bq·Gy·Sv)를 구분하고, 확률적 영향과 결정적 영향의 차이 및 방호 3원칙(시간·거리·차폐)을 적용할 수 있다</li>
+<li>비전리방사선(자외선·가시광선·적외선·마이크로파·레이저)의 파장대와 표적기관, 대표 건강영향을 연결할 수 있다</li>
+<li>작업면 조도 기준을 알고 채광·조명 방식의 기본 원칙을 설명할 수 있다</li>
+</ol>
+<p><a href="../chapters/w06_physical_agents1.html">6주차</a>에서 다룬 소음·진동에 이어, 이번 주는 나머지 물리적 유해인자 — 온열환경, 이상기압, 방사선, 조명 — 를 다룬다. 이들 인자를 관통하는 공통 원리가 하나 있다. <strong>물리량(온도, 압력, 선량, 조도)을 측정하고 기준과 비교한다</strong>는 것, 그리고 여러 인자에서 <strong>에너지가 거리의 제곱에 반비례하여 묽어진다</strong>(역제곱법칙)는 것이다.</p>
+<hr>
+</section>
+<section id="인체의-열평형-온열지수의-체계-wbgt의-산출" class="level2">
+<h2 class="anchored" data-anchor-id="인체의-열평형-온열지수의-체계-wbgt의-산출">1. 인체의 열평형 · 온열지수의 체계 · WBGT의 산출</h2>
+<section id="인체의-열평형" class="level3">
+<h3 class="anchored" data-anchor-id="인체의-열평형">1.1 인체의 열평형</h3>
+<p>사람의 심부체온은 약 37 ℃로 일정하게 유지되어야 한다. 인체는 대사로 끊임없이 열을 만들면서, 대류·복사·증발로 환경과 열을 주고받는다. 이 수지를 <strong>열평형 방정식</strong>으로 쓴다.</p>
+<p><span class="math display">\[
+S = M - W \pm C \pm R - E
+\]</span></p>
+<ul>
+<li><span class="math inline">\(S\)</span>: 체내 축적 열량 (열평형이면 <span class="math inline">\(S \approx 0\)</span>)</li>
+<li><span class="math inline">\(M\)</span>: 대사열 생산, <span class="math inline">\(W\)</span>: 외부 일</li>
+<li><span class="math inline">\(C\)</span>: 대류에 의한 열교환, <span class="math inline">\(R\)</span>: 복사에 의한 열교환 (환경에 따라 득이 되기도, 실이 되기도 한다)</li>
+<li><span class="math inline">\(E\)</span>: 증발(발한)에 의한 열손실 — <strong>인체가 열을 버리는 마지막 수단</strong></li>
+</ul>
+<div id="fig-heat-balance" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-heat-balance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w07_heat_balance.svg" class="img-fluid figure-img" style="width:88.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-heat-balance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;8.1: 인체의 열평형 — 대사(M)로 만든 열을 대류(C)·복사(R)·증발(E)로 주고받는다
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-heat-balance" class="quarto-xref">그림&nbsp;<span>8.1</span></a> 에서 화살표의 방향을 눈여겨보자. <strong>증발(<span class="math inline">\(E\)</span>)만 화살표가 한 방향</strong>이다 — 땀은 열을 버리기만 할 뿐 받아들이지 않는다. 대류와 복사는 환경 조건에 따라 방향이 뒤집히므로 양방향 화살표로 그린다. 이 비대칭이 §2.2 고열장해의 기전을 그대로 설명한다.</p>
+<p>생체와 환경 사이의 열교환에 영향을 미치는 환경 요소는 <strong>기온·기습·기류·복사열</strong>의 네 가지다. 기압은 여기에 포함되지 않는다 — 기압은 열교환이 아니라 §4의 이상기압 장해를 일으키는 별개의 물리량이다.</p>
+<div id="tbl-thermal-factors" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-thermal-factors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.1: 온열환경의 4요소
+</figcaption>
+<div aria-describedby="tbl-thermal-factors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>요소</th>
+<th>열교환에서의 역할</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>기온</strong></td>
+<td>대류 열교환의 방향과 크기를 결정</td>
+</tr>
+<tr class="even">
+<td><strong>기습</strong></td>
+<td>높을수록 증발(발한)에 의한 방열이 막힌다</td>
+</tr>
+<tr class="odd">
+<td><strong>기류</strong></td>
+<td>대류와 증발을 촉진</td>
+</tr>
+<tr class="even">
+<td><strong>복사열</strong></td>
+<td>고온 물체(용광로, 태양)로부터 직접 받는 열</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>고온다습 환경이 특히 위험한 이유가 이 식에서 바로 나온다. 기온이 체온보다 높으면 대류·복사가 모두 열을 <strong>주는</strong> 방향이 되고, 습도까지 높으면 마지막 남은 방열 수단인 증발(<span class="math inline">\(E\)</span>)마저 막혀 <span class="math inline">\(S\)</span>가 양(+)으로 쌓인다.</p>
+</section>
+<section id="온열지수의-체계" class="level3">
+<h3 class="anchored" data-anchor-id="온열지수의-체계">1.2 온열지수의 체계</h3>
+<p>네 요소를 하나의 숫자로 요약하려는 시도가 여러 <strong>온열지수</strong>를 낳았다. 지수마다 반영하는 요소가 다르므로, “어떤 요소가 빠져 있는가”를 아는 것이 지수 이해의 출발점이다.</p>
+<div id="tbl-heat-indices" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-heat-indices-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.2: 주요 온열지수의 비교
+</figcaption>
+<div aria-describedby="tbl-heat-indices-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 45%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>지수</th>
+<th>반영 요소</th>
+<th>특징</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>WBGT</strong> (습구흑구온도지수)</td>
+<td>자연습구온도·흑구온도(·건구온도)</td>
+<td>국내 <strong>고열 노출기준의 공식 지표</strong>. 기류는 직접 변수가 아니고 자연습구온도에 간접 반영</td>
+</tr>
+<tr class="even">
+<td><strong>감각온도</strong> (실효온도, ET)</td>
+<td>기온·기습·기류</td>
+<td><strong>복사열을 반영하지 못함</strong>. “실감온도”라고도 함</td>
+</tr>
+<tr class="odd">
+<td><strong>수정감각온도</strong> (CET)</td>
+<td>기온·기습·기류·복사열</td>
+<td>감각온도에 복사열을 보완</td>
+</tr>
+<tr class="even">
+<td><strong>Oxford 지수</strong> (WD)</td>
+<td>습구·건구온도</td>
+<td><span class="math inline">\(0.85W + 0.15D\)</span> — 가중치가 습구 쪽에 크게 쏠림</td>
+</tr>
+<tr class="odd">
+<td><strong>불쾌지수</strong> (DI)</td>
+<td>건구·습구온도</td>
+<td><span class="math inline">\(0.72(D+W)+40.6\)</span> (℃). 생활환경 지표로, 고열 스트레스 평가지수가 아님</td>
+</tr>
+<tr class="even">
+<td><strong>P4SR</strong> (4시간 발한 예측치)</td>
+<td>4요소 + 착의상태·작업량</td>
+<td>노모그램으로 산정, 고온작업자의 생리상태를 잘 반영</td>
+</tr>
+<tr class="odd">
+<td><strong>열압박지수</strong> (HSI)</td>
+<td>온도·습도·공기 속도</td>
+<td>요구 증발량/최대 증발능력의 비. 작업·휴식시간 산출 가능</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>개념 구분 — WBGT가 반영하지 “않는” 것
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>WBGT 산출식에는 <strong>기류가 직접 변수로 들어가지 않으며</strong>(자연습구온도에 간접 반영), <strong>작업대사량도 산출식의 변수가 아니다</strong> — 작업강도는 산출된 WBGT를 기준표와 비교해 <strong>판정할 때</strong> 쓰인다. “무엇으로 계산하는가”와 “무엇으로 판정하는가”의 구분이다. 한편 감각온도(실효온도)는 <strong>복사를 반영하지 못하므로</strong>, 복사열이 지배적인 작업장 (용광로 앞)을 감각온도로 평가하면 위험을 과소평가한다. 어떤 단일 지수도 네 요소와 대사열·착의량을 모두 담지 못하므로, 지수들은 대체가 아니라 <strong>보완 관계</strong>다.</p>
+</div>
+</div>
+</section>
+<section id="wbgt의-산출" class="level3">
+<h3 class="anchored" data-anchor-id="wbgt의-산출">1.3 WBGT의 산출</h3>
+<p><strong>WBGT(Wet Bulb Globe Temperature)</strong>는 세 가지 온도계를 조합한다.</p>
+<ul>
+<li><span class="math inline">\(T_{nwb}\)</span>: <strong>자연습구온도</strong> — 습도와 기류를 반영</li>
+<li><span class="math inline">\(T_g\)</span>: <strong>흑구온도</strong> — 흑색 구 내부의 온도로 복사열을 반영</li>
+<li><span class="math inline">\(T_a\)</span>: <strong>건구온도</strong> — 기온</li>
+</ul>
+<p>태양광선(직사 복사)의 유무에 따라 두 가지 식을 쓴다.</p>
+<div id="tbl-wbgt-formula" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-wbgt-formula-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.3: WBGT 산출식
+</figcaption>
+<div aria-describedby="tbl-wbgt-formula-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 28%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>상황</th>
+<th>적용 식</th>
+<th>사용하는 온도</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>옥내</strong>, 또는 태양광선이 없는 옥외(그늘막 내, 야간)</td>
+<td><span class="math inline">\(\text{WBGT} = 0.7\,T_{nwb} + 0.3\,T_{g}\)</span></td>
+<td>자연습구·흑구 <strong>2개</strong></td>
+</tr>
+<tr class="even">
+<td><strong>태양광선이 있는 옥외</strong></td>
+<td><span class="math inline">\(\text{WBGT} = 0.7\,T_{nwb} + 0.2\,T_{g} + 0.1\,T_{a}\)</span></td>
+<td>자연습구·흑구·건구 <strong>3개</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-wbgt" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-wbgt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w07_wbgt_formula.svg" class="img-fluid figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wbgt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;8.2: WBGT 산출 — 세 측정값과 두 식의 가중치
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>식의 선택 기준은 “측정된 온도”가 아니라 “태양복사의 유무”다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>건구온도가 측정되어 있다고 해서 3항 식을 쓰는 것이 아니다. 그늘막 안이나 야간처럼 태양복사가 없으면 건구온도 자료가 있어도 <strong>2항 식</strong>을 쓰고 건구온도는 사용하지 않는다. <a href="#fig-wbgt" class="quarto-xref">그림&nbsp;<span>8.2</span></a> 의 가중치 막대에서 자연습구온도가 두 식 모두 전체의 70 %를 차지한다는 점에 주목하자 — 고열 스트레스에서 <strong>가장 결정적인 변수는 습도(증발 방열의 여지)</strong>라는 뜻이다. 태양복사가 있으면 흑구의 0.3 중 0.1이 건구로 옮겨 갈 뿐, 자연습구의 0.7은 움직이지 않는다.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 1: 옥내·옥외의 WBGT 산출
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>그늘막 내에서 자연습구온도 25 ℃, 건구온도 32 ℃, 흑구온도 20 ℃를 측정하였다. WBGT는?</p></li>
+<li><p>태양광선이 내리쬐는 옥외에서 자연습구온도 22 ℃, 흑구온도 35 ℃, 건구온도 25 ℃를 측정하였다. WBGT는?</p></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>(1)</strong> 그늘막 내 = 태양광선 없음 → <strong>2항 식</strong>. 건구온도 32 ℃는 사용하지 않는다.</p>
+<p><span class="math display">\[
+\text{WBGT} = 0.7 \times 25 + 0.3 \times 20 = 17.5 + 6.0 = 23.5\ ^\circ\text{C}
+\]</span></p>
+<p><strong>(2)</strong> 태양광선이 있는 옥외 → <strong>3항 식</strong>.</p>
+<p><span class="math display">\[
+\text{WBGT} = 0.7 \times 22 + 0.2 \times 35 + 0.1 \times 25 = 15.4 + 7.0 + 2.5 = 24.9\ ^\circ\text{C}
+\]</span></p>
+<p><strong>답: (1) 23.5 ℃ (2) 24.9 ℃</strong></p>
+<p>(1)에서 실수로 3항 식을 쓰면 <span class="math inline">\(0.7\times25+0.2\times20+0.1\times32=24.7\)</span> ℃로, 그럴듯하지만 틀린 값이 나온다. 식의 선택이 계산보다 먼저다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="작업강도별-고열-노출기준-고열장해열중증의-감별" class="level2">
+<h2 class="anchored" data-anchor-id="작업강도별-고열-노출기준-고열장해열중증의-감별">2. 작업강도별 고열 노출기준 · 고열장해(열중증)의 감별</h2>
+<section id="작업강도별-고열-노출기준" class="level3">
+<h3 class="anchored" data-anchor-id="작업강도별-고열-노출기준">2.1 작업강도별 고열 노출기준</h3>
+<p>산출한 WBGT는 <strong>작업강도</strong>와 <strong>작업·휴식시간비</strong>에 따른 기준값과 비교하여 판정한다.</p>
+<div id="tbl-wbgt-criteria" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-wbgt-criteria-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.4: 작업강도별 WBGT 노출기준 (℃)
+</figcaption>
+<div aria-describedby="tbl-wbgt-criteria-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 40%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>작업강도</th>
+<th>대사열량 (kcal/h)</th>
+<th style="text-align: center;">계속작업</th>
+<th style="text-align: center;">75% 작업 + 25% 휴식</th>
+<th style="text-align: center;">50% 작업 + 50% 휴식</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>경작업</strong></td>
+<td>100~200</td>
+<td style="text-align: center;">30.0 ℃</td>
+<td style="text-align: center;">30.6 ℃</td>
+<td style="text-align: center;">31.4 ℃</td>
+</tr>
+<tr class="even">
+<td><strong>중등작업</strong></td>
+<td>200~350</td>
+<td style="text-align: center;"><strong>26.7 ℃</strong></td>
+<td style="text-align: center;">28.0 ℃</td>
+<td style="text-align: center;">29.4 ℃</td>
+</tr>
+<tr class="odd">
+<td><strong>중작업</strong></td>
+<td>350~500</td>
+<td style="text-align: center;">25.0 ℃</td>
+<td style="text-align: center;">25.9 ℃</td>
+<td style="text-align: center;">27.9 ℃</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>표를 읽는 방향이 곧 원리다. 기준값은 <strong>작업강도가 무거울수록 낮아지고</strong>(대사열 <span class="math inline">\(M\)</span>이 크므로 환경에서 받아도 되는 열이 줄어든다), <strong>휴식 비율이 커질수록 높아진다</strong>(회복 시간이 있으므로 더 더운 환경도 견딜 수 있다). 뒤집어 말하면, <strong>WBGT가 높을수록 더 많은 휴식시간이 필요하다</strong> — WBGT는 고온 작업장의 작업·휴식시간비를 결정하는 지표다. 표기 단위는 섭씨(℃)다.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 2: WBGT 판정
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>어느 공장 실내에서 자연습구온도 28 ℃, 흑구온도 35 ℃를 측정했다. 이 작업장에서 중등작업(200~350 kcal/h)을 계속작업으로 수행할 수 있는가?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>실내이므로 2항 식을 적용한다.</p>
+<p><span class="math display">\[
+\text{WBGT} = 0.7 \times 28 + 0.3 \times 35 = 19.6 + 10.5 = 30.1\ ^\circ\text{C}
+\]</span></p>
+<p>중등작업·계속작업의 기준값은 26.7 ℃이다. <span class="math inline">\(30.1 &gt; 26.7\)</span>이므로 <strong>노출기준 초과</strong> — 계속작업은 불가하다. 표 <a href="#tbl-wbgt-criteria" class="quarto-xref">표&nbsp;<span>8.4</span></a> 에서 30.1 ℃는 50% 작업 + 50% 휴식 기준(29.4 ℃)조차 초과하므로, 작업·휴식시간비 조정만으로는 부족하고 복사열 차폐·국소냉방 등 공학적 개선을 병행해야 한다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="고열장해열중증의-감별" class="level3">
+<h3 class="anchored" data-anchor-id="고열장해열중증의-감별">2.2 고열장해(열중증)의 감별</h3>
+<p>고열장해는 <strong>원인 → 증상 → 처치</strong>가 한 줄로 연결된다. 특히 원인 기전이 다르면 처치가 정반대가 되므로, 기전부터 정확히 구분해야 한다.</p>
+<div id="tbl-heat-illness" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-heat-illness-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.5: 고열장해의 감별
+</figcaption>
+<div aria-describedby="tbl-heat-illness-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 29%">
+<col style="width: 35%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>질환</th>
+<th>핵심 원인</th>
+<th>특징적 증상</th>
+<th>처치</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>열경련</strong> (heat cramp)</td>
+<td>발한과다에 따른 <strong>수분·염분(NaCl) 손실</strong> — 물만 마시고 염분을 보충하지 못할 때</td>
+<td>복부·사지 근육의 강직성 동통(경련). 체온은 정상</td>
+<td><strong>수분과 NaCl 보충</strong> (0.1% 식염수), 휴식</td>
+</tr>
+<tr class="even">
+<td><strong>열탈진·열피로</strong> (heat exhaustion)</td>
+<td><strong>탈수로 혈장량 감소</strong>, 말초혈관 확장을 심박출량이 따라가지 못함</td>
+<td>실신·허탈, 두통, 구역, 현기증. 땀은 많고 피부는 차고 축축, 체온은 정상~약간 상승</td>
+<td>서늘한 곳에서 휴식, <strong>5% 포도당 공급</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>열실신·열허탈</strong> (heat syncope)</td>
+<td>순화되지 못한 상태에서 말초혈관 확장 → 말초 혈액 저류 → 뇌 혈류 부족</td>
+<td>저혈압, 일시적 실신·현기증</td>
+<td>눕혀 안정, 서늘한 곳으로 이동</td>
+</tr>
+<tr class="even">
+<td><strong>열사병</strong> (heat stroke)</td>
+<td><strong>체온조절 중추의 기능 장애</strong> (중추성)</td>
+<td>체온 41~43 ℃ 급상승, 의식장해·경련, <strong>땀이 나지 않아 피부가 뜨겁고 건조</strong></td>
+<td><strong>체온의 급속한 냉각</strong> (39 ℃ 이하로), 즉시 이송</td>
+</tr>
+<tr class="odd">
+<td><strong>열쇠약</strong> (heat prostration)</td>
+<td>고열에 의한 <strong>만성적 체력 소모</strong> (만성 경과)</td>
+<td>전신 쇠약</td>
+<td>영양 공급, 휴식</td>
+</tr>
+<tr class="even">
+<td><strong>열발진</strong> (heat rash)</td>
+<td>땀샘 폐색</td>
+<td>피부 발진·가려움 — 고열 환경에서 가장 흔한 피부장해</td>
+<td>피부를 시원하고 건조하게 유지</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-heat-illness" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-heat-illness-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w07_heat_illness_map.svg" class="img-fluid figure-img" style="width:85.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-heat-illness-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;8.3: 고열장해의 감별 — 체온과 발한 두 축 위에 놓고 보면 갈린다
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-heat-illness" class="quarto-xref">그림&nbsp;<span>8.3</span></a> 에서 <strong>열사병만 오른쪽 아래 구석에 홀로 떨어져 있다</strong> — 체온은 40 ℃를 넘고 땀은 없다. 나머지 세 질환은 모두 왼쪽 위(체온 정상, 땀은 있음)에 모여 있다. 현장에서 두 축만 확인하면 “즉시 냉각하고 이송할 것인가, 그늘에서 쉬게 할 것인가”가 바로 갈린다는 뜻이다.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>열사병과 열탈진 — 땀과 체온으로 가른다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>두 질환은 현장에서 가장 자주 마주치고, 가장 혼동하기 쉽다.</p>
+<ul>
+<li><strong>열사병</strong>: 체온조절 중추 자체가 마비된 상태다. 발한이 <strong>정지</strong>되어 피부가 뜨겁고 건조하며, 체온이 40 ℃ 이상으로 치솟는다. 냉각이 늦어지는 만큼 다장기 손상이 진행되는 <strong>생명을 위협하는 응급상황</strong>이다 — 즉시 신고하고 냉각을 시작한다.</li>
+<li><strong>열탈진</strong>: 체온조절은 작동하고 있으나 순환 혈장량이 부족한 상태다. 땀은 <strong>많이</strong> 나고 피부는 차고 축축하며, 체온은 정상이거나 약간 높다.</li>
+</ul>
+<p>처치의 논리도 기전에서 나온다. 염분 결핍(열경련)에는 염분을, 혈장량 결핍(열탈진)에는 수분·포도당을, 체온조절 마비(열사병)에는 외부 냉각을 — <strong>잃어버린 것, 고장난 것을 직접 보충·교정</strong>하는 것이다.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="고온순화-acclimatization-고열-대책-한랭환경과-한랭장해" class="level2">
+<h2 class="anchored" data-anchor-id="고온순화-acclimatization-고열-대책-한랭환경과-한랭장해">3. 고온순화 (Acclimatization) · 고열 대책 · 한랭환경과 한랭장해</h2>
+<section id="고온순화-acclimatization" class="level3">
+<h3 class="anchored" data-anchor-id="고온순화-acclimatization">3.1 고온순화 (Acclimatization)</h3>
+<p><strong>순화</strong>란 반복적인 고열 노출로 열 부담(heat strain)이 줄어드는 생리적 적응이다. 순화의 방향은 일관된다 — <strong>땀은 더 잘 흘리되, 염분은 아끼는 쪽</strong>으로 몸이 바뀐다.</p>
+<div id="tbl-acclimatization" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-acclimatization-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.6: 고온순화의 생리적 변화
+</figcaption>
+<div aria-describedby="tbl-acclimatization-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>순화 후 변화</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>체표면 <strong>한선(땀샘)의 수</strong></td>
+<td><strong>증가</strong> — 방열 능력 확대</td>
+</tr>
+<tr class="even">
+<td>땀 속 <strong>염분 농도</strong></td>
+<td><strong>감소</strong>(희박해짐) — 염분 보존</td>
+</tr>
+<tr class="odd">
+<td><strong>알도스테론</strong> 분비</td>
+<td>증가 → 염분 배설 억제</td>
+</tr>
+<tr class="even">
+<td><strong>심박수</strong></td>
+<td>감소 — 같은 열부하에서 순환 부담 감소</td>
+</tr>
+<tr class="odd">
+<td>에너지 대사량·체온</td>
+<td>초기에는 증가·상승하나 이후 정상화</td>
+</tr>
+<tr class="even">
+<td>간기능·위액 분비</td>
+<td>저하 (식욕부진·소화불량의 배경)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>순화에 걸리는 시간
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>매일 반복 노출하면 <strong>4~6일</strong>에 주로 이루어지고 <strong>12~14일</strong>에 거의 완성된다</li>
+<li><strong>하루 100분씩</strong> 노출하는 방법이 효과적이며, 하루 노출시간을 무작정 늘린다고 순화가 빨라지지는 않는다</li>
+<li>순화에 가장 중요한 외부 요인은 <strong>영양과 수분 보충</strong>이다</li>
+</ul>
+<p>실무적 함의: 장기 휴가 복귀자, 신규 입사자, 서늘한 지역에서 온 근로자는 <strong>순화되지 않은 상태</strong>이므로 고온작업 배치 시 별도의 순화 기간을 부여해야 한다. §2.2의 열실신이 “순화되지 못한” 근로자에게 잘 생기는 이유이기도 하다.</p>
+</div>
+</div>
+</section>
+<section id="고열-대책" class="level3">
+<h3 class="anchored" data-anchor-id="고열-대책">3.2 고열 대책</h3>
+<p>관리의 논리는 <a href="../chapters/w01_intro_history.html">1주차</a>의 관리 위계 그대로다 — 발생원(열원) 쪽 대책이 우선이다.</p>
+<ul>
+<li><strong>공학적 대책</strong>: 열원 격리·차폐, 환기·냉방, 복사열 차단. 방열복·차단판의 표면에는 복사열 <strong>반사효과</strong>가 큰 <strong>알루미늄</strong>을 사용한다(차단판은 양면 알루미늄이 최적)</li>
+<li><strong>관리적 대책</strong>: 작업·휴식시간 배분(§2.1), 작업 시간대 조정, 순화 기간 부여, 시원한 음용수(10~15 ℃) 공급</li>
+<li><strong>개인 보호구</strong>: 통풍이 잘 되는 작업복, 냉각조끼, 옥외 작업 시 모자</li>
+</ul>
+<hr>
+</section>
+<section id="한랭환경과-한랭장해" class="level3">
+<h3 class="anchored" data-anchor-id="한랭환경과-한랭장해">3.3 한랭환경과 한랭장해</h3>
+<section id="한랭환경의-열평형" class="level4">
+<h4 class="anchored" data-anchor-id="한랭환경의-열평형">한랭환경의 열평형</h4>
+<p>한랭환경에서는 복사·대류·증발이 모두 열을 <strong>빼앗는 방향</strong>으로 작용한다. 고열환경의 일반형(<span class="math inline">\(S = M - W \pm C \pm R - E\)</span>)에서 <span class="math inline">\(C\)</span>·<span class="math inline">\(R\)</span>의 부호가 상황에 따라 바뀌던 것과 달리, 한랭환경에서는 모두 손실 항으로 고정된다.</p>
+<p><span class="math display">\[
+\Delta S = M - E - R - C
+\]</span></p>
+<p>체온을 지키는 유일한 수입 항은 대사열 <span class="math inline">\(M\)</span>뿐이다. 그래서 한랭 대책의 두 축은 <strong>손실 줄이기</strong>(보온·방풍·방수)와 <strong>생산 유지하기</strong>(움직임, 충분한 식사)가 된다. 바람은 피부 주변의 단열 공기층을 제거하여 대류 손실 <span class="math inline">\(C\)</span>를 급격히 키운다 — 기온과 풍속을 함께 반영한 체감온도 지표가 <strong>풍랭지수(WCI)</strong>다.</p>
+</section>
+<section id="차적-한랭장해" class="level4">
+<h4 class="anchored" data-anchor-id="차적-한랭장해">1차적 한랭장해</h4>
+<p>한랭 자체가 직접 일으키는 장해다. <strong>조직이 얼었는가</strong>가 핵심 감별점이다.</p>
+<div id="tbl-cold-injury" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cold-injury-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.7: 1차적 한랭장해
+</figcaption>
+<div aria-describedby="tbl-cold-injury-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 26%">
+<col style="width: 47%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>장해</th>
+<th>기전</th>
+<th>핵심 소견</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>동상</strong> (frostbite)</td>
+<td>강렬한 한랭으로 <strong>조직이 동결</strong></td>
+<td>피부 동결은 0 ~ −2 ℃에서 발생</td>
+</tr>
+<tr class="even">
+<td><strong>참호족·침수족</strong> (trench/immersion foot)</td>
+<td><strong>동결온도 이상</strong>의 냉수·습기에 <strong>장기간</strong> 노출 → 지속적 <strong>국소 산소결핍</strong>, 모세혈관 벽 손상</td>
+<td>발이 젖은 채로 한랭에 오래 노출될 때. 두 질환은 발생조건·임상상이 유사</td>
+</tr>
+<tr class="odd">
+<td><strong>전신체온강하</strong> (저체온증)</td>
+<td>장시간 한랭 노출과 체열 상실</td>
+<td><strong>급성 중증</strong> 장해. 심부온도가 37 ℃에서 26.7 ℃ 이하까지 하강</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>동상은 정도에 따라 세 단계로 나눈다(4도는 없다).</p>
+<div id="tbl-frostbite-degree" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-frostbite-degree-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.8: 동상의 단계
+</figcaption>
+<div aria-describedby="tbl-frostbite-degree-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>단계</th>
+<th>소견</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1도</strong></td>
+<td>홍반성 동상 — 혈관 확장에 의한 발적, 따갑고 가려움</td>
+</tr>
+<tr class="even">
+<td><strong>2도</strong></td>
+<td>수포성 동상 — 수포를 동반한 광범위한 삼출성 염증</td>
+</tr>
+<tr class="odd">
+<td><strong>3도</strong></td>
+<td>괴사성 동상 — 심부조직까지 동결, 괴사·괴저</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>그림 필요 — 동상 1·2·3도의 임상 사진
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>무엇</strong>: 동상의 세 단계를 나란히 놓은 임상 사진 — ① 1도(홍반성): 발적과 부종만 있는 손·발가락, ② 2도(수포성): 수포가 형성된 손가락, ③ 3도(괴사성): 흑색 괴사가 진행된 지단. 가능하면 같은 부위(손가락 또는 발가락)로 통일하고, 참호족(침수족)의 사진 — 얼지 않았으나 창백·부종·수포가 있는 젖은 발 — 을 한 칸 더 붙이면 “동결한 것과 동결하지 않은 것”의 대비가 완성된다.</p>
+<p><strong>왜</strong>: 이 절의 핵심 감별점은 <strong>조직이 얼었는가</strong>인데, 표만으로는 1도와 참호족이 임상적으로 어떻게 다른지 학생이 그려 내지 못한다. 특히 3도 괴사의 경계선이 뚜렷하다는 점, 참호족은 동결 소견 없이 광범위한 부종·창백을 보인다는 점은 사진이라야 전달된다.</p>
+<p><strong>출처 후보</strong>: NIOSH/CDC <em>Cold Stress</em> 자료 및 OSHA Cold Stress 지침 (미국 연방정부 저작물 — 퍼블릭 도메인), 미 육군 의무사령부(US Army Medical Department)의 한랭손상 교재, 위키미디어 커먼즈 “Frostbite” · “Trench foot” 항목(라이선스 개별 확인), Wellcome Collection(CC BY 4.0).</p>
+<p><strong>대안</strong>: 사진 확보가 어려우면 손가락 단면 모식도에 동결 깊이(표피 / 진피·수포 / 심부조직 괴사)를 단계별로 표시한 도해로 대체한다.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>동상과 참호족 — 원인이 다르면 병도 다르다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>동상</strong>은 조직이 <strong>얼어야</strong> 생긴다.</li>
+<li><strong>참호족</strong>은 <strong>얼지 않는 온도</strong>에서 <strong>젖은 상태로 오래</strong> 있을 때 생기며, 원인은 동결이 아니라 <strong>지속적인 국소 산소결핍</strong>이다.</li>
+</ul>
+<p>“차가운 물에 오래 담근 발”은 얼지 않았어도 병든다는 것 — 온도 하나가 아니라 <strong>온도 × 습기 × 시간</strong>의 조합이 조직 손상을 결정한다는 것이 이 구분의 개념적 핵심이다.</p>
+</div>
+</div>
+<p>전신체온강하의 첫 증상은 <strong>억제하기 어려운 떨림</strong>과 냉감각이며, 진행되면 심박동이 불규칙하고 느려지며 맥박이 약해지고 혈압이 떨어진다. 떨림이 <strong>멎는 것</strong>은 회복이 아니라 체온조절 능력이 소진된 위험 신호다.</p>
+</section>
+<section id="차적-한랭장해-1" class="level4">
+<h4 class="anchored" data-anchor-id="차적-한랭장해-1">2차적 한랭장해</h4>
+<p>한랭 자체가 원인은 아니지만 <strong>한랭 노출로 유발·악화</strong>되는 질환이다.</p>
+<ul>
+<li><strong>레이노 현상</strong> — <a href="../chapters/w06_physical_agents1.html">6주차</a>에서 다룬 국소진동 장해가 한랭에서 발작적으로 악화되는 것이 대표적이다</li>
+<li><strong>선단자람증</strong>(acrocyanosis), 폐색성 혈전 등 혈관 이상</li>
+</ul>
+</section>
+<section id="한랭-대책" class="level4">
+<h4 class="anchored" data-anchor-id="한랭-대책">한랭 대책</h4>
+<div id="tbl-cold-management" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cold-management-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.9: 한랭 작업 관리의 원칙
+</figcaption>
+<div aria-describedby="tbl-cold-management-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>원칙</th>
+<th>이유</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>의복·구두의 <strong>습기 제거</strong>, 방수 처리된 의복</td>
+<td>젖은 의복은 단열 성능을 잃고 증발 손실을 키운다 (참호족 예방)</td>
+</tr>
+<tr class="even">
+<td><strong>여유 있는</strong> 구두·장갑 착용</td>
+<td>꼭 맞는 신발·장갑은 말초 혈류를 압박하여 오히려 동상 위험을 높인다</td>
+</tr>
+<tr class="odd">
+<td>발과 다리를 <strong>자주 움직이기</strong></td>
+<td>대사열 생산과 말초 혈류 유지</td>
+</tr>
+<tr class="even">
+<td><strong>금속 의자</strong> 사용 금지</td>
+<td>금속은 열전도율이 높아 전도 손실이 크다</td>
+</tr>
+<tr class="odd">
+<td>과도한 피로 회피, 충분한 식사</td>
+<td>대사열 생산의 원료 확보</td>
+</tr>
+<tr class="even">
+<td>고혈압·심혈관 질환·간장 장해가 있는 사람은 한랭작업 회피</td>
+<td>한랭 혈관수축 부담</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">경고</span>알코올은 몸을 데우지 않는다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>알코올은 피부 혈관을 확장시켜 <strong>열 손실을 촉진</strong>한다. “몸이 따뜻해지는 느낌”은 심부의 열이 피부로 빠져나가고 있다는 신호일 뿐이다. 한랭작업의 따뜻한 음료는 비알코올성이어야 한다. 또 하나 — 한랭에 대한 순화는 존재하지만 <strong>고온순화보다 느려서</strong>, 고온처럼 1~2주의 순화로 뚜렷한 적응을 기대하기 어렵다.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+</section>
+<section id="이상기압" class="level2">
+<h2 class="anchored" data-anchor-id="이상기압">4. 이상기압</h2>
+<p>잠수·잠함(caisson) 작업은 <strong>고압</strong>, 고지대·항공 작업은 <strong>저압</strong> 환경이다. 두 환경의 장해는 모두 “기체의 분압”이라는 하나의 물리로 설명된다.</p>
+<section id="압력의-표기-작용압과-절대압" class="level3">
+<h3 class="anchored" data-anchor-id="압력의-표기-작용압과-절대압">4.1 압력의 표기 — 작용압과 절대압</h3>
+<p>수중 작업의 압력은 두 가지로 나누어 표기한다.</p>
+<ul>
+<li><strong>작용압(게이지압)</strong>: 수심 때문에 <strong>추가로</strong> 걸리는 압력. 수면에서 0</li>
+<li><strong>절대압</strong>: 작용압에 대기압 1기압을 더한 값</li>
+</ul>
+<p>물은 수심 10 m마다 약 1기압을 더한다.</p>
+<p><span class="math display">\[
+P_{\text{작용}} = \frac{h}{10}\ [\text{atm}], \qquad
+P_{\text{절대}} = 1 + \frac{h}{10}\ [\text{atm}] \qquad (h: \text{수심, m})
+\]</span></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 3: 수심에 따른 압력
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>잠수부가 수심 20 m에서 작업할 때의 절대압은?</li>
+<li>해저 45 m에서 작업할 때의 작용압과 절대압은?</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>(1)</strong> <span class="math inline">\(P_{\text{절대}} = 1 + \dfrac{20}{10} = 3\)</span> 기압</p>
+<p><strong>(2)</strong> <span class="math inline">\(P_{\text{작용}} = \dfrac{45}{10} = 4.5\)</span> 기압, <span class="math inline">\(\quad P_{\text{절대}} = 1 + 4.5 = 5.5\)</span> 기압</p>
+<p><strong>답: (1) 3기압 (2) 작용압 4.5기압, 절대압 5.5기압</strong></p>
+<p>“수심 ÷ 10 = 작용압”, “작용압 + 1 = 절대압” 두 줄이 전부지만, 대기압 1기압을 빠뜨리면 모든 값이 한 칸씩 어긋난다. 어느 압력을 묻는지 먼저 확인하는 습관을 들이자.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>참고로 산업안전보건기준에 관한 규칙(이상기압 장)에서 <strong>고압작업</strong>은 잠함공법 등 압기공법으로 행하는 작업, <strong>잠수작업</strong>은 수중에서 공기압축기나 호흡용 공기통을 이용하는 작업이며, 이때의 “압력”은 <strong>게이지압</strong>을 말한다.</p>
+</section>
+<section id="고압-환경의-건강장해" class="level3">
+<h3 class="anchored" data-anchor-id="고압-환경의-건강장해">4.2 고압 환경의 건강장해</h3>
+<p>고압 환경의 장해는 노출의 국면에 따라 정리된다.</p>
+<div id="tbl-hyperbaric-phases" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-hyperbaric-phases-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.10: 고압 환경의 세 국면과 장해
+</figcaption>
+<div aria-describedby="tbl-hyperbaric-phases-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>① 가압 (내려갈 때)</th>
+<th>② 체류 (고압 하)</th>
+<th>③ 감압 (올라올 때)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1차적 가압현상</strong> — 기계적 장해</td>
+<td><strong>2차적 가압현상</strong> — 화학적 장해</td>
+<td><strong>감압병</strong> — 기포 형성</td>
+</tr>
+<tr class="even">
+<td>귀·부비동 스퀴즈</td>
+<td>질소마취 · 산소중독 · CO₂ 중독</td>
+<td>관절통, 피부 소양감, 하지마비, 폐색전</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>1차적 가압현상</strong>은 압력 자체에 의한 기계적 장해다. 가압 시 부비동·중이의 압력 평형이 실패하면 <strong>스퀴즈(squeeze)</strong> — 귀·부비동의 통증이 생긴다.</p>
+<p><strong>2차적 가압현상</strong>은 고분압이 된 기체의 화학적·생리적 작용이다.</p>
+<div id="tbl-hyperbaric" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-hyperbaric-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.11: 2차적 가압현상 (고분압 기체의 화학적 장해)
+</figcaption>
+<div aria-describedby="tbl-hyperbaric-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 45%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>기체</th>
+<th>발생 조건</th>
+<th>증상</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>질소 (N₂)</strong></td>
+<td><strong>4기압 이상</strong></td>
+<td><strong>질소마취</strong> — 다행증(euphoria), 판단력·작업능력 저하</td>
+</tr>
+<tr class="even">
+<td><strong>산소 (O₂)</strong></td>
+<td>산소분압 <strong>2기압 초과</strong></td>
+<td><strong>산소중독</strong> — 경련, 폐부종, 시야 협착</td>
+</tr>
+<tr class="odd">
+<td><strong>이산화탄소 (CO₂)</strong></td>
+<td>대기압 환산 농도 <strong>0.2% 초과</strong></td>
+<td>두통·호흡곤란. 산소중독과 질소마취를 <strong>악화</strong>시킴</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>개념 구분 — 무엇이 2차적 가압현상이고 무엇이 아닌가
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>2차적 가압현상의 3요소는 <strong>질소마취·산소중독·이산화탄소 중독</strong>이다. 평상시 무해한 공기의 성분들이 <strong>분압이 높아지는 것만으로</strong> 독성을 띠게 된다는 것이 개념의 핵심이다(같은 기체, 다른 분압, 다른 독성).</p>
+<ul>
+<li>일산화탄소(CO) 중독은 분압과 무관한 화학적 질식(5주차)으로, 여기에 속하지 않는다.</li>
+<li>공기전색(air embolism)은 <strong>감압 과정</strong>에서 기포가 혈관을 막는 장해로, 가압 중의 화학적 장해와 발생 시점 자체가 다르다.</li>
+<li>산소중독은 노출이 중지되면 <strong>회복되는 가역적 장해</strong>이며 후유증을 남기지 않는다. 다만 운동이나 이산화탄소의 존재로 악화되므로, 고압환경의 CO₂ 관리는 산소중독 예방과 직결된다.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="감압병-decompression-sickness" class="level3">
+<h3 class="anchored" data-anchor-id="감압병-decompression-sickness">4.3 감압병 (Decompression Sickness)</h3>
+<p>고압 환경 장해의 대표는 <strong>감압병</strong>(잠함병, bends)이다. 기전은 <strong>헨리의 법칙</strong> — 기체의 용해도는 분압에 비례한다 — 하나로 설명된다.</p>
+<div id="fig-decompression" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-decompression-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w07_decompression_sickness.svg" class="img-fluid figure-img" style="width:92.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-decompression-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;8.4: 감압병의 기전 — 헨리의 법칙에 따라 녹아든 질소가 급격한 감압에서 기포로 석출된다
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-decompression" class="quarto-xref">그림&nbsp;<span>8.4</span></a> 의 세 칸에서 <strong>질소의 총량은 거의 변하지 않는다</strong> — 달라지는 것은 그것이 녹아 있는가(작은 점) 기포로 뭉쳐 있는가(큰 방울)뿐이다. 감압병의 대책이 “질소를 없애는 것”이 아니라 “<strong>기포가 되기 전에 호흡으로 내보낼 시간을 주는 것</strong>”인 이유가 여기 있다.</p>
+<ul>
+<li><strong>증상</strong>: 관절통(bends), 피부 소양감, 척수 침범 시 하지마비, 폐혈관 침범 시 폐색전(chokes)</li>
+<li><strong>예방</strong>
+<ul>
+<li><strong>단계적 감압</strong>(감압표 준수) — 가장 중요하다. 녹은 질소를 기포가 아닌 호흡으로 서서히 내보낼 시간을 주는 것이다</li>
+<li>감압 중 <strong>산소 호흡</strong>으로 질소 배출 촉진</li>
+<li><strong>헬륨-산소 혼합가스</strong> 사용 — 헬륨은 질소보다 지방 용해도가 낮아 마취·감압병 위험이 적다</li>
+<li>작업 후 <strong>비행기 탑승·고지대 이동 금지</strong> — 고도 상승은 추가 감압에 해당한다</li>
+</ul></li>
+<li><strong>치료</strong>: <strong>재가압 요법(고압산소치료)</strong> — 챔버에서 다시 가압해 기포를 녹인 뒤 서서히 감압한다</li>
+</ul>
+</section>
+<section id="저압-환경의-건강장해" class="level3">
+<h3 class="anchored" data-anchor-id="저압-환경의-건강장해">4.4 저압 환경의 건강장해</h3>
+<p>고지대 작업·항공 업무의 근본 문제는 <strong>산소분압 저하에 따른 저산소증(hypoxia)</strong>이다.</p>
+<div id="tbl-altitude" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-altitude-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.12: 고도에 따른 저산소증
+</figcaption>
+<div aria-describedby="tbl-altitude-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>고도</th>
+<th>영향</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2,000 m 이상</td>
+<td>경도 저산소증, 야간시력 저하</td>
+</tr>
+<tr class="even">
+<td>3,000 m 이상</td>
+<td><strong>급성 고산병</strong> — 두통, 구역, 불면</td>
+</tr>
+<tr class="odd">
+<td>5,000 m 이상</td>
+<td>판단력 저하, 의식 장해</td>
+</tr>
+<tr class="even">
+<td>8,000 m 이상</td>
+<td>산소 공급 없이는 생존 곤란</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>임상적으로는 두 질환이 대비된다.</p>
+<div id="tbl-ams-hape" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ams-hape-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.13: 급성고산병과 고공성 폐수종
+</figcaption>
+<div aria-describedby="tbl-ams-hape-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 40%">
+<col style="width: 46%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>급성고산병 (AMS)</th>
+<th>고공성 폐수종 (HAPE)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>주요 증상</strong></td>
+<td>두통, 식욕상실, 우울 — 가장 특징적인 것은 <strong>흥분성</strong></td>
+<td><strong>진행성 기침과 호흡곤란</strong>, 폐 수포음, 폐동맥압 상승</td>
+</tr>
+<tr class="even">
+<td><strong>호발 대상</strong></td>
+<td>고도에 순화되지 않은 사람</td>
+<td>어른보다 <strong>어린이</strong>에게 많고, 고공에 순화된 사람이 <strong>해면으로 복귀할 때</strong>도 발생</td>
+</tr>
+<tr class="odd">
+<td><strong>경과</strong></td>
+<td>48시간 내 최고조 → 2~3일이면 소실</td>
+<td>산소 공급·해면 귀환으로 급속히 소실</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>예방의 원칙은 고온순화와 같은 논리다 — <strong>점진적 순화</strong>(고도 적응), 산소 공급, 작업시간 제한, 그리고 심폐질환자의 배치 전 선별(건강진단)이다.</p>
+<hr>
+</section>
+</section>
+<section id="전리방사선" class="level2">
+<h2 class="anchored" data-anchor-id="전리방사선">5. 전리방사선</h2>
+<section id="종류와-투과력" class="level3">
+<h3 class="anchored" data-anchor-id="종류와-투과력">5.1 종류와 투과력</h3>
+<p><strong>전리방사선(ionizing radiation)</strong>은 물질을 통과하면서 원자로부터 전자를 떼어내 이온을 만들 수 있을 만큼 에너지가 큰 방사선이다.</p>
+<div id="tbl-radiation-types" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-radiation-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.14: 전리방사선의 종류
+</figcaption>
+<div aria-describedby="tbl-radiation-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>종류</th>
+<th>실체</th>
+<th style="text-align: center;">전리작용</th>
+<th style="text-align: center;">투과력</th>
+<th>차폐재</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>α선</strong></td>
+<td>헬륨 원자핵 (<span class="math inline">\(^4_2\)</span>He)</td>
+<td style="text-align: center;"><strong>매우 강함</strong></td>
+<td style="text-align: center;"><strong>매우 약함</strong></td>
+<td>종이 한 장</td>
+</tr>
+<tr class="even">
+<td><strong>β선</strong></td>
+<td>전자</td>
+<td style="text-align: center;">중간</td>
+<td style="text-align: center;">약함</td>
+<td>알루미늄 수 mm</td>
+</tr>
+<tr class="odd">
+<td><strong>γ선·X선</strong></td>
+<td>전자기파</td>
+<td style="text-align: center;">약함</td>
+<td style="text-align: center;"><strong>매우 강함</strong></td>
+<td><strong>납, 콘크리트</strong></td>
+</tr>
+<tr class="even">
+<td><strong>중성자선</strong></td>
+<td>중성자</td>
+<td style="text-align: center;">간접 전리</td>
+<td style="text-align: center;">매우 강함</td>
+<td><strong>물, 파라핀</strong> (수소 함유 물질)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-radiation" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-radiation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w07_radiation_penetration.svg" class="img-fluid figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-radiation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;8.5: 선종별 투과력과 차폐재 — 무엇으로 막을 수 있는가가 곧 어디까지 가는가다
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-radiation" class="quarto-xref">그림&nbsp;<span>8.5</span></a> 에서 <strong>중성자선만 납을 뚫고 지나간다</strong>는 점이 이 그림의 실무적 핵심이다. “방사선 차폐 = 납”이라는 통념이 통하지 않는 유일한 선종이며, 수소를 많이 함유한 물·파라핀이라야 막힌다(§5.4).</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>전리작용과 투과력은 반비례한다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>에너지를 좁은 구간에 집중적으로 내려놓는 선종(α선)은 전리작용이 강한 대신 멀리 가지 못하고, 물질과 잘 반응하지 않는 선종(γ선)은 깊이 뚫고 들어간다. 이 반비례가 방호 전략을 둘로 가른다.</p>
+<ul>
+<li><strong>α선</strong>: 공기 중 수 cm밖에 못 가므로 <strong>외부피폭</strong>으로는 거의 무해하다. 그러나 흡입·섭취로 체내에 들어오면 <strong>가장 위험한 내부피폭원</strong>이 된다 (라돈, 플루토늄)</li>
+<li><strong>γ선</strong>: 투과력이 커서 <strong>외부피폭의 주 대상</strong>이다</li>
+</ul>
+<p>그래서 방사선 방호는 <strong>외부피폭 방어</strong>(§5.4의 3원칙)와 <strong>내부피폭 방어</strong>(밀폐·격리, 음압 환기, 보호구, 오염관리, 섭취 금지 — 체내 유입 자체의 차단)를 나누어 접근한다.</p>
+</div>
+</div>
+</section>
+<section id="방사선의-단위-bq-gy-sv" class="level3">
+<h3 class="anchored" data-anchor-id="방사선의-단위-bq-gy-sv">5.2 방사선의 단위 — Bq, Gy, Sv</h3>
+<div id="tbl-radiation-units" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-radiation-units-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.15: 방사선 단위 체계
+</figcaption>
+<div aria-describedby="tbl-radiation-units-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>물리량</th>
+<th>단위</th>
+<th>정의</th>
+<th>구 단위</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>방사능</strong></td>
+<td>베크렐 (Bq)</td>
+<td>초당 붕괴수 (1 Bq = 1 dps)</td>
+<td>큐리(Ci), <span class="math inline">\(1\ \text{Ci}=3.7\times10^{10}\)</span> Bq</td>
+</tr>
+<tr class="even">
+<td><strong>흡수선량</strong></td>
+<td>그레이 (Gy)</td>
+<td>물질 1 kg이 흡수한 에너지 (J/kg)</td>
+<td>라드(rad), 1 Gy = 100 rad</td>
+</tr>
+<tr class="odd">
+<td><strong>등가선량</strong></td>
+<td>시버트 (Sv)</td>
+<td>흡수선량 × <strong>방사선가중치</strong> <span class="math inline">\(w_R\)</span></td>
+<td>렘(rem), 1 Sv = 100 rem</td>
+</tr>
+<tr class="even">
+<td><strong>유효선량</strong></td>
+<td>시버트 (Sv)</td>
+<td>등가선량 × <strong>조직가중치</strong> <span class="math inline">\(w_T\)</span>의 합</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><span class="math display">\[
+H_T = \sum_R w_R \cdot D_{T,R} \qquad\qquad E = \sum_T w_T \cdot H_T
+\]</span></p>
+<p>방사선가중치 <span class="math inline">\(w_R\)</span>은 γ선·X선·β선 = 1, 중성자 = 5~20(에너지별), <strong>α선 = 20</strong>이다.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>왜 단위가 셋이나 필요한가
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Bq</strong>는 선원이 얼마나 활발한가 — <em>방출하는 쪽</em></li>
+<li><strong>Gy</strong>는 물질이 에너지를 얼마나 받았는가 — <em>받는 쪽의 물리량</em></li>
+<li><strong>Sv</strong>는 그 에너지가 인체에 얼마나 해로운가 — <em>생물학적 영향</em></li>
+</ul>
+<p>같은 1 Gy라도 α선은 γ선보다 20배 해롭다(<span class="math inline">\(w_R = 20\)</span>). 물리량(Gy)만으로는 건강 위험을 말할 수 없기에 Sv가 별도로 필요하다. §5.1의 “α선은 전리작용이 가장 강하다”는 성질이 가중치 20으로 그대로 이어지는 것이다.</p>
+<p>구 단위 체계에서 이 역할을 하던 것이 <strong>RBE(상대적 생물학적 효과비)</strong>다 (<span class="math inline">\(\text{rem} = \text{rad} \times \text{RBE}\)</span>). RBE는 선량이 아니라 무차원 계수이며, 크기 순서는 전리작용 순서 그대로 <span class="math inline">\(\alpha &gt; \beta &gt; \gamma \approx \text{X선}\)</span>이다.</p>
+</div>
+</div>
+</section>
+<section id="인체-영향-확률적-영향과-결정적-영향" class="level3">
+<h3 class="anchored" data-anchor-id="인체-영향-확률적-영향과-결정적-영향">5.3 인체 영향 — 확률적 영향과 결정적 영향</h3>
+<p>전리방사선의 건강영향은 선량-반응의 형태에 따라 두 범주로 나뉜다. 이 구분은 방호 철학 전체를 결정하는, 이 절에서 가장 중요한 개념이다.</p>
+<div id="tbl-radiation-effects" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-radiation-effects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.16: 결정적 영향과 확률적 영향
+</figcaption>
+<div aria-describedby="tbl-radiation-effects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 57%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>결정적 영향 (확정적 영향)</th>
+<th>확률적 영향</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>역치</strong></td>
+<td><strong>있음</strong> — 역치 미만에서는 발생하지 않음</td>
+<td><strong>없음</strong> — 아무리 낮아도 위험이 0이 아님</td>
+</tr>
+<tr class="even">
+<td><strong>선량과의 관계</strong></td>
+<td>선량이 클수록 <strong>중증도</strong>가 커짐</td>
+<td>선량이 클수록 <strong>발생 확률</strong>이 커짐 (중증도는 무관)</td>
+</tr>
+<tr class="odd">
+<td><strong>예</strong></td>
+<td>피부홍반, 탈모, 백내장, 불임, 급성방사선증후군</td>
+<td><strong>암</strong>, 유전적 영향</td>
+</tr>
+<tr class="even">
+<td><strong>방호 목표</strong></td>
+<td>역치 미만으로 유지하여 <strong>발생 자체를 방지</strong></td>
+<td>확률을 <strong>합리적으로 가능한 한 낮게</strong> (ALARA)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>방사선 감수성은 <strong>세포분열이 활발하고 미분화된 조직일수록 높다</strong> (Bergonié-Tribondeau 법칙).</p>
+<p><span class="math display">\[
+\text{골수·생식선·림프조직} &gt; \text{장상피} &gt; \text{피부} &gt; \text{근육} &gt; \text{신경·골}
+\]</span></p>
+</section>
+<section id="선량한도와-방호-3원칙" class="level3">
+<h3 class="anchored" data-anchor-id="선량한도와-방호-3원칙">5.4 선량한도와 방호 3원칙</h3>
+<p>원자력안전법상 방사선작업종사자의 선량한도는 다음과 같다.</p>
+<div id="tbl-dose-limits" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-dose-limits-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.17: 방사선작업종사자의 선량한도
+</figcaption>
+<div aria-describedby="tbl-dose-limits-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>선량한도</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>유효선량</strong></td>
+<td>연간 50 mSv를 넘지 않는 범위에서 <strong>5년간 100 mSv</strong></td>
+</tr>
+<tr class="even">
+<td><strong>수정체 등가선량</strong></td>
+<td>연간 50 mSv, 5년간 100 mSv</td>
+</tr>
+<tr class="odd">
+<td><strong>손·발·피부 등가선량</strong></td>
+<td>연간 500 mSv</td>
+</tr>
+<tr class="even">
+<td><strong>일반인 유효선량</strong></td>
+<td>연간 1 mSv</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>외부피폭 방어 3원칙
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\boxed{\textbf{시간(Time)} \quad\cdot\quad \textbf{거리(Distance)} \quad\cdot\quad \textbf{차폐(Shielding)}}
+\]</span></p>
+<ol type="1">
+<li><strong>시간</strong> — 피폭선량은 작업시간에 <strong>정비례</strong>한다. 모형으로 예행연습을 하여 실제 작업시간을 줄인다</li>
+<li><strong>거리</strong> — 선량률은 거리의 <strong>제곱에 반비례</strong>한다(역제곱법칙). 원격조작 기구를 사용한다 <span class="math display">\[ I_2 = I_1 \left(\frac{r_1}{r_2}\right)^2 \]</span></li>
+<li><strong>차폐</strong> — 선종에 맞는 차폐재를 고른다. γ선은 원자번호가 크고 밀도가 높은 <strong>납·콘크리트</strong>, 중성자선은 반대로 수소를 많이 함유한 <strong>물·파라핀</strong>이 효과적이다</li>
+</ol>
+<p>여기에 <strong>ALARA 원칙</strong>(As Low As Reasonably Achievable)이 얹힌다. 선량한도 이하라도 “합리적으로 달성 가능한 한 낮게” 피폭을 유지해야 한다 — 확률적 영향에는 역치가 없다는 §5.3의 전제에서 논리적으로 따라 나오는 원칙이다.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 4: 역제곱법칙
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>방사선원으로부터 1 m 지점의 선량률이 400 mSv/h이다. (1) 작업자를 4 m 지점에 배치하면 선량률은? (2) 이 지점에서 15분간 작업할 때의 피폭선량은?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>(1)</strong> 역제곱법칙:</p>
+<p><span class="math display">\[
+I_2 = 400 \times \left(\frac{1}{4}\right)^2 = 400 \times \frac{1}{16} = 25\ \text{mSv/h}
+\]</span></p>
+<p><strong>(2)</strong> 15분 = 0.25 h이므로</p>
+<p><span class="math display">\[
+25\ \text{mSv/h} \times 0.25\ \text{h} = 6.25\ \text{mSv}
+\]</span></p>
+<p><strong>답: (1) 25 mSv/h (2) 6.25 mSv</strong></p>
+<p>거리를 4배로 늘린 것만으로 선량률이 1/16이 되었다. <strong>거리는 가장 비용이 적게 드는 방호수단</strong>이다. 이 계산 구조(선량률 × 시간 = 선량)에 3원칙 중 “시간”과 “거리”가 모두 들어 있음을 확인하자.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="비전리방사선" class="level2">
+<h2 class="anchored" data-anchor-id="비전리방사선">6. 비전리방사선</h2>
+<p><strong>비전리방사선</strong>은 물질을 이온화시킬 만큼의 에너지를 갖지 못하는 전자기파다. 전자기파 스펙트럼에서 파장이 긴 쪽(에너지가 낮은 쪽)에 위치하며, 주된 작용은 전리가 아니라 <strong>광화학 반응(짧은 파장 쪽)</strong>과 <strong>열작용(긴 파장 쪽)</strong>이다.</p>
+<div id="fig-em-spectrum" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-em-spectrum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w07_em_spectrum.svg" class="img-fluid figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-em-spectrum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;8.6: 전자기파 스펙트럼 — 전리/비전리의 경계와 파장별 작용·건강영향
+</figcaption>
+</figure>
+</div>
+<p>파장이 곧 작용 기전이고, 작용 기전이 곧 건강영향이다. 이 절의 목표는 <strong>파장대 — 작용 — 표적기관 — 대표 장해</strong>를 한 줄로 연결하는 것이며, <a href="#fig-em-spectrum" class="quarto-xref">그림&nbsp;<span>8.6</span></a> 이 그 한 줄을 세로로 세워 놓은 그림이다. 위에서 아래로 <strong>파장 → 이름 → 작용 → 건강영향</strong>의 순서로 읽으면 된다.</p>
+<section id="자외선-uv-100400-nm" class="level3">
+<h3 class="anchored" data-anchor-id="자외선-uv-100400-nm">6.1 자외선 (UV, 100~400 nm)</h3>
+<p>자외선은 여러 물질에 화학변화를 일으키므로 <strong>화학선</strong>이라고도 한다. 생물학적 영향에 따라 세 영역으로 나눈다.</p>
+<div id="tbl-uv-bands" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-uv-bands-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.18: 자외선의 세 영역
+</figcaption>
+<div aria-describedby="tbl-uv-bands-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>파장</th>
+<th>주된 영향</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>UV-A</strong></td>
+<td>315~400 nm</td>
+<td>색소침착</td>
+</tr>
+<tr class="even">
+<td><strong>UV-B</strong></td>
+<td><strong>280~315 nm</strong></td>
+<td><strong>홍반·피부암</strong>, 비타민 D 형성, 소독작용</td>
+</tr>
+<tr class="odd">
+<td><strong>UV-C</strong></td>
+<td>100~280 nm</td>
+<td>살균 (254~280 nm에서 핵단백 파괴)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>Dorno선 (건강선)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>280~315 nm(2,800~3,150 Å)</strong> 영역의 자외선은 살균작용·비타민 D 형성·피부 색소침착 등 생물학적 작용이 가장 강해 <strong>건강선(Dorno선)</strong>이라 부른다. UV-B 영역과 사실상 같으며, 안전보건에서 가장 관심을 두는 대역이다. (1 nm = 10 Å이므로 두 표기는 즉시 환산된다.)</p>
+</div>
+</div>
+<p><strong>자외선의 생체작용</strong></p>
+<div id="tbl-uv-effects" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-uv-effects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.19: 자외선의 생체작용
+</figcaption>
+<div aria-describedby="tbl-uv-effects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>부위</th>
+<th>작용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>눈</strong></td>
+<td><strong>전광성(전기성) 안염 = 급성 각막염</strong> — 전기용접의 대표 장해. 눈에 대한 영향은 270 nm 부근에서 가장 크다. 장기적으로는 백내장 위험</td>
+</tr>
+<tr class="even">
+<td><strong>피부</strong></td>
+<td><strong>홍반 → 색소침착</strong> (홍반작용 최강 파장은 297 nm 부근), 표피·진피 비후, 280~320 nm에서 <strong>피부암</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>전신</strong></td>
+<td>대사 항진, 적혈구·백혈구·혈소판 증가, 2차적으로 두통·흥분·피로</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>자외선이 생체조직을 통과하는 깊이는 수 mm에 불과하여 대부분 신체 표면에서 흡수된다 — 표적이 <strong>피부와 눈</strong>인 이유다. 노출기준은 단위면적당 조사 에너지(J/m²)로 나타내며 파장에 따라 달라진다.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>자외선의 광화학 작용 — 작업장 배치의 문제가 되는 이유
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>자외선은 공기 중 NO₂·올레핀계 탄화수소와 광화학 반응을 일으키고, 특히 <strong>트리클로로에틸렌(TCE)을 독성이 강한 포스겐(phosgene)으로 전환</strong>시킨다. TCE 탈지작업 옆에서 아크용접을 해서는 안 되는 이유다 — 두 공정이 각각은 관리되고 있어도 <strong>나란히 두는 것만으로</strong> 새로운 유해인자가 생긴다.</li>
+<li><strong>보통유리는 자외선을 통과시키지 못한다</strong> (석영·투과성 비닐은 통과시킨다). 창유리 너머의 햇볕으로 비타민 D가 잘 만들어지지 않는 이유이자, 유리가 간단한 자외선 차폐재가 되는 이유다.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="가시광선-400750-nm" class="level3">
+<h3 class="anchored" data-anchor-id="가시광선-400750-nm">6.2 가시광선 (400~750 nm)</h3>
+<p>사람의 눈이 밝기와 색으로 감지하는 영역이다. 가시광선의 산업위생 문제는 주로 <strong>부족</strong>에서 온다 — 조명이 부족하면 <strong>안정피로, 눈의 피로, 안구진탕증, 근시</strong>가 나타난다. 조도 기준과 조명 설계는 §7에서 다룬다.</p>
+</section>
+<section id="적외선-ir-780-nm-1-mm" class="level3">
+<h3 class="anchored" data-anchor-id="적외선-ir-780-nm-1-mm">6.3 적외선 (IR, 780 nm ~ 1 mm)</h3>
+<p>가시광선과 마이크로파 사이의 전자기파로, <strong>열선</strong>이라고도 한다. 절대온도 0 K 이상의 모든 물체는 온도에 비례하여 적외선을 복사하며, 태양 복사에너지의 약 52%가 적외선이다.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>적외선의 작용은 열작용이지 광화학 작용이 아니다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>적외선이 조직에 흡수되면 화학반응이 일어나는 것이 아니라 <strong>구성분자의 운동에너지가 증가</strong>하여 조직 온도가 오른다. 광화학 작용(색소침착, 홍반의 화학적 기전)은 자외선의 몫이고, 적외선의 장해는 모두 <strong>가열</strong>의 결과다.</p>
+<p>이 구분 하나로 두 인자의 건강영향 목록이 깔끔하게 갈라진다 — <strong>색소침착은 자외선, 백내장·화상은 적외선</strong>. 파장(에너지)이 광화학 반응을 일으킬 문턱을 넘느냐가 기준이다.</p>
+</div>
+</div>
+<p><strong>적외선의 생체작용</strong></p>
+<div id="tbl-ir-effects" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ir-effects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.20: 적외선의 생체작용
+</figcaption>
+<div aria-describedby="tbl-ir-effects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>부위</th>
+<th>작용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>눈</strong></td>
+<td><strong>초자공(유리공) 백내장</strong> — 유리 가공·용광로 작업의 만성 노출로 발생하는 대표 직업병. 각막·망막 손상</td>
+</tr>
+<tr class="even">
+<td><strong>피부</strong></td>
+<td>혈관 확장·혈류 증가, 심하면 홍반. 근적외선은 급성 화상</td>
+</tr>
+<tr class="odd">
+<td><strong>두부</strong></td>
+<td>강력한 적외선은 뇌막을 자극하여 경련을 동반한 열사병(일사병) 유발</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>그림 필요 — 초자공 백내장 (세극등 사진)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>무엇</strong>: 백내장으로 혼탁해진 수정체의 임상 사진. 세극등(slit lamp) 검사 사진이면 혼탁의 위치와 깊이가 드러나 가장 좋고, 육안 사진(동공이 회백색으로 보이는 상태)이 함께 있으면 대비가 된다. 정상 수정체 사진을 나란히 놓아 대조하는 구성.</p>
+<p><strong>왜</strong>: 적외선의 장해가 <strong>열작용의 누적 결과</strong>라는 이 절의 논지는 “수정체가 실제로 어떻게 되는가”를 보아야 실감된다. 유리 가공·용광로 작업자에게 수십 년에 걸쳐 나타나는 소견이므로 학생이 현장에서 마주칠 기회가 없고, 그림 없이는 “초자공 백내장”이 용어로만 남는다. 마이크로파(§6.4)의 표적기관도 같은 백내장이므로 한 장이 두 절에서 쓰인다.</p>
+<p><strong>출처 후보</strong>: NEI(미국 국립안연구소, National Eye Institute)의 백내장 이미지 (퍼블릭 도메인), NIOSH 간행물, Wellcome Collection(CC BY 4.0), 위키미디어 커먼즈 “Cataract” 항목(라이선스 개별 확인).</p>
+<p><strong>대안</strong>: 수정체 단면 모식도에 혼탁 부위를 음영으로 표시하고, 정상 수정체와 2단 비교하는 도해로 대체한다.</p>
+</div>
+</div>
+</div>
+<p>흡수는 조직의 <strong>수분 함량</strong>에 좌우되며, 1,400 nm 이상의 장파장 적외선은 1 cm의 수층을 통과하지 못한다. 노출이 많은 작업은 유리 가공(초자), 용광로·제강, 용접 등 <strong>작열된 물체를 다루는 작업</strong>이고, 대책은 노출강도·시간 제한과 <strong>차폐</strong>다 (§3.2의 알루미늄 차열판이 그것이다).</p>
+</section>
+<section id="마이크로파-1300-cm-1030000-mhz" class="level3">
+<h3 class="anchored" data-anchor-id="마이크로파-1300-cm-1030000-mhz">6.4 마이크로파 (1~300 cm, 10~30,000 MHz)</h3>
+<p>인체에 흡수된 마이크로파는 기본적으로 <strong>열로 전환</strong>된다. 생물학적 작용은 파장뿐 아니라 출력·노출시간·노출된 조직에 따라 다르며, 투과력도 파장에 따라 다르다.</p>
+<div id="tbl-microwave-effects" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-microwave-effects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.21: 마이크로파의 생체작용
+</figcaption>
+<div aria-describedby="tbl-microwave-effects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>표적</th>
+<th>영향</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>눈</strong> (대표 표적기관)</td>
+<td><strong>백내장</strong> — 1,000~10,000 MHz 대역, 조직 온도 상승과 관련</td>
+</tr>
+<tr class="even">
+<td><strong>중추신경계</strong></td>
+<td>300~1,200 MHz에서 가장 민감 — 정서 불안정 등</td>
+</tr>
+<tr class="odd">
+<td><strong>혈액·혈압</strong></td>
+<td>백혈구 증가·혈소판 감소, 혈압은 초기 상승 후 저하</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>마이크로파의 두 가지 개념 포인트
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>열작용이 대표 작용이지만, 열을 느끼지 못하는 대역이 있다.</strong> 150 MHz 이하의 마이크로파/RF는 신체에 흡수되어도 온감을 일으키지 않는다 — “뜨겁지 않으니 안전하다”는 감각이 통하지 않는 이유다.</li>
+<li><strong>에너지량은 거리의 제곱에 반비례한다</strong> (<span class="math inline">\(I \propto 1/r^2\)</span>). §5.4의 전리방사선 역제곱법칙과 같은 원리이며, 거리 확보가 여기서도 유효한 방호수단이 된다.</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="레이저-laser" class="level3">
+<h3 class="anchored" data-anchor-id="레이저-laser">6.5 레이저 (LASER)</h3>
+<p><strong>LASER</strong>(Light Amplification by Stimulated Emission of Radiation)는 유도방출로 특정 파장을 강력하게 증폭시킨 복사선이다. 자외선~적외선 어느 대역이든 만들 수 있다.</p>
+<div id="tbl-laser-properties" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-laser-properties-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.22: 레이저 광의 특성
+</figcaption>
+<div aria-describedby="tbl-laser-properties-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>특성</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>단색성</strong></td>
+<td>단일 파장, 극히 좁은 파장범위</td>
+</tr>
+<tr class="even">
+<td><strong>지향성·집광성</strong></td>
+<td>예리한 지향성, 쉽게 산란하지 않음</td>
+</tr>
+<tr class="odd">
+<td><strong>간섭성</strong> (coherence)</td>
+<td>위상이 고르며 간섭현상이 일어난다</td>
+</tr>
+<tr class="even">
+<td><strong>에너지 밀도</strong></td>
+<td>단위 면적당 빛에너지가 매우 크다</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>이 특성들이 그대로 위험의 근원이다 — 퍼지지 않고, 좁은 면적에, 큰 에너지를 집중시키는 빛이기 때문이다.</p>
+<ul>
+<li><strong>표적기관은 눈</strong>(가장 민감), 다음이 피부다. <strong>피부에 대한 작용은 가역적</strong> (홍반·수포·색소침착)이며, 비가역적 손상의 위험은 망막·각막에 집중된다</li>
+<li><strong>맥동파(pulse wave)</strong>는 에너지를 축적했다가 한꺼번에 방출하므로 지속파보다 장해가 크다</li>
+<li>노출 평가는 각막 표면에서의 조사량(J/cm²)·노출량(W/cm²)으로 하며, 눈에 대한 허용량은 파장에 따라 수정된다</li>
+</ul>
+<p>레이저용 보안경의 성능은 <strong>흡광도(Optical Density, OD)</strong>로 나타낸다.</p>
+<p><span class="math display">\[
+\text{OD} = \log_{10}\frac{I_0}{I} \qquad (I_0: \text{입사 강도},\ I: \text{투과 강도})
+\]</span></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 5: 레이저 보안경의 흡광도
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>레이저용 보안경을 착용하였더니 4,000 mW/cm²의 레이저가 0.4 mW/cm²로 낮아졌다. 이 보안경의 흡광도(OD)는?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\text{OD} = \log_{10}\frac{4000}{0.4} = \log_{10} 10{,}000 = 4
+\]</span></p>
+<p><strong>답: OD = 4</strong></p>
+<p>OD가 1 커질 때마다 투과 강도는 1/10이 된다. OD 4는 입사 에너지를 <span class="math inline">\(10^{-4}\)</span>, 즉 1만분의 1로 줄인다는 뜻이다. 소음의 dB과 마찬가지로, 넓은 범위의 물리량을 다루는 곳에는 어김없이 로그 척도가 등장한다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="조명" class="level2">
+<h2 class="anchored" data-anchor-id="조명">7. 조명</h2>
+<section id="빛의-단위" class="level3">
+<h3 class="anchored" data-anchor-id="빛의-단위">7.1 빛의 단위</h3>
+<p>빛의 단위는 “빛이 어디에 있는가”로 구분하면 헷갈리지 않는다 — 광원이 내는 것, 표면에 도달한 것, 표면에서 되나오는 것.</p>
+<div id="tbl-light-units" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-light-units-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.23: 빛의 단위 체계
+</figcaption>
+<div aria-describedby="tbl-light-units-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 30%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>물리량</th>
+<th>정의</th>
+<th>단위</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>광속</strong> (luminous flux)</td>
+<td>광원이 방출하는 빛의 총량</td>
+<td>lumen (lm)</td>
+</tr>
+<tr class="even">
+<td><strong>광도</strong> (luminous intensity)</td>
+<td>광원이 <strong>특정 방향으로</strong> 내는 빛의 세기</td>
+<td>candela (cd)</td>
+</tr>
+<tr class="odd">
+<td><strong>조도</strong> (illuminance)</td>
+<td><strong>표면에 도달하는</strong> 빛의 단위 면적당 밀도</td>
+<td><strong>lux (lx)</strong> = lm/m²</td>
+</tr>
+<tr class="even">
+<td><strong>휘도</strong> (luminance)</td>
+<td>표면에서 <strong>반사·방출되는</strong> 단위 면적당 광량</td>
+<td>cd/m²</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>조도는 광원의 세기가 아니라 <strong>작업면의 밝기</strong>다. 점광원에 대해 조도는 광도에 비례하고 <strong>거리의 제곱에 반비례</strong>한다(역자승 법칙 — 방사선·마이크로파와 같은 기하학이다).</p>
+<p><span class="math display">\[
+E = \frac{I}{d^{2}} \qquad \Longrightarrow \qquad E_{2} = E_{1}\left(\frac{d_{1}}{d_{2}}\right)^{2}
+\]</span></p>
+<p>거리가 2배가 되면 조도는 1/4이 된다 — “거리에 반비례”가 아니라 “거리의 <strong>제곱</strong>에 반비례”다.</p>
+<div id="fig-illuminance" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-illuminance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w07_illuminance.svg" class="img-fluid figure-img" style="width:82.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-illuminance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;8.7: 거리에 따른 조도 감소와 법정 최저 조도 — 광원을 조금만 멀리 두어도 기준이 무너진다
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-illuminance" class="quarto-xref">그림&nbsp;<span>8.7</span></a> 는 연습문제 6의 상황을 그대로 그린 것이다. 1.5 m에서 600 lux였던 작업면을 3 m로 옮기면 150 lux — 정밀작업의 법정 최저 조도(300 lux)에 미달한다. 조명 설계에서 <strong>광원의 밝기보다 광원과 작업면의 거리가 먼저 문제가 되는</strong> 이유이며, 국부조명이 필요한 자리가 바로 이 곡선의 오른쪽이다.</p>
+</section>
+<section id="작업면-조도-기준" class="level3">
+<h3 class="anchored" data-anchor-id="작업면-조도-기준">7.2 작업면 조도 기준</h3>
+<p>조도 기준에는 성격이 다른 두 층이 있다. <strong>법정 최저 조도</strong>는 산업안전보건기준에 관한 규칙 제8조가 정한 하한선이고, <strong>권장 조도</strong>는 작업을 편안하고 정확하게 수행하기 위해 바람직한 수준이다. 두 값이 다른 것은 모순이 아니라 기준의 성격이 다르기 때문이며, 실무에서는 법정 최저치 충족만으로는 충분하지 않다.</p>
+<div id="tbl-legal-illuminance" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-legal-illuminance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.24: 작업면의 법정 최저 조도 (산업안전보건기준에 관한 규칙 제8조)
+</figcaption>
+<div aria-describedby="tbl-legal-illuminance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>작업 구분</th>
+<th style="text-align: center;">법정 최저 조도</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>초정밀작업</strong></td>
+<td style="text-align: center;"><strong>750 lux 이상</strong></td>
+</tr>
+<tr class="even">
+<td><strong>정밀작업</strong></td>
+<td style="text-align: center;"><strong>300 lux 이상</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>보통작업</strong></td>
+<td style="text-align: center;"><strong>150 lux 이상</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="tbl-recommended-illuminance" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-recommended-illuminance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.25: 작업별 권장 조도
+</figcaption>
+<div aria-describedby="tbl-recommended-illuminance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>작업 종류</th>
+<th style="text-align: center;">권장 조도 (lx)</th>
+<th>예시</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>극정밀 작업</td>
+<td style="text-align: center;">1,500~3,000</td>
+<td>정밀 검사, 미세 조립</td>
+</tr>
+<tr class="even">
+<td>정밀 작업</td>
+<td style="text-align: center;">750~1,500</td>
+<td>제도, 색상 검사</td>
+</tr>
+<tr class="odd">
+<td>중작업</td>
+<td style="text-align: center;">300~750</td>
+<td>일반 사무, 독서, 조립</td>
+</tr>
+<tr class="even">
+<td>보통 작업</td>
+<td style="text-align: center;">150~300</td>
+<td>컴퓨터 작업, 단순 조립</td>
+</tr>
+<tr class="odd">
+<td>통로·계단</td>
+<td style="text-align: center;">50~100</td>
+<td>이동 공간</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>조도는 <strong>조도계(lux meter)</strong>로 측정한다 — 광전지를 작업면에 수평으로 놓고, 측정자의 그림자가 광전지에 드리우지 않도록 한다.</p>
+</section>
+<section id="채광과-조명-방식" class="level3">
+<h3 class="anchored" data-anchor-id="채광과-조명-방식">7.3 채광과 조명 방식</h3>
+<p><strong>채광(자연조명)</strong>은 창을 통해 태양광을 이용하는 것이다. 자연광은 질이 좋지만 시간·날씨에 따라 변동이 크고, 창에서 들어오는 <strong>직사휘광</strong>이 문제를 일으킬 수 있다. 창문 휘광 대책은 ① 창문을 <strong>높이</strong> 달고, ② <strong>차양이나 블라인드</strong>를 쓰며, ③ 옥외 창 위에 <strong>드리우개(overhang)</strong>를 설치하는 것이다.</p>
+<p><strong>인공조명의 방식</strong>은 빛을 어디에 어떻게 배분하는가로 나뉜다.</p>
+<div id="tbl-lighting-methods" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-lighting-methods-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.26: 조명 방식의 구분
+</figcaption>
+<div aria-describedby="tbl-lighting-methods-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>방식</th>
+<th>내용</th>
+<th>특징</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>전반조명</strong></td>
+<td>실내 전체를 일률적으로 밝힘</td>
+<td>조도가 균일하여 눈의 피로가 적고 사고·재해가 줄어든다</td>
+</tr>
+<tr class="even">
+<td><strong>국부조명</strong></td>
+<td>특정 작업 위치만 밝힘</td>
+<td>필요한 곳에 높은 조도를 경제적으로 공급. 단독 사용 시 명암 대비가 커짐</td>
+</tr>
+<tr class="odd">
+<td><strong>직접조명</strong></td>
+<td>빛을 작업면으로 직접 비춤</td>
+<td>효율이 높으나 눈부심·그림자가 생기기 쉬움</td>
+</tr>
+<tr class="even">
+<td><strong>간접조명</strong></td>
+<td>천장·벽에 반사시켜 비춤</td>
+<td>부드럽고 균일하나 효율이 낮음 — 천장·벽의 반사율이 중요</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>설계의 원칙은 다음과 같다.</p>
+<ul>
+<li><strong>빛은 작업장 전체에 골고루</strong>: 정밀 작업에서도 국부조명 단독이 아니라 <strong>전반조명 + 국부조명</strong>의 이원화가 기본이다. 작업면과 주변의 조도 비율(휘도비)은 <strong>3:1 이내</strong>로 유지한다 — “밝을수록 좋다”가 아니라 <strong>균일할수록 좋다</strong>가 원칙이다</li>
+<li><strong>눈부심(glare) 방지</strong>: 직접 눈부심은 광원의 <strong>휘도를 줄이고 수를 늘리며</strong>, 광원을 시선에서 멀리 두고, 가리개·갓·차양으로 가린다. 휘광원 <strong>주위를 밝게</strong> 하여 휘도비를 줄이는 것도 대책이다. 반사 눈부심은 무광택 표면과 조명 위치 조정으로 막는다 — 반사광은 세밀한 작업에 도움이 되는 것이 아니라 방해가 된다</li>
+<li><strong>실내면의 반사율</strong>: 위에서 아래로 갈수록 낮게 한다</li>
+</ul>
+<p><span class="math display">\[
+\boxed{\ \text{천장} &gt; \text{벽} &gt; \text{가구} &gt; \text{바닥}\ }
+\]</span></p>
+<p>천장을 어둡게 하면 간접조명의 효율이 떨어지고, 바닥을 지나치게 밝게 하면 반사 눈부심이 생긴다(바닥의 추천 반사율은 20~40%).</p>
+<p>VDT(영상표시단말기) 작업은 별도의 관리가 필요하다 — 조도 300~700 lx, 화면 반사 방지, 연속 1시간 작업 시 10~15분 휴식. 자세한 인간공학적 설계는 <a href="../chapters/w12_ergonomics.html">12주차</a>에서 다룬다.</p>
+<hr>
+</section>
+</section>
+<section id="요약" class="level2">
+<h2 class="anchored" data-anchor-id="요약">요약</h2>
+<div id="tbl-summary" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;8.27: 7주차 핵심 요약
+</figcaption>
+<div aria-describedby="tbl-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 20%">
+<col style="width: 18%">
+<col style="width: 24%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>유해인자</th>
+<th>핵심 물리량</th>
+<th>핵심 공식/원리</th>
+<th>대표 건강장해</th>
+<th>우선 대책</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>고열</strong></td>
+<td>WBGT (℃)</td>
+<td><span class="math inline">\(0.7T_{nwb}+0.3T_g\)</span> (옥내) <br> <span class="math inline">\(0.7T_{nwb}+0.2T_g+0.1T_a\)</span> (옥외)</td>
+<td>열경련·열탈진·<strong>열사병</strong> (처치: 염분/포도당/냉각)</td>
+<td>작업·휴식 배분, 순화, 차열·냉방</td>
+</tr>
+<tr class="even">
+<td><strong>한랭</strong></td>
+<td>기온·풍속 (WCI)</td>
+<td><span class="math inline">\(\Delta S = M-E-R-C\)</span></td>
+<td><strong>동상</strong>(동결), 참호족(습윤·산소결핍), 저체온증</td>
+<td>보온·방수, 습기 제거, 여유 있는 보호구</td>
+</tr>
+<tr class="odd">
+<td><strong>고압</strong></td>
+<td>절대압 (atm)</td>
+<td><span class="math inline">\(P_{절대}=1+h/10\)</span>, 헨리의 법칙</td>
+<td><strong>감압병</strong>, 질소마취(4기압)·산소중독(2기압)</td>
+<td>단계적 감압, 재가압 치료</td>
+</tr>
+<tr class="even">
+<td><strong>저압</strong></td>
+<td>산소분압</td>
+<td>—</td>
+<td>급성고산병, 고공성 폐수종</td>
+<td>점진적 순화, 산소 공급</td>
+</tr>
+<tr class="odd">
+<td><strong>전리방사선</strong></td>
+<td>유효선량 (Sv)</td>
+<td><span class="math inline">\(I_2=I_1(r_1/r_2)^2\)</span></td>
+<td>암(확률적·역치 없음), 백내장·불임(결정적·역치 있음)</td>
+<td><strong>시간·거리·차폐</strong>, ALARA</td>
+</tr>
+<tr class="even">
+<td><strong>자외선</strong></td>
+<td>파장 (nm), J/m²</td>
+<td>Dorno선 280~315 nm</td>
+<td><strong>전광성 안염</strong>, 피부암, 색소침착</td>
+<td>차광보안경, 차폐(보통유리)</td>
+</tr>
+<tr class="odd">
+<td><strong>적외선</strong></td>
+<td>파장 780 nm~1 mm</td>
+<td>열작용 (광화학 작용 아님)</td>
+<td><strong>초자공 백내장</strong>, 화상</td>
+<td>알루미늄 차열판, 노출시간 제한</td>
+</tr>
+<tr class="even">
+<td><strong>마이크로파</strong></td>
+<td>주파수 (MHz)</td>
+<td><span class="math inline">\(I \propto 1/r^2\)</span></td>
+<td><strong>백내장</strong> (1,000~10,000 MHz)</td>
+<td>거리 확보, 차폐</td>
+</tr>
+<tr class="odd">
+<td><strong>레이저</strong></td>
+<td>조사량 (J/cm²)</td>
+<td><span class="math inline">\(\text{OD}=\log_{10}(I_0/I)\)</span></td>
+<td><strong>눈</strong>(망막·각막) 손상</td>
+<td>보안경(OD), 광로 차폐</td>
+</tr>
+<tr class="even">
+<td><strong>조명</strong></td>
+<td>조도 (lux)</td>
+<td><span class="math inline">\(E = I/d^2\)</span></td>
+<td>안정피로, 안구진탕증</td>
+<td>법정 최저 조도(750/300/150), 전반+국부, 눈부심 방지</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>세 가지 관통 원리를 다시 확인하자. ① <strong>에너지는 거리의 제곱에 반비례한다</strong> (전리방사선·마이크로파·조도) — 거리가 공통의 관리수단인 이유다. ② <strong>물리량이 건강영향의 종류를 결정한다</strong> — 같은 질소도 4기압에서는 마취제가 되고, 같은 전자기파도 파장에 따라 광화학 작용과 열작용으로 갈린다. ③ <strong>역치의 유무가 방호 철학을 가른다</strong> — 역치가 있는 영향은 기준 미만 유지로 막고, 역치가 없는 영향(발암)은 ALARA로 최소화한다.</p>
+<hr>
+</section>
+<section id="연습문제" class="level2">
+<h2 class="anchored" data-anchor-id="연습문제">연습문제</h2>
+<section id="문제-1.-wbgt-산출과-판정" class="level3">
+<h3 class="anchored" data-anchor-id="문제-1.-wbgt-산출과-판정">문제 1. WBGT 산출과 판정</h3>
+<p>옥외의 조선소 갑판(태양광선이 내리쬐는 곳)에서 자연습구온도 27 ℃, 흑구온도 40 ℃, 건구온도 33 ℃를 측정했다.</p>
+<ol type="a">
+<li>이 지점의 WBGT를 계산하라.</li>
+<li>이 곳에서 중등작업(200~350 kcal/h)을 수행한다면, 계속작업이 가능한가? 가능하지 않다면 어떤 작업·휴식 조건이 필요한지 <a href="#tbl-wbgt-criteria" class="quarto-xref">표&nbsp;<span>8.4</span></a> 로 판단하라.</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>a.</strong> 태양광선이 있는 옥외이므로 3항 식을 쓴다.</p>
+<p><span class="math display">\[
+\text{WBGT} = 0.7 \times 27 + 0.2 \times 40 + 0.1 \times 33 = 18.9 + 8.0 + 3.3 = 30.2\ ^\circ\text{C}
+\]</span></p>
+<strong>b.</strong> 중등작업 계속작업 기준은 26.7 ℃, 75% 작업 기준은 28.0 ℃, 50% 작업 기준은 29.4 ℃다. 30.2 ℃는 세 값을 모두 초과하므로 <strong>작업·휴식시간비 조정만으로는 기준을 만족할 수 없다.</strong> 복사열 차폐(차열판), 작업 시간대 조정(아침·저녁), 국소냉방 등 공학적·관리적 개선을 병행해야 한다.
+</details>
+</section>
+<section id="문제-2.-고열장해의-감별" class="level3">
+<h3 class="anchored" data-anchor-id="문제-2.-고열장해의-감별">문제 2. 고열장해의 감별</h3>
+<p>폭염 속 옥외 작업장에서 두 근로자가 쓰러졌다.</p>
+<ul>
+<li>근로자 A: 땀을 많이 흘리고 있고 피부가 차고 축축하다. 두통과 어지러움을 호소하며 체온은 37.8 ℃다.</li>
+<li>근로자 B: 피부가 뜨겁고 건조하며 땀이 나지 않는다. 의식이 혼미하고 체온은 41.5 ℃다.</li>
+</ul>
+<p>각각의 질환명과 발생 기전, 처치를 쓰고, 두 처치를 서로 바꾸면 왜 위험한지 설명하라.</p>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<ul>
+<li><strong>A — 열탈진(열피로)</strong>: 과도한 발한으로 탈수·혈장량이 감소하여 순환이 부족해진 상태다. 체온조절(발한)은 작동 중이다. 처치는 서늘한 곳에서의 휴식과 <strong>수분 보충(5% 포도당)</strong>이다.</li>
+<li><strong>B — 열사병</strong>: <strong>체온조절 중추의 기능 장애</strong>로 발한이 정지되고 체온이 급상승한 상태다. 처치는 <strong>즉각적인 급속 냉각</strong>(체온 39 ℃ 이하로)과 신속한 이송이다.</li>
+</ul>
+<p>처치를 바꾸면: 열사병 환자에게 수분만 공급하며 냉각을 지연시키면 중추가 마비된 상태라 체온이 계속 올라 다장기 손상으로 진행한다(열사병은 시간이 곧 예후다). 반대로 열탈진 환자를 얼음물에 담그면 체온이 크게 높지 않은 상태에서 저체온 부담만 주고, 원인인 혈장량 결핍은 교정되지 않는다.</p>
+감별의 열쇠: <strong>땀(있다/없다)과 체온(약간 상승/40 ℃ 이상)</strong>.
+</details>
+</section>
+<section id="문제-3.-이상기압" class="level3">
+<h3 class="anchored" data-anchor-id="문제-3.-이상기압">문제 3. 이상기압</h3>
+<p>잠함 공법으로 해저 30 m 지점에서 작업하는 근로자가 있다.</p>
+<ol type="a">
+<li>이 작업 지점의 작용압과 절대압을 구하라.</li>
+<li>이 근로자가 급하게 상승한 뒤 관절통과 피부 소양감을 호소한다. 질환명과 발생 기전(관련 법칙 포함), 응급조치를 서술하라.</li>
+<li>이 근로자가 증상 완화 후 당일 비행기로 이동하는 것이 위험한 이유를 설명하라.</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>a.</strong> <span class="math inline">\(P_{\text{작용}} = 30/10 = 3\)</span> 기압, <span class="math inline">\(P_{\text{절대}} = 1 + 3 = 4\)</span> 기압</p>
+<p><strong>b. 감압병(잠함병).</strong> 고압환경에서 <strong>헨리의 법칙</strong>(기체 용해도는 분압에 비례)에 따라 질소가 혈액·지방조직에 과다 용해되고, 급격한 감압으로 용해도가 급락하면서 질소가 <strong>기포</strong>로 석출되어 혈관을 폐색하고 조직을 압박한다. 응급조치는 ① 100% 산소 흡입(질소 배출 촉진), ② 눕히고 보온·수분 공급, ③ <strong>재가압 요법(고압산소치료)</strong>이 가능한 의료기관으로 신속 이송이다.</p>
+<strong>c.</strong> 고도 상승은 기압 저하, 곧 <strong>추가 감압</strong>에 해당한다. 조직에 남아 있는 질소가 다시 기포화되어 증상이 재발·악화될 수 있으므로 작업 후 비행기 탑승과 고지대 이동은 금지된다.
+</details>
+</section>
+<section id="문제-4.-방사선-방호의-정량-적용" class="level3">
+<h3 class="anchored" data-anchor-id="문제-4.-방사선-방호의-정량-적용">문제 4. 방사선 방호의 정량 적용</h3>
+<p>γ선원에서 2 m 떨어진 지점의 선량률이 90 mSv/h이다.</p>
+<ol type="a">
+<li>작업 위치를 6 m로 옮기면 선량률은 얼마가 되는가?</li>
+<li>1회 작업의 피폭을 5 mSv 이하로 제한하려면 6 m 지점에서 최대 몇 분간 작업할 수 있는가?</li>
+<li>거리 외에 적용할 수 있는 외부피폭 방호수단 두 가지를 원리와 함께 쓰라. (이 선원이 중성자선원이라면 차폐재 선택이 어떻게 달라지는가?)</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>a.</strong> 역제곱법칙: <span class="math inline">\(I_2 = 90 \times (2/6)^2 = 90 \times 1/9 = 10\ \text{mSv/h}\)</span></p>
+<p><strong>b.</strong> <span class="math inline">\(t = 5\ \text{mSv} \div 10\ \text{mSv/h} = 0.5\ \text{h} =\)</span> <strong>30분</strong></p>
+<strong>c.</strong> - <strong>시간</strong>: 피폭선량 = 선량률 × 시간으로 작업시간에 정비례하므로, 모형 예행연습으로 실작업 시간을 최소화한다. - <strong>차폐</strong>: 선원과 작업자 사이에 차폐체를 두어 선량률을 낮춘다. γ선에는 원자번호가 크고 밀도가 높은 <strong>납·콘크리트</strong>가 효과적이다. <strong>중성자선이라면</strong> 반대로 수소를 많이 함유한 <strong>물·파라핀</strong>을 쓴다 — 차폐재는 선종에 맞추어 고르는 것이지 “무조건 납”이 아니다.
+</details>
+</section>
+<section id="문제-5.-비전리방사선의-파장과-건강영향" class="level3">
+<h3 class="anchored" data-anchor-id="문제-5.-비전리방사선의-파장과-건강영향">문제 5. 비전리방사선의 파장과 건강영향</h3>
+<p>다음 각 상황에서 문제가 되는 비전리방사선의 종류, 관련 파장대(또는 주파수 대역), 대표 건강장해를 연결하라.</p>
+<ol type="a">
+<li>아크용접 작업자가 보안면 없이 작업한 다음 날 심한 눈 통증과 이물감을 호소한다</li>
+<li>유리공장에서 20년간 용융 유리를 다뤄 온 근로자의 수정체 혼탁</li>
+<li>TCE 탈지조 옆에서 아크용접을 할 때 발생하는 유해가스</li>
+<li>레이저 가공기에서 나온 4,000 mW/cm²의 빛을 0.4 mW/cm²로 줄이는 보안경의 OD</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>a. 자외선</strong> — 전기용접의 자외선(눈에 대한 영향은 270 nm 부근에서 최대)에 의한 <strong>전광성(전기성) 안염 = 급성 각막염</strong>이다.</p>
+<p><strong>b. 적외선</strong> (780 nm~1 mm) — 만성 노출에 의한 <strong>초자공(유리공) 백내장</strong>. 기전은 광화학 반응이 아니라 <strong>열작용</strong>(분자 운동에너지 증가)이다.</p>
+<p><strong>c.</strong> 용접 자외선의 <strong>광화학 작용</strong>이 TCE를 <strong>포스겐</strong>으로 전환시킨다. 비전리방사선이 화학물질과 결합해 새로운 유해인자를 만드는 사례로, 공정 배치 단계의 예측(Anticipation)이 필요한 상황이다.</p>
+<strong>d.</strong> <span class="math inline">\(\text{OD} = \log_{10}(4000/0.4) = \log_{10}10^4 = \mathbf{4}\)</span> — 입사 에너지를 1만분의 1로 줄인다.
+</details>
+</section>
+<section id="문제-6.-조명-설계" class="level3">
+<h3 class="anchored" data-anchor-id="문제-6.-조명-설계">문제 6. 조명 설계</h3>
+<p>어느 부품 검사실(정밀작업)의 검사대 조도를 광원에서 1.5 m 거리에서 측정하니 600 lux였다.</p>
+<ol type="a">
+<li>작업대를 광원에서 3 m 지점으로 옮기면 조도는 얼마가 되는가?</li>
+<li>옮긴 위치의 조도는 정밀작업의 법정 최저 조도를 만족하는가?</li>
+<li>검사원이 “화면과 부품 표면의 반사광 때문에 눈이 부시다”고 호소한다. 조명 방식 측면의 개선안을 두 가지 제시하라.</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>a.</strong> 역자승 법칙: <span class="math inline">\(E_2 = 600 \times (1.5/3)^2 = 600 \times 1/4 = 150\ \text{lux}\)</span></p>
+<p><strong>b.</strong> 정밀작업의 법정 최저 조도는 <strong>300 lux 이상</strong>이다. 150 lux는 이에 미달하므로 <strong>만족하지 않는다.</strong> (보통작업 기준 150 lux에는 턱걸이지만, 이 작업은 정밀작업이다.) 광원을 가까이 하거나 국부조명을 추가해야 한다.</p>
+<strong>c.</strong> 반사 눈부심 대책: ① 작업면·주변을 <strong>무광택 표면</strong>으로 바꾸고 <strong>조명의 위치를 조정</strong>하여 반사광이 시선에 들어오지 않게 한다. ② <strong>간접조명(또는 확산판·루버)</strong>을 활용하고, 전반조명과 국부조명을 병용하여 작업면과 주변의 휘도비를 3:1 이내로 유지한다. 광원은 휘도를 낮추고 수를 늘리는 방향으로 조정한다.
+</details>
+<hr>
+</section>
+</section>
+<section id="참고문헌" class="level2">
+<h2 class="anchored" data-anchor-id="참고문헌">참고문헌</h2>
+<ol type="1">
+<li>Plog, B. A., &amp; Quinlan, P. J. (2012). <em>Fundamentals of Industrial Hygiene</em> (6th ed.). National Safety Council.</li>
+<li>Cherrie, J. W., Semple, S., &amp; Coggins, M. (2021). <em>Monitoring for Health Hazards at Work</em> (5th ed.). Wiley-Blackwell.</li>
+<li>ACGIH (2024). <em>TLVs and BEIs: Physical Agents</em>. ACGIH.</li>
+<li>ICRP (2007). <em>ICRP Publication 103: The 2007 Recommendations of the International Commission on Radiological Protection</em>.</li>
+<li>고용노동부 (2024). 화학물질 및 물리적 인자의 노출기준 (고용노동부 고시).</li>
+<li>고용노동부. 산업안전보건기준에 관한 규칙 — 제8조(조도), 이상기압에 의한 건강장해의 예방.</li>
+<li>원자력안전위원회 (2023). 원자력안전법 시행령 — 선량한도.</li>
+<li>정규철 외 (2020). <em>산업위생학</em>. 신광출판사.</li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "복사완료!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "복사완료!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/w06_physical_agents1.html" class="pagination-link" aria-label="6주차. 물리적 유해인자 I — 소음과 진동">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">6주차. 물리적 유해인자 I — 소음과 진동</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/w08_midterm.html" class="pagination-link" aria-label="8주차. 중간고사">
+        <span class="nav-page-text"><span class="chapter-title">8주차. 중간고사</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

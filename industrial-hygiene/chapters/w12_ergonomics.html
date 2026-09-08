@@ -1,0 +1,2263 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>12주차. 인간공학과 근골격계질환 – 산업위생 총론</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/w13_ppe_work_management.html" rel="next">
+<link href="../chapters/w11_biological_agents.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-df22de3841a4459d65a458d30db11513.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-1f5cceec34869e9b7e758f61c933684c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-df22de3841a4459d65a458d30db11513.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/w09_ventilation1.html">Part III. 작업환경 관리 (9~13주)</a></li><li class="breadcrumb-item"><a href="../chapters/w12_ergonomics.html"><span class="chapter-title">12주차. 인간공학과 근골격계질환</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">산업위생 총론</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="다크 모드 전환"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="검색"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">산업위생 총론</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I. 산업위생의 기초 (1~3주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w01_intro_history.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1주차. 산업위생 개론과 역사</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w02_exposure_assessment1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2주차. 작업환경측정 I — 측정 원리와 전략</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w03_exposure_assessment2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3주차. 작업환경측정 II — 노출기준과 평가</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II. 유해인자와 건강영향 (4~7주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w04_toxicology1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4주차. 산업독성학 I — 독성학의 원리</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w05_toxicology2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5주차. 산업독성학 II — 주요 화학물질과 건강장해</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w06_physical_agents1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6주차. 물리적 유해인자 I — 소음과 진동</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w07_physical_agents2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">7주차. 물리적 유해인자 II — 온열·이상기압·방사선·조명</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">중간고사 (8주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w08_midterm.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">8주차. 중간고사</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III. 작업환경 관리 (9~13주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w09_ventilation1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">9주차. 산업환기 I — 환기의 원리와 전체환기</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w10_ventilation2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">10주차. 산업환기 II — 국소배기장치</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w11_biological_agents.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">11주차. 생물학적 유해인자와 생물학적 모니터링</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w12_ergonomics.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">12주차. 인간공학과 근골격계질환</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w13_ppe_work_management.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">13주차. 개인보호구와 작업관리</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part IV. 제도와 실무 (14~15주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w14_law_management.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">14주차. 산업보건 법규와 관리 제도</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w15_case_studies.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">15주차. 직업병 사례연구</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">기말고사 (16주)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/w16_final.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">16주차. 기말고사</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">부록</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendix/cert_map.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">부록. 자격증 과목 매핑</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#학습목표" id="toc-학습목표" class="nav-link active" data-scroll-target="#학습목표">학습목표</a></li>
+  <li><a href="#인간공학이란-무엇인가-작업역과-작업대-설계" id="toc-인간공학이란-무엇인가-작업역과-작업대-설계" class="nav-link" data-scroll-target="#인간공학이란-무엇인가-작업역과-작업대-설계">1. 인간공학이란 무엇인가 · 작업역과 작업대 설계</a>
+  <ul>
+  <li><a href="#인간공학이란-무엇인가" id="toc-인간공학이란-무엇인가" class="nav-link" data-scroll-target="#인간공학이란-무엇인가">1.1 인간공학이란 무엇인가</a>
+  <ul class="collapse">
+  <li><a href="#정의와-목적" id="toc-정의와-목적" class="nav-link" data-scroll-target="#정의와-목적">정의와 목적</a></li>
+  <li><a href="#산업위생-속의-인간공학" id="toc-산업위생-속의-인간공학" class="nav-link" data-scroll-target="#산업위생-속의-인간공학">산업위생 속의 인간공학</a></li>
+  <li><a href="#인체측정과-백분위수" id="toc-인체측정과-백분위수" class="nav-link" data-scroll-target="#인체측정과-백분위수">인체측정과 백분위수</a></li>
+  <li><a href="#설계-응용원칙-잰-값을-어떻게-쓸-것인가" id="toc-설계-응용원칙-잰-값을-어떻게-쓸-것인가" class="nav-link" data-scroll-target="#설계-응용원칙-잰-값을-어떻게-쓸-것인가">설계 응용원칙 — 잰 값을 어떻게 쓸 것인가</a></li>
+  </ul></li>
+  <li><a href="#작업역과-작업대-설계" id="toc-작업역과-작업대-설계" class="nav-link" data-scroll-target="#작업역과-작업대-설계">1.2 작업역과 작업대 설계</a>
+  <ul class="collapse">
+  <li><a href="#정상작업역과-최대작업역" id="toc-정상작업역과-최대작업역" class="nav-link" data-scroll-target="#정상작업역과-최대작업역">정상작업역과 최대작업역</a></li>
+  <li><a href="#작업대-높이" id="toc-작업대-높이" class="nav-link" data-scroll-target="#작업대-높이">작업대 높이</a></li>
+  <li><a href="#의자-설계" id="toc-의자-설계" class="nav-link" data-scroll-target="#의자-설계">의자 설계</a></li>
+  <li><a href="#수공구-설계" id="toc-수공구-설계" class="nav-link" data-scroll-target="#수공구-설계">수공구 설계</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#근골격계질환-msds-niosh-들기공식" id="toc-근골격계질환-msds-niosh-들기공식" class="nav-link" data-scroll-target="#근골격계질환-msds-niosh-들기공식">2. 근골격계질환 (MSDs) · NIOSH 들기공식</a>
+  <ul>
+  <li><a href="#근골격계질환-msds" id="toc-근골격계질환-msds" class="nav-link" data-scroll-target="#근골격계질환-msds">2.1 근골격계질환 (MSDs)</a>
+  <ul class="collapse">
+  <li><a href="#정의와-특징" id="toc-정의와-특징" class="nav-link" data-scroll-target="#정의와-특징">정의와 특징</a></li>
+  <li><a href="#주요-질환" id="toc-주요-질환" class="nav-link" data-scroll-target="#주요-질환">주요 질환</a></li>
+  <li><a href="#위험요인" id="toc-위험요인" class="nav-link" data-scroll-target="#위험요인">위험요인</a></li>
+  </ul></li>
+  <li><a href="#niosh-들기공식" id="toc-niosh-들기공식" class="nav-link" data-scroll-target="#niosh-들기공식">2.2 NIOSH 들기공식</a>
+  <ul class="collapse">
+  <li><a href="#권장무게한계rwl의-승수-구조" id="toc-권장무게한계rwl의-승수-구조" class="nav-link" data-scroll-target="#권장무게한계rwl의-승수-구조">권장무게한계(RWL)의 승수 구조</a></li>
+  <li><a href="#들기지수li와-해석" id="toc-들기지수li와-해석" class="nav-link" data-scroll-target="#들기지수li와-해석">들기지수(LI)와 해석</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#관찰적-작업자세-평가도구-한국의-근골격계-부담작업-유해요인조사-제도" id="toc-관찰적-작업자세-평가도구-한국의-근골격계-부담작업-유해요인조사-제도" class="nav-link" data-scroll-target="#관찰적-작업자세-평가도구-한국의-근골격계-부담작업-유해요인조사-제도">3. 관찰적 작업자세 평가도구 · 한국의 근골격계 부담작업 유해요인조사 제도</a>
+  <ul>
+  <li><a href="#관찰적-작업자세-평가도구" id="toc-관찰적-작업자세-평가도구" class="nav-link" data-scroll-target="#관찰적-작업자세-평가도구">3.1 관찰적 작업자세 평가도구</a>
+  <ul class="collapse">
+  <li><a href="#owas-전신-자세의-코드화" id="toc-owas-전신-자세의-코드화" class="nav-link" data-scroll-target="#owas-전신-자세의-코드화">OWAS — 전신 자세의 코드화</a></li>
+  <li><a href="#rula-상지-중심의-정밀-평가" id="toc-rula-상지-중심의-정밀-평가" class="nav-link" data-scroll-target="#rula-상지-중심의-정밀-평가">RULA — 상지 중심의 정밀 평가</a></li>
+  <li><a href="#reba-전신-다양한-자세" id="toc-reba-전신-다양한-자세" class="nav-link" data-scroll-target="#reba-전신-다양한-자세">REBA — 전신, 다양한 자세</a></li>
+  <li><a href="#도구의-선택" id="toc-도구의-선택" class="nav-link" data-scroll-target="#도구의-선택">도구의 선택</a></li>
+  </ul></li>
+  <li><a href="#한국의-근골격계-부담작업-유해요인조사-제도" id="toc-한국의-근골격계-부담작업-유해요인조사-제도" class="nav-link" data-scroll-target="#한국의-근골격계-부담작업-유해요인조사-제도">3.2 한국의 근골격계 부담작업 유해요인조사 제도</a>
+  <ul class="collapse">
+  <li><a href="#근골격계-부담작업의-정의" id="toc-근골격계-부담작업의-정의" class="nav-link" data-scroll-target="#근골격계-부담작업의-정의">근골격계 부담작업의 정의</a></li>
+  <li><a href="#유해요인조사" id="toc-유해요인조사" class="nav-link" data-scroll-target="#유해요인조사">유해요인조사</a></li>
+  <li><a href="#예방관리-프로그램" id="toc-예방관리-프로그램" class="nav-link" data-scroll-target="#예방관리-프로그램">예방관리 프로그램</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#요약" id="toc-요약" class="nav-link" data-scroll-target="#요약">요약</a></li>
+  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a>
+  <ul>
+  <li><a href="#문제-1.-설계-원칙의-적용" id="toc-문제-1.-설계-원칙의-적용" class="nav-link" data-scroll-target="#문제-1.-설계-원칙의-적용">문제 1. 설계 원칙의 적용</a></li>
+  <li><a href="#문제-2.-작업역과-작업대-설계" id="toc-문제-2.-작업역과-작업대-설계" class="nav-link" data-scroll-target="#문제-2.-작업역과-작업대-설계">문제 2. 작업역과 작업대 설계</a></li>
+  <li><a href="#문제-3.-niosh-들기공식-계산" id="toc-문제-3.-niosh-들기공식-계산" class="nav-link" data-scroll-target="#문제-3.-niosh-들기공식-계산">문제 3. NIOSH 들기공식 계산</a></li>
+  <li><a href="#문제-4.-평가도구의-선택" id="toc-문제-4.-평가도구의-선택" class="nav-link" data-scroll-target="#문제-4.-평가도구의-선택">문제 4. 평가도구의 선택</a></li>
+  <li><a href="#문제-5.-유해요인조사-제도의-적용" id="toc-문제-5.-유해요인조사-제도의-적용" class="nav-link" data-scroll-target="#문제-5.-유해요인조사-제도의-적용">문제 5. 유해요인조사 제도의 적용</a></li>
+  </ul></li>
+  <li><a href="#참고문헌" id="toc-참고문헌" class="nav-link" data-scroll-target="#참고문헌">참고문헌</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/w09_ventilation1.html">Part III. 작업환경 관리 (9~13주)</a></li><li class="breadcrumb-item"><a href="../chapters/w12_ergonomics.html"><span class="chapter-title">12주차. 인간공학과 근골격계질환</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">12주차. 인간공학과 근골격계질환</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<blockquote class="blockquote">
+<p>작업을 인간에게 맞추는 원리, 인체측정과 작업역·작업대 설계, 근골격계질환(MSDs)의 종류와 위험요인, NIOSH 들기공식, 관찰적 평가도구(RULA·REBA·OWAS), 한국의 유해요인조사 제도</p>
+</blockquote>
+<section id="학습목표" class="level2">
+<h2 class="anchored" data-anchor-id="학습목표">학습목표</h2>
+<p>이 주를 학습한 후 여러분은 다음을 할 수 있어야 합니다:</p>
+<ol type="1">
+<li>인간공학의 목적과 “작업을 인간에게 맞춘다”는 적합화 원리를 설명할 수 있다</li>
+<li>인체측정 자료의 백분위수 개념과 설계 응용원칙(극단치·조절식·평균치)을 실제 설계 문제에 적용할 수 있다</li>
+<li>정상작업역과 최대작업역을 구분하고 작업대·의자·수공구 설계 원칙을 설명할 수 있다</li>
+<li>근골격계질환(MSDs)의 주요 종류와 위험요인을 구분할 수 있다</li>
+<li>NIOSH 들기공식의 승수 구조를 이해하고 RWL과 LI를 계산·해석할 수 있다</li>
+<li>관찰적 평가도구(RULA·REBA·OWAS)의 용도를 비교하고 상황에 맞는 도구를 선택할 수 있다</li>
+<li>한국의 근골격계 부담작업 유해요인조사 제도의 구조를 설명할 수 있다</li>
+</ol>
+<hr>
+</section>
+<section id="인간공학이란-무엇인가-작업역과-작업대-설계" class="level2">
+<h2 class="anchored" data-anchor-id="인간공학이란-무엇인가-작업역과-작업대-설계">1. 인간공학이란 무엇인가 · 작업역과 작업대 설계</h2>
+<section id="인간공학이란-무엇인가" class="level3">
+<h3 class="anchored" data-anchor-id="인간공학이란-무엇인가">1.1 인간공학이란 무엇인가</h3>
+<section id="정의와-목적" class="level4">
+<h4 class="anchored" data-anchor-id="정의와-목적">정의와 목적</h4>
+<p><strong>인간공학(Ergonomics, Human Factors Engineering)</strong>은 <strong>인간의 능력과 한계를 고려하여 기계, 도구, 작업환경을 설계하는 학문</strong>이다. 전통적인 공학이 “인간을 기계에 맞추는” 접근을 취했다면, 인간공학은 정반대로 <strong>“기계와 작업을 인간에 맞추는”</strong> 것을 핵심 원리로 한다.</p>
+<p>이 원리는 낯선 것이 아니다. <a href="../chapters/w01_intro_history.html">1주차</a>에서 본 ILO/WHO 산업보건의 핵심 원칙 — “작업을 인간에게, 인간을 작업에 적합하게(Fitting the work to the worker)” — 을 구체적인 설계 기술로 실현하는 것이 바로 인간공학이다.</p>
+<p>인간공학의 목적은 네 가지로 정리된다.</p>
+<ul>
+<li>작업자의 <strong>안전과 건강 보호</strong> (산업위생 관점의 1차 목적)</li>
+<li>작업 <strong>효율성과 생산성</strong> 향상</li>
+<li><strong>오류와 사고</strong>의 감소</li>
+<li>작업자의 <strong>편의성과 만족도</strong> 증대</li>
+</ul>
+<p>건강 보호와 생산성이 나란히 놓여 있다는 점이 중요하다. 인간에게 무리를 주는 작업은 장기적으로 생산성도 떨어뜨리므로, 두 목적은 대립하지 않는다.</p>
+</section>
+<section id="산업위생-속의-인간공학" class="level4">
+<h4 class="anchored" data-anchor-id="산업위생-속의-인간공학">산업위생 속의 인간공학</h4>
+<p>유해인자 4분류 중 인간공학적 인자는 소음이나 유기용제처럼 공기 중에 존재하는 물질이 아니라 <strong>작업의 방식 그 자체</strong> — 자세, 동작, 힘, 반복 — 에 내재한 유해요인이다. 그래서 평가 방법도 다르다. 화학물질은 공기 시료를 채취해 농도를 재지만(2~3주차), 인간공학적 인자는 <strong>작업을 관찰하고 자세·힘·빈도를 기록·점수화</strong>한다. 이 주에 배우는 NIOSH 들기공식(§2.2)과 관찰적 평가도구(§3.1)가 산업위생의 “측정기” 역할을 한다.</p>
+</section>
+<section id="인체측정과-백분위수" class="level4">
+<h4 class="anchored" data-anchor-id="인체측정과-백분위수">인체측정과 백분위수</h4>
+<p>작업을 인간에 맞추려면 먼저 <strong>인간의 치수를 알아야</strong> 한다. <strong>인체측정학(Anthropometry)</strong>은 인체 각 부위의 치수를 측정하고 통계적으로 분석하여 설계에 활용하는 학문이다. 인체 치수는 대체로 정규분포를 따르므로, 설계 기준은 <strong>백분위수(percentile)</strong>로 표현한다.</p>
+<ul>
+<li><strong>5th percentile</strong>: 전체 인구의 5%가 이 값보다 작다 (작은 쪽 극단)</li>
+<li><strong>50th percentile</strong>: 중앙값</li>
+<li><strong>95th percentile</strong>: 전체 인구의 95%가 이 값보다 작다 (큰 쪽 극단)</li>
+</ul>
+<p>인체측정치에는 두 종류가 있다. <strong>무엇을 어떻게 재는가</strong>의 구분이다.</p>
+<div id="tbl-anthro-dimensions" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-anthro-dimensions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;13.1: 구조적 치수와 기능적 치수
+</figcaption>
+<div aria-describedby="tbl-anthro-dimensions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 32%">
+<col style="width: 32%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>다른 이름</th>
+<th>측정 상태</th>
+<th>예</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>구조적 치수</strong></td>
+<td>정적(static) 측정</td>
+<td>표준 자세에서 움직이지 않는 상태로 측정</td>
+<td>키, 앉은키, 어깨너비, 팔 길이</td>
+</tr>
+<tr class="even">
+<td><strong>기능적 치수</strong></td>
+<td>동적(dynamic) 측정</td>
+<td>실제 <strong>움직이는 자세</strong>에서 측정</td>
+<td>팔을 뻗어 닿는 범위, 운전 자세의 조작 범위</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>기능적 치수는 특정 작업에 국한되어 정의되므로 같은 사람이라도 작업에 따라 값이 달라지며, 실제 작업공간 설계에는 더 직접적인 정보를 준다.</p>
+</section>
+<section id="설계-응용원칙-잰-값을-어떻게-쓸-것인가" class="level4">
+<h4 class="anchored" data-anchor-id="설계-응용원칙-잰-값을-어떻게-쓸-것인가">설계 응용원칙 — 잰 값을 어떻게 쓸 것인가</h4>
+<p>측정된 치수를 설계에 적용하는 원칙은 <strong>세 가지</strong>다: ① 극단치(최대치·최소치) 설계, ② 조절식 설계, ③ 평균치 설계. 치수의 <strong>종류</strong>(구조적/기능적)와 자료의 <strong>활용원칙</strong>은 서로 다른 층위의 개념이라는 점에 주의하자 — “구조적 치수 기준의 설계”라는 별도의 응용원칙이 있는 것이 아니다.</p>
+<div id="tbl-percentile-design" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-percentile-design-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;13.2: 인체측정 자료의 설계 응용원칙
+</figcaption>
+<div aria-describedby="tbl-percentile-design-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 31%">
+<col style="width: 15%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>설계 원칙</th>
+<th>적용 백분위</th>
+<th>논리</th>
+<th>적용 예시</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>최대치 설계</strong></td>
+<td>95th</td>
+<td>큰 사람이 수용되면 작은 사람은 자동으로 수용된다 (<strong>여유</strong> 치수)</td>
+<td>출입문 높이, 통로 너비</td>
+</tr>
+<tr class="even">
+<td><strong>최소치 설계</strong></td>
+<td>5th</td>
+<td>작은 사람이 닿으면 큰 사람은 자동으로 닿는다 (<strong>도달</strong> 치수)</td>
+<td>비상정지 버튼, 조작 레버, 선반 높이</td>
+</tr>
+<tr class="odd">
+<td><strong>조절식 설계</strong></td>
+<td>5th ~ 95th</td>
+<td>개인에 맞게 조절 — 가능하면 <strong>가장 우선</strong> 고려</td>
+<td>의자 높이, 책상 높이</td>
+</tr>
+<tr class="even">
+<td><strong>평균치 설계</strong></td>
+<td>50th</td>
+<td>조절이 불가능할 때의 차선책</td>
+<td>계단 높이, 문 손잡이</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-percentile" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-percentile-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w12_percentile_design.svg" class="img-fluid figure-img" style="width:84.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-percentile-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;13.1: 인체측정 백분위수와 설계 원칙 — 도달 치수는 작은 쪽 극단에, 여유 치수는 큰 쪽 극단에 맞춘다
+</figcaption>
+</figure>
+</div>
+<p>원칙 선택의 열쇠는 그 치수가 <strong>여유(clearance)</strong> 성격인지 <strong>도달(reach)</strong> 성격인지를 판별하는 것이다. 여유 치수는 큰 쪽 극단(95th)에, 도달 치수는 작은 쪽 극단(5th)에 맞춘다. 평균치 설계가 마지막 순위인 이유는 분명하다 — <strong>“평균적인 사람”에 맞춘 설계는 절반의 사람에게 크고 절반의 사람에게 작으며</strong>, 평균에 정확히 맞는 사람은 사실상 없다.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제: 설계 원칙의 선택
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>다음 각 시설물을 설계할 때 적용할 백분위수와 설계 원칙을 정하라.</p>
+<ol type="a">
+<li>공장 출입문의 높이</li>
+<li>컨베이어 라인의 비상정지 버튼 위치</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>a — 최대치 설계(95th percentile).</strong> 키가 큰 사람도 머리를 부딪히지 않고 통과해야 한다. 여유 성격의 치수이므로 큰 쪽 극단을 수용하면 작은 사람은 자동으로 만족된다.</p>
+<p><strong>b — 최소치 설계(5th percentile).</strong> 팔이 짧은 사람도 손이 닿아야 한다. 도달 성격의 치수이므로 작은 쪽 극단에 맞추면 큰 사람은 자동으로 만족된다. 비상 상황에서는 “거의 모두 닿는” 정도로는 부족하다는 점이 극단치 설계의 논리다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="작업역과-작업대-설계" class="level3">
+<h3 class="anchored" data-anchor-id="작업역과-작업대-설계">1.2 작업역과 작업대 설계</h3>
+<section id="정상작업역과-최대작업역" class="level4">
+<h4 class="anchored" data-anchor-id="정상작업역과-최대작업역">정상작업역과 최대작업역</h4>
+<p>작업대 위에서 손이 닿는 범위를 어떻게 설정하느냐가 자세·피로·근골격계 부담을 좌우한다. 인간공학에서는 이 범위를 두 겹의 동심 원호로 구분한다.</p>
+<div id="fig-working-area" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-working-area-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w12_working_area.svg" class="img-fluid figure-img" style="width:88.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-working-area-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;13.2: 평면 작업대에서의 정상작업역과 최대작업역 (평면도)
+</figcaption>
+</figure>
+</div>
+<div id="tbl-working-area" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-working-area-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;13.3: 정상작업역과 최대작업역
+</figcaption>
+<div aria-describedby="tbl-working-area-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>정의</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>정상작업역</strong> (normal area)</td>
+<td>위팔(상완)을 몸통 옆에 자연스럽게 내린 자세에서 <strong>아래팔(전박)의 움직임만으로</strong> 편안하게 도달 가능한 영역. 곧 전박과 손으로 조작할 수 있는 범위</td>
+</tr>
+<tr class="even">
+<td><strong>최대작업역</strong> (maximum area)</td>
+<td>어깨에서부터 <strong>상지(위팔 + 아래팔)를 곧게 뻗어</strong> 도달할 수 있는 최대 영역</td>
+</tr>
+<tr class="odd">
+<td><strong>파악한계</strong></td>
+<td>앉은 작업자가 특정한 수작업을 편안히 수행할 수 있는 공간의 외곽 한계</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>두 개념을 가르는 기준은 <strong>어느 관절까지 움직이는가</strong>다. 정상작업역은 <strong>전박(아래팔)</strong>만 움직이고, 최대작업역은 <strong>상지 전체</strong>를 뻗는다. 어느 쪽이든 상체를 기울이거나 비틀지 않은 상태가 전제이며, 다리는 작업역의 정의에 포함되지 않는다. 상체까지 움직여야 닿는 위치라면 그것은 이미 작업역 밖 — 즉 배치를 바꿔야 할 위치다. 설계 원칙은 하나의 문장으로 요약된다.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>작업역 배치의 원칙
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>자주 사용하는 부품·공구는 정상작업역 안에, 가끔 사용하는 것은 최대작업역 안에 배치하고, 최대작업역 밖에는 아무것도 두지 않는다.</strong></p>
+<p>정상작업역 밖의 물건에 손을 뻗는 동작이 하루 수백 번 반복되면, 그 자체가 어깨·허리의 부적절한 자세 반복 — 곧 근골격계질환의 위험요인(§2.1)이 된다. 작업역은 “편의”의 문제가 아니라 <strong>노출 예방</strong>의 문제다.</p>
+</div>
+</div>
+</section>
+<section id="작업대-높이" class="level4">
+<h4 class="anchored" data-anchor-id="작업대-높이">작업대 높이</h4>
+<p>서서 하는 작업의 작업대 높이는 <strong>팔꿈치 높이</strong>를 기준으로 정한다. 작업이 무거울수록 낮추고, 정밀할수록 높인다.</p>
+<div id="tbl-workbench-height" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-workbench-height-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;13.4: 입식 작업대의 높이 기준
+</figcaption>
+<div aria-describedby="tbl-workbench-height-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 60%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>작업 성격</th>
+<th>작업대 높이 (팔꿈치 기준)</th>
+<th>이유</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>정밀 작업</strong></td>
+<td>약간 높게 (0 ~ 10 cm ↑)</td>
+<td>대상물을 눈 가까이 가져오기 위함</td>
+</tr>
+<tr class="even">
+<td><strong>경작업</strong> (가벼운 조립)</td>
+<td>약간 낮게 (5 ~ 10 cm ↓)</td>
+<td>전박이 자연스럽게 수평을 이루도록</td>
+</tr>
+<tr class="odd">
+<td><strong>중작업</strong> (힘을 쓰는 작업)</td>
+<td>더 낮게 (10 ~ 20 cm ↓)</td>
+<td>체중을 실을 수 있어야 함</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-workbench" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-workbench-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w12_workbench_height.svg" class="img-fluid figure-img" style="width:86.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-workbench-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;13.3: 작업 성격별 작업대 높이 — 팔꿈치 높이를 기준으로 한 상대적 차이
+</figcaption>
+</figure>
+</div>
+<p>작업대 높이는 <strong>가능하면 조절식</strong>으로 한다(§1.1의 조절식 설계 원칙). 작업 자세의 선택에도 원칙이 있다. <strong>정밀 조립 작업</strong>은 좌식이 가장 적합하고, <strong>4.5 kg 이상의 중량물 취급</strong>이나 <strong>작업장 간 이동이 잦은 작업</strong>은 좌식에 부적합하다.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>바람직한 작업자세의 조건
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>작업에 주로 사용하는 팔은 <strong>심장 높이</strong>에 두도록 한다</li>
+<li>작업 물체와 눈의 거리는 명시거리로 <strong>30 cm 정도</strong>를 유지한다</li>
+<li>근육을 지속적으로 수축시키는 <strong>불안정한 자세는 피한다</strong></li>
+</ul>
+<p>“움직이지 않는 자세가 편한 자세”라는 직관은 틀렸다. <strong>정적(static) 자세</strong>는 같은 근육을 계속 수축시켜 혈류를 막고 국소피로를 앞당기므로 그 자체가 근골격계 부담이다. 좋은 작업 설계는 자세의 <strong>변경 가능성</strong>을 남겨 둔다.</p>
+</div>
+</div>
+</section>
+<section id="의자-설계" class="level4">
+<h4 class="anchored" data-anchor-id="의자-설계">의자 설계</h4>
+<p>의자 설계의 일반 원리는 네 가지 — ① 자세 고정을 줄인다, ② 추간판(디스크)이 받는 압력을 줄인다, ③ 등근육의 정적 부하를 줄인다, ④ 쉽게 조절할 수 있게 한다 — 이며, 모두 <strong>“정적 부하를 줄인다”</strong>는 하나의 목표로 수렴한다.</p>
+<p>척추의 허리 부분은 서 있을 때의 자연스러운 곡선인 <strong>요부 전만(腰部前彎)</strong>을 유지해야 한다. 등받이가 이 곡선을 받쳐 주지 못하면 허리가 뒤로 굽으며(요부 후만) 추간판 압력이 커진다 — 요추 지지대(쿠션)를 두는 이유다.</p>
+<div id="tbl-chair-design" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-chair-design-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;13.5: 의자 치수와 설계 원칙의 대응
+</figcaption>
+<div aria-describedby="tbl-chair-design-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 45%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>치수</th>
+<th>적용 원칙</th>
+<th>근거</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>좌판 높이</strong></td>
+<td>5th percentile 오금 높이</td>
+<td>키 작은 사람의 발이 바닥에 닿아야 한다 (도달 성격)</td>
+</tr>
+<tr class="even">
+<td><strong>좌판 너비</strong></td>
+<td>95th percentile</td>
+<td>엉덩이가 큰 사람도 앉을 수 있어야 한다 (여유 성격)</td>
+</tr>
+<tr class="odd">
+<td><strong>좌판 깊이</strong></td>
+<td>작은 사람 기준</td>
+<td>깊으면 작은 사람의 오금이 눌리고 등이 등받이에 닿지 않는다</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>§1.1의 설계 원칙이 의자 하나에 세 가지 방식으로 적용된다는 점을 눈여겨보자. 같은 물건이라도 <strong>치수마다 여유/도달 성격이 다르기 때문</strong>이다.</p>
+</section>
+<section id="수공구-설계" class="level4">
+<h4 class="anchored" data-anchor-id="수공구-설계">수공구 설계</h4>
+<div id="tbl-handtool-design" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-handtool-design-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;13.6: 수공구의 인간공학적 설계 원칙
+</figcaption>
+<div aria-describedby="tbl-handtool-design-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>원칙</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>손목을 곧게 유지한다</strong></td>
+<td>손목을 꺾어야 하는 공구는 수근관증후군의 직접 원인이다. “손목을 굽히지 말고 공구를 굽혀라”가 핵심이다</td>
+</tr>
+<tr class="even">
+<td><strong>반복적인 손가락 동작을 피한다</strong></td>
+<td>특히 검지 하나만 반복 사용하게 하지 말고, 동력공구의 방아쇠는 여러 손가락으로 작동하게 한다</td>
+</tr>
+<tr class="odd">
+<td><strong>손잡이의 접촉면적을 크게 한다</strong></td>
+<td>접촉면적이 작으면 국소 압력점(pressure point)이 생겨 신경·혈관이 눌린다</td>
+</tr>
+<tr class="even">
+<td><strong>무게를 줄이고 균형을 유지한다</strong></td>
+<td>사용 시 무게중심이 손 안에 오도록 한다</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>작업역 배치, 작업대·의자·수공구 설계는 모두 유해요인의 <strong>발생 자체를 줄이는 공학적 대책</strong>이다. 반면 작업순환(job rotation)이나 휴식시간 배분은 노출 시간을 관리하는 <strong>관리적 대책</strong>이다 — <a href="../chapters/w01_intro_history.html">1주차</a>의 관리 위계가 여기서도 작동하며, 공학적 대책이 우선한다.</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="근골격계질환-msds-niosh-들기공식" class="level2">
+<h2 class="anchored" data-anchor-id="근골격계질환-msds-niosh-들기공식">2. 근골격계질환 (MSDs) · NIOSH 들기공식</h2>
+<section id="근골격계질환-msds" class="level3">
+<h3 class="anchored" data-anchor-id="근골격계질환-msds">2.1 근골격계질환 (MSDs)</h3>
+<section id="정의와-특징" class="level4">
+<h4 class="anchored" data-anchor-id="정의와-특징">정의와 특징</h4>
+<p><strong>근골격계질환(Musculoskeletal Disorders, MSDs)</strong>은 반복적인 동작, 부적절한 작업자세, 과도한 힘의 사용, 진동 등에 의해 <strong>근육, 건(힘줄), 신경, 혈관, 인대</strong> 등에 발생하는 만성적 질환이다.</p>
+<p>MSDs의 가장 중요한 특징은 <strong>누적성</strong>이다. 한 번의 들기, 한 번의 손목 꺾임은 문제를 일으키지 않지만, 같은 미세한 부하가 하루 수천 번, 수년간 반복되면 조직의 회복 능력을 넘어서고 그때부터 통증과 기능 저하가 나타난다. 급성 사고와 달리 <strong>원인 작업과 발병 사이에 뚜렷한 “사건”이 없다</strong>는 점이 인식(Recognition)을 어렵게 만든다.</p>
+</section>
+<section id="주요-질환" class="level4">
+<h4 class="anchored" data-anchor-id="주요-질환">주요 질환</h4>
+<div id="tbl-msds-types" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-msds-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;13.7: 주요 근골격계질환
+</figcaption>
+<div aria-describedby="tbl-msds-types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 27%">
+<col style="width: 30%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>질환명</th>
+<th>영향 부위</th>
+<th>주요 증상</th>
+<th>관련 작업 요인</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>수근관증후군</strong> (Carpal Tunnel Syndrome)</td>
+<td>손목</td>
+<td>손 저림, 통증, 악력 저하</td>
+<td>손목 반복 동작, 과도한 힘</td>
+</tr>
+<tr class="even">
+<td><strong>건초염</strong> (Tenosynovitis)</td>
+<td>손가락, 손목</td>
+<td>힘줄 염증, 부종</td>
+<td>반복적인 손가락 동작</td>
+</tr>
+<tr class="odd">
+<td><strong>외측상과염</strong> (테니스 엘보)</td>
+<td>팔꿈치 외측</td>
+<td>팔꿈치 외측 통증</td>
+<td>손목 신전 반복 동작</td>
+</tr>
+<tr class="even">
+<td><strong>회전근개 증후군</strong></td>
+<td>어깨</td>
+<td>어깨 통증, 가동범위 제한</td>
+<td>팔을 머리 위로 올리는 동작 반복</td>
+</tr>
+<tr class="odd">
+<td><strong>요통</strong> (Low Back Pain)</td>
+<td>허리</td>
+<td>허리 통증, 다리 저림</td>
+<td>중량물 취급, 부적절한 자세</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>그림 필요 — 수근관(carpal tunnel) 해부 그림
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>무엇</strong>: 손목 횡단면 해부 그림. <strong>횡수근인대(굴근지대)</strong> 아래의 좁은 터널을 지나는 <strong>정중신경</strong>과 굴곡건들이 보이고, 부종으로 터널 내압이 올라가 신경이 눌리는 상태를 정상과 대비시킨 두 컷이면 가장 좋다. 정중신경 지배 영역(엄지·검지·중지·약지 요측)을 손바닥 그림에 음영으로 표시한 그림이 함께 있으면 증상 분포까지 설명된다.</p>
+<p><strong>왜</strong>: 수근관증후군은 이 주에서 가장 자주 다루는 질환인데, “왜 손목을 꺾으면 저리는가”는 <strong>터널이 좁아진다</strong>는 해부 구조를 봐야 설명된다. §1.2의 “손목을 굽히지 말고 공구를 굽혀라”라는 설계 원칙의 근거도 여기에 있다.</p>
+<p><strong>출처 후보</strong>: 위키미디어 커먼즈의 Gray’s Anatomy 도판(PD), NIH/NIAMS·NINDS 환자용 자료(미국 정부 저작물로 PD), OpenStax <em>Anatomy and Physiology</em>(CC BY), Servier Medical Art(CC BY).</p>
+<p><strong>대안</strong>: 손목 횡단면을 원과 그 안의 힘줄·신경 단면으로 단순화한 자체 모식도로 대체하고, 손목 중립 자세와 굴곡 자세에서의 단면 형태를 대비시킨다.</p>
+</div>
+</div>
+</div>
+<p>부위별로 보면 규칙이 보인다. <strong>손목·손가락 질환은 반복성</strong>, <strong>어깨 질환은 자세(팔 들어올림)</strong>, <strong>허리 질환은 힘(중량물)</strong>이 주된 원인이다. 어느 부위에 증상이 몰리는지가 곧 어느 위험요인을 먼저 의심할지를 알려 준다.</p>
+</section>
+<section id="위험요인" class="level4">
+<h4 class="anchored" data-anchor-id="위험요인">위험요인</h4>
+<div id="tbl-msds-risk-factors" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-msds-risk-factors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;13.8: 근골격계질환의 위험요인
+</figcaption>
+<div aria-describedby="tbl-msds-risk-factors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 27%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>위험요인</th>
+<th>설명</th>
+<th>관련 질환</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>반복 동작</strong></td>
+<td>동일 동작의 지속적 반복 — 회복 시간 부족</td>
+<td>건초염, 수근관증후군</td>
+</tr>
+<tr class="even">
+<td><strong>과도한 힘</strong></td>
+<td>무거운 물건 들기·밀기·당기기, 강한 쥐기</td>
+<td>요통, 추간판탈출증</td>
+</tr>
+<tr class="odd">
+<td><strong>부적절한 자세</strong></td>
+<td>굴곡, 신전, 비틀림, 그리고 <strong>정적 자세</strong></td>
+<td>요통, 경추질환, 어깨 질환</td>
+</tr>
+<tr class="even">
+<td><strong>국소 진동</strong></td>
+<td>진동 공구 사용</td>
+<td>수지 진동 증후군</td>
+</tr>
+<tr class="odd">
+<td><strong>접촉 스트레스</strong></td>
+<td>작업대 모서리·공구 손잡이의 국소 압박</td>
+<td>신경 압박, 혈류 장애</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>실제 작업에서 위험요인은 <strong>결합되어</strong> 나타나며, 결합될 때 위험은 곱으로 커진다. “무거운 물건을(힘) 허리를 비틀어(자세) 자주(반복) 든다”가 전형적인 고위험 작업이다. 다음 절의 NIOSH 들기공식은 바로 이 결합 구조 — 힘·자세·반복이 동시에 작용하는 들기 작업 — 를 하나의 수치로 평가하기 위해 만들어졌다.</p>
+<hr>
+</section>
+</section>
+<section id="niosh-들기공식" class="level3">
+<h3 class="anchored" data-anchor-id="niosh-들기공식">2.2 NIOSH 들기공식</h3>
+<section id="권장무게한계rwl의-승수-구조" class="level4">
+<h4 class="anchored" data-anchor-id="권장무게한계rwl의-승수-구조">권장무게한계(RWL)의 승수 구조</h4>
+<p>NIOSH(미국 국립산업안전보건연구원)는 중량물 들기 작업의 위험성을 평가하기 위해 <strong>권장무게한계(Recommended Weight Limit, RWL)</strong>를 제시했다.</p>
+<p><span class="math display">\[
+\text{RWL} = \text{LC} \times \text{HM} \times \text{VM} \times \text{DM} \times \text{AM} \times \text{FM} \times \text{CM}
+\]</span></p>
+<p>이 식의 구조가 곧 개념이다. 출발점은 <strong>부하상수(LC) 23 kg</strong> — <strong>가장 이상적인 조건</strong>(물체가 몸에 가깝고, 적절한 높이에서, 비틀림 없이, 드물게, 좋은 손잡이로)에서 대부분의 건강한 작업자가 들 수 있는 무게다. 실제 작업 조건이 이상적 조건에서 벗어날 때마다, 해당하는 <strong>승수(multiplier)가 1보다 작은 값</strong>이 되어 한계 무게를 깎아 내린다.</p>
+<div id="tbl-rwl-multipliers" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-rwl-multipliers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;13.9: RWL의 일곱 승수
+</figcaption>
+<div aria-describedby="tbl-rwl-multipliers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 57%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>승수</th>
+<th>명칭</th>
+<th>무엇이 나쁘면 작아지는가</th>
+<th>계산식</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>LC</td>
+<td>부하상수 (Load Constant)</td>
+<td>— (기준값)</td>
+<td>23 kg</td>
+</tr>
+<tr class="even">
+<td><strong>HM</strong></td>
+<td>수평 승수 (Horizontal)</td>
+<td>물체가 몸에서 <strong>멀수록</strong></td>
+<td><span class="math inline">\(25/H\)</span> (<span class="math inline">\(H\)</span>: 손–발목 중심 수평거리, cm)</td>
+</tr>
+<tr class="odd">
+<td><strong>VM</strong></td>
+<td>수직 승수 (Vertical)</td>
+<td>들기 시작 높이가 <strong>75 cm에서 멀수록</strong> (너무 낮아도, 너무 높아도)</td>
+<td><span class="math inline">\(1 - 0.003\,\lvert V - 75 \rvert\)</span> (<span class="math inline">\(V\)</span>: 바닥–손 높이, cm)</td>
+</tr>
+<tr class="even">
+<td><strong>DM</strong></td>
+<td>거리 승수 (Distance)</td>
+<td>수직 <strong>이동거리가 길수록</strong></td>
+<td><span class="math inline">\(0.82 + 4.5/D\)</span> (<span class="math inline">\(D\)</span>: 수직 이동거리, cm)</td>
+</tr>
+<tr class="odd">
+<td><strong>AM</strong></td>
+<td>비대칭 승수 (Asymmetric)</td>
+<td>몸통 <strong>비틀림 각도가 클수록</strong></td>
+<td><span class="math inline">\(1 - 0.0032\,A\)</span> (<span class="math inline">\(A\)</span>: 비틀림 각도, °)</td>
+</tr>
+<tr class="even">
+<td><strong>FM</strong></td>
+<td>빈도 승수 (Frequency)</td>
+<td><strong>자주, 오래</strong> 들수록</td>
+<td>표에서 결정 (빈도·지속시간)</td>
+</tr>
+<tr class="odd">
+<td><strong>CM</strong></td>
+<td>손잡이 승수 (Coupling)</td>
+<td>손잡이가 <strong>나쁠수록</strong></td>
+<td>좋음 1.0 / 보통 0.95 / 나쁨 0.90</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>승수들의 논리를 읽어 보자. <strong>HM이 가장 민감하다</strong> — <span class="math inline">\(H = 25\)</span> cm(몸에 밀착)일 때 1.0이지만 50 cm면 0.5로 반토막 난다. 물체가 몸에서 멀수록 허리에 걸리는 모멘트(지렛대 힘)가 커지기 때문으로, “<strong>짐은 몸에 붙여서 들어라</strong>”는 격언의 정량적 표현이다. <strong>VM의 기준점 75 cm</strong>는 서 있는 사람의 손 높이 부근으로, 바닥에서 들면 (허리 굽힘) 어깨 위로 들면(팔 들어올림) 모두 벌점을 받는다. <strong>AM은 비틀림, FM은 반복</strong> 위험요인을 수치화한 것이다. 즉 RWL은 §2.1의 위험요인들(힘·자세·반복)을 <strong>하나의 곱셈 구조</strong>로 통합한 지표다.</p>
+</section>
+<section id="들기지수li와-해석" class="level4">
+<h4 class="anchored" data-anchor-id="들기지수li와-해석">들기지수(LI)와 해석</h4>
+<p>실제로 드는 무게를 RWL로 나눈 값이 <strong>들기지수(Lifting Index, LI)</strong>다.</p>
+<p><span class="math display">\[
+\text{LI} = \frac{\text{실제 들기 무게}}{\text{RWL}}
+\]</span></p>
+<div id="tbl-lifting-index" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-lifting-index-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;13.10: 들기지수의 해석
+</figcaption>
+<div aria-describedby="tbl-lifting-index-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>LI 값</th>
+<th>평가</th>
+<th>조치</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>LI &lt; 1.0</td>
+<td>안전</td>
+<td>대부분의 작업자에게 안전</td>
+</tr>
+<tr class="even">
+<td>1.0 ≤ LI &lt; 3.0</td>
+<td>주의</td>
+<td>일부 작업자에게 위험 — 개선 권장</td>
+</tr>
+<tr class="odd">
+<td>LI ≥ 3.0</td>
+<td>위험</td>
+<td>대부분의 작업자에게 위험 — 즉시 개선</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>승수 구조의 실무적 쓸모가 여기서 드러난다. LI가 1을 넘었을 때, <strong>어느 승수가 가장 작은지</strong>를 보면 어떤 개선(물체를 몸에 붙이기, 들기 높이 조정, 비틀림 제거, 빈도 낮추기)이 가장 효과적인지 바로 알 수 있다. RWL은 판정 도구인 동시에 <strong>개선 우선순위의 진단서</strong>다.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 1: RWL과 LI의 계산
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>작업자가 바닥에서 75 cm 높이의 물건을 들어 올린다. 물건의 무게는 18 kg, 손과 발목 중심 사이의 수평거리는 30 cm, 수직 이동거리는 50 cm, 비틀림 각도는 0°, 빈도는 시간당 5회(1시간 지속, FM = 0.94), 손잡이는 보통이다. 이 작업의 LI를 계산하고 평가하라.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>각 승수를 차례로 구한다.</p>
+<ol type="1">
+<li>LC = 23 kg</li>
+<li>HM = 25/30 = 0.833</li>
+<li>VM = 1 − 0.003 × |75 − 75| = 1.0</li>
+<li>DM = 0.82 + 4.5/50 = 0.82 + 0.09 = 0.91</li>
+<li>AM = 1 − 0.0032 × 0 = 1.0</li>
+<li>FM = 0.94 (빈도표)</li>
+<li>CM = 0.95 (보통 손잡이)</li>
+</ol>
+<p><span class="math display">\[
+\text{RWL} = 23 \times 0.833 \times 1.0 \times 0.91 \times 1.0 \times 0.94 \times 0.95 = 15.3\ \text{kg}
+\]</span></p>
+<p><span class="math display">\[
+\text{LI} = \frac{18}{15.3} = 1.18
+\]</span></p>
+<p><strong>LI = 1.18 &gt; 1.0</strong>이므로 일부 작업자에게 위험할 수 있어 개선이 권장된다. 승수 중 가장 작은 것은 HM(0.833)이므로, <strong>물체를 몸에 더 가깝게</strong>(H를 30 cm에서 25 cm로) 만드는 개선이 가장 효과적이다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>예제 2: 승수 구조를 이용한 개선 설계
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>물류창고에서 작업자가 다음 조건으로 상자를 들어 올린다: 무게 20 kg, 수평거리 <span class="math inline">\(H = 25\)</span> cm, 들기 시작 높이 <span class="math inline">\(V = 50\)</span> cm, 수직 이동거리 <span class="math inline">\(D = 75\)</span> cm, 비틀림 각도 <span class="math inline">\(A = 30°\)</span>, FM = 0.85, 손잡이 좋음(CM = 1.0).</p>
+<ol type="1">
+<li>RWL과 LI를 계산하라.</li>
+<li>승수 구조에 근거하여 효과적인 개선 방안 두 가지를 제시하라.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>정답 및 풀이
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>(1) RWL과 LI</strong></p>
+<p>HM = 25/25 = 1.000, VM = 1 − 0.003 × |50−75| = 0.925, DM = 0.82 + 4.5/75 = 0.880, AM = 1 − 0.0032 × 30 = 0.904, FM = 0.850, CM = 1.000</p>
+<p><span class="math display">\[
+\text{RWL} = 23 \times 1.0 \times 0.925 \times 0.88 \times 0.904 \times 0.85 \times 1.0 = 14.39\ \text{kg},
+\qquad \text{LI} = \frac{20}{14.39} = 1.39
+\]</span></p>
+<p><span class="math inline">\(1.0 \le \text{LI} &lt; 3.0\)</span>이므로 <strong>주의 수준</strong>이다.</p>
+<p><strong>(2) 개선 방안</strong> — 1보다 작은 승수 중 개선 가능한 것부터 공략한다.</p>
+<p>① <strong>비틀림 제거</strong>: 적재 위치를 작업자 정면으로 옮겨 <span class="math inline">\(A = 30° \to 0°\)</span> → AM 0.904 → 1.000, RWL = 15.91 kg, LI = 1.26</p>
+<p>② <strong>들기 시작 높이 상향</strong>: 리프트 테이블로 <span class="math inline">\(V = 50 \to 75\)</span> cm → VM 0.925 → 1.000, RWL = 15.55 kg, LI = 1.29 (동시에 <span class="math inline">\(D\)</span>도 줄어 DM도 개선)</p>
+<p>두 대책을 함께 적용하면 RWL = 17.20 kg, LI = 1.16. 여전히 1.0을 넘으므로 추가로 <strong>상자 무게 분할</strong>이나 <strong>빈도 저감(FM 개선)</strong>을 검토한다. 승수 구조는 이처럼 “무엇을 고치면 얼마나 좋아지는지”를 정량적으로 보여 준다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>예제 2의 계산을 막대로 펼치면 승수 구조가 하는 일이 그대로 보인다 (<a href="#fig-rwl" class="quarto-xref">그림&nbsp;<span>13.4</span></a>). 이상적 조건의 23 kg에서 출발해, 조건이 나쁜 항목마다 그만큼씩 한계 무게가 깎여 나가고, 남은 값이 RWL이다. 실제 들기 무게 20 kg이 그 선을 넘고 있으므로 LI는 1을 초과한다.</p>
+<div id="fig-rwl" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rwl-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w12_niosh_multipliers.svg" class="img-fluid figure-img" style="width:85.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rwl-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;13.4: NIOSH 들기공식의 승수 구조 — LC 23 kg에서 각 승수가 깎아 내는 몫 (교재 예제 2의 값)
+</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+</section>
+</section>
+<section id="관찰적-작업자세-평가도구-한국의-근골격계-부담작업-유해요인조사-제도" class="level2">
+<h2 class="anchored" data-anchor-id="관찰적-작업자세-평가도구-한국의-근골격계-부담작업-유해요인조사-제도">3. 관찰적 작업자세 평가도구 · 한국의 근골격계 부담작업 유해요인조사 제도</h2>
+<section id="관찰적-작업자세-평가도구" class="level3">
+<h3 class="anchored" data-anchor-id="관찰적-작업자세-평가도구">3.1 관찰적 작업자세 평가도구</h3>
+<p>NIOSH 공식은 들기 작업 전용이다. 들기가 아닌 작업 — 조립, 간호, 용접 — 의 자세 부담은, 특별한 계측 장비 없이 <strong>작업을 관찰하여 자세를 코드화·점수화</strong>하는 도구들로 평가한다. 대표적인 셋이 OWAS, RULA, REBA다.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>그림 필요 — 실제 작업자세 사진 (개선 전 / 개선 후)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>무엇</strong>: 같은 작업을 <strong>개선 전과 후</strong>로 나란히 찍은 현장 사진 두 장. 예를 들어 ① 팔꿈치가 어깨 위로 올라간 조립 자세 → 작업대 높이·부품 위치를 바꿔 팔을 내린 자세, ② 허리를 굽혀 바닥의 상자를 드는 자세 → 리프트 테이블로 들기 높이를 올린 자세. 각도 측정이 가능하도록 <strong>측면 구도</strong>여야 하고, 얼굴은 식별되지 않게 처리한다.</p>
+<p><strong>왜</strong>: RULA·REBA·OWAS는 <strong>사진 한 장에서 각도를 읽어 점수를 매기는</strong> 도구다. 실제 사진 없이 표만 보면 학생은 “무엇을 보고 점수를 매기는지”를 익히지 못한다. 개선 전후 대비는 점수가 실제로 내려가는 과정을 보여 준다.</p>
+<p><strong>출처 후보</strong>: 안전보건공단(KOSHA) 근골격계질환 예방 자료·사업장 개선 사례집, NIOSH/OSHA eTool(미국 정부 저작물로 PD), EU-OSHA(OSHwiki, CC BY), 자체 촬영(피촬영자 동의 필요).</p>
+<p><strong>대안</strong>: 사진 확보가 어려우면 측면 인체 모식도에 상완 각도·몸통 굴곡 각도·손목 각도를 표시한 도해를 개선 전후 두 컷으로 그려 대체한다.</p>
+</div>
+</div>
+</div>
+<section id="owas-전신-자세의-코드화" class="level4">
+<h4 class="anchored" data-anchor-id="owas-전신-자세의-코드화">OWAS — 전신 자세의 코드화</h4>
+<p><strong>OWAS(Ovako Working Posture Analysis System)</strong>는 핀란드 Ovako 철강회사에서 개발된, <strong>전신 자세를 관찰하여 코드화</strong>하는 방법이다. 등(허리) 자세 4가지, 팔 자세 3가지, 다리 자세 7가지, 하중 3가지의 코드를 조합하여 4단계 조치 등급(Action Category)으로 분류한다.</p>
+<div id="tbl-owas" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-owas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;13.11: OWAS 조치 등급
+</figcaption>
+<div aria-describedby="tbl-owas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>등급</th>
+<th>의미</th>
+<th>조치</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>정상 자세</td>
+<td>조치 불필요</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>약간 유해한 자세</td>
+<td>가까운 미래에 개선</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>매우 유해한 자세</td>
+<td>가능한 한 빨리 개선</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>극도로 유해한 자세</td>
+<td>즉시 개선</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>코드가 굵직하므로(예: 다리 자세 7가지) 미세한 손목 자세 등은 잡아내지 못하지만, 그만큼 빠르게 여러 작업을 훑을 수 있다. <strong>중작업·제조업</strong>의 전신 자세 선별에 알맞다.</p>
+</section>
+<section id="rula-상지-중심의-정밀-평가" class="level4">
+<h4 class="anchored" data-anchor-id="rula-상지-중심의-정밀-평가">RULA — 상지 중심의 정밀 평가</h4>
+<p><strong>RULA(Rapid Upper Limb Assessment)</strong>는 <strong>상지(팔·손목·목) 중심</strong>으로 평가하는 도구로, <strong>사무직이나 반복 조립작업</strong>에 적합하다. 팔·손목(Group A)과 목·몸통·다리(Group B)의 자세 점수에 근육 사용(정적/반복)과 힘/하중 점수를 더해 최종 점수(1~7점)로 위험도를 판정한다.</p>
+<div id="tbl-rula" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-rula-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;13.12: RULA 조치 수준
+</figcaption>
+<div aria-describedby="tbl-rula-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>점수</th>
+<th style="text-align: center;">조치 수준</th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1–2</td>
+<td style="text-align: center;">1</td>
+<td>허용 가능한 자세</td>
+</tr>
+<tr class="even">
+<td>3–4</td>
+<td style="text-align: center;">2</td>
+<td>추가 조사 필요, 변경이 필요할 수 있음</td>
+</tr>
+<tr class="odd">
+<td>5–6</td>
+<td style="text-align: center;">3</td>
+<td>추가 조사와 빠른 시일 내 변경 필요</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td style="text-align: center;">4</td>
+<td>즉시 조사·변경 필요</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="reba-전신-다양한-자세" class="level4">
+<h4 class="anchored" data-anchor-id="reba-전신-다양한-자세">REBA — 전신, 다양한 자세</h4>
+<p><strong>REBA(Rapid Entire Body Assessment)</strong>는 RULA의 틀을 <strong>전신으로 확장</strong>한 도구로, 예측하기 어려운 다양한 자세가 나타나는 <strong>서비스업·의료업</strong>(환자 이송 등)에 적합하다. 점수 범위는 1~15점이다.</p>
+</section>
+<section id="도구의-선택" class="level4">
+<h4 class="anchored" data-anchor-id="도구의-선택">도구의 선택</h4>
+<div id="tbl-tools-comparison" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-tools-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;13.13: 평가도구의 용도 비교
+</figcaption>
+<div aria-describedby="tbl-tools-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>OWAS</th>
+<th>RULA</th>
+<th>REBA</th>
+<th>NIOSH 공식</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>평가 범위</strong></td>
+<td>전신 자세 (굵은 코드)</td>
+<td>상지 중심</td>
+<td>전신 (다양한 자세)</td>
+<td>들기 작업</td>
+</tr>
+<tr class="even">
+<td><strong>점수 체계</strong></td>
+<td>조치등급 1~4</td>
+<td>1~7점</td>
+<td>1~15점</td>
+<td>RWL, LI</td>
+</tr>
+<tr class="odd">
+<td><strong>적합한 분야</strong></td>
+<td>중작업, 제조업</td>
+<td>사무직, 반복 조립</td>
+<td>서비스업, 의료업</td>
+<td>중량물 취급</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-tools" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tools-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/w12_assessment_tools.svg" class="img-fluid figure-img" style="width:92.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tools-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;13.5: 평가도구의 적용 범위 — 각 도구가 몸의 어디를 보는가
+</figcaption>
+</figure>
+</div>
+<p>선택의 논리는 <strong>위험이 어디에 있는가</strong>를 따라간다. 문제가 <strong>들기의 무게와 조건</strong>이면 NIOSH 공식, <strong>손목·팔의 반복 자세</strong>면 RULA, <strong>전신의 다양한 자세</strong>면 REBA(정밀) 또는 OWAS(신속 선별)다. 실무에서는 선별(OWAS)로 문제 작업을 추리고 정밀 도구로 파고드는 <strong>2단계 전략</strong>이 흔히 쓰인다.</p>
+<hr>
+</section>
+</section>
+<section id="한국의-근골격계-부담작업-유해요인조사-제도" class="level3">
+<h3 class="anchored" data-anchor-id="한국의-근골격계-부담작업-유해요인조사-제도">3.2 한국의 근골격계 부담작업 유해요인조사 제도</h3>
+<p>앞 절까지의 평가도구가 “기술”이라면, 이 절은 그 기술의 사용을 의무화한 “제도”다. 한국은 산업안전보건법과 산업안전보건기준에 관한 규칙에 근거하여, 사업주에게 <strong>근골격계 부담작업에 대한 유해요인조사</strong>를 의무로 부과한다.</p>
+<section id="근골격계-부담작업의-정의" class="level4">
+<h4 class="anchored" data-anchor-id="근골격계-부담작업의-정의">근골격계 부담작업의 정의</h4>
+<p><strong>근골격계 부담작업</strong>은 고용노동부 고시로 정한 <strong>11가지 작업</strong>이다. 각 항목에는 §2.1의 위험요인이 <strong>동작·시간·무게의 정량 기준</strong>으로 번역되어 있다.</p>
+<div id="tbl-burden-work" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-burden-work-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;13.14: 근골격계 부담작업 11종의 구조 (고용노동부 고시 요지)
+</figcaption>
+<div aria-describedby="tbl-burden-work-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>위험요인 유형</th>
+<th>부담작업 기준의 예 (고시 요지)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>반복 동작</strong></td>
+<td>하루 4시간 이상 집중적인 키보드·마우스 조작 / 하루 총 2시간 이상 목·어깨·팔꿈치·손목·손으로 같은 동작 반복</td>
+</tr>
+<tr class="even">
+<td><strong>부적절한 자세</strong></td>
+<td>하루 총 2시간 이상 머리 위에 손, 팔꿈치가 어깨 위 등의 자세 / 하루 총 2시간 이상 목·허리를 구부리거나 트는 자세 / 하루 총 2시간 이상 쪼그려 앉거나 무릎을 굽힌 자세</td>
+</tr>
+<tr class="odd">
+<td><strong>과도한 힘 (손)</strong></td>
+<td>하루 총 2시간 이상 1 kg 이상 물건을 한 손 손가락으로 집어 옮기는 작업 / 4.5 kg 이상 물건을 한 손으로 드는 작업</td>
+</tr>
+<tr class="even">
+<td><strong>중량물 취급</strong></td>
+<td>하루 10회 이상 25 kg 이상 들기 / 하루 25회 이상 10 kg 이상을 무릎 아래·어깨 위·팔 뻗은 상태에서 들기 / 하루 총 2시간 이상 분당 2회 이상 4.5 kg 이상 들기</td>
+</tr>
+<tr class="odd">
+<td><strong>충격</strong></td>
+<td>하루 총 2시간 이상 시간당 10회 이상 손·무릎으로 반복 충격을 가하는 작업</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>기준의 짜임새를 보라 — 모든 항목이 <strong>“어떤 동작을(위험요인) + 얼마나 오래/자주/무겁게 (강도·빈도)”</strong>의 형식이다. 위험요인 하나만으로는 부담작업이 되지 않고 <strong>충분한 노출량</strong>이 결합되어야 한다는 누적성 개념(§2.1)이 법 기준에 반영된 것이다.</p>
+</section>
+<section id="유해요인조사" class="level4">
+<h4 class="anchored" data-anchor-id="유해요인조사">유해요인조사</h4>
+<p>부담작업을 보유한 사업주는 <strong>유해요인조사</strong>를 실시해야 한다.</p>
+<div id="tbl-hazard-survey" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-hazard-survey-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;13.15: 유해요인조사의 시기
+</figcaption>
+<div aria-describedby="tbl-hazard-survey-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>구분</th>
+<th>시기</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>정기 조사</strong></td>
+<td><strong>3년마다</strong> (신설 사업장은 1년 이내 최초 조사)</td>
+<td>부담작업 전체에 대한 주기적 재평가</td>
+</tr>
+<tr class="even">
+<td><strong>수시 조사</strong></td>
+<td>사유 발생 시 지체 없이</td>
+<td>① 근골격계질환자가 발생한 경우(업무상 질병 인정) ② 새로운 작업·설비를 도입한 경우 ③ 작업환경을 변경한 경우</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>조사 내용은 세 갈래다.</p>
+<ol type="1">
+<li><strong>작업 조건</strong>: 설비·작업공정·작업량·작업속도 등 작업장 상황</li>
+<li><strong>작업 요인</strong>: 작업시간·자세·방법 등 작업 조건 — 여기서 §2.2~§3.1의 평가도구(NIOSH, RULA, REBA, OWAS 등)가 실제로 사용된다</li>
+<li><strong>증상 조사</strong>: 부담작업으로 인한 근골격계질환 <strong>징후와 증상</strong>의 유무</li>
+</ol>
+<p>수시 조사의 첫 번째 사유가 “질환자 발생”이라는 점에 주목하자. 건강영향 정보가 작업환경 평가를 다시 촉발하는 이 구조는, <a href="../chapters/w01_intro_history.html">1주차</a> AREC 순환이 법 제도 안에 새겨진 형태다.</p>
+</section>
+<section id="예방관리-프로그램" class="level4">
+<h4 class="anchored" data-anchor-id="예방관리-프로그램">예방관리 프로그램</h4>
+<p>근골격계질환이 다수 발생한 사업장 — 연간 10명 이상 발생하거나, 5명 이상 발생하면서 그 수가 전체 근로자의 10% 이상인 경우 등 — 에는 유해요인조사를 넘어, 조사·개선· 의학적 관리·교육을 포함하는 <strong>근골격계질환 예방관리 프로그램</strong>의 수립·시행이 요구된다. 개별 작업의 평가에서 사업장 단위의 관리 체계로 확장되는 구조다.</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="요약" class="level2">
+<h2 class="anchored" data-anchor-id="요약">요약</h2>
+<div id="tbl-summary" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+표&nbsp;13.16: 12주차 핵심 요약
+</figcaption>
+<div aria-describedby="tbl-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 62%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>개념</th>
+<th>핵심 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>인간공학의 원리</strong></td>
+<td>인간을 작업에 맞추지 않고 <strong>작업을 인간에 맞춘다</strong> (Fitting the work to the worker)</td>
+</tr>
+<tr class="even">
+<td><strong>백분위수 설계</strong></td>
+<td>여유 치수 → 최대치(95th) / 도달 치수 → 최소치(5th) / 가능하면 조절식(5~95th) / 평균치는 차선책</td>
+</tr>
+<tr class="odd">
+<td><strong>작업역</strong></td>
+<td>정상작업역 = <strong>전박(아래팔)</strong>만 움직여 닿는 범위 / 최대작업역 = <strong>상지 전체</strong>를 뻗어 닿는 범위. 자주 쓰는 것은 정상작업역 안에</td>
+</tr>
+<tr class="even">
+<td><strong>작업대 높이</strong></td>
+<td>팔꿈치 기준 — 정밀은 높게, 중작업은 낮게. 가능하면 조절식</td>
+</tr>
+<tr class="odd">
+<td><strong>의자 설계</strong></td>
+<td>목표는 <strong>정적 부하 저감</strong> — 자세 고정·디스크 압력·등근육 부하를 줄이고 요부 전만 유지</td>
+</tr>
+<tr class="even">
+<td><strong>MSDs</strong></td>
+<td>근육·건·신경·혈관·인대의 <strong>만성·누적성</strong> 질환 (수근관증후군, 건초염, 회전근개 증후군, 요통 등)</td>
+</tr>
+<tr class="odd">
+<td><strong>MSDs 위험요인</strong></td>
+<td>반복 동작 · 과도한 힘 · 부적절한 자세(정적 자세 포함) · 진동 · 접촉 스트레스 — 결합되면 위험 증폭</td>
+</tr>
+<tr class="even">
+<td><strong>NIOSH RWL</strong></td>
+<td><span class="math inline">\(23 \times \text{HM} \times \text{VM} \times \text{DM} \times \text{AM} \times \text{FM} \times \text{CM}\)</span> — 이상 조건 23 kg에서 조건이 나빠질 때마다 승수가 깎는다</td>
+</tr>
+<tr class="odd">
+<td><strong>LI</strong></td>
+<td>실제 무게 ÷ RWL. 1 미만 안전 / 1~3 주의 / 3 이상 위험. 가장 작은 승수가 개선 우선순위</td>
+</tr>
+<tr class="even">
+<td><strong>평가도구</strong></td>
+<td>OWAS(전신 선별, 제조업) / RULA(상지, 사무·조립) / REBA(전신, 서비스·의료) / NIOSH(들기)</td>
+</tr>
+<tr class="odd">
+<td><strong>유해요인조사</strong></td>
+<td>부담작업 11종(고시) 보유 사업장 — <strong>정기 3년마다</strong> + 수시(질환자 발생, 신규 설비, 작업 변경)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<hr>
+</section>
+<section id="연습문제" class="level2">
+<h2 class="anchored" data-anchor-id="연습문제">연습문제</h2>
+<section id="문제-1.-설계-원칙의-적용" class="level3">
+<h3 class="anchored" data-anchor-id="문제-1.-설계-원칙의-적용">문제 1. 설계 원칙의 적용</h3>
+<p>다음 각 치수를 설계할 때 적용할 설계 원칙과 백분위수를 정하고, 근거를 설명하라.</p>
+<ol type="a">
+<li>지게차 운전석 머리 위 공간(헤드룸)</li>
+<li>벽면 소화기 거치대의 높이</li>
+<li>실험실 작업 의자의 좌판 높이</li>
+<li>작업 의자의 좌판 너비</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<strong>a — 최대치 설계(95th)</strong>: 키 큰 운전자도 머리가 닿지 않아야 하는 <strong>여유</strong> 치수다. <strong>b — 최소치 설계(5th)</strong>: 키 작은 사람도 꺼낼 수 있어야 하는 <strong>도달</strong> 치수다. <strong>c — 조절식 설계(5~95th)</strong>: 여러 사람이 장시간 사용하므로 조절식이 최우선이다. 조절이 불가능한 고정 의자라면 5th percentile 오금 높이(도달 성격). <strong>d — 최대치 설계(95th)</strong>: 엉덩이가 큰 사람도 앉을 수 있어야 하는 여유 치수다. 같은 의자에서도 치수마다(높이 vs 너비) 다른 원칙이 적용된다는 점이 핵심이다.
+</details>
+</section>
+<section id="문제-2.-작업역과-작업대-설계" class="level3">
+<h3 class="anchored" data-anchor-id="문제-2.-작업역과-작업대-설계">문제 2. 작업역과 작업대 설계</h3>
+<p>전자부품 조립 작업대를 설계한다. 작업자는 앉아서 ① 핀셋과 납땜인두(상시 사용), ② 부품 트레이(분당 수 회 사용), ③ 예비 부품 상자(하루 몇 번 사용)를 다룬다.</p>
+<ol type="a">
+<li>세 물품을 정상작업역·최대작업역 개념으로 배치하라.</li>
+<li>이 작업(정밀 조립)의 작업대 높이는 팔꿈치 높이 기준으로 어떻게 정해야 하는가?</li>
+<li>“예비 부품 상자를 작업자 뒤쪽 선반에 두면 몸을 돌리는 운동이 되어 오히려 건강에 좋다”는 주장을 근골격계질환 위험요인의 관점에서 평가하라.</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>a.</strong> ①핀셋·인두(상시)는 <strong>정상작업역 안</strong>(아래팔만 움직여 닿는 범위), ②부품 트레이는 정상작업역 경계~<strong>최대작업역 안</strong>, ③예비 부품 상자는 최대작업역 밖에 두되 <strong>사용 시 자리에서 일어나</strong> 접근하게 한다. 최대작업역 밖의 물건에 앉은 채 손을 뻗게 만드는 배치가 최악이다.</p>
+<p><strong>b.</strong> 정밀 작업이므로 팔꿈치 높이보다 <strong>약간 높게(0~10 cm)</strong> 하여 대상물을 눈 가까이 가져온다. 가능하면 조절식으로 한다.</p>
+<strong>c.</strong> 타당하지 않다. 앉은 채 뒤쪽으로 몸을 <strong>비트는 동작이 하루 수십 회 반복</strong>되면 그것은 “운동”이 아니라 부적절한 자세(비틀림)의 반복 — 허리 부담의 위험요인이다. 가끔 쓰는 물품은 <strong>일어나서 자세를 바꿔</strong> 가져오게 하는 배치가 옳다.
+</details>
+</section>
+<section id="문제-3.-niosh-들기공식-계산" class="level3">
+<h3 class="anchored" data-anchor-id="문제-3.-niosh-들기공식-계산">문제 3. NIOSH 들기공식 계산</h3>
+<p>작업자가 무게 15 kg의 상자를 드는 작업을 한다. 조건은 다음과 같다: 수평거리 <span class="math inline">\(H = 40\)</span> cm, 들기 시작 높이 <span class="math inline">\(V = 25\)</span> cm, 수직 이동거리 <span class="math inline">\(D = 50\)</span> cm, 비틀림 각도 <span class="math inline">\(A = 45°\)</span>, FM = 0.88, 손잡이 나쁨(CM = 0.90).</p>
+<ol type="a">
+<li>RWL을 계산하라 (소수점 둘째 자리까지).</li>
+<li>LI를 계산하고 위험도를 판정하라.</li>
+<li>승수 중 가장 작은 두 개를 지목하고, 각각에 대응하는 개선 대책을 제시하라.</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>a. RWL</strong> — HM = 25/40 = 0.625, VM = 1 − 0.003 × |25−75| = 0.85, DM = 0.82 + 4.5/50 = 0.91, AM = 1 − 0.0032 × 45 = 0.856, FM = 0.88, CM = 0.90</p>
+<p><span class="math display">\[
+\text{RWL} = 23 \times 0.625 \times 0.85 \times 0.91 \times 0.856 \times 0.88 \times 0.90
+\approx 7.53\ \text{kg}
+\]</span></p>
+<p><strong>b. LI</strong> = 15 / 7.53 ≈ <strong>1.99</strong>. <span class="math inline">\(1.0 \le \text{LI} &lt; 3.0\)</span>이므로 <strong>주의 수준</strong> — 일부 작업자에게 위험하며 개선이 권장된다.</p>
+<p><strong>c.&nbsp;개선 우선순위</strong> — 가장 작은 승수는 <strong>HM(0.625)</strong>과 <strong>VM(0.85)</strong>이다.</p>
+<ul>
+<li><strong>HM 개선</strong>: 상자를 몸에 붙여 들 수 있도록 작업 위치·상자 크기를 조정 (<span class="math inline">\(H = 40 \to 25\)</span> cm면 HM = 1.0, RWL은 약 1.6배로 커진다)</li>
+<li><strong>VM 개선</strong>: 팔레트 받침·리프트 테이블로 들기 시작 높이를 75 cm 부근으로 올린다 (<span class="math inline">\(V = 25 \to 75\)</span> cm면 VM = 1.0; 동시에 <span class="math inline">\(D\)</span>도 줄어 DM도 개선)</li>
+</ul>
+</details>
+</section>
+<section id="문제-4.-평가도구의-선택" class="level3">
+<h3 class="anchored" data-anchor-id="문제-4.-평가도구의-선택">문제 4. 평가도구의 선택</h3>
+<p>다음 각 상황에 가장 적합한 평가도구(OWAS, RULA, REBA, NIOSH 들기공식)를 선택하고 이유를 설명하라.</p>
+<ol type="a">
+<li>콜센터 사무실 — 하루 종일 키보드·마우스를 조작하는 작업자들의 손목·목 부담 평가</li>
+<li>병원 병동 — 간호사가 환자를 부축·이송하는 다양한 전신 자세의 부담 평가</li>
+<li>조선소 — 수백 개 작업을 빠르게 훑어 전신 자세가 나쁜 작업을 선별</li>
+<li>물류센터 — 상자를 파렛트에서 컨베이어로 옮기는 들기 작업의 허용 무게 판정</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<strong>a — RULA</strong>: 상지(팔·손목·목) 중심의 반복 작업이며 사무직이 대표 적용 분야다. <strong>b — REBA</strong>: 예측하기 어려운 다양한 전신 자세가 나타나는 의료업에 맞게 설계되었다. <strong>c — OWAS</strong>: 굵은 코드로 전신 자세를 빠르게 코드화하므로 다수 작업의 <strong>선별</strong>에 적합하다. 선별된 작업은 정밀 도구로 재평가한다. <strong>d — NIOSH 들기공식</strong>: 들기 작업 전용이며, 허용 무게(RWL)라는 <strong>정량적 한계값</strong>을 주는 도구는 이것뿐이다.
+</details>
+</section>
+<section id="문제-5.-유해요인조사-제도의-적용" class="level3">
+<h3 class="anchored" data-anchor-id="문제-5.-유해요인조사-제도의-적용">문제 5. 유해요인조사 제도의 적용</h3>
+<p>어느 자동차 부품 공장은 2023년 3월에 정기 유해요인조사를 마쳤다. 2025년 8월, 조립 라인에서 일하던 근로자 1명이 수근관증후군으로 업무상 질병 인정을 받았다.</p>
+<ol type="a">
+<li>사업주는 다음 정기 조사 시점(2026년 3월)까지 기다려도 되는가?</li>
+<li>이때 실시하는 조사에 포함되어야 할 세 가지 내용은 무엇인가?</li>
+<li>이 조사에서 해당 라인의 작업이 “하루 총 2시간 이상 손목을 사용한 같은 동작의 반복”으로 확인되었다면, 어떤 평가도구로 정밀 평가하는 것이 적절한가?</li>
+</ol>
+<details>
+<summary>
+정답 및 해설
+</summary>
+<p><strong>a. 기다려서는 안 된다.</strong> 근골격계질환자가 발생하여 업무상 질병으로 인정된 경우는 <strong>수시 유해요인조사</strong> 사유이므로, 정기 조사 주기(3년)와 무관하게 지체 없이 조사를 실시해야 한다. 신규 설비 도입, 작업환경 변경도 같은 수시 조사 사유다.</p>
+<p><strong>b.</strong> ① <strong>작업 조건</strong>(설비·공정·작업량·작업속도), ② <strong>작업 요인</strong>(작업시간·자세·방법), ③ <strong>증상 조사</strong>(근골격계질환의 징후·증상 유무). 환경과 사람 양쪽을 함께 보는 구조다.</p>
+<strong>c.&nbsp;RULA.</strong> 손목·팔 중심의 반복 동작이므로 상지 평가 도구인 RULA가 적절하다.
+</details>
+<hr>
+</section>
+</section>
+<section id="참고문헌" class="level2">
+<h2 class="anchored" data-anchor-id="참고문헌">참고문헌</h2>
+<ol type="1">
+<li>NIOSH (1994). <em>Applications Manual for the Revised NIOSH Lifting Equation</em>. DHHS (NIOSH) Publication No.&nbsp;94-110.</li>
+<li>McAtamney, L., &amp; Corlett, E. N. (1993). RULA: a survey method for the investigation of work-related upper limb disorders. <em>Applied Ergonomics</em>, 24(2), 91–99.</li>
+<li>Hignett, S., &amp; McAtamney, L. (2000). Rapid Entire Body Assessment (REBA). <em>Applied Ergonomics</em>, 31(2), 201–205.</li>
+<li>Karhu, O., Kansi, P., &amp; Kuorinka, I. (1977). Correcting working postures in industry: A practical method for analysis. <em>Applied Ergonomics</em>, 8(4), 199–201.</li>
+<li>ISO 11228-1:2021. <em>Ergonomics — Manual handling — Part 1: Lifting, lowering and carrying</em>.</li>
+<li>고용노동부. 근골격계부담작업의 범위 및 유해요인조사 방법에 관한 고시.</li>
+<li>산업안전보건기준에 관한 규칙 제12장 (근골격계부담작업으로 인한 건강장해의 예방).</li>
+<li>Plog, B. A., &amp; Quinlan, P. J. (2012). <em>Fundamentals of Industrial Hygiene</em> (6th ed.). National Safety Council.</li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "복사완료!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "복사완료!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/w11_biological_agents.html" class="pagination-link" aria-label="11주차. 생물학적 유해인자와 생물학적 모니터링">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">11주차. 생물학적 유해인자와 생물학적 모니터링</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/w13_ppe_work_management.html" class="pagination-link" aria-label="13주차. 개인보호구와 작업관리">
+        <span class="nav-page-text"><span class="chapter-title">13주차. 개인보호구와 작업관리</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
