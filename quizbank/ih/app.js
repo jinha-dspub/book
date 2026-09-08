@@ -44,7 +44,7 @@ async function derive(pw) {
 const cache = new Map();
 async function load(name, memo) {
   if (memo && cache.has(name)) return cache.get(name);
-  const res = await fetch(`data/${name}.enc`, { cache: 'force-cache' });
+  const res = await fetch(`data/${name}.enc?v=${BUILD}`);   // 판이 바뀌면 URL 이 바뀌어 옛 캐시를 쓰지 않는다
   if (!res.ok) throw new Error('없음');
   const buf = new Uint8Array(await res.arrayBuffer());
   const plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: buf.slice(0, 12) }, KEY, buf.slice(12));
@@ -209,6 +209,6 @@ function pick(e) {
   const saved = await DB.get('key');
   if (!saved || saved.salt !== SALT || saved.iter !== ITER) return;
   try { KEY = saved.key; MAN = await load('manifest', true); $('#gate').hidden = true; $('#app').hidden = false; route(); }
-  catch { await DB.clear(); }
+  catch { await DB.clear(); KEY = null; }
 })();
 
