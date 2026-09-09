@@ -40,5 +40,22 @@
         "label": "강의 슬라이드 (PDF)"
       }
     ]
+  },
+  {
+    "slug": "basic-medicine-for-data",
+    "title": "의료데이터분석을 위한 기초의학",
+    "subtitle": "A주차 강의 슬라이드 — 로그인 없이 열립니다",
+    "author": "윤진하 · 연세대학교 의과대학 예방의학교실 · 산업보건연구소",
+    "external": true,
+    "links": [
+      {
+        "url": "https://docs.google.com/presentation/d/1rO-ezYVc0oOAZmd2nfPnPE0g8bfVC5o-Q9piMg-d1nY/preview",
+        "label": "강의 슬라이드 (Google Slides)"
+      },
+      {
+        "url": "https://docs.google.com/presentation/d/1rO-ezYVc0oOAZmd2nfPnPE0g8bfVC5o-Q9piMg-d1nY/export/pdf",
+        "label": "PDF 내려받기"
+      }
+    ]
   }
 ]
