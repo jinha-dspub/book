@@ -12,7 +12,7 @@
     (예: 로그인 없이 열리는 Google Slides). src 도 없어야 한다.
 extras(예: slides 폴더의 pdf)도 그대로 쓴다.
 """
-import html, json, shutil, sys
+import argparse, html, json, re, shutil, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -43,10 +43,57 @@ def copy_site(src: Path, out: Path) -> None:
             n += 1
     print(f"  사이트 {n}개 파일 -> {out.relative_to(ROOT)}/")
 
+def render_chapters(book: dict) -> None:
+    """Google Slides 챕터 목록과 첫 챕터 미리보기를 만든다."""
+    chapters = book["chapters"]
+    if not chapters:
+        raise ValueError("chapters에는 챕터가 하나 이상 필요합니다")
+    seen = set()
+    cards = []
+    for chapter in chapters:
+        key, presentation = chapter["id"], chapter["presentation_id"]
+        if not re.fullmatch(r"[a-z0-9-]+", key) or key in seen:
+            raise ValueError(f"챕터 id가 잘못되었거나 중복됩니다: {key}")
+        if not re.fullmatch(r"[A-Za-z0-9_-]+", presentation):
+            raise ValueError("Google Slides presentation_id를 확인하세요")
+        seen.add(key)
+        title = html.escape(chapter["title"])
+        base = f"https://docs.google.com/presentation/d/{presentation}"
+        cards.append(
+            f'<li><a class="chapter" id="{key}" href="#{key}" '
+            f'data-preview="{base}/preview">{title}</a>'
+            f'<div class="links"><a href="{base}/preview" target="_blank" rel="noopener">'
+            f'Google Slides에서 열기</a> <a href="{base}/export/pdf">PDF 내려받기</a></div></li>'
+        )
+    first = chapters[0]
+    replacements = {
+        "<!--TITLE-->": html.escape(book["title"]),
+        "<!--AUTHOR-->": html.escape(book.get("author", "")),
+        "<!--CHAPTERS-->": "\n".join(cards),
+        "<!--FIRST_TITLE-->": html.escape(first["title"]),
+        "<!--FIRST_PREVIEW-->": f'https://docs.google.com/presentation/d/{first["presentation_id"]}/preview',
+    }
+    page = (ROOT / "slides.template.html").read_text(encoding="utf-8")
+    for marker, value in replacements.items():
+        page = page.replace(marker, value)
+    out = ROOT / book["slug"] / "slides"
+    out.mkdir(parents=True, exist_ok=True)
+    (out / "index.html").write_text(page, encoding="utf-8")
+    print(f"  {book['slug']}/slides/index.html 갱신")
+
+
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--catalog-only", action="store_true",
+                        help="교재 파일 복사 없이 목록과 Google Slides 챕터 페이지만 갱신")
+    args = parser.parse_args()
     books = json.loads((ROOT / "books.json").read_text(encoding="utf-8"))
     for b in books:
         print(f"[{b['slug']}] {b['title']}")
+        if b.get("chapters") is not None:
+            render_chapters(b)
+        if args.catalog_only:
+            continue
         if b.get("external"):
             print("  바깥 링크 — 복사할 파일 없음")
             continue
@@ -71,7 +118,9 @@ def main() -> None:
     items = []
     for b in books:
         f = b.get("files", {}); s = b["slug"]
-        if b.get("external"):
+        if b.get("chapters") is not None:
+            links = [f'<a href="/{s}/slides/">강의 슬라이드</a>']
+        elif b.get("external"):
             links = [f'<a href="{html.escape(l["url"])}" target="_blank" rel="noopener">'
                      f'{html.escape(l["label"])}</a>' for l in b["links"]]
         else:

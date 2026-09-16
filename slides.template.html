@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><!--TITLE--> — 강의 슬라이드</title>
+<style>
+  body{margin:0;font-family:"Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;color:#222;background:#fff;word-break:keep-all}
+  main{max-width:64rem;margin:0 auto;padding:2.5rem 1.5rem}
+  h1{font-size:1.75rem;margin:1.5rem 0 .5rem}
+  .sub{color:#6b6f76;margin:.5rem 0 2rem}
+  a{color:#003876}
+  ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:1rem}
+  li{flex:1 1 16rem;border:1px solid #dfe1e5;border-radius:.5rem;padding:1rem}
+  .chapter{display:inline-block;font-size:1.15rem;font-weight:700;padding:.35rem .6rem;border-radius:.25rem}
+  .chapter[aria-current="true"]{background:#003876;color:#fff;text-decoration:none}
+  .links{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1rem;font-size:.9rem}
+  h2{font-size:1.2rem;margin-top:2rem}
+  iframe{display:block;width:100%;aspect-ratio:16/9;border:1px solid #dfe1e5;box-sizing:border-box}
+  a:focus-visible{outline:3px solid #0078d4;outline-offset:3px}
+  footer{margin-top:2rem;color:#6b6f76;font-size:.9rem}
+</style>
+</head>
+<body>
+<main>
+  <a href="/">← 전체 교재</a>
+  <h1><!--TITLE--></h1>
+  <p class="sub"><!--AUTHOR--></p>
+  <p>챕터를 선택하면 아래에서 슬라이드를 볼 수 있습니다.</p>
+  <nav aria-label="강의 챕터"><ul>
+<!--CHAPTERS-->
+  </ul></nav>
+  <noscript><p>각 챕터의 ‘Google Slides에서 열기’ 링크를 이용해 주세요.</p></noscript>
+  <section aria-labelledby="preview-title">
+    <h2 id="preview-title" aria-live="polite"><!--FIRST_TITLE--></h2>
+    <iframe id="preview" src="<!--FIRST_PREVIEW-->" title="<!--FIRST_TITLE--> 슬라이드" allowfullscreen></iframe>
+    <p class="sub">슬라이드가 보이지 않으면 해당 챕터의 ‘Google Slides에서 열기’를 눌러 주세요.</p>
+  </section>
+  <footer><a href="https://yioh.ai.kr">yioh.ai.kr</a> · 연세대학교 산업보건연구소</footer>
+</main>
+<script>
+  const chapters = Array.from(document.querySelectorAll('.chapter'));
+  const preview = document.getElementById('preview');
+  const heading = document.getElementById('preview-title');
+  function selectChapter() {
+    const selected = chapters.find(chapter => '#' + chapter.id === location.hash) || chapters[0];
+    for (const chapter of chapters) {
+      if (chapter === selected) chapter.setAttribute('aria-current', 'true');
+      else chapter.removeAttribute('aria-current');
+    }
+    heading.textContent = selected.textContent;
+    preview.title = selected.textContent + ' 슬라이드';
+    if (preview.getAttribute('src') !== selected.dataset.preview) preview.src = selected.dataset.preview;
+  }
+  window.addEventListener('hashchange', selectChapter);
+  selectChapter();
+</script>
+</body>
+</html>
