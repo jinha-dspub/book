@@ -66,6 +66,9 @@ kbd { padding: 1px 6px; background: #1E293B; border: 1px solid #334155; border-r
   box-shadow: 0 30px 80px rgba(0,0,0,.9), 0 0 0 1px rgba(255,255,255,.08);
 }
 .stage:fullscreen { max-width: none; border-radius: 0; box-shadow: none; }
+body.presentation-fullscreen { height: 100vh; min-height: 0; padding: 0; overflow: hidden; }
+body.presentation-fullscreen .ui-chrome { display: none; }
+body.presentation-fullscreen .stage { width: 1280px; max-width: none; height: 720px; flex: none; border-radius: 0; box-shadow: none; }
 
 .ribbon {
   position: absolute; top: 0; left: 0; right: 0; padding: 22px 38px; z-index: 40;

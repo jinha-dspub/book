@@ -25,6 +25,12 @@ window.Scene = (function () {
   }
 
   let cfg, cur = 0, playing = false, timer = null, loop = false;
+  const inPlayer = window.parent !== window && window.name === 'work-health-history-slide';
+  const targetOrigin = location.protocol === 'file:' ? '*' : location.origin;
+  let playerFullscreen = false;
+  function tellPlayer(message) {
+    window.parent.postMessage({ channel: 'work-health-history', ...message }, targetOrigin);
+  }
   const $ = (s, r = document) => r.querySelector(s);
   const el = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; };
 
@@ -80,15 +86,33 @@ window.Scene = (function () {
   function toggle() { playing = !playing; paint(); playing ? schedule() : clearTimeout(timer); }
   function restart() { playing = true; paint(); set(0); schedule(); }
   function fullscreen() {
+    if (inPlayer) {
+      try {
+        if (typeof window.parent.togglePresentationFullscreen === 'function') {
+          window.parent.togglePresentationFullscreen();
+          return;
+        }
+      } catch {} // file:// frames can have separate opaque origins.
+      tellPlayer({ type: 'fullscreen-toggle' });
+      return;
+    }
     const st = $('.stage');
     if (!document.fullscreenElement) st.requestFullscreen().catch(() => {}); else document.exitFullscreen().catch(() => {});
   }
   function fitFullscreen() {
     const st = $('.stage'); if (!st) return;
-    if (document.fullscreenElement === st) { st.style.zoom = Math.min(innerWidth / 1280, innerHeight / 720); } else st.style.zoom = '';
+    document.body.classList.toggle('presentation-fullscreen', playerFullscreen);
+    if (playerFullscreen || document.fullscreenElement === st) { st.style.zoom = Math.min(innerWidth / 1280, innerHeight / 720); } else st.style.zoom = '';
   }
 
   function init(c) {
+    if (window === window.top) {
+      const player = new URL('present.html', location.href);
+      player.search = location.search;
+      player.searchParams.set('slide', location.pathname.split('/').pop());
+      location.replace(player.href);
+      return;
+    }
     cfg = c; loop = !!c.loop;
     document.body.dataset.steps = c.steps.length;
     build();
@@ -100,8 +124,8 @@ window.Scene = (function () {
 
     addEventListener('keydown', e => {
       const k = e.key;
-      if (k === 'ArrowRight') { stop(); if (cur < cfg.steps.length - 1) set(cur + 1); else if (cfg.next) location.href = cfg.next; }
-      else if (k === 'ArrowLeft') { stop(); if (cur > 0) set(cur - 1); else if (cfg.prev) location.href = cfg.prev + '?step=last'; }
+      if (k === 'ArrowRight') { e.preventDefault(); stop(); if (cur < cfg.steps.length - 1) set(cur + 1); else if (cfg.next) location.href = cfg.next; }
+      else if (k === 'ArrowLeft') { e.preventDefault(); stop(); if (cur > 0) set(cur - 1); else if (cfg.prev) location.href = cfg.prev + '?step=last'; }
       else if (k === 'PageDown') { e.preventDefault(); if (cfg.next) location.href = cfg.next; }
       else if (k === 'PageUp') { e.preventDefault(); if (cfg.prev) location.href = cfg.prev; }
       else if (k === ' ') { e.preventDefault(); toggle(); }
@@ -110,6 +134,21 @@ window.Scene = (function () {
       else if (k === 'h' || k === 'H') document.body.classList.toggle('clean');
     });
     addEventListener('fullscreenchange', fitFullscreen); addEventListener('resize', fitFullscreen);
+    if (inPlayer) {
+      addEventListener('message', event => {
+        if (event.source !== window.parent || event.origin !== location.origin) return;
+        if (event.data?.channel !== 'work-health-history' || event.data.type !== 'fullscreen-state') return;
+        playerFullscreen = event.data.active === true;
+        fitFullscreen();
+        dispatchEvent(new Event('resize'));
+      });
+      tellPlayer({
+        type: 'ready',
+        slide: location.pathname.split('/').pop(),
+        search: location.search,
+        title: document.title,
+      });
+    }
   }
 
   // helpers
