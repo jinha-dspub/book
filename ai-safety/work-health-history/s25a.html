@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>25-A · 기계의 속도, 사람의 몸 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .film { position: absolute; left: 38px; top: 96px; width: 960px; height: 540px; background: #000; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  .film-poster { width: 100%; height: 100%; object-fit: contain; opacity: .65; }
+  .film iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .film-info { position: absolute; left: 1020px; right: 28px; top: 100px; }
+  .film-info .kick { font: 600 12px var(--mono); letter-spacing: .1em; color: var(--red); }
+  .film-info h2 { margin: 18px 0; font: 700 29px/1.35 var(--sans); }
+  .film-info p { font-size: 15px; line-height: 1.65; color: var(--muted); }
+  .film-time { margin: 22px 0; font: 600 17px/1.7 var(--mono); color: var(--gold); }
+  .film-info .btn { width: 100%; padding: 12px 8px; font-size: 15px; }
+  .film-status { margin: 14px 0; min-height: 65px; font-size: 12px !important; }
+  .film-info .nav { display: flex; gap: 8px; margin: 18px 0; }
+  .film-info .nav a { color: var(--text); text-decoration: none; border: 1px solid #334155; border-radius: 8px; padding: 10px 12px; font-size: 13px; }
+  .film-info .source-link { color: var(--muted); font-size: 12px; }
+  .stepper .ctl { display: none; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="film" id="film">
+    <img class="film-poster" src="assets/img/chaplin_gears.jpg" alt="찰리 채플린, 〈모던 타임즈〉의 톱니바퀴 장면">
+  </div>
+  <div class="film-info">
+    <div class="kick">FILM · 25-A</div>
+    <h2>속도는 누가<br>정하는가</h2>
+    <p>찰리 채플린<br>〈모던 타임즈〉 (1936)</p>
+    <div class="film-time">01:48 — 03:50<br><small>2분 02초</small></div>
+    <button class="btn primary" id="clipPlay" type="button">▶ 영상 재생</button>
+    <p class="film-status" id="clipStatus" role="status">인터넷 연결 필요<br>재생 버튼을 눌러 시작합니다.</p>
+    <div class="nav"><a href="s25.html?step=last">‹ 25번</a><a href="s26.html">26번 ›</a></div>
+    <a class="source-link" href="https://www.youtube.com/watch?v=200LRkVKPRg&amp;t=108s" target="_blank" rel="noopener">유튜브에서 보기 (1:48) ↗</a>
+  </div>
+</div>
+<script src="scene.js"></script>
+<script>
+  (() => {
+    const film = document.getElementById('film');
+    const play = document.getElementById('clipPlay');
+    const status = document.getElementById('clipStatus');
+    let player;
+
+    function stopClip() {
+      if (player) { player.remove(); player = null; }
+    }
+    function playClip() {
+      if (location.protocol === 'file:') {
+        status.textContent = '영상은 인터넷에 연결한 뒤 웹 발표 페이지에서 재생해 주세요. 아래 “유튜브에서 보기”로도 열 수 있습니다.';
+        return;
+      }
+      stopClip();
+      const url = new URL('https://www.youtube.com/embed/200LRkVKPRg');
+      url.search = new URLSearchParams({
+        start: '108', end: '230', autoplay: '1', playsinline: '1', rel: '0', fs: '0'
+      }).toString();
+      player = document.createElement('iframe');
+      player.title = '찰리 채플린 — 1분 48초부터 3분 50초까지';
+      player.allow = 'autoplay; encrypted-media; picture-in-picture';
+      player.referrerPolicy = 'strict-origin-when-cross-origin';
+      player.src = url.href;
+      film.append(player);
+      play.textContent = '↺ 구간 다시 재생';
+      status.textContent = '재생되지 않으면 영상 안의 ▶를 눌러 주세요. 구간이 끝나면 26번으로 넘깁니다.';
+    }
+    Scene.init({
+      id: '25-A', meta: 'CHAPTER 1 · 통제 방식의 진화 · 영상', lit: 1,
+      prev: 's25.html', next: 's26.html',
+      steps: [{
+        n: 'FILM', name: '2분 02초', title: '기계의 속도, 사람의 몸',
+        header: '기계의 속도, 사람의 몸',
+        caption: '속도를 <span class="gold">정하는 것</span>은 누구이고, 그 속도를 <span class="red">감당하는 것</span>은 누구인가'
+      }],
+      leave: stopClip
+    });
+    const keys = document.querySelector('.stepper .keys');
+    if (keys) keys.textContent = '영상 바깥 클릭 후 PgUp / PgDn · 화면의 26번 버튼으로 이동';
+    play.addEventListener('click', playClip);
+    addEventListener('pagehide', stopClip);
+  })();
+</script>
+</body>
+</html>
