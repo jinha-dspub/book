@@ -5,7 +5,7 @@
   const presentation = document.getElementById('presentation');
   const status = document.getElementById('fullscreen-status');
   const targetOrigin = location.protocol === 'file:' ? '*' : location.origin;
-  const slidePattern = /^s(?:0[1-9]|[1-4]\d|5[0-5]|25a)\.html$/;
+  const slidePattern = /^s(?:0[1-9]|[1-4]\d|5[0-5]|08a|25a)\.html$/;
 
   function slideQuery(params) {
     const query = new URLSearchParams();

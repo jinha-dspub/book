@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>08-A · 사람들은 무엇을 기록했는가 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .film { position: absolute; left: 38px; top: 96px; width: 960px; height: 540px; background: #000; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  .film-question { width: 100%; height: 100%; padding: 70px; display: flex; flex-direction: column; justify-content: center; background: radial-gradient(ellipse at 15% 20%, #25231D, #0B0D10 75%); }
+  .film-question .label { font: 600 13px var(--mono); letter-spacing: .12em; color: var(--gold); margin-bottom: 28px; }
+  .film-question h2 { font: 600 52px/1.35 var(--sans); letter-spacing: -.02em; }
+  .film-question h2 em { color: var(--gold); font-style: normal; }
+  .film-question p { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 18px; color: var(--muted); }
+  .film iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .film-info { position: absolute; left: 1020px; right: 28px; top: 100px; }
+  .film-info .kick { font: 600 12px var(--mono); letter-spacing: .1em; color: var(--red); }
+  .film-info h2 { margin: 18px 0; font: 700 29px/1.35 var(--sans); }
+  .film-info p { font-size: 15px; line-height: 1.65; color: var(--muted); }
+  .film-time { margin: 22px 0; font: 600 17px/1.7 var(--mono); color: var(--gold); }
+  .film-info .btn { width: 100%; padding: 12px 8px; font-size: 15px; }
+  .film-status { margin: 14px 0; min-height: 65px; font-size: 12px !important; }
+  .film-info .nav { display: flex; gap: 8px; margin: 18px 0; }
+  .film-info .nav a { color: var(--text); text-decoration: none; border: 1px solid #334155; border-radius: 8px; padding: 10px 12px; font-size: 13px; }
+  .film-info .source-link { color: var(--muted); font-size: 12px; }
+  .stepper .ctl { display: none; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="film" id="film">
+    <div class="film-question">
+      <div class="label">기록을 보는 질문</div>
+      <h2>사람들은<br>무엇을 <em>기록했는가</em></h2>
+      <p>기록한 사람 · 남겨진 것 · 빠진 것</p>
+    </div>
+  </div>
+  <div class="film-info">
+    <div class="kick">FILM · 08-A</div>
+    <h2>기록은 무엇을<br>남기는가</h2>
+    <p>함께 보는 영상<br>기록에 남은 것과 빠진 것</p>
+    <div class="film-time">전체 영상<br><small>처음부터 재생</small></div>
+    <button class="btn primary" id="clipPlay" type="button">▶ 영상 재생</button>
+    <p class="film-status" id="clipStatus" role="status">인터넷 연결 필요<br>재생 버튼을 눌러 시작합니다.</p>
+    <div class="nav"><a href="s08.html?step=last">‹ 8번</a><a href="s09.html">9번 ›</a></div>
+    <a class="source-link" href="https://www.youtube.com/watch?v=nlcHftKOboQ" target="_blank" rel="noopener">유튜브에서 보기 ↗</a>
+  </div>
+</div>
+<script src="scene.js"></script>
+<script>
+  (() => {
+    const film = document.getElementById('film');
+    const play = document.getElementById('clipPlay');
+    const status = document.getElementById('clipStatus');
+    let player;
+
+    function stopClip() {
+      if (player) { player.remove(); player = null; }
+    }
+    function playClip() {
+      if (location.protocol === 'file:') {
+        status.textContent = '영상은 인터넷에 연결한 뒤 웹 발표 페이지에서 재생해 주세요. 아래 “유튜브에서 보기”로도 열 수 있습니다.';
+        return;
+      }
+      stopClip();
+      const url = new URL('https://www.youtube.com/embed/nlcHftKOboQ');
+      url.search = new URLSearchParams({
+        start: '0', autoplay: '1', playsinline: '1', rel: '0', fs: '0'
+      }).toString();
+      player = document.createElement('iframe');
+      player.title = '사람들은 무엇을 기록했는가 — 함께 보는 영상';
+      player.allow = 'autoplay; encrypted-media; picture-in-picture';
+      player.referrerPolicy = 'strict-origin-when-cross-origin';
+      player.src = url.href;
+      film.append(player);
+      play.textContent = '↺ 처음부터 다시 재생';
+      status.textContent = '재생되지 않으면 영상 안의 ▶를 눌러 주세요. 설명을 이어갈 때 9번으로 넘깁니다.';
+    }
+    Scene.init({
+      id: '08-A', meta: '들어가며 · 기록을 보는 질문 · 영상', lit: 1,
+      prev: 's08.html', next: 's09.html',
+      steps: [{
+        n: 'FILM', name: '기록의 선택', title: '사람들은 무엇을 기록했는가',
+        header: '사람들은 무엇을 기록했는가',
+        caption: '기록을 <span class="gold">남긴 사람</span>은 누구이며, 그 기록에는 <span class="gold">누구의 삶</span>이 남아 있는가'
+      }],
+      leave: stopClip
+    });
+    const keys = document.querySelector('.stepper .keys');
+    if (keys) keys.textContent = '영상 바깥 클릭 후 PgUp / PgDn · 화면의 9번 버튼으로 이동';
+    play.addEventListener('click', playClip);
+    addEventListener('pagehide', stopClip);
+  })();
+</script>
+</body>
+</html>
