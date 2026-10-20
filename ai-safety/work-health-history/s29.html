@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>29 · 1983년 — 두 번의 경보 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .fig.time { left: 38px; top: 162px; width: 230px; height: 310px; background: #0B1118; }
+  .fig.time img { object-fit: contain; }
+  .fig.petrov { left: 660px; top: 162px; width: 230px; height: 310px; background: #0B1118; }
+  .fig.petrov img { object-fit: cover; transform: scale(1.07); }
+  /* blinking strike banner over the console image */
+  .strike { position: absolute; left: 0; right: 0; top: 40%; height: 16%; display: grid; place-items: center; background: rgba(37,99,235,.92); color: #fff; font: 800 17px var(--mono); letter-spacing: .12em; animation: blink 1.1s steps(2) infinite; z-index: 2; }
+  .strike small { display: block; font: 500 9px var(--mono); letter-spacing: .3em; color: #BFDBFE; margin-top: 3px; text-align: center; }
+  @keyframes blink { 50% { background: rgba(220,38,38,.95); } }
+  .fig.hold .strike { animation: none; background: rgba(220,38,38,.95); }
+  .date { position: absolute; top: 170px; width: 330px; z-index: 36; }
+  .date.l { left: 286px; } .date.r { left: 908px; }
+  .date .d { font: 700 13px var(--mono); letter-spacing: .08em; color: var(--gold); margin-bottom: 8px; }
+  .date .t { font: 700 19px/1.35 var(--sans); letter-spacing: -.02em; }
+  .date .s { font-size: 13.5px; line-height: 1.55; color: var(--muted); margin-top: 10px; }
+  .date .s b { color: #E2E8F0; font-weight: 600; }
+  .date { opacity: 0; transform: translateY(10px); transition: opacity .8s var(--ease-out) .3s, transform .8s var(--ease-out) .3s; }
+  .date.on { opacity: 1; transform: none; }
+  .vs { position: absolute; left: 626px; top: 318px; transform: translate(-50%, -50%); z-index: 36; width: 64px; height: 64px; border-radius: 50%; background: var(--stage-bg); border: 1px solid var(--line); display: grid; place-items: center; font: 700 13px var(--mono); color: var(--muted); opacity: 0; transition: opacity .6s; }
+  .vs.on { opacity: 1; }
+  .thesis { bottom: 92px; left: 38px; right: 38px; display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 0; background: none; border: none; }
+  .thesis span { display: block; padding: 14px 18px; font-size: 21px; line-height: 1.4; }
+  .thesis span.a { background: rgba(230,43,30,.08); border: 1px solid rgba(230,43,30,.5); border-radius: 12px 0 0 12px; color: #FF9B94; }
+  .thesis span.b { background: rgba(240,180,41,.08); border: 1px solid rgba(240,180,41,.45); border-left: none; border-radius: 0 12px 12px 0; color: var(--gold); opacity: 0; transition: opacity .8s .9s; }
+  .thesis.on span.b { opacity: 1; }
+  .source { left: 38px; bottom: 72px; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">CHAPTER 2 · AI 시대의 루프</div><h2>1983년 — 두 번의 경보</h2></div>
+
+  <div class="fig time" id="time"><img src="assets/img/time_kal007.png" alt="TIME, Shooting to Kill (1983. 9. 12)"></div>
+  <div class="date l" id="d1"><div class="d">1983. 9. 1</div><div class="t">대한항공 007편 격추, 269명 사망</div><div class="s">소련 방공 시스템은 민항기를 미군 정찰기로 판정했고, 그 판정은 지휘 계통을 <b>그대로 통과</b>해 미사일 발사로 이어졌다.<br><span style="font-size:12px">(TIME, 1983. 9. 12)</span></div></div>
+
+  <div class="vs" id="vs">25일</div>
+
+  <div class="fig petrov hide" id="petrov"><img src="assets/img/petrov_console.png" alt="세르푸호프-15 벙커, 페트로프의 콘솔"><div class="strike">MISSILE STRIKE<small>HIGH RELIABILITY</small></div></div>
+  <div class="date r" id="d2"><div class="d">1983. 9. 26</div><div class="t">세르푸호프-15 벙커, 페트로프의 콘솔 “MISSILE STRIKE”</div><div class="s">조기경보 시스템이 ICBM 발사를 ‘최고 신뢰도’로 보고 — 1발, 이어서 5발. 당직 장교 페트로프는 <b>누구도 단 5발로 전쟁을 시작하지 않는다</b>고 판단했다.</div></div>
+
+  <div class="thesis" id="thesis"><span class="a">시스템의 판정이 그대로 통과된 날, 269명이 죽었다</span><span class="b">— 인간이 시스템을 의심한 밤, 세계가 살았다</span></div>
+  <div class="source">1983. 9. 1 — 대한항공 007편 격추, 269명 사망 (TIME, 1983. 9. 12) · 1983. 9. 26 — 세르푸호프-15 벙커, 페트로프의 콘솔 “MISSILE STRIKE”</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '29', meta: 'CHAPTER 2 · AI 시대의 루프', lit: 1,
+    prev: 's28.html', next: 's30.html',
+    steps: [
+      { n: 'STEP 01', name: '9월 1일', title: 'KAL 007', header: '1983년 가을, 25일 간격으로', dur: 7000,
+        caption: '시스템의 오인을 인간이 <span class="red">걸러내지 못하면</span> 무슨 일이 일어나는지, 세계가 목격한 사건' },
+      { n: 'STEP 02', name: '9월 26일', title: '페트로프의 밤', header: '1983년 — 두 번의 경보', dur: 8000,
+        caption: '화면에는 “MISSILE STRIKE” — 그는 경보를 <span class="gold">‘시스템 오작동’</span>으로 보고했다. 위성이 구름에 반사된 햇빛을 미사일 화염으로 오인한 것이었다' },
+      { n: 'STEP 03', name: '같은 시스템, 다른 결과', title: '기계를 의심할 수 있는 인간의 위치', header: '자동화 시대의 안전은 기계의 성능이 아니라', dur: 7000,
+        caption: '기계를 <span class="gold">의심할 수 있는 인간의 위치</span>에 달려 있다 — 그 ‘위치’에 이름을 붙인 것이 다음 장이다' },
+    ],
+    apply(i) {
+      d1.classList.toggle('on', i >= 0);
+      petrov.classList.toggle('hide', i < 1); d2.classList.toggle('on', i >= 1); vs.classList.toggle('on', i >= 1);
+      time.classList.toggle('quiet', i === 1);
+      petrov.classList.toggle('hold', i >= 2);
+      thesis.classList.toggle('on', i >= 2);
+    }
+  });
+</script>
+</body>
+</html>

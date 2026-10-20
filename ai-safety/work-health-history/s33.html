@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>33 · 누구를 위한 공간인가 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .stage { transition: background 1.6s; }
+  .stage.dark { background: #000; }
+  .stage.dark .ribbon, .stage.dark .caption { background: none; }
+  .grid { position: absolute; left: 38px; right: 38px; top: 168px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; z-index: 35; }
+  .num { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 30px 26px 26px; text-align: center; opacity: 0; transform: translateY(20px);
+         transition: opacity .8s var(--ease-out), transform .8s var(--ease-out), background 1.2s, border-color 1.2s; }
+  .num.on { opacity: 1; transform: none; }
+  .num .v { font: 700 64px/1 var(--mono); color: var(--red); letter-spacing: -.03em; margin-bottom: 14px; }
+  .num .w { font: 700 22px/1.3 var(--sans); margin-bottom: 6px; }
+  .num .d { font-size: 14.5px; color: var(--muted); line-height: 1.5; }
+  .num.lux.off { background: #000; border-color: #111; }
+  .num.lux.off .v { color: #2A2A2A; text-shadow: none; } .num.lux.off .w, .num.lux.off .d { color: #333; }
+  .stage.dark .num:not(.lux) { opacity: .55; }
+  .led { position: absolute; width: 6px; height: 6px; border-radius: 50%; background: #22C55E; box-shadow: 0 0 10px #22C55E; opacity: 0; transition: opacity 1s 1.2s; }
+  .stage.dark .led { opacity: 1; animation: blinkLed 2.4s infinite; }
+  @keyframes blinkLed { 0%, 70% { opacity: 1 } 80% { opacity: .2 } 100% { opacity: 1 } }
+  .two { position: absolute; left: 38px; right: 38px; bottom: 92px; z-index: 36; }
+  .two .line { text-align: center; font: 600 20px/1.4 var(--sans); padding: 12px 20px; border-radius: 10px; margin-top: 10px; background: rgba(12,19,28,.9); border: 1px solid var(--line); }
+  .two .line b { color: var(--gold); }
+  .two .line.r { color: #FF9B94; border-color: rgba(230,43,30,.5); font-size: 22px; font-weight: 700; }
+  .head h2, .head .kick { transition: color 1.2s; }
+  .stage.dark .head h2 { color: #E2E8F0; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">CHAPTER 2 · AI 시대의 루프</div><h2>누구를 위한 공간인가</h2></div>
+
+  <div class="grid">
+    <div class="num" id="n1"><div class="v" id="v1">0°C</div><div class="w">냉동 물류센터</div><div class="d">식품과 기계를 위한 온도</div></div>
+    <div class="num" id="n2"><div class="v">O<sub style="font-size:.55em">2</sub> <span id="v2">21</span>%</div><div class="w">저산소 자동창고</div><div class="d">화재 예방을 위한 공기</div></div>
+    <div class="num lux" id="n3"><div class="v" id="v3">500 lux</div><div class="w">소등 공장</div><div class="d">로봇에게 어둠은 무해하다</div></div>
+  </div>
+  <!-- machine status LEDs that stay on in the dark -->
+  <div class="led" style="left:12%;top:62%"></div><div class="led" style="left:31%;top:70%;animation-delay:.7s"></div><div class="led" style="left:57%;top:66%;animation-delay:1.3s"></div><div class="led" style="left:83%;top:72%;animation-delay:.4s"></div><div class="led" style="left:70%;top:58%;animation-delay:1.9s"></div>
+
+  <div class="two lines" id="two">
+    <div class="line">‘사람이 없는 공간’은 작업환경 기준에서 면제된다 — 그러나 <b>비정상 작업의 순간, 사람이 들어간다</b></div>
+    <div class="line r">무인화는 — 안전(Safety)의 문제를, 보건(Health)의 문제로 바꾸고 있다</div>
+  </div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  const done = {};
+  function cnt(k, el, to, from, fmt) { if (done[k]) { el.textContent = fmt(to); return; } done[k] = true; Scene.count(el, to, { from, dur: 1500, fmt }); }
+  Scene.init({
+    id: '33', meta: 'CHAPTER 2 · AI 시대의 루프', lit: 2,
+    prev: 's32.html', next: 's34.html',
+    steps: [
+      { n: 'STEP 01', name: '−25°C', title: '식품과 기계를 위한 온도', header: '로봇이 일하는 공간은 로봇을 위해 설계된다', dur: 4500,
+        caption: '화면의 세 숫자를 보라 — 이 공간들의 설계 변수에 <span class="red">사람의 생존 조건</span>은 없다' },
+      { n: 'STEP 02', name: 'O₂ 15%', title: '불이 살 수 없는 공기', header: '로봇이 일하는 공간은 로봇을 위해 설계된다', dur: 4500,
+        caption: '불이 살 수 없는 공기 — 그리고 <span class="red">사람도 오래 살 수 없는</span> 공기' },
+      { n: 'STEP 03', name: '0 lux', title: '조명은 사람을 위한 것이었다', header: '누구를 위한 공간인가', dur: 6000,
+        caption: '어둠은 로봇에게 유해인자가 아니니까 — 없어도 된다, <span class="gold">사람이 없는 공간이니까</span>' },
+      { n: 'STEP 04', name: '건축이 된 침대', title: 'Safety → Health', header: '무인화는 안전의 문제를 보건의 문제로 바꾼다', dur: 8000,
+        caption: '알고리즘의 12분이 시간의 침대였다면, 이것은 <span class="gold">건축이 된 침대</span>다' },
+    ],
+    apply(i) {
+      n1.classList.toggle('on', i >= 0); n2.classList.toggle('on', i >= 1); n3.classList.toggle('on', i >= 2);
+      if (i >= 0) cnt('t', v1, -25, 0, v => `${Math.round(v)}°C`); else { done.t = false; }
+      if (i >= 1) cnt('o', v2, 15, 21, v => `${Math.round(v)}`); else { done.o = false; v2.textContent = '21'; }
+      if (i >= 2) cnt('l', v3, 0, 500, v => `${Math.round(v)} lux`); else { done.l = false; v3.textContent = '500 lux'; }
+      stage.classList.toggle('dark', i >= 2); n3.classList.toggle('off', i >= 2);
+      two.classList.toggle('show', i === 3);
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>48 · 방관자가 된 인간 — Human Out-of-the-Loop — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .fig.monk { left: 38px; top: 168px; width: 560px; height: 300px; }
+  .fig.monk img { object-position: 50% 40%; }
+  .fig.wand { right: 38px; top: 168px; width: 560px; height: 300px; }
+  .fig.wand img { object-position: 50% 30%; }
+  .band { position: absolute; left: 50%; transform: translateX(-50%) translateY(10px); top: 486px; z-index: 36; display: flex; align-items: center; gap: 16px; padding: 10px 26px; border-radius: 999px;
+          background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); opacity: 0; transition: opacity .7s, transform .7s; }
+  .band.on { opacity: 1; transform: translateX(-50%); }
+  .band span { font: 700 15px var(--sans); color: var(--muted); padding: 5px 14px; border-radius: 999px; }
+  .band .ar { color: var(--dim); padding: 0; }
+  .band span.out { background: var(--red); color: #fff; box-shadow: 0 0 20px rgba(230,43,30,.6); }
+  .thesis { bottom: 92px; font-size: 21px; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">CHAPTER 3 · 파편적 데이터에서 맥락성 정보로</div><h2>방관자가 된 인간 — Human Out-of-the-Loop</h2></div>
+
+  <div class="fig monk" id="monk"><img src="assets/img/friedrich_monk.jpg" alt="바닷가의 수도승"><div class="cap">카스파르 다비트 프리드리히, 〈바닷가의 수도승〉 (1810) · 거대한 시스템 앞의 무력함과 고립</div></div>
+  <div class="fig wand hide" id="wand"><img src="assets/img/friedrich_wanderer.jpg" alt="안개 바다 위의 방랑자"><div class="cap">카스파르 다비트 프리드리히, 〈안개 바다 위의 방랑자〉 (1818) · 통제하고 있다는 착각, 가려진 현실</div></div>
+
+  <div class="band" id="band"><span>In-the-Loop</span><span class="ar">→</span><span>On-the-Loop</span><span class="ar">→</span><span class="out">Out-of-the-Loop</span></div>
+  <div class="thesis" id="thesis">거부권을 스스로 반납할 때, 인간은 통제자가 아니라 안개 바다를 바라보는 방관자가 된다</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '48', meta: 'CHAPTER 3 · 파편적 데이터에서 맥락성 정보로', lit: 3,
+    prev: 's47.html', next: 's49.html',
+    steps: [
+      { n: 'STEP 01', name: '바닷가의 수도승', title: '점 하나로 서 있다', header: '200년 전의 그림 두 점', dur: 5500,
+        caption: '아득한 하늘과 검은 바다 앞에, 사람이 <span class="gold">점 하나</span>로 서 있다' },
+      { n: 'STEP 02', name: '안개 바다 위의 방랑자', title: '통제하고 있다는 착각', header: '숭고 — 그리고 out-of-the-loop 의 초상', dur: 6500,
+        caption: '높은 곳에서 내려다보니 통제하고 있다고 느낄 것이다 — 그러나 내려다보는 것은 <span class="red">안개</span>다. 대시보드를 내려다보는 우리와 얼마나 다른가' },
+      { n: 'STEP 03', name: 'Out', title: '구경꾼의 자리', header: '거부권을 스스로 반납할 때', dur: 6000,
+        caption: '개입할 수 없고, 물을 수 없고, 이제는 승인 버튼조차 필요 없어진 자리 — <span class="red">구경꾼의 자리</span>' },
+      { n: 'STEP 04', name: '우리의 자리는 아니다', title: '그림 속으로 걸어 들어가지 않기로', header: '아름다운 그림이다 — 그러나 우리가 서 있을 자리는 아니다', dur: 6000,
+        caption: '저희 연구실은 이 그림 속으로 <span class="gold">걸어 들어가지 않기로</span> 했다 — 그 이야기를 드리겠다' },
+    ],
+    apply(i) {
+      wand.classList.toggle('hide', i < 1);
+      monk.classList.toggle('quiet', i === 1);
+      band.classList.toggle('on', i >= 2);
+      thesis.classList.toggle('on', i >= 3);
+    }
+  });
+</script>
+</body>
+</html>

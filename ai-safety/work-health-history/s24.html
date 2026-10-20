@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>24 · 수공구의 시대 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .fig.tailor { left: 50%; top: 150px; width: 330px; height: 434px; transform: translateX(-50%); }
+  .fig.tailor img { object-position: 50% 15%; transition: transform 9s linear; }
+  .fig.tailor.push img { transform: scale(1.08); }
+  .fig.tailor.left { transform: translateX(-50%) translateX(-300px); }
+  .side { position: absolute; left: 50%; top: 190px; width: 520px; margin-left: 10px; z-index: 36; }
+  .side .line { padding: 16px 20px; border-radius: 10px; background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--gold); margin-bottom: 12px; }
+  .side .q { font: 600 20px/1.35 var(--sans); } .side .a { font: 700 24px/1.3 var(--sans); color: var(--gold); margin-top: 6px; }
+  .side .line.r { border-left-color: var(--muted); } .side .line.r .a { color: #E2E8F0; font-weight: 500; font-size: 17px; }
+  .thesis { bottom: 92px; }
+  .source { left: 38px; bottom: 72px; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">CHAPTER 1 · 통제 방식의 진화</div><h2>수공구의 시대</h2></div>
+
+  <div class="fig tailor push" id="tailor"><img src="assets/img/moroni_tailor.jpg" alt="조반니 바티스타 모로니, 〈재단사〉 (1565)"></div>
+
+  <div class="side lines" id="side">
+    <div class="line"><div class="q">톱질의 속도는 누가 정했는가?</div><div class="a">그의 팔이 정했다.</div></div>
+    <div class="line"><div class="q">언제 쉴지는?</div><div class="a">그의 허리가 정했다.</div></div>
+    <div class="line r"><div class="q">도구는 신체의 연장이었고, 노동의 리듬은 신체 안에 있었다.</div><div class="a">이 시대에도 직업병은 있었다 — 라마찌니가 이미 1700년에 기록했다. 그러나 적어도 노동의 주도권은 노동자의 몸 안에 있었다.</div></div>
+  </div>
+
+  <div class="thesis" id="thesis">속도와 강도를 결정한 것은 노동자 자신의 신체 감각이었다</div>
+  <div class="source">조반니 바티스타 모로니, 〈재단사〉 (1565) · National Gallery, London</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '24', meta: 'CHAPTER 1 · 통제 방식의 진화', lit: 1,
+    prev: 's23.html', next: 's25.html',
+    steps: [
+      { n: 'STEP 01', name: '장인', title: '모로니의 재단사', header: '통제의 역사부터 — 전산업 사회의 장인', dur: 5500,
+        caption: '1565년, 가위를 든 재단사 — <span class="gold">전산업 사회의 장인</span>을 떠올려 보라' },
+      { n: 'STEP 02', name: '누가 정했는가', title: '팔이, 허리가', header: '노동의 리듬은 신체 안에 있었다', dur: 7000,
+        caption: '도구는 신체의 연장이었고, <span class="gold">노동의 리듬은 신체 안에</span> 있었다' },
+      { n: 'STEP 03', name: '결론', title: '신체 감각이 결정했다', header: '수공구의 시대', dur: 5500,
+        caption: '이 시대에도 직업병은 있었다 — 그러나 적어도 <span class="gold">노동의 주도권</span>은 노동자의 몸 안에 있었다' },
+    ],
+    apply(i) {
+      tailor.classList.toggle('left', i >= 1); tailor.classList.toggle('push', i === 0);
+      side.classList.toggle('show', i >= 1);
+      thesis.classList.toggle('on', i >= 2);
+    }
+  });
+</script>
+</body>
+</html>

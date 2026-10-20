@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>51 · 보건학적 온톨로지 — 위험의 인과 구조 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .layers { position: absolute; left: 38px; right: 38px; top: 160px; z-index: 35; }
+  .lay { display: grid; grid-template-columns: 90px 240px 1fr; gap: 18px; align-items: center; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 22px; margin-bottom: 30px;
+         opacity: 0; transform: translateY(12px); transition: opacity .6s var(--ease-out), transform .6s var(--ease-out); }
+  .lay.on { opacity: 1; transform: none; }
+  .lay .tag { font: 700 12px var(--mono); letter-spacing: .12em; color: var(--muted); padding: 5px 12px; border: 1px solid var(--line); border-radius: 999px; text-align: center; }
+  .lay .t { font: 700 20px/1.3 var(--sans); }
+  .lay .d { font-size: 15px; line-height: 1.5; color: #CBD5E1; }
+  .lay.in .tag { color: var(--blue); border-color: rgba(79,163,224,.5); }
+  .lay.out { border-color: rgba(230,43,30,.6); background: rgba(230,43,30,.1); }
+  .lay.out .tag { background: var(--red); color: #fff; border-color: var(--red); }
+  .lay.out .t { color: #FF9B94; }
+  svg.arrows { position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+  svg.arrows path { stroke: var(--gold); stroke-width: 2.5; fill: none; stroke-linecap: round; }
+  svg.arrows path.red { stroke: var(--red); }
+  .foot { position: absolute; left: 38px; right: 38px; bottom: 76px; z-index: 36; text-align: center; font: 600 17px/1.5 var(--sans); color: #E2E8F0; opacity: 0; transition: opacity .8s; }
+  .foot.on { opacity: 1; } .foot b { color: var(--gold); }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">CHAPTER 4 · 산업보건학의 과제</div><h2>보건학적 온톨로지 — 위험의 인과 구조</h2></div>
+
+  <div class="layers" id="layers">
+    <svg class="arrows" id="arr"><path id="a1" d="M 0 0"/><path id="a2" d="M 0 0"/><path id="a3" class="red" d="M 0 0"/></svg>
+    <div class="lay in" id="l1"><div class="tag">입력</div><div class="t">알고리즘 파라미터</div><div class="d">수락률 하한선 · 연속 배차 미션 · 인센티브 설계</div></div>
+    <div class="lay" id="l2"><div class="tag">행동</div><div class="t">위험 행동</div><div class="d">휴식 포기 · 식사 스킵 · 과속 · 신호위반</div></div>
+    <div class="lay" id="l3"><div class="tag">생리</div><div class="t">생리적 변화</div><div class="d">심박변이도(HRV) 하락 · 만성 피로 · 인지 과부하</div></div>
+    <div class="lay out" id="l4"><div class="tag">결과</div><div class="t">중대재해</div><div class="d">교통사고 사망 · 뇌심혈관계 질환</div></div>
+  </div>
+  <div class="foot" id="foot">소음의 dB, 분진의 mg/m³에 해당하는 <b>알고리즘의 노출 지표</b>를 만드는 일 — 이것은 정확히 우리 학문의 일이다</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  const lays = [l1, l2, l3, l4], paths = [a1, a2, a3];
+  // arrows live in the 30px gaps between cards, centred on the tag column
+  function place() { const x = 66; paths.forEach((p, k) => { const y0 = lays[k].offsetTop + lays[k].offsetHeight + 3, y1 = lays[k + 1].offsetTop - 3; p.setAttribute('d', `M ${x} ${y0} V ${y1} l -5 -7 M ${x} ${y1} l 5 -7`); }); }
+  place(); addEventListener('resize', place);
+  Scene.init({
+    id: '51', meta: 'CHAPTER 4 · 산업보건학의 과제', lit: 4,
+    prev: 's50.html', next: 's52.html',
+    steps: [
+      { n: 'STEP 01', name: '입력', title: '알고리즘 파라미터', header: '첫 번째 과제 — 인과 구조의 규명', dur: 4000,
+        caption: '알고리즘이 <span class="gold">수락률 하한선과 연속 배차 미션</span>을 설정하면 —' },
+      { n: 'STEP 02', name: '행동', title: '위험 행동', header: '층위를 연결하는 온톨로지', dur: 4000,
+        caption: '노동자는 <span class="gold">휴식을 포기하고 과속</span>한다 —' },
+      { n: 'STEP 03', name: '생리', title: '생리적 변화', header: '층위를 연결하는 온톨로지', dur: 4000,
+        caption: '심박변이도가 떨어지고 <span class="gold">만성 피로</span>가 쌓인다 —' },
+      { n: 'STEP 04', name: '결과', title: '중대재해', header: '"알고리즘 파라미터가 유해인자" 를 측정 가능한 과학으로', dur: 7000,
+        caption: '그리고 <span class="red">교통사고와 뇌심혈관 질환</span>으로 귀결된다 — 입력, 행동, 생리, 결과. 네 층을 잇는 인과 모델' },
+    ],
+    apply(i) {
+      lays.forEach((l, k) => l.classList.toggle('on', i >= k));
+      paths.forEach((p, k) => i >= k + 1 ? Scene.draw(p, 600, 150) : Scene.undraw(p));
+      foot.classList.toggle('on', i === 3);
+    }
+  });
+</script>
+</body>
+</html>

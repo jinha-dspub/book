@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>03 · 어디까지 왔나 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .viewport { background: #050709; }
+  .shot { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 24px; padding: 172px 38px 96px; opacity: 0; transform: scale(.97); transition: opacity .9s var(--ease-out), transform 1.6s var(--ease-out); }
+  .shot.on { opacity: 1; transform: scale(1.02); }
+  .shot img { max-height: 100%; max-width: 100%; object-fit: contain; border-radius: 10px; border: 1px solid var(--line); box-shadow: 0 18px 50px rgba(0,0,0,.6); background: #fff; }
+  .shot.full img { max-height: 100%; }
+  .lbl { position: absolute; right: 38px; top: 84px; z-index: 36; text-align: right; }
+  .lbl .n { font: 700 12px var(--mono); letter-spacing: .12em; color: var(--gold); margin-bottom: 6px; }
+  .lbl .t { font: 700 26px/1.25 var(--sans); letter-spacing: -.02em; text-shadow: 0 2px 12px rgba(0,0,0,.7); }
+  .lbl .s { font-size: 14px; color: var(--muted); margin-top: 6px; }
+  .head h2, .head .kick { text-shadow: 0 2px 12px rgba(0,0,0,.7); }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="viewport">
+    <div class="shot full" id="sh1"><img src="assets/img/ai_evolution.png" alt="AI 진화 도표 — 인지 · 생성 · 에이전트 · 물리 AI"></div>
+    <div class="shot" id="sh2"><img src="assets/img/flybrain_google.jpg" alt="초파리 뇌 전체 배선도 — Google Research"><img src="assets/img/flybrain_article.png" alt="Is There Anything a Fruit Fly Brain Can't Do?"></div>
+    <div class="shot" id="sh3"><img src="assets/img/one_person_unicorn.png" alt="The One-Person Unicorn"></div>
+  </div>
+  <div class="head"><div class="kick">들어가며</div><h2>AI 는 어디까지 왔나</h2></div>
+  <div class="lbl" id="lbl"><div class="n" id="ln"></div><div class="t" id="lt"></div><div class="s" id="ls"></div></div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  const L = [
+    ['01 · PERCEPTION → GENERATIVE → AGENTIC → PHYSICAL', 'AI 의 진화', '인식에서 생성으로, 생성에서 에이전트로, 그리고 물리 세계로'],
+    ['02 · THE WHOLE BRAIN, MAPPED', '초파리 뇌 전체가 지도가 되다', '14만 뉴런의 배선도 — 그 모델이 큐브를 풀고 게임을 한다'],
+    ['03 · THE ONE-PERSON UNICORN', '1인 10억 달러 기업', '연구실도, 회사도 — 사람 하나와 에이전트들'],
+  ];
+  Scene.init({
+    id: '03', meta: '들어가며', lit: 1,
+    prev: 's02.html', next: 's04.html',
+    steps: [
+      { n: 'STEP 01', name: 'AI 의 진화', title: '인식 → 생성 → 에이전트 → 물리', header: 'AI 는 어디까지 왔나', dur: 5000,
+        caption: '자동화는 공장을 넘어 <span class="gold">연구실로</span> 들어왔다' },
+      { n: 'STEP 02', name: '초파리 뇌', title: '뇌 전체가 지도가 되다', header: 'AI 는 어디까지 왔나', dur: 5000,
+        caption: '뇌라는 지도가 <span class="gold">통째로 데이터</span>가 된 시대' },
+      { n: 'STEP 03', name: '1인 유니콘', title: '사람 하나와 에이전트들', header: 'AI 는 어디까지 왔나', dur: 5000,
+        caption: '남의 나라, 남의 분야 이야기라고 생각하실까 봐 — <span class="gold">이제 저희 연구실</span>을 보여드리겠다' },
+    ],
+    apply(i) {
+      [sh1, sh2, sh3].forEach((s, k) => s.classList.toggle('on', k === i));
+      ln.textContent = L[i][0]; lt.textContent = L[i][1]; ls.textContent = L[i][2];
+    }
+  });
+</script>
+</body>
+</html>

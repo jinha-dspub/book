@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>36 · 기계에게 나를 알리는 옷 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .fig.vest { left: 38px; top: 168px; width: 640px; height: 362px; transition: all .9s var(--ease-out); }
+  .source { transition: left .9s var(--ease-out); }
+  .fig.vest .cap { font-size: 12px; }
+  .reads { position: absolute; right: 38px; top: 168px; width: 540px; z-index: 35; display: flex; flex-direction: column; gap: 16px; }
+  .rd { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; opacity: 0; transform: translateX(18px); transition: opacity .8s var(--ease-out), transform .8s var(--ease-out); }
+  .rd.on { opacity: 1; transform: none; }
+  .rd .k { font: 700 11px var(--mono); letter-spacing: .1em; margin-bottom: 10px; }
+  .rd.one { border-left: 4px solid var(--red); } .rd.one .k { color: #FF9B94; }
+  .rd.two { border-left: 4px solid var(--gold); } .rd.two .k { color: var(--gold); }
+  .rd .t { font: 700 21px/1.4 var(--sans); letter-spacing: -.02em; }
+  .rd .t b { color: var(--gold); } .rd.one .t b { color: #FF9B94; }
+  .rd p { margin-top: 10px; font-size: 14.5px; line-height: 1.55; color: #CBD5E1; }
+  .led { position: absolute; left: 56.2%; top: 45.5%; width: 12px; height: 12px; border-radius: 50%; background: #22C55E; box-shadow: 0 0 14px #22C55E, 0 0 30px rgba(34,197,94,.6); animation: blink 1.6s infinite; z-index: 32; }
+  @keyframes blink { 0%, 60% { opacity: 1 } 75% { opacity: .15 } 100% { opacity: 1 } }
+  .source { left: 38px; bottom: 70px; max-width: 640px; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">CHAPTER 2 · AI 시대의 루프</div><h2>기계에게 나를 알리는 옷</h2></div>
+
+  <div class="fig vest" id="vest"><img src="assets/img/amazon_vest.jpg" alt="Amazon AMNESTY RESPONDER — Robotic Tech Vest"></div>
+  <div class="source">Amazon ‘AMNESTY RESPONDER’ — Robotic Tech Vest(RTV). 어깨의 LED가 로봇과의 통신 상태를 표시</div>
+
+  <div class="reads">
+    <div class="rd one" id="r1"><div class="k">첫 번째 읽기</div><div class="t">기계에게 자신을 인식시키기 위해,<br>인간은 <b>신호기를 입는다</b></div><p>로봇이 지배하는 공간에 들어갈 때 — 공간의 주인이 누구인지, 이 조끼가 말해 준다. 등의 문구: AMNESTY RESPONDER, 로봇 구역의 잼과 낙하물을 해결하러 들어가는 전담 요원.</p></div>
+    <div class="rd two" id="r2"><div class="k">두 번째 읽기 — 마지막 장에서 다시</div><div class="t">— 그리고 그 신호에,<br>로봇은 <b>스스로 길을 비킨다</b></div><p>신호를 감지한 로봇들은 속도를 줄이고 길을 비켜준다. 사람의 존재가 시스템을 멈추게 만드는 설계 — 인간 중심 기술의 실체가 이미 여기 있다.</p></div>
+  </div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '36', meta: 'CHAPTER 2 · AI 시대의 루프', lit: 2,
+    prev: 's35.html', next: 's37.html',
+    steps: [
+      { n: 'STEP 01', name: '조끼', title: 'AMNESTY RESPONDER', header: '사람이 로봇의 공간에 들어가야 할 때', dur: 6000,
+        caption: '아마존의 답 — 빨간 안전조끼 위의 파란 장치, <span class="green">어깨의 LED</span> 가 로봇과의 통신 상태를 보여준다' },
+      { n: 'STEP 02', name: '첫 번째 읽기', title: '신호기를 입는 인간', header: '이 사진을 두 번 읽어주시길', dur: 6500,
+        caption: '공간의 주인이 누구인지, <span class="red">이 조끼가 말해 준다</span>' },
+      { n: 'STEP 03', name: '두 번째 읽기', title: '로봇이 길을 비킨다', header: '인간 중심 기술의 실체', dur: 6500,
+        caption: '사람의 존재가 시스템을 멈추게 만드는 설계 — <span class="gold">이 두 번째 읽기는 마지막 장에서 다시 만난다</span>' },
+    ],
+    apply(i) {
+      r1.classList.toggle('on', i >= 1); r2.classList.toggle('on', i >= 2);
+      vest.style.width = i === 0 ? '760px' : '640px'; vest.style.height = i === 0 ? '430px' : '362px';
+      vest.style.left = i === 0 ? '260px' : '38px';
+      document.querySelector('.source').style.left = i === 0 ? '260px' : '38px';
+    }
+  });
+</script>
+</body>
+</html>

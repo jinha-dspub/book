@@ -59,5 +59,15 @@
         "presentation_id": "1yLzFc_B3isMIbSLvUW3EJ4mubrwnR7Udvv6Q_NNrhb4"
       }
     ]
+  },
+  {
+    "slug": "ai-safety",
+    "title": "AI 산업안전보건",
+    "subtitle": "일과 건강의 역사 — AI 시대, 무엇을 측정하고 기록할 것인가",
+    "author": "윤진하 · 연세대학교 의과대학 산업보건연구소",
+    "src": "/home/dspub/yioh/build/slides/ai-safety",
+    "site": true,
+    "files": {},
+    "extras": []
   }
 ]

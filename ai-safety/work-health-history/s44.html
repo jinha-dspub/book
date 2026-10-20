@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>44 · 5천 년을 살아남은 기록 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .fig.tab { left: 50%; top: 160px; width: 520px; height: 340px; transform: translateX(-50%); transition: transform 1s var(--ease-out), opacity .9s; }
+  .fig.tab.left { transform: translateX(-50%) translateX(-300px) scale(.92); }
+  .fig.tab img { object-fit: cover; object-position: 50% 50%; }
+  .card.say { right: 38px; top: 184px; width: 500px; }
+  .card.say.out-right { transform: translateX(115%); }
+  .card .k { font: 700 11px var(--mono); letter-spacing: .1em; color: var(--gold); margin-bottom: 12px; }
+  .card .t { font: 700 26px/1.35 var(--sans); letter-spacing: -.02em; }
+  .card .t + .t { margin-top: 14px; color: var(--gold); padding-top: 14px; border-top: 1px dashed var(--line); }
+  .card .t.wait { opacity: 0; transform: translateY(10px); transition: opacity .8s var(--ease-out), transform .8s var(--ease-out); }
+  .card .t.wait.on { opacity: 1; transform: none; }
+  .card p { margin-top: 14px; font-size: 15px; line-height: 1.6; color: #CBD5E1; }
+  .card p b { color: var(--text); }
+  .source { left: 38px; right: 38px; bottom: 70px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">CHAPTER 3 · 파편적 데이터에서 맥락성 정보로</div><h2>5천 년을 살아남은 기록</h2></div>
+
+  <div class="fig tab" id="tab"><img src="assets/img/ur_tablet.jpg" alt="우르 제3왕조 노동 배급 점토판"></div>
+
+  <div class="card say out-right" id="say">
+    <div class="k">인류 최초의 노동 데이터</div>
+    <div class="t">생산의 기록은<br>5천 년을 살아남았다</div>
+    <div class="t wait" id="t2">사람의 기록은,<br>아무도 남기지 않았다</div>
+    <p id="p2" class="wait" style="opacity:0;transition:opacity .8s .4s">데이터는 중립이 아니다. 데이터는 <b>기록한 자의 목적</b>을 따른다. 격차는 기술의 실패가 아니라, 기록의 목적에 사람이 없었기 때문이다.</p>
+  </div>
+
+  <div class="source">우르 제3왕조 노동 배급 점토판 — 노동자를 ‘worker-days’로 환산해 기록한 인류 최초의 노동 데이터</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '44', meta: 'CHAPTER 3 · 파편적 데이터에서 맥락성 정보로', lit: 3,
+    prev: 's43.html', next: 's45.html',
+    steps: [
+      { n: 'STEP 01', name: '점토판', title: '5천 년 전, 수메르 우르', header: '5천 년을 살아남은 기록', dur: 5500,
+        caption: '노동자를 <span class="gold">‘worker-days’</span>, 사람-날짜라는 단위로 환산해 배급과 과세를 기록했다' },
+      { n: 'STEP 02', name: '생산의 기록', title: '회계는 살아남는다', header: '생산의 기록은 5천 년을 살아남았다', dur: 5500,
+        caption: '회계는, 생산량은, 세금은 — <span class="gold">문명이 무너져도</span> 살아남는다' },
+      { n: 'STEP 03', name: '사람의 기록', title: '아무도 남기지 않았다', header: '기록의 목적에 사람이 없었다', dur: 8000,
+        caption: '지구라트를 쌓던 사람들의 몸의 기록은 없다 — <span class="red">30년의 격차도 같은 이유</span>다. 그래서 저는, 빅데이터로 갔다' },
+    ],
+    apply(i) {
+      tab.classList.toggle('left', i >= 1);
+      say.classList.toggle('out-right', i < 1);
+      t2.classList.toggle('on', i >= 2); p2.style.opacity = i >= 2 ? 1 : 0;
+    }
+  });
+</script>
+</body>
+</html>

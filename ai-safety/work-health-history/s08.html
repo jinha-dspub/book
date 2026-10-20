@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>08 · 프로크루스테스의 침대 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .fig.pic { left: 50%; top: 162px; width: 520px; height: 390px; transform: translateX(-50%); background: #0B0A08; }
+  .fig.pic img { object-fit: contain; }
+  .fig.pic.left { transform: translateX(-50%) translateX(-280px); }
+  .fig.pic .cap { font-size: 12px; }
+  .thesis { bottom: 92px; }
+  .mats { position: absolute; left: 50%; top: 200px; width: 440px; margin-left: 20px; z-index: 36; }
+  .mats .line { display: flex; align-items: center; gap: 16px; padding: 14px 18px; border-radius: 10px; background: var(--panel); border: 1px solid var(--line); margin-bottom: 12px; }
+  .mats .line .m { font: 700 11px var(--mono); letter-spacing: .1em; color: var(--muted); width: 48px; }
+  .mats .line .w { font: 700 22px var(--sans); }
+  .mats .line.code .w { color: var(--gold); }
+  .mats .line.code .m { color: var(--gold); }
+  .mats .end { display: block; background: none; border: 0; border-radius: 0; font-size: 14.5px; line-height: 1.55; color: #CBD5E1; padding: 12px 4px 0; border-top: 1px solid var(--line); }
+  .mats .end b { color: var(--text); }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">들어가며</div><h2>프로크루스테스의 침대</h2></div>
+
+  <div class="fig pic" id="pic"><img src="assets/img/procrustes.jpg" alt="테세우스와 프로크루스테스 — 아티카 적회식 킬릭스"><div class="cap">테세우스와 프로크루스테스 — 아티카 적회식 킬릭스 (기원전 5세기경). 침대의 주인을, 침대에 눕히다</div></div>
+
+  <div class="mats lines" id="mats">
+    <div class="line"><span class="m">WOOD</span><span class="w">나무</span><span class="muted" style="font-size:14px;margin-left:auto">프로크루스테스의 침대</span></div>
+    <div class="line"><span class="m">STEEL</span><span class="w">강철</span><span class="muted" style="font-size:14px;margin-left:auto">컨베이어 벨트의 속도</span></div>
+    <div class="line code"><span class="m">CODE</span><span class="w">코드</span><span class="muted" style="font-size:14px;margin-left:auto">알고리즘이 계산한 12분</span></div>
+    <div class="end line">그리고 이 신화의 결말 — 침대를 끝낸 것은 <b>테세우스</b>였다. 기준을 만드는 자를, 그 기준 위에 올린 것이다. <b>마지막 장에서 다시 만난다.</b></div>
+  </div>
+
+  <div class="thesis" id="thesis">침대는 조정되지 않는다 — 조정되는 것은 언제나 사람의 몸이다</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '08', meta: '들어가며', lit: 1,
+    prev: 's07.html', next: 's09.html',
+    steps: [
+      { n: 'STEP 01', name: '신화', title: '3천 년 전의 침대', header: '프로크루스테스의 침대', dur: 7000,
+        caption: '침대보다 크면 다리를 잘랐고, 작으면 몸을 잡아 늘렸다' },
+      { n: 'STEP 02', name: '침대는 조정되지 않는다', title: '조정되는 것은 몸', header: '프로크루스테스의 침대', dur: 6000,
+        caption: '오늘 발표 내내 <span class="gold">이 침대</span>를 기억해 주시기 바란다' },
+      { n: 'STEP 03', name: '나무 → 강철 → 코드', title: '재료만 바뀌었다', header: '침대의 재료가 바뀌었을 뿐이다', dur: 7000,
+        caption: '시스템이 정한 기준에 몸을 맞추라고 요구하는 모든 장치가 침대다 — 결말의 <span class="gold">테세우스</span>는 마지막 장에서' },
+    ],
+    apply(i) {
+      pic.classList.toggle('left', i >= 2);
+      thesis.classList.toggle('on', i >= 1);
+      mats.classList.toggle('show', i >= 2);
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>30 · Human (   ) Loop — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .head h2 .blank { display: inline-block; min-width: 86px; text-align: center; border-bottom: 3px solid var(--gold); color: var(--gold); margin: 0 4px; transition: color .5s; }
+  .head h2 .blank.empty { color: transparent; }
+  .rows { position: absolute; left: 38px; top: 168px; width: 700px; z-index: 35; display: flex; flex-direction: column; gap: 14px; }
+  .row { display: grid; grid-template-columns: 80px 1fr; gap: 18px; align-items: center; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px;
+         opacity: 0; transform: translateX(-16px); transition: opacity .7s var(--ease-out), transform .7s var(--ease-out), border-color .6s, background .6s; }
+  .row.on { opacity: 1; transform: none; }
+  .row.act { border-color: rgba(240,180,41,.55); background: rgba(240,180,41,.07); }
+  .row .tag { font: 800 15px var(--mono); letter-spacing: .06em; text-align: center; padding: 8px 0; border-radius: 8px; color: #1A1200; }
+  .row:nth-child(1) .tag { background: var(--gold); } .row:nth-child(2) .tag { background: #9CCFF5; } .row:nth-child(3) .tag { background: var(--red); color: #fff; }
+  .row .t { font: 700 19px/1.3 var(--sans); margin-bottom: 4px; }
+  .row .d { font-size: 14.5px; line-height: 1.5; color: #CBD5E1; }
+  .row .d b { color: var(--gold); font-weight: 600; }
+  /* loop diagram */
+  .loop { position: absolute; right: 38px; top: 150px; width: 440px; height: 400px; z-index: 35; }
+  .loop svg { width: 100%; height: 100%; }
+  .loop .ring { fill: none; stroke: #334155; stroke-width: 10; }
+  .loop .ringOn { fill: none; stroke: var(--green); stroke-width: 10; stroke-linecap: round; stroke-dasharray: 60 40; animation: flow 2.4s linear infinite; }
+  @keyframes flow { to { stroke-dashoffset: -100; } }
+  .loop .person { transition: transform 1.4s var(--ease-cam); }
+  .loop .person circle, .loop .person path { fill: var(--gold); }
+  .loop .lab { font: 700 12px var(--mono); fill: var(--muted); letter-spacing: .08em; }
+  .loop .gate { fill: none; stroke: var(--gold); stroke-width: 3; opacity: 0; transition: opacity .6s; }
+  .loop .gate.on { opacity: 1; }
+  .loop .eye { opacity: 0; transition: opacity .6s; }
+  .loop .eye.on { opacity: 1; }
+  .thesis { bottom: 92px; }
+  .thesis.red { font-size: 26px; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">CHAPTER 2 · AI 시대의 루프</div><h2>Human (<span class="blank empty" id="blank">In</span>) Loop — 인간은 루프의 어디에 있는가</h2></div>
+
+  <div class="rows">
+    <div class="row" id="r1"><div class="tag">In</div><div><div class="t">In-the-Loop — 필수 승인</div><div class="d">인간의 검증·승인 없이는 실행되지 않는다. 인간이 <b>거부권(Override)</b>을 가진다 — 1983년, 페트로프</div></div></div>
+    <div class="row" id="r2"><div class="tag">On</div><div><div class="t">On-the-Loop — 감시와 개입</div><div class="d">시스템은 자율로 돌고, 인간은 모니터링하다 필요 시 개입한다</div></div></div>
+    <div class="row" id="r3"><div class="tag">Out</div><div><div class="t">Out-of-the-Loop — 완전 자율</div><div class="d">인간 개입 없이 시스템이 스스로 결정하고 실행한다</div></div></div>
+  </div>
+
+  <div class="loop" aria-hidden="true">
+    <svg viewBox="0 0 440 400">
+      <circle class="ring" cx="220" cy="210" r="120"/>
+      <circle class="ringOn" cx="220" cy="210" r="120"/>
+      <text class="lab" x="220" y="60" text-anchor="middle">SYSTEM LOOP</text>
+      <!-- gate (in-the-loop): the loop passes through the human -->
+      <rect class="gate on" id="gate" x="190" y="180" width="60" height="60" rx="10"/>
+      <!-- eye (on-the-loop) -->
+      <g class="eye" id="eye"><path d="M262 78 q20 -16 40 0 q-20 16 -40 0z" fill="none" stroke="#9CCFF5" stroke-width="2.5"/><circle cx="282" cy="78" r="4" fill="#9CCFF5"/></g>
+      <!-- person -->
+      <g class="person" id="person" transform="translate(220,210)">
+        <circle cx="0" cy="-16" r="9"/><path d="M-11 -4 h22 v18 l-5 2 v16 h-12 v-16 l-5 -2z"/>
+      </g>
+      <text class="lab" id="plab" x="220" y="370" text-anchor="middle">인간 = 루프의 한 단계</text>
+    </svg>
+  </div>
+
+  <div class="thesis red" id="thesis">그렇다면 — 플랫폼의 노동자는 루프의 어디에 있는가?</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  const POS = ['translate(220,210)', 'translate(330,100)', 'translate(400,330)'];
+  const LAB = ['인간 = 루프의 한 단계 (거부권)', '인간 = 루프 위의 감시자', '인간 = 루프 밖의 구경꾼'];
+  Scene.init({
+    id: '30', meta: 'CHAPTER 2 · AI 시대의 루프', lit: 2,
+    prev: 's29.html', next: 's31.html',
+    steps: [
+      { n: 'STEP 01', name: 'In', title: 'In-the-Loop — 필수 승인', header: 'Human-in-the-Loop, HITL', dur: 6000, lit: 1,
+        caption: '인간의 승인 없이는 시스템이 실행되지 않는다 — <span class="gold">검증하고, 거부권을 가진다</span>' },
+      { n: 'STEP 02', name: 'On', title: 'On-the-Loop — 감시와 개입', header: '인간은 루프의 어디에 있는가', dur: 5500, lit: 2,
+        caption: '시스템은 스스로 돌아가고, 인간은 <span class="gold">감시하다가</span> 필요할 때 개입한다' },
+      { n: 'STEP 03', name: 'Out', title: 'Out-of-the-Loop — 완전 자율', header: '인간은 루프의 어디에 있는가', dur: 5500, lit: 2,
+        caption: '인간은 루프 밖에 있다 — <span class="red">완전 자율</span>' },
+      { n: 'STEP 04', name: '질문', title: '플랫폼의 노동자는?', header: '모든 노동자가 페트로프의 자리에 있는가', dur: 6000, lit: 2,
+        caption: '의료 AI 는 AI 가 판독하고 전문의가 승인한다 — 우리는 in-the-loop 에 있다. <span class="red">그런데 라이더는?</span>' },
+    ],
+    apply(i) {
+      const k = Math.min(i, 2);
+      blank.textContent = ['In', 'On', 'Out'][k]; blank.classList.remove('empty');
+      [r1, r2, r3].forEach((r, j) => { r.classList.toggle('on', i >= j); r.classList.toggle('act', i === j); });
+      person.setAttribute('transform', POS[k]); plab.textContent = LAB[k];
+      gate.classList.toggle('on', k === 0); eye.classList.toggle('on', k === 1);
+      thesis.classList.toggle('on', i === 3);
+    }
+  });
+</script>
+</body>
+</html>

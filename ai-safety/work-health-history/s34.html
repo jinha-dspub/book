@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>34 · 소등 공장은 이미 현실이다 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .rig img { object-fit: cover; }
+  .ring { position: absolute; left: 81%; top: 57%; width: 60px; height: 120px; transform: translate(-50%, -50%); border: 2.5px solid var(--red); border-radius: 50%;
+          box-shadow: 0 0 30px rgba(230,43,30,.55); opacity: 0; transition: opacity .8s .9s; pointer-events: none; }
+  .ring.on { opacity: 1; }
+  .card.side { left: 38px; top: 168px; width: 440px; }
+  .card.side.out-left { transform: translateX(-115%); }
+  .card .k { font: 700 11px var(--mono); letter-spacing: .1em; color: var(--gold); margin-bottom: 10px; }
+  .card .t { font: 700 24px/1.3 var(--sans); letter-spacing: -.02em; margin-bottom: 12px; }
+  .card .lines .line { font-size: 15.5px; line-height: 1.6; color: #CBD5E1; }
+  .card .lines .line b { color: var(--text); }
+  .card .lines .line:last-child { color: var(--gold); margin-top: 8px; }
+  .card .src { margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--line); font-size: 12px; color: var(--dim); }
+  .thesis { bottom: 92px; left: 38px; right: auto; width: 560px; text-align: left; }
+  .head h2, .head .kick { text-shadow: 0 2px 12px rgba(0,0,0,.7); }
+  .source { right: 38px; bottom: 70px; text-shadow: 0 1px 4px #000; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="viewport">
+    <div class="rig" id="rig"><img src="assets/img/foxconn_photo.jpg" alt="폭스콘 소등 공장 — CommonWealth Magazine"><div class="ring" id="ring"></div></div>
+    <div class="vignette" id="vig"></div>
+  </div>
+  <div class="head"><div class="kick">CHAPTER 2 · AI 시대의 루프</div><h2>소등 공장은 이미 현실이다</h2></div>
+
+  <div class="card side out-left" id="side">
+    <div class="k">CommonWealth Magazine(天下雜誌) 보도</div>
+    <div class="t">폭스콘 — 3개의 소등 공장</div>
+    <div class="lines show">
+      <div class="line"><b>선전 · 타이완 · 멕시코</b></div>
+      <div class="line">수백 개 공정, 조명 없이 무인 가동</div>
+      <div class="line">초록 상태등만 빛나는 어둠 — 조명은 사람을 위한 것이었다</div>
+    </div>
+    <div class="src">CommonWealth Magazine, "AI Robots Go to Work at Three Foxconn Lights-off Factories" · Source: Pei-Yin Hsieh</div>
+  </div>
+
+  <div class="thesis" id="thesis">완전한 무인은 없다 —<br>어둠 속에서도, 누군가는 들어간다</div>
+  <div class="source">CommonWealth Magazine(天下雜誌) 보도</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '34', meta: 'CHAPTER 2 · AI 시대의 루프', lit: 2,
+    prev: 's33.html', next: 's35.html',
+    steps: [
+      { n: 'STEP 01', name: '불 꺼진 공장', title: 'SF 가 아니다', header: '소등 공장은 이미 현실이다', dur: 5000,
+        caption: '불 꺼진 공장 — 기계의 <span class="green">초록 상태등</span>만 어둠 속에서 빛난다' },
+      { n: 'STEP 02', name: '세 곳', title: '선전 · 타이완 · 멕시코', header: '폭스콘 — 3개의 소등 공장', dur: 6000,
+        caption: '수백 개의 공정이 무인으로 돌아간다 — 로봇에게는 이것으로 충분하다, <span class="gold">조명은 사람을 위한 것이었으니까</span>' },
+      { n: 'STEP 03', name: '구석의 사람', title: '카메라가 구석으로', header: '사진을 자세히 보시면', dur: 6500,
+        caption: '구석에 사람이 한 명 서 있다 — 화면 앞에서 뭔가를 <span class="gold">확인하고 있다</span>' },
+      { n: 'STEP 04', name: '결론', title: '완전한 무인은 없다', header: '어둠 속에서도, 누군가는 들어간다', dur: 5500,
+        caption: '<span class="gold">완전한 무인은 없다</span> — 어둠 속에서도, 누군가는 들어가서 확인한다' },
+    ],
+    apply(i) {
+      rig.style.transform = i <= 1 ? 'scale(1.02)' : i === 2 ? Scene.cam(81, 56, 2.2, 62, 50) : Scene.cam(81, 56, 1.9, 70, 50);
+      document.querySelector('.rig img').style.filter = i >= 2 ? 'brightness(1.7) contrast(1.08)' : '';
+      ring.classList.toggle('on', i === 2);
+      vig.classList.toggle('on', i >= 1); vig.style.background = i === 1 ? 'linear-gradient(to right, rgba(7,10,14,.7), rgba(7,10,14,0) 60%)' : i === 2 ? Scene.spot(62, 50, 14, 80) : i === 3 ? Scene.spot(70, 50, 16, 84) : '';
+      side.classList.toggle('out-left', i !== 1);
+      thesis.classList.toggle('on', i === 3);
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>20 · 1788년, 법을 지킨 도면 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .viewport { background: #0F1216; }
+  .rig img { object-fit: contain; object-position: 100% 50%; filter: sepia(.1); transition: opacity 1.2s; }
+  .vignette { background: linear-gradient(to right, rgba(7,10,14,.96) 38%, rgba(7,10,14,.6) 52%, rgba(7,10,14,0) 70%); }
+  .txt { position: absolute; left: 38px; top: 190px; width: 600px; z-index: 36; }
+  .txt .act { font: 700 20px/1.3 var(--mono); letter-spacing: .04em; color: var(--gold); margin-bottom: 20px; }
+  .txt .q { font: 600 28px/1.45 var(--sans); letter-spacing: -.02em; color: var(--text); }
+  .txt .q b { color: #FF9B94; }
+  .txt .q2 { margin-top: 22px; font: 500 17px/1.6 var(--sans); color: #CBD5E1; border-left: 3px solid rgba(230,43,30,.7); padding-left: 14px; }
+  .source { left: 38px; bottom: 72px; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="viewport">
+    <div class="rig" id="rig"><img src="assets/img/brookes1788.jpg" alt="Brookes 노예선 도면 (1788)"></div>
+    <div class="vignette on" id="vig"></div>
+  </div>
+  <div class="head"><div class="kick">02 Sweet and Speed</div><h2>1788년, 법을 지킨 도면</h2></div>
+
+  <div class="txt lines" id="txt">
+    <div class="act line">UNDER THE REGULATED SLAVE TRADE ACT of 1788</div>
+    <div class="q line">"노예를 너무 빽빽하게 싣지 말라"는 법이 통과된 후,<br>"<b>이 정도면 법을 지킨 것</b>"이라며 제출된 도면</div>
+    <div class="q2 line">기준이 생기면, 기준에 맞춘 그림이 먼저 생긴다. 그림이 보여주는 것은 사람이 아니라 — 기준을 지켰다는 증명이다.</div>
+  </div>
+  <div class="source">Brookes, Regulated Slave Trade Act 1788 — 발표자 제공 · Sweet and Speed</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '20', meta: '02 Sweet and Speed', lit: 1,
+    prev: 's19.html', next: 's21.html',
+    steps: [
+      { n: 'STEP 01', name: '도면', title: 'Brookes, 1788', header: '1788년, 법을 지킨 도면', dur: 5000,
+        caption: '노예선 Brookes 호의 적재 도면 — <span class="gold">법이 통과된 뒤</span> 제출되었다' },
+      { n: 'STEP 02', name: '기준', title: '이 정도면 법을 지킨 것', header: '기준에 맞춘 그림이 먼저 생긴다', dur: 7000,
+        caption: '그림이 보여주는 것은 사람이 아니라 — <span class="red">기준을 지켰다는 증명</span>이다' },
+    ],
+    apply(i) {
+      rig.style.transform = i === 0 ? 'scale(1)' : 'scale(1.04)';
+      txt.classList.toggle('show', i >= 1);
+      vig.style.opacity = i === 0 ? .55 : 1;
+    }
+  });
+</script>
+</body>
+</html>

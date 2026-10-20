@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>06 · 44년째 같은 질문 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .big { top: 44%; }
+  .big .q { font-size: 48px; }
+  .eras { position: absolute; left: 80px; right: 80px; bottom: 120px; z-index: 36; display: flex; justify-content: center; gap: 18px; }
+  .eras .line { padding: 10px 22px; border-radius: 999px; border: 1px solid var(--line); background: rgba(12,19,28,.9); font: 600 16px var(--sans); color: #CBD5E1; }
+  .eras .line b { color: var(--gold); font-weight: 700; }
+  .eras .line:last-child { border-color: rgba(230,43,30,.6); color: #FF9B94; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="big lines" id="big">
+    <div class="kick line">44년째 같은 질문</div>
+    <div class="q line">사람이 기술을 통제하는가,</div>
+    <div class="q line" style="margin-top:6px">기술이 사람을 통제하는가</div>
+  </div>
+  <div class="eras lines" id="eras">
+    <div class="line">증기기관 앞에서</div><div class="line">컨베이어 벨트 앞에서</div><div class="line">산업용 로봇 앞에서</div><div class="line">그리고 지금, <b>알고리즘</b> 앞에서</div>
+  </div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '06', meta: '들어가며', lit: 1,
+    prev: 's05.html', next: 's07.html',
+    steps: [
+      { n: 'STEP 01', name: '질문', title: '사람이, 기술이', header: '44년째 같은 질문', dur: 6000,
+        caption: '그 사이에 이 질문에 대한 답은 <span class="gold">바뀌었는가?</span>' },
+      { n: 'STEP 02', name: '매번', title: '기술이 바뀔 때마다', header: '산업혁명 이후, 기술이 바뀔 때마다', dur: 6000,
+        caption: '오늘 발표는 이 하나의 질문을 <span class="gold">산업보건학의 언어</span>로 다시 던지는 자리다' },
+    ],
+    apply(i) {
+      big.classList.add('show');
+      eras.classList.toggle('show', i >= 1);
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>50 · 이미 시작된 법적 전환 — EU — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .rows { position: absolute; left: 38px; right: 38px; top: 166px; z-index: 35; display: grid; gap: 12px; }
+  .row { display: grid; grid-template-columns: 56px 300px 1fr; gap: 18px; align-items: center; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px;
+         opacity: 0; transform: translateY(14px); transition: opacity .7s var(--ease-out), transform .7s var(--ease-out); }
+  .row.on { opacity: 1; transform: none; }
+  .row .n { width: 40px; height: 40px; border-radius: 50%; background: var(--red); color: #fff; display: grid; place-items: center; font: 800 16px var(--mono); }
+  .row .t { font: 700 20px/1.3 var(--sans); letter-spacing: -.01em; }
+  .row .d { font-size: 15px; line-height: 1.55; color: #CBD5E1; }
+  .row .d b { color: var(--gold); font-weight: 700; }
+  .row .d small { display: block; font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+  .foot { position: absolute; left: 38px; right: 38px; top: 448px; z-index: 35; font: 400 11.5px/1.5 var(--sans); color: var(--dim); opacity: 0; transition: opacity .8s .4s; }
+  .foot.on { opacity: 1; }
+  .thesis { bottom: 92px; }
+  .thesis small { display: block; font: 500 15px/1.5 var(--sans); color: #E2E8F0; margin-top: 6px; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">CHAPTER 3 · 파편적 데이터에서 맥락성 정보로</div><h2>이미 시작된 법적 전환 — EU</h2></div>
+
+  <div class="rows">
+    <div class="row" id="r1"><div class="n">1</div><div class="t">민감 데이터 자동 처리 금지</div><div class="d">감정 상태 추정, 휴식·사적 대화 모니터링 금지 <small>(Platform Work Directive 2024/2831)</small></div></div>
+    <div class="row" id="r2"><div class="n">2</div><div class="t">No Robo-Firing</div><div class="d">계정 정지·해지는 알고리즘 단독 결정 불가 — 인간의 설명·재검토 권리 보장</div></div>
+    <div class="row" id="r3"><div class="n">3</div><div class="t">데이터 이동권 · 알고리즘 투명성</div><div class="d">평가 매개변수에 대한 노동조합의 정보 요구권 → <b>산업보건학회의 의견은?</b></div></div>
+  </div>
+  <div class="foot" id="foot">Directive (EU) 2024/2831 on improving working conditions in platform work (2024. 10. 23 채택, OJ L 2024/2831), 제3장 알고리즘 관리, 제9조 — 자동 의사결정의 주요 파라미터 공개 및 노동자 대표 정보·협의 의무. 회원국 이행 시한 2026. 12. 2</div>
+
+  <div class="thesis" id="thesis">규범의 공백은 채워질 수 있다 — 문제는 우리가 언제, 어떻게 채우는가다<small>앞서 한국의 숫자는 ‘140명, 0건’이었다. 유럽이 지금 채우고 있다.</small></div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '50', meta: 'CHAPTER 3 · 파편적 데이터에서 맥락성 정보로', lit: 4,
+    prev: 's49.html', next: 's51.html',
+    steps: [
+      { n: 'STEP 01', name: '첫째', title: '민감 데이터 자동 처리 금지', header: '이 원칙은 이상론이 아니다 — 이미 법이 되고 있다', dur: 5000,
+        caption: '감정 상태를 추정하거나 휴식 시간과 사적 대화를 모니터링하는 자동화 시스템은 <span class="gold">금지</span>된다' },
+      { n: 'STEP 02', name: '둘째', title: 'No Robo-Firing', header: '2024년 채택된 EU 플랫폼 노동 지침', dur: 5000,
+        caption: '계정 정지, 콜 차단, 계약 해지 같은 중대 결정을 <span class="red">알고리즘이 단독으로</span> 내릴 수 없다' },
+      { n: 'STEP 03', name: '셋째', title: '데이터 이동권 · 투명성', header: '2024년 채택된 EU 플랫폼 노동 지침', dur: 6000,
+        caption: '노동조합과 보건관리자는 알고리즘의 평가 매개변수에 대한 정보를 요구할 수 있다 — <span class="gold">산업보건학회의 의견은?</span>' },
+      { n: 'STEP 04', name: '공백', title: '140명, 0건 — 다시', header: '규범의 공백은 채워질 수 있다', dur: 6000,
+        caption: '유럽이 지금 채우고 있다 — 문제는 우리가 <span class="gold">언제, 어떻게</span> 채우는가다' },
+    ],
+    apply(i) {
+      r1.classList.toggle('on', i >= 0); r2.classList.toggle('on', i >= 1); r3.classList.toggle('on', i >= 2);
+      foot.classList.toggle('on', i >= 2);
+      thesis.classList.toggle('on', i === 3);
+    }
+  });
+</script>
+</body>
+</html>

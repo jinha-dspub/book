@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>16 · 갱 시스템 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .grid { position: absolute; left: 38px; right: 38px; top: 162px; bottom: 100px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; z-index: 35; }
+  .g { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--gold); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column;
+       opacity: 0; transform: translateY(20px); transition: opacity .8s var(--ease-out), transform .8s var(--ease-out); }
+  .g.on { opacity: 1; transform: none; }
+  .g:nth-child(2) { border-top-color: #D97706; } .g:nth-child(3) { border-top-color: var(--muted); }
+  .g .pic { height: 235px; position: relative; flex: none; }
+  .g .pic img { width: 100%; height: 100%; object-fit: cover; display: block; filter: sepia(.15); }
+  .g .body { padding: 16px 18px 14px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .g .n { font: 700 11px var(--mono); letter-spacing: .1em; color: var(--gold); }
+  .g:nth-child(2) .n { color: #F59E0B; } .g:nth-child(3) .n { color: var(--muted); }
+  .g h3 { font: 700 20px/1.25 var(--sans); letter-spacing: -.02em; }
+  .g h3 small { display: block; font: 600 13px var(--sans); color: var(--muted); margin-top: 3px; }
+  .g .row { font-size: 13.5px; line-height: 1.5; color: #CBD5E1; }
+  .g .row b { color: var(--text); font-weight: 600; }
+  .source { left: 38px; bottom: 72px; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">02 Sweet and Speed</div><h2>갱 시스템 (The Gang System)</h2></div>
+
+  <div class="grid">
+    <div class="g" id="g1">
+      <div class="pic"><img src="assets/img/gang_a.jpg" alt="사탕수수 수확"></div>
+      <div class="body">
+        <div class="n">제1진</div>
+        <h3>The Great Gang<small>“수확과 중노동”</small></h3>
+        <div class="row"><b>대상:</b> 가장 건강하고 힘 센 남녀 (주로 16~40세).</div>
+        <div class="row"><b>임무:</b> 공장 고열, 구덩이 파기(Holing), 사탕수수 심기, 그리고 수확(Harvesting).</div>
+      </div>
+    </div>
+    <div class="g" id="g2">
+      <div class="pic"><img src="assets/img/gang_b.jpg" alt="사탕수수밭"></div>
+      <div class="body">
+        <div class="n">제2진</div>
+        <h3>The Second Gang<small>“유지 보수”</small></h3>
+        <div class="row"><b>대상:</b> 청소년, 임산부, 혹은 1진에서 탈락한 40대 이상의 노동자.</div>
+        <div class="row"><b>임무:</b> 제초 작업(Weeding), 거름 주기(Manuring) 등</div>
+      </div>
+    </div>
+    <div class="g" id="g3">
+      <div class="pic"><img src="assets/img/gang_c.jpg" alt="설탕 공장 내부"></div>
+      <div class="body">
+        <div class="n">제3진</div>
+        <h3>The Grass Gang<small>“잡일 (Chores)”</small></h3>
+        <div class="row"><b>대상:</b> 아주 어린 아이들과 노인들.</div>
+        <div class="row"><b>임무:</b> 가축 사료용 풀 뽑기(Grass weeding), 정원 관리 등 가벼운 잡일.</div>
+      </div>
+    </div>
+  </div>
+  <div class="source">https://runaways.gla.ac.uk/minecraft/index.php/slaves-work-on-sugar-plantations/</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '16', meta: '02 Sweet and Speed', lit: 1,
+    prev: 's15.html', next: 's17.html',
+    steps: [
+      { n: 'STEP 01', name: '제1진', title: 'The Great Gang', header: '갱 시스템 — 몸의 상태로 나눈 세 진', dur: 5000,
+        caption: '가장 건강하고 힘 센 남녀 — <span class="gold">수확과 중노동</span>, 공장의 고열' },
+      { n: 'STEP 02', name: '제2진', title: 'The Second Gang', header: '갱 시스템 — 몸의 상태로 나눈 세 진', dur: 5000,
+        caption: '청소년, 임산부, 혹은 <span class="gold">1진에서 탈락한</span> 40대 이상' },
+      { n: 'STEP 03', name: '제3진', title: 'The Grass Gang', header: '분류의 기준은 생산에 쓸 수 있는 신체였다', dur: 6000,
+        caption: '아주 어린 아이들과 노인들 — 기록된 것은 <span class="red">분류</span>였지, 닳아간 몸이 아니었다' },
+    ],
+    apply(i) { g1.classList.toggle('on', i >= 0); g2.classList.toggle('on', i >= 1); g3.classList.toggle('on', i >= 2); }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>54 · 우리는 소음을 측정했고 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .fig.ram { left: 38px; top: 150px; width: 250px; height: 310px; }
+  .fig.ram img { object-position: 50% 20%; }
+  .say { position: absolute; left: 320px; right: 38px; top: 150px; z-index: 35; }
+  .say .l { font: 700 32px/1.3 var(--sans); letter-spacing: -.02em; }
+  .say .l.g { color: var(--red); }
+  .qq { margin-top: 20px; display: grid; gap: 8px; }
+  .qq .line { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 10px 16px; font: 600 17px/1.4 var(--sans); }
+  .qq .line b { color: var(--gold); }
+  .qq .num { display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; border: 1.5px solid var(--gold); color: var(--gold); font: 700 12px var(--mono); font-style: normal; margin-right: 8px; vertical-align: -3px; }
+  .chain { position: absolute; left: 38px; right: 38px; top: 486px; z-index: 36; display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; padding: 12px 20px; border-radius: 12px;
+           background: rgba(240,180,41,.08); border: 1px solid rgba(240,180,41,.45); font: 600 16px/1.4 var(--sans); opacity: 0; transform: translateY(10px); transition: opacity .8s, transform .8s; }
+  .chain.on { opacity: 1; transform: none; }
+  .chain b { color: var(--gold); } .chain .ar { color: var(--muted); }
+  .foot { position: absolute; left: 38px; right: 38px; bottom: 76px; z-index: 36; text-align: center; font: 700 20px/1.4 var(--sans); color: var(--text); opacity: 0; transition: opacity .8s .3s; }
+  .foot.on { opacity: 1; }
+  .source { left: 38px; top: 466px; width: 250px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">마치며</div><h2>일과 건강의 역사와 AI</h2></div>
+
+  <div class="fig ram"><img src="assets/img/ramazzini.jpg" alt="베르나르디노 라마찌니"></div>
+  <div class="source">베르나르디노 라마찌니 (1633–1714)</div>
+
+  <div class="say">
+    <div class="lines" id="three">
+      <div class="l line">우리는 소음을 측정했고,</div>
+      <div class="l line">분진을 측정했고,</div>
+      <div class="l line g">이제 — 데이터와 AI를 측정해야 한다.</div>
+    </div>
+    <div class="qq lines" id="qq">
+      <div class="line"><i class="num">1</i> 이 데이터에, <b>사람의 맥락</b>이 담겨 있는가</div>
+      <div class="line"><i class="num">2</i> 이 AI는, <b>사람의 안전과 건강</b>을 위해 작동하는가</div>
+    </div>
+  </div>
+
+  <div class="chain" id="chain"><span><b>HITL</b>은 Critical What을 묻고</span><span class="ar">→</span><span>질문은 <b>맥락성 정보</b>를 찾아내고</span><span class="ar">→</span><span>맥락이 방패가 될 때, <b>human-centric AI</b>가 된다</span></div>
+  <div class="foot" id="foot">보이지 않는 유해인자를 측정 가능하게 만드는 것 — 그것이 이 학문의 역사였다</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '54', meta: '마치며', lit: 4,
+    prev: 's53.html', next: 's55.html',
+    steps: [
+      { n: 'STEP 01', name: '세 줄', title: '소음 · 분진 · 그리고', header: '우리 학문의 역사는 보이지 않는 것을 보이게 만든 역사였다', dur: 6000, lit: 4,
+        caption: '라마찌니는 직업을 물었고, 우리는 소음을 데시벨로, 분진을 농도로 측정했다 — 이제 <span class="red">새로운 유해인자</span>가 왔다. 코드 속에 있다' },
+      { n: 'STEP 02', name: '두 질문', title: '데이터를, AI를 측정한다', header: '무엇을 측정할 것인가 — Critical What', dur: 6500, lit: 4,
+        caption: '소음계와 분진 측정기가 있었듯, 이 두 질문에도 측정 도구가 필요하다 — <span class="gold">맥락성의 평가, 알고리즘 위험성평가</span>' },
+      { n: 'STEP 03', name: '제목이 완성된다', title: '한 단어씩 얻어온 문장', header: 'HITL · 맥락성 정보 · 그리고 인간 중심의 데이터 주권', dur: 8000, lit: 5,
+        caption: '(오른쪽 위) 발표 내내 한 조각씩 켜지던 그 문장 — <span class="gold">이제 전부 켜졌다</span>. 요약이 아니라, 함께 한 단어씩 얻어온 문장' },
+      { n: 'STEP 04', name: '이 학문의 역사', title: '측정 가능하게 만드는 것', header: '학회에 드리는 제안의 전부', dur: 6000, lit: 5,
+        caption: '고용노동부가 이 AI R&D 를 산업보건 연구소에 맡긴 것은 — 기술이 아니라 <span class="gold">질문</span>을 맡긴 것이다' },
+    ],
+    apply(i) {
+      three.classList.add('show');
+      qq.classList.toggle('show', i >= 1);
+      chain.classList.toggle('on', i >= 2);
+      foot.classList.toggle('on', i === 3);
+    }
+  });
+</script>
+</body>
+</html>

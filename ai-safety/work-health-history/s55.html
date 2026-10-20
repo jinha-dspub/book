@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>55 · 감사합니다 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .rig img { object-fit: cover; object-position: 50% 0%; }
+  .mk { position: absolute; border: 2px solid var(--gold); border-radius: 50%; box-shadow: 0 0 26px rgba(240,180,41,.55); opacity: 0; transition: opacity .8s 1s; pointer-events: none; }
+  .mk.on { opacity: 1; }
+  #mkHand { left: 52.3%; top: 17%; width: 70px; height: 90px; transform: translate(-50%, -50%); }
+  .card.say { left: 38px; top: 50%; transform: translateY(-50%); width: 460px; }
+  .card.say.out-left { transform: translate(-115%, -50%); }
+  .card .k { font: 700 11px var(--mono); letter-spacing: .1em; color: var(--gold); margin-bottom: 10px; }
+  .card .t { font: 700 24px/1.35 var(--sans); letter-spacing: -.02em; margin-bottom: 10px; }
+  .card p { font-size: 15px; line-height: 1.6; color: #CBD5E1; }
+  .card p b { color: var(--text); }
+  .end { position: absolute; left: 38px; right: 38px; bottom: 150px; z-index: 36; text-align: center; }
+  .end .line { font: 700 30px/1.4 var(--sans); letter-spacing: -.02em; text-shadow: 0 8px 36px rgba(0,0,0,.95), 0 0 20px rgba(0,0,0,.9); }
+  .end .line em { font-style: normal; color: var(--gold); }
+  .end .line.sub { font: 500 19px/1.5 var(--sans); color: #E2E8F0; margin-top: 14px; }
+  .end .line.thanks { font: 700 48px/1.2 var(--sans); margin-top: 26px; color: var(--gold); }
+  .source { left: 38px; bottom: 70px; text-shadow: 0 1px 4px #000; color: #CBD5E1; }
+  .head h2, .head .kick { text-shadow: 0 2px 12px rgba(0,0,0,.7); }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="viewport">
+    <div class="rig" id="rig"><img src="assets/img/wright_airpump.jpg" alt="조셉 라이트 오브 더비, 〈공기 펌프 속의 새에 대한 실험〉 (1768)"><div class="mk" id="mkHand"></div></div>
+    <div class="vignette" id="vig"></div>
+  </div>
+  <div class="head"><div class="kick">마치며</div><h2>밸브 위의 손</h2></div>
+
+  <div class="card say out-left" id="say">
+    <div class="k" id="sayK"></div><div class="t" id="sayT"></div><p id="sayP"></p>
+  </div>
+
+  <div class="end lines" id="end">
+    <div class="line">사람이 기술을 통제하는가, 기술이 사람을 통제하는가 —<br>그 답은 이제, <em>우리가 무엇을 측정하고 어떻게 설계하는가</em>에 달려 있습니다</div>
+    <div class="line sub">기술의 한계를 인간의 신체로 감당하던 구조를 넘어, 인간의 생명과 존엄을 지키는 데이터 체계로</div>
+    <div class="line thanks">감사합니다</div>
+  </div>
+  <div class="source">조셉 라이트 오브 더비, 〈공기 펌프 속의 새에 대한 실험〉 (1768) · National Gallery, London</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  const SAY = [null,
+    { k: '밸브 위의 손', t: '멈출 것인가, 계속할 것인가', p: '중앙의 과학자는 공기펌프의 상단 밸브에 손을 올린 채 정면으로 우리를 응시한다. 유리관 속 새가 진공에서 숨이 넘어갈 때, <b>시스템을 멈추고 공기를 넣어 새를 살릴 것인가</b>를 결정하는 — Human-in-the-Loop 의 정점.' },
+    { k: '같은 자리에 섰던 사람들', t: '페트로프 · 아마존의 조끼 · 그리고 우리', p: '오작동하는 경보 앞에서 발사 대신 <b>거부권</b>을 행사한 페트로프처럼, 사람이 들어서면 로봇이 <b>스스로 길을 비키게</b> 만든 설계처럼 — 루프 안에서 밸브를 열어 사람을 살려내는 것은 결국 인간의 결단이자 책임이다.' },
+  ];
+  Scene.init({
+    id: '55', meta: '마치며', lit: 5,
+    prev: 's54.html',
+    steps: [
+      { n: 'STEP 01', name: '그림', title: '18세기의 실험', header: '마지막으로, 이 그림을 함께', dur: 5000,
+        caption: '1768년 — 공기 펌프 속의 새, 그리고 그것을 둘러싼 사람들' },
+      { n: 'STEP 02', name: '밸브 위의 손', title: 'Human-in-the-Loop 의 정점', header: '밸브 위의 손', dur: 7000,
+        caption: '시스템을 멈추고 공기를 넣을 것인가 — <span class="gold">그 손이 루프 안의 인간</span>이다' },
+      { n: 'STEP 03', name: '우리를 응시한다', title: '결단이자 책임', header: '루프 안에서 밸브를 여는 것', dur: 7000,
+        caption: '데이터가 우리를 옥죄는 스톱워치가 아니라, <span class="gold">노동자의 생명을 지켜내는 방패</span>가 되도록' },
+      { n: 'STEP 04', name: '감사합니다', title: '무엇을 말할지는 사람이 정했다', header: '일과 건강의 역사와 AI', dur: 8000,
+        caption: '이 발표의 슬라이드도, 문장의 일부도 AI 와 함께 만들었습니다 — 그러나 <span class="gold">무엇을 말할지는, 사람이 정했습니다</span>' },
+    ],
+    apply(i) {
+      rig.style.transform = i === 0 ? 'scale(1)' : i === 1 ? Scene.cam(52.3, 17, 2.6, 68, 46) : i === 2 ? Scene.cam(38.5, 37, 2.2, 68, 50) : 'scale(1.03)';
+      mkHand.classList.toggle('on', i === 1);
+      vig.classList.toggle('on', i >= 1); vig.style.background = i === 1 ? Scene.spot(68, 46, 10, 70) : i === 2 ? Scene.spot(68, 50, 12, 72) : i === 3 ? 'linear-gradient(to top, rgba(7,10,14,.92), rgba(7,10,14,.55) 55%, rgba(7,10,14,.2))' : '';
+      say.classList.toggle('out-left', !SAY[i]);
+      if (SAY[i]) { sayK.textContent = SAY[i].k; sayT.textContent = SAY[i].t; sayP.innerHTML = SAY[i].p; }
+      end.classList.toggle('show', i === 3);
+    }
+  });
+</script>
+</body>
+</html>

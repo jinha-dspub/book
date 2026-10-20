@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>02 · AI의 시대는 이미 왔다 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .fig.press { left: 38px; top: 168px; width: 560px; height: 372px; background: #fff; }
+  .fig.press img { object-position: top; }
+  .fig.press img { object-fit: contain; }
+  .fig.illust { right: 38px; top: 168px; width: 620px; height: 344px; }
+  .thesis { bottom: 92px; }
+  .hint { position: absolute; right: 38px; top: 60px; z-index: 45; font: 500 13px var(--sans); color: var(--gold); opacity: 0; transform: translateY(-6px); transition: opacity .8s, transform .8s; }
+  .hint.on { opacity: 1; transform: none; }
+  .hint::before { content: '↑ '; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">들어가며</div><h2>AI의 시대는 이미 왔다</h2></div>
+
+  <div class="fig press" id="press"><img src="assets/img/nobel_press.png" alt="The Nobel Prize in Chemistry 2024 press release"></div>
+  <div class="source" style="left:38px;top:548px">스웨덴 왕립과학원 — 2024 노벨 화학상 발표문</div>
+  <div class="fig illust hide" id="illust"><img src="assets/img/nobel_illust.png" alt="노벨위원회 공식 일러스트"><div class="cap">노벨위원회 공식 일러스트 — 눈에 담아 두시라, 잠시 후에 다시 본다</div></div>
+
+  <div class="thesis" id="thesis">2024년, 노벨 화학상은 AI에게 갔다 — 연구가 AI의 일이 된 시대</div>
+  <div class="hint" id="hint">오늘 발표가 끝날 때, 저 문장 전체에 불이 켜진다. 지금은 한 단어만 — AI.</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '02', meta: '들어가며', lit: 0,
+    prev: 's01.html', next: 's03.html',
+    steps: [
+      { n: 'STEP 01', name: '노벨상', title: '2024 노벨 화학상 발표문', header: 'AI의 시대는 이미 왔다', dur: 5200, lit: 0,
+        caption: '50년 묵은 단백질 구조 문제를 AI가 풀었고, 노벨위원회가 그것을 과학의 최고 성취로 인정했다' },
+      { n: 'STEP 02', name: '일러스트', title: '노는 아이들, 그리고…', header: '연구가 AI의 일이 된 시대', dur: 5200, lit: 0,
+        caption: '이것은 전망이 아니라, <span class="gold">이미 일어난 일</span>이다' },
+      { n: 'STEP 03', name: 'AI 점등', title: '제목에 첫 단어가 켜진다', header: '연구가 AI의 일이 된 시대', dur: 5200, lit: 1,
+        caption: '(오른쪽 위) 저 문장은 오늘 발표가 끝날 때 전부 켜진다 — 지금은 <span class="gold">AI</span> 하나' },
+    ],
+    apply(i) {
+      illust.classList.toggle('hide', i < 1);
+      press.classList.toggle('quiet', i >= 1);
+      thesis.classList.toggle('on', i >= 1);
+      hint.classList.toggle('on', i === 2);
+    }
+  });
+</script>
+</body>
+</html>

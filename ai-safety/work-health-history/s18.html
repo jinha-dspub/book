@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>18 · Sweet and Speed — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .fig.mill { left: 38px; top: 162px; width: 760px; height: 440px; }
+  .fig.mill img { filter: sepia(.15); transition: transform 8s linear; transform: scale(1); }
+  .fig.mill.slow img { transform: scale(1.06); }
+  .two { position: absolute; left: 838px; right: 38px; top: 162px; z-index: 35; }
+  .two .line { padding: 22px 24px; border-radius: 12px; background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--gold); margin-bottom: 14px; }
+  .two .line:nth-child(2) { border-left-color: var(--red); }
+  .two .k { font: 700 11px var(--mono); letter-spacing: .1em; color: var(--muted); margin-bottom: 8px; }
+  .two .w { font: 700 26px/1.25 var(--sans); letter-spacing: -.02em; }
+  .two .line:nth-child(1) .w { color: var(--gold); } .two .line:nth-child(2) .w { color: #FF9B94; }
+  .two .d { font-size: 14px; line-height: 1.5; color: #CBD5E1; margin-top: 8px; }
+  .thesis { left: 838px; right: 38px; bottom: 118px; font-size: 19px; padding: 14px 18px; text-align: left; }
+  .source { left: 38px; bottom: 74px; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">02 Sweet and Speed</div><h2>Sweet and Speed</h2></div>
+
+  <div class="fig mill" id="mill"><img src="assets/img/sugarmill.jpg" alt="Sugar-mill at work (판화)"><div class="cap">Sugar-mill at work — 설비의 크기, 사람들의 위치, 손이 기계에 가까이 가는 장면</div></div>
+
+  <div class="two lines" id="two">
+    <div class="line"><div class="k">CONSUMER</div><div class="w">소비자의 달콤함</div><div class="d">작은 결정과 맛이 보인다</div></div>
+    <div class="line"><div class="k">PRODUCTION</div><div class="w">생산 현장의 속도</div><div class="d">베고, 옮기고, 즙을 짜고, 가열하는 작업</div></div>
+  </div>
+
+  <div class="thesis" id="thesis">달콤함의 뒤편에는 생산의 시간이 있다</div>
+  <div class="source">발표자 제공 · Sweet and Speed</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '18', meta: '02 Sweet and Speed', lit: 1,
+    prev: 's17.html', next: 's19.html',
+    steps: [
+      { n: 'STEP 01', name: '그림', title: '10초, 먼저 본다', header: 'Sweet and Speed', dur: 10000,
+        caption: '아직 칼을 해설하지 않는다 — 설비의 크기와 사람들의 위치만 <span class="gold">눈에 담아 둔다</span>' },
+      { n: 'STEP 02', name: '두 시선', title: '소비자 · 생산 현장', header: '같은 상품, 전혀 다른 정보', dur: 6000,
+        caption: '어느 쪽에서 보느냐에 따라 <span class="gold">전혀 다른 정보</span>가 필요하다' },
+      { n: 'STEP 03', name: '결론', title: '생산의 시간', header: '달콤함의 뒤편에는 생산의 시간이 있다', dur: 5500,
+        caption: '이 그림을 <span class="gold">다시 보겠습니다</span>' },
+    ],
+    apply(i) {
+      mill.classList.toggle('slow', i === 0);
+      two.classList.toggle('show', i >= 1);
+      thesis.classList.toggle('on', i >= 2);
+    }
+  });
+</script>
+</body>
+</html>

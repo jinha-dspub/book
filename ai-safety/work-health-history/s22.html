@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>22 · 남은 기록으로 답할 수 있는 것 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .cols { position: absolute; left: 38px; right: 38px; top: 168px; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; z-index: 35; }
+  .c { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 26px 28px; opacity: 0; transform: translateY(18px); transition: opacity .8s var(--ease-out), transform .8s var(--ease-out); }
+  .c.on { opacity: 1; transform: none; }
+  .c.read { border-top: 3px solid var(--muted); } .c.ask { border-top: 3px solid var(--gold); }
+  .c .k { font: 700 11px var(--mono); letter-spacing: .1em; color: var(--muted); margin-bottom: 8px; }
+  .c.ask .k { color: var(--gold); }
+  .c h3 { font: 700 26px/1.25 var(--sans); letter-spacing: -.02em; margin-bottom: 18px; }
+  .c .it { font: 500 20px/1.4 var(--sans); padding: 12px 0; border-top: 1px solid var(--line); color: #E2E8F0; opacity: 0; transform: translateX(-8px); transition: opacity .5s, transform .5s; }
+  .c.on .it { opacity: 1; transform: none; }
+  .c.on .it:nth-child(3) { transition-delay: .25s } .c.on .it:nth-child(4) { transition-delay: .5s } .c.on .it:nth-child(5) { transition-delay: .75s }
+  .c.ask .it { color: var(--text); font-weight: 600; }
+  .c .it small { display: block; font: 400 13px/1.4 var(--sans); color: var(--muted); margin-top: 3px; }
+  .thesis { bottom: 92px; }
+  .source { left: 38px; bottom: 72px; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">02 Sweet and Speed</div><h2>남은 기록으로 답할 수 있는 것</h2></div>
+
+  <div class="cols">
+    <div class="c read" id="read">
+      <div class="k">WHAT WE CAN READ</div><h3>읽을 수 있는 것</h3>
+      <div class="it">토지의 경계<small>1779 · 1828 지도 — 소유와 구획</small></div>
+      <div class="it">선박의 배치<small>Brookes · 마리 세라피크호 — 적재와 거래</small></div>
+      <div class="it">손상에 관한 단편<small>밈바 — ‘hands ground off’</small></div>
+    </div>
+    <div class="c ask" id="ask">
+      <div class="k">WHAT WE STILL HAVE TO ASK</div><h3>더 물어야 하는 것</h3>
+      <div class="it">노출과 일상<small>어떤 조건에서 얼마나 일했는지</small></div>
+      <div class="it">위험을 피할 권한<small>거절하거나 멈출 수 있었는지</small></div>
+      <div class="it">치료와 이후의 삶<small>손상 뒤 치료와 생활이 어떻게 이어졌는지</small></div>
+    </div>
+  </div>
+
+  <div class="thesis" id="thesis">생산을 아는 것과 사람의 삶을 아는 것</div>
+  <div class="source">출처: McMahon, 1828 · Hicks, 2007, Fig. 15 / UWM · National Museums Liverpool · 발표자 구성</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '22', meta: '02 Sweet and Speed', lit: 1,
+    prev: 's21.html', next: 's23.html',
+    steps: [
+      { n: 'STEP 01', name: '읽을 수 있는 것', title: '기록이 없었던 세계는 아니다', header: '남은 기록으로 답할 수 있는 것', dur: 6000,
+        caption: '토지의 소유와 경계, 선박의 배치, 공정의 모습, 손상의 단편 — <span class="gold">생산과 운송을 조직한 자료</span>가 우리 앞에 있다' },
+      { n: 'STEP 02', name: '더 물어야 하는 것', title: '건강과 삶에는 더 많은 연결이 필요하다', header: '남은 기록으로 답할 수 있는 것', dur: 7000,
+        caption: '왼쪽을 많이 모았다고 오른쪽 질문의 답이 <span class="red">저절로 생기지 않는다</span>' },
+      { n: 'STEP 03', name: '결론', title: '다음 시대로 가져갈 차이', header: '생산을 아는 것과 사람의 삶을 아는 것', dur: 6000,
+        caption: '생산을 위해 정교한 기록을 만들 수 있는 사회라면 — 사람의 건강과 삶을 위해서는 <span class="gold">무엇을 정교하게 기록할 것인가</span>' },
+    ],
+    apply(i) { read.classList.toggle('on', i >= 0); ask.classList.toggle('on', i >= 1); thesis.classList.toggle('on', i >= 2); }
+  });
+</script>
+</body>
+</html>

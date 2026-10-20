@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>10 · 이 지도에서 무엇이 보입니까 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .viewport { background: radial-gradient(ellipse at 40% 50%, #141210 0%, var(--stage-bg) 70%); }
+  .rig img { object-fit: contain; padding: 150px 0 84px; transition: transform 1.4s var(--ease-out), padding 1s var(--ease-out); }
+  .rig.left img { transform: translateX(-200px); padding: 150px 0 170px; }
+  .words { position: absolute; right: 120px; top: 50%; transform: translateY(-50%); z-index: 36; }
+  .words .line { display: flex; align-items: center; gap: 22px; margin: 22px 0; }
+  .words .line .bar { width: 4px; height: 44px; background: var(--red); border-radius: 2px; }
+  .words .line .w { font: 700 40px/1 var(--sans); letter-spacing: -.02em; }
+  .words .line .d { font-size: 14px; color: var(--muted); margin-top: 6px; }
+  .thesis { bottom: 92px; }
+  .ask { position: absolute; left: 38px; right: 38px; top: 84px; z-index: 36; text-align: center; font: 500 20px var(--sans); color: var(--gold); opacity: 0; transition: opacity .8s; }
+  .ask.on { opacity: 1; }
+  .source { left: 38px; bottom: 70px; }
+  .head h2, .head .kick { text-shadow: 0 2px 12px rgba(0,0,0,.7); }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="viewport">
+    <div class="rig" id="rig"><img src="assets/img/map1779.jpg" alt="1779 Jefferys / Le Rouge Map of St. Kitts and Nevis"></div>
+  </div>
+  <div class="head"><div class="kick">01 지도는 무엇을 기록했는가</div><h2>이 지도에서 무엇이 보입니까?</h2></div>
+  <div class="ask" id="ask">— 15초 동안, 먼저 보겠습니다. 어느 부분에 눈이 가십니까.</div>
+
+  <div class="words lines" id="words">
+    <div class="line"><span class="bar"></span><div><div class="w">이름</div><div class="d">해안과 구획에 적힌 이름 — 어떤 이름은 자세히</div></div></div>
+    <div class="line"><span class="bar"></span><div><div class="w">경계</div><div class="d">여러 구획 — 모든 구획이 사탕수수밭은 아니다</div></div></div>
+    <div class="line"><span class="bar"></span><div><div class="w">길</div><div class="d">공간을 한눈에 — 그러나 모든 것을 같은 비중으로 담지는 않는다</div></div></div>
+  </div>
+
+  <div class="thesis" id="thesis">그 사람이 <b>어디에</b> 있었는지와 <b>어떤 몸으로</b> 일했는지는 서로 다른 질문이다</div>
+  <div class="source">1779년, 세인트키츠와 네비스 · 출처: Le Rouge, 1779 · Mount Vernon 소장 기록</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '10', meta: '01 지도는 무엇을 기록했는가', lit: 1,
+    prev: 's09.html', next: 's11.html',
+    steps: [
+      { n: 'STEP 01', name: '먼저 본다', title: '15초, 설명 없이', header: '이 지도에서 무엇이 보입니까?', dur: 15000,
+        caption: '1779년에 간행된 세인트키츠와 네비스의 지도 — <span class="gold">먼저 보겠습니다</span>' },
+      { n: 'STEP 02', name: '이름 · 경계 · 길', title: '무엇이 정확하게 구분되어 있는가', header: '지도는 어떤 질문에 답하려고 만들어졌는가', dur: 7000,
+        caption: '지도의 잘못을 찾는 것이 아니다 — 이 지도가 <span class="gold">어떤 질문에 답하려고</span> 만들어졌는지를 생각한다' },
+      { n: 'STEP 03', name: '두 질문', title: '어디에 · 어떤 몸으로', header: '오늘의 관심은 여기에서 일한 사람', dur: 7000,
+        caption: '지도를 더 크게 본다고 두 질문에 모두 답할 수 있을까 — 강의 끝에 <span class="gold">우리 기관의 데이터</span>도 같은 방식으로 본다' },
+    ],
+    apply(i) {
+      rig.classList.toggle('left', i >= 1);
+      ask.classList.toggle('on', i === 0);
+      words.classList.toggle('show', i >= 1);
+      thesis.classList.toggle('on', i >= 2);
+    }
+  });
+</script>
+</body>
+</html>

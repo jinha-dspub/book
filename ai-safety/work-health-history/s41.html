@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>41 · 맥락 없는 정보, 맥락성 정보 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .cols { position: absolute; left: 38px; right: 38px; top: 162px; height: 352px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; z-index: 35; }
+  .col { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px; opacity: 0; transform: translateY(16px); transition: opacity .8s var(--ease-out), transform .8s var(--ease-out); position: relative; }
+  .col.on { opacity: 1; transform: none; }
+  .col.l { border-top: 4px solid var(--red); } .col.r { border-top: 4px solid var(--green); }
+  .col h3 { font: 700 20px/1.3 var(--sans); margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+  .col.l h3 { color: #FF9B94; } .col.r h3 { color: #6EE7B7; }
+  .col h3 small { font: 600 11px var(--mono); letter-spacing: .1em; color: var(--muted); }
+  .it { display: flex; align-items: center; gap: 12px; font-size: 15px; line-height: 1.45; color: #E2E8F0; padding: 9px 0; border-top: 1px dashed var(--line); min-height: 50px; }
+  .it .tagk { flex: none; font: 600 10.5px var(--mono); color: #6EE7B7; letter-spacing: .06em; border: 1px solid rgba(110,231,183,.4); padding: 2px 6px; border-radius: 4px; }
+  .it b { color: var(--text); }
+  .col.l .it b { color: #FFC9C4; }
+  .res { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line); font: 700 17px var(--sans); }
+  .col.l .res { color: #FF9B94; } .col.r .res { color: #6EE7B7; }
+  /* mini map with a blinking blue dot */
+  .mini { width: 92px; height: 60px; border-radius: 6px; background: #0F1A26; border: 1px solid #1E293B; position: relative; overflow: hidden; flex: none; }
+  .mini::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent 0 13px, #1E293B 13px 14px), repeating-linear-gradient(90deg, transparent 0 17px, #1E293B 17px 18px); }
+  .mini .d { position: absolute; left: 60%; top: 45%; width: 10px; height: 10px; border-radius: 50%; background: #3B82F6; box-shadow: 0 0 0 4px rgba(59,130,246,.3), 0 0 14px #3B82F6; transform: translate(-50%, -50%); animation: ping 1.6s infinite; }
+  @keyframes ping { 0%, 100% { box-shadow: 0 0 0 3px rgba(59,130,246,.35), 0 0 14px #3B82F6; } 50% { box-shadow: 0 0 0 9px rgba(59,130,246,0), 0 0 14px #3B82F6; } }
+  /* connecting lines between matching rows */
+  .links { position: absolute; left: calc(50% - 30px); top: 0; width: 60px; height: 100%; pointer-events: none; z-index: 2; }
+  .links line { stroke: var(--gold); stroke-width: 2; stroke-dasharray: 5 5; opacity: 0; transition: opacity .6s; }
+  .links line.on { opacity: 1; }
+  .links .mid { grid-column: 2; }
+  .quotes { position: absolute; left: 38px; right: 38px; bottom: 92px; z-index: 36; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .quotes .line { background: rgba(240,180,41,.08); border: 1px solid rgba(240,180,41,.4); border-radius: 10px; padding: 12px 18px; font: 500 15.5px/1.5 var(--sans); color: #E2E8F0; }
+  .quotes .line b { color: var(--gold); }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">CHAPTER 3 · 파편적 데이터에서 맥락성 정보로</div><h2>맥락 없는 정보, 맥락성 정보</h2></div>
+
+  <div class="cols">
+    <div class="col l" id="cl">
+      <h3>맥락 없는 정보 <small>CONTEXTLESS</small></h3>
+      <div class="it"><div class="mini"><div class="d"></div></div><span>지도 위의 <b>‘파란 점’</b> — 인간은 좌표와 숫자</span></div>
+      <div class="it" id="l1">“배송 25분 지연”</div>
+      <div class="it" id="l2">“수락률 85%로 하락”</div>
+      <div class="it" id="l3">“A구역 경로 차단 — 에러 404”</div>
+      <div class="res">이유를 모른다 &nbsp;→&nbsp; 통제의 채찍</div>
+    </div>
+    <svg class="links" id="links" viewBox="0 0 60 352" preserveAspectRatio="none">
+      <line id="k1" x1="0" y1="0" x2="60" y2="0"/><line id="k2" x1="0" y1="0" x2="60" y2="0"/><line id="k3" x1="0" y1="0" x2="60" y2="0"/>
+    </svg>
+    <div class="col r" id="cr">
+      <h3>맥락성 정보 <small>CONTEXTUAL</small></h3>
+      <div class="it">파편적 숫자에 <b>‘현실의 이유’</b>를 복원한 데이터</div>
+      <div class="it" id="r1"><span class="tagk">환경</span><span>시간당 30mm 폭우 · 빙판길 — <b>환경적 맥락</b></span></div>
+      <div class="it" id="r2"><span class="tagk">생리</span><span>HRV 하락 · 8시간 연속 운행 — <b>생리적 맥락</b></span></div>
+      <div class="it" id="r3"><span class="tagk">공간</span><span>암모니아 냉매 누출 위험 — <b>공간적 맥락</b></span></div>
+      <div class="res">현실을 복원한다 &nbsp;→&nbsp; 보호의 방패</div>
+    </div>
+  </div>
+
+  <div class="quotes lines" id="quotes">
+    <div class="line"><b>앤드류 응</b> — “모델은 발전하니, 데이터에 투자하라”</div>
+    <div class="line"><b>산업보건학</b> — “데이터는 쌓이니, 질문에 투자하라”</div>
+  </div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  function wire() {
+    const box = document.querySelector('.cols').getBoundingClientRect();
+    const sy = 352 / box.height;
+    [[l1, r1, k1], [l2, r2, k2], [l3, r3, k3]].forEach(([a, b, k]) => {
+      const ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
+      k.setAttribute('y1', ((ra.top + ra.height / 2 - box.top) * sy).toFixed(1)); k.setAttribute('y2', ((rb.top + rb.height / 2 - box.top) * sy).toFixed(1));
+    });
+  }
+  addEventListener('resize', wire);
+  Scene.init({
+    id: '41', meta: 'CHAPTER 3 · 파편적 데이터에서 맥락성 정보로', lit: 3,
+    prev: 's40.html', next: 's42.html',
+    steps: [
+      { n: 'STEP 01', name: '맥락 없는 정보', title: '지도 위의 파란 점', header: '지금의 AI 가 세상을 어떻게 보는가', dur: 7000, lit: 2,
+        caption: '시스템은 결과만 안다 — 이유는 <span class="red">묻지도, 알지도 못한다</span>' },
+      { n: 'STEP 02', name: '맥락성 정보', title: '같은 세 줄의 진짜 이유', header: '맥락성 정보 — 제목의 두 번째 키워드', dur: 8000, lit: 3,
+        caption: '아까 보신 그 공간들이, 여기서 <span class="gold">데이터의 문제</span>로 돌아온다 — 처음부터 데이터에 무엇이 빠져 있는가의 이야기였다' },
+      { n: 'STEP 03', name: '질문에 투자하라', title: 'Data-Centric 에 두 가지를 더해', header: '데이터는 쌓이니, 질문에 투자하라', dur: 7000, lit: 3,
+        caption: '플랫폼은 왼쪽을 남김없이 수집하면서 오른쪽은 수집하지 않는다 — <span class="gold">무엇을 수집하는가, 그 선택이 시스템의 가치관</span>이다' },
+    ],
+    apply(i) {
+      cl.classList.toggle('on', i >= 0); cr.classList.toggle('on', i >= 1);
+      requestAnimationFrame(wire);
+      [k1, k2, k3].forEach((k, j) => { k.classList.remove('on'); if (i >= 1) setTimeout(() => k.classList.add('on'), i === 1 ? 900 + j * 500 : 0); });
+      quotes.classList.toggle('show', i === 2);
+    }
+  });
+</script>
+</body>
+</html>

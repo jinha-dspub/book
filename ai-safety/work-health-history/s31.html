@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>31 · 현실의 루프 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .rig img { filter: brightness(.9); }
+  .card.side { left: 38px; top: 168px; width: 460px; border-left-color: var(--red); }
+  .card.side.out-left { transform: translateX(-115%); }
+  .card .k { font: 700 11px var(--mono); letter-spacing: .1em; color: #FF9B94; margin-bottom: 10px; }
+  .card .chain { display: flex; flex-direction: column; gap: 8px; }
+  .card .chain div { font-size: 16px; line-height: 1.5; color: #E2E8F0; padding-left: 14px; border-left: 2px solid rgba(230,43,30,.6); }
+  .card .chain div b { color: var(--gold); }
+  .card .sum { margin-top: 14px; font: 600 17px/1.45 var(--sans); color: var(--text); border-top: 1px solid var(--line); padding-top: 12px; }
+  .thesis { bottom: 92px; left: 38px; right: auto; width: 640px; text-align: left; font-size: 26px; line-height: 1.35; }
+  .thesis b { color: #FF8A80; }
+  .head h2, .head .kick { text-shadow: 0 2px 12px rgba(0,0,0,.7); }
+  .source { right: 38px; bottom: 70px; text-shadow: 0 1px 4px #000; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="viewport">
+    <div class="rig" id="rig"><img src="assets/img/rider_rain.jpg" alt="빗속의 라이더 — 연출 이미지(AI 생성)"></div>
+    <div class="vignette" id="vig"></div>
+  </div>
+  <div class="head"><div class="kick">CHAPTER 2 · AI 시대의 루프</div><h2>현실의 루프</h2></div>
+
+  <div class="card side out-left" id="side">
+    <div class="k">같은 루프를 라이더의 자리에서</div>
+    <div class="chain">
+      <div>알고리즘이 <b>비현실적인 배달 시간</b>을 제시한다 — 폭우도, 고장 난 엘리베이터도 알고리즘은 모른다</div>
+      <div>거부하면? <b>수락률</b>이 떨어진다 → 콜이 끊긴다 → 소득이 끊긴다</div>
+      <div>형식적으로는 in-the-loop 다 — 수락 버튼은 노동자가 누르니까</div>
+    </div>
+    <div class="sum">그러나 페트로프에게 있던 것 — <span class="gold">불이익 없이 판정을 뒤집을 권한</span> — 이 라이더에게는 없다</div>
+  </div>
+
+  <div class="thesis" id="thesis">노동자는 루프의 감독자가 아니라<br><b>루프의 충격 완충재(Shock Absorber)</b>가 되었다</div>
+  <div class="source">연출 이미지 (AI 생성)</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '31', meta: 'CHAPTER 2 · AI 시대의 루프', lit: 2,
+    prev: 's30.html', next: 's32.html',
+    steps: [
+      { n: 'STEP 01', name: '라이더의 자리', title: '배달 완료까지 3 min left', header: '현실의 루프', dur: 5000,
+        caption: '같은 루프를 <span class="gold">라이더의 자리</span>에서 보자' },
+      { n: 'STEP 02', name: '거부권 없는 루프', title: '거부하면 콜이 끊긴다', header: '거부권 없는 in-the-loop', dur: 7000,
+        caption: '<span class="red">거부권 없는 in-the-loop 는 in-the-loop 가 아니다</span> — 노동자는 계산 오류를 자기 몸으로 메운다: 과속으로, 신호위반으로, 휴식을 건너뛰는 것으로' },
+      { n: 'STEP 03', name: '충격 완충재', title: '1981년의 우라다와 2025년의 라이더', header: '감독자가 아니라 완충재', dur: 6000,
+        caption: '1981년의 우라다와 2025년의 라이더는 <span class="gold">같은 자리</span>에 서 있다' },
+    ],
+    apply(i) {
+      rig.style.transform = i === 0 ? 'scale(1.02)' : i === 1 ? Scene.cam(50, 55, 1.2, 66, 50) : 'scale(1.06)';
+      vig.classList.toggle('on', i >= 1); vig.style.background = i === 1 ? 'linear-gradient(to right, rgba(7,10,14,.6), rgba(7,10,14,0) 60%)' : 'linear-gradient(to top, rgba(7,10,14,.9), rgba(7,10,14,.3) 55%, rgba(7,10,14,0))';
+      side.classList.toggle('out-left', i !== 1);
+      thesis.classList.toggle('on', i === 2);
+    }
+  });
+</script>
+</body>
+</html>

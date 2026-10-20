@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>19 · 칼이 있는 이유 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .rig img { filter: sepia(.15); }
+  .ring { position: absolute; left: 36.2%; top: 70%; width: 70px; height: 150px; transform: translate(-50%, -50%) rotate(-12deg); border: 2.5px solid var(--red); border-radius: 50%;
+          box-shadow: 0 0 30px rgba(230,43,30,.6); opacity: 0; transition: opacity .8s .9s; pointer-events: none; }
+  .ring.on { opacity: 1; }
+  .card.q { right: 38px; top: 84px; bottom: 92px; width: 600px; border-left-color: var(--red); display: flex; flex-direction: column; }
+  .card.q.out-right { transform: translateX(115%); }
+  .card .k { font: 700 11px var(--mono); letter-spacing: .1em; color: #FF9B94; margin-bottom: 14px; }
+  .en { font: 400 14.5px/1.5 var(--serif); font-style: italic; color: #CBD5E1; margin-bottom: 10px; }
+  .en b { color: var(--text); font-style: normal; font-weight: 600; }
+  .ko { font: 500 17px/1.55 var(--sans); color: var(--text); margin: 4px 0 14px; border-top: 1px dashed var(--line); padding-top: 10px; }
+  .ko b { color: var(--gold); }
+  .ko .cur { color: var(--gold); animation: blink 1s steps(2) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  .mimba { font-size: 14px; line-height: 1.5; color: var(--muted); margin-top: auto; padding-top: 10px; border-top: 1px solid var(--line); }
+  .mimba b { color: #FF9B94; font-weight: 600; }
+  .thesis { bottom: 92px; left: 38px; right: auto; width: 560px; }
+  .source { left: 38px; bottom: 70px; }
+  .head h2, .head .kick { text-shadow: 0 2px 12px rgba(0,0,0,.7); }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="viewport">
+    <div class="rig" id="rig"><img src="assets/img/sugarmill.jpg" alt="Sugar-mill at work (판화)"><div class="ring" id="ring"></div></div>
+    <div class="vignette" id="vig"></div>
+  </div>
+  <div class="head"><div class="kick">02 Sweet and Speed</div><h2>칼이 있는 이유</h2></div>
+
+  <div class="card q out-right" id="q">
+    <div class="k">비상정지장치(E-STOP)가 없던 시대의 해결책</div>
+    <div class="en">"a slave with a machete stood beside the slave who fed cane into the mill, <b>ready to cut off the arm</b> of the mill feeder in case it became trapped."</div>
+    <div class="ko" id="ko1"></div>
+    <div class="en">"If a Mill-feeder be catch'd by the finger, <b>his whole body is drawn in</b>, and is squees'd to pieces…"</div>
+    <div class="ko" id="ko2"></div>
+    <div class="mimba">"An enslaved woman called <b>Mimba</b>, who was in her late 30s or 40s had her <b>'hands ground off'</b>, probably when feeding canes into the mill…"<br>
+      <span style="font-size:12px">Cited in Bridenbaugh and Bridenbaugh 1972, 301 · liverpoolmuseums.org.uk/conditions-sugar-works</span></div>
+  </div>
+
+  <div class="thesis red" id="thesis">기계는 멈추지 않는다.<br>조정되는 것은 언제나 인간의 신체였다.</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  const K1 = '→ "사탕수수를 맷돌(mill)에 집어넣는 노예 옆에는 <b>마체테(정글도)를 든 또 다른 노예</b>가 서 있었는데, 이는 맷돌에 넣는 자의 팔이 끼일 경우 <b>즉시 그 팔을 잘라버릴 준비</b>가 되어 있었다."';
+  const K2 = '→ "손가락 하나라도 잡히게 되면, 그의 <b>전신이 빨려 들어가</b> 조각조각 으스러지게 된다."';
+  Scene.init({
+    id: '19', meta: '02 Sweet and Speed', lit: 1,
+    prev: 's18.html', next: 's20.html',
+    steps: [
+      { n: 'STEP 01', name: '다시 보기', title: '같은 그림', header: '칼이 있는 이유', dur: 4500,
+        caption: '아까 그 그림을 <span class="gold">다시</span> 보겠습니다 — 설비의 크기, 사람들의 위치, 손이 기계에 가까이 가는 장면' },
+      { n: 'STEP 02', name: '기둥의 칼', title: '카메라가 칼로', header: '칼이 있는 이유', dur: 5500,
+        caption: '롤러 옆 기둥에 <span class="red">칼</span>이 기대어 있다 — 장식이 아니다' },
+      { n: 'STEP 03', name: '기록', title: '팔을 자를 준비', header: 'E-Stop 이 없던 시대의 해결책', dur: 11000,
+        caption: '맷돌에 넣는 자의 팔이 끼일 경우 — <span class="red">즉시 그 팔을 잘라버릴 준비</span>' },
+      { n: 'STEP 04', name: '명제', title: '기계는 멈추지 않는다', header: '조정되는 것은 언제나 인간의 신체였다', dur: 6000,
+        caption: '시스템의 실패를 최종적으로 흡수해 온 것은 <span class="gold">언제나 인간의 신체</span>였다 — 오늘의 명제가 여기서 처음 나온다' },
+    ],
+    apply(i) {
+      rig.style.transform = i === 0 ? 'scale(1)' : i === 1 ? Scene.cam(36.2, 70, 3.2, 50, 52) : Scene.cam(36.2, 70, 3.2, 30, 52);
+      ring.classList.toggle('on', i === 1 || i === 2);
+      vig.classList.toggle('on', i >= 1); vig.style.background = i === 1 ? Scene.spot(50, 52, 9, 66) : i >= 2 ? Scene.spot(30, 52, 9, 66) : '';
+      q.classList.toggle('out-right', i < 2);
+      if (i === 2) { Scene.type(ko1, K1, { ms: 18, done: () => Scene.type(ko2, K2, { ms: 18 }) }); }
+      else { Scene.untype(ko1, i > 2 ? K1 : ''); Scene.untype(ko2, i > 2 ? K2 : ''); }
+      thesis.classList.toggle('on', i === 3);
+    }
+  });
+</script>
+</body>
+</html>

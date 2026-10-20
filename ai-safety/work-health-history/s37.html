@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>37 · 그 공간에 들어간 사람 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .rig { transition: transform 9s linear; }
+  .rig img { object-fit: cover; }
+  .ribbon, .caption { transition: opacity .8s; }
+  .stage.quiet .ribbon, .stage.quiet .caption, .stage.quiet .head { opacity: 0; }
+  .head { transition: opacity .8s; }
+  .thesis { bottom: 92px; background: rgba(7,10,14,.55); font-size: 28px; line-height: 1.4; }
+  .head h2, .head .kick { text-shadow: 0 2px 12px rgba(0,0,0,.7); }
+  .source { right: 38px; bottom: 70px; text-shadow: 0 1px 4px #000; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="viewport">
+    <div class="rig" id="rig"><img src="assets/img/maintenance_night.jpg" alt="야간 정비 노동자 — 연출 이미지(AI 생성)"></div>
+    <div class="vignette" id="vig"></div>
+  </div>
+  <div class="head"><div class="kick">CHAPTER 2 · AI 시대의 루프</div><h2>그 공간에 들어간 사람</h2></div>
+
+  <div class="thesis" id="thesis">로봇의 공간과 사람의 공간이 겹칠 때 —<br>우리는 누구를 위한 공간으로 만들 것인가</div>
+  <div class="source">연출 이미지 (AI 생성)</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '37', meta: 'CHAPTER 2 · AI 시대의 루프', lit: 2,
+    prev: 's36.html', next: 's38.html',
+    steps: [
+      { n: 'STEP 01', name: '어느 밤', title: '헤드랜턴 하나에 의지해', header: '그 공간에 들어간 사람', dur: 5000,
+        caption: '이 모든 공간의 어느 밤 — 멈춰 선 로봇들 사이로 걸어 들어가는 정비 노동자' },
+      { n: 'STEP 02', name: '침묵', title: '(잠시 침묵)', header: '', dur: 8000, caption: '' },
+      { n: 'STEP 03', name: '질문', title: '누구를 위한 공간인가', header: '누구를 위한 공간으로 만들 것인가', dur: 6500,
+        caption: '이 공간의 어떤 것도 이 사람을 위해 만들어지지 않았다 — 그러나 <span class="gold">이 사람이 없으면, 이 공간은 다시 돌지 않는다</span>' },
+    ],
+    apply(i) {
+      rig.style.transform = i === 0 ? 'scale(1)' : i === 1 ? Scene.cam(50, 50, 1.22) : Scene.cam(50, 48, 1.3);
+      stage.classList.toggle('quiet', i === 1);
+      vig.classList.toggle('on', i === 2); vig.style.background = i === 2 ? 'linear-gradient(to top, rgba(7,10,14,.9), rgba(7,10,14,.3) 50%, rgba(7,10,14,0))' : '';
+      thesis.classList.toggle('on', i === 2);
+    }
+  });
+</script>
+</body>
+</html>

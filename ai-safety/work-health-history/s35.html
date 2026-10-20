@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>35 · 로봇의 격자, 그리고 화재 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .rig img { object-fit: cover; transition: filter 1.6s; }
+  .rig img.burn { filter: sepia(1) saturate(3) hue-rotate(-30deg) brightness(.55) contrast(1.2); }
+  .fire { position: absolute; right: 38px; top: 168px; width: 520px; height: 300px; z-index: 35; border-radius: 12px; overflow: hidden; border: 1px solid rgba(230,43,30,.5); box-shadow: 0 24px 60px rgba(0,0,0,.7), 0 0 50px rgba(230,43,30,.25);
+          transform: translateX(120%); opacity: 0; transition: transform 1.05s var(--ease-out), opacity .8s; }
+  .fire.on { transform: none; opacity: 1; }
+  .fire img { width: 100%; height: 100%; object-fit: cover; }
+  .fire .cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 16px; font-size: 13px; color: #FECACA; background: linear-gradient(transparent, rgba(7,10,14,.92) 45%); }
+  .fire .cap b { display: block; font: 700 18px var(--sans); color: #fff; margin-bottom: 2px; }
+  .note { position: absolute; left: 38px; top: 168px; width: 460px; z-index: 35; }
+  .note .line { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: 10px; padding: 14px 18px; margin-bottom: 10px; font-size: 16px; line-height: 1.5; }
+  .note .line b { color: var(--gold); }
+  .thesis { bottom: 92px; }
+  .head h2, .head .kick { text-shadow: 0 2px 12px rgba(0,0,0,.7); }
+  .source { left: 38px; bottom: 70px; text-shadow: 0 1px 4px #000; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="viewport">
+    <div class="rig" id="rig"><img id="grid" src="assets/img/ocado_grid.jpg" alt="오카도(Ocado) 자동창고 — 사람 없는 로봇의 격자"></div>
+    <div class="vignette" id="vig"></div>
+  </div>
+  <div class="head"><div class="kick">CHAPTER 2 · AI 시대의 루프</div><h2>로봇의 격자, 그리고 화재</h2></div>
+
+  <div class="note lines" id="note">
+    <div class="line">축구장 몇 개 크기의 격자 위를 <b>수천 대의 로봇</b>이 달린다</div>
+    <div class="line">격자 아래는 사람 출입 금지 — <b>로봇의 질서만</b> 존재하는 공간</div>
+    <div class="line">사진에 사람이 한 명도 없다 — 이것이 이 공간의 <b>정상 상태</b>다</div>
+  </div>
+
+  <div class="fire" id="fire"><img src="assets/img/andover_fire.png" alt="2019 앤도버 물류센터 화재 (BBC)"><div class="cap"><b>2019 앤도버 물류센터 화재 (BBC)</b>로봇 충전부의 결함에서 시작된 불이 격자 위로 번졌다 — 무인 최적화 설계는 진화를 어렵게 만들었고, 불은 며칠에 걸쳐 시설을 태웠다</div></div>
+
+  <div class="thesis" id="thesis">무인 공간의 실패를 수습한 것도 — 결국, 사람이었다</div>
+  <div class="source">오카도(Ocado) 자동창고 — 사람 없는 로봇의 격자</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '35', meta: 'CHAPTER 2 · AI 시대의 루프', lit: 2,
+    prev: 's34.html', next: 's36.html',
+    steps: [
+      { n: 'STEP 01', name: '격자', title: '사람이 한 명도 없다', header: '로봇의 격자', dur: 6000,
+        caption: '영국 오카도의 자동창고 — 로봇의 질서만 존재하는 공간, 그것이 <span class="gold">정상 상태</span>다' },
+      { n: 'STEP 02', name: '화재', title: '2019 앤도버', header: '무인 공간도 실패한다', dur: 6500,
+        caption: '불을 끄러 들어간 것은 — 로봇이 아니라 <span class="red">소방관, 사람</span>이었다' },
+      { n: 'STEP 03', name: '결론', title: '수습하는 것도 사람의 몸', header: '처음의 명제가 여기서도 반복된다', dur: 5500,
+        caption: '무인 공간의 실패를 수습하는 것 역시, 결국 <span class="gold">사람의 몸</span>이다' },
+    ],
+    apply(i) {
+      rig.style.transform = i === 0 ? 'scale(1.02)' : i === 1 ? Scene.cam(50, 50, 1.25, 36, 50) : 'scale(1.06)';
+      grid.classList.toggle('burn', i >= 1);
+      vig.classList.toggle('on', i >= 1); vig.style.background = i === 1 ? 'linear-gradient(to right, rgba(7,10,14,.55), rgba(7,10,14,.2) 60%)' : 'linear-gradient(to top, rgba(7,10,14,.9), rgba(7,10,14,.35) 55%, rgba(7,10,14,.1))';
+      note.classList.toggle('show', i === 0);
+      fire.classList.toggle('on', i === 1);
+      thesis.classList.toggle('on', i === 2);
+    }
+  });
+</script>
+</body>
+</html>

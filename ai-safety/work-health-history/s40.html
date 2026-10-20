@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>40 · 미안해요, 리키 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .fig { top: 150px; height: 400px; }
+  .fig.poster { left: 300px; width: 282px; }
+  .fig.daughter { left: 600px; width: 380px; }
+  .fig.scanner { left: 38px; width: 340px; }
+  .fig.band { left: 396px; width: 400px; height: 192px; }
+  .fig.wait { left: 396px; top: 358px; width: 400px; height: 192px; }
+  .side { position: absolute; left: 816px; right: 38px; top: 150px; z-index: 35; }
+  .side .line { font-size: 15.5px; line-height: 1.55; color: #CBD5E1; padding: 12px 14px; border-left: 3px solid var(--line); margin-bottom: 12px; }
+  .side .line b { color: var(--text); }
+  .side .line:nth-child(1) { border-color: var(--gold); } .side .line:nth-child(2) { border-color: var(--red); } .side .line:nth-child(3) { border-color: var(--muted); }
+  .thesis { bottom: 92px; }
+  .ask { position: absolute; left: 38px; top: 150px; width: 240px; z-index: 35; font: 700 26px/1.4 var(--sans); letter-spacing: -.02em; color: var(--gold); opacity: 0; transition: opacity .8s .4s; }
+  .ask.on { opacity: 1; }
+  .ask small { display: block; margin-top: 14px; font: 400 14px/1.5 var(--sans); color: var(--muted); }
+  .source { left: 38px; bottom: 70px; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">CHAPTER 2 · AI 시대의 루프</div><h2>숫자 뒤의 얼굴 하나</h2></div>
+
+  <div class="ask" id="ask">이 영화, 보셨습니까 —<small>켄 로치, 〈미안해요, 리키(Sorry We Missed You)〉 (2019) · 칸영화제 공식선정</small></div>
+  <div class="fig poster" id="poster"><img src="assets/img/ricky_poster.jpg" alt="Sorry We Missed You 포스터"></div>
+  <div class="fig daughter" id="daughter"><img src="assets/img/ricky_daughter.jpg" alt="상자를 든 딸이 아버지의 배달을 따라나선 날"><div class="cap">아직은, 웃을 수 있던 날들</div></div>
+
+  <div class="fig scanner hide" id="scanner"><img src="assets/img/ricky_scanner.jpg" alt="스캐너"><div class="cap">리키의 하루는 이 스캐너가 정한다</div></div>
+  <div class="fig band hide" id="band"><img src="assets/img/ricky_bandage.jpg" alt="붕대를 감고 운전대를"><div class="cap">강도를 당한 다음 날 아침 — 부러진 손에 붕대를 감고</div></div>
+  <div class="fig wait hide" id="wait"><img src="assets/img/ricky_waiting.jpg" alt="아버지를 기다리는 딸"><div class="cap">아버지를 기다리는 딸</div></div>
+  <div class="side lines" id="side">
+    <div class="line">배송 순서도, 도착 시간도, 화장실에 갈 틈도 — 그의 상사는 사람이 아니라 <b>이 기계</b>다. 우리가 계속 보아온 <b>그 침대</b>다.</div>
+    <div class="line">아파도 배송은 나가야 한다 — 스캐너가 울리고, <b>대체 기사 비용과 벌금</b>이 쌓이기 때문이다.</div>
+    <div class="line">이 시스템의 비용은 노동자 한 명이 지불하는 것이 아니다. <b>가족 전체</b>가 지불한다.</div>
+  </div>
+
+  <div class="thesis" id="thesis">시스템은 고객에게는 사과했지만, 리키에게는 사과하지 않았다</div>
+  <div class="source" id="src">켄 로치, 〈미안해요, 리키(Sorry We Missed You)〉 (2019)</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '40', meta: 'CHAPTER 2 · AI 시대의 루프', lit: 2,
+    prev: 's39.html', next: 's41.html',
+    steps: [
+      { n: 'STEP 01', name: '포스터', title: '이 영화, 보셨습니까', header: '숫자 뒤의 얼굴 하나', dur: 6000,
+        caption: '리키는 밴 한 대를 마련하면 가족의 미래를 바꿀 수 있다고 믿었다 — <span class="gold">‘자기 사업’이라는 이름의 특수고용</span>' },
+      { n: 'STEP 02', name: '세 장면', title: '스캐너 · 붕대 · 기다리는 딸', header: '그 믿음이 어떻게 되는지', dur: 8000,
+        caption: '원제 "Sorry We Missed You" — <span class="red">부재중 택배 안내문</span>의 문구다' },
+      { n: 'STEP 03', name: '결론', title: '140개의 아침', header: '이제부터는 해법의 이야기다', dur: 6000,
+        caption: '140명이라는 통계 속에는, <span class="gold">140개의 이런 아침</span>이 있었다는 것' },
+    ],
+    apply(i) {
+      ask.classList.toggle('on', i === 0);
+      poster.classList.toggle('hide', i >= 1); daughter.classList.toggle('hide', i >= 1);
+      [scanner, band, wait].forEach((f, k) => { f.classList.toggle('hide', i < 1); f.style.transitionDelay = i >= 1 ? (k * .25) + 's' : '0s'; });
+      side.classList.toggle('show', i >= 1);
+      thesis.classList.toggle('on', i === 2);
+      src.textContent = i === 0 ? '켄 로치, 〈미안해요, 리키(Sorry We Missed You)〉 (2019) · 칸영화제 공식선정' : '켄 로치, 〈미안해요, 리키〉 (2019)';
+    }
+  });
+</script>
+</body>
+</html>

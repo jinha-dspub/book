@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>05 · 1979 · 1981 · 2023 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .fig.news { left: 38px; top: 168px; width: 380px; height: 300px; background: #fff; }
+  .fig.news img { object-fit: cover; object-position: top; }
+  .fig.sbs { right: 38px; top: 168px; width: 534px; height: 300px; }
+  .mid { position: absolute; left: 438px; top: 168px; width: 290px; height: 300px; z-index: 35; display: flex; flex-direction: column; justify-content: center; gap: 12px; }
+  .who { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--red); border-radius: 10px; padding: 12px 14px; opacity: 0; transform: translateY(12px); transition: opacity .7s var(--ease-out), transform .7s var(--ease-out); }
+  .who.on { opacity: 1; transform: none; }
+  .who .y { font: 700 12px var(--sans); color: #FF9B94; letter-spacing: .02em; margin-bottom: 4px; }
+  .who .n { font: 700 17px/1.3 var(--sans); }
+  .who .d { font-size: 13px; color: var(--muted); margin-top: 3px; line-height: 1.45; }
+  .thesis { bottom: 92px; }
+  .thesis b { color: #fff; }
+  .src1 { left: 38px; top: 476px; width: 380px; } .src2 { right: 38px; top: 476px; width: 534px; text-align: right; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">들어가며</div><h2>1979년 미시간 · 1981년 아카시 — 그리고 경남 고성</h2></div>
+
+  <div class="fig news hide" id="news"><img src="assets/img/news_1979.png" alt="1979년 미시간 — 로봇에 살해된 노동자 1,000만 달러 배상 평결 보도"></div>
+  <div class="source src1" id="s1" style="opacity:0;transition:opacity .8s">1979년 미시간 — “로봇에 살해된 노동자” 1,000만 달러 배상 평결 보도</div>
+  <div class="mid">
+    <div class="who" id="w1"><div class="y">1979 · 1 · 미시간, 포드 주조 공장</div><div class="n">로버트 윌리엄스 (25)</div><div class="d">부품 선반 위에서 재고 확인 중, 로봇 암에 머리를 맞다 — 기록상 로봇에 의해 사망한 최초의 인간</div></div>
+    <div class="who" id="w2"><div class="y">1981 · 가와사키 아카시 공장</div><div class="n">우라다 켄지 (37)</div><div class="d">오작동 로봇을 고치러 들어가다 — 로봇은 그를 ‘장애물’로 인식했다</div></div>
+    <div class="who" id="w3"><div class="y">2023 · 11 · 경남 고성, 파프리카 선별장</div><div class="n">고성의 정비 노동자 (40대)</div><div class="d">센서 점검 중 — 로봇은 그를 ‘상자’로 인식했다</div></div>
+  </div>
+  <div class="fig sbs hide" id="sbs"><img src="assets/img/sbs_2023.jpg" alt="2023년 경남 고성 — 사람을 상자로 오인… 로봇에 눌려 직원 사망 (SBS 8뉴스)"></div>
+  <div class="source src2" id="s2" style="opacity:0;transition:opacity .8s">2023년 경남 고성 — “사람을 상자로 오인… 로봇에 눌려 직원 사망” (SBS 8뉴스)</div>
+
+  <div class="thesis red" id="thesis">1981년의 로봇은 사람을 <b>‘장애물’</b>로, 2023년의 로봇은 사람을 <b>‘상자’</b>로 인식했다</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '05', meta: '들어가며', lit: 1,
+    prev: 's04.html', next: 's06.html',
+    steps: [
+      { n: 'STEP 01', name: '1979 미시간', title: '최초의 희생자', header: '46년 전의 어느 공장', dur: 6000,
+        caption: '1979년 1월, 포드 주조 공장 — <span class="red">기록상 로봇에 의해 사망한 최초의 인간</span>' },
+      { n: 'STEP 02', name: '1981 아카시', title: '장애물로 인식된 사람', header: '2년 뒤, 일본', dur: 6000,
+        caption: '센서 제어 루프가 차단되지 않은 상태 — 로봇은 그를 <span class="red">장애물</span>로 인식했다' },
+      { n: 'STEP 03', name: '2023 고성', title: '상자로 인식된 사람', header: '흑백사진 속 남의 나라 이야기가 아니다', dur: 6000,
+        caption: '2023년 11월, 경남 고성 — 로봇은 그를 <span class="red">상자</span>로 인식했고, 집게로 들어 올려 압착했다' },
+      { n: 'STEP 04', name: '42년', title: '정확히 같은 결과', header: '로봇은 프로그램대로 정확히 움직였다', dur: 7000,
+        caption: '실패한 것은 <span class="gold">시스템</span>이었고, 그 실패를 받아낸 것은 <span class="gold">사람의 몸</span>이었다' },
+    ],
+    apply(i) {
+      news.classList.toggle('hide', i < 0); news.classList.toggle('quiet', i >= 2);
+      s1.style.opacity = 1;
+      w1.classList.toggle('on', i >= 0); w2.classList.toggle('on', i >= 1); w3.classList.toggle('on', i >= 2);
+      sbs.classList.toggle('hide', i < 2); s2.style.opacity = i >= 2 ? 1 : 0;
+      thesis.classList.toggle('on', i >= 3);
+    }
+  });
+</script>
+</body>
+</html>

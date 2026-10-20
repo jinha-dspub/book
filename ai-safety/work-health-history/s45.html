@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>45 · 그럼 — 빅데이터는 대안이 될까요? — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .fig.kbs { left: 38px; top: 168px; width: 600px; height: 316px; }
+  .fig.dash { right: 38px; top: 168px; width: 580px; height: 316px; background: #0B1118; }
+  .fig.dash img { object-fit: cover; object-position: 50% 0; }
+  .fig .live { position: absolute; left: 14px; top: 12px; }
+  .thesis { bottom: 92px; }
+  .half { position: absolute; left: 38px; right: 38px; bottom: 168px; z-index: 37; text-align: center; font: 700 26px/1.3 var(--sans); color: #FF9B94; text-shadow: 0 6px 24px rgba(0,0,0,.9);
+          opacity: 0; transform: translateY(10px); transition: opacity .8s, transform .8s; }
+  .half.on { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">CHAPTER 3 · 파편적 데이터에서 맥락성 정보로</div><h2>그럼 — 빅데이터는 대안이 될까요?</h2></div>
+
+  <div class="fig kbs" id="kbs"><img src="assets/img/kbs_news.png" alt="KBS 뉴스9 — 일터와 암, 상관관계는?"><div class="cap">KBS 뉴스9 — “일터와 암, 상관관계는?” (본 연구 보도 화면)</div></div>
+  <div class="fig dash hide" id="dash"><img src="assets/img/sir_dashboard.png" alt="직업 코호트·암발생(SIR) 자동분석 대시보드"><span class="chip red live">▶ 발표 당일 라이브 시연</span><div class="cap">직업 코호트·암발생(SIR) 자동분석 대시보드 — ▶ 발표 당일 라이브 시연</div></div>
+
+  <div class="thesis" id="thesis">사람이 의심해야 조사가 시작되던 시대에서, 데이터가 먼저 의심해 주는 시대로</div>
+  <div class="half" id="half">— 절반만 그렇다.</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '45', meta: 'CHAPTER 3 · 파편적 데이터에서 맥락성 정보로', lit: 3,
+    prev: 's44.html', next: 's46.html',
+    steps: [
+      { n: 'STEP 01', name: '직업성암 지도', title: 'KBS 9시 뉴스', header: '데이터를 더 크게, 더 많이 모으면?', dur: 6000,
+        caption: '건강보험 빅데이터와 특수건강검진 자료를 연결한 <span class="gold">직업성암 지도</span> — 어느 업종에서 폐암이 초과 발생하는지' },
+      { n: 'STEP 02', name: '대시보드', title: '데이터가 먼저 의심한다', header: '자동분석 대시보드 — 라이브 시연', dur: 7000,
+        caption: '데이터가 갱신될 때마다 직종별 위험을 자동 분석해 <span class="gold">역학조사의 우선순위</span>를 제안한다' },
+      { n: 'STEP 03', name: '절반만', title: '그렇다면 답은 "그렇다"인가', header: '빅데이터는 대안인가', dur: 6000,
+        caption: '이 지도를 만든 사람으로서, 이 지도를 볼 때마다 <span class="red">마음에 걸리는 것</span>이 하나 있다' },
+    ],
+    apply(i) {
+      dash.classList.toggle('hide', i < 1);
+      kbs.classList.toggle('quiet', i === 1);
+      thesis.classList.toggle('on', i >= 1);
+      half.classList.toggle('on', i === 2);
+      if (i === 2) { kbs.classList.add('quiet'); dash.classList.add('quiet'); } else dash.classList.remove('quiet');
+    }
+  });
+</script>
+</body>
+</html>

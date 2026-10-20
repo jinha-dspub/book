@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>14 · 1795년, 그리고 100년 후 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .fig.lees { left: 38px; top: 168px; width: 500px; height: 232px; background: #141210; }
+  .fig.lees img { object-fit: contain; image-rendering: auto; }
+  .quote { position: absolute; left: 38px; top: 414px; width: 500px; z-index: 35; font: 400 12.5px/1.5 var(--serif); font-style: italic; color: #CBD5E1; opacity: 0; transition: opacity .8s .3s; }
+  .quote.on { opacity: 1; }
+  .quote b { color: var(--gold); font-style: normal; font-weight: 600; }
+  .fig.photo { right: 38px; top: 168px; width: 660px; height: 438px; }
+  .fig.photo img { filter: sepia(.2); }
+  /* step 3: the map card + translation */
+  .card.waste { left: 38px; top: 168px; width: 640px; bottom: 100px; padding: 0; overflow: hidden; border-left-color: var(--gold); display: flex; flex-direction: column; }
+  .card.waste.out-left { transform: translateX(-115%); }
+  .card.waste img { width: 100%; height: 300px; object-fit: cover; object-position: 50% 40%; display: block; image-rendering: auto; }
+  .card.waste .tx { padding: 14px 18px; font-size: 14px; line-height: 1.55; color: #CBD5E1; flex: 1; }
+  .card.waste .tx .en { font: 400 12.5px/1.45 var(--serif); font-style: italic; color: var(--muted); }
+  .card.waste .tx b { color: var(--gold); }
+  .card.waste .tx .w { display: inline-block; margin-right: 14px; font-weight: 700; color: var(--text); }
+  .card.waste .tx .w small { color: #FF9B94; font-weight: 600; margin-left: 4px; }
+  .fig.cliff { right: 38px; top: 168px; width: 540px; bottom: 100px; height: auto; }
+  .fig.cliff .cap b { color: var(--gold); }
+  .source { left: 38px; bottom: 70px; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">01 지도는 무엇을 기록했는가</div><h2 id="h2">1795년 Lieutenant James Lees, and 100 years later</h2></div>
+
+  <div class="fig lees" id="lees"><img src="assets/img/lees1795.png" alt="Lieutenant James Lees, 1795 — 노예 주거지 그림"><div class="cap">1795년 · Lieutenant James Lees 의 그림</div></div>
+  <div class="quote" id="quote">Slave houses in Nevis were described as <b>'composed of posts in the ground, thatched around the sides and upon the roof, with boarded partitions'</b>. They were little more than huts, with a single storey and thatched with cane trash. In the inventory of property lost in the French raid on St Kitts in February 1706 they were generally valued at as little as <b>£2 each</b>.</div>
+  <div class="fig photo hide" id="photo"><img src="assets/img/slavehouses_1990.jpg" alt="1990년대 초 사진 — 초가"><div class="cap">1990년초 사진 — 100년 뒤에도, 같은 형태의 집</div></div>
+
+  <div class="card waste out-left" id="waste">
+    <img src="assets/img/nevis_waste_map.png" alt="Nevis 지도 — Waste / Ravine 사이의 노예 마을">
+    <div class="tx">
+      <span class="w">Waste<small>쓸모 없는 땅 (경작지가 아니라는 것)</small></span><span class="w">Ravine<small>낭떠러지</small></span><br>
+      <span class="en">"...shows a slave village on a strip of land between a road on one side and a steep ravine on the other." · "...eighteen small huts... some with ridged garden plots beside them."</span><br>
+      즉, 노예 마을이 한쪽은 도로, 다른 한쪽은 <b>가파른 낭떠러지(Ravine)</b> 사이에 낀 좁은 땅 위에 있고, 그 옆에는 고랑이 파진 텃밭이 딸려 있다.
+    </div>
+  </div>
+  <div class="fig cliff hide" id="cliff"><img src="assets/img/cliff_now.jpg" alt="현재의 그 자리 — 절벽과 바다"><div class="cap"><b>현재</b> — 도로와 낭떠러지 사이, 그 좁은 땅</div></div>
+
+  <div class="source" id="src">liverpoolmuseums.org.uk/slave-houses-st-kitts-and-nevis · liverpoolmuseums.org.uk/slave-villages-st-kitts</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  const H = ['1795년 Lieutenant James Lees, and 100 years later', '1795년 Lieutenant James Lees, and 100 years later', 'Waste 와 Ravine 사이 — 지도의 가장자리', '그 자리, 지금'];
+  Scene.init({
+    id: '14', meta: '01 지도는 무엇을 기록했는가', lit: 1,
+    prev: 's13.html', next: 's15.html',
+    steps: [
+      { n: 'STEP 01', name: '1795', title: '기둥과 초가, 한 채 £2', header: '1795년의 그림', dur: 7000,
+        caption: '땅에 박은 기둥, 사탕수수 찌꺼기 지붕 — 재산 목록에 <span class="gold">한 채 £2</span>' },
+      { n: 'STEP 02', name: '100년 후', title: '1990년대 초의 사진', header: '그리고 100년 후', dur: 6000,
+        caption: '100년 뒤의 사진 — <span class="gold">집의 형태는 그대로</span>다' },
+      { n: 'STEP 03', name: 'Waste · Ravine', title: '쓸모없는 땅과 낭떠러지 사이', header: 'Waste 와 Ravine 사이', dur: 9000,
+        caption: '도로와 <span class="red">낭떠러지</span> 사이에 낀 좁은 땅 — 열여덟 채의 오두막, 고랑 파인 텃밭' },
+      { n: 'STEP 04', name: '지금', title: '풀과 절벽과 바다', header: '그 자리, 지금', dur: 6000,
+        caption: '건물은 남지 않았다 — 사람이 <span class="gold">어디에</span> 살았는지는 지도의 가장자리에서 겨우 읽는다' },
+    ],
+    apply(i) {
+      h2.textContent = H[i];
+      lees.classList.toggle('hide', i >= 2); quote.classList.toggle('on', i < 2);
+      photo.classList.toggle('hide', i < 1 || i >= 2);
+      waste.classList.toggle('out-left', i < 2);
+      cliff.classList.toggle('hide', i < 3);
+    }
+  });
+</script>
+</body>
+</html>

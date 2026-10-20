@@ -1,0 +1,154 @@
+/* 일과 건강의 역사와 AI — scene chrome. 05_AI역학조사/slides/scene.css 를 한국어 강연용으로 옮김.
+   One slide = one scene = one html. A scene has STEPs that autoplay.
+   Stage is 1280×720; everything inside is sized in px for that canvas. */
+@import url("fonts.css");
+
+:root {
+  --stage-bg: #070A0E;
+  --page-bg: #040608;
+  --panel: rgba(12, 19, 28, .94);
+  --line: rgba(255,255,255,.14);
+  --text: #F8FAFC;
+  --muted: #94A3B8;
+  --dim: #64748B;
+  --gold: #F0B429;
+  --red: #E62B1E;
+  --blue: #4FA3E0;
+  --green: #34D399;
+  --paper: #E9E2D0;          /* old map / document tone */
+
+  --sans: "Pretendard", "IBM Plex Sans", "Noto Sans KR", system-ui, sans-serif;
+  --serif: "IBM Plex Serif", "Pretendard", Georgia, serif;   /* Latin quotes; Korean falls back to Pretendard */
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --ease-cam: cubic-bezier(.65, 0, .35, 1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { min-height: 100%; }
+body {
+  background: var(--page-bg); color: var(--text); font-family: var(--sans);
+  min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 14px; overflow-x: hidden; user-select: none; -webkit-font-smoothing: antialiased;
+  word-break: keep-all; overflow-wrap: break-word;
+}
+.serif { font-family: var(--serif); }
+.mono { font-family: var(--mono); }
+.gold { color: var(--gold); } .red { color: var(--red); } .blue { color: var(--blue); } .green { color: var(--green); } .muted { color: var(--muted); }
+
+/* ---------- UI chrome (outside the stage) ---------- */
+.ui-chrome { width: 100%; max-width: 1280px; transition: opacity .3s; }
+body.clean .ui-chrome { opacity: 0; pointer-events: none; }
+.topbar { margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 0 4px; font-size: 13px; color: var(--muted); }
+.topbar .tag { padding: 3px 9px; border-radius: 5px; background: rgba(79,163,224,.15); border: 1px solid rgba(79,163,224,.4); color: #9CCFF5; font: 700 11px var(--mono); letter-spacing: .08em; }
+.topbar .btns { display: flex; gap: 8px; }
+.btn { padding: 6px 12px; border-radius: 8px; background: #1E293B; border: 1px solid #334155; color: #CBD5E1; font: 600 12px var(--sans); cursor: pointer; }
+.btn:hover { background: #273449; }
+.btn.primary { background: var(--gold); color: #1A1200; border-color: var(--gold); font-weight: 700; }
+
+.stepper { margin-top: 14px; background: rgba(15,23,42,.9); border: 1px solid #1E293B; border-radius: 12px; padding: 12px; display: flex; align-items: center; gap: 12px; }
+.stepper .ctl { display: flex; gap: 8px; }
+.stepper .pills { flex: 1; display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 8px; }
+.pill { text-align: left; padding: 8px 14px; border-radius: 8px; background: rgba(30,41,59,.7); border: 1px solid rgba(51,65,85,.8); cursor: pointer; color: var(--text); transition: .25s; }
+.pill:hover { border-color: #475569; }
+.pill.active { background: rgba(240,180,41,.12); border-color: rgba(240,180,41,.55); }
+.pill .n { font: 700 11px var(--mono); color: var(--gold); letter-spacing: .04em; }
+.pill .t { font-size: 12px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.stepper .keys { font-size: 12px; color: var(--dim); display: flex; gap: 6px; align-items: center; }
+kbd { padding: 1px 6px; background: #1E293B; border: 1px solid #334155; border-radius: 4px; font: 500 11px var(--mono); }
+.stepper .nav a { color: var(--muted); text-decoration: none; font-size: 12px; padding: 6px 10px; border-radius: 8px; border: 1px solid #334155; }
+.stepper .nav a:hover { color: var(--text); }
+
+/* ---------- the stage ---------- */
+.stage {
+  width: 100%; max-width: 1280px; aspect-ratio: 16 / 9; position: relative;
+  background: var(--stage-bg); border-radius: 14px; overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0,0,0,.9), 0 0 0 1px rgba(255,255,255,.08);
+}
+.stage:fullscreen { max-width: none; border-radius: 0; box-shadow: none; }
+
+.ribbon {
+  position: absolute; top: 0; left: 0; right: 0; padding: 22px 38px; z-index: 40;
+  display: flex; justify-content: space-between; align-items: center; gap: 24px;
+  background: linear-gradient(to bottom, rgba(7,10,14,.86), rgba(7,10,14,.35) 65%, rgba(7,10,14,0));
+  transition: opacity .5s;
+}
+.ribbon .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 12px var(--gold); margin-right: 12px; flex: none; }
+.ribbon h1 { font: 600 22px/1.2 var(--sans); letter-spacing: -.01em; display: flex; align-items: center; }
+.ribbon .deck { font-size: 13px; color: rgba(203,213,225,.85); white-space: nowrap; }
+/* the talk's title, lit one phrase at a time as the talk earns each word */
+.ribbon .deck .seg { color: rgba(148,163,184,.28); transition: color 1.2s, text-shadow 1.2s; }
+.ribbon .deck .seg.lit { color: #E2E8F0; }
+.ribbon .deck .seg.lit.key { color: var(--gold); text-shadow: 0 0 14px rgba(240,180,41,.45); }
+.ribbon .deck .sep { color: rgba(148,163,184,.28); padding: 0 5px; }
+
+.caption {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 38px 22px; z-index: 40;
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  background: linear-gradient(to top, rgba(7,10,14,.92), rgba(7,10,14,.5) 60%, rgba(7,10,14,0));
+}
+.caption .badge { padding: 3px 10px; border-radius: 999px; background: var(--gold); color: #1A1200; font: 800 11px var(--mono); letter-spacing: .08em; margin-right: 12px; }
+.caption .text { font-size: 18px; font-weight: 600; letter-spacing: -.01em; display: inline; }
+.caption .credit { font-size: 12px; color: var(--dim); white-space: nowrap; }
+
+/* slide head: kicker + title, top-left under the ribbon */
+.head { position: absolute; left: 38px; top: 84px; z-index: 36; }
+.head .kick { font: 600 12px var(--mono); letter-spacing: .1em; color: var(--red); margin-bottom: 8px; }
+.head h2 { font: 700 30px/1.25 var(--sans); letter-spacing: -.02em; }
+.source { position: absolute; z-index: 36; font: 400 12px/1.4 var(--sans); color: var(--dim); }
+
+/* glass card, as the template's press card */
+.card {
+  position: absolute; z-index: 35; background: var(--panel); backdrop-filter: blur(20px);
+  border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: 12px; padding: 24px 26px;
+  box-shadow: 0 24px 60px rgba(0,0,0,.65);
+  transition: transform 1.05s var(--ease-out), opacity .85s;
+}
+.card.out-left { transform: translateX(-115%); opacity: 0; pointer-events: none; }
+.card.out-right { transform: translateX(115%); opacity: 0; pointer-events: none; }
+.card.out-down { transform: translateY(40px); opacity: 0; pointer-events: none; }
+
+/* image viewport + camera rig */
+.viewport { position: absolute; inset: 0; overflow: hidden; z-index: 20; transition: all 1.1s var(--ease-out); }
+.rig { width: 100%; height: 100%; position: relative; transform-origin: 50% 50%; transition: transform 1.75s var(--ease-cam); will-change: transform; display: flex; align-items: center; justify-content: center; }
+.rig img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.vignette { position: absolute; inset: 0; pointer-events: none; z-index: 25; opacity: 0; transition: opacity 1.2s, background 1.75s var(--ease-cam); }
+.vignette.on { opacity: 1; }
+
+/* framed picture with caption (the common "도판 + 출처" slide) */
+.fig { position: absolute; z-index: 30; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 18px 50px rgba(0,0,0,.55); background: #0B1118;
+       transition: opacity .9s var(--ease-out), transform 1s var(--ease-out), filter .9s; }
+.fig img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.fig .cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 10px 14px; font-size: 12.5px; line-height: 1.4; color: #CBD5E1; background: linear-gradient(transparent, rgba(7,10,14,.9) 45%); }
+.fig.quiet { opacity: .25; filter: saturate(.3); }
+.fig.hide { opacity: 0; transform: translateY(14px); pointer-events: none; }
+
+/* staggered narrative lines: add .show to the parent */
+.lines .line { opacity: 0; transform: translateY(18px); transition: opacity .7s var(--ease-out), transform .7s var(--ease-out); }
+.lines.show .line { opacity: 1; transform: none; }
+.lines.show .line:nth-child(1) { transition-delay: .15s } .lines.show .line:nth-child(2) { transition-delay: .35s }
+.lines.show .line:nth-child(3) { transition-delay: .55s } .lines.show .line:nth-child(4) { transition-delay: .75s }
+.lines.show .line:nth-child(5) { transition-delay: .95s } .lines.show .line:nth-child(6) { transition-delay: 1.15s }
+
+/* the one sentence at the bottom of a slide (원본의 하단 강조문) */
+.thesis { position: absolute; left: 38px; right: 38px; bottom: 92px; z-index: 36; padding: 16px 26px; border-radius: 12px; text-align: center;
+          background: rgba(240,180,41,.08); border: 1px solid rgba(240,180,41,.45);
+          font: 600 24px/1.35 var(--sans); letter-spacing: -.01em; color: var(--gold);
+          opacity: 0; transform: translateY(16px); transition: opacity .9s var(--ease-out), transform .9s var(--ease-out); }
+.thesis.on { opacity: 1; transform: none; }
+.thesis.red { background: rgba(230,43,30,.08); border-color: rgba(230,43,30,.5); color: #FF8A80; }
+
+/* big centred statement (원본의 검은 바탕 한 문장 슬라이드) */
+.big { position: absolute; left: 80px; right: 80px; top: 50%; transform: translateY(-50%); z-index: 36; text-align: center; }
+.big .kick { font: 600 13px var(--mono); letter-spacing: .14em; color: var(--red); margin-bottom: 22px; }
+.big .q { font: 600 44px/1.4 var(--sans); letter-spacing: -.02em; }
+.big .q em { font-style: normal; color: var(--gold); }
+
+.chip { display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; border-radius: 999px; font: 700 11px var(--mono); letter-spacing: .1em; border: 1px solid; }
+.chip.gold { background: rgba(240,180,41,.12); border-color: rgba(240,180,41,.45); color: var(--gold); }
+.chip.blue { background: rgba(79,163,224,.12); border-color: rgba(79,163,224,.45); color: #9CCFF5; }
+.chip.red { background: rgba(230,43,30,.12); border-color: rgba(230,43,30,.5); color: #FF7A70; }
+
+.hl { background: linear-gradient(transparent 55%, rgba(240,180,41,.32) 55%); }
+
+@media (prefers-reduced-motion: reduce) { * { transition-duration: .01ms !important; animation-duration: .01ms !important; } }

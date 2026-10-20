@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>32 · AI 시대 유해인자의 확장 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .cols { position: absolute; left: 38px; right: 38px; top: 168px; height: 350px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; z-index: 35; }
+  .col { background: var(--panel); border: 1px solid var(--line); border-top: 4px solid var(--muted); border-radius: 12px; padding: 22px 22px 20px; opacity: 0; transform: translateY(18px);
+         transition: opacity .8s var(--ease-out), transform .8s var(--ease-out), border-color .8s, box-shadow .8s; }
+  .col.on { opacity: 1; transform: none; }
+  .col.star { border-top-color: var(--gold); }
+  .col.star.focus { box-shadow: 0 0 0 1px rgba(240,180,41,.6), 0 0 40px rgba(240,180,41,.18); }
+  .col:nth-child(3) { border-top-color: var(--red); }
+  .col .n { font: 700 20px/1.3 var(--sans); margin-bottom: 4px; }
+  .col .n .new { font: 700 10px var(--mono); color: #1A1200; background: var(--gold); border-radius: 4px; padding: 2px 6px; vertical-align: middle; margin-left: 6px; letter-spacing: .06em; }
+  .col .s { font-size: 13px; color: var(--muted); margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .col ul { list-style: none; }
+  .col li { font-size: 15px; line-height: 1.55; color: #E2E8F0; padding-left: 14px; position: relative; margin-bottom: 8px; }
+  .col li::before { content: '·'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+  .col:nth-child(3) li::before { color: #FF9B94; }
+  .col li:last-child { color: #FF9B94; font-weight: 600; }
+  .thesis { bottom: 92px; }
+  .arrow { position: absolute; left: 38px; right: 38px; top: 530px; z-index: 35; display: flex; justify-content: space-around; font: 600 13px var(--mono); color: var(--muted); letter-spacing: .08em; opacity: 0; transition: opacity .8s; }
+  .arrow.on { opacity: 1; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">CHAPTER 2 · AI 시대의 루프</div><h2>AI 시대 유해인자의 확장</h2></div>
+
+  <div class="cols">
+    <div class="col" id="c1"><div class="n">① 동적 (Kinetic)</div><div class="s">기존 ‘안전(Safety)’의 영역</div>
+      <ul><li>로봇 암 오작동 · E-Stop 실패</li><li>운동 에너지의 직접 충격</li><li>끼임 · 골절 · 급성 사망</li></ul></div>
+    <div class="col star" id="c2"><div class="n">② 공간·환경적<span class="new">★ 신규</span></div><div class="s">안전과 보건이 교차하는 신영역</div>
+      <ul><li>기계·제품만을 위해 제어된 무인 공간</li><li>극저온 · 저산소 · 암전 · 분진</li><li>저체온증 · 질식 · 호흡기 질환</li></ul></div>
+    <div class="col" id="c3"><div class="n">③ 인지적·알고리즘적</div><div class="s">통제와 감시의 내면화</div>
+      <ul><li>불투명한 배차 · 수락률 압박</li><li>만성 교감신경 과활성화 · 인지 과부하</li><li>심뇌혈관 질환 · 과로사</li></ul></div>
+  </div>
+  <div class="arrow" id="arrow"><span>HARDWARE — 운동 에너지가 몸을 부수고</span><span>SPACE — 공간이 몸을 갉아먹고</span><span>SOFTWARE — 알고리즘이 마음을 갉아먹는다</span></div>
+
+  <div class="thesis" id="thesis">물리적 사고(Safety)를 넘어 — 환경과 인지의 위협(Health)으로</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '32', meta: 'CHAPTER 2 · AI 시대의 루프', lit: 2,
+    prev: 's31.html', next: 's33.html',
+    steps: [
+      { n: 'STEP 01', name: '① 동적', title: 'Kinetic — 안전공학의 영역', header: '유해인자 개념의 확장', dur: 5000,
+        caption: '윌리엄스, 우라다, 고성의 사고가 모두 여기에 속한다 — <span class="gold">E-Stop 과 인터락</span>의 세계' },
+      { n: 'STEP 02', name: '② 공간·환경적', title: '오늘 새로 제안하는 층위', header: '유해인자 개념의 확장', dur: 6500,
+        caption: '평소에는 사람이 없다. 그러나 잼이 걸리면 — 사람이 <span class="gold">그 공간에 들어가야 한다</span>' },
+      { n: 'STEP 03', name: '③ 인지적·알고리즘적', title: '뼈를 부러뜨리지 않는 유해인자', header: '유해인자 개념의 확장', dur: 6000,
+        caption: '직무요구–자원 모델, 노력–보상 불균형 모델이 <span class="red">정확히 예측하는 경로</span>' },
+      { n: 'STEP 04', name: '정리', title: '하드웨어 → 공간 → 소프트웨어', header: 'Safety 를 넘어 Health 로', dur: 6000,
+        caption: '유해인자는 하드웨어에서, 공간으로, <span class="gold">소프트웨어로</span> 확장되었다' },
+    ],
+    apply(i) {
+      c1.classList.toggle('on', i >= 0); c2.classList.toggle('on', i >= 1); c3.classList.toggle('on', i >= 2);
+      c2.classList.toggle('focus', i === 1);
+      arrow.classList.toggle('on', i === 3); thesis.classList.toggle('on', i === 3);
+    }
+  });
+</script>
+</body>
+</html>

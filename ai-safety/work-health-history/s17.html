@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>17 · 설탕 생산 공정의 기술적 제약 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .ad { position: absolute; left: 38px; top: 162px; width: 250px; height: 342px; z-index: 30; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); background: #F4EFE4;
+        box-shadow: 0 18px 50px rgba(0,0,0,.55); opacity: 0; transform: translateY(14px); transition: opacity .9s var(--ease-out), transform .9s var(--ease-out); }
+  .ad.on { opacity: 1; transform: none; }
+  .ad img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .ad .cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 8px 12px; font-size: 12.5px; font-weight: 600; color: #fff; background: rgba(7,10,14,.85); }
+  .col { position: absolute; left: 318px; right: 38px; top: 162px; display: flex; flex-direction: column; gap: 14px; z-index: 35; }
+  .card.k { position: relative; padding: 18px 22px; display: grid; grid-template-columns: 150px 1fr; gap: 18px; align-items: center; opacity: 0; transform: translateY(14px); }
+  .card.k.on { opacity: 1; transform: none; }
+  .card.k.race { border-left-color: var(--gold); } .card.k.bott { border-left-color: var(--red); }
+  .card .h { font: 700 11px var(--mono); letter-spacing: .1em; color: var(--gold); margin-bottom: 6px; }
+  .card.bott .h { color: #FF9B94; }
+  .card h3 { font: 700 21px/1.25 var(--sans); letter-spacing: -.02em; margin-bottom: 8px; }
+  .card p { font-size: 14px; line-height: 1.55; color: #CBD5E1; }
+  .card p b { color: var(--text); font-weight: 600; }
+  .card p .r { color: #FF9B94; font-weight: 600; }
+  /* ring timer */
+  .ring { width: 150px; height: 150px; position: relative; }
+  .ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+  .ring circle { fill: none; stroke-width: 10; }
+  .ring .bg { stroke: rgba(255,255,255,.08); }
+  .ring .fg { stroke: var(--gold); stroke-linecap: round; transition: stroke 1s; }
+  .ring .fg.sour { stroke: var(--red); }
+  .ring .lab { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; }
+  .ring .lab b { font: 700 32px/1 var(--mono); color: var(--text); display: block; }
+  .ring .lab small { font: 600 11px var(--mono); color: var(--muted); letter-spacing: .08em; display: block; margin-top: 4px; }
+  /* bottleneck bars */
+  .bars { display: grid; gap: 8px; }
+  .bar { display: grid; grid-template-columns: 72px 1fr; gap: 8px; align-items: center; font: 600 11px var(--mono); color: var(--muted); }
+  .bar i { display: block; height: 14px; border-radius: 4px; background: var(--green); transform-origin: left; transform: scaleX(0); transition: transform 1.4s var(--ease-out) .3s; }
+  .bar.slow i { background: var(--red); }
+  .card.on .bar i { transform: scaleX(1); }
+  .bar.cut i { width: 100%; } .bar.slow i { width: 32%; }
+  .act { position: absolute; left: 318px; right: 38px; bottom: 96px; z-index: 36; padding: 14px 22px; border-radius: 10px; background: rgba(240,180,41,.08); border: 1px solid rgba(240,180,41,.45);
+         font: 600 17px/1.45 var(--sans); color: var(--text); opacity: 0; transform: translateY(12px); transition: opacity .8s var(--ease-out), transform .8s var(--ease-out); }
+  .act.on { opacity: 1; transform: none; }
+  .act b { color: var(--gold); }
+  .source { left: 38px; bottom: 72px; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">02 Sweet and Speed</div><h2>설탕 생산 공정의 기술적 제약</h2></div>
+
+  <div class="ad" id="ad"><img src="assets/img/waygood_ad.png" alt="R. Waygood &amp; Co. — Sugar Mills &amp; Machinery"><div class="cap">풍차에서 엔진으로, 1889</div></div>
+
+  <div class="col">
+    <div class="card k race" id="race">
+      <div class="ring">
+        <svg viewBox="0 0 100 100"><circle class="bg" cx="50" cy="50" r="42"/><circle class="fg" id="fg" cx="50" cy="50" r="42" stroke-dasharray="263.9" stroke-dashoffset="263.9"/></svg>
+        <div class="lab"><b id="hrs">0h</b><small>AFTER CUTTING</small></div>
+      </div>
+      <div>
+        <div class="h">효소와의 경주 (FERMENTATION RACE)</div>
+        <h3>골든 타임 — 수확 후 24시간, 최대 48시간</h3>
+        <p>사탕수수는 베어지는(Cutting) 순간부터 줄기 속의 당분이 효소에 의해 분해되기 시작. 24~48시간이 지나면 <b>자당(Sucrose)</b>이 포도당과 과당으로 변해버려(Inversion), 결정(Crystal)이 만들어지지 않고 <span class="r">신맛이 나는 술(식초)</span>로 변함.</p>
+      </div>
+    </div>
+    <div class="card k bott" id="bott">
+      <div class="bars">
+        <div class="bar cut"><span>CUTTING</span><i></i></div>
+        <div class="bar slow"><span>GRINDING</span><i></i></div>
+        <div class="bar slow"><span>BOILING</span><i></i></div>
+      </div>
+      <div>
+        <div class="h">공학적 병목 (BOTTLENECK)</div>
+        <h3>수확은 빠르고, 즙을 짜고 끓이는 속도는 느리다</h3>
+        <p>낮에 베어둔 수천 톤의 사탕수수가 썩기 전에 처리하려면 — <span class="r">공장은 밤에도 멈출 수가 없음.</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="act" id="act">1798년 The Amelioration Act가 생기면서, 노예들은 <b>하루에 14시간 이상</b> 일하는 것이 허용되지 않았다.</div>
+  <div class="source">https://www.liverpoolmuseums.org.uk/archaeologyofslavery/slavery-caribbean</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  let counted = false;
+  function runRing() {
+    fg.style.transition = 'none'; fg.style.strokeDashoffset = 263.9; fg.classList.remove('sour');
+    requestAnimationFrame(() => requestAnimationFrame(() => { fg.style.transition = 'stroke-dashoffset 2.6s cubic-bezier(.2,.7,.2,1), stroke 1s'; fg.style.strokeDashoffset = 0; }));
+    Scene.count(hrs, 48, { dur: 2600, fmt: v => Math.round(v) + 'h' });
+    setTimeout(() => fg.classList.add('sour'), 2300);
+  }
+  Scene.init({
+    id: '17', meta: '02 Sweet and Speed', lit: 1,
+    prev: 's16.html', next: 's18.html',
+    steps: [
+      { n: 'STEP 01', name: '효소와의 경주', title: '24 → 48시간', header: '왜 공장은 밤에도 돌았는가', dur: 6500,
+        caption: '베어진 순간부터 시계가 돈다 — 48시간이 지나면 설탕이 아니라 <span class="red">식초</span>가 된다' },
+      { n: 'STEP 02', name: '공학적 병목', title: '수확은 빠르고 압착은 느리다', header: '멈출 수 없는 기계', dur: 6000,
+        caption: '수천 톤이 썩기 전에 처리하려면 — <span class="red">공장은 밤에도 멈출 수가 없다</span>' },
+      { n: 'STEP 03', name: '14시간', title: '1798년, 상한선이 생기다', header: '풍차에서 엔진으로 — 압착기의 논리는 같았다', dur: 6000,
+        caption: '‘하루 <span class="gold">14시간 이상</span> 금지’ — 그 전까지 얼마나 일했는지를 거꾸로 말해 주는 법' },
+    ],
+    apply(i) {
+      race.classList.toggle('on', i >= 0);
+      if (i === 0) { counted = true; runRing(); } else if (!counted) { counted = true; fg.style.transition = 'none'; fg.style.strokeDashoffset = 0; fg.classList.add('sour'); hrs.textContent = '48h'; }
+      bott.classList.toggle('on', i >= 1);
+      act.classList.toggle("on", i >= 2); ad.classList.toggle("on", i >= 0);
+    }
+  });
+</script>
+</body>
+</html>

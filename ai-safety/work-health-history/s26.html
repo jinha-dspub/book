@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>26 · 톱니바퀴 속의 인간 (1936) — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .fig.gear { left: 38px; top: 162px; width: 580px; height: 400px; }
+  .fig.gear img { object-position: 50% 50%; transition: transform 8s linear, filter .9s; }
+  .fig.gear.turn img { transform: scale(1.1) rotate(2deg); }
+  .fig.feed { left: 662px; right: 38px; top: 162px; width: 580px; height: 400px; }
+  .fig .cap { font-size: 13.5px; }
+  .fig .cap b { color: var(--gold); font-weight: 600; }
+  .ask { position: absolute; left: 38px; right: 38px; top: 576px; z-index: 37; padding: 10px 16px; border-radius: 8px; background: rgba(230,43,30,.14); border: 1px solid rgba(230,43,30,.5);
+         font: 700 17px/1.4 var(--sans); color: #FF9B94; opacity: 0; transform: translateY(8px); transition: opacity .7s, transform .7s; }
+  .ask.on { opacity: 1; transform: none; }
+  .thesis { bottom: 92px; }
+  .source { left: 38px; bottom: 72px; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">CHAPTER 1 · 통제 방식의 진화</div><h2>톱니바퀴 속의 인간 (1936)</h2></div>
+
+  <div class="fig gear turn" id="gear"><img src="assets/img/chaplin_gears.jpg" alt="찰리 채플린, 〈모던 타임즈〉(1936)"><div class="cap">톱니바퀴 속으로 — 찰리 채플린, 〈모던 타임즈〉(1936)</div></div>
+  <div class="fig feed hide" id="feed"><img src="assets/img/chaplin_feeding.jpg" alt="자동 급식 기계"><div class="cap">자동 급식 기계 — <b>점심시간마저 최적화의 대상이 되다</b></div></div>
+  <div class="ask" id="ask">1936년에는 코미디였다. 알고리즘이 배달 노동자의 식사 시간을 지우는 오늘 — 이 장면은 코미디인가, 다큐멘터리인가.</div>
+
+  <div class="thesis" id="thesis">예술은 보건학보다 반세기 먼저 이 위험을 기록했다</div>
+  <div class="source">찰리 채플린, 〈모던 타임즈〉 (1936)</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '26', meta: 'CHAPTER 1 · 통제 방식의 진화', lit: 1,
+    prev: 's25.html', next: 's27.html',
+    steps: [
+      { n: 'STEP 01', name: '톱니바퀴', title: '1936년, 채플린', header: '톱니바퀴 속의 인간 (1936)', dur: 6000,
+        caption: '주목할 것은 연도다 — <span class="gold">1936년</span>. 직무 스트레스라는 말도, 근골격계 질환 예방 지침도 없던 시절' },
+      { n: 'STEP 02', name: '급식 기계', title: '점심시간을 없애는 기계', header: '같은 영화의 자동 급식 기계', dur: 7000,
+        caption: '일하는 손을 멈추지 않도록 기계가 밥을 떠먹여 준다 — <span class="red">코미디인가, 다큐멘터리인가</span>' },
+      { n: 'STEP 03', name: '결론', title: '은유가 문자 그대로 실현된다', header: '예술은 보건학보다 반세기 먼저', dur: 5500,
+        caption: '톱니바퀴에 말려 들어가는 장면은 은유였다 — 그런데 역사는 이 은유를 <span class="red">문자 그대로</span> 실현해 버린다' },
+    ],
+    apply(i) {
+      gear.classList.toggle('turn', i === 0); gear.classList.toggle('quiet', i === 1);
+      feed.classList.toggle('hide', i < 1); feed.classList.toggle('quiet', i === 2 && false);
+      ask.classList.toggle('on', i === 1);
+      thesis.classList.toggle('on', i >= 2);
+    }
+  });
+</script>
+</body>
+</html>

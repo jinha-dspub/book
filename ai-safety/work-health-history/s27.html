@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>27 · 자동화 시대 — E-Stop이 실패할 때 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .rig { transition: transform 9s linear; }
+  .rig img { object-position: 0 40%; }
+  .vignette { background: linear-gradient(to top, rgba(7,10,14,.9), rgba(7,10,14,.35) 45%, rgba(7,10,14,.1)); }
+  .card.e { left: 38px; top: 168px; width: 500px; border-left-color: var(--red); }
+  .card.e.out-left { transform: translateX(-115%); }
+  .card .k { font: 700 11px var(--mono); letter-spacing: .1em; color: #FF9B94; margin-bottom: 10px; }
+  .card .t { font: 700 22px/1.3 var(--sans); letter-spacing: -.02em; margin-bottom: 12px; }
+  .card ul { list-style: none; } .card li { font-size: 15px; line-height: 1.65; color: #CBD5E1; padding-left: 16px; position: relative; }
+  .card li::before { content: '·'; position: absolute; left: 2px; color: var(--red); font-weight: 700; }
+  .card li b { color: var(--text); }
+  .thesis { bottom: 92px; font-size: 22px; }
+  .source { left: 38px; bottom: 70px; text-shadow: 0 1px 4px #000; color: #CBD5E1; }
+  .head h2, .head .kick { text-shadow: 0 2px 12px rgba(0,0,0,.8); }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="viewport">
+    <div class="rig" id="rig"><img src="assets/img/rivera_mural.jpg" alt="디에고 리베라, 〈디트로이트 산업 벽화〉 북벽 (1932–33)"></div>
+    <div class="vignette on" id="vig"></div>
+  </div>
+  <div class="head"><div class="kick">CHAPTER 1 · 통제 방식의 진화</div><h2>자동화 시대 — E-Stop이 실패할 때</h2></div>
+
+  <div class="card e out-left" id="e">
+    <div class="k">전후 자동화 시대의 안전 철학</div>
+    <div class="t">방호 울타리 · 인터락 · 비상정지 버튼 (E-Stop)</div>
+    <ul>
+      <li>위험은 ‘정상 작업’이 아니라 <b>‘비정상 작업’</b>에 집중된다 — 정비, 오작동 조치, 예외 상황</li>
+      <li>우라다 켄지도, 42년 뒤 고성의 노동자도 <b>점검과 정비 중</b>에 목숨을 잃었다</li>
+      <li>노블(David Noble): 자동화는 숙련을 해체하고 <b>관리 권력을 기계 안으로</b> 옮기는 선택이었다</li>
+    </ul>
+  </div>
+
+  <div class="thesis red" id="thesis">인터락과 급정지가 무력화된 순간, 로봇의 운동 에너지는 작업자의 신체로 직접 흡수되었다</div>
+  <div class="source">디에고 리베라, 〈디트로이트 산업 벽화〉 북벽 (1932–33) · Detroit Institute of Arts</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '27', meta: 'CHAPTER 1 · 통제 방식의 진화', lit: 1,
+    prev: 's26.html', next: 's28.html',
+    steps: [
+      { n: 'STEP 01', name: '벽화', title: '리베라, 디트로이트', header: '전후 자동화 시대', dur: 9000,
+        caption: 'CNC 가공기와 산업용 로봇이 공장을 채웠다 — 이 시대의 안전 철학은 <span class="gold">명료했다</span>' },
+      { n: 'STEP 02', name: '비정상 작업', title: '위험이 모이는 곳', header: 'E-Stop 이 실패할 때', dur: 8000,
+        caption: '자동화가 고도화될수록 위험은 <span class="red">정비 · 오작동 조치 · 예외 상황</span>에 집중된다' },
+      { n: 'STEP 03', name: '결론', title: '운동 에너지는 몸으로', header: '통제는 점점 더 기계 안으로 숨어 들어갔다', dur: 6000,
+        caption: '인터락이 해제된 순간, 방호장치가 무력화된 순간 — 기계의 운동 에너지는 <span class="red">곧바로 사람의 몸으로</span>' },
+    ],
+    apply(i) {
+      // slow pan across the mural: start on the left (the line of workers), drift right, then settle on the big machines
+      rig.style.transition = i === 0 ? 'transform 9s linear' : 'transform 1.75s var(--ease-cam)';
+      rig.style.transform = i === 0 ? Scene.cam(62, 50, 1.25, 50, 50) : i === 1 ? Scene.cam(72, 50, 1.25, 66, 50) : Scene.cam(50, 48, 1.05, 50, 50);
+      if (i === 0) requestAnimationFrame(() => requestAnimationFrame(() => { rig.style.transform = Scene.cam(40, 50, 1.25, 50, 50); }));
+      e.classList.toggle('out-left', i !== 1);
+      thesis.classList.toggle('on', i >= 2);
+      vig.style.opacity = i === 2 ? 1 : .8;
+    }
+  });
+</script>
+</body>
+</html>

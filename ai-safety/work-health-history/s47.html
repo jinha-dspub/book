@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>47 · 그리고, 우리 — 승인만 하는 연구자 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .pipe { position: absolute; left: 38px; right: 38px; top: 190px; z-index: 35; }
+  .elapsed { font: 500 14px var(--mono); color: var(--muted); margin-bottom: 18px; text-align: center; }
+  .elapsed b { color: var(--green); font-weight: 700; }
+  .row { display: flex; align-items: center; justify-content: center; gap: 14px; }
+  .pc { width: 150px; height: 150px; border-radius: 12px; background: rgba(16,185,129,.08); border: 1.5px solid var(--green); display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px;
+        box-shadow: 0 0 25px rgba(16,185,129,.15); transition: all 1s var(--ease-out); opacity: 0; transform: translateY(12px); }
+  .pc.on { opacity: 1; transform: none; }
+  .pc .n { font: 700 15px var(--mono); color: var(--green); } .pc .d { font-size: 13px; color: var(--muted); }
+  .con { width: 30px; height: 3px; background: var(--green); transition: all 1s; opacity: 0; } .con.on { opacity: 1; }
+  .pipe.dim .pc { opacity: .14; filter: grayscale(1); border-color: #334155; box-shadow: none; } .pipe.dim .con { opacity: .15; background: #334155; }
+  .ok { padding: 26px 38px; border-radius: 14px; background: rgba(16,185,129,.15); border: 2px solid var(--green); text-align: center; transition: all 1s var(--ease-out); opacity: 0; }
+  .ok.on { opacity: 1; }
+  .ok .t { font: 800 26px var(--mono); letter-spacing: .12em; color: #fff; } .ok .s { font: 600 11px var(--mono); color: #5CE1E6; margin-top: 6px; letter-spacing: .06em; }
+  .pipe.dim .ok { transform: scale(1.22); box-shadow: 0 0 70px rgba(16,185,129,.55); background: rgba(16,185,129,.25); }
+  .pipe.amber .ok { border-color: var(--gold); background: rgba(240,180,41,.2); box-shadow: 0 0 60px rgba(240,180,41,.45); }
+  .pipe.amber .ok .s { color: var(--gold); }
+  .slider { margin: 44px auto 0; width: 760px; display: flex; align-items: center; justify-content: center; gap: 20px; background: rgba(255,255,255,.04); padding: 12px 28px; border-radius: 999px; border: 1px solid rgba(255,255,255,.1);
+            opacity: 0; transform: translateY(14px); transition: all .6s; }
+  .slider.on { opacity: 1; transform: none; }
+  .lb { padding: 6px 16px; border-radius: 999px; font: 700 13px var(--sans); color: var(--muted); transition: all .8s; }
+  .lb.act { background: var(--red); color: #fff; box-shadow: 0 0 20px rgba(230,43,30,.6); }
+  .lb.act.in { background: var(--green); color: #052E1C; box-shadow: 0 0 20px rgba(52,211,153,.5); }
+  .lb.act.onl { background: var(--gold); color: #1A1200; box-shadow: 0 0 20px rgba(240,180,41,.5); }
+  .slider .ar { color: var(--dim); }
+  .thesis { bottom: 92px; }
+  .thesis small { display: block; font: 500 16px/1.5 var(--sans); color: #E2E8F0; margin-top: 6px; }
+  .fig.shot { left: 38px; top: 468px; width: 300px; height: 168px; opacity: 0; } .fig.shot.on { opacity: 1; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">CHAPTER 3 · AUTOMATED RESEARCH PIPELINE</div><h2>그리고, 우리 — 승인만 하는 연구자</h2></div>
+  <div class="fig shot" id="shot"><img src="assets/img/pipeline_approve.png" alt="발표 첫머리의 그 화면 — 몇 달 뒤"><div class="cap">발표 첫머리의 그 화면 — 몇 달 뒤, 불은 꺼지고 승인 버튼만 남았다</div></div>
+
+  <div class="pipe" id="pipe">
+    <div class="elapsed">ELAPSED TIME <b id="el">00:00</b> &nbsp;|&nbsp; <span id="st">PIPELINE RUNNING</span></div>
+    <div class="row">
+      <div class="pc"><div class="n">DATA ✓</div><div class="d">코호트 전처리</div></div><div class="con"></div>
+      <div class="pc"><div class="n">ANALYSIS ✓</div><div class="d">SIR 자동 산출</div></div><div class="con"></div>
+      <div class="pc"><div class="n">FIGURES ✓</div><div class="d">시각화 생성</div></div><div class="con"></div>
+      <div class="pc"><div class="n">DRAFT ✓</div><div class="d">초안 작성 완료</div></div><div class="con"></div>
+      <div class="ok" id="ok"><div class="t">APPROVE</div><div class="s" id="oks">AWAITING ONE CLICK</div></div>
+    </div>
+    <div class="slider" id="slider">
+      <span class="lb in" id="l1">In-the-Loop (질문·검증)</span><span class="ar">→</span>
+      <span class="lb onl" id="l2">On-the-Loop (모니터링)</span><span class="ar">→</span>
+      <span class="lb" id="l3">Out-of-the-Loop (승인 거수기)</span>
+    </div>
+  </div>
+
+  <div class="thesis" id="thesis">처음에는 이용했다. 이제는 승인만 한다.<small>In → On → Out — 루프 밖으로 미끄러지는 것은 라이더만이 아니다</small></div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  const pcs = [...document.querySelectorAll('.pc')], cons = [...document.querySelectorAll('.con')];
+  let tok = 0;
+  function run() { const t = ++tok; pcs.forEach(p => p.classList.remove('on')); cons.forEach(c => c.classList.remove('on')); ok.classList.remove('on');
+    pcs.forEach((p, k) => setTimeout(() => { if (t !== tok) return; p.classList.add('on'); cons[k].classList.add('on'); }, 300 + k * 700));
+    setTimeout(() => { if (t === tok) ok.classList.add('on'); }, 300 + 4 * 700);
+    Scene.count(el, 1187, { dur: 3100, fmt: v => `${String(Math.floor(v / 60)).padStart(2, '0')}:${String(Math.round(v) % 60).padStart(2, '0')}` });
+    setTimeout(() => { if (t === tok) st.textContent = 'PIPELINE COMPLETE'; }, 3100); }
+  Scene.init({
+    id: '47', meta: 'CHAPTER 3 · 파편적 데이터에서 맥락성 정보로', lit: 3,
+    prev: 's46.html', next: 's48.html',
+    steps: [
+      { n: 'STEP 01', name: '파이프라인', title: '데이터에서 초안까지 19분 47초', header: '전자동 연구 파이프라인', dur: 6000,
+        caption: '발표 첫머리의 그 화면 — 데이터 수집부터 논문 초안까지 <span class="green">19분 47초</span>, 그리고 승인 버튼' },
+      { n: 'STEP 02', name: '불이 꺼진다', title: '승인 버튼만 남았다', header: '몇 달 뒤', dur: 6000,
+        caption: '처음엔 프롬프트를 다듬고 원자료와 대조했다. 지금은 — <span class="gold">훑어보고, 좋네요, 클릭</span>' },
+      { n: 'STEP 03', name: 'In → On → Out', title: '검증 비용 > 생성 비용', header: '루프 밖으로 미끄러지는 연구자', dur: 7000,
+        caption: 'AI 가 20분에 쓴 것을 검증하는 데 이틀이 걸린다면 — 인간은 검증을 <span class="red">포기한다</span>. 몇 달이면 충분했다' },
+      { n: 'STEP 04', name: '우리도', title: '거부권을 자발적으로 반납', header: '라이더는 빼앗겼고, 우리는 반납하고 있다', dur: 7000,
+        caption: '방향은 달라도 도착지는 같다 — <span class="red">인간이 루프 밖으로 밀려난다</span>. 의심하는 능력은 근육과 같아서, 쓰지 않으면 퇴화한다' },
+    ],
+    apply(i) {
+      if (i === 0) run(); else { ++tok; pcs.forEach(p => p.classList.add('on')); cons.forEach(c => c.classList.add('on')); ok.classList.add('on'); el.textContent = '19:47'; st.textContent = 'PIPELINE COMPLETE'; }
+      pipe.classList.toggle('dim', i >= 1); pipe.classList.toggle('amber', i >= 3);
+      oks.textContent = i >= 3 ? 'APPROVED WITHOUT READING' : i >= 1 ? 'ONE CLICK · 매일 아침' : 'AWAITING ONE CLICK';
+      slider.classList.toggle('on', i >= 2);
+      l1.classList.toggle('act', i === 2 && false); l2.classList.toggle('act', i === 2); l3.classList.toggle('act', i >= 3);
+      thesis.classList.toggle('on', i >= 3);
+      shot.classList.toggle('on', i >= 1 && i < 3);
+    }
+  });
+</script>
+</body>
+</html>

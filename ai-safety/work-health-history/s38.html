@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>38 · 블랙박스, 그리고 무감각의 루프 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .fig.pan { left: 420px; top: 150px; width: 440px; height: 400px; background: #0B1118; }
+  .fig.pan img { object-fit: contain; }
+  .fig.pan.aside { left: 38px; width: 360px; height: 400px; }
+  .qs { position: absolute; left: 440px; right: 38px; top: 190px; z-index: 35; display: flex; flex-direction: column; gap: 18px; }
+  .q { font: 600 28px/1.3 var(--sans); letter-spacing: -.02em; color: #E2E8F0; opacity: 0; transform: translateY(10px); transition: opacity .8s var(--ease-out), transform .8s var(--ease-out), color 1.4s, filter 1.4s; }
+  .q.on { opacity: 1; transform: none; }
+  .q.fade { color: #334155; filter: blur(1px); }
+  .q b { color: var(--red); font-weight: 700; }
+  .q.fade b { color: #4B2320; }
+  .none { font: 500 16px/1.6 var(--sans); color: var(--muted); border-top: 1px solid var(--line); padding-top: 14px; margin-top: 6px; opacity: 0; transition: opacity .8s .6s; }
+  .none.on { opacity: 1; }
+  .thesis { bottom: 92px; }
+  .thesis.red { font-size: 23px; }
+  .source { left: 420px; right: 38px; bottom: 70px; text-align: center; transition: left .9s var(--ease-out), right .9s var(--ease-out); }
+  .source.aside { left: 38px; right: auto; width: 360px; text-align: left; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">CHAPTER 2 · AI 시대의 루프</div><h2>블랙박스, 그리고 무감각의 루프</h2></div>
+
+  <div class="fig pan" id="pan"><img src="assets/img/panopticon.jpg" alt="제러미 벤담, 파놉티콘 설계도 (1791)"></div>
+  <div class="source" id="src">제러미 벤담, 파놉티콘 설계도 (1791) — 감시자는 보이지 않고, 모두가 감시된다</div>
+
+  <div class="qs">
+    <div class="q" id="q1">왜 <b>이 배차</b>를 받았는가?</div>
+    <div class="q" id="q2">왜 <b>평점</b>이 깎였는가?</div>
+    <div class="q" id="q3">왜 <b>콜</b>이 끊겼는가?</div>
+    <div class="none" id="none">항의할 사무실도, 물어볼 감독관도 없다.<br>이유를 알 수 없는 불이익이 반복되면 — 인간은 <span class="gold">묻기를 멈춘다</span>.</div>
+  </div>
+
+  <div class="thesis red" id="thesis">이유를 알 수 없는 불이익 앞에서, 노동자는 묻기를 멈추고 따르기 시작한다</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  let tok = 0;
+  Scene.init({
+    id: '38', meta: 'CHAPTER 2 · AI 시대의 루프', lit: 2,
+    prev: 's37.html', next: 's39.html',
+    steps: [
+      { n: 'STEP 01', name: '파놉티콘', title: '보이지 않는 감시자', header: '알고리즘 통제의 심리적 핵심 — 불투명성', dur: 5000,
+        caption: '감시자는 보이지 않고, 모두가 감시된다 — <span class="gold">플랫폼 노동의 초상</span>' },
+      { n: 'STEP 02', name: '세 질문', title: '왜?', header: '물을 수 없는 질문들', dur: 7000,
+        caption: '왜 이 배차를, 왜 평점이, 왜 콜이 — 노동자는 <span class="red">알 수 없다</span>' },
+      { n: 'STEP 03', name: '무감각의 루프', title: '질문을 포기하는 순간', header: '통제가 완성되는 지점', dur: 7000,
+        caption: '통제가 완성되는 지점은 감시가 촘촘해지는 순간이 아니라, 노동자가 <span class="red">질문을 포기하는 순간</span>이다' },
+    ],
+    apply(i) {
+      const t = ++tok;
+      pan.classList.toggle('aside', i >= 1); src.classList.toggle('aside', i >= 1);
+      [q1, q2, q3].forEach((q, k) => { q.classList.remove('on', 'fade'); if (i >= 1) setTimeout(() => { if (t === tok) q.classList.add('on'); }, i === 1 ? 500 + k * 900 : 0); if (i === 2) q.classList.add('fade'); });
+      none.classList.toggle('on', i === 2);
+      thesis.classList.toggle('on', i === 2);
+    }
+  });
+</script>
+</body>
+</html>

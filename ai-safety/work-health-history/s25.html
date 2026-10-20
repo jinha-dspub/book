@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>25 · 스톱워치의 등장 (1900s) — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .viewport { background: #0B0D10; }
+  .rig img { object-fit: contain; object-position: 0 50%; filter: contrast(1.05); transition: opacity 1s; }
+  .rig svg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+  .rig svg path { fill: none; stroke: var(--gold); stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 0 8px rgba(240,180,41,.9)); }
+  .rig .clock { position: absolute; left: 11.6%; top: 58.5%; width: 60px; height: 60px; transform: translate(-50%, -50%); border-radius: 50%; border: 2px solid var(--red); box-shadow: 0 0 24px rgba(230,43,30,.6); opacity: 0; transition: opacity .8s 1.6s; }
+  .rig .clock.on { opacity: 1; }
+  .cg-cap { position: absolute; right: 38px; top: 150px; width: 440px; z-index: 36; }
+  .cg-cap .line { background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: 10px; padding: 14px 18px; margin-bottom: 10px; }
+  .cg-cap .t { font: 700 20px/1.3 var(--sans); } .cg-cap .d { font-size: 13px; line-height: 1.5; color: var(--muted); margin-top: 6px; }
+  .cg-cap .d b { color: #E2E8F0; font-weight: 600; }
+  /* step 2: Taylor + Ford */
+  .fig.taylor { left: 38px; top: 162px; width: 280px; height: 400px; }
+  .fig.ford { left: 338px; top: 162px; width: 560px; height: 400px; }
+  .fig.ford img { object-position: 50% 40%; }
+  .who { position: absolute; left: 918px; right: 38px; top: 162px; z-index: 36; }
+  .who .line { background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--red); border-radius: 10px; padding: 16px 18px; margin-bottom: 12px; }
+  .who .t { font: 700 19px/1.3 var(--sans); } .who .d { font-size: 13.5px; line-height: 1.5; color: #CBD5E1; margin-top: 6px; }
+  .thesis { bottom: 92px; }
+  .source { left: 38px; bottom: 72px; }
+  .head h2, .head .kick { text-shadow: 0 2px 12px rgba(0,0,0,.7); }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="viewport" id="vp">
+    <div class="rig" id="rig">
+      <img src="assets/img/gilbreth_cyclegraph.jpg" alt="Cyclegraph of male drill press operator at New England Butt Co.">
+      <svg viewBox="0 0 1280 720" id="trail">
+        <!-- the light trail: from the drill (upper middle) down to the parts box, twice, as the worker's hand did -->
+        <path id="p1" d="M 277 196 C 310 160, 372 158, 388 190 C 410 236, 436 290, 431 330 C 426 380, 432 430, 439 468"/>
+        <path id="p2" d="M 286 240 C 330 204, 396 206, 410 244 C 428 292, 418 340, 424 372 C 430 410, 440 440, 448 462"/>
+      </svg>
+      <div class="clock" id="clock"></div>
+    </div>
+    <div class="vignette" id="vig"></div>
+  </div>
+  <div class="head"><div class="kick">CHAPTER 1 · 통제 방식의 진화</div><h2 id="h2">동작연구 (Motion Study)</h2></div>
+
+  <div class="cg-cap lines" id="cgcap">
+    <div class="line"><div class="t">프랭크 길브레스 (1868–1924)</div><div class="d">드릴 프레스 작업자의 손에 작은 전구를 달고 장노출로 찍었다 — <b>빛의 궤적이 곧 동작의 기록</b>이다. 왼쪽 아래의 시계가 시간을 잰다.</div></div>
+    <div class="line"><div class="d">Figure 5. Cyclegraph of male drill press operator at New England Butt Co., undated. Frank and Lillian Gilbreth Collection, Glass Stereo Slides (NMAH-AC0803-0000077). Image courtesy of the National Museum of American History.<br><b>Stephens, E. (2024).</b> Efficiency and the Productive Body. <i>Body &amp; Society</i>, 30(3), 59-94.</div></div>
+  </div>
+
+  <div class="fig taylor hide" id="taylor"><img src="assets/img/taylor.jpg" alt="프레더릭 W. 테일러"><div class="cap">프레더릭 W. 테일러 (1856–1915)</div></div>
+  <div class="fig ford hide" id="ford"><img src="assets/img/ford_line.jpg" alt="포드 하이랜드파크 공장 조립라인 (1913)"><div class="cap">포드 하이랜드파크 공장 조립라인 (1913)</div></div>
+  <div class="who lines" id="who">
+    <div class="line"><div class="t">스톱워치</div><div class="d">테일러는 노동자의 동작을 <b>분초 단위</b>로 쪼갰다</div></div>
+    <div class="line"><div class="t">컨베이어 벨트</div><div class="d">포드는 작업의 <b>속도 자체</b>를 기계에 넘겼다</div></div>
+    <div class="line"><div class="t">일하는 사람과, 그 사람의 시간을 재는 사람</div><div class="d">노동의 리듬이 처음으로 <b>신체 바깥의 장치</b>에 의해 결정되기 시작한 순간</div></div>
+  </div>
+
+  <div class="thesis red" id="thesis">테일러리즘 · 포드주의 — 신체 리듬이 기계의 생산 주기에 강제 동기화되다</div>
+  <div class="source" id="src"></div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  const paths = [p1, p2];
+  Scene.init({
+    id: '25', meta: 'CHAPTER 1 · 통제 방식의 진화', lit: 1,
+    prev: 's24.html', next: 's26.html',
+    steps: [
+      { n: 'STEP 01', name: '동작연구', title: '길브레스의 사이클그래프', header: '몸의 움직임이 선이 되다', dur: 7000,
+        caption: '손에 단 전구의 궤적 — <span class="gold">동작이 처음으로 기록 가능한 선</span>이 된 순간, 그 옆에 시계가 놓였다' },
+      { n: 'STEP 02', name: '스톱워치', title: '테일러, 그리고 포드', header: '스톱워치의 등장 (1900s)', dur: 7000,
+        caption: '일하는 사람과, 그 사람의 <span class="red">시간을 재는 사람</span>' },
+      { n: 'STEP 03', name: '결론', title: '기계의 박자에 동기화', header: '과학적 관리법이라는 이름의 전환점', dur: 6000,
+        caption: '신체가 <span class="red">기계의 박자</span>에 강제로 동기화되기 시작했다' },
+    ],
+    apply(i) {
+      const cg = i === 0;
+      vp.style.opacity = cg ? 1 : 0;
+      h2.textContent = cg ? '동작연구 (Motion Study)' : '스톱워치의 등장 (1900s)';
+      if (cg) { paths.forEach((p, k) => Scene.draw(p, 1600, 500 + k * 1300)); clock.classList.add('on'); rig.style.transform = 'scale(1.0)'; }
+      else { paths.forEach(p => Scene.undraw(p)); clock.classList.remove('on'); }
+      cgcap.classList.toggle('show', cg);
+      taylor.classList.toggle('hide', cg); ford.classList.toggle('hide', cg);
+      who.classList.toggle('show', !cg);
+      thesis.classList.toggle('on', i >= 2);
+      src.textContent = cg ? '' : '';
+    }
+  });
+</script>
+</body>
+</html>

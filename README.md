@@ -28,3 +28,13 @@ git push
 `index.html`과 `basic-medicine-for-data/slides/index.html`은 자동 생성되므로 직접 수정하지 않습니다.
 챕터 페이지 디자인은 `slides.template.html`에서 수정한 뒤 위 명령으로 다시 생성합니다.
 Google Slides는 링크를 가진 사람이 로그인 없이 볼 수 있도록 공유 설정을 유지하세요.
+
+## AI 산업안전보건 — 일과 건강의 역사
+
+- 강의 목록: `/ai-safety/`
+- 슬라이드 목차: `/ai-safety/work-health-history/`
+- 발표 시작: `/ai-safety/work-health-history/s01.html`
+
+55장의 HTML 슬라이드와 이미지·영상·글꼴을 함께 제공합니다. 공개본에서는 발표자 노트 본문, `_notes.json`, 노트 버튼과 단축키를 제거했습니다.
+
+`books.json`의 `ai-safety.src`는 노트를 제거한 공개용 빌드 폴더입니다. 갱신할 때도 원본 `lecture/.../slides`를 직접 복사하지 않고, 공개용 빌드를 먼저 갱신한 뒤 `sync.py`로 반영합니다.

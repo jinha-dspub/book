@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>23 · 다음 시대로 가져갈 질문 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .big .q { font-size: 50px; line-height: 1.35; }
+  .big .q .line { display: block; }
+  .big .lead { font: 500 20px/1.5 var(--sans); color: var(--muted); margin-bottom: 22px; }
+  .caveat { position: absolute; left: 38px; right: 38px; bottom: 100px; z-index: 36; text-align: center; font: 500 16px/1.6 var(--sans); color: var(--muted);
+            opacity: 0; transform: translateY(10px); transition: opacity .8s var(--ease-out), transform .8s var(--ease-out); }
+  .caveat.on { opacity: 1; transform: none; }
+  .caveat b { color: #E2E8F0; font-weight: 600; }
+  .glow { position: absolute; left: 50%; top: 50%; width: 900px; height: 420px; transform: translate(-50%, -50%); background: radial-gradient(ellipse, rgba(240,180,41,.09), transparent 65%); z-index: 20; pointer-events: none; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="glow"></div>
+  <div class="head"><div class="kick">02 Sweet and Speed</div><h2>다음 시대로 가져갈 질문</h2></div>
+
+  <div class="big lines" id="big">
+    <div class="lead line">생산의 속도가 몸의 한계를 만날 때 —</div>
+    <div class="q"><span class="line">누가 조정하고,</span><span class="line">누가 그 <em>비용</em>을 감당하는가</span></div>
+  </div>
+
+  <div class="caveat" id="caveat"><b>노예제와 현대 노동을 같은 제도로 취급하지 않는다.</b> 시대마다 권리와 제도, 저항과 협상의 조건이 다르다 — 비교할 질문을 분명히 하면 그 차이를 지키면서도 배울 수 있다.</div>
+  <div class="source" style="left:38px;bottom:72px">출처: 발표자 구성 · 개념도 / 질문</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '23', meta: '02 Sweet and Speed', lit: 1,
+    prev: 's22.html', next: 's24.html',
+    steps: [
+      { n: 'STEP 01', name: '한 문장', title: '누가 조정하고, 누가 감당하는가', header: '생산의 속도가 몸의 한계를 만날 때', dur: 7000,
+        caption: '위험이 발생했다는 사실과 그 위험을 줄이는 결정 사이에는 거리가 있다 — <span class="gold">기록은 그 거리를 줄이는 데 쓰여야 한다</span>' },
+      { n: 'STEP 02', name: '단서', title: '같은 제도가 아니다', header: '공장과 산업용 로봇, 오늘의 앱으로', dur: 6000,
+        caption: '속도를 정하는 권한 · 위험이 생기는 작업 조건 · 사람이 멈출 수 있는 여지 · 그 뒤에 남는 기록 — <span class="gold">차례로 본다</span>' },
+    ],
+    apply(i) { big.classList.add('show'); caveat.classList.toggle('on', i >= 1); }
+  });
+</script>
+</body>
+</html>

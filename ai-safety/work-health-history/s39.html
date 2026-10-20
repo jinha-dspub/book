@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>39 · 숫자가 말하는 것 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .stage { transition: background 1.2s; }
+  .stage.black { background: #000; }
+  .stage.black .ribbon, .stage.black .caption { background: none; }
+  .intl { position: absolute; left: 38px; right: 38px; top: 168px; z-index: 35; transition: opacity .8s; }
+  .intl.off { opacity: 0; pointer-events: none; }
+  .intl .sub { text-align: center; font: 500 15px var(--sans); color: var(--muted); margin-bottom: 22px; }
+  .intl .sub b { color: var(--text); font-weight: 600; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 900px; margin: 0 auto; }
+  .num { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 34px 26px 28px; text-align: center; opacity: 0; transform: translateY(16px); transition: opacity .8s var(--ease-out), transform .8s var(--ease-out); }
+  .num.on { opacity: 1; transform: none; }
+  .num .v { font: 700 72px/1 var(--mono); color: var(--red); letter-spacing: -.03em; margin-bottom: 14px; }
+  .num .w { font: 600 20px/1.35 var(--sans); }
+  .thesis { bottom: 92px; }
+  /* step 2 — the Korean numbers on black */
+  .kr { position: absolute; inset: 0; z-index: 36; display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; transition: opacity 1s; pointer-events: none; }
+  .kr.on { opacity: 1; }
+  .kr .big2 { font: 700 128px/1 var(--sans); letter-spacing: -.04em; display: flex; align-items: baseline; gap: 26px; }
+  .kr .big2 .n { font-family: var(--mono); } .kr .big2 .u { font-size: 72px; } .kr .big2 .dot { color: var(--muted); font-size: 72px; }
+  .kr .lines { margin-top: 44px; text-align: center; }
+  .kr .lines .line { font: 500 22px/1.7 var(--sans); color: #E2E8F0; }
+  .kr .lines .line b { color: var(--text); font-weight: 700; font-family: var(--mono); }
+  .kr .src { margin-top: 30px; font-size: 12.5px; color: var(--dim); }
+  .stage.black .head { opacity: 0; } .head { transition: opacity .8s; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">CHAPTER 2 · AI 시대의 루프</div><h2>숫자가 말하는 것 — 국제</h2></div>
+
+  <div class="intl" id="intl">
+    <div class="sub"><b>EU-OSHA · ALMA 프로젝트</b> &nbsp;|&nbsp; 알고리즘 관리 노출 강도 1단위 증가 시</div>
+    <div class="two">
+      <div class="num" id="n1"><div class="v" id="v1">+0%</div><div class="w">정신사회적 위험</div></div>
+      <div class="num" id="n2"><div class="v" id="v2">+0%</div><div class="w">신체적·정신적 건강 이상 호소</div></div>
+    </div>
+  </div>
+  <div class="thesis" id="thesis">용량–반응 관계 — 소음·분진에서 확인해 온 바로 그 관계가 알고리즘 노출에서도 확인된다</div>
+
+  <div class="kr" id="kr">
+    <div class="big2"><span class="n" id="k140">0</span><span class="u">명</span><span class="dot">·</span><span class="n">0</span><span class="u">건</span></div>
+    <div class="lines show">
+      <div class="line">3년간 도로 위에서 숨진 배달 노동자 &nbsp;<b>140명</b></div>
+      <div class="line">‘과도한 배달시간 제한 금지’ 위반 과태료 부과 &nbsp;<b>0건</b></div>
+    </div>
+    <div class="src">자료: 근로복지공단 유족급여 승인 현황(이용우 의원실 제출, 2022~2025 2Q) · 매일노동뉴스 2025. 10. 30</div>
+  </div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  let did = {};
+  Scene.init({
+    id: '39', meta: 'CHAPTER 2 · AI 시대의 루프', lit: 2,
+    prev: 's38.html', next: 's40.html',
+    steps: [
+      { n: 'STEP 01', name: '+21%', title: '정신사회적 위험', header: '숫자가 말하는 것 — 국제', dur: 4500,
+        caption: '학회이니, 숫자로 확인하자 — 노출 강도 1단위 증가마다 정신사회적 위험 <span class="red">+21%</span>' },
+      { n: 'STEP 02', name: '+16.5%', title: '건강 이상 호소', header: '용량–반응 관계', dur: 5500,
+        caption: '신체적·정신적 건강 이상 호소 <span class="red">+16.5%</span> — 알고리즘을 유해인자라고 불러야 하는 역학적 근거' },
+      { n: 'STEP 03', name: '140명 · 0건', title: '그리고 우리나라의 숫자', header: '숫자가 말하는 것 — 한국', dur: 9000,
+        caption: '140명이 죽는 동안 제도는 <span class="red">0번</span> 작동했다 — 그 사이의 공백을 메우고 있는 것은? <span class="gold">노동자의 신체다</span>' },
+    ],
+    apply(i) {
+      n1.classList.toggle('on', i >= 0); n2.classList.toggle('on', i >= 1);
+      if (i >= 0 && !did.a) { did.a = true; Scene.count(v1, 21, { dur: 1400, fmt: v => `+${Math.round(v)}%` }); } else if (i >= 0) v1.textContent = '+21%';
+      if (i >= 1) { if (!did.b) { did.b = true; Scene.count(v2, 16.5, { dur: 1400, fmt: v => `+${v.toFixed(1)}%` }); } else v2.textContent = '+16.5%'; } else { did.b = false; v2.textContent = '+0%'; }
+      thesis.classList.toggle('on', i === 1);
+      stage.classList.toggle('black', i === 2); intl.classList.toggle('off', i === 2); kr.classList.toggle('on', i === 2);
+      if (i === 2) { if (!did.c) { did.c = true; Scene.count(k140, 140, { dur: 2200 }); } else k140.textContent = '140'; } else { did.c = false; }
+    }
+  });
+</script>
+</body>
+</html>

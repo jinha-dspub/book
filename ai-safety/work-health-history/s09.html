@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>09 · 무엇이 기록으로 남는가 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .big { transition: opacity .8s, transform .9s var(--ease-out); }
+  .big.away { opacity: 0; transform: translateY(-60%); pointer-events: none; }
+  .big .q { font-size: 52px; }
+  .big .q small { display: block; font: 500 18px/1.5 var(--sans); color: var(--muted); margin-top: 18px; }
+  .head { opacity: 0; transition: opacity .8s; } .head.on { opacity: 1; }
+  .fig.tri { left: 38px; top: 168px; width: 560px; height: 380px; background: #0B1118; }
+  .fig.tri img { object-fit: contain; }
+  .fig.mig { right: 38px; top: 210px; width: 620px; height: 300px; background: #fff; }
+  .fig.mig img { object-fit: contain; }
+  .fig .cap { font-size: 12.5px; }
+  .thesis { bottom: 92px; padding: 12px 22px; font-size: 22px; }
+  .note { position: absolute; right: 38px; top: 168px; width: 620px; z-index: 36; font-size: 13px; color: var(--muted); }
+  .source { left: 38px; bottom: 70px; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="big" id="big"><div class="kick">PART 1</div><div class="q">무엇이 기록으로 남는가<small>지도는 무엇을 기록했는가 · Sweet and Speed</small></div></div>
+
+  <div class="head"><div class="kick">02 Sweet and Speed</div><h2>설탕의 길, 사람의 강제이동</h2></div>
+  <div class="note fig hide" id="note" style="border:0;box-shadow:none;background:none;height:auto">개념도 · 모든 항해가 같은 경로를 따른다는 뜻은 아님</div>
+  <div class="fig tri hide" id="tri"><img src="assets/img/triangle_trade.png" alt="18세기 대서양 교역 구조 개념도"><div class="cap">대서양 교역 구조</div></div>
+  <div class="fig mig hide" id="mig"><img src="assets/img/sugar_migration.png" alt="설탕 생산의 이동과 사람들의 강제이동"><div class="cap">설탕 생산과 강제이동</div></div>
+  <div class="thesis" id="thesis">농장은 대서양의 교역과 연결되어 있었다</div>
+  <div class="source fig hide" id="src" style="border:0;box-shadow:none;background:none;height:auto">출처: International Slavery Museum · 교육자료 · 발표자 제공 Sweet and Speed</div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '09', meta: 'PART 1 · 무엇이 기록으로 남는가', lit: 1,
+    prev: 's08.html', next: 's10.html',
+    steps: [
+      { n: 'STEP 01', name: '표제', title: '무엇이 기록으로 남는가', header: '무엇이 기록으로 남는가', dur: 5000,
+        caption: '기록은 <span class="gold">기록한 자의 목적</span>을 따른다 — 그 역사부터 보자' },
+      { n: 'STEP 02', name: '교역 구조', title: '대서양 삼각무역 개념도', header: '설탕의 길, 사람의 강제이동', dur: 6000,
+        caption: '유럽 → 아프리카의 상품, 아프리카 → 아메리카로 <span class="red">강제로 이송된 사람들</span>, 아메리카 → 유럽의 설탕' },
+      { n: 'STEP 03', name: '강제이동', title: '설탕 생산과 사람의 이동', header: '설탕의 길, 사람의 강제이동', dur: 7000,
+        caption: '지도 위의 화살표를 <span class="gold">자연스러운 이동처럼 읽지 않는 것</span> — 포획과 매매, 강제와 폭력이 포함되어 있었다' },
+    ],
+    apply(i) {
+      big.classList.toggle('away', i >= 1);
+      document.querySelector('.head').classList.toggle('on', i >= 1);
+      tri.classList.toggle('hide', i < 1); note.classList.toggle('hide', i < 1); src.classList.toggle('hide', i < 1);
+      mig.classList.toggle('hide', i < 2); tri.classList.toggle('quiet', false);
+      thesis.classList.toggle('on', i >= 2);
+    }
+  });
+</script>
+</body>
+</html>

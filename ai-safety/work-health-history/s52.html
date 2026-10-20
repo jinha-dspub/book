@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>52 · 알고리즘 위험성평가 (Algorithmic Risk Assessment) — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .fig.rem { left: 38px; top: 168px; width: 500px; height: 300px; }
+  .fig.rem img { object-position: 50% 30%; }
+  .steps4 { position: absolute; right: 38px; top: 168px; width: 660px; z-index: 35; display: grid; gap: 10px; }
+  .st { display: grid; grid-template-columns: 40px 1fr; gap: 14px; align-items: center; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 11px 16px;
+        opacity: 0; transform: translateX(16px); transition: opacity .6s var(--ease-out), transform .6s var(--ease-out); }
+  .st.on { opacity: 1; transform: none; }
+  .st .n { width: 32px; height: 32px; border-radius: 50%; background: var(--red); color: #fff; display: grid; place-items: center; font: 800 14px var(--mono); }
+  .st .t { font: 700 17px/1.3 var(--sans); } .st .d { font-size: 13.5px; line-height: 1.45; color: #CBD5E1; }
+  .eu { position: absolute; left: 38px; right: 38px; top: 486px; z-index: 36; text-align: center; font: 600 17px var(--sans); color: var(--gold); opacity: 0; transition: opacity .8s; }
+  .eu.on { opacity: 1; }
+  .thesis { bottom: 92px; }
+  .thesis small { display: block; font: 500 15px/1.5 var(--sans); color: #E2E8F0; margin-top: 6px; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">CHAPTER 4 · 산업보건학의 과제</div><h2>알고리즘 위험성평가 (Algorithmic Risk Assessment)</h2></div>
+
+  <div class="fig rem" id="rem"><img src="assets/img/rembrandt_tulp.jpg" alt="렘브란트, 튈프 박사의 해부학 강의"><div class="cap">렘브란트, 〈튈프 박사의 해부학 강의〉 (1632) — 이제 해부대 위에 알고리즘을 올려야 한다</div></div>
+
+  <div class="steps4">
+    <div class="st" id="s1"><div class="n">1</div><div><div class="t">사전 영향 평가</div><div class="d">도입 전, 작업 밀도·휴식·스트레스 영향을 노사 합동 평가</div></div></div>
+    <div class="st" id="s2"><div class="n">2</div><div><div class="t">파라미터 위험도 검증</div><div class="d">시간 제한·수락률 불이익의 과속·과로 유발 정량 검증</div></div></div>
+    <div class="st" id="s3"><div class="n">3</div><div><div class="t">지속 모니터링 · 노동자 참여</div><div class="d">위험 유발 로직의 실시간 수정</div></div></div>
+    <div class="st" id="s4"><div class="n">4</div><div><div class="t">제3자 독립 감사</div><div class="d">외부 산업보건 전문기관의 정기 알고리즘 감사</div></div></div>
+  </div>
+  <div class="eu" id="eu">EU AI Act — 노동·HR 분야 AI는 이미 ‘고위험(High-Risk)’으로 분류된다</div>
+
+  <div class="thesis" id="thesis">테세우스는 프로크루스테스를 붙잡아 그의 침대에 눕혔다<small>노동자를 재단해 온 기준을, 이번에는 우리가 평가대 위에 올려 재는 것 — 우리가 테세우스가 되는 것이다</small></div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  const sts = [s1, s2, s3, s4];
+  Scene.init({
+    id: '52', meta: 'CHAPTER 4 · 산업보건학의 과제', lit: 4,
+    prev: 's51.html', next: 's53.html',
+    steps: [
+      { n: 'STEP 01', name: '해부대', title: '프레스는 평가하고, 알고리즘은?', header: '두 번째 과제 — 제도화', dur: 5500,
+        caption: '프레스 기계는 방호장치를 평가한다. 수만 명의 노동 강도를 결정하는 배차 알고리즘은 <span class="red">아무 평가 없이</span> 배포된다' },
+      { n: 'STEP 02', name: '네 단계', title: '위험성평가의 골격 그대로', header: '위험성평가의 대상을 소프트웨어로', dur: 7000,
+        caption: '새로운 학문이 아니다 — 우리가 백 년간 해 온 위험성평가를 <span class="gold">새로운 유해인자</span>에 적용하자는 것' },
+      { n: 'STEP 03', name: 'EU AI Act', title: '고위험으로 분류', header: 'EU AI Act 가 가리키는 방향', dur: 4500,
+        caption: '노동·인사 분야 AI 를 <span class="gold">‘고위험’</span>으로 분류한 것이 바로 이 방향이다' },
+      { n: 'STEP 04', name: '테세우스', title: '기준을 만드는 자를 기준 위에', header: '첫 장면의 신화, 다시', dur: 7000,
+        caption: '렘브란트의 해부대 위에 알고리즘을 올리는 것 — <span class="gold">우리가 테세우스가 되는 것</span>이다' },
+    ],
+    apply(i) {
+      sts.forEach((s, k) => { s.classList.remove('on'); if (i >= 1) setTimeout(() => s.classList.add('on'), i === 1 ? 200 + k * 450 : 0); });
+      eu.classList.toggle('on', i >= 2);
+      thesis.classList.toggle('on', i === 3);
+      rem.classList.toggle('quiet', i === 3 ? false : i >= 1);
+    }
+  });
+</script>
+</body>
+</html>

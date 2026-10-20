@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>04 · 다시 보기 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .viewport { background: #C8DED0; }
+  .rig img { object-fit: contain; background: #C8DED0; }
+  .ring { position: absolute; left: 66.6%; top: 42%; width: 70px; height: 90px; transform: translate(-50%, -50%); border: 2.5px solid var(--red); border-radius: 50%;
+          box-shadow: 0 0 30px rgba(230,43,30,.5); opacity: 0; transition: opacity .8s .9s; z-index: 30; pointer-events: none; }
+  .ring.on { opacity: 1; }
+  .card.say { right: 38px; top: 50%; transform: translateY(-50%); width: 420px; border-left-color: var(--red); }
+  .card.say.out-right { transform: translate(115%, -50%); }
+  .card .k { font: 700 11px var(--mono); letter-spacing: .1em; color: #FF9B94; margin-bottom: 12px; }
+  .card .t { font: 600 26px/1.35 var(--sans); letter-spacing: -.02em; }
+  .card .t + .t { margin-top: 10px; color: var(--gold); }
+  .card p { margin-top: 14px; font-size: 15px; line-height: 1.6; color: #CBD5E1; }
+  .big { z-index: 38; left: 38px; right: auto; width: 560px; text-align: left; }
+  .big .q { font-size: 56px; text-shadow: 0 10px 40px rgba(0,0,0,.9), 0 0 24px rgba(0,0,0,.9); }
+  .big .kick { text-shadow: 0 0 10px #000; }
+  .big { opacity: 0; transition: opacity .9s; } .big.on { opacity: 1; }
+  .head h2, .head .kick { text-shadow: 0 2px 12px rgba(0,0,0,.6); }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="viewport">
+    <div class="rig" id="rig"><img src="assets/img/nobel_illust.png" alt="노벨위원회 공식 일러스트"><div class="ring" id="ring"></div></div>
+    <div class="vignette" id="vig"></div>
+  </div>
+  <div class="head"><div class="kick">들어가며</div><h2 style="color:#0B1A12">다시 보기</h2></div>
+
+  <div class="card say out-right" id="say">
+    <div class="k">처음에는 보이지 않던 것</div>
+    <div class="t">…그리고, 구석의 로봇</div>
+    <p>아무 말 없이 서서, 노는 아이들을 지켜보고 있다. 어른이 아이들을 바라보듯이.</p>
+  </div>
+
+  <div class="big" id="big"><div class="kick">두 번째에는 보인다</div><div class="q">…누가, <em>어른</em>인가</div></div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  Scene.init({
+    id: '04', meta: '들어가며', lit: 1,
+    prev: 's03.html', next: 's05.html',
+    steps: [
+      { n: 'STEP 01', name: '처음 보신 그림', title: '즐거운 과학자들', header: '다시 보기', dur: 5000,
+        caption: '처음 보셨을 때, 눈은 아마 <span class="gold">아이들</span>에게 갔을 것이다' },
+      { n: 'STEP 02', name: '구석의 로봇', title: '카메라가 구석으로', header: '다시 보기 — 구석의 로봇', dur: 6500,
+        caption: '처음에는 보이지 않던 것이, <span class="gold">두 번째에는 보인다</span>' },
+      { n: 'STEP 03', name: '누가 어른인가', title: '누가 누구를 지켜보는가', header: '우리가 매일 보는 그림을, 다시 보게 만드는 것', dur: 6000,
+        caption: '이 질문에 답하려면 먼저 가야 할 곳이 있다 — <span class="gold">46년 전의 어느 공장</span>' },
+    ],
+    apply(i) {
+      rig.style.transform = i === 0 ? 'scale(1)' : i === 1 ? Scene.cam(66.6, 42, 2.6, 36, 50) : Scene.cam(66.6, 42, 3.2, 66, 50);
+      ring.classList.toggle('on', i === 1);
+      vig.classList.toggle('on', i >= 1); vig.style.background = i === 1 ? Scene.spot(36, 50, 10, 70) : i === 2 ? Scene.spot(66, 50, 8, 60) : '';
+      say.classList.toggle('out-right', i !== 1);
+      big.classList.toggle('on', i === 2);
+      document.querySelector('.head h2').style.color = i === 0 ? '#0B1A12' : '';
+    }
+  });
+</script>
+</body>
+</html>

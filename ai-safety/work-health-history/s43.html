@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>43 · 3분의 격차, 30년의 격차 — 일과 건강의 역사와 AI</title>
+<link rel="stylesheet" href="scene.css">
+<style>
+  .grid { position: absolute; left: 38px; right: 38px; top: 168px; height: 300px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; z-index: 35; transition: grid-template-columns 1.2s var(--ease-out); }
+  .grid.grow { grid-template-columns: 2fr 3fr; }
+  .gap { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 26px 30px; opacity: 0; transform: translateY(18px);
+         transition: opacity .8s var(--ease-out), transform .8s var(--ease-out), border-color 1s; position: relative; overflow: hidden; }
+  .gap.on { opacity: 1; transform: none; }
+  .gap .v { font: 700 72px/1 var(--mono); letter-spacing: -.04em; color: var(--text); margin-bottom: 6px; }
+  .gap .v small { font-size: 36px; font-family: var(--sans); font-weight: 700; margin-left: 4px; }
+  .gap .w { font: 700 20px/1.3 var(--sans); color: var(--muted); margin-bottom: 16px; }
+  .gap ul { list-style: none; } .gap li { font-size: 16px; line-height: 1.75; color: #CBD5E1; padding-left: 16px; position: relative; }
+  .gap li::before { content: '·'; position: absolute; left: 2px; color: var(--gold); font-weight: 700; }
+  .gap li b { color: var(--text); }
+  .gap.acc .v { color: var(--gold); } .gap.dis .v { color: #FF6B5E; }
+  .gap.dis.on { border-color: rgba(230,43,30,.55); box-shadow: 0 0 40px rgba(230,43,30,.12); }
+  .gap.acc.shrink { opacity: .55; }
+  .gap .ruler { position: absolute; left: 30px; right: 30px; bottom: 16px; height: 3px; background: rgba(255,255,255,.08); border-radius: 2px; }
+  .gap .ruler i { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: currentColor; border-radius: 2px; transition: width 1.6s var(--ease-out); }
+  .gap.acc .ruler i { color: var(--gold); } .gap.dis .ruler i { color: var(--red); }
+  .gap.on.acc .ruler i { width: 2%; } .gap.on.dis .ruler i { width: 100%; }
+  .two { position: absolute; left: 38px; right: 38px; bottom: 92px; z-index: 36; }
+  .two .line { text-align: center; border-radius: 10px; padding: 12px 20px; margin-top: 10px; background: rgba(12,19,28,.9); border: 1px solid var(--line); }
+  .two .line.a { font: 700 24px/1.35 var(--sans); color: var(--gold); border-color: rgba(240,180,41,.45); background: rgba(240,180,41,.08); }
+  .two .line.b { font: 500 17px/1.5 var(--sans); color: #E2E8F0; }
+  .two .line.b b { color: var(--gold); }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="head"><div class="kick">CHAPTER 3 · 파편적 데이터에서 맥락성 정보로</div><h2>3분의 격차, 30년의 격차</h2></div>
+
+  <div class="grid" id="grid">
+    <div class="gap acc" id="g1">
+      <div class="v">3<small>분</small></div><div class="w">사고의 격차</div>
+      <ul><li>그 자리에서 일어난다</li><li>목격자 · CCTV · 현장이 남는다</li><li>— 그런데도, <b>140명에 0건</b></li></ul>
+      <div class="ruler"><i></i></div>
+    </div>
+    <div class="gap dis" id="g2">
+      <div class="v"><span id="yr">3</span><small>년</small></div><div class="w">질병의 격차</div>
+      <ul><li>잠복기 뒤에야 나타난다</li><li>회사는 폐업 · 기록은 소실 · 기억은 흐려진다</li><li>입증 책임은 <b>노동자에게</b></li></ul>
+      <div class="ruler"><i></i></div>
+    </div>
+  </div>
+
+  <div class="two lines" id="two">
+    <div class="line a">질병은 느린 사고다 — 느린 사고에는 목격자가 없다</div>
+    <div class="line b">역학조사 — <b>사라진 30년을 소급해 복원하는</b>, 한 건 한 건의 고고학</div>
+  </div>
+
+</div>
+
+<script src="scene.js"></script>
+<script>
+  let counted = false;
+  Scene.init({
+    id: '43', meta: 'CHAPTER 3 · 파편적 데이터에서 맥락성 정보로', lit: 3,
+    prev: 's42.html', next: 's44.html',
+    steps: [
+      { n: 'STEP 01', name: '3분', title: '사고의 격차', header: '여기까지는 사고의 이야기였다', dur: 5500,
+        caption: '사고는 그 자리에서 일어난다. 목격자가 있고, CCTV 가 있고 — 그런데도 <span class="red">140명에 0건</span>이었다' },
+      { n: 'STEP 02', name: '30년', title: '질병의 격차', header: '우리의 본령은 사고 너머에 있다 — 질병', dur: 7000,
+        caption: '증거가 가장 필요한 순간에, 증거는 <span class="red">30년 전에</span> 사라져 있다 — 그리고 입증해야 하는 쪽은 노동자다' },
+      { n: 'STEP 03', name: '느린 사고', title: '목격자가 없다', header: '질병은 느린 사고다', dur: 7000,
+        caption: '사라진 30년을 소급해 복원하는 것 — <span class="gold">한 건 한 건이 고고학</span>이다. 그 답을 찾으려면, 5천 년 전으로 가야 한다' },
+    ],
+    apply(i) {
+      g1.classList.toggle('on', i >= 0); g2.classList.toggle('on', i >= 1);
+      grid.classList.toggle('grow', i >= 1); g1.classList.toggle('shrink', i >= 1);
+      if (i >= 1) { if (!counted) { counted = true; Scene.count(yr, 30, { from: 3, dur: 1800 }); } else yr.textContent = '30'; }
+      else { counted = false; yr.textContent = '3'; }
+      two.classList.toggle('show', i === 2);
+    }
+  });
+</script>
+</body>
+</html>
